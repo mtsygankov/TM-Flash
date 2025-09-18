@@ -83,7 +83,7 @@ Ticket W-003 — Constants and Deck Registry [DONE]
 
 EPIC 2 — Storage & Settings
 
-Ticket W-010 — LocalStorage Schema Init [PENDING]
+Ticket W-010 — LocalStorage Schema Init [DONE]
 
 - Description: Implement storage module with schema_version=1 and default settings.
 
@@ -102,7 +102,7 @@ Ticket W-010 — LocalStorage Schema Init [PENDING]
 - Dependencies: W-003.
 
 
-Ticket W-011 — Direction Toggle Persistence [PENDING]
+Ticket W-011 — Direction Toggle Persistence [DONE]
 
 - Description: Implement UI control for direction and persist in storage.
 
