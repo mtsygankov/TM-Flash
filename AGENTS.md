@@ -53,7 +53,8 @@ tm-flash/
 ```
 
 ### Data Handling
-- **LocalStorage**: Use key `tmFlash` with schema_version for migrations
+- **LocalStorage**: Use key `tmFlash` with schema_version=1; schema includes nested "directions" per card: { "CH->EN": {correct, incorrect, last_reviewed}, "EN->CH": {...} }
+- **Stats tracking**: Separate per-direction stats for each card to support bidirectional learning
 - **JSON validation**: Validate deck structure and card data integrity
 - **Error recovery**: Graceful handling of corrupted data or network failures
 - **Security**: Sanitize all user inputs, validate file paths
@@ -74,6 +75,7 @@ tm-flash/
 3. **Testing**: Manual testing with browser dev tools
 4. **Validation**: Cross-browser and accessibility testing
 5. **Documentation**: Update this file with new patterns discovered
+6. **Progress Tracking**: Complete atomic tickets sequentially from TM-workboard.md; mark each as [DONE] upon completion; use ticket IDs in git commit messages (e.g., "W-001: Project Skeleton"); run manual QA checklists after core features; use local git log for progress review
 
 ### Git Workflow
 - **Branch**: All development work in `main` branch

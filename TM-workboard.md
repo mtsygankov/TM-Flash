@@ -16,7 +16,7 @@ Pinned Invariants (keep in context)
     
 - SRS: weights NEW=5.0, ERROR=3.0, DAYS=0.25; SRS_MAX_DAYS=14.
     
-- Four decks; per-deck stats isolated.
+- Four decks; per-deck stats isolated per direction (CH->EN and EN->CH).
     
 
 ---
@@ -91,7 +91,7 @@ Ticket W-010 — LocalStorage Schema Init
     
     - Storage object with: loadState(), saveState(), getSettings(), setSettings(), getDeckStats(deckId), setDeckStats(deckId, statsObj).
         
-    - Default state: { schema_version:1, settings:{ direction:"CH->EN", selected_deck: DEFAULT_SELECTED_DECK, theme:"light" }, decks:{ deck_a:{cards:{}}, deck_b:{cards:{}}, deck_c:{cards:{}}, deck_d:{cards:{}} } }.
+     - Default state: { schema_version:1, settings:{ direction:"CH->EN", selected_deck: DEFAULT_SELECTED_DECK, theme:"light" }, decks:{ deck_a:{cards:{}}, deck_b:{cards:{}}, deck_c:{cards:{}}, deck_d:{cards:{}} } } (cards entries will have directions: { "CH->EN": {correct:0, incorrect:0, last_reviewed:null}, "EN->CH": {...} }).
         
 - Acceptance Criteria:
     
@@ -175,11 +175,11 @@ Ticket W-022 — Pinyin Normalization Cache
 
 Ticket W-023 — Stats Sync (Per-Deck)
 
-- Description: Align storage stats with the validated card set for the active deck.
+- Description: Align storage stats with the validated card set for the active deck, per direction.
     
 - Deliverables:
     
-    - Stats.sync(deckId, cards$$$$) adds missing entries {correct:0, incorrect:0, last_reviewed:null} and removes orphaned ones.
+    - Stats.sync(deckId, cards) adds missing entries with directions { "CH->EN": {correct:0, incorrect:0, last_reviewed:null}, "EN->CH": {...} } and removes orphaned ones.
 - Acceptance Criteria:
     
     - After sync, stats map size equals valid card count; no stale IDs.
@@ -215,11 +215,11 @@ EPIC 5 — SRS Engine
 
 Ticket W-040 — Scoring Function
 
-- Description: Implement scoreCard(stat) per spec.
+- Description: Implement scoreCard(stat) per spec, for current direction.
     
 - Deliverables:
     
-    - JS function scoreCard({correct, incorrect, last_reviewed}).
+    - JS function scoreCard({correct, incorrect, last_reviewed}) for the active direction.
 - Acceptance Criteria:
     
     - Unit-like tests in console: new > old; higher error_rate > lower; more days_since (clamped) increases score.
@@ -228,7 +228,7 @@ Ticket W-040 — Scoring Function
 
 Ticket W-041 — Next-Card Selection
 
-- Description: Implement selectNextCard(cards$$$$, statsMap) returning the max-score card.
+- Description: Implement selectNextCard(cards, statsMap, direction) returning the max-score card based on current direction stats.
     
 - Deliverables:
     
@@ -280,7 +280,7 @@ Ticket W-052 — Answer Capture & Advance
     
     - Handlers: onCorrect(), onIncorrect(), swipe detectors scoped to card.
         
-    - Stats update: increment counters, set last_reviewed=Date.now().
+     - Stats update: increment counters for current direction, set last_reviewed=Date.now().
         
 - Acceptance Criteria:
     
@@ -294,7 +294,7 @@ EPIC 7 — Statistics View
 
 Ticket W-060 — Aggregations & Metrics
 
-- Description: Compute totals and per-card correct_ratio for active deck.
+- Description: Compute totals and per-card correct_ratio for active deck and direction.
     
 - Deliverables:
     
@@ -305,9 +305,23 @@ Ticket W-060 — Aggregations & Metrics
 - Dependencies: W-023.
     
 
+Ticket W-063 — Direction Selector in Stats View
+
+- Description: Add direction toggle in stats view to switch between CH->EN and EN->CH stats display.
+    
+- Deliverables:
+    
+    - UI toggle in #view-stats; onChange rerenders metrics/histogram/top lists for selected direction.
+        
+- Acceptance Criteria:
+    
+    - Toggling updates all stats displays; defaults to current global direction.
+        
+- Dependencies: W-060, W-011.
+
 Ticket W-061 — Histogram & Top Lists
 
-- Description: Render histogram buckets 0–20,21–40,41–60,61–80,81–100 and top 10 best/worst.
+- Description: Render histogram buckets 0–20,21–40,41–60,61–80,81–100 and top 10 best/worst for active direction.
     
 - Deliverables:
     
@@ -320,7 +334,7 @@ Ticket W-061 — Histogram & Top Lists
 
 Ticket W-062 — Reset Active Deck Stats
 
-- Description: Confirm dialog; clear stats for current deck; preserve settings; rerender.
+- Description: Confirm dialog; clear stats for current deck and direction; preserve settings; rerender.
     
 - Deliverables:
     
@@ -397,7 +411,7 @@ Ticket W-090 — Sample Decks A–D
 
 Ticket W-091 — Manual QA Script
 
-- Description: Checklist to verify deck switching, review flows, direction persistence, stats, search, errors.
+- Description: Checklist to verify deck switching, review flows, direction persistence, direction-specific stats tracking, stats, search, errors.
     
 - Deliverables:
     
@@ -427,7 +441,7 @@ Ticket W-100 (Optional) — PWA Caching
 
 Ticket W-101 (Future) — Virtual Hardest Deck Stub
 
-- Description: Implement ranking function to compute top-K hardest across all decks; no UI yet.
+- Description: Implement ranking function to compute top-K hardest across all decks per direction; no UI yet.
     
 - Deliverables:
     

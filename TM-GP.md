@@ -9,7 +9,7 @@ Greenfield specification for TM-Flash: a lightweight, dependency-free web app fo
 - Client-side only (HTML/CSS/Vanilla JS), static hosting ready.
 - Mobile-first UI; responsive to desktop. 
 - Three views: Review, Statistics, Real-time Search.
-- Four selectable decks via deck selector; per-deck stats are isolated.
+- Four selectable decks via deck selector; per-deck stats are isolated per direction (CH->EN and EN->CH).
 - Future: virtual “Hardest” deck (composed from the 4 decks) — design included below but not required at launch.
 
 ### 2) File Structure and Deck Registry
@@ -85,24 +85,29 @@ Validation behavior:
     "selected_deck": "deck_a",
     "theme": "light"
   },
-  "decks": {
-    "deck_a": {
-      "cards": {
-        "uniq_id_001": { "correct": 5, "incorrect": 1, "last_reviewed": 1694726400000 }
-      },
-      "meta_cache": {
-        "last_loaded": 1694726400000,
-        "deck_name": "Deck A"
-      }
-    },
-    "deck_b": { "cards": {}, "meta_cache": {} },
-    "deck_c": { "cards": {}, "meta_cache": {} },
-    "deck_d": { "cards": {}, "meta_cache": {} }
-  }
+   "decks": {
+     "deck_a": {
+       "cards": {
+         "uniq_id_001": {
+           "directions": {
+             "CH->EN": { "correct": 5, "incorrect": 1, "last_reviewed": 1694726400000 },
+             "EN->CH": { "correct": 3, "incorrect": 2, "last_reviewed": 1694726400000 }
+           }
+         }
+       },
+       "meta_cache": {
+         "last_loaded": 1694726400000,
+         "deck_name": "Deck A"
+       }
+     },
+     "deck_b": { "cards": {}, "meta_cache": {} },
+     "deck_c": { "cards": {}, "meta_cache": {} },
+     "deck_d": { "cards": {}, "meta_cache": {} }
+   }
 }
 ```
 
-Derived at runtime:
+Derived at runtime (per direction):
 
 - `total = correct + incorrect`
 - `is_new = (total === 0)`
@@ -121,7 +126,7 @@ On `DOMContentLoaded`:
 - `pinyin_normalized` field per card (Unicode NFD, remove diacritics, lowercase).
 
 6. Sync stats for the active deck only:
-- Add missing card entries: `{correct:0, incorrect:0, last_reviewed:null}`.
+- Add missing card entries with directions: `{"directions": {"CH->EN": {correct:0, incorrect:0, last_reviewed:null}, "EN->CH": {correct:0, incorrect:0, last_reviewed:null}}}`.
 - Remove stats for missing `card_id`s.
 
 7. Render Review view as default (unflipped).
@@ -131,7 +136,7 @@ Session caching (optional):
 
 ### 5) SRS (Per-Deck; Simple and Tunable)
 
-Definitions per card:
+Definitions per card per current direction:
 
 - `now_ms = Date.now()`
 - `total = correct + incorrect`
@@ -184,15 +189,15 @@ Select the card with the maximum score over the active deck.
 - Mark answer:
     - Correct: green button "Correct", ArrowRight, swipe right.
     - Incorrect: red button "Wrong", ArrowLeft, swipe left.
-- On mark: update stats for the active deck; pick next card; reset flip.
+- On mark: update stats for the active deck and current direction; pick next card; reset flip.
 
 #### 6.4 Statistics View
 
-- For the active deck only by default:
+- For the active deck only by default (stats per direction, with direction selector):
     - Totals: total cards, reviewed cards, new cards, deck errors.
     - Histogram (vertical bars): card-level correct_ratio distribution with buckets 0–20,21–40,41–60,61–80,81–100.
     - Top 10 best and worst by correct_ratio; tie-breaker: `total` desc.
-    - Reset learning stats: confirm dialog; clears stats for the active deck only (keeps settings).
+    - Reset learning stats: confirm dialog; clears stats for the active deck and selected direction only (keeps settings).
 
 #### 6.5 Real-time Search View
 
@@ -224,7 +229,7 @@ Select the card with the maximum score over the active deck.
 ### 10) Future: Virtual “Hardest” Deck (Design)
 
 - Virtual deck ID: `virtual_hardest` (computed, not persisted as a separate deck).
-- Definition of “hardest”:
+- Definition of “hardest” (per direction):
     - `error_rate = 1 - (correct/total)` with `total >= MIN_ANSWERS` (e.g., 3).
     - Rank across all four decks by `error_rate` desc, then `total` desc, then (optionally) `last_reviewed` asc.
     - Select top `K` cards (e.g., 50) as the virtual deck set.
@@ -253,9 +258,10 @@ Select the card with the maximum score over the active deck.
 ### 13) Testing Plan
 
 - Init: first-run storage creation; default selected deck.
-- Deck switching: preserves per-deck stats; direction persists globally.
+- Deck switching: preserves per-deck stats per direction; direction persists globally.
+- Direction toggle: switches display and stats tracking correctly.
 - Review: flip/mark flows, keyboard and swipe.
-- Stats: histogram bucket math, top/bottom lists, reset (active deck only).
+- Stats: histogram bucket math, top/bottom lists, reset (active deck and direction only).
 - Search: tone-insensitive pinyin; AND filter logic; jump to Review and back.
 - Error cases: invalid token counts, duplicate card IDs, fetch failures.
 - Optional PWA: offline behavior for cached assets and active deck.
@@ -280,8 +286,9 @@ const VIRTUAL_RECOMPUTE_EVERY_N_ANSWERS = 25; // optional
 ### 15) Acceptance Criteria
 
 - User can switch among 4 decks via selector; selection persists across reloads.
-- Each deck maintains independent stats; switching does not alter other decks.
+- Each deck maintains independent stats per direction; switching does not alter other decks.
 - Review, Statistics, and Search operate on the active deck.
-- Reset clears only the active deck’s stats; settings are preserved.
+- Reset clears only the active deck’s stats for the selected direction; settings are preserved.
+- Direction toggle affects review display and stats collection.
 - Deck validation skips malformed cards and surfaces an error count.
 - Keyboard and swipe interactions work as specified; no layout jumps on flip.
