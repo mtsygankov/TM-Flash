@@ -122,7 +122,7 @@ Ticket W-011 — Direction Toggle Persistence [DONE]
 
 EPIC 3 — Deck Loading & Validation
 
-Ticket W-020 — Deck Fetch with Retry [PENDING]
+Ticket W-020 — Deck Fetch with Retry [DONE]
 
 - Description: Load deck JSON by selected_deck with timeout and retry UI.
 
@@ -141,7 +141,7 @@ Ticket W-020 — Deck Fetch with Retry [PENDING]
 - Dependencies: W-010.
 
 
-Ticket W-021 — Deck Validation [PENDING]
+Ticket W-021 — Deck Validation [DONE]
 
 - Description: Validate uniqueness of card_id and token-count equality across hanzi/pinyin/en_words.
 
@@ -157,7 +157,7 @@ Ticket W-021 — Deck Validation [PENDING]
 - Dependencies: W-020.
 
 
-Ticket W-022 — Pinyin Normalization Cache [PENDING]
+Ticket W-022 — Pinyin Normalization Cache [DONE]
 
 - Description: Add pinyin_normalized (NFD diacritics removed, lowercase) to in-memory cards.
 
@@ -173,7 +173,7 @@ Ticket W-022 — Pinyin Normalization Cache [PENDING]
 - Dependencies: W-021.
 
 
-Ticket W-023 — Stats Sync (Per-Deck) [PENDING]
+Ticket W-023 — Stats Sync (Per-Deck) [DONE]
 
 - Description: Align storage stats with the validated card set for the active deck, per direction.
 

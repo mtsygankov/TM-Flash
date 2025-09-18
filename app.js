@@ -106,6 +106,291 @@ const Storage = {
     }
 };
 
+// Stats module
+const Stats = {
+    sync(deckId, cards) {
+        const deckStats = Storage.getDeckStats(deckId);
+        const validCardIds = new Set(cards.map(card => card.card_id));
+        const syncedCards = {};
+
+        // Add missing entries for valid cards
+        cards.forEach(card => {
+            if (!deckStats.cards[card.card_id]) {
+                syncedCards[card.card_id] = {
+                    "CH->EN": { correct: 0, incorrect: 0, last_reviewed: null },
+                    "EN->CH": { correct: 0, incorrect: 0, last_reviewed: null }
+                };
+            } else {
+                syncedCards[card.card_id] = deckStats.cards[card.card_id];
+            }
+        });
+
+        // Remove orphaned entries (cards that no longer exist in the deck)
+        Object.keys(deckStats.cards).forEach(cardId => {
+            if (!validCardIds.has(cardId)) {
+                console.log(`Removing orphaned stats for card: ${cardId}`);
+            } else {
+                syncedCards[cardId] = deckStats.cards[cardId];
+            }
+        });
+
+        const syncedStats = { cards: syncedCards };
+        Storage.setDeckStats(deckId, syncedStats);
+
+        console.log(`Stats sync complete for ${deckId}: ${Object.keys(syncedCards).length} cards`);
+        return syncedStats;
+    },
+
+    getCardStats(deckId, cardId, direction) {
+        const deckStats = Storage.getDeckStats(deckId);
+        return deckStats.cards[cardId]?.[direction] || { correct: 0, incorrect: 0, last_reviewed: null };
+    },
+
+    updateCardStats(deckId, cardId, direction, isCorrect) {
+        const deckStats = Storage.getDeckStats(deckId);
+        const cardStats = deckStats.cards[cardId] || {
+            "CH->EN": { correct: 0, incorrect: 0, last_reviewed: null },
+            "EN->CH": { correct: 0, incorrect: 0, last_reviewed: null }
+        };
+
+        if (!cardStats[direction]) {
+            cardStats[direction] = { correct: 0, incorrect: 0, last_reviewed: null };
+        }
+
+        if (isCorrect) {
+            cardStats[direction].correct++;
+        } else {
+            cardStats[direction].incorrect++;
+        }
+
+        cardStats[direction].last_reviewed = Date.now();
+        deckStats.cards[cardId] = cardStats;
+        Storage.setDeckStats(deckId, deckStats);
+    }
+};
+
+// Normalizer module
+const Normalizer = {
+    normalizePinyin(pinyin) {
+        // Convert to lowercase first
+        let normalized = pinyin.toLowerCase();
+
+        // Normalize to NFD (decomposed) form to separate base characters from diacritics
+        normalized = normalized.normalize('NFD');
+
+        // Remove diacritical marks (combining characters)
+        normalized = normalized.replace(/[\u0300-\u036f]/g, '');
+
+        return normalized;
+    },
+
+    augmentCardsWithNormalizedPinyin(cards) {
+        return cards.map(card => ({
+            ...card,
+            pinyin_normalized: this.normalizePinyin(card.pinyin)
+        }));
+    }
+};
+
+// Validator module
+const Validator = {
+    validate(deckJson) {
+        const errors = [];
+        const validCards = [];
+        const seenIds = new Set();
+
+        if (!Array.isArray(deckJson)) {
+            errors.push({ type: 'structure', message: 'Deck must be an array of cards' });
+            return { validCards, errors };
+        }
+
+        deckJson.forEach((card, index) => {
+            const cardErrors = this.validateCard(card, index, seenIds);
+            if (cardErrors.length === 0) {
+                validCards.push(card);
+            } else {
+                errors.push(...cardErrors);
+            }
+        });
+
+        return { validCards, errors };
+    },
+
+    validateCard(card, index, seenIds) {
+        const errors = [];
+
+        // Check required fields
+        if (!card.card_id) {
+            errors.push({ type: 'missing_field', cardIndex: index, field: 'card_id', message: 'Missing card_id' });
+        }
+        if (!card.hanzi) {
+            errors.push({ type: 'missing_field', cardIndex: index, field: 'hanzi', message: 'Missing hanzi' });
+        }
+        if (!card.pinyin) {
+            errors.push({ type: 'missing_field', cardIndex: index, field: 'pinyin', message: 'Missing pinyin' });
+        }
+        if (!card.en_words) {
+            errors.push({ type: 'missing_field', cardIndex: index, field: 'en_words', message: 'Missing en_words' });
+        }
+        if (!card.english) {
+            errors.push({ type: 'missing_field', cardIndex: index, field: 'english', message: 'Missing english' });
+        }
+
+        // Skip further validation if required fields are missing
+        if (errors.length > 0) {
+            return errors;
+        }
+
+        // Check card_id uniqueness
+        if (seenIds.has(card.card_id)) {
+            errors.push({ type: 'duplicate_id', cardIndex: index, cardId: card.card_id, message: `Duplicate card_id: ${card.card_id}` });
+        } else {
+            seenIds.add(card.card_id);
+        }
+
+        // Tokenize fields and check token count equality
+        const hanziTokens = this.tokenize(card.hanzi);
+        const pinyinTokens = this.tokenize(card.pinyin);
+        const enWordsTokens = this.tokenize(card.en_words);
+
+        if (hanziTokens.length !== pinyinTokens.length || hanziTokens.length !== enWordsTokens.length) {
+            errors.push({
+                type: 'token_mismatch',
+                cardIndex: index,
+                cardId: card.card_id,
+                message: `Token count mismatch - hanzi: ${hanziTokens.length}, pinyin: ${pinyinTokens.length}, en_words: ${enWordsTokens.length}`
+            });
+        }
+
+        return errors;
+    },
+
+    tokenize(text) {
+        // Split on whitespace and filter out empty strings
+        return text.split(/\s+/).filter(token => token.length > 0);
+    },
+
+    showValidationErrors(deckId, errors) {
+        if (errors.length === 0) {
+            this.hideValidationBanner();
+            return;
+        }
+
+        let banner = document.getElementById('validation-banner');
+        if (!banner) {
+            banner = document.createElement('div');
+            banner.id = 'validation-banner';
+            banner.className = 'validation-banner';
+            document.body.insertBefore(banner, document.body.firstChild);
+        }
+
+        const errorSummary = errors.slice(0, 5).map(error =>
+            `Card ${error.cardIndex + 1}: ${error.message}`
+        ).join('<br>');
+
+        const remainingCount = Math.max(0, errors.length - 5);
+        const remainingText = remainingCount > 0 ? `<br>... and ${remainingCount} more errors` : '';
+
+        banner.innerHTML = `
+            <div class="validation-content">
+                <span class="validation-message">
+                    <strong>${DECKS[deckId].label} validation:</strong> ${errors.length} errors found<br>
+                    ${errorSummary}${remainingText}
+                </span>
+            </div>
+        `;
+        banner.style.display = 'block';
+    },
+
+    hideValidationBanner() {
+        const banner = document.getElementById('validation-banner');
+        if (banner) {
+            banner.style.display = 'none';
+        }
+    }
+};
+
+// DeckLoader module
+const DeckLoader = {
+    currentDeck: null,
+    currentDeckId: null,
+
+    async fetch(deckId) {
+        const deck = DECKS[deckId];
+        if (!deck) {
+            throw new Error(`Unknown deck: ${deckId}`);
+        }
+
+        try {
+            this.hideErrorBanner();
+            const response = await this.fetchWithTimeout(deck.url, 10000); // 10 second timeout
+
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+            }
+
+            const data = await response.json();
+            this.currentDeck = data;
+            this.currentDeckId = deckId;
+            return data;
+        } catch (error) {
+            console.error(`Failed to load deck ${deckId}:`, error);
+            this.showErrorBanner(deckId, error.message);
+            throw error;
+        }
+    },
+
+    async fetchWithTimeout(url, timeoutMs) {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
+
+        try {
+            const response = await fetch(url, {
+                signal: controller.signal
+            });
+            clearTimeout(timeoutId);
+            return response;
+        } catch (error) {
+            clearTimeout(timeoutId);
+            if (error.name === 'AbortError') {
+                throw new Error('Request timed out');
+            }
+            throw error;
+        }
+    },
+
+    showErrorBanner(deckId, errorMessage) {
+        let banner = document.getElementById('error-banner');
+        if (!banner) {
+            banner = document.createElement('div');
+            banner.id = 'error-banner';
+            banner.className = 'error-banner';
+            document.body.insertBefore(banner, document.body.firstChild);
+        }
+
+        banner.innerHTML = `
+            <div class="error-content">
+                <span class="error-message">Failed to load ${DECKS[deckId].label}: ${errorMessage}</span>
+                <button class="retry-btn" onclick="DeckLoader.retryFetch('${deckId}')">Retry</button>
+            </div>
+        `;
+        banner.style.display = 'block';
+    },
+
+    hideErrorBanner() {
+        const banner = document.getElementById('error-banner');
+        if (banner) {
+            banner.style.display = 'none';
+        }
+    },
+
+    retryFetch(deckId) {
+        this.fetch(deckId).catch(() => {
+            // Error already handled in fetch method
+        });
+    }
+};
+
 // Settings module
 const Settings = {
     init() {

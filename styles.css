@@ -87,6 +87,64 @@ h2 {
     color: #666;
 }
 
+/* Error banner styles */
+.error-banner {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    padding: 1rem;
+    margin: 1rem;
+    display: none;
+}
+
+.error-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.error-message {
+    color: #721c24;
+    flex: 1;
+}
+
+.retry-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.retry-btn:hover {
+    background-color: #c82333;
+}
+
+/* Validation banner styles */
+.validation-banner {
+    background-color: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 4px;
+    padding: 1rem;
+    margin: 1rem;
+    display: none;
+}
+
+.validation-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.validation-message {
+    color: #856404;
+    flex: 1;
+    line-height: 1.4;
+}
+
 /* Utility classes */
 .is-hidden {
     display: none !important;
