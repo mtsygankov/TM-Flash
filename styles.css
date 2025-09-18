@@ -193,10 +193,9 @@ h2 {
 
 /* Card review styles */
 #card-table {
-    width: 100%;
     border-collapse: collapse;
-    table-layout: fixed;
-    margin-bottom: 2rem;
+    table-layout: auto;
+    margin: 0 auto 2rem auto;
 }
 
 #card-table td {
@@ -208,7 +207,7 @@ h2 {
 }
 
 #card-table .row-hanzi td {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
 }
 
@@ -219,10 +218,11 @@ h2 {
 
 #card-table .row-en-words td {
     font-size: 1.1rem;
+    color: #888;
 }
 
 #card-table .row-english td {
-    font-size: 1rem;
+    font-size: 1.2rem;
     background-color: #f9f9f9;
 }
 
