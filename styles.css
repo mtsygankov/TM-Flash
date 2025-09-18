@@ -208,7 +208,7 @@ h2 {
 
 #card-table .row-hanzi td {
     font-size: 3rem;
-    font-weight: bold;
+/*    font-weight: bold; */
 }
 
 #card-table .row-pinyin td {
@@ -242,10 +242,6 @@ h2 {
     display: none;
     justify-content: center;
     gap: 2rem;
-}
-
-#card-table.flipped ~ #card-buttons {
-    display: flex;
 }
 
 #btn-incorrect {
