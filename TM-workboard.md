@@ -190,7 +190,7 @@ Ticket W-023 — Stats Sync (Per-Deck) [DONE]
 
 EPIC 4 — Deck Selector & Navigation Wiring
 
-Ticket W-030 — Deck Selector UI & Behavior [PENDING]
+Ticket W-030 — Deck Selector UI & Behavior [DONE]
 
 - Description: Implement deck dropdown/segmented control bound to settings.selected_deck.
 

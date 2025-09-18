@@ -393,6 +393,9 @@ const DeckLoader = {
 
 // DeckSelector module
 const DeckSelector = {
+    isLoading: false,
+    currentDeckId: null,
+
     async init() {
         await this.populateOptions();
         this.loadSelectedDeck();
@@ -402,6 +405,8 @@ const DeckSelector = {
     async populateOptions() {
         const selector = document.getElementById('deck-selector');
         if (!selector) return;
+
+        this.setStatusMessage('Loading deck list...', 'info');
 
         // Clear existing options except the first one
         while (selector.options.length > 1) {
@@ -427,6 +432,8 @@ const DeckSelector = {
                 selector.appendChild(option);
             }
         }
+
+        this.setStatusMessage(`${Object.keys(DECKS).length} decks available`, 'success');
     },
 
     async fetchDeckData(deckId) {
@@ -448,8 +455,17 @@ const DeckSelector = {
         const selector = document.getElementById('deck-selector');
         if (selector && settings.selected_deck) {
             selector.value = settings.selected_deck;
+            this.currentDeckId = settings.selected_deck;
             // Load the default deck
-            this.loadDeck(settings.selected_deck);
+            this.loadDeck(settings.selected_deck).catch(error => {
+                console.error('Failed to load default deck:', error);
+                // If default deck fails, try to load the first available deck
+                const firstDeckId = Object.keys(DECKS)[0];
+                if (firstDeckId && firstDeckId !== settings.selected_deck) {
+                    console.log('Falling back to first available deck:', firstDeckId);
+                    this.loadDeck(firstDeckId);
+                }
+            });
         }
     },
 
@@ -458,15 +474,35 @@ const DeckSelector = {
         if (selector) {
             selector.addEventListener('change', (e) => {
                 const selectedDeck = e.target.value;
-                if (selectedDeck) {
-                    this.loadDeck(selectedDeck);
+                if (selectedDeck && selectedDeck !== this.currentDeckId) {
+                    console.log(`Switching to deck: ${selectedDeck}`);
+                    this.loadDeck(selectedDeck).catch(() => {
+                        // If loading fails, revert selector to current deck
+                        if (this.currentDeckId) {
+                            selector.value = this.currentDeckId;
+                        }
+                    });
+                } else if (!selectedDeck) {
+                    // If user selects empty option, revert to current deck
+                    if (this.currentDeckId) {
+                        selector.value = this.currentDeckId;
+                    }
                 }
             });
         }
     },
 
     async loadDeck(deckId) {
+        if (this.isLoading) {
+            console.log('Deck loading already in progress, ignoring request');
+            return;
+        }
+
+        this.isLoading = true;
+        this.setLoadingState(true);
+
         try {
+            console.log(`Loading deck: ${deckId}`);
             const deckData = await DeckLoader.fetch(deckId);
 
             // Extract cards array from deck object
@@ -476,6 +512,7 @@ const DeckSelector = {
             const { validCards, errors } = Validator.validate(cards);
 
             if (errors.length > 0) {
+                console.warn(`Validation errors in deck ${deckId}:`, errors);
                 Validator.showValidationErrors(deckId, errors);
                 return;
             }
@@ -492,12 +529,63 @@ const DeckSelector = {
             // Update storage with selected deck
             Storage.setSettings({ selected_deck: deckId });
 
+            // Update current deck tracking
+            this.currentDeckId = deckId;
+
+            // Ensure selector shows current selection
+            const selector = document.getElementById('deck-selector');
+            if (selector && selector.value !== deckId) {
+                selector.value = deckId;
+            }
+
+            // Reset review view to show first card
+            this.resetReviewView();
+
+            this.setStatusMessage(`Loaded ${DECKS[deckId].label} (${augmentedCards.length} cards)`, 'success');
             console.log(`Successfully loaded deck: ${DECKS[deckId].label} with ${augmentedCards.length} cards`);
 
         } catch (error) {
+            this.setStatusMessage(`Failed to load ${DECKS[deckId].label}`, 'error');
             console.error(`Failed to load deck ${deckId}:`, error);
             // Error handling is done in DeckLoader.fetch()
+        } finally {
+            this.isLoading = false;
+            this.setLoadingState(false);
         }
+    },
+
+    setLoadingState(loading) {
+        const selector = document.getElementById('deck-selector');
+        const statusElement = document.getElementById('deck-status');
+
+        if (selector) {
+            selector.disabled = loading;
+            selector.style.opacity = loading ? '0.6' : '1';
+        }
+
+        if (statusElement) {
+            if (loading) {
+                statusElement.textContent = 'Loading deck...';
+                statusElement.className = 'deck-status loading';
+            } else {
+                statusElement.textContent = '';
+                statusElement.className = 'deck-status';
+            }
+        }
+    },
+
+    setStatusMessage(message, type = 'info') {
+        const statusElement = document.getElementById('deck-status');
+        if (statusElement) {
+            statusElement.textContent = message;
+            statusElement.className = `deck-status ${type}`;
+        }
+    },
+
+    resetReviewView() {
+        // Reset any review state when switching decks
+        // This will be enhanced when the Review module is implemented
+        console.log('Review view reset for new deck');
     }
 };
 
