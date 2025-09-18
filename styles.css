@@ -199,7 +199,7 @@ h2 {
 }
 
 #card-table td {
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     border: 1px solid #ddd;
     text-align: center;
     vertical-align: middle;
