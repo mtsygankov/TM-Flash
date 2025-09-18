@@ -213,7 +213,7 @@ Ticket W-030 — Deck Selector UI & Behavior [DONE]
 
 EPIC 5 — SRS Engine
 
-Ticket W-040 — Scoring Function [PENDING]
+Ticket W-040 — Scoring Function [DONE]
 
 - Description: Implement scoreCard(stat) per spec, for current direction.
 
@@ -226,7 +226,7 @@ Ticket W-040 — Scoring Function [PENDING]
 - Dependencies: W-023.
 
 
-Ticket W-041 — Next-Card Selection [PENDING]
+Ticket W-041 — Next-Card Selection [DONE]
 
 - Description: Implement selectNextCard(cards, statsMap, direction) returning the max-score card based on current direction stats.
 

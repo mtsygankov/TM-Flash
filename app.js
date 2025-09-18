@@ -169,6 +169,39 @@ const Stats = {
     }
 };
 
+// SRS module
+const SRS = {
+    scoreCard(stat, nowMs = Date.now()) {
+        const { correct, incorrect, last_reviewed } = stat;
+        const total = correct + incorrect;
+        const is_new = total === 0 ? 1 : 0;
+        const error_rate = is_new ? 1 : (1 - (correct / total));
+        let days_since;
+        if (is_new) {
+            days_since = 14;
+        } else {
+            days_since = Math.min(14, (nowMs - last_reviewed) / 86400000);
+        }
+        const score = 5.0 * is_new + 3.0 * error_rate + 0.25 * days_since + Math.random() * 0.01;
+        return score;
+    },
+
+    selectNextCard(cards, statsMap, direction) {
+        if (!cards || cards.length === 0) return null;
+        let maxScore = -Infinity;
+        let selectedCard = null;
+        cards.forEach(card => {
+            const stat = statsMap[card.card_id]?.[direction];
+            const score = this.scoreCard(stat || { correct: 0, incorrect: 0, last_reviewed: null });
+            if (score > maxScore) {
+                maxScore = score;
+                selectedCard = card;
+            }
+        });
+        return selectedCard;
+    }
+};
+
 // Normalizer module
 const Normalizer = {
     normalizePinyin(pinyin) {
