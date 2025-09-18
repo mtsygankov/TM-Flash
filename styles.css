@@ -191,6 +191,89 @@ h2 {
     display: block !important;
 }
 
+/* Card review styles */
+#card-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin-bottom: 2rem;
+}
+
+#card-table td {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 1.2rem;
+}
+
+#card-table .row-hanzi td {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#card-table .row-pinyin td {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+#card-table .row-en-words td {
+    font-size: 1.1rem;
+}
+
+#card-table .row-english td {
+    font-size: 1rem;
+    background-color: #f9f9f9;
+}
+
+/* Flip and direction visibility */
+#card-table:not(.flipped).direction-ch-en .row-en-words,
+#card-table:not(.flipped).direction-ch-en .row-english {
+    visibility: hidden;
+}
+
+#card-table:not(.flipped).direction-en-ch .row-hanzi,
+#card-table:not(.flipped).direction-en-ch .row-pinyin {
+    visibility: hidden;
+}
+
+/* Card buttons */
+#card-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+#btn-incorrect {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#btn-incorrect:hover {
+    background-color: #c82333;
+}
+
+#btn-correct {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#btn-correct:hover {
+    background-color: #218838;
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
     header {
@@ -212,5 +295,23 @@ h2 {
 
     .view {
         padding: 1rem;
+    }
+
+    #card-table td {
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+
+    #card-table .row-hanzi td {
+        font-size: 1.3rem;
+    }
+
+    #card-buttons {
+        gap: 1rem;
+    }
+
+    #btn-incorrect, #btn-correct {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
     }
 }

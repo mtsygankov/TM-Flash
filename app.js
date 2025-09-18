@@ -557,13 +557,26 @@ const DeckSelector = {
             const augmentedCards = Normalizer.augmentCardsWithNormalizedPinyin(validCards);
 
             // Sync stats with the loaded deck
-            Stats.sync(deckId, augmentedCards);
+            const syncedStats = Stats.sync(deckId, augmentedCards);
 
             // Update storage with selected deck
             Storage.setSettings({ selected_deck: deckId });
 
             // Update current deck tracking
             this.currentDeckId = deckId;
+
+            // Set app state
+            App.currentCards = augmentedCards;
+            App.currentStats = syncedStats;
+            App.currentDirection = Storage.getSettings().direction;
+            App.currentDeckId = deckId;
+            App.flipped = false;
+            App.currentCard = SRS.selectNextCard(App.currentCards, App.currentStats.cards, App.currentDirection);
+            if (App.currentCard) {
+                Review.renderCard(App.currentCard);
+            } else {
+                document.getElementById('card-container').innerHTML = '<p>No valid cards in this deck.</p>';
+            }
 
             // Ensure selector shows current selection
             const selector = document.getElementById('deck-selector');
@@ -616,9 +629,10 @@ const DeckSelector = {
     },
 
     resetReviewView() {
-        // Reset any review state when switching decks
-        // This will be enhanced when the Review module is implemented
-        console.log('Review view reset for new deck');
+        App.flipped = false;
+        if (App.currentCard) {
+            Review.renderCard(App.currentCard);
+        }
     }
 };
 
@@ -639,6 +653,10 @@ const Settings = {
         if (button) {
             button.textContent = direction;
             button.dataset.direction = direction;
+        }
+        App.currentDirection = direction;
+        if (App.currentCard) {
+            Review.applyDirectionAndFlip();
         }
     },
 
@@ -662,6 +680,13 @@ const Settings = {
 
 // TM-Flash Application
 const App = {
+    currentCards: null,
+    currentStats: null,
+    currentCard: null,
+    flipped: false,
+    currentDirection: 'CH->EN',
+    currentDeckId: null,
+
     async init() {
         console.log('TM-Flash initialized');
         console.log('Deck registry:', DECKS);
@@ -673,6 +698,8 @@ const App = {
         await DeckSelector.init();
         // Initialize navigation
         Nav.init();
+        // Initialize review
+        Review.init();
     }
 };
 
@@ -707,6 +734,121 @@ const Nav = {
         if (activeTab) {
             activeTab.classList.add('active');
         }
+    }
+};
+
+// Review module
+const Review = {
+    init() {
+        this.bindEvents();
+    },
+
+    renderCard(card) {
+        if (!card) return;
+        const hanziTokens = card.hanzi.split(' ');
+        const pinyinTokens = card.pinyin.split(' ');
+        const enWords = card.en_words;
+        const table = document.getElementById('card-table');
+        table.innerHTML = `
+            <tr class="row-hanzi">
+                ${hanziTokens.map(token => `<td>${this.escapeHtml(token)}</td>`).join('')}
+            </tr>
+            <tr class="row-pinyin">
+                ${pinyinTokens.map(token => `<td>${this.escapeHtml(token)}</td>`).join('')}
+            </tr>
+            <tr class="row-en-words">
+                ${enWords.map(word => `<td>${this.escapeHtml(word)}</td>`).join('')}
+            </tr>
+            <tr class="row-english">
+                <td colspan="${hanziTokens.length}">${this.escapeHtml(card.english)}</td>
+            </tr>
+        `;
+        this.applyDirectionAndFlip();
+    },
+
+    escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+    },
+
+    applyDirectionAndFlip() {
+        const table = document.getElementById('card-table');
+        const direction = App.currentDirection;
+        const flipped = App.flipped;
+        table.className = `direction-${direction.toLowerCase().replace('->', '-')} ${flipped ? 'flipped' : ''}`;
+    },
+
+    toggleFlip() {
+        App.flipped = !App.flipped;
+        this.applyDirectionAndFlip();
+    },
+
+    onCorrect() {
+        if (!App.currentCard) return;
+        Stats.updateCardStats(App.currentDeckId, App.currentCard.card_id, App.currentDirection, true);
+        this.advanceToNextCard();
+    },
+
+    onIncorrect() {
+        if (!App.currentCard) return;
+        Stats.updateCardStats(App.currentDeckId, App.currentCard.card_id, App.currentDirection, false);
+        this.advanceToNextCard();
+    },
+
+    advanceToNextCard() {
+        App.flipped = false;
+        App.currentCard = SRS.selectNextCard(App.currentCards, App.currentStats.cards, App.currentDirection);
+        if (App.currentCard) {
+            this.renderCard(App.currentCard);
+        } else {
+            document.getElementById('card-container').innerHTML = '<p>No more cards to review.</p>';
+        }
+    },
+
+    bindEvents() {
+        document.getElementById('btn-correct').addEventListener('click', () => this.onCorrect());
+        document.getElementById('btn-incorrect').addEventListener('click', () => this.onIncorrect());
+
+        // Keyboard
+        document.addEventListener('keydown', (e) => {
+            if (document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'SELECT') return;
+            if (e.code === 'Space') {
+                e.preventDefault();
+                this.toggleFlip();
+            } else if (e.code === 'ArrowRight') {
+                e.preventDefault();
+                this.onCorrect();
+            } else if (e.code === 'ArrowLeft') {
+                e.preventDefault();
+                this.onIncorrect();
+            }
+        });
+
+        // Swipe
+        let startX = 0;
+        let startY = 0;
+        const cardContainer = document.getElementById('card-container');
+        cardContainer.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+            startY = e.touches[0].clientY;
+        });
+        cardContainer.addEventListener('touchend', (e) => {
+            if (!startX || !startY) return;
+            const endX = e.changedTouches[0].clientX;
+            const endY = e.changedTouches[0].clientY;
+            const diffX = endX - startX;
+            const diffY = endY - startY;
+            if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
+                if (diffX > 0) {
+                    this.onCorrect();
+                } else {
+                    this.onIncorrect();
+                }
+            }
+            startX = 0;
+            startY = 0;
+        });
     }
 };
 

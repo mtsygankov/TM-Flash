@@ -243,7 +243,7 @@ Ticket W-041 — Next-Card Selection [DONE]
 
 EPIC 6 — Review View
 
-Ticket W-050 — Card Table Rendering [PENDING]
+Ticket W-050 — Card Table Rendering [DONE]
 
 - Description: Render the 4-row table with aligned tokens and translation colspan.
 
@@ -259,7 +259,7 @@ Ticket W-050 — Card Table Rendering [PENDING]
 - Dependencies: W-030, W-041.
 
 
-Ticket W-051 — Direction & Flip State [PENDING]
+Ticket W-051 — Direction & Flip State [DONE]
 
 - Description: Implement unflipped/flipped visibility per direction; Space to flip.
 
@@ -272,7 +272,7 @@ Ticket W-051 — Direction & Flip State [PENDING]
 - Dependencies: W-050, W-011.
 
 
-Ticket W-052 — Answer Capture & Advance [PENDING]
+Ticket W-052 — Answer Capture & Advance [DONE]
 
 - Description: Correct/Incorrect buttons, ArrowRight/Left, swipe right/left; update stats and advance.
 
