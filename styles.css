@@ -199,7 +199,7 @@ h2 {
 }
 
 #card-table td {
-    padding: 0.5rem 1rem;
+    padding: 0.1rem 1rem;
     border: 1px solid #ddd;
     text-align: center;
     vertical-align: middle;
@@ -207,23 +207,23 @@ h2 {
 }
 
 #card-table .row-hanzi td {
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: bold;
 }
 
 #card-table .row-pinyin td {
-    font-size: 1.1rem;
-    color: #666;
-}
-
-#card-table .row-en-words td {
-    font-size: 1.1rem;
+    font-size: 1.0rem;
     color: #888;
 }
 
+#card-table .row-en-words td {
+    font-size: 0.7rem;
+    color: #aaa;
+}
+
 #card-table .row-english td {
-    font-size: 1.5rem;
-    background-color: #f9f9f9;
+    font-size: 2.5rem;
+/*    background-color: #f9f9f9; */
 }
 
 /* Flip and direction visibility */
