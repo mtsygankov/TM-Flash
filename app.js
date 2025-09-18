@@ -820,8 +820,20 @@ const Review = {
     },
 
   bindEvents() {
-    document.getElementById('btn-correct').addEventListener('click', () => this.onCorrect());
-    document.getElementById('btn-incorrect').addEventListener('click', () => this.onIncorrect());
+    console.log('Binding review events');
+    const btnCorrect = document.getElementById('btn-correct');
+    const btnIncorrect = document.getElementById('btn-incorrect');
+    console.log('btnCorrect:', btnCorrect);
+    console.log('btnIncorrect:', btnIncorrect);
+
+    btnCorrect.addEventListener('click', () => {
+      console.log('btn-correct clicked');
+      this.onCorrect();
+    });
+    btnIncorrect.addEventListener('click', () => {
+      console.log('btn-incorrect clicked');
+      this.onIncorrect();
+    });
 
     // Keyboard
     document.addEventListener('keydown', (e) => {
@@ -833,11 +845,13 @@ const Review = {
         }
       } else if (e.code === 'ArrowRight') {
         if (App.flipped) {
+          console.log('ArrowRight pressed');
           e.preventDefault();
           this.onCorrect();
         }
       } else if (e.code === 'ArrowLeft') {
         if (App.flipped) {
+          console.log('ArrowLeft pressed');
           e.preventDefault();
           this.onIncorrect();
         }
