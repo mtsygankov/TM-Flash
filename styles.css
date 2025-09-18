@@ -239,9 +239,13 @@ h2 {
 
 /* Card buttons */
 #card-buttons {
-    display: flex;
+    display: none;
     justify-content: center;
     gap: 2rem;
+}
+
+#card-table.flipped ~ #card-buttons {
+    display: flex;
 }
 
 #btn-incorrect {

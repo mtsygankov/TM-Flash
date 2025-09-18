@@ -806,50 +806,62 @@ const Review = {
         }
     },
 
-    bindEvents() {
-        document.getElementById('btn-correct').addEventListener('click', () => this.onCorrect());
-        document.getElementById('btn-incorrect').addEventListener('click', () => this.onIncorrect());
+  bindEvents() {
+    document.getElementById('btn-correct').addEventListener('click', () => this.onCorrect());
+    document.getElementById('btn-incorrect').addEventListener('click', () => this.onIncorrect());
 
-        // Keyboard
-        document.addEventListener('keydown', (e) => {
-            if (document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'SELECT') return;
-            if (e.code === 'Space') {
-                e.preventDefault();
-                this.toggleFlip();
-            } else if (e.code === 'ArrowRight') {
-                e.preventDefault();
-                this.onCorrect();
-            } else if (e.code === 'ArrowLeft') {
-                e.preventDefault();
-                this.onIncorrect();
-            }
-        });
+    // Keyboard
+    document.addEventListener('keydown', (e) => {
+      if (document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'SELECT') return;
+      if (e.code === 'Space') {
+        e.preventDefault();
+        if (!App.flipped) {
+          this.toggleFlip();
+        }
+      } else if (e.code === 'ArrowRight') {
+        if (App.flipped) {
+          e.preventDefault();
+          this.onCorrect();
+        }
+      } else if (e.code === 'ArrowLeft') {
+        if (App.flipped) {
+          e.preventDefault();
+          this.onIncorrect();
+        }
+      }
+    });
 
-        // Swipe
-        let startX = 0;
-        let startY = 0;
-        const cardContainer = document.getElementById('card-container');
-        cardContainer.addEventListener('touchstart', (e) => {
-            startX = e.touches[0].clientX;
-            startY = e.touches[0].clientY;
-        });
-        cardContainer.addEventListener('touchend', (e) => {
-            if (!startX || !startY) return;
-            const endX = e.changedTouches[0].clientX;
-            const endY = e.changedTouches[0].clientY;
-            const diffX = endX - startX;
-            const diffY = endY - startY;
-            if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
-                if (diffX > 0) {
-                    this.onCorrect();
-                } else {
-                    this.onIncorrect();
-                }
-            }
-            startX = 0;
-            startY = 0;
-        });
-    }
+    // Swipe and click
+    let startX = 0;
+    let startY = 0;
+    const cardContainer = document.getElementById('card-container');
+    cardContainer.addEventListener('click', () => {
+      if (!App.flipped) {
+        this.toggleFlip();
+      }
+    });
+    cardContainer.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
+    });
+    cardContainer.addEventListener('touchend', (e) => {
+      if (!App.flipped) return;
+      if (!startX || !startY) return;
+      const endX = e.changedTouches[0].clientX;
+      const endY = e.changedTouches[0].clientY;
+      const diffX = endX - startX;
+      const diffY = endY - startY;
+      if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
+        if (diffX > 0) {
+          this.onCorrect();
+        } else {
+          this.onIncorrect();
+        }
+      }
+      startX = 0;
+      startY = 0;
+    });
+  }
 };
 
 // Initialize app when DOM is loaded
