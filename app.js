@@ -251,7 +251,7 @@ const Validator = {
         // Tokenize fields and check token count equality
         const hanziTokens = this.tokenize(card.hanzi);
         const pinyinTokens = this.tokenize(card.pinyin);
-        const enWordsTokens = this.tokenize(card.en_words);
+        const enWordsTokens = Array.isArray(card.en_words) ? card.en_words : this.tokenize(card.en_words);
 
         if (hanziTokens.length !== pinyinTokens.length || hanziTokens.length !== enWordsTokens.length) {
             errors.push({
@@ -391,6 +391,116 @@ const DeckLoader = {
     }
 };
 
+// DeckSelector module
+const DeckSelector = {
+    async init() {
+        await this.populateOptions();
+        this.loadSelectedDeck();
+        this.bindSelector();
+    },
+
+    async populateOptions() {
+        const selector = document.getElementById('deck-selector');
+        if (!selector) return;
+
+        // Clear existing options except the first one
+        while (selector.options.length > 1) {
+            selector.remove(1);
+        }
+
+        // Add deck options with names from JSON
+        for (const deckId of Object.keys(DECKS)) {
+            try {
+                const deckData = await this.fetchDeckData(deckId);
+                const deckName = deckData.deck_name || DECKS[deckId].label;
+
+                const option = document.createElement('option');
+                option.value = deckId;
+                option.textContent = deckName;
+                selector.appendChild(option);
+            } catch (error) {
+                console.warn(`Failed to load deck name for ${deckId}, using fallback:`, error);
+                // Fallback to hardcoded label if fetch fails
+                const option = document.createElement('option');
+                option.value = deckId;
+                option.textContent = DECKS[deckId].label;
+                selector.appendChild(option);
+            }
+        }
+    },
+
+    async fetchDeckData(deckId) {
+        const deck = DECKS[deckId];
+        if (!deck) {
+            throw new Error(`Unknown deck: ${deckId}`);
+        }
+
+        const response = await fetch(deck.url);
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+
+        return await response.json();
+    },
+
+    loadSelectedDeck() {
+        const settings = Storage.getSettings();
+        const selector = document.getElementById('deck-selector');
+        if (selector && settings.selected_deck) {
+            selector.value = settings.selected_deck;
+            // Load the default deck
+            this.loadDeck(settings.selected_deck);
+        }
+    },
+
+    bindSelector() {
+        const selector = document.getElementById('deck-selector');
+        if (selector) {
+            selector.addEventListener('change', (e) => {
+                const selectedDeck = e.target.value;
+                if (selectedDeck) {
+                    this.loadDeck(selectedDeck);
+                }
+            });
+        }
+    },
+
+    async loadDeck(deckId) {
+        try {
+            const deckData = await DeckLoader.fetch(deckId);
+
+            // Extract cards array from deck object
+            const cards = deckData.cards || [];
+
+            // Validate the cards
+            const { validCards, errors } = Validator.validate(cards);
+
+            if (errors.length > 0) {
+                Validator.showValidationErrors(deckId, errors);
+                return;
+            }
+
+            // Hide any previous validation errors
+            Validator.hideValidationBanner();
+
+            // Normalize and augment cards
+            const augmentedCards = Normalizer.augmentCardsWithNormalizedPinyin(validCards);
+
+            // Sync stats with the loaded deck
+            Stats.sync(deckId, augmentedCards);
+
+            // Update storage with selected deck
+            Storage.setSettings({ selected_deck: deckId });
+
+            console.log(`Successfully loaded deck: ${DECKS[deckId].label} with ${augmentedCards.length} cards`);
+
+        } catch (error) {
+            console.error(`Failed to load deck ${deckId}:`, error);
+            // Error handling is done in DeckLoader.fetch()
+        }
+    }
+};
+
 // Settings module
 const Settings = {
     init() {
@@ -431,13 +541,15 @@ const Settings = {
 
 // TM-Flash Application
 const App = {
-    init() {
+    async init() {
         console.log('TM-Flash initialized');
         console.log('Deck registry:', DECKS);
         // Initialize storage
         Storage.loadState();
         // Initialize settings
         Settings.init();
+        // Initialize deck selector
+        await DeckSelector.init();
         // Initialize navigation
         Nav.init();
     }
@@ -478,6 +590,6 @@ const Nav = {
 };
 
 // Initialize app when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    App.init();
+document.addEventListener('DOMContentLoaded', async () => {
+    await App.init();
 });

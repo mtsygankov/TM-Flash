@@ -6,7 +6,7 @@ Greenfield specification for TM-Flash: a lightweight, dependency-free web app fo
 
 ### 1) Overview
 
-- Client-side only (HTML/CSS/Vanilla JS), static hosting ready.
+- Client-side only (HTML/CSS/Vanilla JS), static hosting ready. Development server runs on http://localhost:8000.
 - Mobile-first UI; responsive to desktop. 
 - Three views: Review, Statistics, Real-time Search.
 - Four selectable decks via deck selector; per-deck stats are isolated per direction (CH->EN and EN->CH).
@@ -52,13 +52,13 @@ All deck JSON files follow the same schema and constraints (see §3).
     "last_updated": "2025-09-16"
   },
   "cards": [
-    {
-      "card_id": "uniq_id_001",
-      "hanzi": "我 要 咖啡",
-      "pinyin": "wǒ yào kāfēi",
-      "en_words": "I want coffee",
-      "english": "I want coffee"
-    }
+   {
+     "card_id": "uniq_id_001",
+     "hanzi": "我 要 咖啡",
+     "pinyin": "wǒ yào kāfēi",
+     "en_words": ["I", "want", "coffee"],
+     "english": "I want coffee"
+   }
   ]
 }
 ```
@@ -66,8 +66,10 @@ All deck JSON files follow the same schema and constraints (see §3).
 Constraints:
 
 - `card_id` unique within a deck.
-- Token counts across `hanzi`, `pinyin`, and `en_words` must match when split by single spaces (after trimming/collapsing multiple spaces).
-- All values are strings; trim whitespace.
+- Token counts across `hanzi`, `pinyin`, and `en_words` must match exactly.
+- `hanzi` and `pinyin` are space-separated strings.
+- `en_words` is an array of strings, one for each corresponding hanzi token.
+- All string values are trimmed of whitespace.
 
 Validation behavior:
 - Invalid entries are skipped; show a non-blocking error summary (including `card_id` and reason). Display a per-deck “deck errors” count in Statistics.

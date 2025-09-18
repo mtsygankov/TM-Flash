@@ -1,0 +1,78 @@
+{
+  "deck_name": "Basic Phrases",
+  "created_at": "2024-01-15T10:00:00Z",
+  "version": "1.0",
+  "description": "Basic Chinese phrases for beginners",
+  "cards": [
+  {
+    "card_id": "card_001",
+    "hanzi": "我 爱 你",
+    "pinyin": "wǒ ài nǐ",
+     "en_words": ["I", "love", "you"],
+    "english": "I love you"
+  },
+  {
+    "card_id": "card_002",
+    "hanzi": "你 好",
+    "pinyin": "nǐ hǎo",
+     "en_words": ["you", "good"],
+    "english": "Hello"
+  },
+  {
+    "card_id": "card_003",
+    "hanzi": "谢谢 你",
+    "pinyin": "xièxiè nǐ",
+     "en_words": ["thanks", "you"],
+    "english": "Thank you"
+  },
+  {
+    "card_id": "card_004",
+    "hanzi": "对不起",
+    "pinyin": "duìbùqǐ",
+     "en_words": ["sorry"],
+    "english": "Sorry"
+  },
+   {
+     "card_id": "card_005",
+     "hanzi": "再见",
+     "pinyin": "zàijiàn",
+     "en_words": ["goodbye"],
+     "english": "Goodbye"
+   },
+  {
+    "card_id": "card_006",
+    "hanzi": "我 很 饿",
+    "pinyin": "wǒ hěn è",
+     "en_words": ["I", "very", "hungry"],
+    "english": "I am very hungry"
+  },
+   {
+     "card_id": "card_007",
+     "hanzi": "<Subject> 好不好 ？",
+     "pinyin": "<Subject> hǎobuhǎo ？",
+     "en_words": ["subject", "okay", "?"],
+     "english": "Is <subject> good or not?"
+   },
+  {
+    "card_id": "card_008",
+    "hanzi": "她们 觉得 这 件 衣服 怎么样 ？",
+    "pinyin": "tāmen juéde zhè jiàn yīfu zěnmeyàng ？",
+     "en_words": ["they", "think", "this", "piece", "clothes", "how", "?"],
+    "english": "What do they think of this piece of clothing?"
+  },
+   {
+     "card_id": "card_009",
+     "hanzi": "我 也 不 太 喜欢 。",
+     "pinyin": "wǒ yě bù tài xǐhuan 。",
+     "en_words": ["I", "also", "not", "very", "like", "."],
+     "english": "I don't really like it either."
+   },
+   {
+     "card_id": "card_010",
+     "hanzi": "请问 这 件 衣服 有 红色 的 吗 ？",
+     "pinyin": "qǐngwèn zhè jiàn yīfu yǒu hóngsè de ma ？",
+     "en_words": ["excuse", "me", "this", "piece", "clothes", "have", "red", "?", "?"],
+     "english": "Excuse me, does this piece of clothing come in red?"
+   }
+]
+}
