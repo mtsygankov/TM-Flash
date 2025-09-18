@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TM-Flash</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>TM-Flash</h1>
+        <div class="controls">
+            <select id="deck-selector" disabled>
+                <option value="">Select Deck</option>
+            </select>
+            <button id="direction-toggle" disabled>CH→EN</button>
+        </div>
+        <nav>
+            <button class="tab active" data-view="review">Review</button>
+            <button class="tab" data-view="stats">Stats</button>
+            <button class="tab" data-view="search">Search</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="view-review" class="view">
+            <h2>Review</h2>
+            <p>Review section content will go here.</p>
+        </section>
+
+        <section id="view-stats" class="view is-hidden">
+            <h2>Stats</h2>
+            <p>Stats section content will go here.</p>
+        </section>
+
+        <section id="view-search" class="view is-hidden">
+            <h2>Search</h2>
+            <p>Search section content will go here.</p>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
