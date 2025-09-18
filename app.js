@@ -777,6 +777,11 @@ const Review = {
         const direction = App.currentDirection;
         const flipped = App.flipped;
         table.className = `direction-${direction.toLowerCase().replace('->', '-')} ${flipped ? 'flipped' : ''}`;
+
+        const buttons = document.getElementById('card-buttons');
+        if (buttons) {
+            buttons.style.display = flipped ? 'flex' : 'none';
+        }
     },
 
     toggleFlip() {
@@ -785,13 +790,21 @@ const Review = {
     },
 
     onCorrect() {
-        if (!App.currentCard) return;
+        console.log('onCorrect called');
+        if (!App.currentCard) {
+            console.log('No current card');
+            return;
+        }
         Stats.updateCardStats(App.currentDeckId, App.currentCard.card_id, App.currentDirection, true);
         this.advanceToNextCard();
     },
 
     onIncorrect() {
-        if (!App.currentCard) return;
+        console.log('onIncorrect called');
+        if (!App.currentCard) {
+            console.log('No current card');
+            return;
+        }
         Stats.updateCardStats(App.currentDeckId, App.currentCard.card_id, App.currentDirection, false);
         this.advanceToNextCard();
     },
