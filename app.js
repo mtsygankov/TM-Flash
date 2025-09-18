@@ -826,11 +826,13 @@ const Review = {
     console.log('btnCorrect:', btnCorrect);
     console.log('btnIncorrect:', btnIncorrect);
 
-    btnCorrect.addEventListener('click', () => {
+    btnCorrect.addEventListener('click', (e) => {
+      e.stopPropagation();
       console.log('btn-correct clicked');
       this.onCorrect();
     });
-    btnIncorrect.addEventListener('click', () => {
+    btnIncorrect.addEventListener('click', (e) => {
+      e.stopPropagation();
       console.log('btn-incorrect clicked');
       this.onIncorrect();
     });
