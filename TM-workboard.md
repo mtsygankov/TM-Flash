@@ -216,12 +216,12 @@ Ticket W-062 — Reset Active Deck Stats [DONE]
 
 EPIC 8 — Search View
 
-Ticket W-070 — Real-Time Search (Hanzi/Pinyin/English) [DONE]
-- Description: Three inputs; AND filter; pinyin uses normalized cache.
+Ticket W-070 — Real-Time Search (Pinyin/English) [DONE]
+- Description: One search input field with selector (button) to switch between pinyin or english search.
 - Deliverables:
-    - Search.filter(query) and render results list; click-to-jump to Review.
+    - Search.filter(query, type) and render results list; click-to-jump to Review.
 - Acceptance Criteria:
-    - Typing "yao" matches tokens containing "yào"; clicking a result focuses that card in Review.
+    - Typing "yao" matches pinyin tokens containing "yào"; selector toggles search type; clicking a result focuses that card in Review.
 - Dependencies: W-022, W-050.
 
 ---

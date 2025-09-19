@@ -1159,39 +1159,57 @@ const StatsView = {
 
 // Search module
 const Search = {
+  currentType: "pinyin",
+
   init() {
+    this.updateToggleButton();
     this.bindEvents();
   },
 
   bindEvents() {
-    const hanziInput = document.getElementById("search-hanzi");
-    const pinyinInput = document.getElementById("search-pinyin");
-    const englishInput = document.getElementById("search-english");
-    const inputs = [hanziInput, pinyinInput, englishInput];
-    inputs.forEach(input => {
-      input.addEventListener("input", () => {
-        this.performSearch();
-      });
+    const queryInput = document.getElementById("search-query");
+    const typeToggle = document.getElementById("search-type-toggle");
+    queryInput.addEventListener("input", () => {
+      this.performSearch();
+    });
+    typeToggle.addEventListener("click", () => {
+      this.toggleType();
+      this.performSearch();
     });
   },
 
+  toggleType() {
+    this.currentType = this.currentType === "pinyin" ? "english" : "pinyin";
+    this.updateToggleButton();
+  },
+
+  updateToggleButton() {
+    const toggle = document.getElementById("search-type-toggle");
+    const label = document.getElementById("search-label");
+    if (this.currentType === "pinyin") {
+      label.textContent = "Pinyin:";
+      toggle.textContent = "switch to English search";
+    } else {
+      label.textContent = "English:";
+      toggle.textContent = "switch to Pinyin search";
+    }
+  },
+
   performSearch() {
-    const query = {
-      hanzi: document.getElementById("search-hanzi").value.trim().toLowerCase(),
-      pinyin: document.getElementById("search-pinyin").value.trim().toLowerCase(),
-      english: document.getElementById("search-english").value.trim().toLowerCase(),
-    };
-    const results = this.filter(query);
+    const query = document.getElementById("search-query").value.trim();
+    const results = this.filter(query, this.currentType);
     this.renderResults(results);
   },
 
-  filter(query) {
+  filter(query, type) {
     if (!App.currentCards) return [];
     return App.currentCards.filter(card => {
-      const hanziMatch = !query.hanzi || card.hanzi.toLowerCase().includes(query.hanzi);
-      const pinyinMatch = !query.pinyin || card.pinyin_normalized.includes(query.pinyin);
-      const englishMatch = !query.english || card.english.toLowerCase().includes(query.english);
-      return hanziMatch && pinyinMatch && englishMatch;
+      if (type === "pinyin") {
+        return !query || card.pinyin_normalized.includes(query.toLowerCase());
+      } else if (type === "english") {
+        return !query || card.english.toLowerCase().includes(query.toLowerCase());
+      }
+      return false;
     });
   },
 
