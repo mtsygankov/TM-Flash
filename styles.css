@@ -218,7 +218,7 @@ h2 {
 }
 
 #card-table .row-hanzi td {
-    font-size: 3rem;
+    font-size: 2.5rem;
 /*    font-weight: bold; */
 }
 
@@ -233,7 +233,7 @@ h2 {
 }
 
 #card-table .row-english td {
-    font-size: 2.5rem;
+    font-size: 2.0rem;
 /*    background-color: #f9f9f9; */
 }
 
