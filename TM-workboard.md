@@ -180,7 +180,7 @@ Ticket W-052 — Answer Capture & Advance [DONE]
 
 EPIC 7 — Statistics View
 
-Ticket W-060 — Aggregations & Metrics [PENDING]
+Ticket W-060 — Aggregations & Metrics [DONE]
 - Description: Compute totals and per-card correct_ratio for active deck and direction.
 - Deliverables:
     - Metrics: totalCards, reviewedCount, newCount, deckErrors.
@@ -188,7 +188,7 @@ Ticket W-060 — Aggregations & Metrics [PENDING]
     - Numbers match known small fixtures.
 - Dependencies: W-023.
 
-Ticket W-063 — Direction Selector in Stats View [PENDING]
+Ticket W-063 — Direction Selector in Stats View [DONE]
 - Description: Add direction toggle in stats view to switch between CH->EN and EN->CH stats display.
 - Deliverables:
     - UI toggle in #view-stats; onChange rerenders metrics/histogram/top lists for selected direction.
@@ -196,7 +196,7 @@ Ticket W-063 — Direction Selector in Stats View [PENDING]
     - Toggling updates all stats displays; defaults to current global direction.
 - Dependencies: W-060, W-011.
 
-Ticket W-061 — Histogram & Top Lists [PENDING]
+Ticket W-061 — Histogram & Top Lists [DONE]
 - Description: Render histogram buckets 0–20,21–40,41–60,61–80,81–100 and top 10 best/worst for active direction.
 - Deliverables:
     - Simple CSS bars or canvas; lists with hanzi + english + stats.
@@ -204,7 +204,7 @@ Ticket W-061 — Histogram & Top Lists [PENDING]
     - Correct bucket counts; sorting as specified with tie-breaker by total desc.
 - Dependencies: W-060.
 
-Ticket W-062 — Reset Active Deck Stats [PENDING]
+Ticket W-062 — Reset Active Deck Stats [DONE]
 - Description: Confirm dialog; clear stats for current deck and direction; preserve settings; rerender.
 - Deliverables:
     - resetCurrentDeckStats() and UI button.
@@ -216,7 +216,7 @@ Ticket W-062 — Reset Active Deck Stats [PENDING]
 
 EPIC 8 — Search View
 
-Ticket W-070 — Real-Time Search (Hanzi/Pinyin/English) [PENDING]
+Ticket W-070 — Real-Time Search (Hanzi/Pinyin/English) [DONE]
 - Description: Three inputs; AND filter; pinyin uses normalized cache.
 - Deliverables:
     - Search.filter(query) and render results list; click-to-jump to Review.

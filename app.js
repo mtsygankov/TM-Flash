@@ -798,6 +798,8 @@ const App = {
     Review.init();
     // Initialize stats view
     StatsView.init();
+    // Initialize search
+    Search.init();
   },
 };
 
@@ -1153,6 +1155,78 @@ const StatsView = {
     // Rerender stats
     this.render();
   }
+};
+
+// Search module
+const Search = {
+  init() {
+    this.bindEvents();
+  },
+
+  bindEvents() {
+    const hanziInput = document.getElementById("search-hanzi");
+    const pinyinInput = document.getElementById("search-pinyin");
+    const englishInput = document.getElementById("search-english");
+    const inputs = [hanziInput, pinyinInput, englishInput];
+    inputs.forEach(input => {
+      input.addEventListener("input", () => {
+        this.performSearch();
+      });
+    });
+  },
+
+  performSearch() {
+    const query = {
+      hanzi: document.getElementById("search-hanzi").value.trim().toLowerCase(),
+      pinyin: document.getElementById("search-pinyin").value.trim().toLowerCase(),
+      english: document.getElementById("search-english").value.trim().toLowerCase(),
+    };
+    const results = this.filter(query);
+    this.renderResults(results);
+  },
+
+  filter(query) {
+    if (!App.currentCards) return [];
+    return App.currentCards.filter(card => {
+      const hanziMatch = !query.hanzi || card.hanzi.toLowerCase().includes(query.hanzi);
+      const pinyinMatch = !query.pinyin || card.pinyin_normalized.includes(query.pinyin);
+      const englishMatch = !query.english || card.english.toLowerCase().includes(query.english);
+      return hanziMatch && pinyinMatch && englishMatch;
+    });
+  },
+
+  renderResults(results) {
+    const container = document.getElementById("search-results");
+    if (results.length === 0) {
+      container.innerHTML = "<p>No results found.</p>";
+      return;
+    }
+    const list = results.map(card => `
+      <div class="search-result" data-card-id="${card.card_id}">
+        <div class="result-hanzi">${card.hanzi}</div>
+        <div class="result-pinyin">${card.pinyin}</div>
+        <div class="result-english">${card.english}</div>
+      </div>
+    `).join("");
+    container.innerHTML = `<div class="search-results-list">${list}</div>`;
+    // Bind click events
+    container.querySelectorAll(".search-result").forEach(el => {
+      el.addEventListener("click", () => {
+        const cardId = el.dataset.cardId;
+        this.selectCard(cardId);
+      });
+    });
+  },
+
+  selectCard(cardId) {
+    const card = App.currentCards.find(c => c.card_id === cardId);
+    if (card) {
+      App.currentCard = card;
+      App.flipped = false;
+      Review.renderCard(card);
+      Nav.show("review");
+    }
+  },
 };
 
 // Initialize app when DOM is loaded
