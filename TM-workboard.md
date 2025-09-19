@@ -1,6 +1,8 @@
 ### TM-Flash v1 — Agentic Development Workboard (Greenfield)
 
 This workboard lists atomic, agent-friendly tickets to build TM-Flash v1 per the greenfield multi-deck specification. Each ticket has clear deliverables, acceptance criteria, and dependencies.
+
+**Git Workflow Note:** Only commit results of ticket implementations. Do not commit debug logs, temporary fixes, styling changes, or other modifications unless they are explicitly part of a ticket's deliverables. Use `git reset` or `git revert` to clean the history if non-ticket changes are accidentally committed.
 Pinned Invariants (keep in context)
 
 - Tech: Vanilla HTML/CSS/JS only. No frameworks.
