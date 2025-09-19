@@ -115,6 +115,7 @@ main {
     flex: 1;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .view {
@@ -131,6 +132,7 @@ main {
 h2 {
     margin-bottom: 1rem;
     color: #666;
+    flex-shrink: 0;
 }
 
 /* Error banner styles */
@@ -474,13 +476,18 @@ h2 {
 
 .search-result {
     padding: 0.25rem;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #ddd;
     cursor: pointer;
     transition: background-color 0.2s;
+    text-align: center;
+}
+
+.search-result:nth-child(even) {
+    background-color: #f9f9f9;
 }
 
 .search-result:hover {
-    background-color: #f9f9f9;
+    background-color: #e9e9e9;
 }
 
 .result-hanzi {
