@@ -80,5 +80,5 @@ tm-flash/
 
 ### Git Workflow
 - **Branch**: All development work in `main` branch
-- **Commits**: Atomic commits following workboard ticket completion
+- **Commits**: Atomic commits following workboard ticket completion; do not commit unless explicitly asked by the user
 - **No remote**: Local development only, no remote repository required
