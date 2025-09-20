@@ -1,0 +1,45 @@
+# Временные файлы и директории
+opencodetmp/
+*.tmp
+*.temp
+
+# Файлы операционной системы
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Логи
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Файлы редакторов/IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Зависимости (если будут добавляться)
+node_modules/
+bower_components/
+
+# Environment variables
+.env
+.env.local
+.env.production
+
+# Билды и скомпилированные файлы
+dist/
+build/
+*.min.js
+*.min.css
+
+# Автогенерируемые файлы
+.cache/
+.parcel-cache/

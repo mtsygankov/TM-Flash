@@ -264,6 +264,15 @@ Ticket W-091 — Manual QA Script [PENDING]
     - Runs cleanly on Chrome and Safari (mobile & desktop).
 - Dependencies: All core tickets up to W-081.
 
+Ticket W-092 — Header Layout Optimization [PENDING]
+- Description: Optimize header layout to prevent wrapping on narrow screens (<770px) by compacting elements, enabling shrinking, and ensuring single-row display with nav right-aligned.
+- Deliverables:
+    - Updated styles.css: Reduced padding/gaps/font-sizes/min-widths; flex properties for shrinking; justify-content: space-between for alignment; responsive adjustments.
+    - Removed h1 and deck-status from header for compactness.
+- Acceptance Criteria:
+    - Header stays in one row on screens >=500px; nav right-aligned; no wrapping on narrow viewports.
+- Dependencies: W-001.
+
 ---
 
 Optional EPIC — Offline & Future Virtual Deck
