@@ -885,6 +885,18 @@ const Review = {
                 <td colspan="${hanziTokens.length}">${this.escapeHtml(card.english)}</td>
             </tr>
         `;
+
+    // Dynamic font scaling based on content and available space
+    const columns = hanziTokens.length;
+    const container = document.getElementById('card-container');
+    const availableWidth = container.clientWidth - 40; // Account for container padding
+    const baseHanziSize = 4 * 16; // 4rem in px
+    const cellPadding = 0.75 * 2 * 16; // 0.75rem * 2 sides in px
+    const borderSpacing = 0.5 * 16; // 0.5rem in px
+    const estimatedWidth = columns * (baseHanziSize + cellPadding) + (columns - 1) * borderSpacing;
+    const scale = Math.max(0.25, Math.min(1, availableWidth / estimatedWidth));
+    table.style.setProperty('--scale-factor', scale);
+
     this.applyDirectionAndFlip();
   },
 
