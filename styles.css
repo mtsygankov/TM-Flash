@@ -224,6 +224,7 @@ h2 {
 
 #card-table .row-hanzi td {
     font-size: calc(4rem * var(--scale-factor));
+    white-space: nowrap;
 /*    font-weight: bold; */
 }
 

@@ -863,6 +863,12 @@ const Nav = {
 const Review = {
   init() {
     this.bindEvents();
+    // Recalculate scale on window resize
+    window.addEventListener('resize', () => {
+      if (App.currentCard) {
+        this.renderCard(App.currentCard);
+      }
+    });
   },
 
   renderCard(card) {
@@ -888,13 +894,16 @@ const Review = {
 
     // Dynamic font scaling based on content and available space
     const columns = hanziTokens.length;
+    const totalChars = hanziTokens.reduce((sum, token) => sum + token.length, 0);
     const container = document.getElementById('card-container');
-    const availableWidth = container.clientWidth - 40; // Account for container padding
-    const baseHanziSize = 4 * 16; // 4rem in px
+    const containerPadding = parseFloat(getComputedStyle(container).paddingLeft) + parseFloat(getComputedStyle(container).paddingRight);
+    const availableWidth = container.clientWidth - containerPadding;
+    const baseCharSize = 4 * 16; // 4rem in px per hanzi char
     const cellPadding = 0.75 * 2 * 16; // 0.75rem * 2 sides in px
     const borderSpacing = 0.5 * 16; // 0.5rem in px
-    const estimatedWidth = columns * (baseHanziSize + cellPadding) + (columns - 1) * borderSpacing;
-    const scale = Math.max(0.25, Math.min(1, availableWidth / estimatedWidth));
+    const estimatedWidth = totalChars * baseCharSize + (columns - 1) * borderSpacing + columns * cellPadding;
+    const scale = Math.max(0.5, Math.min(1, availableWidth / estimatedWidth));
+    console.log('Columns:', columns, 'Total Chars:', totalChars, 'Available Width:', availableWidth, 'Estimated Width:', estimatedWidth, 'Scale:', scale);
     table.style.setProperty('--scale-factor', scale);
 
     this.applyDirectionAndFlip();
