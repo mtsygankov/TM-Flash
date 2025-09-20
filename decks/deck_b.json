@@ -69,9 +69,9 @@
    },
    {
      "card_id": "card_010",
-     "hanzi": "请问 这 件 衣服 有 红色 的 吗 ？",
-     "pinyin": "qǐngwèn zhè jiàn yīfu yǒu hóngsè de ma ？",
-     "en_words": ["excuse", "me", "this", "piece", "clothes", "have", "red", "?", "?"],
+     "hanzi": "请问 这 件 衣服 有 红色的 吗 ？",
+     "pinyin": "qǐngwèn zhè jiàn yīfu yǒu hóngsède ma ？",
+     "en_words": ["excuse me", "this", "piece", "clothes", "have", "red", "question particle", "?"],
      "english": "Excuse me, does this piece of clothing come in red?"
    }
 ]

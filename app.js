@@ -182,7 +182,7 @@ const Stats = {
     const totalCards = App.currentCards ? App.currentCards.length : 0;
     const deckStats = Storage.getDeckStats(deckId);
     let reviewedCount = 0;
-    Object.values(deckStats.cards).forEach(cardStats => {
+    Object.values(deckStats.cards).forEach((cardStats) => {
       const dirStat = cardStats[direction];
       if (dirStat && dirStat.correct + dirStat.incorrect > 0) reviewedCount++;
     });
@@ -824,6 +824,9 @@ const Nav = {
     const selectedView = document.getElementById(`view-${viewId}`);
     if (selectedView) {
       selectedView.classList.remove("is-hidden");
+      if (viewId === "search") {
+        document.getElementById("search-query").focus();
+      }
     }
 
     // Update active tab
@@ -841,11 +844,16 @@ const Nav = {
     }
     // Refresh review card if showing review view
     if (viewId === "review") {
-      App.currentCard = SRS.selectNextCard(App.currentCards, App.currentStats.cards, App.currentDirection);
+      App.currentCard = SRS.selectNextCard(
+        App.currentCards,
+        App.currentStats.cards,
+        App.currentDirection,
+      );
       if (App.currentCard) {
         Review.renderCard(App.currentCard);
       } else {
-        document.getElementById("card-container").innerHTML = "<p>No valid cards in this deck.</p>";
+        document.getElementById("card-container").innerHTML =
+          "<p>No valid cards in this deck.</p>";
       }
     }
   },
@@ -1039,7 +1047,8 @@ const StatsView = {
     const toggle = document.getElementById("stats-direction-toggle");
     if (toggle) {
       toggle.addEventListener("click", () => {
-        this.currentDirection = this.currentDirection === "CH->EN" ? "EN->CH" : "CH->EN";
+        this.currentDirection =
+          this.currentDirection === "CH->EN" ? "EN->CH" : "CH->EN";
         this.render();
       });
     }
@@ -1062,11 +1071,16 @@ const StatsView = {
       content.innerHTML = "<p>No deck loaded.</p>";
       return;
     }
-    const metrics = Stats.computeMetrics(App.currentDeckId, this.currentDirection);
+    const metrics = Stats.computeMetrics(
+      App.currentDeckId,
+      this.currentDirection,
+    );
 
     // Compute histogram and top lists
     const deckStats = Storage.getDeckStats(App.currentDeckId);
-    const cardMap = new Map(App.currentCards.map(card => [card.card_id, card]));
+    const cardMap = new Map(
+      App.currentCards.map((card) => [card.card_id, card]),
+    );
     const cardData = [];
     Object.entries(deckStats.cards).forEach(([cardId, cardStats]) => {
       const dirStat = cardStats[this.currentDirection];
@@ -1083,13 +1097,13 @@ const StatsView = {
         correct: dirStat.correct,
         incorrect: dirStat.incorrect,
         total,
-        ratio
+        ratio,
       });
     });
 
     // Histogram buckets
     const buckets = [0, 0, 0, 0, 0];
-    cardData.forEach(data => {
+    cardData.forEach((data) => {
       const pct = Math.floor(data.ratio * 100);
       let bucket;
       if (pct <= 20) bucket = 0;
@@ -1101,9 +1115,13 @@ const StatsView = {
     });
 
     // Top 10 best and worst
-    const sortedByRatioDesc = cardData.sort((a, b) => b.ratio - a.ratio || b.total - a.total);
+    const sortedByRatioDesc = cardData.sort(
+      (a, b) => b.ratio - a.ratio || b.total - a.total,
+    );
     const best = sortedByRatioDesc.slice(0, 10);
-    const sortedByRatioAsc = cardData.sort((a, b) => a.ratio - b.ratio || b.total - a.total);
+    const sortedByRatioAsc = cardData.sort(
+      (a, b) => a.ratio - b.ratio || b.total - a.total,
+    );
     const worst = sortedByRatioAsc.slice(0, 10);
 
     content.innerHTML = `
@@ -1127,13 +1145,13 @@ const StatsView = {
         <div class="top-best">
           <h3>Top 10 Best</h3>
           <ul>
-            ${best.map(data => `<li>${data.hanzi} - ${data.english} (${data.correct}/${data.total})</li>`).join('')}
+            ${best.map((data) => `<li>${data.hanzi} - ${data.english} (${data.correct}/${data.total})</li>`).join("")}
           </ul>
         </div>
         <div class="top-worst">
           <h3>Top 10 Worst</h3>
           <ul>
-            ${worst.map(data => `<li>${data.hanzi} - ${data.english} (${data.correct}/${data.total})</li>`).join('')}
+            ${worst.map((data) => `<li>${data.hanzi} - ${data.english} (${data.correct}/${data.total})</li>`).join("")}
           </ul>
         </div>
       </div>
@@ -1142,11 +1160,20 @@ const StatsView = {
 
   resetCurrentDeckStats() {
     if (!App.currentDeckId) return;
-    if (!confirm(`Reset all stats for ${DECKS[App.currentDeckId].label} in ${this.currentDirection} direction? This cannot be undone.`)) return;
+    if (
+      !confirm(
+        `Reset all stats for ${DECKS[App.currentDeckId].label} in ${this.currentDirection} direction? This cannot be undone.`,
+      )
+    )
+      return;
     const deckStats = Storage.getDeckStats(App.currentDeckId);
-    Object.values(deckStats.cards).forEach(cardStats => {
+    Object.values(deckStats.cards).forEach((cardStats) => {
       if (cardStats[this.currentDirection]) {
-        cardStats[this.currentDirection] = { correct: 0, incorrect: 0, last_reviewed: null };
+        cardStats[this.currentDirection] = {
+          correct: 0,
+          incorrect: 0,
+          last_reviewed: null,
+        };
       }
     });
     Storage.setDeckStats(App.currentDeckId, deckStats);
@@ -1154,7 +1181,7 @@ const StatsView = {
     App.currentStats = deckStats;
     // Rerender stats
     this.render();
-  }
+  },
 };
 
 // Search module
@@ -1181,6 +1208,8 @@ const Search = {
   toggleType() {
     this.currentType = this.currentType === "pinyin" ? "english" : "pinyin";
     this.updateToggleButton();
+    document.getElementById("search-query").focus();
+    console.log("focus");
   },
 
   updateToggleButton() {
@@ -1203,11 +1232,13 @@ const Search = {
 
   filter(query, type) {
     if (!App.currentCards) return [];
-    return App.currentCards.filter(card => {
+    return App.currentCards.filter((card) => {
       if (type === "pinyin") {
         return !query || card.pinyin_normalized.includes(query.toLowerCase());
       } else if (type === "english") {
-        return !query || card.english.toLowerCase().includes(query.toLowerCase());
+        return (
+          !query || card.english.toLowerCase().includes(query.toLowerCase())
+        );
       }
       return false;
     });
@@ -1219,16 +1250,20 @@ const Search = {
       container.innerHTML = "<p>No results found.</p>";
       return;
     }
-    const list = results.map(card => `
+    const list = results
+      .map(
+        (card) => `
       <div class="search-result" data-card-id="${card.card_id}">
         <div class="result-hanzi">${card.hanzi}</div>
         <div class="result-pinyin">${card.pinyin}</div>
         <div class="result-english">${card.english}</div>
       </div>
-    `).join("");
+    `,
+      )
+      .join("");
     container.innerHTML = `<div class="search-results-list">${list}</div>`;
     // Bind click events
-    container.querySelectorAll(".search-result").forEach(el => {
+    container.querySelectorAll(".search-result").forEach((el) => {
       el.addEventListener("click", () => {
         const cardId = el.dataset.cardId;
         this.selectCard(cardId);
@@ -1237,7 +1272,7 @@ const Search = {
   },
 
   selectCard(cardId) {
-    const card = App.currentCards.find(c => c.card_id === cardId);
+    const card = App.currentCards.find((c) => c.card_id === cardId);
     if (card) {
       App.currentCard = card;
       App.flipped = false;
