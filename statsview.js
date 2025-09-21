@@ -85,7 +85,7 @@ const StatsView = {
      const worst = sortedByRatioAsc.slice(0, 10);
 
      // Compute due timeline
-     const dueBuckets = [0, 0, 0, 0, 0, 0]; // <1h, 1-6h, 6-24h, 1-7d, 7-30d, >30d
+     const dueBuckets = [0, 0, 0, 0, 0]; // <2h, 2-12h, 12-48h, 2d-10d, >10d
      App.currentCards.forEach((card) => {
        const stats = deckStats.cards[card.card_id]?.[this.currentDirection];
        if (!stats) {
@@ -102,12 +102,11 @@ const StatsView = {
        const nextReview = lastReview + intervalHours * 60 * 60 * 1000;
        const now = Date.now();
        const diffHours = (nextReview - now) / (60 * 60 * 1000);
-       if (diffHours <= 1) dueBuckets[0]++;
-       else if (diffHours <= 6) dueBuckets[1]++;
-       else if (diffHours <= 24) dueBuckets[2]++;
-       else if (diffHours <= 168) dueBuckets[3]++; // 7d
-       else if (diffHours <= 720) dueBuckets[4]++; // 30d
-       else dueBuckets[5]++;
+       if (diffHours <= 2) dueBuckets[0]++;
+       else if (diffHours <= 12) dueBuckets[1]++;
+       else if (diffHours <= 48) dueBuckets[2]++;
+       else if (diffHours <= 240) dueBuckets[3]++; // 7d
+       else dueBuckets[4]++;
      });
   const maxDue = Math.max(...dueBuckets) || 1;
 
@@ -147,74 +146,77 @@ const StatsView = {
     content.innerHTML = `
       <div class="stats-grid">
         <div class="metric-card">
-          <div class="metric-title">Total Cards</div>
-          <div class="metric-value">${metrics.totalCards}</div>
+        <div class="metric-title">Total Cards</div>
+        <div class="metric-value large">${metrics.totalCards}</div>
         </div>
         <div class="metric-card">
-          <div class="metric-title">Reviewed</div>
-          <div class="metric-value">${metrics.reviewedCount}</div>
+        <div class="metric-title">Reviewed</div>
+        <div class="metric-value large">${this.formatPct(metrics.reviewedCount / metrics.totalCards)}</div>
         </div>
         <div class="metric-card">
-          <div class="metric-title">New</div>
+          <div class="metric-title">Overall Accuracy</div>
+          <div class="metric-value large">${this.formatPct(overallAccuracy)}</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-title">New cards</div>
           <div class="metric-value">${metrics.newCount}</div>
         </div>
         <div class="metric-card">
           <div class="metric-title">Deck Errors</div>
           <div class="metric-value">${metrics.deckErrors}</div>
         </div>
-        <div class="metric-card wide">
-          <div class="metric-title">Overall Accuracy</div>
-          <div class="metric-value large">${this.formatPct(overallAccuracy)}</div>
-          <div class="progress">
-            <div class="progress-inner" style="width: ${overallAccuracy * 100}%"></div>
-          </div>
+        <div class="metric-card">
+          <div class="metric-title">Max<br> Correct Streak</div>
+          <div class="metric-value">${maxCorrectStreak}</div>
         </div>
+        <div class="metric-card">
+          <div class="metric-title">Max<br> Incorrect Streak</div>
+          <div class="metric-value">${maxIncorrectStreak}</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-title">Average<br> Correct Streak</div>
+          <div class="metric-value">${avgStreak}</div>
+        </div>
+
       </div>
-
-      <div class="panel-grid">
+        
+        <div class="panel-grid">
         <div class="panel">
-          <h3>Correct Ratio Histogram</h3>
-          <div class="histogram-bars">
-            ${buckets.map((val, i) => `<div class="bar" style="height: ${(val / maxBucket) * 140}px"><div class="bar-label">${['0-20%', '21-40%', '41-60%', '61-80%', '81-100%'][i]}</div><div class="bar-count">${val}</div></div>`).join('')}
-          </div>
+        <h3>Correct Ratio Histogram</h3>
+        <canvas id="histogram-chart" width="400" height="200"></canvas>
         </div>
-
+        
         <div class="panel">
-          <h3>Cards Due Timeline</h3>
-          <div class="timeline-bars">
-            ${dueBuckets.map((val, i) => `<div class="bar timeline" style="height: ${(val / maxDue) * 140}px"><div class="bar-label">${['<1h','1-6h','6-24h','1-7d','7-30d','>30d'][i]}</div><div class="bar-count">${val}</div></div>`).join('')}
-          </div>
+        <h3>Cards Due Timeline</h3>
+        <canvas id="timeline-chart" width="400" height="200"></canvas>
         </div>
-
+        
         <div class="panel">
-          <h3>Top 10 Best</h3>
-          <ul class="small-list">
-            ${best.length ? best.map((data) => `<li class="small-item"><span class="mini-hanzi">${data.hanzi}</span><span class="mini-eng">${data.english}</span><span class="mini-stats">${data.correct}/${data.total} (${(data.ratio*100).toFixed(0)}%)</span></li>`).join("") : "<li class='small-item'>No data</li>"}
-          </ul>
+        <h3>Correct Streak Distribution</h3>
+        <canvas id="streak-chart" width="400" height="200"></canvas>
         </div>
-
-        <div class="panel">
+        
+        <!--div class="panel">
+        <h3>Top 10 Best</h3>
+        <ul class="small-list">
+        ${best.length ? best.map((data) => `<li class="small-item"><span class="mini-hanzi">${data.hanzi}</span><span class="mini-eng">${data.english}</span><span class="mini-stats">${data.correct}/${data.total} (${(data.ratio*100).toFixed(0)}%)</span></li>`).join("") : "<li class='small-item'>No data</li>"}
+        </ul>
+        </div-->
+        </div>
+        
+        <div class="panel-grid">
+        <div class="panel" width="300">
           <h3>Top 10 Worst</h3>
           <ul class="small-list">
             ${worst.length ? worst.map((data) => `<li class="small-item"><span class="mini-hanzi">${data.hanzi}</span><span class="mini-eng">${data.english}</span><span class="mini-stats">${data.correct}/${data.total} (${(data.ratio*100).toFixed(0)}%)</span></li>`).join("") : "<li class='small-item'>No data</li>"}
           </ul>
         </div>
 
-        <div class="panel">
-          <h3>Correct Streak Distribution</h3>
-          <div class="histogram-bars small">
-            ${streakBuckets.map((val, i) => `<div class="bar" style="height: ${(val / maxStreak) * 120}px"><div class="bar-label">${['0','1','2-3','4-5','6+'][i]}</div><div class="bar-count">${val}</div></div>`).join('')}
-          </div>
-        </div>
-
-        <div class="panel stats-records">
-          <h3>Streak Records</h3>
-          <p>Max Correct Streak: <strong>${maxCorrectStreak}</strong></p>
-          <p>Max Incorrect Streak: <strong>${maxIncorrectStreak}</strong></p>
-          <p>Average Correct Streak: <strong>${avgStreak}</strong></p>
-        </div>
       </div>
     `;
+
+    // Initialize Chart.js charts
+    this.initCharts(buckets, dueBuckets, streakBuckets, overallAccuracy);
   },
 
   resetCurrentDeckStats() {
@@ -245,5 +247,114 @@ const StatsView = {
     App.currentStats = deckStats;
     // Rerender stats
     this.render();
+  },
+
+  initCharts(buckets, dueBuckets, streakBuckets, overallAccuracy) {
+    // Correct Ratio Histogram
+    const histCtx = document.getElementById('histogram-chart');
+    if (histCtx) {
+      new Chart(histCtx, {
+        type: 'bar',
+        data: {
+          labels: ['0-20%', '21-40%', '41-60%', '61-80%', '81-100%'],
+          datasets: [{
+            label: 'Cards',
+            data: buckets,
+            backgroundColor: 'rgba(0, 123, 255, 0.6)',
+            borderColor: 'rgba(0, 123, 255, 1)',
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+    }
+
+    // Cards Due Timeline
+    const dueCtx = document.getElementById('timeline-chart');
+    if (dueCtx) {
+      new Chart(dueCtx, {
+        type: 'bar',
+        data: {
+          labels: ['<2h', '2-12h', '12-48h', '2-10d', '>10d'],
+          datasets: [{
+            label: 'Cards Due',
+            data: dueBuckets,
+            backgroundColor: 'rgba(40, 167, 69, 0.6)',
+            borderColor: 'rgba(40, 167, 69, 1)',
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+    }
+
+    // Correct Streak Distribution
+    const streakCtx = document.getElementById('streak-chart');
+    if (streakCtx) {
+      new Chart(streakCtx, {
+        type: 'bar',
+        data: {
+          labels: ['0', '1', '2-3', '4-5', '6+'],
+          datasets: [{
+            label: 'Cards',
+            data: streakBuckets,
+            backgroundColor: 'rgba(255, 193, 7, 0.6)',
+            borderColor: 'rgba(255, 193, 7, 1)',
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+    }
+
+    // Overall Accuracy Pie Chart
+    const pieCtx = document.getElementById('accuracy-pie-chart');
+    if (pieCtx) {
+      new Chart(pieCtx, {
+        type: 'pie',
+        data: {
+          labels: ['Correct', 'Incorrect'],
+          datasets: [{
+            data: [overallAccuracy * 100, (1 - overallAccuracy) * 100],
+            backgroundColor: ['rgba(40, 167, 69, 0.6)', 'rgba(220, 53, 69, 0.6)'],
+            borderColor: ['rgba(40, 167, 69, 1)', 'rgba(220, 53, 69, 1)'],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'top',
+            },
+            tooltip: {
+              callbacks: {
+                label: function(context) {
+                  return context.label + ': ' + context.parsed.toFixed(1) + '%';
+                }
+              }
+            }
+          }
+        }
+      });
+    }
   },
 };
