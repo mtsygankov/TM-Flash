@@ -444,6 +444,62 @@ const SRS = {
     scoredCards.sort((a, b) => b.priority - a.priority);
     return scoredCards[0].card;
   },
+
+  getNextReviewInfo(cards, statsMap, direction) {
+    if (!cards || cards.length === 0) {
+      return null;
+    }
+
+    const now = Date.now();
+    let earliestNextReview = Infinity;
+    const nextReviewTimes = [];
+
+    cards.forEach(card => {
+      const stats = statsMap[card.card_id]?.[direction];
+      if (!stats) return;
+
+      // Skip new cards (no reviews yet)
+      if (!stats.last_correct_at && !stats.last_incorrect_at) return;
+
+      const lastReview = Math.max(stats.last_correct_at || 0, stats.last_incorrect_at || 0);
+      const intervalHours = this.calculateNextReviewInterval(stats);
+      const nextReviewTime = lastReview + (intervalHours * 60 * 60 * 1000);
+
+      if (nextReviewTime > now) {
+        nextReviewTimes.push(nextReviewTime);
+        if (nextReviewTime < earliestNextReview) {
+          earliestNextReview = nextReviewTime;
+        }
+      }
+    });
+
+    if (nextReviewTimes.length === 0) {
+      return null;
+    }
+
+    const timeDiffMs = earliestNextReview - now;
+    const timeDiffHours = timeDiffMs / (60 * 60 * 1000);
+
+    let timeString;
+    if (timeDiffHours < 2) {
+      const minutes = Math.ceil(timeDiffMs / (60 * 1000))
+      timeString = `${minutes} minute${minutes > 1 ? 's' : ''}`;
+    } else if (timeDiffHours < 24) {
+      const hours = Math.ceil(timeDiffHours);
+      timeString = `${hours} hour${hours > 1 ? 's' : ''}`;
+    } else {
+      const days = Math.ceil(timeDiffHours / 24);
+      timeString = `${days} day${days > 1 ? 's' : ''}`;
+    }
+
+    const oneHourLater = earliestNextReview + (60 * 60 * 1000);
+    const cardsInWindow = nextReviewTimes.filter(time => time <= oneHourLater).length;
+
+    return {
+      timeString,
+      cardsInWindow
+    };
+  },
 };
 // Message module
 const Message = {
@@ -905,15 +961,23 @@ const DeckSelector = {
          App.currentStats.cards,
          App.currentDirection,
        );
-        if (App.currentCard) {
-          Review.renderCard(App.currentCard);
-        } else {
-          Review.renderCard(null);
-          const message = App.currentCards && App.currentCards.length > 0
-            ? 'No cards due for review.'
-            : 'No valid cards in this deck.';
-          Message.show('card-container', message);
-        }
+         if (App.currentCard) {
+           Review.renderCard(App.currentCard);
+         } else {
+           Review.renderCard(null);
+           let message;
+           if (!App.currentCards || App.currentCards.length === 0) {
+             message = 'No valid cards in this deck.';
+           } else {
+             const nextReviewInfo = SRS.getNextReviewInfo(App.currentCards, App.currentStats.cards, App.currentDirection);
+             if (nextReviewInfo) {
+               message = `No cards due for review. Next review: (${nextReviewInfo.cardsInWindow} card${nextReviewInfo.cardsInWindow > 1 ? 's' : ''} in ~${nextReviewInfo.timeString}).`;
+             } else {
+               message = 'No cards due for review.';
+             }
+           }
+           Message.show('card-container', message);
+         }
 
       // Ensure selector shows current selection
       const selector = document.getElementById("deck-selector");
@@ -1025,15 +1089,22 @@ const Settings = {
 
       console.log("🎯 SRS.selectNextCard result:", App.currentCard ? `Card ${App.currentCard.card_id}` : "null");
 
-       if (App.currentCard) {
-         console.log("🎨 Rendering card:", App.currentCard.card_id);
-         Review.renderCard(App.currentCard);
-       } else {
-         console.log("📝 No cards due, updating message");
-         Review.renderCard(null);
-         Message.show('card-container', 'No cards due for review in this direction.');
-         console.log("✅ Message updated successfully");
-       }
+        if (App.currentCard) {
+          console.log("🎨 Rendering card:", App.currentCard.card_id);
+          Review.renderCard(App.currentCard);
+        } else {
+          console.log("📝 No cards due, updating message");
+          Review.renderCard(null);
+          const nextReviewInfo = SRS.getNextReviewInfo(App.currentCards, App.currentStats.cards, App.currentDirection);
+          let message;
+          if (nextReviewInfo) {
+               message = `No cards due for review. Next review: (${nextReviewInfo.cardsInWindow} card${nextReviewInfo.cardsInWindow > 1 ? 's' : ''} in ~${nextReviewInfo.timeString}).`;
+          } else {
+            message = 'No cards due for review in this direction.';
+          }
+          Message.show('card-container', message);
+          console.log("✅ Message updated successfully");
+        }
     } else {
       console.warn("❌ Conditional check failed - app data not available");
       console.log("   App.currentCards:", !!App.currentCards);
@@ -1134,22 +1205,30 @@ const Nav = {
     if (viewId === "stats") {
       StatsView.render();
     }
-    // Refresh review card if showing review view
-    if (viewId === "review") {
-      App.currentCard = SRS.selectNextCard(
-        App.currentCards,
-        App.currentStats.cards,
-        App.currentDirection,
-      );
-      if (App.currentCard) {
-        Review.renderCard(App.currentCard);
-      } else {
-        const message = App.currentCards && App.currentCards.length > 0
-          ? '<p>No cards due for review.</p>'
-          : '<p>No valid cards in this deck.</p>';
-        document.getElementById("card-container").innerHTML = message;
+      // Refresh review card if showing review view
+      if (viewId === "review") {
+        App.currentCard = SRS.selectNextCard(
+          App.currentCards,
+          App.currentStats.cards,
+          App.currentDirection,
+        );
+        if (App.currentCard) {
+          Review.renderCard(App.currentCard);
+        } else {
+          let message;
+          if (!App.currentCards || App.currentCards.length === 0) {
+            message = 'No valid cards in this deck.';
+          } else {
+            const nextReviewInfo = SRS.getNextReviewInfo(App.currentCards, App.currentStats.cards, App.currentDirection);
+            if (nextReviewInfo) {
+               message = `No cards due for review. Next review: (${nextReviewInfo.cardsInWindow} card${nextReviewInfo.cardsInWindow > 1 ? 's' : ''} in ~${nextReviewInfo.timeString}).`;
+            } else {
+              message = 'No cards due for review.';
+            }
+          }
+          Message.show('card-container', message);
+        }
       }
-    }
   },
 };
 
@@ -1271,12 +1350,19 @@ const Review = {
        App.currentStats.cards,
        App.currentDirection,
      );
-     if (App.currentCard) {
-       this.renderCard(App.currentCard);
-     } else {
-       this.renderCard(null); // Clear the table
-       Message.show('card-container', 'No more cards to review.');
-     }
+      if (App.currentCard) {
+        this.renderCard(App.currentCard);
+      } else {
+        this.renderCard(null); // Clear the table
+        const nextReviewInfo = SRS.getNextReviewInfo(App.currentCards, App.currentStats.cards, App.currentDirection);
+        let message;
+        if (nextReviewInfo) {
+               message = `No cards due for review. Next review: (${nextReviewInfo.cardsInWindow} card${nextReviewInfo.cardsInWindow > 1 ? 's' : ''} in ~${nextReviewInfo.timeString}).`;
+        } else {
+          message = 'No more cards to review.';
+        }
+        Message.show('card-container', message);
+      }
    },
 
   bindEvents() {
