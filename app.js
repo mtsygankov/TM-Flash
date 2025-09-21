@@ -905,12 +905,15 @@ const DeckSelector = {
          App.currentStats.cards,
          App.currentDirection,
        );
-       if (App.currentCard) {
-         Review.renderCard(App.currentCard);
-       } else {
-         Review.renderCard(null);
-         Message.show('card-container', 'No valid cards in this deck.');
-       }
+        if (App.currentCard) {
+          Review.renderCard(App.currentCard);
+        } else {
+          Review.renderCard(null);
+          const message = App.currentCards && App.currentCards.length > 0
+            ? 'No cards due for review.'
+            : 'No valid cards in this deck.';
+          Message.show('card-container', message);
+        }
 
       // Ensure selector shows current selection
       const selector = document.getElementById("deck-selector");
@@ -1141,8 +1144,10 @@ const Nav = {
       if (App.currentCard) {
         Review.renderCard(App.currentCard);
       } else {
-        document.getElementById("card-container").innerHTML =
-          "<p>No valid cards in this deck.</p>";
+        const message = App.currentCards && App.currentCards.length > 0
+          ? '<p>No cards due for review.</p>'
+          : '<p>No valid cards in this deck.</p>';
+        document.getElementById("card-container").innerHTML = message;
       }
     }
   },
