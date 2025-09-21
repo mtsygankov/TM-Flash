@@ -445,6 +445,34 @@ const SRS = {
     return scoredCards[0].card;
   },
 };
+// Message module
+const Message = {
+    show(containerId, text, type = 'info') {
+        const msgDiv = document.getElementById(containerId + '-message');
+        if (msgDiv) {
+            msgDiv.textContent = text;
+            msgDiv.className = `system-message ${type}`;
+            msgDiv.classList.add('active');
+            msgDiv.style.display = 'block';
+            // Hide buttons when showing message in card-container
+            if (containerId === 'card-container') {
+                const buttons = document.getElementById('card-buttons');
+                if (buttons) {
+                    buttons.style.display = 'none';
+                }
+            }
+        }
+    },
+
+    hide(containerId) {
+        const msgDiv = document.getElementById(containerId + '-message');
+        if (msgDiv) {
+            msgDiv.style.display = 'none';
+            msgDiv.classList.remove('active');
+            // Buttons will be shown by applyDirectionAndFlip when card is rendered
+        }
+    }
+};
 
 // Normalizer module
 const Normalizer = {
@@ -866,23 +894,23 @@ const DeckSelector = {
       // Update current deck tracking
       this.currentDeckId = deckId;
 
-      // Set app state
-      App.currentCards = augmentedCards;
-      App.currentStats = syncedStats;
-      App.currentDirection = Storage.getSettings().direction;
-      App.currentDeckId = deckId;
-      App.flipped = false;
-      App.currentCard = SRS.selectNextCard(
-        App.currentCards,
-        App.currentStats.cards,
-        App.currentDirection,
-      );
-      if (App.currentCard) {
-        Review.renderCard(App.currentCard);
-      } else {
-        document.getElementById("card-container").innerHTML =
-          "<p>No valid cards in this deck.</p>";
-      }
+       // Set app state
+       App.currentCards = augmentedCards;
+       App.currentStats = syncedStats;
+       App.currentDirection = Storage.getSettings().direction;
+       App.currentDeckId = deckId;
+       App.flipped = false;
+       App.currentCard = SRS.selectNextCard(
+         App.currentCards,
+         App.currentStats.cards,
+         App.currentDirection,
+       );
+       if (App.currentCard) {
+         Review.renderCard(App.currentCard);
+       } else {
+         Review.renderCard(null);
+         Message.show('card-container', 'No valid cards in this deck.');
+       }
 
       // Ensure selector shows current selection
       const selector = document.getElementById("deck-selector");
@@ -994,19 +1022,15 @@ const Settings = {
 
       console.log("🎯 SRS.selectNextCard result:", App.currentCard ? `Card ${App.currentCard.card_id}` : "null");
 
-      if (App.currentCard) {
-        console.log("🎨 Rendering card:", App.currentCard.card_id);
-        Review.renderCard(App.currentCard);
-      } else {
-        console.log("📝 No cards due, updating message");
-        const cardContainer = document.getElementById("card-container");
-        if (cardContainer) {
-          cardContainer.innerHTML = "<p>No cards due for review in this direction.</p>";
-          console.log("✅ Message updated successfully");
-        } else {
-          console.error("❌ Card container element not found");
-        }
-      }
+       if (App.currentCard) {
+         console.log("🎨 Rendering card:", App.currentCard.card_id);
+         Review.renderCard(App.currentCard);
+       } else {
+         console.log("📝 No cards due, updating message");
+         Review.renderCard(null);
+         Message.show('card-container', 'No cards due for review in this direction.');
+         console.log("✅ Message updated successfully");
+       }
     } else {
       console.warn("❌ Conditional check failed - app data not available");
       console.log("   App.currentCards:", !!App.currentCards);
@@ -1137,6 +1161,7 @@ const Review = {
   },
 
   renderCard(card) {
+    Message.hide('card-container');
     if (!card) {
       const table = document.getElementById("card-table");
       if (table) {
@@ -1234,20 +1259,20 @@ const Review = {
     this.advanceToNextCard();
   },
 
-  advanceToNextCard() {
-    App.flipped = false;
-    App.currentCard = SRS.selectNextCard(
-      App.currentCards,
-      App.currentStats.cards,
-      App.currentDirection,
-    );
-    if (App.currentCard) {
-      this.renderCard(App.currentCard);
-    } else {
-      document.getElementById("card-container").innerHTML =
-        "<p>No more cards to review.</p>";
-    }
-  },
+   advanceToNextCard() {
+     App.flipped = false;
+     App.currentCard = SRS.selectNextCard(
+       App.currentCards,
+       App.currentStats.cards,
+       App.currentDirection,
+     );
+     if (App.currentCard) {
+       this.renderCard(App.currentCard);
+     } else {
+       this.renderCard(null); // Clear the table
+       Message.show('card-container', 'No more cards to review.');
+     }
+   },
 
   bindEvents() {
     console.log("Binding review events");
@@ -1574,16 +1599,16 @@ const Search = {
     });
   },
 
-  selectCard(cardId) {
-    const card = App.currentCards.find((c) => c.card_id === cardId);
-    if (card) {
-      App.currentCard = card;
-      App.flipped = false;
-      Review.renderCard(card);
-      Nav.show("review");
-    }
-  },
-};
+   selectCard(cardId) {
+     const card = App.currentCards.find((c) => c.card_id === cardId);
+     if (card) {
+       App.currentCard = card;
+       App.flipped = false;
+       Review.renderCard(card);
+       Nav.show("review");
+     }
+   },
+  };
 
 // Initialize app when DOM is loaded
 document.addEventListener("DOMContentLoaded", async () => {
