@@ -194,6 +194,15 @@ const DeckSelector = {
       // Reset review view to show first card
       this.resetReviewView();
 
+      // Re-render stats view so visuals update for the newly loaded deck
+      try {
+        if (typeof StatsView !== 'undefined' && StatsView.render) {
+          StatsView.render();
+        }
+      } catch (e) {
+        console.warn('StatsView.render failed after deck load:', e);
+      }
+
       this.setStatusMessage(
         `Loaded ${DECKS[deckId].label} (${augmentedCards.length} cards)`,
         "success",
@@ -243,6 +252,14 @@ const DeckSelector = {
     App.flipped = false;
     if (App.currentCard) {
       Review.renderCard(App.currentCard);
+    }
+    // Ensure stats view updates if visible
+    try {
+      if (typeof StatsView !== 'undefined' && StatsView.render) {
+        StatsView.render();
+      }
+    } catch (e) {
+      console.warn('StatsView.render failed in resetReviewView:', e);
     }
   },
 };
