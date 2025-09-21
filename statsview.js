@@ -64,19 +64,18 @@ const StatsView = {
        });
      });
 
-     // Histogram buckets
-     const buckets = [0, 0, 0, 0, 0];
+     // Histogram buckets: 10 buckets (0-9%,10-19%,...,90-100%)
+     const buckets = new Array(10).fill(0);
      cardData.forEach((data) => {
-       const pct = Math.floor(data.ratio * 100);
-       let bucket;
-       if (pct <= 20) bucket = 0;
-       else if (pct <= 40) bucket = 1;
-       else if (pct <= 60) bucket = 2;
-       else if (pct <= 80) bucket = 3;
-       else bucket = 4;
-       buckets[bucket]++;
+       // Ensure ratio between 0 and 1
+       const ratio = Math.max(0, Math.min(1, Number(data.ratio) || 0));
+       const pct = Math.floor(ratio * 100);
+       let bucketIndex = Math.floor(pct / 10);
+       if (bucketIndex < 0) bucketIndex = 0;
+       if (bucketIndex > 9) bucketIndex = 9;
+       buckets[bucketIndex]++;
      });
-  const maxBucket = Math.max(...buckets) || 1;
+    const maxBucket = Math.max(...buckets) || 1;
 
      // Top 10 best and worst
      const sortedByRatioDesc = cardData.slice().sort((a, b) => b.ratio - a.ratio || b.total - a.total);
@@ -84,12 +83,12 @@ const StatsView = {
      const sortedByRatioAsc = cardData.slice().sort((a, b) => a.ratio - b.ratio || b.total - a.total);
      const worst = sortedByRatioAsc.slice(0, 10);
 
-     // Compute due timeline
-     const dueBuckets = [0, 0, 0, 0, 0]; // <2h, 2-12h, 12-48h, 2d-10d, >10d
-     App.currentCards.forEach((card) => {
-       const stats = deckStats.cards[card.card_id]?.[this.currentDirection];
+     // Compute due timeline with buckets: <=30m, <=1h, <=4h, <=12h, <=24h, <=7d, <=30d, >30d
+     const dueBuckets = [0, 0, 0, 0, 0, 0, 0, 0];
+     (App.currentCards || []).forEach((card) => {
+       const stats = deckStats.cards?.[card.card_id]?.[this.currentDirection];
        if (!stats) {
-         // new card, due now
+         // new card, due now -> count in first bucket (<=30m)
          dueBuckets[0]++;
          return;
        }
@@ -102,13 +101,17 @@ const StatsView = {
        const nextReview = lastReview + intervalHours * 60 * 60 * 1000;
        const now = Date.now();
        const diffHours = (nextReview - now) / (60 * 60 * 1000);
-       if (diffHours <= 2) dueBuckets[0]++;
-       else if (diffHours <= 12) dueBuckets[1]++;
-       else if (diffHours <= 48) dueBuckets[2]++;
-       else if (diffHours <= 240) dueBuckets[3]++; // 7d
-       else dueBuckets[4]++;
+       // Treat overdue cards (diffHours <= 0) as due now (<=30m)
+       if (diffHours <= 0.5) dueBuckets[0]++;
+       else if (diffHours <= 1) dueBuckets[1]++;
+       else if (diffHours <= 4) dueBuckets[2]++;
+       else if (diffHours <= 12) dueBuckets[3]++;
+       else if (diffHours <= 24) dueBuckets[4]++;
+       else if (diffHours <= 168) dueBuckets[5]++; // <=7d
+       else if (diffHours <= 720) dueBuckets[6]++; // <=30d
+       else dueBuckets[7]++; // >30d
      });
-  const maxDue = Math.max(...dueBuckets) || 1;
+    const maxDue = Math.max(...dueBuckets) || 1;
 
      // Overall accuracy
      let totalCorrect = 0, totalIncorrect = 0;
@@ -145,36 +148,32 @@ const StatsView = {
      const avgStreak = count > 0 ? (totalStreak / count).toFixed(1) : "0.0";
     content.innerHTML = `
       <div class="stats-grid">
-        <div class="metric-card">
+        <div class="metric-card" align="center">
         <div class="metric-title">Total Cards</div>
         <div class="metric-value large">${metrics.totalCards}</div>
         </div>
-        <div class="metric-card">
+        <div class="metric-card" align="center">
         <div class="metric-title">Reviewed</div>
         <div class="metric-value large">${this.formatPct(metrics.reviewedCount / metrics.totalCards)}</div>
         </div>
-        <div class="metric-card">
+        <div class="metric-card"  align="center">
           <div class="metric-title">Overall Accuracy</div>
           <div class="metric-value large">${this.formatPct(overallAccuracy)}</div>
         </div>
-        <div class="metric-card">
-          <div class="metric-title">New cards</div>
-          <div class="metric-value">${metrics.newCount}</div>
+        <div class="metric-card"  align="center">
+          <div class="metric-title">New cards / Errors</div>
+          <div class="metric-value large">${metrics.newCount} / ${metrics.deckErrors}</div>
         </div>
         <div class="metric-card">
-          <div class="metric-title">Deck Errors</div>
-          <div class="metric-value">${metrics.deckErrors}</div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-title">Max<br> Correct Streak</div>
+          <div class="metric-title">Max Correct Streak</div>
           <div class="metric-value">${maxCorrectStreak}</div>
         </div>
         <div class="metric-card">
-          <div class="metric-title">Max<br> Incorrect Streak</div>
+          <div class="metric-title">Max Incorrect Streak</div>
           <div class="metric-value">${maxIncorrectStreak}</div>
         </div>
         <div class="metric-card">
-          <div class="metric-title">Average<br> Correct Streak</div>
+          <div class="metric-title">Average Correct Streak</div>
           <div class="metric-value">${avgStreak}</div>
         </div>
 
@@ -256,7 +255,7 @@ const StatsView = {
       new Chart(histCtx, {
         type: 'bar',
         data: {
-          labels: ['0-20%', '21-40%', '41-60%', '61-80%', '81-100%'],
+          labels: ['10%', '20%', '30%', '40%', '50%', '60%', '70%', '80%', '90%', '100%'],
           datasets: [{
             label: 'Cards',
             data: buckets,
@@ -267,6 +266,13 @@ const StatsView = {
         },
         options: {
           scales: {
+            x: {
+              ticks: {
+                font: { size: 11 },
+                maxRotation: 0,
+                minRotation: 0
+              }
+            },
             y: {
               beginAtZero: true
             }
@@ -281,7 +287,7 @@ const StatsView = {
       new Chart(dueCtx, {
         type: 'bar',
         data: {
-          labels: ['<2h', '2-12h', '12-48h', '2-10d', '>10d'],
+          labels: ['<=30m', '<=1h', '<=4h', '<=12h', '<=24h', '<=7d', '<=30d', '>30d'],
           datasets: [{
             label: 'Cards Due',
             data: dueBuckets,
@@ -292,6 +298,13 @@ const StatsView = {
         },
         options: {
           scales: {
+            x: {
+              ticks: {
+                font: { size: 11 },
+                maxRotation: 0,
+                minRotation: 0
+              }
+            },
             y: {
               beginAtZero: true
             }
@@ -324,37 +337,5 @@ const StatsView = {
         }
       });
     }
-
-    // Overall Accuracy Pie Chart
-    const pieCtx = document.getElementById('accuracy-pie-chart');
-    if (pieCtx) {
-      new Chart(pieCtx, {
-        type: 'pie',
-        data: {
-          labels: ['Correct', 'Incorrect'],
-          datasets: [{
-            data: [overallAccuracy * 100, (1 - overallAccuracy) * 100],
-            backgroundColor: ['rgba(40, 167, 69, 0.6)', 'rgba(220, 53, 69, 0.6)'],
-            borderColor: ['rgba(40, 167, 69, 1)', 'rgba(220, 53, 69, 1)'],
-            borderWidth: 1
-          }]
-        },
-        options: {
-          responsive: true,
-          plugins: {
-            legend: {
-              position: 'top',
-            },
-            tooltip: {
-              callbacks: {
-                label: function(context) {
-                  return context.label + ': ' + context.parsed.toFixed(1) + '%';
-                }
-              }
-            }
-          }
-        }
-      });
-    }
-  },
+  }
 };

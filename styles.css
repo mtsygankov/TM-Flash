@@ -522,9 +522,9 @@ h2 {
 
 .small-item {
     display: flex;
-    gap: 0.6rem;
+    gap: 0.2rem;
     align-items: center;
-    padding: 0.4rem 0;
+    padding: 0.1rem 0;
     border-bottom: 1px dashed #f1f5f9;
     font-size: 0.92rem;
 }
