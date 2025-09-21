@@ -32,10 +32,11 @@ const DECKS = {
 // Storage module
 const Storage = {
   STORAGE_KEY: "tmFlash",
+  CURRENT_SCHEMA_VERSION: 2,
 
   getDefaultState() {
     return {
-      schema_version: 1,
+      schema_version: this.CURRENT_SCHEMA_VERSION,
       settings: {
         direction: "CH->EN",
         selected_deck: DEFAULT_SELECTED_DECK,
@@ -60,7 +61,7 @@ const Storage = {
       }
       const state = JSON.parse(stored);
       // Ensure schema version is current
-      if (state.schema_version !== 1) {
+      if (state.schema_version !== this.CURRENT_SCHEMA_VERSION) {
         console.warn("Schema version mismatch, using defaults");
         const defaultState = this.getDefaultState();
         this.saveState(defaultState);
@@ -113,17 +114,35 @@ const Stats = {
     const validCardIds = new Set(cards.map((card) => card.card_id));
     const syncedCards = {};
 
-    // Add missing entries for valid cards
-    cards.forEach((card) => {
-      if (!deckStats.cards[card.card_id]) {
-        syncedCards[card.card_id] = {
-          "CH->EN": { correct: 0, incorrect: 0, last_reviewed: null },
-          "EN->CH": { correct: 0, incorrect: 0, last_reviewed: null },
-        };
-      } else {
-        syncedCards[card.card_id] = deckStats.cards[card.card_id];
-      }
-    });
+      // Add missing entries for valid cards
+     cards.forEach((card) => {
+       if (!deckStats.cards[card.card_id]) {
+         syncedCards[card.card_id] = {
+           "CH->EN": {
+             total_correct: 0,
+             total_incorrect: 0,
+             last_correct_at: null,
+             last_incorrect_at: null,
+             correct_streak_len: 0,
+             incorrect_streak_len: 0,
+             correct_streak_started_at: null,
+             incorrect_streak_started_at: null
+           },
+           "EN->CH": {
+             total_correct: 0,
+             total_incorrect: 0,
+             last_correct_at: null,
+             last_incorrect_at: null,
+             correct_streak_len: 0,
+             incorrect_streak_len: 0,
+             correct_streak_started_at: null,
+             incorrect_streak_started_at: null
+           },
+         };
+       } else {
+         syncedCards[card.card_id] = deckStats.cards[card.card_id];
+       }
+     });
 
     // Remove orphaned entries (cards that no longer exist in the deck)
     Object.keys(deckStats.cards).forEach((cardId) => {
@@ -147,9 +166,14 @@ const Stats = {
     const deckStats = Storage.getDeckStats(deckId);
     return (
       deckStats.cards[cardId]?.[direction] || {
-        correct: 0,
-        incorrect: 0,
-        last_reviewed: null,
+        total_correct: 0,
+        total_incorrect: 0,
+        last_correct_at: null,
+        last_incorrect_at: null,
+        correct_streak_len: 0,
+        incorrect_streak_len: 0,
+        correct_streak_started_at: null,
+        incorrect_streak_started_at: null
       }
     );
   },
@@ -157,21 +181,77 @@ const Stats = {
   updateCardStats(deckId, cardId, direction, isCorrect) {
     const deckStats = Storage.getDeckStats(deckId);
     const cardStats = deckStats.cards[cardId] || {
-      "CH->EN": { correct: 0, incorrect: 0, last_reviewed: null },
-      "EN->CH": { correct: 0, incorrect: 0, last_reviewed: null },
+      "CH->EN": {
+        total_correct: 0,
+        total_incorrect: 0,
+        last_correct_at: null,
+        last_incorrect_at: null,
+        correct_streak_len: 0,
+        incorrect_streak_len: 0,
+        correct_streak_started_at: null,
+        incorrect_streak_started_at: null
+      },
+      "EN->CH": {
+        total_correct: 0,
+        total_incorrect: 0,
+        last_correct_at: null,
+        last_incorrect_at: null,
+        correct_streak_len: 0,
+        incorrect_streak_len: 0,
+        correct_streak_started_at: null,
+        incorrect_streak_started_at: null
+      },
     };
 
     if (!cardStats[direction]) {
-      cardStats[direction] = { correct: 0, incorrect: 0, last_reviewed: null };
+      cardStats[direction] = {
+        total_correct: 0,
+        total_incorrect: 0,
+        last_correct_at: null,
+        last_incorrect_at: null,
+        correct_streak_len: 0,
+        incorrect_streak_len: 0,
+        correct_streak_started_at: null,
+        incorrect_streak_started_at: null
+      };
     }
+
+    const now = Date.now();
 
     if (isCorrect) {
-      cardStats[direction].correct++;
+      cardStats[direction].total_correct++;
+      cardStats[direction].last_correct_at = now;
+
+      if (cardStats[direction].incorrect_streak_len > 0) {
+        // Reset incorrect streak
+        cardStats[direction].incorrect_streak_len = 0;
+        cardStats[direction].correct_streak_len = 1;
+        cardStats[direction].correct_streak_started_at = now;
+      } else {
+        // Starting or continuing correct streak
+        if (cardStats[direction].correct_streak_len === 0) {
+          cardStats[direction].correct_streak_started_at = now;
+        }
+        cardStats[direction].correct_streak_len++;
+      }
     } else {
-      cardStats[direction].incorrect++;
+      cardStats[direction].total_incorrect++;
+      cardStats[direction].last_incorrect_at = now;
+
+      if (cardStats[direction].correct_streak_len > 0) {
+        // Reset correct streak
+        cardStats[direction].correct_streak_len = 0;
+        cardStats[direction].incorrect_streak_len = 1;
+        cardStats[direction].incorrect_streak_started_at = now;
+      } else {
+        // Starting or continuing incorrect streak
+        if (cardStats[direction].incorrect_streak_len === 0) {
+          cardStats[direction].incorrect_streak_started_at = now;
+        }
+        cardStats[direction].incorrect_streak_len++;
+      }
     }
 
-    cardStats[direction].last_reviewed = Date.now();
     deckStats.cards[cardId] = cardStats;
     Storage.setDeckStats(deckId, deckStats);
     // Update in-memory stats
@@ -184,7 +264,7 @@ const Stats = {
     let reviewedCount = 0;
     Object.values(deckStats.cards).forEach((cardStats) => {
       const dirStat = cardStats[direction];
-      if (dirStat && dirStat.correct + dirStat.incorrect > 0) reviewedCount++;
+      if (dirStat && dirStat.total_correct + dirStat.total_incorrect > 0) reviewedCount++;
     });
     const newCount = totalCards - reviewedCount;
     const deckErrors = deckStats.errorCount || 0;
@@ -194,43 +274,175 @@ const Stats = {
 
 // SRS module
 const SRS = {
-  scoreCard(stat, nowMs = Date.now()) {
-    const { correct, incorrect, last_reviewed } = stat;
-    const total = correct + incorrect;
-    const is_new = total === 0 ? 1 : 0;
-    const error_rate = is_new ? 1 : 1 - correct / total;
-    let days_since;
-    if (is_new) {
-      days_since = 14;
-    } else {
-      days_since = Math.min(14, (nowMs - last_reviewed) / 86400000);
+  calculateNextReviewInterval(cardStats) {
+    const {
+      total_correct,
+      total_incorrect,
+      last_correct_at,
+      last_incorrect_at,
+      correct_streak_len,
+      incorrect_streak_len,
+      correct_streak_started_at,
+      incorrect_streak_started_at
+    } = cardStats;
+
+    const total_reviews = total_correct + total_incorrect;
+    const accuracy = total_reviews > 0 ? total_correct / total_reviews : 0;
+    const now = Date.now();
+
+    // Base intervals (in hours)
+    const BASE_INTERVALS = [0.5, 4, 24, 72, 168, 336, 720, 1440]; // 30min to 60 days
+
+    // Determine base interval index based on correct streak
+    let intervalIndex = Math.min(correct_streak_len, BASE_INTERVALS.length - 1);
+    let baseInterval = BASE_INTERVALS[intervalIndex];
+
+    // Modifiers based on performance
+    let modifier = 1.0;
+
+    // Recent performance modifier
+    if (last_incorrect_at && last_correct_at) {
+      const recentlyIncorrect = last_incorrect_at > last_correct_at;
+      if (recentlyIncorrect) {
+        modifier *= 0.3; // Much shorter interval after mistake
+      }
     }
-    const score =
-      5.0 * is_new +
-      3.0 * error_rate +
-      0.25 * days_since +
-      Math.random() * 0.01;
-    return score;
+
+    // Accuracy modifier
+    if (total_reviews >= 3) {
+      if (accuracy >= 0.9) modifier *= 1.3;
+      else if (accuracy >= 0.7) modifier *= 1.0;
+      else if (accuracy >= 0.5) modifier *= 0.7;
+      else modifier *= 0.4;
+    }
+
+    // Incorrect streak penalty
+    if (incorrect_streak_len > 0) {
+      modifier *= Math.pow(0.5, incorrect_streak_len); // Exponential penalty
+    }
+
+    // Long correct streak bonus (but cap it)
+    if (correct_streak_len > 5) {
+      modifier *= Math.min(2.0, 1 + (correct_streak_len - 5) * 0.1);
+    }
+
+    const finalInterval = baseInterval * modifier;
+    return Math.max(0.5, Math.min(finalInterval, 2160)); // Min 30min, max 90 days
+  },
+
+  shouldReviewCard(cardStats) {
+    console.log("🔍 shouldReviewCard called with stats:", {
+      last_correct_at: cardStats.last_correct_at,
+      last_incorrect_at: cardStats.last_incorrect_at,
+      total_correct: cardStats.total_correct,
+      total_incorrect: cardStats.total_incorrect
+    });
+
+    if (!cardStats.last_correct_at && !cardStats.last_incorrect_at) {
+      console.log("✅ New card - returning true");
+      return true; // New card
+    }
+
+    const lastReview = Math.max(cardStats.last_correct_at || 0, cardStats.last_incorrect_at || 0);
+    const intervalHours = this.calculateNextReviewInterval(cardStats);
+    const nextReviewTime = lastReview + (intervalHours * 60 * 60 * 1000);
+    const now = Date.now();
+    const isDue = now >= nextReviewTime;
+
+    console.log("🔍 Card review check:", {
+      lastReview: new Date(lastReview).toISOString(),
+      intervalHours: intervalHours.toFixed(2),
+      nextReviewTime: new Date(nextReviewTime).toISOString(),
+      now: new Date(now).toISOString(),
+      isDue
+    });
+
+    return isDue;
   },
 
   selectNextCard(cards, statsMap, direction) {
-    if (!cards || cards.length === 0) return null;
-    let maxScore = -Infinity;
-    let selectedCard = null;
-    cards.forEach((card) => {
-      const stat = statsMap[card.card_id]?.[direction];
-      const score = this.scoreCard(
-        stat || { correct: 0, incorrect: 0, last_reviewed: null },
-      );
-      if (score > maxScore) {
-        maxScore = score;
-        selectedCard = card;
-      }
-      console.log(
-        `${score.toFixed(2)}, ${card.card_id} ,"${card.pinyin}", Corr: ${stat.correct}, Incorr: ${stat.incorrect}, time: ${(Date.now() - stat.last_reviewed) / 1000}s`,
-      );
+    console.log("🔍 SRS.selectNextCard called with direction:", direction);
+    console.log("🔍 Cards array:", cards ? `Array with ${cards.length} cards` : "null/undefined");
+    console.log("🔍 Stats map:", statsMap ? "Object provided" : "null/undefined");
+
+    if (!cards || cards.length === 0) {
+      console.log("❌ No cards array or empty array");
+      return null;
+    }
+
+    const dueCards = cards.filter(card => {
+      const stats = statsMap[card.card_id]?.[direction];
+      const isDue = this.shouldReviewCard(stats || {
+        total_correct: 0,
+        total_incorrect: 0,
+        last_correct_at: null,
+        last_incorrect_at: null,
+        correct_streak_len: 0,
+        incorrect_streak_len: 0,
+        correct_streak_started_at: null,
+        incorrect_streak_started_at: null
+      });
+
+      console.log(`🔍 Card ${card.card_id}: stats exist=${!!stats}, isDue=${isDue}`);
+      return isDue;
     });
-    return selectedCard;
+
+    console.log("🔍 Due cards found:", dueCards.length);
+
+    if (dueCards.length === 0) {
+      console.log("❌ No due cards found");
+      return null;
+    }
+
+    // Priority scoring for due cards
+    const scoredCards = dueCards.map(card => {
+      const stats = statsMap[card.card_id]?.[direction] || {
+        total_correct: 0,
+        total_incorrect: 0,
+        last_correct_at: null,
+        last_incorrect_at: null,
+        correct_streak_len: 0,
+        incorrect_streak_len: 0,
+        correct_streak_started_at: null,
+        incorrect_streak_started_at: null
+      };
+
+      const total_reviews = stats.total_correct + stats.total_incorrect;
+
+      let priority = 0;
+
+      // New cards get highest priority
+      if (total_reviews === 0) {
+        priority = 1000;
+      } else {
+        // Recently failed cards
+        if (stats.incorrect_streak_len > 0) {
+          priority = 500 + (stats.incorrect_streak_len * 100);
+        }
+
+        // Overdue factor
+        const lastReview = Math.max(stats.last_correct_at || 0, stats.last_incorrect_at || 0);
+        const intervalHours = this.calculateNextReviewInterval(stats);
+        const expectedReviewTime = lastReview + (intervalHours * 60 * 60 * 1000);
+        const overdueFactor = Math.max(1, (Date.now() - expectedReviewTime) / (60 * 60 * 1000));
+        priority += overdueFactor * 10;
+
+        // Low accuracy boost
+        const accuracy = stats.total_correct / total_reviews;
+        if (accuracy < 0.6) {
+          priority += (0.6 - accuracy) * 200;
+        }
+      }
+
+      // Small random factor to break ties
+      priority += Math.random() * 5;
+
+      return { card, priority };
+    });
+
+    // Sort by priority (highest first) and return top card
+    scoredCards.sort((a, b) => b.priority - a.priority);
+    return scoredCards[0].card;
   },
 };
 
@@ -503,7 +715,7 @@ const DeckSelector = {
 
   async init() {
     await this.populateOptions();
-    this.loadSelectedDeck();
+    await this.loadSelectedDeck();
     this.bindSelector();
   },
 
@@ -561,22 +773,24 @@ const DeckSelector = {
     return await response.json();
   },
 
-  loadSelectedDeck() {
+  async loadSelectedDeck() {
     const settings = Storage.getSettings();
     const selector = document.getElementById("deck-selector");
     if (selector && settings.selected_deck) {
       selector.value = settings.selected_deck;
       this.currentDeckId = settings.selected_deck;
       // Load the default deck
-      this.loadDeck(settings.selected_deck).catch((error) => {
+      try {
+        await this.loadDeck(settings.selected_deck);
+      } catch (error) {
         console.error("Failed to load default deck:", error);
         // If default deck fails, try to load the first available deck
         const firstDeckId = Object.keys(DECKS)[0];
         if (firstDeckId && firstDeckId !== settings.selected_deck) {
           console.log("Falling back to first available deck:", firstDeckId);
-          this.loadDeck(firstDeckId);
+          await this.loadDeck(firstDeckId);
         }
-      });
+      }
     }
   },
 
@@ -744,15 +958,66 @@ const Settings = {
     this.applyDirection(settings.direction);
   },
 
-  applyDirection(direction) {
-    const button = document.getElementById("direction-toggle");
-    if (button) {
-      button.textContent = direction;
-      button.dataset.direction = direction;
+   applyDirection(direction) {
+     console.log("🔄 applyDirection called with direction:", direction);
+
+     const button = document.getElementById("direction-toggle");
+     if (button) {
+       button.textContent = direction;
+       button.dataset.direction = direction;
+       console.log("✅ Button text updated to:", direction);
+     } else {
+       console.warn("❌ Direction toggle button not found");
+     }
+
+     App.currentDirection = direction;
+     App.flipped = false;
+     console.log("📍 App.currentDirection set to:", direction);
+
+    // Debug current app state
+    console.log("📊 App.currentCards:", App.currentCards ? `Array with ${App.currentCards.length} cards` : "null/undefined");
+    console.log("📊 App.currentStats:", App.currentStats ? "Object with cards property" : "null/undefined");
+    if (App.currentStats && App.currentStats.cards) {
+      console.log("📊 App.currentStats.cards keys:", Object.keys(App.currentStats.cards));
     }
-    App.currentDirection = direction;
-    if (App.currentCard) {
-      Review.applyDirectionAndFlip();
+
+    // Only select/render card if data is available (not during initialization)
+    if (App.currentCards && App.currentStats) {
+      console.log("✅ Conditional check passed, selecting card...");
+
+      // Select a new card for the new direction
+      App.currentCard = SRS.selectNextCard(
+        App.currentCards,
+        App.currentStats.cards,
+        App.currentDirection,
+      );
+
+      console.log("🎯 SRS.selectNextCard result:", App.currentCard ? `Card ${App.currentCard.card_id}` : "null");
+
+      if (App.currentCard) {
+        console.log("🎨 Rendering card:", App.currentCard.card_id);
+        Review.renderCard(App.currentCard);
+      } else {
+        console.log("📝 No cards due, updating message");
+        const cardContainer = document.getElementById("card-container");
+        if (cardContainer) {
+          cardContainer.innerHTML = "<p>No cards due for review in this direction.</p>";
+          console.log("✅ Message updated successfully");
+        } else {
+          console.error("❌ Card container element not found");
+        }
+      }
+    } else {
+      console.warn("❌ Conditional check failed - app data not available");
+      console.log("   App.currentCards:", !!App.currentCards);
+      console.log("   App.currentStats:", !!App.currentStats);
+
+      // Still try to update the message to indicate direction change
+      const cardContainer = document.getElementById("card-container");
+      if (cardContainer) {
+        cardContainer.innerHTML = `<p>Switched to ${direction} direction.</p>`;
+        console.log("ℹ️ Updated message with direction change info");
+      }
     }
   },
 
@@ -788,13 +1053,13 @@ const App = {
     console.log("Deck registry:", DECKS);
     // Initialize storage
     Storage.loadState();
-    // Initialize settings
-    Settings.init();
-    // Initialize deck selector
+    // Initialize deck selector FIRST (loads deck data)
     await DeckSelector.init();
+    // Initialize settings (now safe to call applyDirection)
+    Settings.init();
     // Initialize navigation
     Nav.init();
-    // Initialize review
+    // Initialize review (now safe to bind events)
     Review.init();
     // Initialize stats view
     StatsView.init();
@@ -872,11 +1137,18 @@ const Review = {
   },
 
   renderCard(card) {
-    if (!card) return;
+    if (!card) {
+      const table = document.getElementById("card-table");
+      if (table) {
+        table.innerHTML = "";
+      }
+      return;
+    }
     const hanziTokens = card.hanzi.split(" ");
     const pinyinTokens = card.pinyin.split(" ");
     const enWords = card.en_words;
     const table = document.getElementById("card-table");
+    if (!table) return;
     table.innerHTML = `
             <tr class="row-hanzi">
                 ${hanziTokens.map((token) => `<td>${this.escapeHtml(token)}</td>`).join("")}
@@ -983,6 +1255,11 @@ const Review = {
     const btnIncorrect = document.getElementById("btn-incorrect");
     console.log("btnCorrect:", btnCorrect);
     console.log("btnIncorrect:", btnIncorrect);
+
+    if (!btnCorrect || !btnIncorrect) {
+      console.error("Review buttons not found, cannot bind events");
+      return;
+    }
 
     btnCorrect.addEventListener("click", (e) => {
       e.stopPropagation();
@@ -1106,17 +1383,17 @@ const StatsView = {
     Object.entries(deckStats.cards).forEach(([cardId, cardStats]) => {
       const dirStat = cardStats[this.currentDirection];
       if (!dirStat) return;
-      const total = dirStat.correct + dirStat.incorrect;
+      const total = dirStat.total_correct + dirStat.total_incorrect;
       if (total === 0) return;
-      const ratio = dirStat.correct / total;
+      const ratio = dirStat.total_correct / total;
       const card = cardMap.get(cardId);
       if (!card) return;
       cardData.push({
         cardId,
         hanzi: card.hanzi,
         english: card.english,
-        correct: dirStat.correct,
-        incorrect: dirStat.incorrect,
+        correct: dirStat.total_correct,
+        incorrect: dirStat.total_incorrect,
         total,
         ratio,
       });
@@ -1191,9 +1468,14 @@ const StatsView = {
     Object.values(deckStats.cards).forEach((cardStats) => {
       if (cardStats[this.currentDirection]) {
         cardStats[this.currentDirection] = {
-          correct: 0,
-          incorrect: 0,
-          last_reviewed: null,
+          total_correct: 0,
+          total_incorrect: 0,
+          last_correct_at: null,
+          last_incorrect_at: null,
+          correct_streak_len: 0,
+          incorrect_streak_len: 0,
+          correct_streak_started_at: null,
+          incorrect_streak_started_at: null
         };
       }
     });
