@@ -24,6 +24,10 @@ const StatsView = {
     }
   },
 
+  formatPct(num) {
+    return (Number.isFinite(num) ? (num * 100).toFixed(1) : "0.0") + "%";
+  },
+
   render() {
     const toggle = document.getElementById("stats-direction-toggle");
     if (toggle) {
@@ -35,25 +39,20 @@ const StatsView = {
       content.innerHTML = "<p>No deck loaded.</p>";
       return;
     }
-    const metrics = Stats.computeMetrics(
-      App.currentDeckId,
-      this.currentDirection,
-    );
+    const metrics = Stats.computeMetrics(App.currentDeckId, this.currentDirection);
 
      // Compute histogram and top lists
-     const deckStats = Storage.getDeckStats(App.currentDeckId);
-     const cardMap = new Map(
-       App.currentCards.map((card) => [card.card_id, card]),
-     );
+     const deckStats = Storage.getDeckStats(App.currentDeckId) || { cards: {} };
+     const cardMap = new Map((App.currentCards || []).map((card) => [card.card_id, card]));
      const cardData = [];
-     Object.entries(deckStats.cards).forEach(([cardId, cardStats]) => {
+     Object.entries(deckStats.cards || {}).forEach(([cardId, cardStats]) => {
        const dirStat = cardStats[this.currentDirection];
        if (!dirStat) return;
-       const total = dirStat.total_correct + dirStat.total_incorrect;
+       const total = (dirStat.total_correct || 0) + (dirStat.total_incorrect || 0);
        if (total === 0) return;
-       const ratio = dirStat.total_correct / total;
-       const card = cardMap.get(cardId);
-       if (!card) return;
+       const ratio = (dirStat.total_correct || 0) / total;
+       const card = cardMap.get(cardId) || { hanzi: cardId, english: "" };
+      
        cardData.push({
          cardId,
          hanzi: card.hanzi,
@@ -77,16 +76,12 @@ const StatsView = {
        else bucket = 4;
        buckets[bucket]++;
      });
-     const maxBucket = Math.max(...buckets);
+  const maxBucket = Math.max(...buckets) || 1;
 
      // Top 10 best and worst
-     const sortedByRatioDesc = cardData.sort(
-       (a, b) => b.ratio - a.ratio || b.total - a.total,
-     );
+     const sortedByRatioDesc = cardData.slice().sort((a, b) => b.ratio - a.ratio || b.total - a.total);
      const best = sortedByRatioDesc.slice(0, 10);
-     const sortedByRatioAsc = cardData.sort(
-       (a, b) => a.ratio - b.ratio || b.total - a.total,
-     );
+     const sortedByRatioAsc = cardData.slice().sort((a, b) => a.ratio - b.ratio || b.total - a.total);
      const worst = sortedByRatioAsc.slice(0, 10);
 
      // Compute due timeline
@@ -114,14 +109,15 @@ const StatsView = {
        else if (diffHours <= 720) dueBuckets[4]++; // 30d
        else dueBuckets[5]++;
      });
-     const maxDue = Math.max(...dueBuckets);
+  const maxDue = Math.max(...dueBuckets) || 1;
 
      // Overall accuracy
      let totalCorrect = 0, totalIncorrect = 0;
      cardData.forEach((data) => {
-       totalCorrect += data.correct;
-       totalIncorrect += data.incorrect;
+       totalCorrect += data.correct || 0;
+       totalIncorrect += data.incorrect || 0;
      });
+    const overallAccuracy = totalCorrect + totalIncorrect > 0 ? totalCorrect / (totalCorrect + totalIncorrect) : 0;
 
      // Streak histogram
      const streakBuckets = [0, 0, 0, 0, 0]; // 0,1,2-3,4-5,6+
@@ -134,72 +130,91 @@ const StatsView = {
        else if (streak <= 5) streakBuckets[3]++;
        else streakBuckets[4]++;
      });
-     const maxStreak = Math.max(...streakBuckets);
+  const maxStreak = Math.max(...streakBuckets) || 1;
 
      // Streak records
      let maxCorrectStreak = 0, maxIncorrectStreak = 0, totalStreak = 0, count = 0;
      cardData.forEach((data) => {
-       const stats = deckStats.cards[data.cardId][this.currentDirection];
-       maxCorrectStreak = Math.max(maxCorrectStreak, stats.correct_streak_len);
-       maxIncorrectStreak = Math.max(maxIncorrectStreak, stats.incorrect_streak_len);
-       totalStreak += stats.correct_streak_len;
-       count++;
+      const stats = deckStats.cards?.[data.cardId]?.[this.currentDirection] || {};
+      const cs = stats.correct_streak_len || 0;
+      const is = stats.incorrect_streak_len || 0;
+      maxCorrectStreak = Math.max(maxCorrectStreak, cs);
+      maxIncorrectStreak = Math.max(maxIncorrectStreak, is);
+      totalStreak += cs;
+      count++;
      });
-     const avgStreak = count > 0 ? (totalStreak / count).toFixed(1) : 0;
-
-     content.innerHTML = `
-      <div class="stats-metrics">
-        <p>Total Cards: ${metrics.totalCards}</p>
-        <p>Reviewed: ${metrics.reviewedCount}</p>
-        <p>New: ${metrics.newCount}</p>
-        <p>Errors: ${metrics.deckErrors}</p>
+     const avgStreak = count > 0 ? (totalStreak / count).toFixed(1) : "0.0";
+    content.innerHTML = `
+      <div class="stats-grid">
+        <div class="metric-card">
+          <div class="metric-title">Total Cards</div>
+          <div class="metric-value">${metrics.totalCards}</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-title">Reviewed</div>
+          <div class="metric-value">${metrics.reviewedCount}</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-title">New</div>
+          <div class="metric-value">${metrics.newCount}</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-title">Deck Errors</div>
+          <div class="metric-value">${metrics.deckErrors}</div>
+        </div>
+        <div class="metric-card wide">
+          <div class="metric-title">Overall Accuracy</div>
+          <div class="metric-value large">${this.formatPct(overallAccuracy)}</div>
+          <div class="progress">
+            <div class="progress-inner" style="width: ${overallAccuracy * 100}%"></div>
+          </div>
+        </div>
       </div>
-       <div class="stats-histogram">
-         <h3>Correct Ratio Histogram</h3>
-         <div class="histogram-bars">
-           ${buckets.map((val, i) => `<div class="bar" style="height: ${(val / maxBucket) * 200}px">${['0-20%', '21-40%', '41-60%', '61-80%', '81-100%'][i]}<br>${val}</div>`).join('')}
-         </div>
-       </div>
-       <div class="stats-top-lists">
-         <div class="top-best">
-           <h3>Top 10 Best</h3>
-           <ul>
-             ${best.map((data) => `<li>${data.hanzi} - ${data.english} (${data.correct}/${data.total})</li>`).join("")}
-           </ul>
-         </div>
-         <div class="top-worst">
-           <h3>Top 10 Worst</h3>
-           <ul>
-             ${worst.map((data) => `<li>${data.hanzi} - ${data.english} (${data.correct}/${data.total})</li>`).join("")}
-           </ul>
-         </div>
-       </div>
-       <div class="stats-due-timeline">
-         <h3>Cards Due Timeline</h3>
-         <div class="timeline-bars">
-           ${dueBuckets.map((val, i) => `<div class="bar" style="height: ${(val / maxDue) * 200}px">${['&lt;1h', '1-6h', '6-24h', '1-7d', '7-30d', '&gt;30d'][i]}<br>${val}</div>`).join('')}
-         </div>
-       </div>
-       <div class="stats-overall-accuracy">
-         <h3>Overall Accuracy</h3>
-         <div class="pie-chart">
-           <div class="pie" style="--correct: ${totalCorrect}; --incorrect: ${totalIncorrect}"></div>
-           <div class="legend">Correct: ${totalCorrect} (${totalCorrect + totalIncorrect > 0 ? ((totalCorrect / (totalCorrect + totalIncorrect)) * 100).toFixed(1) : 0}%) Incorrect: ${totalIncorrect} (${totalCorrect + totalIncorrect > 0 ? ((totalIncorrect / (totalCorrect + totalIncorrect)) * 100).toFixed(1) : 0}%)</div>
-         </div>
-       </div>
-       <div class="stats-streak-histogram">
-         <h3>Current Correct Streak Distribution</h3>
-         <div class="histogram-bars">
-           ${streakBuckets.map((val, i) => `<div class="bar" style="height: ${(val / maxStreak) * 150}px">${['0', '1', '2-3', '4-5', '6+'][i]}<br>${val}</div>`).join('')}
-         </div>
-       </div>
-       <div class="stats-streak-records">
-         <h3>Streak Records</h3>
-         <p>Max Correct Streak: ${maxCorrectStreak}</p>
-         <p>Max Incorrect Streak: ${maxIncorrectStreak}</p>
-         <p>Average Correct Streak: ${avgStreak}</p>
-       </div>
-     `;
+
+      <div class="panel-grid">
+        <div class="panel">
+          <h3>Correct Ratio Histogram</h3>
+          <div class="histogram-bars">
+            ${buckets.map((val, i) => `<div class="bar" style="height: ${(val / maxBucket) * 140}px"><div class="bar-label">${['0-20%', '21-40%', '41-60%', '61-80%', '81-100%'][i]}</div><div class="bar-count">${val}</div></div>`).join('')}
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3>Cards Due Timeline</h3>
+          <div class="timeline-bars">
+            ${dueBuckets.map((val, i) => `<div class="bar timeline" style="height: ${(val / maxDue) * 140}px"><div class="bar-label">${['<1h','1-6h','6-24h','1-7d','7-30d','>30d'][i]}</div><div class="bar-count">${val}</div></div>`).join('')}
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3>Top 10 Best</h3>
+          <ul class="small-list">
+            ${best.length ? best.map((data) => `<li class="small-item"><span class="mini-hanzi">${data.hanzi}</span><span class="mini-eng">${data.english}</span><span class="mini-stats">${data.correct}/${data.total} (${(data.ratio*100).toFixed(0)}%)</span></li>`).join("") : "<li class='small-item'>No data</li>"}
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h3>Top 10 Worst</h3>
+          <ul class="small-list">
+            ${worst.length ? worst.map((data) => `<li class="small-item"><span class="mini-hanzi">${data.hanzi}</span><span class="mini-eng">${data.english}</span><span class="mini-stats">${data.correct}/${data.total} (${(data.ratio*100).toFixed(0)}%)</span></li>`).join("") : "<li class='small-item'>No data</li>"}
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h3>Correct Streak Distribution</h3>
+          <div class="histogram-bars small">
+            ${streakBuckets.map((val, i) => `<div class="bar" style="height: ${(val / maxStreak) * 120}px"><div class="bar-label">${['0','1','2-3','4-5','6+'][i]}</div><div class="bar-count">${val}</div></div>`).join('')}
+          </div>
+        </div>
+
+        <div class="panel stats-records">
+          <h3>Streak Records</h3>
+          <p>Max Correct Streak: <strong>${maxCorrectStreak}</strong></p>
+          <p>Max Incorrect Streak: <strong>${maxIncorrectStreak}</strong></p>
+          <p>Average Correct Streak: <strong>${avgStreak}</strong></p>
+        </div>
+      </div>
+    `;
   },
 
   resetCurrentDeckStats() {
