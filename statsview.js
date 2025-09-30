@@ -43,7 +43,7 @@ const StatsView = {
 
      // Compute histogram and top lists
      const deckStats = Storage.getDeckStats(App.currentDeckId) || { cards: {} };
-     const cardMap = new Map((App.currentCards || []).map((card) => [card.card_id, card]));
+      const cardMap = new Map((App.currentCards || []).map((card) => [card.card_id.toString(), card]));
      const cardData = [];
      Object.entries(deckStats.cards || {}).forEach(([cardId, cardStats]) => {
        const dirStat = cardStats[this.currentDirection];
@@ -51,17 +51,18 @@ const StatsView = {
        const total = (dirStat.total_correct || 0) + (dirStat.total_incorrect || 0);
        if (total === 0) return;
        const ratio = (dirStat.total_correct || 0) / total;
-       const card = cardMap.get(cardId) || { hanzi: cardId, english: "" };
+        const card = cardMap.get(cardId) || { hanzi: cardId, pinyin: "", english: "" };
       
-       cardData.push({
-         cardId,
-         hanzi: card.hanzi,
-         english: card.english,
-         correct: dirStat.total_correct,
-         incorrect: dirStat.total_incorrect,
-         total,
-         ratio,
-       });
+        cardData.push({
+          cardId,
+          hanzi: card.hanzi,
+          pinyin: card.pinyin,
+          english: card.english,
+          correct: dirStat.total_correct,
+          incorrect: dirStat.total_incorrect,
+          total,
+          ratio,
+        });
      });
 
      // Histogram buckets: 10 buckets (0-9%,10-19%,...,90-100%)
@@ -207,7 +208,7 @@ const StatsView = {
         <div class="panel" width="300">
           <h3>Top 10 Worst</h3>
           <ul class="small-list">
-            ${worst.length ? worst.map((data) => `<li class="small-item"><span class="mini-hanzi">${data.hanzi}</span><span class="mini-eng">${data.english}</span><span class="mini-stats">${data.correct}/${data.total} (${(data.ratio*100).toFixed(0)}%)</span></li>`).join("") : "<li class='small-item'>No data</li>"}
+             ${worst.length ? worst.map((data) => `<li class="small-item"><span class="mini-hanzi">${data.hanzi}</span><span class="mini-pinyin">${data.pinyin}</span><span class="mini-eng">${data.english}</span><span class="mini-stats">${data.correct}/${data.total} (${(data.ratio*100).toFixed(0)}%)</span></li>`).join("") : "<li class='small-item'>No data</li>"}
           </ul>
         </div>
 
