@@ -84,8 +84,8 @@ const StatsView = {
      const sortedByRatioAsc = cardData.slice().sort((a, b) => a.ratio - b.ratio || b.total - a.total);
      const worst = sortedByRatioAsc.slice(0, 10);
 
-     // Compute due timeline with buckets: <=30m, <=1h, <=4h, <=12h, <=24h, <=7d, <=30d, >30d
-     const dueBuckets = [0, 0, 0, 0, 0, 0, 0, 0];
+      // Compute due timeline with buckets: Overdue, <=30m, <=1h, <=4h, <=12h, <=24h, <=7d, <=30d, >30d
+      const dueBuckets = [0, 0, 0, 0, 0, 0, 0, 0, 0];
      (App.currentCards || []).forEach((card) => {
        const stats = deckStats.cards?.[card.card_id]?.[this.currentDirection];
        if (!stats) {
@@ -101,16 +101,16 @@ const StatsView = {
        const intervalHours = SRS.calculateNextReviewInterval(stats);
        const nextReview = lastReview + intervalHours * 60 * 60 * 1000;
        const now = Date.now();
-       const diffHours = (nextReview - now) / (60 * 60 * 1000);
-       // Treat overdue cards (diffHours <= 0) as due now (<=30m)
-       if (diffHours <= 0.5) dueBuckets[0]++;
-       else if (diffHours <= 1) dueBuckets[1]++;
-       else if (diffHours <= 4) dueBuckets[2]++;
-       else if (diffHours <= 12) dueBuckets[3]++;
-       else if (diffHours <= 24) dueBuckets[4]++;
-       else if (diffHours <= 168) dueBuckets[5]++; // <=7d
-       else if (diffHours <= 720) dueBuckets[6]++; // <=30d
-       else dueBuckets[7]++; // >30d
+        const diffHours = (nextReview - now) / (60 * 60 * 1000);
+        if (diffHours <= 0) dueBuckets[0]++; // overdue
+        else if (diffHours <= 0.5) dueBuckets[1]++; // <=30m
+        else if (diffHours <= 1) dueBuckets[2]++;
+        else if (diffHours <= 4) dueBuckets[3]++;
+        else if (diffHours <= 12) dueBuckets[4]++;
+        else if (diffHours <= 24) dueBuckets[5]++;
+        else if (diffHours <= 168) dueBuckets[6]++; // <=7d
+        else if (diffHours <= 720) dueBuckets[7]++; // <=30d
+        else dueBuckets[8]++; // >30d
      });
     const maxDue = Math.max(...dueBuckets) || 1;
 
@@ -288,7 +288,7 @@ const StatsView = {
       new Chart(dueCtx, {
         type: 'bar',
         data: {
-          labels: ['<=30m', '<=1h', '<=4h', '<=12h', '<=24h', '<=7d', '<=30d', '>30d'],
+          labels: ['Overdue', '<=30m', '<=1h', '<=4h', '<=12h', '<=24h', '<=7d', '<=30d', '>30d'],
           datasets: [{
             label: 'Cards Due',
             data: dueBuckets,
