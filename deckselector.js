@@ -55,7 +55,7 @@ const DeckSelector = {
       throw new Error(`Unknown deck: ${deckId}`);
     }
 
-    const response = await fetch(deck.url);
+    const response = await fetch(deck.url, { cache: 'no-cache' });
     if (!response.ok) {
       throw new Error(`HTTP ${response.status}: ${response.statusText}`);
     }

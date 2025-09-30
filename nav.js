@@ -10,7 +10,7 @@ const Nav = {
     });
   },
 
-  show(viewId) {
+  async show(viewId) {
     // Hide all views
     const views = document.querySelectorAll(".view");
     views.forEach((view) => view.classList.add("is-hidden"));
@@ -39,27 +39,9 @@ const Nav = {
     }
       // Refresh review card if showing review view
       if (viewId === "review") {
-        App.currentCard = SRS.selectNextCard(
-          App.currentCards,
-          App.currentStats.cards,
-          App.currentDirection,
-        );
-        if (App.currentCard) {
-          Review.renderCard(App.currentCard);
-        } else {
-          let message;
-          if (!App.currentCards || App.currentCards.length === 0) {
-            message = 'No valid cards in this deck.';
-          } else {
-            const nextReviewInfo = SRS.getNextReviewInfo(App.currentCards, App.currentStats.cards, App.currentDirection);
-            if (nextReviewInfo) {
-                message = `No cards due for review. Next review: (${nextReviewInfo.cardsInWindow} card${nextReviewInfo.cardsInWindow > 1 ? 's' : ''} in ~${nextReviewInfo.timeString}).`;
-            } else {
-              message = 'No cards due for review.';
-            }
-          }
-          Message.show('card-container', message);
-        }
+        // Reload current deck (or deck_a if none assigned) to ensure fresh data
+        const deckToLoad = App.currentDeckId || 'deck_a';
+        await DeckSelector.loadDeck(deckToLoad);
       }
   },
 };

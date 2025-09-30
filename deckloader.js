@@ -35,6 +35,7 @@ const DeckLoader = {
     try {
       const response = await fetch(url, {
         signal: controller.signal,
+        cache: 'no-cache',
       });
       clearTimeout(timeoutId);
       return response;
