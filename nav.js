@@ -22,6 +22,10 @@ const Nav = {
       if (e.code === "Escape" && this.currentView !== "review") {
         e.preventDefault();  // Prevent any default escape behavior
         this.show("review");
+        // Blur active form elements to allow review keyboard shortcuts
+        if (document.activeElement && (document.activeElement.tagName === "INPUT" || document.activeElement.tagName === "SELECT")) {
+          document.activeElement.blur();
+        }
       }
     });
   },
