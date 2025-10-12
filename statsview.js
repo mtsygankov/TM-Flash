@@ -13,6 +13,8 @@ const StatsView = {
       toggle.addEventListener("click", () => {
         this.currentDirection =
           this.currentDirection === "CH->EN" ? "EN->CH" : "CH->EN";
+        Storage.setSettings({direction: this.currentDirection});
+        App.currentDirection = this.currentDirection;
         this.render();
       });
     }

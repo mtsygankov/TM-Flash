@@ -100,13 +100,46 @@ const Nav = {
               App.ignoredToggle,
             );
             App.flipped = false;
-            Review.renderCard(App.currentCard);
+            if (App.currentCard) {
+              Review.renderCard(App.currentCard);
+            } else {
+              this.showNoCardsMessage();
+            }
           }
         } else {
           // No saved state, just render current
-          Review.renderCard(App.currentCard);
+          if (App.currentCard) {
+            Review.renderCard(App.currentCard);
+          } else {
+            this.showNoCardsMessage();
+          }
         }
       }
     }
+  },
+
+  showNoCardsMessage() {
+    const nextReviewInfo = SRS.getNextReviewInfo(App.currentCards, App.currentStats.cards, App.currentDirection, App.starredToggle, App.ignoredToggle);
+    let message;
+    if (nextReviewInfo) {
+      message = `No cards due for review. Next review: (${nextReviewInfo.cardsInWindow} card${nextReviewInfo.cardsInWindow > 1 ? 's' : ''} in ~${nextReviewInfo.timeString}).`;
+    } else {
+      message = 'No cards due for review.';
+    }
+
+    // Add info about starred/unstarred cards
+    const starredCount = SRS.countDueCards(App.currentCards, App.currentStats.cards, App.currentDirection, true, null);
+    const unstarredCount = SRS.countDueCards(App.currentCards, App.currentStats.cards, App.currentDirection, false, null);
+    if (App.starredToggle) {
+      if (unstarredCount > 0) {
+        message += ` There are ${unstarredCount} unstarred cards due.`;
+      }
+    } else {
+      if (starredCount > 0) {
+        message += ` There are ${starredCount} starred cards due.`;
+      }
+    }
+
+    Message.show('card-container', message);
   },
 };

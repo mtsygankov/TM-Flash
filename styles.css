@@ -391,6 +391,7 @@ h2 {
     background-color: #dc3545;
     color: white;
     border-color: #dc3545;
+    margin-left: auto;
 }
 
 #reset-stats-btn:hover {
