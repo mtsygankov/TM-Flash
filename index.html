@@ -29,6 +29,8 @@
                 <option value="">Select Deck</option>
             </select>
             <button id="direction-toggle">CH→EN</button>
+            <button id="starred-toggle">☆</button>
+            <button id="ignored-toggle">○</button>
         </div>
         <nav>
             <button class="tab active" data-view="review">Review</button>
@@ -42,10 +44,12 @@
             <div id="card-container">
                 <div id="card-container-message" class="system-message" style="display:none;"></div>
                 <table id="card-table"></table>
-                <div id="card-buttons">
-                    <button id="btn-incorrect" type="button">Incorrect</button>
-                    <button id="btn-correct" type="button">Correct</button>
-                </div>
+                 <div id="card-buttons">
+                     <button id="btn-star" type="button">☆</button>
+                     <button id="btn-ignore" type="button">○</button>
+                     <button id="btn-incorrect" type="button">Incorrect</button>
+                     <button id="btn-correct" type="button">Correct</button>
+                 </div>
             </div>
         </section>
 

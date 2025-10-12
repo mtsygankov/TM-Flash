@@ -1,7 +1,7 @@
 // Storage module
 const Storage = {
   STORAGE_KEY: "tmFlash",
-  CURRENT_SCHEMA_VERSION: 2,
+  CURRENT_SCHEMA_VERSION: 3,
 
   getDefaultState() {
     return {
@@ -10,6 +10,8 @@ const Storage = {
         direction: "CH->EN",
         selected_deck: DEFAULT_SELECTED_DECK,
         theme: "light",
+        starredToggle: false,
+        ignoredToggle: false,
       },
       decks: {
         deck_a: { cards: {} },

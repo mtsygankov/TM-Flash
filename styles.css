@@ -39,13 +39,16 @@ h1 {
 }
 
 #deck-selector,
-#direction-toggle {
+#direction-toggle,
+#starred-toggle,
+#ignored-toggle {
     padding: 0.4rem;
     border: 1px solid #ccc;
     border-radius: 4px;
     background-color: #fff;
     font-size: 0.9rem;
-    min-width: 100px;
+    min-width: 40px;
+    cursor: pointer;
 }
 
 #deck-selector:disabled {
@@ -260,6 +263,18 @@ h2 {
     display: none;
     justify-content: center;
     gap: clamp(1rem, 3vw, 2rem);
+    flex-direction: row;
+}
+
+#btn-star,
+#btn-ignore {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    min-width: 40px;
 }
 
 #btn-incorrect {

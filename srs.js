@@ -86,7 +86,7 @@ const SRS = {
     return isDue;
   },
 
-  selectNextCard(cards, statsMap, direction) {
+  selectNextCard(cards, statsMap, direction, starredToggle = false, ignoredToggle = false) {
     console.log("🔍 SRS.selectNextCard called with direction:", direction);
     console.log("🔍 Cards array:", cards ? `Array with ${cards.length} cards` : "null/undefined");
     console.log("🔍 Stats map:", statsMap ? "Object provided" : "null/undefined");
@@ -97,7 +97,8 @@ const SRS = {
     }
 
     const dueCards = cards.filter(card => {
-      const stats = statsMap[card.card_id]?.[direction];
+      const cardStats = statsMap[card.card_id];
+      const stats = cardStats?.[direction];
       const isDue = this.shouldReviewCard(stats || {
         total_correct: 0,
         total_incorrect: 0,
@@ -109,8 +110,26 @@ const SRS = {
         incorrect_streak_started_at: null
       });
 
-      console.log(`🔍 Card ${card.card_id}: stats exist=${!!stats}, isDue=${isDue}`);
-      return isDue;
+      // Apply flag filters
+      const starred = cardStats?.starred || false;
+      const ignored = cardStats?.ignored || false;
+
+      let include = true;
+
+      // Starred filter: if toggle on, only starred; if off, all
+      if (starredToggle && !starred) {
+        include = false;
+      }
+
+      // Ignored filter: if toggle on, only ignored; if off, only not ignored
+      if (!ignoredToggle && ignored) {
+        include = false;
+      } else if (ignoredToggle && !ignored) {
+        include = false;
+      }
+
+      console.log(`🔍 Card ${card.card_id}: stats exist=${!!stats}, isDue=${isDue}, starred=${starred}, ignored=${ignored}, include=${include}`);
+      return isDue && include;
     });
 
     console.log("🔍 Due cards found:", dueCards.length);
@@ -171,7 +190,7 @@ const SRS = {
     return scoredCards[0].card;
   },
 
-  getNextReviewInfo(cards, statsMap, direction) {
+  getNextReviewInfo(cards, statsMap, direction, starredToggle = false, ignoredToggle = false) {
     if (!cards || cards.length === 0) {
       return null;
     }
@@ -181,11 +200,30 @@ const SRS = {
     const nextReviewTimes = [];
 
     cards.forEach(card => {
-      const stats = statsMap[card.card_id]?.[direction];
+      const cardStats = statsMap[card.card_id];
+      const stats = cardStats?.[direction];
       if (!stats) return;
 
       // Skip new cards (no reviews yet)
       if (!stats.last_correct_at && !stats.last_incorrect_at) return;
+
+      // Apply flag filters
+      const starred = cardStats?.starred || false;
+      const ignored = cardStats?.ignored || false;
+
+      let include = true;
+
+      if (starredToggle && !starred) {
+        include = false;
+      }
+
+      if (!ignoredToggle && ignored) {
+        include = false;
+      } else if (ignoredToggle && !ignored) {
+        include = false;
+      }
+
+      if (!include) return;
 
       const lastReview = Math.max(stats.last_correct_at || 0, stats.last_incorrect_at || 0);
       const intervalHours = this.calculateNextReviewInterval(stats);

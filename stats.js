@@ -7,33 +7,42 @@ const Stats = {
 
       // Add missing entries for valid cards
      cards.forEach((card) => {
-      if (!deckStats.cards[card.card_id]) {
-        syncedCards[card.card_id] = {
-          "CH->EN": {
-            total_correct: 0,
-            total_incorrect: 0,
-            last_correct_at: null,
-            last_incorrect_at: null,
-            correct_streak_len: 0,
-            incorrect_streak_len: 0,
-            correct_streak_started_at: null,
-            incorrect_streak_started_at: null
-          },
-          "EN->CH": {
-            total_correct: 0,
-            total_incorrect: 0,
-            last_correct_at: null,
-            last_incorrect_at: null,
-            correct_streak_len: 0,
-            incorrect_streak_len: 0,
-            correct_streak_started_at: null,
-            incorrect_streak_started_at: null
-          },
-        };
-      } else {
-        syncedCards[card.card_id] = deckStats.cards[card.card_id];
-      }
-    });
+       if (!deckStats.cards[card.card_id]) {
+         syncedCards[card.card_id] = {
+           starred: false,
+           ignored: false,
+           "CH->EN": {
+             total_correct: 0,
+             total_incorrect: 0,
+             last_correct_at: null,
+             last_incorrect_at: null,
+             correct_streak_len: 0,
+             incorrect_streak_len: 0,
+             correct_streak_started_at: null,
+             incorrect_streak_started_at: null
+           },
+           "EN->CH": {
+             total_correct: 0,
+             total_incorrect: 0,
+             last_correct_at: null,
+             last_incorrect_at: null,
+             correct_streak_len: 0,
+             incorrect_streak_len: 0,
+             correct_streak_started_at: null,
+             incorrect_streak_started_at: null
+           },
+         };
+       } else {
+         syncedCards[card.card_id] = deckStats.cards[card.card_id];
+         // Ensure starred and ignored flags exist (for schema migration)
+         if (syncedCards[card.card_id].starred === undefined) {
+           syncedCards[card.card_id].starred = false;
+         }
+         if (syncedCards[card.card_id].ignored === undefined) {
+           syncedCards[card.card_id].ignored = false;
+         }
+       }
+     });
 
     // Remove orphaned entries (cards that no longer exist in the deck)
     Object.keys(deckStats.cards).forEach((cardId) => {
@@ -69,30 +78,32 @@ const Stats = {
     );
   },
 
-  updateCardStats(deckId, cardId, direction, isCorrect) {
-    const deckStats = Storage.getDeckStats(deckId);
-    const cardStats = deckStats.cards[cardId] || {
-      "CH->EN": {
-        total_correct: 0,
-        total_incorrect: 0,
-        last_correct_at: null,
-        last_incorrect_at: null,
-        correct_streak_len: 0,
-        incorrect_streak_len: 0,
-        correct_streak_started_at: null,
-        incorrect_streak_started_at: null
-      },
-      "EN->CH": {
-        total_correct: 0,
-        total_incorrect: 0,
-        last_correct_at: null,
-        last_incorrect_at: null,
-        correct_streak_len: 0,
-        incorrect_streak_len: 0,
-        correct_streak_started_at: null,
-        incorrect_streak_started_at: null
-      },
-    };
+   updateCardStats(deckId, cardId, direction, isCorrect) {
+     const deckStats = Storage.getDeckStats(deckId);
+     const cardStats = deckStats.cards[cardId] || {
+       starred: false,
+       ignored: false,
+       "CH->EN": {
+         total_correct: 0,
+         total_incorrect: 0,
+         last_correct_at: null,
+         last_incorrect_at: null,
+         correct_streak_len: 0,
+         incorrect_streak_len: 0,
+         correct_streak_started_at: null,
+         incorrect_streak_started_at: null
+       },
+       "EN->CH": {
+         total_correct: 0,
+         total_incorrect: 0,
+         last_correct_at: null,
+         last_incorrect_at: null,
+         correct_streak_len: 0,
+         incorrect_streak_len: 0,
+         correct_streak_started_at: null,
+         incorrect_streak_started_at: null
+       },
+     };
 
     if (!cardStats[direction]) {
       cardStats[direction] = {

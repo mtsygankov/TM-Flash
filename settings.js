@@ -3,6 +3,8 @@ const Settings = {
   init() {
     this.loadDirection();
     this.bindDirectionToggle();
+    this.loadToggles();
+    this.bindToggleButtons();
   },
 
   loadDirection() {
@@ -37,12 +39,14 @@ const Settings = {
      if (App.currentCards && App.currentStats) {
        console.log("✅ Conditional check passed, selecting card...");
 
-       // Select a new card for the new direction
-       App.currentCard = SRS.selectNextCard(
-         App.currentCards,
-         App.currentStats.cards,
-         App.currentDirection,
-       );
+        // Select a new card for the new direction
+        App.currentCard = SRS.selectNextCard(
+          App.currentCards,
+          App.currentStats.cards,
+          App.currentDirection,
+          App.starredToggle,
+          App.ignoredToggle,
+        );
 
        console.log("🎯 SRS.selectNextCard result:", App.currentCard ? `Card ${App.currentCard.card_id}` : "null");
 
@@ -52,7 +56,7 @@ const Settings = {
          } else {
            console.log("📝 No cards due, updating message");
            Review.renderCard(null);
-           const nextReviewInfo = SRS.getNextReviewInfo(App.currentCards, App.currentStats.cards, App.currentDirection);
+            const nextReviewInfo = SRS.getNextReviewInfo(App.currentCards, App.currentStats.cards, App.currentDirection, App.starredToggle, App.ignoredToggle);
            let message;
            if (nextReviewInfo) {
                 message = `No cards due for review. Next review: (${nextReviewInfo.cardsInWindow} card${nextReviewInfo.cardsInWindow > 1 ? 's' : ''} in ~${nextReviewInfo.timeString}).`;
@@ -62,18 +66,11 @@ const Settings = {
            Message.show('card-container', message);
            console.log("✅ Message updated successfully");
          }
-     } else {
-       console.warn("❌ Conditional check failed - app data not available");
-       console.log("   App.currentCards:", !!App.currentCards);
-       console.log("   App.currentStats:", !!App.currentStats);
-
-       // Still try to update the message to indicate direction change
-       const cardContainer = document.getElementById("card-container");
-       if (cardContainer) {
-         cardContainer.innerHTML = `<p>Switched to ${direction} direction.</p>`;
-         console.log("ℹ️ Updated message with direction change info");
-       }
-     }
+      } else {
+        console.warn("❌ Conditional check failed - app data not available");
+        console.log("   App.currentCards:", !!App.currentCards);
+        console.log("   App.currentStats:", !!App.currentStats);
+      }
    },
 
   toggleDirection() {
@@ -90,6 +87,88 @@ const Settings = {
         this.toggleDirection();
       });
       button.disabled = false;
+    }
+  },
+
+  loadToggles() {
+    const settings = Storage.getSettings();
+    this.applyStarredToggle(settings.starredToggle);
+    this.applyIgnoredToggle(settings.ignoredToggle);
+  },
+
+  applyStarredToggle(starredToggle) {
+    const button = document.getElementById("starred-toggle");
+    if (button) {
+      button.textContent = starredToggle ? "★" : "☆";
+      button.dataset.starred = starredToggle;
+    }
+    App.starredToggle = starredToggle;
+  },
+
+  applyIgnoredToggle(ignoredToggle) {
+    const button = document.getElementById("ignored-toggle");
+    if (button) {
+      button.textContent = ignoredToggle ? "🚫" : "○";
+      button.dataset.ignored = ignoredToggle;
+    }
+    App.ignoredToggle = ignoredToggle;
+  },
+
+  toggleStarred() {
+    const current = Storage.getSettings().starredToggle;
+    const newValue = !current;
+    Storage.setSettings({ starredToggle: newValue });
+    this.applyStarredToggle(newValue);
+    // Reselect card with new filter
+    this.reselectCard();
+  },
+
+  toggleIgnored() {
+    const current = Storage.getSettings().ignoredToggle;
+    const newValue = !current;
+    Storage.setSettings({ ignoredToggle: newValue });
+    this.applyIgnoredToggle(newValue);
+    // Reselect card with new filter
+    this.reselectCard();
+  },
+
+  reselectCard() {
+    if (App.currentCards && App.currentStats) {
+      App.currentCard = SRS.selectNextCard(
+        App.currentCards,
+        App.currentStats.cards,
+        App.currentDirection,
+        App.starredToggle,
+        App.ignoredToggle,
+      );
+      if (App.currentCard) {
+        Review.renderCard(App.currentCard);
+      } else {
+        Review.renderCard(null);
+        const nextReviewInfo = SRS.getNextReviewInfo(App.currentCards, App.currentStats.cards, App.currentDirection, App.starredToggle, App.ignoredToggle);
+        let message;
+        if (nextReviewInfo) {
+          message = `No cards due for review. Next review: (${nextReviewInfo.cardsInWindow} card${nextReviewInfo.cardsInWindow > 1 ? 's' : ''} in ~${nextReviewInfo.timeString}).`;
+        } else {
+          message = 'No more cards to review.';
+        }
+        Message.show('card-container', message);
+      }
+    }
+  },
+
+  bindToggleButtons() {
+    const starredButton = document.getElementById("starred-toggle");
+    if (starredButton) {
+      starredButton.addEventListener("click", () => {
+        this.toggleStarred();
+      });
+    }
+    const ignoredButton = document.getElementById("ignored-toggle");
+    if (ignoredButton) {
+      ignoredButton.addEventListener("click", () => {
+        this.toggleIgnored();
+      });
     }
   },
 };

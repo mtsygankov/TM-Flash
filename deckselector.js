@@ -166,6 +166,8 @@ const DeckSelector = {
           App.currentCards,
           App.currentStats.cards,
           App.currentDirection,
+          App.starredToggle,
+          App.ignoredToggle,
         );
           if (App.currentCard) {
             Review.renderCard(App.currentCard);
@@ -175,7 +177,7 @@ const DeckSelector = {
             if (!App.currentCards || App.currentCards.length === 0) {
               message = 'No valid cards in this deck.';
             } else {
-              const nextReviewInfo = SRS.getNextReviewInfo(App.currentCards, App.currentStats.cards, App.currentDirection);
+               const nextReviewInfo = SRS.getNextReviewInfo(App.currentCards, App.currentStats.cards, App.currentDirection, App.starredToggle, App.ignoredToggle);
               if (nextReviewInfo) {
                 message = `No cards due for review. Next review: (${nextReviewInfo.cardsInWindow} card${nextReviewInfo.cardsInWindow > 1 ? 's' : ''} in ~${nextReviewInfo.timeString}).`;
               } else {
