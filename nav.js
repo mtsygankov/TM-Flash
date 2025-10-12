@@ -11,6 +11,12 @@ const Nav = {
   },
 
   async show(viewId) {
+    // Save review state if switching away from review
+    if (viewId !== "review" && App.currentCard) {
+      App.savedReviewCardId = App.currentCard.card_id;
+      App.savedReviewFlipped = App.flipped;
+    }
+
     // Hide all views
     const views = document.querySelectorAll(".view");
     views.forEach((view) => view.classList.add("is-hidden"));
@@ -37,11 +43,41 @@ const Nav = {
     if (viewId === "stats") {
       StatsView.render();
     }
-      // Refresh review card if showing review view
-      if (viewId === "review") {
-        // Reload current deck (or deck_a if none assigned) to ensure fresh data
-        const deckToLoad = App.currentDeckId || 'deck_a';
+
+    // Handle review view
+    if (viewId === "review") {
+      const deckToLoad = App.currentDeckId || 'deck_a';
+      if (!App.currentCards || App.currentDeckId !== deckToLoad) {
+        // Deck not loaded or changed, load it
         await DeckSelector.loadDeck(deckToLoad);
+      } else {
+        // Deck already loaded, restore saved state if exists
+        if (App.savedReviewCardId) {
+          const card = App.currentCards.find(c => c.card_id === App.savedReviewCardId);
+          if (card) {
+            App.currentCard = card;
+            App.flipped = App.savedReviewFlipped;
+            Review.renderCard(card);
+            // Clear saved state after restore
+            App.savedReviewCardId = null;
+            App.savedReviewFlipped = false;
+          } else {
+            // Card not found, select next
+            App.currentCard = SRS.selectNextCard(
+              App.currentCards,
+              App.currentStats.cards,
+              App.currentDirection,
+              App.starredToggle,
+              App.ignoredToggle,
+            );
+            App.flipped = false;
+            Review.renderCard(App.currentCard);
+          }
+        } else {
+          // No saved state, just render current
+          Review.renderCard(App.currentCard);
+        }
       }
+    }
   },
 };

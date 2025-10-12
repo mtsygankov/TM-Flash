@@ -153,6 +153,12 @@ const DeckSelector = {
       // Update storage with selected deck
       Storage.setSettings({ selected_deck: deckId });
 
+      // Clear saved review state if switching decks
+      if (deckId !== this.currentDeckId) {
+        App.savedReviewCardId = null;
+        App.savedReviewFlipped = false;
+      }
+
       // Update current deck tracking
       this.currentDeckId = deckId;
 

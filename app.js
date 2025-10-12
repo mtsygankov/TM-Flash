@@ -8,6 +8,8 @@ const App = {
   currentDeckId: null,
   starredToggle: false,
   ignoredToggle: false,
+  savedReviewCardId: null,
+  savedReviewFlipped: false,
 
   async init() {
     console.log("TM-Flash initialized");
