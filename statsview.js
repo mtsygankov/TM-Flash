@@ -102,9 +102,10 @@ const StatsView = {
        }
        const intervalHours = SRS.calculateNextReviewInterval(stats);
        const nextReview = lastReview + intervalHours * 60 * 60 * 1000;
-       const now = Date.now();
-        const diffHours = (nextReview - now) / (60 * 60 * 1000);
-        if (diffHours <= 0) dueBuckets[0]++; // overdue
+        const now = Date.now();
+         const diffHours = (nextReview - now) / (60 * 60 * 1000);
+         console.log(`📊 StatsView: Card ${card.card_id} lastReview: ${lastReview}, intervalHours: ${intervalHours}, nextReview: ${nextReview}, diffHours: ${diffHours}, bucket: ${diffHours <= 0 ? 0 : diffHours <= 0.5 ? 1 : diffHours <= 1 ? 2 : diffHours <= 4 ? 3 : diffHours <= 12 ? 4 : diffHours <= 24 ? 5 : diffHours <= 168 ? 6 : diffHours <= 720 ? 7 : 8}`);
+         if (diffHours <= 0) dueBuckets[0]++; // overdue
         else if (diffHours <= 0.5) dueBuckets[1]++; // <=30m
         else if (diffHours <= 1) dueBuckets[2]++;
         else if (diffHours <= 4) dueBuckets[3]++;

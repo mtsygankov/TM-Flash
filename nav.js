@@ -107,7 +107,16 @@ const Nav = {
             }
           }
         } else {
-          // No saved state, just render current
+          // No saved state, select or show message
+          if (!App.currentCard) {
+            App.currentCard = SRS.selectNextCard(
+              App.currentCards,
+              App.currentStats.cards,
+              App.currentDirection,
+              App.starredToggle,
+              App.ignoredToggle,
+            );
+          }
           if (App.currentCard) {
             Review.renderCard(App.currentCard);
           } else {

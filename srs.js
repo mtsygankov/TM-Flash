@@ -12,6 +12,8 @@ const SRS = {
       incorrect_streak_started_at
     } = cardStats;
 
+    console.log(`🔍 SRS.calculateNextReviewInterval: Inputs - total_correct: ${cardStats.total_correct}, total_incorrect: ${cardStats.total_incorrect}, correct_streak_len: ${cardStats.correct_streak_len}, incorrect_streak_len: ${cardStats.incorrect_streak_len}, last_incorrect_at: ${cardStats.last_incorrect_at}`);
+
     const total_reviews = total_correct + total_incorrect;
     const accuracy = total_reviews > 0 ? total_correct / total_reviews : 0;
     const now = Date.now();
@@ -53,6 +55,7 @@ const SRS = {
     }
 
     const finalInterval = baseInterval * modifier;
+    console.log(`🔍 SRS.calculateNextReviewInterval: Result - intervalHours: ${finalInterval}`);
     return Math.max(0.5, Math.min(finalInterval, 2160)); // Min 30min, max 90 days
   },
 
@@ -82,6 +85,8 @@ const SRS = {
       now: new Date(now).toISOString(),
       isDue
     });
+
+    console.log(`🔍 SRS.shouldReviewCard: Card result - isDue: ${isDue}`);
 
     return isDue;
   },
@@ -133,6 +138,34 @@ const SRS = {
     });
 
     console.log("🔍 Due cards found:", dueCards.length);
+
+    dueCards.forEach(card => {
+      const cardStats = statsMap[card.card_id];
+      console.log(`🔍 SRS.selectNextCard: Card ${card.card_id} included (isDue: true, starred: ${cardStats?.starred || false}, ignored: ${cardStats?.ignored || false})`);
+    });
+
+    const excludedCards = cards.filter(card => !dueCards.includes(card));
+    excludedCards.forEach(card => {
+      const cardStats = statsMap[card.card_id];
+      const stats = cardStats?.[direction];
+      const isDue = this.shouldReviewCard(stats || {
+        total_correct: 0,
+        total_incorrect: 0,
+        last_correct_at: null,
+        last_incorrect_at: null,
+        correct_streak_len: 0,
+        incorrect_streak_len: 0,
+        correct_streak_started_at: null,
+        incorrect_streak_started_at: null
+      });
+      const starred = cardStats?.starred || false;
+      const ignored = cardStats?.ignored || false;
+      let include = true;
+      if (starredToggle && !starred) include = false;
+      if (!ignoredToggle && ignored) include = false;
+      else if (ignoredToggle && !ignored) include = false;
+      console.log(`🔍 SRS.selectNextCard: Card ${card.card_id} excluded (isDue: ${isDue}, starred: ${starred}, ignored: ${ignored}, include: ${include})`);
+    });
 
     if (dueCards.length === 0) {
       console.log("❌ No due cards found");
@@ -273,6 +306,7 @@ const SRS = {
 
       if (nextReviewTime > now) {
         nextReviewTimes.push(nextReviewTime);
+        console.log(`🔍 SRS.getNextReviewInfo: Card ${card.card_id} nextReviewTime: ${new Date(nextReviewTime).toISOString()}`);
         if (nextReviewTime < earliestNextReview) {
           earliestNextReview = nextReviewTime;
         }
@@ -300,6 +334,8 @@ const SRS = {
 
     const oneHourLater = earliestNextReview + (60 * 60 * 1000);
     const cardsInWindow = nextReviewTimes.filter(time => time <= oneHourLater).length;
+
+    console.log(`🔍 SRS.getNextReviewInfo: Total nextReviewTimes: ${nextReviewTimes.length}, earliest: ${earliestNextReview ? new Date(earliestNextReview).toISOString() : 'none'}`);
 
     return {
       timeString,
