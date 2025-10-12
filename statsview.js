@@ -165,16 +165,12 @@ const StatsView = {
           <div class="metric-title">New cards / Errors</div>
           <div class="metric-value large">${metrics.newCount} / ${metrics.deckErrors}</div>
         </div>
-        <div class="metric-card">
-          <div class="metric-title">Max Correct Streak</div>
-          <div class="metric-value">${maxCorrectStreak}</div>
+        <div class="metric-card" align="center">
+          <div class="metric-title">Max Streaks</div>
+          <div class="metric-value large"><span style="color: green;">${maxCorrectStreak}</span> <span style="color: black;">/</span> <span style="color: red;">${maxIncorrectStreak}</span></div>
         </div>
         <div class="metric-card">
-          <div class="metric-title">Max Incorrect Streak</div>
-          <div class="metric-value">${maxIncorrectStreak}</div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-title">Average Correct Streak</div>
+          <div class="metric-title">Avg. Correct Streak</div>
           <div class="metric-value">${avgStreak}</div>
         </div>
 
@@ -288,7 +284,7 @@ const StatsView = {
       new Chart(dueCtx, {
         type: 'bar',
         data: {
-          labels: ['Overdue', '<=30m', '<=1h', '<=4h', '<=12h', '<=24h', '<=7d', '<=30d', '>30d'],
+          labels: ['now', '30m', '1h', '4h', '12h', '24h', '7d', '30d', '>1mth'],
           datasets: [{
             label: 'Cards Due',
             data: dueBuckets,
