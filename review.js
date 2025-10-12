@@ -113,11 +113,11 @@ const Review = {
     const btnIgnore = document.getElementById("btn-ignore");
 
     if (btnStar) {
-      btnStar.textContent = starred ? "★" : "☆";
+      btnStar.textContent = "⭐️";
       btnStar.dataset.starred = starred;
     }
     if (btnIgnore) {
-      btnIgnore.textContent = ignored ? "🚫" : "○";
+      btnIgnore.textContent = "🚫";
       btnIgnore.dataset.ignored = ignored;
     }
   },
@@ -204,10 +204,24 @@ const Review = {
          let message;
          if (nextReviewInfo) {
                 message = `No cards due for review. Next review: (${nextReviewInfo.cardsInWindow} card${nextReviewInfo.cardsInWindow > 1 ? 's' : ''} in ~${nextReviewInfo.timeString}).`;
-         } else {
-           message = 'No more cards to review.';
-         }
-         Message.show('card-container', message);
+          } else {
+            message = 'No cards due for review.';
+          }
+
+          // Add info about starred/unstarred cards
+          const starredCount = SRS.countDueCards(App.currentCards, App.currentStats.cards, App.currentDirection, true, null);
+          const unstarredCount = SRS.countDueCards(App.currentCards, App.currentStats.cards, App.currentDirection, false, null);
+          if (App.starredToggle) {
+            if (unstarredCount > 0) {
+              message += ` There are ${unstarredCount} unstarred cards due.`;
+            }
+          } else {
+            if (starredCount > 0) {
+              message += ` There are ${starredCount} starred cards due.`;
+            }
+          }
+
+          Message.show('card-container', message);
        }
     },
 

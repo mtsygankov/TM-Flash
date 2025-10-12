@@ -277,6 +277,15 @@ h2 {
     min-width: 40px;
 }
 
+#starred-toggle[data-starred="true"],
+#btn-star[data-starred="true"],
+#ignored-toggle[data-ignored="true"],
+#btn-ignore[data-ignored="true"] {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
 #btn-incorrect {
     background-color: #dc3545;
     color: white;

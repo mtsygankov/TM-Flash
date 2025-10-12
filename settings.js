@@ -99,7 +99,7 @@ const Settings = {
   applyStarredToggle(starredToggle) {
     const button = document.getElementById("starred-toggle");
     if (button) {
-      button.textContent = starredToggle ? "★" : "☆";
+      button.textContent = "⭐️";
       button.dataset.starred = starredToggle;
     }
     App.starredToggle = starredToggle;
@@ -108,7 +108,7 @@ const Settings = {
   applyIgnoredToggle(ignoredToggle) {
     const button = document.getElementById("ignored-toggle");
     if (button) {
-      button.textContent = ignoredToggle ? "🚫" : "○";
+      button.textContent = "🚫";
       button.dataset.ignored = ignoredToggle;
     }
     App.ignoredToggle = ignoredToggle;
@@ -150,8 +150,22 @@ const Settings = {
         if (nextReviewInfo) {
           message = `No cards due for review. Next review: (${nextReviewInfo.cardsInWindow} card${nextReviewInfo.cardsInWindow > 1 ? 's' : ''} in ~${nextReviewInfo.timeString}).`;
         } else {
-          message = 'No more cards to review.';
+          message = 'No cards due for review.';
         }
+
+        // Add info about starred/unstarred cards
+        const starredCount = SRS.countDueCards(App.currentCards, App.currentStats.cards, App.currentDirection, true, null);
+        const unstarredCount = SRS.countDueCards(App.currentCards, App.currentStats.cards, App.currentDirection, false, null);
+        if (App.starredToggle) {
+          if (unstarredCount > 0) {
+            message += ` There are ${unstarredCount} unstarred cards due.`;
+          }
+        } else {
+          if (starredCount > 0) {
+            message += ` There are ${starredCount} starred cards due.`;
+          }
+        }
+
         Message.show('card-container', message);
       }
     }

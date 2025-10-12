@@ -190,6 +190,41 @@ const SRS = {
     return scoredCards[0].card;
   },
 
+  countDueCards(cards, statsMap, direction, starredFilter = null, ignoredFilter = null) {
+    // starredFilter: true=only starred, false=only unstarred, null=all
+    // ignoredFilter: true=only ignored, false=only non-ignored, null=all
+    return cards.filter(card => {
+      const cardStats = statsMap[card.card_id];
+      const stats = cardStats?.[direction];
+      const isDue = this.shouldReviewCard(stats || {
+        total_correct: 0,
+        total_incorrect: 0,
+        last_correct_at: null,
+        last_incorrect_at: null,
+        correct_streak_len: 0,
+        incorrect_streak_len: 0,
+        correct_streak_started_at: null,
+        incorrect_streak_started_at: null
+      });
+      if (!isDue) return false;
+
+      const starred = cardStats?.starred || false;
+      const ignored = cardStats?.ignored || false;
+
+      if (starredFilter !== null) {
+        if (starredFilter && !starred) return false;
+        if (!starredFilter && starred) return false;
+      }
+
+      if (ignoredFilter !== null) {
+        if (ignoredFilter && !ignored) return false;
+        if (!ignoredFilter && ignored) return false;
+      }
+
+      return true;
+    }).length;
+  },
+
   getNextReviewInfo(cards, statsMap, direction, starredToggle = false, ignoredToggle = false) {
     if (!cards || cards.length === 0) {
       return null;
