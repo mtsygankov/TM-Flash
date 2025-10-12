@@ -48,7 +48,8 @@ const Search = {
     if (!App.currentCards) return [];
     return App.currentCards.filter((card) => {
       if (type === "pinyin") {
-        return !query || card.pinyin_normalized.includes(query.toLowerCase());
+        const lowerQuery = query.toLowerCase();
+        return !query || card.pinyin_normalized.includes(lowerQuery) || card.hanzi.includes(query);
       } else if (type === "english") {
         return (
           !query || card.english.toLowerCase().includes(query.toLowerCase())
