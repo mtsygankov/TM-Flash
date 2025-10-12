@@ -67,21 +67,51 @@ const Search = {
     }
     const list = results
       .map(
-        (card) => `
+        (card) => {
+          const cardStats = App.currentStats?.cards[card.card_id] || {};
+          const starred = cardStats.starred || false;
+          const ignored = cardStats.ignored || false;
+          return `
       <div class="search-result" data-card-id="${card.card_id}">
-        <div class="result-hanzi">${card.hanzi}</div>
-        <div class="result-pinyin">${card.pinyin}</div>
-        <div class="result-english">${card.english}</div>
+        <div class="search-result-buttons">
+          <button class="search-star-btn" data-starred="${starred}" type="button">⭐️</button>
+          <button class="search-ignore-btn" data-ignored="${ignored}" type="button">🚫</button>
+        </div>
+        <div class="search-result-content">
+          <div class="result-hanzi">${card.hanzi}</div>
+          <div class="result-pinyin">${card.pinyin}</div>
+          <div class="result-english">${card.english}</div>
+        </div>
       </div>
-    `,
+    `;
+        },
       )
       .join("");
     container.innerHTML = `<div class="search-results-list">${list}</div>`;
-    // Bind click events
+    // Bind click events for row selection
     container.querySelectorAll(".search-result").forEach((el) => {
-      el.addEventListener("click", () => {
+      el.addEventListener("click", (e) => {
+        // Don't select card if clicking on buttons
+        if (e.target.classList.contains("search-star-btn") || e.target.classList.contains("search-ignore-btn")) {
+          return;
+        }
         const cardId = el.dataset.cardId;
         this.selectCard(cardId);
+      });
+    });
+    // Bind click events for buttons
+    container.querySelectorAll(".search-star-btn").forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const cardId = e.target.closest(".search-result").dataset.cardId;
+        this.toggleStarFlag(cardId);
+      });
+    });
+    container.querySelectorAll(".search-ignore-btn").forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const cardId = e.target.closest(".search-result").dataset.cardId;
+        this.toggleIgnoreFlag(cardId);
       });
     });
   },
@@ -93,6 +123,38 @@ const Search = {
         App.flipped = false;
         Review.renderCard(card);
         Nav.show("review");
+      }
+    },
+
+    toggleStarFlag(cardId) {
+      const cardStats = App.currentStats.cards[cardId];
+      if (!cardStats) return;
+      const current = cardStats.starred || false;
+      cardStats.starred = !current;
+      Storage.setDeckStats(App.currentDeckId, App.currentStats);
+      // Update button appearance
+      const resultEl = document.querySelector(`.search-result[data-card-id="${cardId}"]`);
+      if (resultEl) {
+        const btn = resultEl.querySelector(".search-star-btn");
+        if (btn) {
+          btn.dataset.starred = cardStats.starred;
+        }
+      }
+    },
+
+    toggleIgnoreFlag(cardId) {
+      const cardStats = App.currentStats.cards[cardId];
+      if (!cardStats) return;
+      const current = cardStats.ignored || false;
+      cardStats.ignored = !current;
+      Storage.setDeckStats(App.currentDeckId, App.currentStats);
+      // Update button appearance
+      const resultEl = document.querySelector(`.search-result[data-card-id="${cardId}"]`);
+      if (resultEl) {
+        const btn = resultEl.querySelector(".search-ignore-btn");
+        if (btn) {
+          btn.dataset.ignored = cardStats.ignored;
+        }
       }
     },
 };

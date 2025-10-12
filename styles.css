@@ -645,7 +645,8 @@ h2 {
     border-bottom: 1px solid #ddd;
     cursor: pointer;
     transition: background-color 0.2s;
-    text-align: center;
+    display: flex;
+    align-items: center;
 }
 
 .search-result:nth-child(even) {
@@ -654,6 +655,41 @@ h2 {
 
 .search-result:hover {
     background-color: #e9e9e9;
+}
+
+.search-result-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-right: 0.5rem;
+}
+
+.search-star-btn,
+.search-ignore-btn {
+    padding: 0.25rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    min-width: 30px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-star-btn[data-starred="true"],
+.search-ignore-btn[data-ignored="true"] {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.search-result-content {
+    flex: 1;
+    text-align: center;
 }
 
 .result-hanzi {
