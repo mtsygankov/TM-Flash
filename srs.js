@@ -158,7 +158,7 @@ const SRS = {
 
       // New cards get highest priority
       if (total_reviews === 0) {
-        priority = 1000;
+        priority = 1500;
       } else {
         // Recently failed cards
         if (stats.incorrect_streak_len > 0) {
@@ -187,6 +187,13 @@ const SRS = {
 
     // Sort by priority (highest first) and return top card
     scoredCards.sort((a, b) => b.priority - a.priority);
+    const top = scoredCards[0];
+    const topStats = statsMap?.[top.card.card_id]?.[direction] || null;
+    const lastReview = topStats
+      ? Math.max(topStats.last_correct_at || 0, topStats.last_incorrect_at || 0)
+      : 0;
+    const minsSince = lastReview ? ((Date.now() - lastReview) / 60000).toFixed(1) : "NEVER";
+    console.log(`🔍🔍🔍🔍🔍🔍 Selected card ${top.card.english} with priority ${top.priority.toFixed(2)} time since last review (min): ${minsSince}`);
     return scoredCards[0].card;
   },
 
