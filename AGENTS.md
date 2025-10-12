@@ -3,7 +3,7 @@
 ## Build/Lint/Test Commands
 
 ### Development Server
-- **Local HTTP server required**: Run `python -m http.server 8000` or equivalent
+- **Local HTTP server**: Already running on port 8000 (no need to launch)
 - **Open in browser**: Navigate to `http://localhost:8000`
 
 ### Testing
