@@ -1,5 +1,6 @@
 // Navigation module
 const Nav = {
+  currentView: "review",  // Track active view for keyboard shortcuts
   init() {
     const tabs = document.querySelectorAll(".tab");
     tabs.forEach((tab) => {
@@ -8,9 +9,25 @@ const Nav = {
         this.show(viewId);
       });
     });
+
+    // Global escape key listener for tab switching
+    document.addEventListener("keydown", (e) => {
+      // Ignore if user is typing in form elements
+      /*if ( document.activeElement.tagName === "INPUT" || 
+          document.activeElement.tagName === "TEXTAREA" || 
+          document.activeElement.tagName === "SELECT") {
+        return;
+      }*/
+      // Switch to review tab if not already there
+      if (e.code === "Escape" && this.currentView !== "review") {
+        e.preventDefault();  // Prevent any default escape behavior
+        this.show("review");
+      }
+    });
   },
 
   async show(viewId) {
+    this.currentView = viewId;  // Update current view tracker
     // Save review state if switching away from review
     if (viewId !== "review" && App.currentCard) {
       App.savedReviewCardId = App.currentCard.card_id;

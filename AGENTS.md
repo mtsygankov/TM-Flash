@@ -3,7 +3,7 @@
 ## Build/Lint/Test Commands
 
 ### Development Server
-- **Local HTTP server**: Already running on port 8000 (no need to launch)
+- **Local HTTP server**: Already running on port 8000 (no need to launch) Note: Server is pre-launched on port 8000. Do not attempt to start a new server on the same port.
 - **Open in browser**: Navigate to `http://localhost:8000`
 
 ### Testing
