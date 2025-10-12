@@ -53,6 +53,46 @@ const Review = {
     console.log('Columns:', columns, 'Total Chars:', totalChars, 'Available Width:', availableWidth, 'Estimated Width:', estimatedWidth, 'Scale:', scale);
     table.style.setProperty('--scale-factor', scale);
 
+    // Add click handlers for search
+    const hanziCells = table.querySelectorAll('.row-hanzi td');
+    hanziCells.forEach(cell => {
+      cell.style.cursor = 'pointer';
+      cell.addEventListener('click', (e) => {
+        e.stopPropagation();
+        document.getElementById("search-query").value = cell.textContent;
+        Search.currentType = "pinyin";
+        Search.updateToggleButton();
+        Nav.show("search");
+        Search.performSearch();
+      });
+    });
+
+    const pinyinCells = table.querySelectorAll('.row-pinyin td');
+    pinyinCells.forEach(cell => {
+      cell.style.cursor = 'pointer';
+      cell.addEventListener('click', (e) => {
+        e.stopPropagation();
+        document.getElementById("search-query").value = Normalizer.normalizePinyin(cell.textContent);
+        Search.currentType = "pinyin";
+        Search.updateToggleButton();
+        Nav.show("search");
+        Search.performSearch();
+      });
+    });
+
+    const enWordsCells = table.querySelectorAll('.row-en-words td');
+    enWordsCells.forEach(cell => {
+      cell.style.cursor = 'pointer';
+      cell.addEventListener('click', (e) => {
+        e.stopPropagation();
+        document.getElementById("search-query").value = cell.textContent;
+        Search.currentType = "english";
+        Search.updateToggleButton();
+        Nav.show("search");
+        Search.performSearch();
+      });
+    });
+
     this.applyDirectionAndFlip();
   },
 
