@@ -39,6 +39,14 @@ const Nav = {
       activeTab.classList.add("active");
     }
 
+    // Toggle visibility of review toggles
+    const reviewToggles = document.getElementById('review-toggles');
+    if (viewId === 'review') {
+      reviewToggles.classList.remove('is-hidden');
+    } else {
+      reviewToggles.classList.add('is-hidden');
+    }
+
     // Render stats if showing stats view
     if (viewId === "stats") {
       StatsView.render();
