@@ -5,10 +5,8 @@
   "version": "2",
   "description": "Common Chinese expressions for beginners (based on That's Mandarin Level 1 course vocabulary)",
   "cards": [
-    { 
-      "card_id": [
-        "expr_4873373676193209515"
-      ],
+    {
+      "card_id": "expr_4873373676193209515",
       "hanzi": "欢迎 光临",
       "pinyin": "huānyíng guānglín",
       "en_words": [
@@ -18,9 +16,7 @@
       "english": "Welcome"
     },
     {
-      "card_id": [
-        "expr_-7063327483802198250"
-      ],
+      "card_id": "expr_-7063327483802198250",
       "hanzi": "哈哈",
       "pinyin": "hāhā",
       "en_words": [
@@ -29,9 +25,7 @@
       "english": "Haha"
     },
     {
-      "card_id": [
-        "expr_-3698507462434702843"
-      ],
+      "card_id": "expr_-3698507462434702843",
       "hanzi": "我 帮 你 做",
       "pinyin": "wǒ bāng nǐ zuò",
       "en_words": [
@@ -43,9 +37,7 @@
       "english": "I'll help you do it."
     },
     {
-      "card_id": [
-        "expr_4479841420926613939"
-      ],
+      "card_id": "expr_4479841420926613939",
       "hanzi": "再 听 一遍",
       "pinyin": "zài tīng yībiàn",
       "en_words": [
@@ -56,9 +48,7 @@
       "english": "Listen again once"
     },
     {
-      "card_id": [
-        "expr_291942850668933730"
-      ],
+      "card_id": "expr_291942850668933730",
       "hanzi": "明天 早上 见 !",
       "pinyin": "míngtiān zǎoshang jiàn !",
       "en_words": [
@@ -70,9 +60,7 @@
       "english": "See you tomorrow morning!"
     },
     {
-      "card_id": [
-        "expr_3638177020378037525"
-      ],
+      "card_id": "expr_3638177020378037525",
       "hanzi": "看 得 懂",
       "pinyin": "kàn de dǒng",
       "en_words": [
@@ -83,9 +71,7 @@
       "english": "Can understand by looking"
     },
     {
-      "card_id": [
-        "expr_3111519016326540210"
-      ],
+      "card_id": "expr_3111519016326540210",
       "hanzi": "谢谢",
       "pinyin": "xièxie",
       "en_words": [
@@ -94,9 +80,7 @@
       "english": "Thank you"
     },
     {
-      "card_id": [
-        "expr_-8153619613199655636"
-      ],
+      "card_id": "expr_-8153619613199655636",
       "hanzi": "多少 钱 ?",
       "pinyin": "duōshao qián ?",
       "en_words": [
@@ -107,9 +91,7 @@
       "english": "How much money?"
     },
     {
-      "card_id": [
-        "expr_6195889869033791336"
-      ],
+      "card_id": "expr_6195889869033791336",
       "hanzi": "谢谢 !",
       "pinyin": "xièxie !",
       "en_words": [
@@ -119,9 +101,7 @@
       "english": "Thank you!"
     },
     {
-      "card_id": [
-        "expr_1342763903939872769"
-      ],
+      "card_id": "expr_1342763903939872769",
       "hanzi": "请 帮 我",
       "pinyin": "qǐng bāng wǒ",
       "en_words": [
@@ -132,9 +112,7 @@
       "english": "Please help me."
     },
     {
-      "card_id": [
-        "expr_-5331954559274341722"
-      ],
+      "card_id": "expr_-5331954559274341722",
       "hanzi": "稍 等 一下",
       "pinyin": "shāo děng yīxià",
       "en_words": [
@@ -145,9 +123,7 @@
       "english": "Wait a moment"
     },
     {
-      "card_id": [
-        "expr_-540198930051296566"
-      ],
+      "card_id": "expr_-540198930051296566",
       "hanzi": "帮 我 个 忙",
       "pinyin": "bāng wǒ gè máng",
       "en_words": [
@@ -159,9 +135,7 @@
       "english": "Do me a favor"
     },
     {
-      "card_id": [
-        "expr_-2758889925264113850"
-      ],
+      "card_id": "expr_-2758889925264113850",
       "hanzi": "你 的 同学",
       "pinyin": "nǐ de tóngxué",
       "en_words": [
@@ -172,9 +146,7 @@
       "english": "Your classmate"
     },
     {
-      "card_id": [
-        "expr_-3923821023291668526"
-      ],
+      "card_id": "expr_-3923821023291668526",
       "hanzi": "没 关系 .",
       "pinyin": "méi guānxi .",
       "en_words": [
@@ -185,9 +157,7 @@
       "english": "No problem."
     },
     {
-      "card_id": [
-        "expr_983634093740094494"
-      ],
+      "card_id": "expr_983634093740094494",
       "hanzi": "我 也 觉得",
       "pinyin": "wǒ yě juéde",
       "en_words": [
@@ -198,9 +168,7 @@
       "english": "I also think"
     },
     {
-      "card_id": [
-        "expr_-5966428506882963776"
-      ],
+      "card_id": "expr_-5966428506882963776",
       "hanzi": "还 可以",
       "pinyin": "hái kěyǐ",
       "en_words": [
@@ -210,9 +178,7 @@
       "english": "It's still okay"
     },
     {
-      "card_id": [
-        "expr_964558499220385478"
-      ],
+      "card_id": "expr_964558499220385478",
       "hanzi": "啊",
       "pinyin": "a",
       "en_words": [
@@ -221,9 +187,7 @@
       "english": "Ah"
     },
     {
-      "card_id": [
-        "expr_8130119726659668188"
-      ],
+      "card_id": "expr_8130119726659668188",
       "hanzi": "好 了 .",
       "pinyin": "hǎo le .",
       "en_words": [
@@ -234,9 +198,7 @@
       "english": "Alright."
     },
     {
-      "card_id": [
-        "expr_-4609374951990833120"
-      ],
+      "card_id": "expr_-4609374951990833120",
       "hanzi": "我 帮 你 买",
       "pinyin": "wǒ bāng nǐ mǎi",
       "en_words": [
@@ -248,9 +210,7 @@
       "english": "I'll help you buy it"
     },
     {
-      "card_id": [
-        "expr_-2472531048032614548"
-      ],
+      "card_id": "expr_-2472531048032614548",
       "hanzi": "一会儿 见",
       "pinyin": "yīhuǐr jiàn",
       "en_words": [
@@ -260,9 +220,7 @@
       "english": "See you in a moment"
     },
     {
-      "card_id": [
-        "expr_-3456844731352920405"
-      ],
+      "card_id": "expr_-3456844731352920405",
       "hanzi": "怎么样",
       "pinyin": "zěnmeyàng",
       "en_words": [
@@ -271,9 +229,7 @@
       "english": "How about it?"
     },
     {
-      "card_id": [
-        "expr_-2294790070303828414"
-      ],
+      "card_id": "expr_-2294790070303828414",
       "hanzi": "有 点儿",
       "pinyin": "yǒu diǎnr",
       "en_words": [
@@ -283,9 +239,7 @@
       "english": "A little bit"
     },
     {
-      "card_id": [
-        "expr_-7681756604168727347"
-      ],
+      "card_id": "expr_-7681756604168727347",
       "hanzi": "走 吧 !",
       "pinyin": "zǒu ba !",
       "en_words": [
@@ -296,9 +250,7 @@
       "english": "Let's go!"
     },
     {
-      "card_id": [
-        "expr_-717144015256407847"
-      ],
+      "card_id": "expr_-717144015256407847",
       "hanzi": "好 的",
       "pinyin": "hǎo de",
       "en_words": [
@@ -308,9 +260,7 @@
       "english": "Okay"
     },
     {
-      "card_id": [
-        "expr_3184623767654319190"
-      ],
+      "card_id": "expr_3184623767654319190",
       "hanzi": "再见",
       "pinyin": "zàijiàn",
       "en_words": [
@@ -319,9 +269,7 @@
       "english": "Goodbye"
     },
     {
-      "card_id": [
-        "expr_-50023187287602352"
-      ],
+      "card_id": "expr_-50023187287602352",
       "hanzi": "不要 开门 !",
       "pinyin": "bùyào kāimén !",
       "en_words": [
@@ -332,9 +280,7 @@
       "english": "Don't open the door!"
     },
     {
-      "card_id": [
-        "expr_9025323194034862508"
-      ],
+      "card_id": "expr_9025323194034862508",
       "hanzi": "喂",
       "pinyin": "wèi",
       "en_words": [
@@ -343,9 +289,7 @@
       "english": "Hello"
     },
     {
-      "card_id": [
-        "expr_5600995783959688408"
-      ],
+      "card_id": "expr_5600995783959688408",
       "hanzi": "对 吗 ?",
       "pinyin": "duì ma ?",
       "en_words": [
@@ -356,9 +300,7 @@
       "english": "Is that right?"
     },
     {
-      "card_id": [
-        "expr_-8735858687172698664"
-      ],
+      "card_id": "expr_-8735858687172698664",
       "hanzi": "嗯",
       "pinyin": "ńg",
       "en_words": [
@@ -367,9 +309,7 @@
       "english": "Hmm"
     },
     {
-      "card_id": [
-        "expr_4054681057290118867"
-      ],
+      "card_id": "expr_4054681057290118867",
       "hanzi": "请 便宜 一点 儿 !",
       "pinyin": "qǐng piányi yīdiǎn er !",
       "en_words": [
@@ -382,9 +322,7 @@
       "english": "Please make it a little cheaper!"
     },
     {
-      "card_id": [
-        "expr_4716415110431167913"
-      ],
+      "card_id": "expr_4716415110431167913",
       "hanzi": "没 事 .",
       "pinyin": "méi shì .",
       "en_words": [
@@ -395,9 +333,7 @@
       "english": "No problem."
     },
     {
-      "card_id": [
-        "expr_4224188711861057274"
-      ],
+      "card_id": "expr_4224188711861057274",
       "hanzi": "我 渴 了",
       "pinyin": "wǒ kě le",
       "en_words": [
@@ -408,9 +344,7 @@
       "english": "I'm thirsty"
     },
     {
-      "card_id": [
-        "expr_3423680620621734900"
-      ],
+      "card_id": "expr_3423680620621734900",
       "hanzi": "看 不 懂",
       "pinyin": "kàn bù dǒng",
       "en_words": [
@@ -421,9 +355,7 @@
       "english": "Can't understand"
     },
     {
-      "card_id": [
-        "expr_5312299566684889550"
-      ],
+      "card_id": "expr_5312299566684889550",
       "hanzi": "你 还 要 什么 ?",
       "pinyin": "nǐ hái yào shénme ?",
       "en_words": [
@@ -436,9 +368,7 @@
       "english": "What else do you want?"
     },
     {
-      "card_id": [
-        "expr_-915281894467030744"
-      ],
+      "card_id": "expr_-915281894467030744",
       "hanzi": "明天 见",
       "pinyin": "míngtiān jiàn",
       "en_words": [
@@ -448,9 +378,7 @@
       "english": "See you tomorrow"
     },
     {
-      "card_id": [
-        "expr_-7424520119800339578"
-      ],
+      "card_id": "expr_-7424520119800339578",
       "hanzi": "几 块 ?",
       "pinyin": "jǐ kuài ?",
       "en_words": [
@@ -461,9 +389,7 @@
       "english": "How many pieces?"
     },
     {
-      "card_id": [
-        "expr_7266244406894141798"
-      ],
+      "card_id": "expr_7266244406894141798",
       "hanzi": "不 太 喜欢",
       "pinyin": "bù tài xǐhuan",
       "en_words": [
@@ -474,9 +400,7 @@
       "english": "Don't really like"
     },
     {
-      "card_id": [
-        "expr_-5084575028965123535"
-      ],
+      "card_id": "expr_-5084575028965123535",
       "hanzi": "对不起",
       "pinyin": "duìbuqǐ",
       "en_words": [
@@ -485,9 +409,7 @@
       "english": "Sorry"
     },
     {
-      "card_id": [
-        "expr_9007209026522559900"
-      ],
+      "card_id": "expr_9007209026522559900",
       "hanzi": "嗨",
       "pinyin": "hāi",
       "en_words": [
@@ -496,9 +418,7 @@
       "english": "Hi"
     },
     {
-      "card_id": [
-        "expr_-6403810598708013686"
-      ],
+      "card_id": "expr_-6403810598708013686",
       "hanzi": "请 慢慢 说",
       "pinyin": "qǐng mànman shuō",
       "en_words": [
@@ -509,9 +429,7 @@
       "english": "Please speak slowly."
     },
     {
-      "card_id": [
-        "expr_-5589350754891762338"
-      ],
+      "card_id": "expr_-5589350754891762338",
       "hanzi": "帮 我 一个 忙",
       "pinyin": "bāng wǒ yīgè máng",
       "en_words": [
@@ -523,9 +441,7 @@
       "english": "Help me with a favor"
     },
     {
-      "card_id": [
-        "expr_5544913534435017962"
-      ],
+      "card_id": "expr_5544913534435017962",
       "hanzi": "你 好",
       "pinyin": "nǐ hǎo",
       "en_words": [
@@ -535,9 +451,7 @@
       "english": "Hello"
     },
     {
-      "card_id": [
-        "expr_-3294487399347253541"
-      ],
+      "card_id": "expr_-3294487399347253541",
       "hanzi": "你 怎么样 啊 ?",
       "pinyin": "nǐ zěnmeyàng a ?",
       "en_words": [
@@ -549,9 +463,7 @@
       "english": "How are you?"
     },
     {
-      "card_id": [
-        "expr_786481118140861593"
-      ],
+      "card_id": "expr_786481118140861593",
       "hanzi": "好 了",
       "pinyin": "hǎo le",
       "en_words": [
@@ -561,9 +473,7 @@
       "english": "Alright"
     },
     {
-      "card_id": [
-        "expr_3714544433215845954"
-      ],
+      "card_id": "expr_3714544433215845954",
       "hanzi": "多少 人 ?",
       "pinyin": "duōshao rén ?",
       "en_words": [
@@ -574,9 +484,7 @@
       "english": "How many people?"
     },
     {
-      "card_id": [
-        "expr_9030921163044840705"
-      ],
+      "card_id": "expr_9030921163044840705",
       "hanzi": "听 不 懂",
       "pinyin": "tīng bù dǒng",
       "en_words": [
@@ -587,9 +495,7 @@
       "english": "I don't understand"
     },
     {
-      "card_id": [
-        "expr_5039599843549767963"
-      ],
+      "card_id": "expr_5039599843549767963",
       "hanzi": "我 帮 你 给 他 打 电话",
       "pinyin": "wǒ bāng nǐ gěi tā dǎ diànhuà",
       "en_words": [
@@ -604,9 +510,7 @@
       "english": "I'll help you call him."
     },
     {
-      "card_id": [
-        "expr_-450413640357301295"
-      ],
+      "card_id": "expr_-450413640357301295",
       "hanzi": "呢",
       "pinyin": "ne",
       "en_words": [
@@ -615,9 +519,7 @@
       "english": "And?"
     },
     {
-      "card_id": [
-        "expr_-5485639950578572640"
-      ],
+      "card_id": "expr_-5485639950578572640",
       "hanzi": "不 好 意思 .",
       "pinyin": "bù hǎo yìsi .",
       "en_words": [
@@ -629,9 +531,7 @@
       "english": "Excuse me."
     },
     {
-      "card_id": [
-        "expr_-8778575364394828709"
-      ],
+      "card_id": "expr_-8778575364394828709",
       "hanzi": "你 怎么样 ?",
       "pinyin": "nǐ zěnmeyàng ?",
       "en_words": [
@@ -642,9 +542,7 @@
       "english": "How are you?"
     },
     {
-      "card_id": [
-        "expr_8175733916459035096"
-      ],
+      "card_id": "expr_8175733916459035096",
       "hanzi": "走 了 !",
       "pinyin": "zǒu le !",
       "en_words": [
@@ -655,9 +553,7 @@
       "english": "Let's go!"
     },
     {
-      "card_id": [
-        "expr_-61372637146492753"
-      ],
+      "card_id": "expr_-61372637146492753",
       "hanzi": "不要 , 谢谢 .",
       "pinyin": "bùyào , xièxie .",
       "en_words": [
@@ -669,9 +565,7 @@
       "english": "No, thank you."
     },
     {
-      "card_id": [
-        "expr_6246394843001885347"
-      ],
+      "card_id": "expr_6246394843001885347",
       "hanzi": "可以 .",
       "pinyin": "kěyǐ .",
       "en_words": [
@@ -681,9 +575,7 @@
       "english": "Okay."
     },
     {
-      "card_id": [
-        "expr_685191548815523831"
-      ],
+      "card_id": "expr_685191548815523831",
       "hanzi": "我 也 是",
       "pinyin": "wǒ yě shì",
       "en_words": [
@@ -694,9 +586,7 @@
       "english": "I am too"
     },
     {
-      "card_id": [
-        "expr_9191864187913560745"
-      ],
+      "card_id": "expr_9191864187913560745",
       "hanzi": "几 点 ?",
       "pinyin": "jǐ diǎn ?",
       "en_words": [
@@ -707,9 +597,7 @@
       "english": "What time?"
     },
     {
-      "card_id": [
-        "expr_6845296250659524693"
-      ],
+      "card_id": "expr_6845296250659524693",
       "hanzi": "我 帮 你 看看",
       "pinyin": "wǒ bāng nǐ kànkan",
       "en_words": [
@@ -721,9 +609,7 @@
       "english": "I'll help you take a look"
     },
     {
-      "card_id": [
-        "expr_1674019830796997575"
-      ],
+      "card_id": "expr_1674019830796997575",
       "hanzi": "不 认识",
       "pinyin": "bù rènshi",
       "en_words": [
@@ -733,9 +619,7 @@
       "english": "Don't know"
     },
     {
-      "card_id": [
-        "expr_-4723230703380057403"
-      ],
+      "card_id": "expr_-4723230703380057403",
       "hanzi": "我 帮 你 找 一 找",
       "pinyin": "wǒ bāng nǐ zhǎo yī zhǎo",
       "en_words": [
@@ -749,9 +633,7 @@
       "english": "I'll help you look for it"
     },
     {
-      "card_id": [
-        "expr_-2752901793723597207"
-      ],
+      "card_id": "expr_-2752901793723597207",
       "hanzi": "在 路上",
       "pinyin": "zài lùshang",
       "en_words": [
@@ -761,9 +643,7 @@
       "english": "On the road"
     },
     {
-      "card_id": [
-        "expr_-3269568803771390286"
-      ],
+      "card_id": "expr_-3269568803771390286",
       "hanzi": "没 事儿",
       "pinyin": "méi shìr",
       "en_words": [
@@ -773,9 +653,7 @@
       "english": "No problem"
     },
     {
-      "card_id": [
-        "expr_5117277275531884872"
-      ],
+      "card_id": "expr_5117277275531884872",
       "hanzi": "是 的 .",
       "pinyin": "shì de .",
       "en_words": [
@@ -786,9 +664,7 @@
       "english": "Yes."
     },
     {
-      "card_id": [
-        "expr_6831232615464327265"
-      ],
+      "card_id": "expr_6831232615464327265",
       "hanzi": "请 稍 等 .",
       "pinyin": "qǐng shāo děng .",
       "en_words": [
@@ -800,9 +676,7 @@
       "english": "Please wait a moment."
     },
     {
-      "card_id": [
-        "expr_6203791330850341032"
-      ],
+      "card_id": "expr_6203791330850341032",
       "hanzi": "我 问 一下",
       "pinyin": "wǒ wèn yīxià",
       "en_words": [
@@ -813,9 +687,7 @@
       "english": "Let me ask a question"
     },
     {
-      "card_id": [
-        "expr_8777202727437256018"
-      ],
+      "card_id": "expr_8777202727437256018",
       "hanzi": "听 得 懂",
       "pinyin": "tīng de dǒng",
       "en_words": [
@@ -826,9 +698,7 @@
       "english": "Can understand by listening"
     },
     {
-      "card_id": [
-        "expr_3866985963723252670"
-      ],
+      "card_id": "expr_3866985963723252670",
       "hanzi": "静安寺 见 !",
       "pinyin": "Jìng'ānsì jiàn !",
       "en_words": [
@@ -839,9 +709,7 @@
       "english": "See you at Jing'an Temple!"
     },
     {
-      "card_id": [
-        "expr_-1879086329733344445"
-      ],
+      "card_id": "expr_-1879086329733344445",
       "hanzi": "有 点儿 辣",
       "pinyin": "yǒu diǎnr là",
       "en_words": [
@@ -852,9 +720,7 @@
       "english": "It's a bit spicy."
     },
     {
-      "card_id": [
-        "expr_-5633012125638492551"
-      ],
+      "card_id": "expr_-5633012125638492551",
       "hanzi": "有 .",
       "pinyin": "yǒu .",
       "en_words": [
@@ -864,9 +730,7 @@
       "english": "Have."
     },
     {
-      "card_id": [
-        "expr_-6402892879569260770"
-      ],
+      "card_id": "expr_-6402892879569260770",
       "hanzi": "你 好 !",
       "pinyin": "nǐ hǎo !",
       "en_words": [
@@ -877,9 +741,7 @@
       "english": "Hello!"
     },
     {
-      "card_id": [
-        "expr_7990637748725852667"
-      ],
+      "card_id": "expr_7990637748725852667",
       "hanzi": "对 了",
       "pinyin": "duì le",
       "en_words": [
@@ -889,9 +751,7 @@
       "english": "That's right"
     },
     {
-      "card_id": [
-        "expr_7624893962125451147"
-      ],
+      "card_id": "expr_7624893962125451147",
       "hanzi": "对",
       "pinyin": "duì",
       "en_words": [
@@ -900,9 +760,7 @@
       "english": "Correct"
     },
     {
-      "card_id": [
-        "expr_5361734826448697686"
-      ],
+      "card_id": "expr_5361734826448697686",
       "hanzi": "买单",
       "pinyin": "mǎidān",
       "en_words": [
@@ -911,9 +769,7 @@
       "english": "Pay the bill"
     },
     {
-      "card_id": [
-        "expr_534837539663632371"
-      ],
+      "card_id": "expr_534837539663632371",
       "hanzi": "你 好 吗 ?",
       "pinyin": "nǐ hǎo ma ?",
       "en_words": [
@@ -925,9 +781,7 @@
       "english": "How are you?"
     },
     {
-      "card_id": [
-        "expr_-1884640825485332511"
-      ],
+      "card_id": "expr_-1884640825485332511",
       "hanzi": "能",
       "pinyin": "néng",
       "en_words": [
@@ -936,9 +790,7 @@
       "english": "Can"
     },
     {
-      "card_id": [
-        "expr_5885952609888418524"
-      ],
+      "card_id": "expr_5885952609888418524",
       "hanzi": "不 太 好",
       "pinyin": "bù tài hǎo",
       "en_words": [
@@ -949,9 +801,7 @@
       "english": "Not very good"
     },
     {
-      "card_id": [
-        "expr_8379986330776055580"
-      ],
+      "card_id": "expr_8379986330776055580",
       "hanzi": "认识 你 我 也 很 高兴",
       "pinyin": "rènshi nǐ wǒ yě hěn gāoxìng",
       "en_words": [
@@ -965,9 +815,7 @@
       "english": "I'm also very happy to know you"
     },
     {
-      "card_id": [
-        "expr_5299338330351538872"
-      ],
+      "card_id": "expr_5299338330351538872",
       "hanzi": "看 一下",
       "pinyin": "kàn yīxià",
       "en_words": [
@@ -977,9 +825,7 @@
       "english": "Take a look"
     },
     {
-      "card_id": [
-        "expr_6097280068261129409"
-      ],
+      "card_id": "expr_6097280068261129409",
       "hanzi": "没 关系",
       "pinyin": "méi guānxi",
       "en_words": [
@@ -989,9 +835,7 @@
       "english": "No problem"
     },
     {
-      "card_id": [
-        "expr_-410849842051616789"
-      ],
+      "card_id": "expr_-410849842051616789",
       "hanzi": "多少 杯 ?",
       "pinyin": "duōshǎo bēi ?",
       "en_words": [
@@ -1002,9 +846,7 @@
       "english": "How many cups?"
     },
     {
-      "card_id": [
-        "expr_-7108776659623778684"
-      ],
+      "card_id": "expr_-7108776659623778684",
       "hanzi": "走 了",
       "pinyin": "zǒu le",
       "en_words": [
@@ -1014,9 +856,7 @@
       "english": "Left"
     },
     {
-      "card_id": [
-        "expr_-2405023042137466315"
-      ],
+      "card_id": "expr_-2405023042137466315",
       "hanzi": "认识 你 很 高兴",
       "pinyin": "rènshi nǐ hěn gāoxìng",
       "en_words": [
@@ -1028,9 +868,7 @@
       "english": "Nice to meet you"
     },
     {
-      "card_id": [
-        "expr_-1403886739101656504"
-      ],
+      "card_id": "expr_-1403886739101656504",
       "hanzi": "再 说 一遍",
       "pinyin": "zài shuō yībiàn",
       "en_words": [
@@ -1041,9 +879,7 @@
       "english": "Say it again"
     },
     {
-      "card_id": [
-        "expr_3897712501057665440"
-      ],
+      "card_id": "expr_3897712501057665440",
       "hanzi": "给 .",
       "pinyin": "gěi .",
       "en_words": [
@@ -1053,9 +889,7 @@
       "english": "Give."
     },
     {
-      "card_id": [
-        "expr_7970232739840033074"
-      ],
+      "card_id": "expr_7970232739840033074",
       "hanzi": "对不起 .",
       "pinyin": "duìbuqǐ .",
       "en_words": [
@@ -1065,9 +899,7 @@
       "english": "Sorry."
     },
     {
-      "card_id": [
-        "expr_8390150267713286091"
-      ],
+      "card_id": "expr_8390150267713286091",
       "hanzi": "不 好 意思",
       "pinyin": "bù hǎo yìsi",
       "en_words": [
@@ -1078,9 +910,7 @@
       "english": "Excuse me"
     },
     {
-      "card_id": [
-        "expr_-1569601323127647294"
-      ],
+      "card_id": "expr_-1569601323127647294",
       "hanzi": "很 不 好",
       "pinyin": "hěn bù hǎo",
       "en_words": [
@@ -1091,9 +921,7 @@
       "english": "Very bad"
     },
     {
-      "card_id": [
-        "expr_6237027248278137106"
-      ],
+      "card_id": "expr_6237027248278137106",
       "hanzi": "TM 见 !",
       "pinyin": "TM jiàn !",
       "en_words": [
@@ -1104,9 +932,7 @@
       "english": "See you, TM!"
     },
     {
-      "card_id": [
-        "expr_75018190709738459"
-      ],
+      "card_id": "expr_75018190709738459",
       "hanzi": "不 客气",
       "pinyin": "bù kèqi",
       "en_words": [
@@ -1116,9 +942,7 @@
       "english": "You're welcome"
     },
     {
-      "card_id": [
-        "expr_494840912824147275"
-      ],
+      "card_id": "expr_494840912824147275",
       "hanzi": "是 的",
       "pinyin": "shì de",
       "en_words": [
@@ -1128,9 +952,7 @@
       "english": "Yes"
     },
     {
-      "card_id": [
-        "expr_-1393302405270562484"
-      ],
+      "card_id": "expr_-1393302405270562484",
       "hanzi": "一 位 .",
       "pinyin": "yī wèi .",
       "en_words": [
@@ -1141,9 +963,7 @@
       "english": "One person."
     },
     {
-      "card_id": [
-        "expr_1392924510139780166"
-      ],
+      "card_id": "expr_1392924510139780166",
       "hanzi": "一会儿 见 .",
       "pinyin": "yīhuǐr jiàn .",
       "en_words": [
@@ -1154,9 +974,7 @@
       "english": "See you in a moment."
     },
     {
-      "card_id": [
-        "expr_2793573130823922265"
-      ],
+      "card_id": "expr_2793573130823922265",
       "hanzi": "知道 了",
       "pinyin": "zhīdao le",
       "en_words": [
@@ -1166,9 +984,7 @@
       "english": "Got it"
     },
     {
-      "card_id": [
-        "expr_6528687171123037200"
-      ],
+      "card_id": "expr_6528687171123037200",
       "hanzi": "非常 好",
       "pinyin": "fēicháng hǎo",
       "en_words": [
@@ -1178,9 +994,7 @@
       "english": "Very good"
     },
     {
-      "card_id": [
-        "expr_-1678487067170168984"
-      ],
+      "card_id": "expr_-1678487067170168984",
       "hanzi": "稍 等",
       "pinyin": "shāo děng",
       "en_words": [
@@ -1190,9 +1004,7 @@
       "english": "Wait a moment"
     },
     {
-      "card_id": [
-        "expr_-6801217348304556404"
-      ],
+      "card_id": "expr_-6801217348304556404",
       "hanzi": "我 饿 了",
       "pinyin": "wǒ è le",
       "en_words": [
@@ -1203,9 +1015,7 @@
       "english": "I'm hungry"
     },
     {
-      "card_id": [
-        "expr_-8840998642177445286"
-      ],
+      "card_id": "expr_-8840998642177445286",
       "hanzi": "不要 说话",
       "pinyin": "bùyào shuōhuà",
       "en_words": [
@@ -1215,9 +1025,7 @@
       "english": "Don't speak"
     },
     {
-      "card_id": [
-        "expr_5796231697337170243"
-      ],
+      "card_id": "expr_5796231697337170243",
       "hanzi": "对 .",
       "pinyin": "duì .",
       "en_words": [
@@ -1227,9 +1035,7 @@
       "english": "Correct."
     },
     {
-      "card_id": [
-        "expr_6491434390378180537"
-      ],
+      "card_id": "expr_6491434390378180537",
       "hanzi": "有 点儿 甜",
       "pinyin": "yǒu diǎnr tián",
       "en_words": [
@@ -1240,9 +1046,7 @@
       "english": "It's a bit sweet."
     },
     {
-      "card_id": [
-        "expr_1803717808345512456"
-      ],
+      "card_id": "expr_1803717808345512456",
       "hanzi": "好久 不见",
       "pinyin": "hǎojiǔ bùjiàn",
       "en_words": [
@@ -1252,9 +1056,7 @@
       "english": "Long time no see"
     },
     {
-      "card_id": [
-        "expr_1662614877335907548"
-      ],
+      "card_id": "expr_1662614877335907548",
       "hanzi": "好 的 , 明天 见 !",
       "pinyin": "hǎo de , míngtiān jiàn !",
       "en_words": [
@@ -1268,9 +1070,7 @@
       "english": "Alright, see you tomorrow!"
     },
     {
-      "card_id": [
-        "expr_5771271664201683714"
-      ],
+      "card_id": "expr_5771271664201683714",
       "hanzi": "拜拜",
       "pinyin": "bàibai",
       "en_words": [
@@ -1279,9 +1079,7 @@
       "english": "Bye-bye"
     },
     {
-      "card_id": [
-        "expr_-6189519267699713682"
-      ],
+      "card_id": "expr_-6189519267699713682",
       "hanzi": "不错",
       "pinyin": "bùcuò",
       "en_words": [
@@ -1290,9 +1088,7 @@
       "english": "Not bad"
     },
     {
-      "card_id": [
-        "expr_6835653352928224917"
-      ],
+      "card_id": "expr_6835653352928224917",
       "hanzi": "这边 请",
       "pinyin": "zhèbiān qǐng",
       "en_words": [
@@ -1302,9 +1098,7 @@
       "english": "This way, please"
     },
     {
-      "card_id": [
-        "expr_-5616257985855846300"
-      ],
+      "card_id": "expr_-5616257985855846300",
       "hanzi": "好久 不见 !",
       "pinyin": "hǎojiǔ bùjiàn !",
       "en_words": [
@@ -1315,9 +1109,7 @@
       "english": "Long time no see!"
     },
     {
-      "card_id": [
-        "expr_-6361204267574224943"
-      ],
+      "card_id": "expr_-6361204267574224943",
       "hanzi": "上 课 了",
       "pinyin": "shàng kè le",
       "en_words": [
@@ -1328,9 +1120,7 @@
       "english": "Class has started"
     },
     {
-      "card_id": [
-        "expr_8794639585287559125"
-      ],
+      "card_id": "expr_8794639585287559125",
       "hanzi": "退 退 退",
       "pinyin": "tuì tuì tuì",
       "en_words": [
@@ -1341,9 +1131,7 @@
       "english": "Retreat retreat retreat"
     },
     {
-      "card_id": [
-        "expr_-4104072363658666248"
-      ],
+      "card_id": "expr_-4104072363658666248",
       "hanzi": "太 好 了",
       "pinyin": "tài hǎo le",
       "en_words": [
@@ -1354,9 +1142,7 @@
       "english": "Great"
     },
     {
-      "card_id": [
-        "expr_-420410871514018734"
-      ],
+      "card_id": "expr_-420410871514018734",
       "hanzi": "有 没 有 ?",
       "pinyin": "yǒu méi yǒu ?",
       "en_words": [
@@ -1368,9 +1154,7 @@
       "english": "Is there any?"
     },
     {
-      "card_id": [
-        "expr_-8871821727797155986"
-      ],
+      "card_id": "expr_-8871821727797155986",
       "hanzi": "我 累 了",
       "pinyin": "wǒ lèi le",
       "en_words": [
@@ -1381,9 +1165,7 @@
       "english": "I'm tired"
     },
     {
-      "card_id": [
-        "expr_-110323335646333136"
-      ],
+      "card_id": "expr_-110323335646333136",
       "hanzi": "不要 开门 .",
       "pinyin": "bùyào kāimén .",
       "en_words": [
@@ -1394,9 +1176,7 @@
       "english": "Don't open the door."
     },
     {
-      "card_id": [
-        "expr_-2912336643512109473"
-      ],
+      "card_id": "expr_-2912336643512109473",
       "hanzi": "不 太 辣",
       "pinyin": "bù tài là",
       "en_words": [
@@ -1407,9 +1187,7 @@
       "english": "Not very spicy"
     },
     {
-      "card_id": [
-        "expr_-499372770635341844"
-      ],
+      "card_id": "expr_-499372770635341844",
       "hanzi": "现在 !",
       "pinyin": "xiànzài !",
       "en_words": [
@@ -1419,9 +1197,7 @@
       "english": "Now!"
     },
     {
-      "card_id": [
-        "expr_7015562458463305128"
-      ],
+      "card_id": "expr_7015562458463305128",
       "hanzi": "没 问题",
       "pinyin": "méi wèntí",
       "en_words": [
@@ -1431,9 +1207,7 @@
       "english": "No problem"
     },
     {
-      "card_id": [
-        "expr_597430886880126368"
-      ],
+      "card_id": "expr_597430886880126368",
       "hanzi": "非常 不 好",
       "pinyin": "fēicháng bù hǎo",
       "en_words": [
@@ -1444,9 +1218,7 @@
       "english": "Very bad"
     },
     {
-      "card_id": [
-        "expr_-1528891466335304990"
-      ],
+      "card_id": "expr_-1528891466335304990",
       "hanzi": "几 位",
       "pinyin": "jǐ wèi",
       "en_words": [
@@ -1456,9 +1228,7 @@
       "english": "How many people"
     },
     {
-      "card_id": [
-        "expr_-3855218207551990606"
-      ],
+      "card_id": "expr_-3855218207551990606",
       "hanzi": "认识",
       "pinyin": "rènshi",
       "en_words": [
