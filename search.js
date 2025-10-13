@@ -23,7 +23,6 @@ const Search = {
     this.currentType = this.currentType === "pinyin" ? "english" : "pinyin";
     this.updateToggleButton();
     document.getElementById("search-query").focus();
-    console.log("focus");
   },
 
   updateToggleButton() {

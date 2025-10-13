@@ -88,24 +88,23 @@ const StatsView = {
 
       // Compute due timeline with buckets: Overdue, <=30m, <=1h, <=4h, <=12h, <=24h, <=7d, <=30d, >30d
       const dueBuckets = [0, 0, 0, 0, 0, 0, 0, 0, 0];
-     (App.currentCards || []).forEach((card) => {
-       const stats = deckStats.cards?.[card.card_id]?.[this.currentDirection];
-       if (!stats) {
-         // new card, due now -> count in first bucket (<=30m)
-         dueBuckets[0]++;
-         return;
-       }
-       const lastReview = Math.max(stats.last_correct_at || 0, stats.last_incorrect_at || 0);
-       if (lastReview === 0) {
-         dueBuckets[0]++;
-         return;
-       }
-       const intervalHours = SRS.calculateNextReviewInterval(stats);
-       const nextReview = lastReview + intervalHours * 60 * 60 * 1000;
+      (App.currentCards || []).forEach((card) => {
+        const stats = deckStats.cards?.[card.card_id]?.[this.currentDirection];
+        if (!stats) {
+          // new card, due now -> count in first bucket (<=30m)
+          dueBuckets[0]++;
+          return;
+        }
+        const lastReview = Math.max(stats.last_correct_at || 0, stats.last_incorrect_at || 0);
+        if (lastReview === 0) {
+          dueBuckets[0]++;
+          return;
+        }
+        const intervalHours = SRS.calculateNextReviewInterval(stats);
+        const nextReview = lastReview + intervalHours * 60 * 60 * 1000;
         const now = Date.now();
-         const diffHours = (nextReview - now) / (60 * 60 * 1000);
-         console.log(`📊 StatsView: Card ${card.card_id} lastReview: ${lastReview}, intervalHours: ${intervalHours}, nextReview: ${nextReview}, diffHours: ${diffHours}, bucket: ${diffHours <= 0 ? 0 : diffHours <= 0.5 ? 1 : diffHours <= 1 ? 2 : diffHours <= 4 ? 3 : diffHours <= 12 ? 4 : diffHours <= 24 ? 5 : diffHours <= 168 ? 6 : diffHours <= 720 ? 7 : 8}`);
-         if (diffHours <= 0) dueBuckets[0]++; // overdue
+        const diffHours = (nextReview - now) / (60 * 60 * 1000);
+        if (diffHours <= 0) dueBuckets[0]++; // overdue
         else if (diffHours <= 0.5) dueBuckets[1]++; // <=30m
         else if (diffHours <= 1) dueBuckets[2]++;
         else if (diffHours <= 4) dueBuckets[3]++;

@@ -12,7 +12,6 @@ const App = {
   savedReviewFlipped: false,
 
   async init() {
-    console.log("TM-Flash initialized");
     console.log("Deck registry:", DECKS);
     // Initialize storage
     Storage.loadState();

@@ -12,8 +12,6 @@ const SRS = {
       incorrect_streak_started_at
     } = cardStats;
 
-    console.log(`🔍 SRS.calculateNextReviewInterval: Inputs - total_correct: ${cardStats.total_correct}, total_incorrect: ${cardStats.total_incorrect}, correct_streak_len: ${cardStats.correct_streak_len}, incorrect_streak_len: ${cardStats.incorrect_streak_len}, last_incorrect_at: ${cardStats.last_incorrect_at}`);
-
     const total_reviews = total_correct + total_incorrect;
     const accuracy = total_reviews > 0 ? total_correct / total_reviews : 0;
     const now = Date.now();
@@ -55,20 +53,11 @@ const SRS = {
     }
 
     const finalInterval = baseInterval * modifier;
-    console.log(`🔍 SRS.calculateNextReviewInterval: Result - intervalHours: ${finalInterval}`);
     return Math.max(0.5, Math.min(finalInterval, 2160)); // Min 30min, max 90 days
   },
 
   shouldReviewCard(cardStats) {
-    console.log("🔍 shouldReviewCard called with stats:", {
-      last_correct_at: cardStats.last_correct_at,
-      last_incorrect_at: cardStats.last_incorrect_at,
-      total_correct: cardStats.total_correct,
-      total_incorrect: cardStats.total_incorrect
-    });
-
     if (!cardStats.last_correct_at && !cardStats.last_incorrect_at) {
-      console.log("✅ New card - returning true");
       return true; // New card
     }
 
@@ -78,26 +67,13 @@ const SRS = {
     const now = Date.now();
     const isDue = now >= nextReviewTime;
 
-    console.log("🔍 Card review check:", {
-      lastReview: new Date(lastReview).toISOString(),
-      intervalHours: intervalHours.toFixed(2),
-      nextReviewTime: new Date(nextReviewTime).toISOString(),
-      now: new Date(now).toISOString(),
-      isDue
-    });
-
-    console.log(`🔍 SRS.shouldReviewCard: Card result - isDue: ${isDue}`);
-
     return isDue;
   },
 
   selectNextCard(cards, statsMap, direction, starredToggle = false, ignoredToggle = false) {
-    console.log("🔍 SRS.selectNextCard called with direction:", direction);
-    console.log("🔍 Cards array:", cards ? `Array with ${cards.length} cards` : "null/undefined");
-    console.log("🔍 Stats map:", statsMap ? "Object provided" : "null/undefined");
 
     if (!cards || cards.length === 0) {
-      console.log("❌ No cards array or empty array");
+     console.warn("❌ No cards array or empty array");
       return null;
     }
 
@@ -133,15 +109,11 @@ const SRS = {
         include = false;
       }
 
-      console.log(`🔍 Card ${card.card_id}: stats exist=${!!stats}, isDue=${isDue}, starred=${starred}, ignored=${ignored}, include=${include}`);
       return isDue && include;
     });
 
-    console.log("🔍 Due cards found:", dueCards.length);
-
     dueCards.forEach(card => {
       const cardStats = statsMap[card.card_id];
-      console.log(`🔍 SRS.selectNextCard: Card ${card.card_id} included (isDue: true, starred: ${cardStats?.starred || false}, ignored: ${cardStats?.ignored || false})`);
     });
 
     const excludedCards = cards.filter(card => !dueCards.includes(card));
@@ -164,11 +136,10 @@ const SRS = {
       if (starredToggle && !starred) include = false;
       if (!ignoredToggle && ignored) include = false;
       else if (ignoredToggle && !ignored) include = false;
-      console.log(`🔍 SRS.selectNextCard: Card ${card.card_id} excluded (isDue: ${isDue}, starred: ${starred}, ignored: ${ignored}, include: ${include})`);
     });
 
     if (dueCards.length === 0) {
-      console.log("❌ No due cards found");
+      console.warn("❌ No due cards found");
       return null;
     }
 
@@ -226,7 +197,6 @@ const SRS = {
       ? Math.max(topStats.last_correct_at || 0, topStats.last_incorrect_at || 0)
       : 0;
     const minsSince = lastReview ? ((Date.now() - lastReview) / 60000).toFixed(1) : "NEVER";
-    console.log(`🔍🔍🔍🔍🔍🔍 Selected card ${top.card.english} with priority ${top.priority.toFixed(2)} time since last review (min): ${minsSince}`);
     return scoredCards[0].card;
   },
 
@@ -306,7 +276,6 @@ const SRS = {
 
       if (nextReviewTime > now) {
         nextReviewTimes.push(nextReviewTime);
-        console.log(`🔍 SRS.getNextReviewInfo: Card ${card.card_id} nextReviewTime: ${new Date(nextReviewTime).toISOString()}`);
         if (nextReviewTime < earliestNextReview) {
           earliestNextReview = nextReviewTime;
         }
@@ -334,8 +303,6 @@ const SRS = {
 
     const oneHourLater = earliestNextReview + (60 * 60 * 1000);
     const cardsInWindow = nextReviewTimes.filter(time => time <= oneHourLater).length;
-
-    console.log(`🔍 SRS.getNextReviewInfo: Total nextReviewTimes: ${nextReviewTimes.length}, earliest: ${earliestNextReview ? new Date(earliestNextReview).toISOString() : 'none'}`);
 
     return {
       timeString,

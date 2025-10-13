@@ -228,9 +228,7 @@ const DeckSelector = {
         `Loaded ${DECKS[deckId].label} (${augmentedCards.length} cards)`,
         "success",
       );
-      console.log(
-        `Successfully loaded deck: ${DECKS[deckId].label} with ${augmentedCards.length} cards`,
-      );
+      console.log(`Successfully loaded deck: ${DECKS[deckId].label} with ${augmentedCards.length} cards`);
     } catch (error) {
       this.setStatusMessage(`Failed to load ${DECKS[deckId].label}`, "error");
       console.error(`Failed to load deck ${deckId}:`, error);

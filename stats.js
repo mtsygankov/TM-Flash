@@ -56,9 +56,7 @@ const Stats = {
     const syncedStats = { cards: syncedCards };
     Storage.setDeckStats(deckId, syncedStats);
 
-    console.log(
-      `Stats sync complete for ${deckId}: ${Object.keys(syncedCards).length} cards`,
-    );
+    console.log(`Stats sync complete for ${deckId}: ${Object.keys(syncedCards).length} cards`);
     return syncedStats;
   },
 

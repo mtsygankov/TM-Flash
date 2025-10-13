@@ -50,7 +50,6 @@ const Review = {
     const borderSpacing = 0.5 * 16; // 0.5rem in px
     const estimatedWidth = totalChars * baseCharSize + (columns - 1) * borderSpacing + columns * cellPadding;
     const scale = Math.max(0.5, Math.min(1, availableWidth / estimatedWidth));
-    console.log('Columns:', columns, 'Total Chars:', totalChars, 'Available Width:', availableWidth, 'Estimated Width:', estimatedWidth, 'Scale:', scale);
     table.style.setProperty('--scale-factor', scale);
 
     // Add click handlers for search
@@ -158,9 +157,8 @@ const Review = {
   },
 
   onCorrect() {
-    console.log("onCorrect called");
     if (!App.currentCard) {
-      console.log("No current card");
+      console.log("onCorrect: No current card");
       return;
     }
     Stats.updateCardStats(
@@ -173,9 +171,8 @@ const Review = {
   },
 
   onIncorrect() {
-    console.log("onIncorrect called");
     if (!App.currentCard) {
-      console.log("No current card");
+      console.log("onIncorrect: No current card");
       return;
     }
     Stats.updateCardStats(
@@ -226,11 +223,8 @@ const Review = {
     },
 
   bindEvents() {
-    console.log("Binding review events");
     const btnCorrect = document.getElementById("btn-correct");
     const btnIncorrect = document.getElementById("btn-incorrect");
-    console.log("btnCorrect:", btnCorrect);
-    console.log("btnIncorrect:", btnIncorrect);
 
     if (!btnCorrect || !btnIncorrect) {
       console.error("Review buttons not found, cannot bind events");
@@ -239,12 +233,10 @@ const Review = {
 
     btnCorrect.addEventListener("click", (e) => {
       e.stopPropagation();
-      console.log("btn-correct clicked");
       this.onCorrect();
     });
     btnIncorrect.addEventListener("click", (e) => {
       e.stopPropagation();
-      console.log("btn-incorrect clicked");
       this.onIncorrect();
     });
 
@@ -278,13 +270,11 @@ const Review = {
         }
       } else if (e.code === "ArrowRight") {
         if (App.flipped) {
-          console.log("ArrowRight pressed");
           e.preventDefault();
           this.onCorrect();
         }
       } else if (e.code === "ArrowLeft") {
         if (App.flipped) {
-          console.log("ArrowLeft pressed");
           e.preventDefault();
           this.onIncorrect();
         }
