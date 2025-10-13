@@ -121,6 +121,24 @@ const Review = {
     }
   },
 
+  updateReviewTogglesDisplay() {
+    const counts = SRS.countFilteredCards(
+      App.currentCards,
+      App.currentStats.cards,
+      App.currentDirection,
+      App.starredToggle,
+      App.ignoredToggle
+    );
+
+    const future = counts.total - counts.overdue;
+    const displayText = `${counts.overdue} / ${future} / ${counts.total}`;
+
+    const numbersSpan = document.getElementById("review-toggles-numbers");
+    if (numbersSpan) {
+      numbersSpan.textContent = displayText;
+    }
+  },
+
   applyDirectionAndFlip() {
     const table = document.getElementById("card-table");
     const direction = App.currentDirection;
@@ -186,16 +204,17 @@ const Review = {
 
     advanceToNextCard() {
       App.flipped = false;
-       App.currentCard = SRS.selectNextCard(
-         App.currentCards,
-         App.currentStats.cards,
-         App.currentDirection,
-         App.starredToggle,
-         App.ignoredToggle,
-       );
-       if (App.currentCard) {
-         this.renderCard(App.currentCard);
-       } else {
+        App.currentCard = SRS.selectNextCard(
+          App.currentCards,
+          App.currentStats.cards,
+          App.currentDirection,
+          App.starredToggle,
+          App.ignoredToggle,
+        );
+        this.updateReviewTogglesDisplay();
+        if (App.currentCard) {
+          this.renderCard(App.currentCard);
+        } else {
          this.renderCard(null); // Clear the table
           const nextReviewInfo = SRS.getNextReviewInfo(App.currentCards, App.currentStats.cards, App.currentDirection, App.starredToggle, App.ignoredToggle);
          let message;

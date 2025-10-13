@@ -235,6 +235,60 @@ const SRS = {
     }).length;
   },
 
+  countFilteredCards(cards, statsMap, direction, starredToggle = false, ignoredToggle = false) {
+    if (!cards || cards.length === 0) {
+      return { total: 0, overdue: 0 };
+    }
+
+    let total = 0;
+    let overdue = 0;
+
+    cards.forEach(card => {
+      const cardStats = statsMap[card.card_id];
+
+      // Apply flag filters
+      const starred = cardStats?.starred || false;
+      const ignored = cardStats?.ignored || false;
+
+      let include = true;
+
+      // Starred filter: if toggle on, only starred; if off, all
+      if (starredToggle && !starred) {
+        include = false;
+      }
+
+      // Ignored filter: if toggle on, only ignored; if off, only not ignored
+      if (!ignoredToggle && ignored) {
+        include = false;
+      } else if (ignoredToggle && !ignored) {
+        include = false;
+      }
+
+      if (!include) return;
+
+      total++;
+
+      // Check if overdue
+      const stats = cardStats?.[direction];
+      const isDue = this.shouldReviewCard(stats || {
+        total_correct: 0,
+        total_incorrect: 0,
+        last_correct_at: null,
+        last_incorrect_at: null,
+        correct_streak_len: 0,
+        incorrect_streak_len: 0,
+        correct_streak_started_at: null,
+        incorrect_streak_started_at: null
+      });
+
+      if (isDue) {
+        overdue++;
+      }
+    });
+
+    return { total, overdue };
+  },
+
   getNextReviewInfo(cards, statsMap, direction, starredToggle = false, ignoredToggle = false) {
     if (!cards || cards.length === 0) {
       return null;

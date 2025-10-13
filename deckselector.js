@@ -175,6 +175,7 @@ const DeckSelector = {
           App.starredToggle,
           App.ignoredToggle,
         );
+        Review.updateReviewTogglesDisplay();
           if (App.currentCard) {
             Review.renderCard(App.currentCard);
           } else {

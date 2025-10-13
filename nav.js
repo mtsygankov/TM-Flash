@@ -86,6 +86,7 @@ const Nav = {
           if (card) {
             App.currentCard = card;
             App.flipped = App.savedReviewFlipped;
+            Review.updateReviewTogglesDisplay();
             Review.renderCard(card);
             // Clear saved state after restore
             App.savedReviewCardId = null;
@@ -100,6 +101,7 @@ const Nav = {
               App.ignoredToggle,
             );
             App.flipped = false;
+            Review.updateReviewTogglesDisplay();
             if (App.currentCard) {
               Review.renderCard(App.currentCard);
             } else {
