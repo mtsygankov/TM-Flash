@@ -385,7 +385,7 @@
       "en_words": [
         "catty (unit of weight)"
       ],
-      "english": "catty"
+      "english": "0.5 kilogram (catty)"
     },
     {
       "card_id": "word_-8737586665068561239",
@@ -1822,16 +1822,40 @@
       "english": "Clothing store"
     },
     {
-      "card_id": "word_3858980202157323572",
-      "hanzi": "酸 甜 苦 辣",
-      "pinyin": "suān tián kǔ là",
+      "card_id": "word_3858980202157323572_0",
+      "hanzi": "酸",
+      "pinyin": "suān",
       "en_words": [
-        "sour",
-        "sweet",
-        "bitter",
+        "sour"
+      ],
+      "english": "sour"
+    },
+{
+      "card_id": "word_3858980202157323572_1",
+      "hanzi": "甜",
+      "pinyin": "tián",
+      "en_words": [
+        "sweet"
+      ],
+      "english": "sweet"
+    },
+{
+      "card_id": "word_3858980202157323572_2",
+      "hanzi": "苦",
+      "pinyin": "kǔ",
+      "en_words": [
+        "bitter"
+      ],
+      "english": "bitter"
+    },
+{
+      "card_id": "word_3858980202157323572_3",
+      "hanzi": "辣",
+      "pinyin": "là",
+      "en_words": [
         "spicy"
       ],
-      "english": "Sour, sweet, bitter, spicy"
+      "english": "spicy"
     },
     {
       "card_id": "word_-3033727171103016874",
@@ -2790,7 +2814,7 @@
       "en_words": [
         "feel/think"
       ],
-      "english": "Feel"
+      "english": "feel/think"
     },
     {
       "card_id": "word_-3030134117268164935",
@@ -3593,7 +3617,7 @@
       "hanzi": "件",
       "pinyin": "jiàn",
       "en_words": [
-        "item"
+        "(m.w. for clothing, pieces, luggage, matters)"
       ],
       "english": "item"
     },
@@ -4230,9 +4254,9 @@
       "hanzi": "中间",
       "pinyin": "zhōngjiān",
       "en_words": [
-        "middle"
+        "middle, in between"
       ],
-      "english": "middle"
+      "english": "middle, in between"
     },
     {
       "card_id": "word_7708491247636389204",
