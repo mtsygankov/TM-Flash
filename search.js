@@ -87,17 +87,6 @@ const Search = {
       )
       .join("");
     container.innerHTML = `<div class="search-results-list">${list}</div>`;
-    // Bind click events for row selection
-    container.querySelectorAll(".search-result").forEach((el) => {
-      el.addEventListener("click", (e) => {
-        // Don't select card if clicking on buttons
-        if (e.target.classList.contains("search-star-btn") || e.target.classList.contains("search-ignore-btn")) {
-          return;
-        }
-        const cardId = el.dataset.cardId;
-        this.selectCard(cardId);
-      });
-    });
     // Bind click events for buttons
     container.querySelectorAll(".search-star-btn").forEach((btn) => {
       btn.addEventListener("click", (e) => {
@@ -114,16 +103,6 @@ const Search = {
       });
     });
   },
-
-    selectCard(cardId) {
-      const card = App.currentCards.find((c) => c.card_id === cardId);
-      if (card) {
-        App.currentCard = card;
-        App.flipped = false;
-        Review.renderCard(card);
-        Nav.show("review");
-      }
-    },
 
     toggleStarFlag(cardId) {
       const cardStats = App.currentStats.cards[cardId];
