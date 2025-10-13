@@ -19,6 +19,8 @@ const App = {
     Settings.init();
     // Initialize deck selector (now toggles are loaded)
     await DeckSelector.init();
+    // Load direction now that deck is loaded
+    Settings.loadDirection();
     // Initialize navigation
     Nav.init();
     // Initialize review (now safe to bind events)

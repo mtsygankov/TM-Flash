@@ -1,7 +1,6 @@
 // Settings module
 const Settings = {
   init() {
-    this.loadDirection();
     this.bindDirectionToggle();
     this.loadToggles();
     this.bindToggleButtons();

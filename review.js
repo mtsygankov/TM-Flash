@@ -293,7 +293,7 @@ const Review = {
     cardContainer.addEventListener("touchstart", (e) => {
       startX = e.touches[0].clientX;
       startY = e.touches[0].clientY;
-    });
+    }, {passive: true});
     cardContainer.addEventListener("touchend", (e) => {
       if (!App.flipped) return;
       if (!startX || !startY) return;
