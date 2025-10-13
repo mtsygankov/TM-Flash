@@ -158,11 +158,17 @@ const Stats = {
     App.currentStats = deckStats;
   },
 
-  computeMetrics(deckId, direction) {
-    const totalCards = App.currentCards ? App.currentCards.length : 0;
+  computeMetrics(deckId, direction, starredFilter, ignoredFilter) {
     const deckStats = Storage.getDeckStats(deckId);
+    let totalCards = 0;
     let reviewedCount = 0;
     Object.values(deckStats.cards).forEach((cardStats) => {
+      const starred = cardStats.starred || false;
+      const ignored = cardStats.ignored || false;
+      if (starredFilter && !starred) return;
+      if (!ignoredFilter && ignored) return;
+      else if (ignoredFilter && !ignored) return;
+      totalCards++;
       const dirStat = cardStats[direction];
       if (dirStat && dirStat.total_correct + dirStat.total_incorrect > 0) reviewedCount++;
     });

@@ -1,6 +1,8 @@
 // StatsView module
 const StatsView = {
   currentDirection: "CH->EN",
+  currentStarred: false,
+  currentIgnored: false,
 
   init() {
     this.bindEvents();
@@ -15,6 +17,20 @@ const StatsView = {
           this.currentDirection === "CH->EN" ? "EN->CH" : "CH->EN";
         Storage.setSettings({direction: this.currentDirection});
         App.currentDirection = this.currentDirection;
+        this.render();
+      });
+    }
+    const starredToggle = document.getElementById("stats-starred-toggle");
+    if (starredToggle) {
+      starredToggle.addEventListener("click", () => {
+        this.currentStarred = !this.currentStarred;
+        this.render();
+      });
+    }
+    const ignoredToggle = document.getElementById("stats-ignored-toggle");
+    if (ignoredToggle) {
+      ignoredToggle.addEventListener("click", () => {
+        this.currentIgnored = !this.currentIgnored;
         this.render();
       });
     }
@@ -35,37 +51,50 @@ const StatsView = {
     if (toggle) {
       toggle.textContent = this.currentDirection;
     }
+    const starredToggle = document.getElementById("stats-starred-toggle");
+    if (starredToggle) {
+      starredToggle.dataset.starred = this.currentStarred;
+    }
+    const ignoredToggle = document.getElementById("stats-ignored-toggle");
+    if (ignoredToggle) {
+      ignoredToggle.dataset.ignored = this.currentIgnored;
+    }
     const content = document.getElementById("stats-content");
     if (!content) return;
     if (!App.currentDeckId) {
       content.innerHTML = "<p>No deck loaded.</p>";
       return;
     }
-    const metrics = Stats.computeMetrics(App.currentDeckId, this.currentDirection);
+    const metrics = Stats.computeMetrics(App.currentDeckId, this.currentDirection, this.currentStarred, this.currentIgnored);
 
      // Compute histogram and top lists
      const deckStats = Storage.getDeckStats(App.currentDeckId) || { cards: {} };
       const cardMap = new Map((App.currentCards || []).map((card) => [card.card_id.toString(), card]));
      const cardData = [];
-     Object.entries(deckStats.cards || {}).forEach(([cardId, cardStats]) => {
-       const dirStat = cardStats[this.currentDirection];
-       if (!dirStat) return;
-       const total = (dirStat.total_correct || 0) + (dirStat.total_incorrect || 0);
-       if (total === 0) return;
-       const ratio = (dirStat.total_correct || 0) / total;
-        const card = cardMap.get(cardId) || { hanzi: cardId, pinyin: "", english: "" };
-      
-        cardData.push({
-          cardId,
-          hanzi: card.hanzi,
-          pinyin: card.pinyin,
-          english: card.english,
-          correct: dirStat.total_correct,
-          incorrect: dirStat.total_incorrect,
-          total,
-          ratio,
-        });
-     });
+      Object.entries(deckStats.cards || {}).forEach(([cardId, cardStats]) => {
+        const starred = cardStats.starred || false;
+        const ignored = cardStats.ignored || false;
+        if (this.currentStarred && !starred) return;
+        if (!this.currentIgnored && ignored) return;
+        else if (this.currentIgnored && !ignored) return;
+        const dirStat = cardStats[this.currentDirection];
+        if (!dirStat) return;
+        const total = (dirStat.total_correct || 0) + (dirStat.total_incorrect || 0);
+        if (total === 0) return;
+        const ratio = (dirStat.total_correct || 0) / total;
+         const card = cardMap.get(cardId) || { hanzi: cardId, pinyin: "", english: "" };
+
+         cardData.push({
+           cardId,
+           hanzi: card.hanzi,
+           pinyin: card.pinyin,
+           english: card.english,
+           correct: dirStat.total_correct,
+           incorrect: dirStat.total_incorrect,
+           total,
+           ratio,
+         });
+      });
 
      // Histogram buckets: 10 buckets (0-9%,10-19%,...,90-100%)
      const buckets = new Array(10).fill(0);
