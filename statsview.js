@@ -115,10 +115,16 @@ const StatsView = {
      const sortedByRatioAsc = cardData.slice().sort((a, b) => a.ratio - b.ratio || b.total - a.total);
      const worst = sortedByRatioAsc.slice(0, 10);
 
-      // Compute due timeline with buckets: Overdue, <=30m, <=1h, <=4h, <=12h, <=24h, <=7d, <=30d, >30d
-      const dueBuckets = [0, 0, 0, 0, 0, 0, 0, 0, 0];
-      (App.currentCards || []).forEach((card) => {
-        const stats = deckStats.cards?.[card.card_id]?.[this.currentDirection];
+       // Compute due timeline with buckets: Overdue, <=30m, <=1h, <=4h, <=12h, <=24h, <=7d, <=30d, >30d
+       const dueBuckets = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+       (App.currentCards || []).forEach((card) => {
+         const cardStats = deckStats.cards?.[card.card_id];
+         const starred = cardStats?.starred || false;
+         const ignored = cardStats?.ignored || false;
+         if (this.currentStarred && !starred) return;
+         if (!this.currentIgnored && ignored) return;
+         else if (this.currentIgnored && !ignored) return;
+         const stats = deckStats.cards?.[card.card_id]?.[this.currentDirection];
         if (!stats) {
           // new card, due now -> count in first bucket (<=30m)
           dueBuckets[0]++;
