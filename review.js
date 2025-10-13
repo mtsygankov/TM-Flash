@@ -286,6 +286,8 @@ const Review = {
         e.preventDefault();
         if (!App.flipped) {
           this.toggleFlip();
+        } else {
+          this.toggleStarFlag();
         }
       } else if (e.code === "ArrowRight") {
         if (App.flipped) {
