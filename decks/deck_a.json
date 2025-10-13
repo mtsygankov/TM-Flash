@@ -4090,13 +4090,14 @@
     },
     {
       "card_id": "word_-290790549519985643",
-      "hanzi": "几 号",
-      "pinyin": "jǐ hào",
+      "hanzi": "几 号 ?",
+      "pinyin": "jǐ hào ?",
       "en_words": [
         "how many",
-        "number"
+        "number/size",
+        "?"
       ],
-      "english": "What date?"
+      "english": "Which size?"
     },
     {
       "card_id": "word_3651601627453931069",
