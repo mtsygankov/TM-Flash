@@ -246,6 +246,13 @@ h2 {
 /*    background-color: #f9f9f9; */
 }
 
+.pos-prefix {
+    font-size: 0.7em;
+    color: #888;
+    font-style: italic;
+    margin-right: 0.5em;
+}
+
 /* Flip and direction visibility */
 #card-table:not(.flipped).direction-ch-en .row-en-words,
 #card-table:not(.flipped).direction-ch-en .row-english {

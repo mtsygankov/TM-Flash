@@ -35,7 +35,10 @@ const Review = {
                 ${enWords.map((word) => `<td>${this.escapeHtml(word)}</td>`).join("")}
             </tr>
             <tr class="row-english">
-                <td colspan="${hanziTokens.length}">${this.escapeHtml(card.english)}</td>
+                <td colspan="${hanziTokens.length}">
+                    ${card.pos ? `<span class="pos-prefix">${this.escapeHtml(card.pos)}</span> ` : ''}
+                    ${this.escapeHtml(card.english)}
+                </td>
             </tr>
         `;
 
