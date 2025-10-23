@@ -407,15 +407,17 @@
                 });
                 backTable.appendChild(backPinyinRow);
                 
-                // Create English words row
-                const enWordsRow = document.createElement('tr');
-                card.en_words.forEach(word => {
-                    const td = document.createElement('td');
-                    td.className = 'en-word';
-                    td.textContent = word;
-                    enWordsRow.appendChild(td);
-                });
-                backTable.appendChild(enWordsRow);
+                // Create English words row (if en_words exists)
+                if (card.en_words) {
+                    const enWordsRow = document.createElement('tr');
+                    card.en_words.forEach(word => {
+                        const td = document.createElement('td');
+                        td.className = 'en-word';
+                        td.textContent = word;
+                        enWordsRow.appendChild(td);
+                    });
+                    backTable.appendChild(enWordsRow);
+                }
                 
                 // Set English translation
                 englishTranslation.textContent = card.english;

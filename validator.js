@@ -53,14 +53,7 @@ const Validator = {
         message: "Missing pinyin",
       });
     }
-    if (!card.en_words) {
-      errors.push({
-        type: "missing_field",
-        cardIndex: index,
-        field: "en_words",
-        message: "Missing en_words",
-      });
-    }
+    // en_words is now optional - no validation required
     if (!card.english) {
       errors.push({
         type: "missing_field",
@@ -90,20 +83,34 @@ const Validator = {
     // Tokenize fields and check token count equality
     const hanziTokens = this.tokenize(card.hanzi);
     const pinyinTokens = this.tokenize(card.pinyin);
-    const enWordsTokens = Array.isArray(card.en_words)
-      ? card.en_words
-      : this.tokenize(card.en_words);
+    
+    // Only check token count if en_words is present
+    if (card.en_words) {
+      const enWordsTokens = Array.isArray(card.en_words)
+        ? card.en_words
+        : this.tokenize(card.en_words);
 
-    if (
-      hanziTokens.length !== pinyinTokens.length ||
-      hanziTokens.length !== enWordsTokens.length
-    ) {
-      errors.push({
-        type: "token_mismatch",
-        cardIndex: index,
-        cardId: card.card_id,
-        message: `Token count mismatch - hanzi: ${hanziTokens.length}, pinyin: ${pinyinTokens.length}, en_words: ${enWordsTokens.length}`,
-      });
+      if (
+        hanziTokens.length !== pinyinTokens.length ||
+        hanziTokens.length !== enWordsTokens.length
+      ) {
+        errors.push({
+          type: "token_mismatch",
+          cardIndex: index,
+          cardId: card.card_id,
+          message: `Token count mismatch - hanzi: ${hanziTokens.length}, pinyin: ${pinyinTokens.length}, en_words: ${enWordsTokens.length}`,
+        });
+      }
+    } else {
+      // If no en_words, just check hanzi/pinyin match
+      if (hanziTokens.length !== pinyinTokens.length) {
+        errors.push({
+          type: "token_mismatch",
+          cardIndex: index,
+          cardId: card.card_id,
+          message: `Token count mismatch - hanzi: ${hanziTokens.length}, pinyin: ${pinyinTokens.length}`,
+        });
+      }
     }
 
     return errors;

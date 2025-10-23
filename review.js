@@ -21,7 +21,7 @@ const Review = {
     }
     const hanziTokens = card.hanzi.split(" ");
     const pinyinTokens = card.pinyin.split(" ");
-    const enWords = card.en_words;
+    const enWords = card.en_words || [];
     const table = document.getElementById("card-table");
     if (!table) return;
     table.innerHTML = `
