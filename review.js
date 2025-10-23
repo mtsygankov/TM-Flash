@@ -47,7 +47,7 @@ const Review = {
     // Render english section separately
     const posPrefix = englishSection.querySelector('.pos-prefix');
     const englishText = englishSection.querySelector('.english-text');
-    posPrefix.textContent = card.pos ? `${this.escapeHtml(card.pos)} ` : '';
+    posPrefix.textContent = card.pos ? `[ ${this.escapeHtml(card.pos)} ] ` : '';
     englishText.textContent = this.escapeHtml(card.english);
 
     // Dynamic font scaling for hanzi/pinyin table (more accurate now)
