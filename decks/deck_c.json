@@ -1,78 +1,7253 @@
 {
-  "deck_name": "Basic Phrases C",
-  "created_at": "2024-01-15T10:00:00Z",
-  "version": "1.0",
-  "description": "Basic Chinese phrases for beginners",
+  "type": "hsk13",
+  "deck_name": "HSK 1-3 Official Vocabulary",
+  "created_at": "2025-10-23T07:59:21.170867",
+  "version": "1",
+  "description": "HSK 1-3 Official Vocabulary with simple tags associated to all items (Daily Life, Descriptions, Grammar, Location, Objects, People, Numbers, Time, Nature, Expressions)",
+  "tag_definitions": {
+    "Daily Life": "Routine activities, common actions, personal care, shopping, transportation, work, school, home life, food, drinks, and everyday interactions. Examples: eat, sleep, work, buy, school, restaurant, money, phone, computer, clothes.",
+    "Descriptions": "Words that describe qualities, states, characteristics, or feelings. Includes adjectives, adverbs, and descriptive verbs. Examples: big, small, happy, beautiful, fast, slow, hot, cold, red, expensive, difficult.",
+    "Grammar": "Functional words that structure sentences but have little meaning on their own. Particles, measure words, conjunctions, prepositions, and grammatical markers. Examples: 的, 了, 不, 在, 和, 就, 也, 还, 个, 这, 那.",
+    "Location": "Physical places, directions, spatial relationships, and positional concepts. Examples: school, hospital, Beijing, inside, outside, above, below, left, right, here, there, home, park.",
+    "Objects": "Tangible, concrete items you can touch or hold. Physical things, possessions, and material items. Examples: book, table, water, apple, car, phone, chair, pen, clothes, food items.",
+    "People": "Human relationships, roles, professions, body parts, and personal pronouns. Examples: mother, teacher, friend, doctor, hand, head, I, you, he, she, they, child, student.",
+    "Numbers": "Numerals, quantities, counting, measurements, and mathematical concepts. Examples: one, ten, hundred, first, some, many, few, half, double, measure words for counting.",
+    "Time": "Temporal concepts, periods, durations, and time-related adverbs. Examples: today, now, year, month, hour, minute, early, late, after, before, always, never, soon.",
+    "Nature": "Natural world, weather, animals, plants, environments, and geographical features. Examples: cat, dog, flower, tree, mountain, river, rain, sun, weather, sky, earth.",
+    "Expressions": "Common phrases, greetings, polite expressions, interjections, and conversational formulas. Examples: hello, thank you, sorry, goodbye, please, yes, no, okay, excuse me, how are you."
+  },
   "cards": [
-  {
-    "card_id": "card_001",
-    "hanzi": "我 爱 你",
-    "pinyin": "wǒ ài nǐ",
-     "en_words": ["I", "love", "you"],
-    "english": "I love you"
-  },
-  {
-    "card_id": "card_002",
-    "hanzi": "你 好",
-    "pinyin": "nǐ hǎo",
-     "en_words": ["you", "good"],
-    "english": "Hello"
-  },
-  {
-    "card_id": "card_003",
-    "hanzi": "谢谢 你",
-    "pinyin": "xièxiè nǐ",
-     "en_words": ["thanks", "you"],
-    "english": "Thank you"
-  },
-  {
-    "card_id": "card_004",
-    "hanzi": "对不起",
-    "pinyin": "duìbùqǐ",
-     "en_words": ["sorry"],
-    "english": "Sorry"
-  },
-   {
-     "card_id": "card_005",
-     "hanzi": "再见",
-     "pinyin": "zàijiàn",
-     "en_words": ["goodbye"],
-     "english": "Goodbye"
-   },
-  {
-    "card_id": "card_006",
-    "hanzi": "我 很 饿",
-    "pinyin": "wǒ hěn è",
-     "en_words": ["I", "very", "hungry"],
-    "english": "I am very hungry"
-  },
-   {
-     "card_id": "card_007",
-     "hanzi": "<Subject> 好不好 ？",
-     "pinyin": "<Subject> hǎobuhǎo ？",
-     "en_words": ["subject", "okay", "?"],
-     "english": "Is <subject> good or not?"
-   },
-  {
-    "card_id": "card_008",
-    "hanzi": "她们 觉得 这 件 衣服 怎么样 ？",
-    "pinyin": "tāmen juéde zhè jiàn yīfu zěnmeyàng ？",
-     "en_words": ["they", "think", "this", "piece", "clothes", "how", "?"],
-    "english": "What do they think of this piece of clothing?"
-  },
-   {
-     "card_id": "card_009",
-     "hanzi": "我 也 不 太 喜欢 。",
-     "pinyin": "wǒ yě bù tài xǐhuan 。",
-     "en_words": ["I", "also", "not", "very", "like", "."],
-     "english": "I don't really like it either."
-   },
-   {
-     "card_id": "card_010",
-     "hanzi": "请问 这 件 衣服 有 红色 的 吗 ？",
-     "pinyin": "qǐngwèn zhè jiàn yīfu yǒu hóngsè de ma ？",
-     "en_words": ["excuse", "me", "this", "piece", "clothes", "have", "red", "?", "?"],
-     "english": "Excuse me, does this piece of clothing come in red?"
-   }
-]
+    {
+      "card_id": "hsk13_efcac1be",
+      "hanzi": "啊",
+      "pinyin": "a",
+      "english": "ah",
+      "pos": "aux.",
+      "hsk": "HSK3",
+      "tags": [
+        "Grammar",
+        "Expressions"
+      ]
+    },
+    {
+      "card_id": "hsk13_e4bb746b",
+      "hanzi": "阿姨",
+      "pinyin": "ā yí",
+      "english": "auntie [mother's younger sister]    ",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "People",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_cb3e9ab3",
+      "hanzi": "矮",
+      "pinyin": "ǎi",
+      "english": "short [height]",
+      "pos": "adj.",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_c9e174f3",
+      "hanzi": "爱",
+      "pinyin": "ài",
+      "english": "to love",
+      "pos": "verb",
+      "hsk": "HSK1",
+      "tags": [
+        "Descriptions",
+        "People",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_ae07459d",
+      "hanzi": "爱好",
+      "pinyin": "ài hào",
+      "english": "interests; hobbies",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_dc0363a4",
+      "hanzi": "安静",
+      "pinyin": "ān jìng",
+      "english": "to be quiet",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_92e2c698",
+      "hanzi": "八",
+      "pinyin": "bā",
+      "english": "eight",
+      "pos": "num.",
+      "hsk": "HSK1",
+      "tags": [
+        "Numbers"
+      ]
+    },
+    {
+      "card_id": "hsk13_ae77069d",
+      "hanzi": "把",
+      "pinyin": "bǎ",
+      "english": "grasp; [measure word for knives]",
+      "pos": "prep.",
+      "hsk": "HSK3",
+      "tags": [
+        "Grammar",
+        "Numbers"
+      ]
+    },
+    {
+      "card_id": "hsk13_238c422f",
+      "hanzi": "吧",
+      "pinyin": "ba",
+      "english": "[makes a suggestion, eg. \"Let's …\")]",
+      "pos": "aux.",
+      "hsk": "HSK2",
+      "tags": [
+        "Grammar",
+        "Expressions"
+      ]
+    },
+    {
+      "card_id": "hsk13_8d97e9e9",
+      "hanzi": "爸爸",
+      "pinyin": "bà ba",
+      "english": "father",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "People",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_a81314d6",
+      "hanzi": "白",
+      "pinyin": "bái",
+      "english": "white",
+      "pos": "adj.",
+      "hsk": "HSK2",
+      "tags": [
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_417e2df2",
+      "hanzi": "百",
+      "pinyin": "bǎi",
+      "english": "hundred",
+      "pos": "num.",
+      "hsk": "HSK2",
+      "tags": [
+        "Numbers"
+      ]
+    },
+    {
+      "card_id": "hsk13_9c1f1ae2",
+      "hanzi": "搬",
+      "pinyin": "bān",
+      "english": "to move",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_6c61f45c",
+      "hanzi": "班",
+      "pinyin": "bān",
+      "english": "class",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Location"
+      ]
+    },
+    {
+      "card_id": "hsk13_e1d4deb0",
+      "hanzi": "半",
+      "pinyin": "bàn",
+      "english": "half",
+      "pos": "num.",
+      "hsk": "HSK3",
+      "tags": [
+        "Numbers",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_ef828986",
+      "hanzi": "办法",
+      "pinyin": "bàn fǎ",
+      "english": "way; method; solution",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_eba09a12",
+      "hanzi": "办公室",
+      "pinyin": "bàn gōng shì",
+      "english": "office",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Location",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_bcf931ed",
+      "hanzi": "帮忙",
+      "pinyin": "bāng máng",
+      "english": "lend a hand",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Expressions"
+      ]
+    },
+    {
+      "card_id": "hsk13_2497edf3",
+      "hanzi": "帮助",
+      "pinyin": "bāng zhù",
+      "english": "to help",
+      "pos": "verb",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Expressions"
+      ]
+    },
+    {
+      "card_id": "hsk13_f57f876b",
+      "hanzi": "包",
+      "pinyin": "bāo",
+      "english": "a packet of; package",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Objects",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_c62303c5",
+      "hanzi": "饱",
+      "pinyin": "bǎo",
+      "english": "full up; eaten to one’s satisfaction",
+      "pos": "adj.",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_e9efe54b",
+      "hanzi": "报纸",
+      "pinyin": "bào zhǐ",
+      "english": "newspaper",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_22efb30d",
+      "hanzi": "被",
+      "pinyin": "bèi",
+      "english": "quilt; by (somebody/something)",
+      "pos": "prep.",
+      "hsk": "HSK3",
+      "tags": [
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_d0a521f4",
+      "hanzi": "北方",
+      "pinyin": "běi fāng",
+      "english": "the north",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Location",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_280db0f5",
+      "hanzi": "北京",
+      "pinyin": "běi jīng",
+      "english": "Beijing",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "Location",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_a82c4944",
+      "hanzi": "杯子",
+      "pinyin": "bēi zi",
+      "english": "cup; glass; mug",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_8944db6f",
+      "hanzi": "本",
+      "pinyin": "běn",
+      "english": "root; [measure word for books]",
+      "pos": "m.w.",
+      "hsk": "HSK1",
+      "tags": [
+        "Grammar",
+        "Numbers"
+      ]
+    },
+    {
+      "card_id": "hsk13_feb01c91",
+      "hanzi": "比",
+      "pinyin": "bǐ",
+      "english": "to compare",
+      "pos": "prep.",
+      "hsk": "HSK2",
+      "tags": [
+        "Grammar",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_39ac22a1",
+      "hanzi": "笔记本",
+      "pinyin": "bǐ jì běn",
+      "english": "notebook",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_38cb3091",
+      "hanzi": "比较",
+      "pinyin": "bǐ jiào",
+      "english": "compare",
+      "pos": "adv.",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions",
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_4d8274dd",
+      "hanzi": "比赛",
+      "pinyin": "bǐ sài",
+      "english": "competition; match",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_2884ca19",
+      "hanzi": "必须",
+      "pinyin": "bì xū",
+      "english": "must",
+      "pos": "adv.",
+      "hsk": "HSK3",
+      "tags": [
+        "Grammar",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_c17321e0",
+      "hanzi": "鼻子",
+      "pinyin": "bí zi",
+      "english": "nose",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "People",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_95f4d78e",
+      "hanzi": "变化",
+      "pinyin": "biàn huà",
+      "english": "change",
+      "pos": "noun / verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_e17a24e0",
+      "hanzi": "别",
+      "pinyin": "bié",
+      "english": "separate",
+      "pos": "adv.",
+      "hsk": "HSK2",
+      "tags": [
+        "Grammar",
+        "Expressions"
+      ]
+    },
+    {
+      "card_id": "hsk13_c6a1d358",
+      "hanzi": "别人",
+      "pinyin": "bié ren",
+      "english": "other people",
+      "pos": "pron.",
+      "hsk": "HSK3",
+      "tags": [
+        "People",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_de085a19",
+      "hanzi": "宾馆",
+      "pinyin": "bīn guǎn",
+      "english": "guesthouse",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Location",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_43f2f613",
+      "hanzi": "冰箱",
+      "pinyin": "bīng xiāng",
+      "english": "fridge",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_38ec3463",
+      "hanzi": "不",
+      "pinyin": "bù",
+      "english": "not; no",
+      "pos": "adv.",
+      "hsk": "HSK1",
+      "tags": [
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_61dbc76a",
+      "hanzi": "不但…而且…",
+      "pinyin": "bù dàn … ér qiě …",
+      "english": "not only……but also……",
+      "pos": "conj.",
+      "hsk": "HSK3",
+      "tags": [
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_41481977",
+      "hanzi": "不客气",
+      "pinyin": "bú kè qi",
+      "english": "you're welcome; impolite",
+      "pos": "--",
+      "hsk": "HSK1",
+      "tags": [
+        "Expressions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_8d8912bf",
+      "hanzi": "菜",
+      "pinyin": "cài",
+      "english": "vegetable",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "Daily Life",
+        "Objects",
+        "Nature"
+      ]
+    },
+    {
+      "card_id": "hsk13_b906260f",
+      "hanzi": "菜单",
+      "pinyin": "cài dān",
+      "english": "menu",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_657b9b3b",
+      "hanzi": "参加",
+      "pinyin": "cān jiā",
+      "english": "to take part",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_30c56baf",
+      "hanzi": "草",
+      "pinyin": "cǎo",
+      "english": "grass",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Nature",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_a3908e97",
+      "hanzi": "层",
+      "pinyin": "céng",
+      "english": "storey",
+      "pos": "m.w.",
+      "hsk": "HSK3",
+      "tags": [
+        "Grammar",
+        "Numbers"
+      ]
+    },
+    {
+      "card_id": "hsk13_ffd46ed9",
+      "hanzi": "茶",
+      "pinyin": "chá",
+      "english": "tea",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_10f43fa9",
+      "hanzi": "差",
+      "pinyin": "chà",
+      "english": "lack; lacking",
+      "pos": "verb / adj.",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_25ffe831",
+      "hanzi": "长",
+      "pinyin": "cháng",
+      "english": "long",
+      "pos": "adj.",
+      "hsk": "HSK2",
+      "tags": [
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_8be51266",
+      "hanzi": "尝",
+      "pinyin": "cháng",
+      "english": "taste",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_e182a41d",
+      "hanzi": "唱歌",
+      "pinyin": "chàng gē",
+      "english": "to sing; singing",
+      "pos": "verb",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_839bfbfd",
+      "hanzi": "超市",
+      "pinyin": "chāo shì",
+      "english": "supermarket",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Location",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_3f9f942a",
+      "hanzi": "衬衫",
+      "pinyin": "chèn shān",
+      "english": "shirt",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_b601a2ec",
+      "hanzi": "成绩",
+      "pinyin": "chéng jì",
+      "english": "results; marks; achievement",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_085b2c5f",
+      "hanzi": "城市",
+      "pinyin": "chéng shì",
+      "english": "city",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Location"
+      ]
+    },
+    {
+      "card_id": "hsk13_c4b9f1de",
+      "hanzi": "吃",
+      "pinyin": "chī",
+      "english": "to eat",
+      "pos": "verb",
+      "hsk": "HSK1",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_9dc2107d",
+      "hanzi": "迟到",
+      "pinyin": "chí dào",
+      "english": "arrive late",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Time",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_1f9fd5e7",
+      "hanzi": "出",
+      "pinyin": "chū",
+      "english": "to go out",
+      "pos": "verb",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_117282d4",
+      "hanzi": "除了",
+      "pinyin": "chú le",
+      "english": "apart from (\"chule...yiwai\" construction)",
+      "pos": "prep.",
+      "hsk": "HSK3",
+      "tags": [
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_171f89ae",
+      "hanzi": "出租车",
+      "pinyin": "chū zū chē",
+      "english": "taxi",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "Daily Life",
+        "Objects",
+        "Location"
+      ]
+    },
+    {
+      "card_id": "hsk13_bd0876e2",
+      "hanzi": "穿",
+      "pinyin": "chuān",
+      "english": "to wear; to put on",
+      "pos": "verb",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_b0a4ad41",
+      "hanzi": "船",
+      "pinyin": "chuán",
+      "english": "boat; ship; ferry",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Objects",
+        "Daily Life",
+        "Location"
+      ]
+    },
+    {
+      "card_id": "hsk13_b59ff930",
+      "hanzi": "春",
+      "pinyin": "chūn",
+      "english": "spring",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Nature",
+        "Time"
+      ]
+    },
+    {
+      "card_id": "hsk13_83b5dd68",
+      "hanzi": "次",
+      "pinyin": "cì",
+      "english": "time",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "Numbers",
+        "Time",
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_69e3e6ed",
+      "hanzi": "词典",
+      "pinyin": "cí diǎn",
+      "english": "dictionary",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Objects",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_22e0cb4e",
+      "hanzi": "从",
+      "pinyin": "cóng",
+      "english": "from; follow; comply with",
+      "pos": "prep.",
+      "hsk": "HSK2",
+      "tags": [
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_1e5fe10b",
+      "hanzi": "聪明",
+      "pinyin": "cōng ming",
+      "english": "clever; intelligent ",
+      "pos": "adj.",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_63503646",
+      "hanzi": "错",
+      "pinyin": "cuò",
+      "english": "wrong",
+      "pos": "adj.",
+      "hsk": "HSK2",
+      "tags": [
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_4ed1b81f",
+      "hanzi": "大",
+      "pinyin": "dà",
+      "english": "big",
+      "pos": "adj.",
+      "hsk": "HSK1",
+      "tags": [
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_d7e5a14c",
+      "hanzi": "打电话",
+      "pinyin": "dǎ diàn huà",
+      "english": "to make a telephone call",
+      "pos": "--",
+      "hsk": "HSK1",
+      "tags": [
+        "Daily Life",
+        "Expressions"
+      ]
+    },
+    {
+      "card_id": "hsk13_f9e875ad",
+      "hanzi": "大家",
+      "pinyin": "dà jiā",
+      "english": "everybody",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "People",
+        "Daily Life",
+        "Expressions"
+      ]
+    },
+    {
+      "card_id": "hsk13_c8ac00ff",
+      "hanzi": "打篮球",
+      "pinyin": "dǎ lán qiú",
+      "english": "play basketball",
+      "pos": "--",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_caf4bad7",
+      "hanzi": "打扫",
+      "pinyin": "dǎ sǎo",
+      "english": "to clean",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_f4d7c957",
+      "hanzi": "打算",
+      "pinyin": "dǎ suàn",
+      "english": "plan; intention",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_fe83a7f6",
+      "hanzi": "带",
+      "pinyin": "dài",
+      "english": "carry",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_6b47a67c",
+      "hanzi": "蛋糕",
+      "pinyin": "dàn gāo",
+      "english": "cake",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_5762ea20",
+      "hanzi": "担心",
+      "pinyin": "dān xīn",
+      "english": "worry",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_8d5b1464",
+      "hanzi": "当然",
+      "pinyin": "dāng rán",
+      "english": "of course",
+      "pos": "adv.",
+      "hsk": "HSK3",
+      "tags": [
+        "Expressions",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_3de30c4c",
+      "hanzi": "到",
+      "pinyin": "dào",
+      "english": "to arrive; to get to",
+      "pos": "verb",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_f064361a",
+      "hanzi": "得",
+      "pinyin": "de",
+      "english": "[particle to connect verb to adverb]",
+      "pos": "aux.",
+      "hsk": "HSK2",
+      "tags": [
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_8285ad75",
+      "hanzi": "地",
+      "pinyin": "de",
+      "english": "...ly [particle to connect adverb to verb]",
+      "pos": "aux.",
+      "hsk": "HSK3",
+      "tags": [
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_cd3bf999",
+      "hanzi": "的",
+      "pinyin": "de",
+      "english": "of",
+      "pos": "aux.",
+      "hsk": "HSK1",
+      "tags": [
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_24c556e7",
+      "hanzi": "灯",
+      "pinyin": "dēng",
+      "english": "lamp",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Objects",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_651dc192",
+      "hanzi": "等",
+      "pinyin": "děng",
+      "english": "wait",
+      "pos": "verb",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_cac12686",
+      "hanzi": "弟弟",
+      "pinyin": "dì di",
+      "english": "younger brother",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "People",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_2fe8e223",
+      "hanzi": "地方",
+      "pinyin": "dì fang",
+      "english": "place",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Location",
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_0e15b1b6",
+      "hanzi": "地铁",
+      "pinyin": "dì tiě",
+      "english": "underground train; tube; metro",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Location",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_7972df8c",
+      "hanzi": "地图",
+      "pinyin": "dì tú",
+      "english": "map",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Objects",
+        "Location",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_80a6c5b2",
+      "hanzi": "第一",
+      "pinyin": "dì yī",
+      "english": "firstly",
+      "pos": "num.",
+      "hsk": "HSK2",
+      "tags": [
+        "Numbers",
+        "Time"
+      ]
+    },
+    {
+      "card_id": "hsk13_ae36226c",
+      "hanzi": "点",
+      "pinyin": "diǎn",
+      "english": "o’clock; spot; dot",
+      "pos": "m.w.",
+      "hsk": "HSK1",
+      "tags": [
+        "Grammar",
+        "Numbers",
+        "Time"
+      ]
+    },
+    {
+      "card_id": "hsk13_3aeadc3f",
+      "hanzi": "电脑",
+      "pinyin": "diàn nǎo",
+      "english": "computer",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_ae5dbb18",
+      "hanzi": "电视",
+      "pinyin": "diàn shì",
+      "english": "TV",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_01761756",
+      "hanzi": "电梯",
+      "pinyin": "diàn tī",
+      "english": "lift; elevator",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Objects",
+        "Location"
+      ]
+    },
+    {
+      "card_id": "hsk13_35a6adce",
+      "hanzi": "电影",
+      "pinyin": "diàn yǐng",
+      "english": "film; movie",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_f988f426",
+      "hanzi": "电子邮件",
+      "pinyin": "diàn zǐ yóu jiàn",
+      "english": "email ",
+      "pos": "--",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_1d22818a",
+      "hanzi": "东",
+      "pinyin": "dōng",
+      "english": "east",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Location"
+      ]
+    },
+    {
+      "card_id": "hsk13_f76d3e28",
+      "hanzi": "冬",
+      "pinyin": "dōng",
+      "english": "winter",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Time",
+        "Nature"
+      ]
+    },
+    {
+      "card_id": "hsk13_73487e60",
+      "hanzi": "懂",
+      "pinyin": "dǒng",
+      "english": "to understand",
+      "pos": "verb",
+      "hsk": "HSK2",
+      "tags": [
+        "Descriptions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_5276cda6",
+      "hanzi": "动物",
+      "pinyin": "dòng wù",
+      "english": "animals",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Nature",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_715d923c",
+      "hanzi": "东西",
+      "pinyin": "dōng xi",
+      "english": "thing",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_5da25f44",
+      "hanzi": "都",
+      "pinyin": "dōu",
+      "english": "both; all",
+      "pos": "adv.",
+      "hsk": "HSK1",
+      "tags": [
+        "Grammar",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_c1f37d49",
+      "hanzi": "读",
+      "pinyin": "dú",
+      "english": "read aloud",
+      "pos": "verb",
+      "hsk": "HSK1",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_ca068d96",
+      "hanzi": "短",
+      "pinyin": "duǎn",
+      "english": "short",
+      "pos": "adj.",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_30b13d06",
+      "hanzi": "段",
+      "pinyin": "duàn",
+      "english": "section; paragraph; [measure word for stories, pieces of music, recordings etc.]",
+      "pos": "m.w.",
+      "hsk": "HSK3",
+      "tags": [
+        "Grammar",
+        "Numbers"
+      ]
+    },
+    {
+      "card_id": "hsk13_ea45b0aa",
+      "hanzi": "锻炼",
+      "pinyin": "duàn liàn",
+      "english": "to engage in physical exercise",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_f33db3e5",
+      "hanzi": "对",
+      "pinyin": "duì",
+      "english": "correct; right",
+      "pos": "prep. / adj.",
+      "hsk": "HSK2",
+      "tags": [
+        "Grammar",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_b25f4c17",
+      "hanzi": "对不起",
+      "pinyin": "duì bu qǐ",
+      "english": "sorry",
+      "pos": "verb",
+      "hsk": "HSK1",
+      "tags": [
+        "Expressions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_709bbcd7",
+      "hanzi": "多",
+      "pinyin": "duō",
+      "english": "much/many; how [+adjective]",
+      "pos": "adj. / pron.",
+      "hsk": "HSK1",
+      "tags": [
+        "Descriptions",
+        "Numbers",
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_f7c419a0",
+      "hanzi": "多么",
+      "pinyin": "duō me",
+      "english": "how ...",
+      "pos": "adv.",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions",
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_fbb95af2",
+      "hanzi": "多少",
+      "pinyin": "duō shǎo",
+      "english": "how much/many?",
+      "pos": "pron.",
+      "hsk": "HSK1",
+      "tags": [
+        "Numbers",
+        "Grammar",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_2e4fb121",
+      "hanzi": "饿",
+      "pinyin": "è",
+      "english": "hungry",
+      "pos": "adj.",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_b5ea2b07",
+      "hanzi": "二",
+      "pinyin": "èr",
+      "english": "two",
+      "pos": "num.",
+      "hsk": "HSK1",
+      "tags": [
+        "Numbers"
+      ]
+    },
+    {
+      "card_id": "hsk13_d16d84a6",
+      "hanzi": "耳朵",
+      "pinyin": "ěr duo",
+      "english": "ears",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "People",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_de671d40",
+      "hanzi": "儿子",
+      "pinyin": "ér zi",
+      "english": "son",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "People",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_5eda8bd6",
+      "hanzi": "发",
+      "pinyin": "fā",
+      "english": "to send (an email)     ",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_d1de5801",
+      "hanzi": "发烧",
+      "pinyin": "fā shāo",
+      "english": "fever; have a fever",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_41daaa66",
+      "hanzi": "发现",
+      "pinyin": "fā xiàn",
+      "english": "discover",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_b4689e3a",
+      "hanzi": "饭店",
+      "pinyin": "fàn diàn",
+      "english": "restaurant",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "Daily Life",
+        "Location",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_00ebb568",
+      "hanzi": "放",
+      "pinyin": "fàng",
+      "english": "to put; set free",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_2ebc8b87",
+      "hanzi": "方便",
+      "pinyin": "fāng biàn",
+      "english": "convenient",
+      "pos": "adj.",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_bbf29478",
+      "hanzi": "房间",
+      "pinyin": "fáng jiān",
+      "english": "room",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Location",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_37e8768c",
+      "hanzi": "放心",
+      "pinyin": "fàng xīn",
+      "english": "relax; feel relieved",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions",
+        "Daily Life",
+        "Expressions"
+      ]
+    },
+    {
+      "card_id": "hsk13_c721a186",
+      "hanzi": "非常",
+      "pinyin": "fēi cháng",
+      "english": "extremely",
+      "pos": "adv.",
+      "hsk": "HSK2",
+      "tags": [
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_cf66a09d",
+      "hanzi": "飞机",
+      "pinyin": "fēi jī",
+      "english": "plane",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "Daily Life",
+        "Objects",
+        "Location"
+      ]
+    },
+    {
+      "card_id": "hsk13_d24695fb",
+      "hanzi": "分",
+      "pinyin": "fēn",
+      "english": "minute",
+      "pos": "m.w. / verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Grammar",
+        "Numbers",
+        "Time"
+      ]
+    },
+    {
+      "card_id": "hsk13_138b1ba6",
+      "hanzi": "分钟",
+      "pinyin": "fēn zhōng",
+      "english": "minute",
+      "pos": "m.w.",
+      "hsk": "HSK1",
+      "tags": [
+        "Time",
+        "Numbers",
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_fb6d3b2a",
+      "hanzi": "附近",
+      "pinyin": "fù jìn",
+      "english": "nearby",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Location",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_5ea9231b",
+      "hanzi": "服务员",
+      "pinyin": "fú wù yuán",
+      "english": "waiter/waitress; attendant",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "People"
+      ]
+    },
+    {
+      "card_id": "hsk13_65afd837",
+      "hanzi": "复习",
+      "pinyin": "fù xí",
+      "english": "revise",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_367359fd",
+      "hanzi": "干净",
+      "pinyin": "gān jìng",
+      "english": "clean",
+      "pos": "adj.",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_a0ddb130",
+      "hanzi": "感冒",
+      "pinyin": "gǎn mào",
+      "english": "to catch a cold",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_722e2fe1",
+      "hanzi": "感兴趣",
+      "pinyin": "gǎn xìng qù",
+      "english": "to be interested (in)",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_d5b1c4e7",
+      "hanzi": "刚才",
+      "pinyin": "gāng cái",
+      "english": "just now",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Time",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_ddc5f9ae",
+      "hanzi": "高",
+      "pinyin": "gāo",
+      "english": "high; tall",
+      "pos": "adj.",
+      "hsk": "HSK2",
+      "tags": [
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_b799613b",
+      "hanzi": "告诉",
+      "pinyin": "gào su",
+      "english": "to tell",
+      "pos": "verb",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Expressions"
+      ]
+    },
+    {
+      "card_id": "hsk13_8b344d7c",
+      "hanzi": "高兴",
+      "pinyin": "gāo xìng",
+      "english": "pleased; happy",
+      "pos": "adj.",
+      "hsk": "HSK1",
+      "tags": [
+        "Descriptions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_b66331fb",
+      "hanzi": "个",
+      "pinyin": "gè",
+      "english": "individual; [general measure word]",
+      "pos": "m.w.",
+      "hsk": "HSK1",
+      "tags": [
+        "Grammar",
+        "Numbers"
+      ]
+    },
+    {
+      "card_id": "hsk13_f26fc521",
+      "hanzi": "哥哥",
+      "pinyin": "gē ge",
+      "english": "elder brother",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "People",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_fb551352",
+      "hanzi": "个子",
+      "pinyin": "gè zi",
+      "english": "height; stature",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "People",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_82f4926d",
+      "hanzi": "给",
+      "pinyin": "gěi",
+      "english": "to give",
+      "pos": "verb",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_d51db2b7",
+      "hanzi": "跟",
+      "pinyin": "gēn",
+      "english": "with",
+      "pos": "prep.",
+      "hsk": "HSK3",
+      "tags": [
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_94418d18",
+      "hanzi": "根据",
+      "pinyin": "gēn jù",
+      "english": "according to",
+      "pos": "prep. / noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_3a0f2872",
+      "hanzi": "更",
+      "pinyin": "gèng",
+      "english": "even more",
+      "pos": "adv.",
+      "hsk": "HSK3",
+      "tags": [
+        "Grammar",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_9c2bce29",
+      "hanzi": "公共汽车",
+      "pinyin": "gōng gòng qì chē",
+      "english": "bus",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Location",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_c0bbb48e",
+      "hanzi": "公斤",
+      "pinyin": "gōng jīn",
+      "english": "kilogram",
+      "pos": "m.w.",
+      "hsk": "HSK3",
+      "tags": [
+        "Grammar",
+        "Numbers"
+      ]
+    },
+    {
+      "card_id": "hsk13_5b9f2801",
+      "hanzi": "公司",
+      "pinyin": "gōng sī",
+      "english": "company; office",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Location",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_6c36fd9f",
+      "hanzi": "公园",
+      "pinyin": "gōng yuán",
+      "english": "park",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Location",
+        "Nature"
+      ]
+    },
+    {
+      "card_id": "hsk13_4965d515",
+      "hanzi": "工作",
+      "pinyin": "gōng zuò",
+      "english": "job; work",
+      "pos": "noun / verb",
+      "hsk": "HSK1",
+      "tags": [
+        "Daily Life",
+        "People"
+      ]
+    },
+    {
+      "card_id": "hsk13_baa5806d",
+      "hanzi": "狗",
+      "pinyin": "gǒu",
+      "english": "dog",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "Nature",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_39dcaa53",
+      "hanzi": "故事",
+      "pinyin": "gù shi",
+      "english": "story; tale; plot",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_f692a92c",
+      "hanzi": "刮风",
+      "pinyin": "guā fēng",
+      "english": "windy",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Nature",
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_9b67312e",
+      "hanzi": "关",
+      "pinyin": "guān",
+      "english": "to close",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_dc4c3a72",
+      "hanzi": "关系",
+      "pinyin": "guān xì",
+      "english": "relationship",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "People",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_76c5fd5d",
+      "hanzi": "关心",
+      "pinyin": "guān xīn",
+      "english": "care about",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions",
+        "Daily Life",
+        "People"
+      ]
+    },
+    {
+      "card_id": "hsk13_e9f51ce7",
+      "hanzi": "关于",
+      "pinyin": "guān yú",
+      "english": "about",
+      "pos": "prep.",
+      "hsk": "HSK3",
+      "tags": [
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_b94a59e0",
+      "hanzi": "贵",
+      "pinyin": "guì",
+      "english": "expensive",
+      "pos": "adj.",
+      "hsk": "HSK2",
+      "tags": [
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_a7a3db61",
+      "hanzi": "过",
+      "pinyin": "guò",
+      "english": "[marker after a verb to indicate experience]",
+      "pos": "aux.",
+      "hsk": "HSK2",
+      "tags": [
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_21b5df33",
+      "hanzi": "过",
+      "pinyin": "guò",
+      "english": "to celebrate (a birthday)",
+      "pos": "verb",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Expressions"
+      ]
+    },
+    {
+      "card_id": "hsk13_d8e0b44b",
+      "hanzi": "国家",
+      "pinyin": "guó jiā",
+      "english": "country",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Location",
+        "People"
+      ]
+    },
+    {
+      "card_id": "hsk13_c6b0c9ff",
+      "hanzi": "过去",
+      "pinyin": "guò qu",
+      "english": "(in the) past",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Time",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_cf5d0b03",
+      "hanzi": "还",
+      "pinyin": "hái",
+      "english": "even",
+      "pos": "adv.",
+      "hsk": "HSK2",
+      "tags": [
+        "Grammar",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_33bef1b1",
+      "hanzi": "害怕",
+      "pinyin": "hài pà",
+      "english": "afraid",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_34d0f01c",
+      "hanzi": "还是",
+      "pinyin": "hái shì",
+      "english": "...or...? [in a question]",
+      "pos": "adv. / link.",
+      "hsk": "HSK3",
+      "tags": [
+        "Grammar",
+        "Expressions"
+      ]
+    },
+    {
+      "card_id": "hsk13_5fad38c9",
+      "hanzi": "孩子",
+      "pinyin": "hái zi",
+      "english": "child; children",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "People",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_cb39e994",
+      "hanzi": "汉语",
+      "pinyin": "hàn yǔ",
+      "english": "Standard Chinese language",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_9890b256",
+      "hanzi": "好",
+      "pinyin": "hǎo",
+      "english": "good",
+      "pos": "adj.",
+      "hsk": "HSK1",
+      "tags": [
+        "Descriptions",
+        "Expressions"
+      ]
+    },
+    {
+      "card_id": "hsk13_a253903e",
+      "hanzi": "号",
+      "pinyin": "hào",
+      "english": "number; day of a month",
+      "pos": "m.w.",
+      "hsk": "HSK1",
+      "tags": [
+        "Grammar",
+        "Numbers",
+        "Time"
+      ]
+    },
+    {
+      "card_id": "hsk13_bab73d74",
+      "hanzi": "好吃",
+      "pinyin": "hǎo chī",
+      "english": "delicious",
+      "pos": "adj.",
+      "hsk": "HSK2",
+      "tags": [
+        "Descriptions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_db79ac64",
+      "hanzi": "喝",
+      "pinyin": "hē",
+      "english": "to drink",
+      "pos": "verb",
+      "hsk": "HSK1",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_063bdbf3",
+      "hanzi": "和",
+      "pinyin": "hé",
+      "english": "and ",
+      "pos": "link. / prep.",
+      "hsk": "HSK1",
+      "tags": [
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_e89a0dff",
+      "hanzi": "黑",
+      "pinyin": "hēi",
+      "english": "black",
+      "pos": "adj.",
+      "hsk": "HSK2",
+      "tags": [
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_14a2531c",
+      "hanzi": "黑板",
+      "pinyin": "hēi bǎn",
+      "english": "blackboard",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Objects",
+        "Daily Life",
+        "Location"
+      ]
+    },
+    {
+      "card_id": "hsk13_98b086e7",
+      "hanzi": "很",
+      "pinyin": "hěn",
+      "english": "very",
+      "pos": "adv.",
+      "hsk": "HSK1",
+      "tags": [
+        "Descriptions",
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_993f8d1f",
+      "hanzi": "红",
+      "pinyin": "hóng",
+      "english": "red",
+      "pos": "adj.",
+      "hsk": "HSK2",
+      "tags": [
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_4cd986ef",
+      "hanzi": "后来",
+      "pinyin": "hòu lái",
+      "english": "afterward",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Time",
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_2565e75d",
+      "hanzi": "后面",
+      "pinyin": "hòu miàn",
+      "english": "at the back; behind; later",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "Location",
+        "Time",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_07b9c91c",
+      "hanzi": "护照",
+      "pinyin": "hù zhào",
+      "english": "passport",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_aef6979b",
+      "hanzi": "花",
+      "pinyin": "huā",
+      "english": "spend",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_f8327634",
+      "hanzi": "花",
+      "pinyin": "huā",
+      "english": "flower",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Nature",
+        "Objects",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_6ed87d98",
+      "hanzi": "画",
+      "pinyin": "huà",
+      "english": "to draw; paint (pictures)",
+      "pos": "noun / verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Objects",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_c3da9669",
+      "hanzi": "坏",
+      "pinyin": "huài",
+      "english": "bad",
+      "pos": "adj.",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_5449a257",
+      "hanzi": "还",
+      "pinyin": "huán",
+      "english": "to return",
+      "pos": "verb",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_4e08f04f",
+      "hanzi": "换",
+      "pinyin": "huàn",
+      "english": "to change (to another one)",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_8921f8ce",
+      "hanzi": "环境",
+      "pinyin": "huán jìng",
+      "english": "environment",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Nature",
+        "Location",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_df5fe2ba",
+      "hanzi": "欢迎",
+      "pinyin": "huān yíng",
+      "english": "to welcome",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Expressions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_9154b9da",
+      "hanzi": "黄河",
+      "pinyin": "huáng hé",
+      "english": "Yellow River",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Nature",
+        "Location"
+      ]
+    },
+    {
+      "card_id": "hsk13_c9264c56",
+      "hanzi": "回",
+      "pinyin": "huí",
+      "english": "to return",
+      "pos": "verb",
+      "hsk": "HSK1",
+      "tags": [
+        "Daily Life",
+        "Location"
+      ]
+    },
+    {
+      "card_id": "hsk13_5fb4d241",
+      "hanzi": "会",
+      "pinyin": "huì",
+      "english": "to know how to; can; meeting",
+      "pos": "verb",
+      "hsk": "HSK1",
+      "tags": [
+        "Grammar",
+        "Daily Life",
+        "Expressions"
+      ]
+    },
+    {
+      "card_id": "hsk13_0c89fc21",
+      "hanzi": "回答",
+      "pinyin": "huí dá",
+      "english": "reply",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Expressions"
+      ]
+    },
+    {
+      "card_id": "hsk13_90543d4c",
+      "hanzi": "会议",
+      "pinyin": "huì yì",
+      "english": "meeting",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_e180415a",
+      "hanzi": "火车站",
+      "pinyin": "huǒ chē zhàn",
+      "english": "railway station",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Location",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_952f52df",
+      "hanzi": "或者",
+      "pinyin": "huò zhě",
+      "english": "perhaps",
+      "pos": "adv.",
+      "hsk": "HSK3",
+      "tags": [
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_3a828a15",
+      "hanzi": "极",
+      "pinyin": "jí",
+      "english": "extreme",
+      "pos": "adv.",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_ae04c5a6",
+      "hanzi": "几",
+      "pinyin": "jǐ",
+      "english": "how much/many? [expecting a small number]",
+      "pos": "pron. / num.",
+      "hsk": "HSK1",
+      "tags": [
+        "Grammar",
+        "Numbers"
+      ]
+    },
+    {
+      "card_id": "hsk13_333cce17",
+      "hanzi": "机场",
+      "pinyin": "jī chǎng",
+      "english": "airport",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Location",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_c665335f",
+      "hanzi": "鸡蛋",
+      "pinyin": "jī dàn",
+      "english": "(chicken) egg",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_80bce84e",
+      "hanzi": "记得",
+      "pinyin": "jì de",
+      "english": "to remember",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_b58c9613",
+      "hanzi": "几乎",
+      "pinyin": "jī hū",
+      "english": "almost",
+      "pos": "adv.",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions",
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_36cdb865",
+      "hanzi": "机会",
+      "pinyin": "jī huì",
+      "english": "opportunity",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_63ed4d54",
+      "hanzi": "季节",
+      "pinyin": "jì jié",
+      "english": "season",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Nature",
+        "Time"
+      ]
+    },
+    {
+      "card_id": "hsk13_dfbb5d68",
+      "hanzi": "家",
+      "pinyin": "jiā",
+      "english": "family; home",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "Daily Life",
+        "Location",
+        "People"
+      ]
+    },
+    {
+      "card_id": "hsk13_b59f46b7",
+      "hanzi": "件",
+      "pinyin": "jiàn",
+      "english": "item; [measure word for items of clothing]",
+      "pos": "m.w.",
+      "hsk": "HSK2",
+      "tags": [
+        "Grammar",
+        "Numbers"
+      ]
+    },
+    {
+      "card_id": "hsk13_38378540",
+      "hanzi": "检查",
+      "pinyin": "jiǎn chá",
+      "english": "inspect",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_baaeabb2",
+      "hanzi": "简单",
+      "pinyin": "jiǎn dān",
+      "english": "simple",
+      "pos": "adj.",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_d2982c38",
+      "hanzi": "健康",
+      "pinyin": "jiàn kāng",
+      "english": "healthy; health",
+      "pos": "adj.",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_6cf9f25e",
+      "hanzi": "见面",
+      "pinyin": "jiàn miàn",
+      "english": "to meet",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Expressions"
+      ]
+    },
+    {
+      "card_id": "hsk13_9c4023a9",
+      "hanzi": "讲",
+      "pinyin": "jiǎng",
+      "english": "speak",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_1769a9be",
+      "hanzi": "教",
+      "pinyin": "jiāo",
+      "english": "to teach",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "People"
+      ]
+    },
+    {
+      "card_id": "hsk13_14a7a31a",
+      "hanzi": "脚",
+      "pinyin": "jiǎo",
+      "english": "foot",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "People",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_70251af8",
+      "hanzi": "角",
+      "pinyin": "jiǎo",
+      "english": "horn; corner; jiao (written) [unit of currency = 0.1 yuan]",
+      "pos": "m.w.",
+      "hsk": "HSK3",
+      "tags": [
+        "Grammar",
+        "Numbers",
+        "Objects",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_4908364f",
+      "hanzi": "叫",
+      "pinyin": "jiào",
+      "english": "to call; to be named",
+      "pos": "verb",
+      "hsk": "HSK1",
+      "tags": [
+        "Daily Life",
+        "People",
+        "Expressions"
+      ]
+    },
+    {
+      "card_id": "hsk13_bb5859e0",
+      "hanzi": "教室",
+      "pinyin": "jiào shì",
+      "english": "classroom",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Location"
+      ]
+    },
+    {
+      "card_id": "hsk13_042805ec",
+      "hanzi": "接",
+      "pinyin": "jiē",
+      "english": "connect",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_65ad97e2",
+      "hanzi": "借",
+      "pinyin": "jiè",
+      "english": "to lend",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_c11fa6db",
+      "hanzi": "街道",
+      "pinyin": "jiē dào",
+      "english": "road",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Location",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_48060d3c",
+      "hanzi": "结婚",
+      "pinyin": "jié hūn",
+      "english": "marry",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "People",
+        "Expressions"
+      ]
+    },
+    {
+      "card_id": "hsk13_436045ad",
+      "hanzi": "姐姐",
+      "pinyin": "jiě jie",
+      "english": "elder sister",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "People",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_a802af3b",
+      "hanzi": "解决",
+      "pinyin": "jiě jué",
+      "english": "to resolve; solve",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_c7d18cc4",
+      "hanzi": "节目",
+      "pinyin": "jié mù",
+      "english": "programme",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_01797b61",
+      "hanzi": "节日",
+      "pinyin": "jié rì",
+      "english": "festival",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Time",
+        "Expressions"
+      ]
+    },
+    {
+      "card_id": "hsk13_363a51d6",
+      "hanzi": "介绍",
+      "pinyin": "jiè shào",
+      "english": "introduce",
+      "pos": "verb",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Expressions"
+      ]
+    },
+    {
+      "card_id": "hsk13_2f6f4b83",
+      "hanzi": "结束",
+      "pinyin": "jié shù",
+      "english": "finish",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_2f23e0a5",
+      "hanzi": "近",
+      "pinyin": "jìn",
+      "english": "near; close by",
+      "pos": "adj.",
+      "hsk": "HSK2",
+      "tags": [
+        "Descriptions",
+        "Location"
+      ]
+    },
+    {
+      "card_id": "hsk13_4eb9016d",
+      "hanzi": "进",
+      "pinyin": "jìn",
+      "english": "to enter",
+      "pos": "verb",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Location"
+      ]
+    },
+    {
+      "card_id": "hsk13_e98301ab",
+      "hanzi": "今天",
+      "pinyin": "jīn tiān",
+      "english": "today",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "Time",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_dc5d374d",
+      "hanzi": "经常",
+      "pinyin": "jīng cháng",
+      "english": "often; regularly",
+      "pos": "adv.",
+      "hsk": "HSK3",
+      "tags": [
+        "Time",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_d84a8c2c",
+      "hanzi": "经过",
+      "pinyin": "jīng guò",
+      "english": "pass through",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions",
+        "Location",
+        "Time"
+      ]
+    },
+    {
+      "card_id": "hsk13_8633d22e",
+      "hanzi": "经理",
+      "pinyin": "jīng lǐ",
+      "english": "manager",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "People",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_5c1fd50e",
+      "hanzi": "九",
+      "pinyin": "jiǔ",
+      "english": "nine",
+      "pos": "num.",
+      "hsk": "HSK1",
+      "tags": [
+        "Numbers"
+      ]
+    },
+    {
+      "card_id": "hsk13_d9fa54df",
+      "hanzi": "久",
+      "pinyin": "jiǔ",
+      "english": "long time",
+      "pos": "adj.",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions",
+        "Time"
+      ]
+    },
+    {
+      "card_id": "hsk13_b035e6bb",
+      "hanzi": "旧",
+      "pinyin": "jiù",
+      "english": "old; former",
+      "pos": "adj.",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_86f8fd72",
+      "hanzi": "就",
+      "pinyin": "jiù",
+      "english": "simply",
+      "pos": "adv.",
+      "hsk": "HSK2",
+      "tags": [
+        "Grammar",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_1a467eb8",
+      "hanzi": "句子",
+      "pinyin": "jù zi",
+      "english": "sentence",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Grammar",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_c7219987",
+      "hanzi": "觉得",
+      "pinyin": "jué de",
+      "english": "to think; feel",
+      "pos": "verb",
+      "hsk": "HSK2",
+      "tags": [
+        "Descriptions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_e6af1265",
+      "hanzi": "决定",
+      "pinyin": "jué dìng",
+      "english": "decide",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_b1671445",
+      "hanzi": "咖啡",
+      "pinyin": "kā fēi",
+      "english": "coffee",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_8c404df3",
+      "hanzi": "开",
+      "pinyin": "kāi",
+      "english": "to switch on; open",
+      "pos": "verb",
+      "hsk": "HSK1",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_ac4216ad",
+      "hanzi": "开始",
+      "pinyin": "kāi shǐ",
+      "english": "to begin",
+      "pos": "verb",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_0005abe4",
+      "hanzi": "看",
+      "pinyin": "kàn",
+      "english": "to see; to read; to watch; to look at",
+      "pos": "verb",
+      "hsk": "HSK1",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_345376c8",
+      "hanzi": "看见",
+      "pinyin": "kàn jiàn",
+      "english": "see",
+      "pos": "verb",
+      "hsk": "HSK1",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_530595f5",
+      "hanzi": "考试",
+      "pinyin": "kǎo shì",
+      "english": "examination",
+      "pos": "verb",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_a9c97b96",
+      "hanzi": "渴",
+      "pinyin": "kě",
+      "english": "thirsty",
+      "pos": "adj.",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_0d6e751a",
+      "hanzi": "刻",
+      "pinyin": "kè",
+      "english": "quarter (of an hour); to carve",
+      "pos": "m.w.",
+      "hsk": "HSK3",
+      "tags": [
+        "Grammar",
+        "Numbers",
+        "Time"
+      ]
+    },
+    {
+      "card_id": "hsk13_b2422587",
+      "hanzi": "课",
+      "pinyin": "kè",
+      "english": "lesson",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Location"
+      ]
+    },
+    {
+      "card_id": "hsk13_4d57bd8f",
+      "hanzi": "可爱",
+      "pinyin": "kě ài",
+      "english": "lovely; loveable",
+      "pos": "adj.",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_bcb42a73",
+      "hanzi": "可能",
+      "pinyin": "kě néng",
+      "english": "perhaps; possibly",
+      "pos": "verb",
+      "hsk": "HSK2",
+      "tags": [
+        "Grammar",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_aa1768c2",
+      "hanzi": "客人",
+      "pinyin": "kè rén",
+      "english": "guest",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "People",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_38450326",
+      "hanzi": "可以",
+      "pinyin": "kě yǐ",
+      "english": "can; may",
+      "pos": "verb",
+      "hsk": "HSK2",
+      "tags": [
+        "Grammar",
+        "Expressions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_7c499f13",
+      "hanzi": "空调",
+      "pinyin": "kōng tiáo",
+      "english": "air-conditioning",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_1a9ee5a6",
+      "hanzi": "口",
+      "pinyin": "kǒu",
+      "english": "mouth; [measure word for family members]",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "People",
+        "Objects",
+        "Grammar",
+        "Numbers"
+      ]
+    },
+    {
+      "card_id": "hsk13_4c47106f",
+      "hanzi": "哭",
+      "pinyin": "kū",
+      "english": "cry",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_232df360",
+      "hanzi": "裤子",
+      "pinyin": "kù zi",
+      "english": "trousers",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_ce4c5453",
+      "hanzi": "块",
+      "pinyin": "kuài",
+      "english": "lump; piece",
+      "pos": "m.w.",
+      "hsk": "HSK1",
+      "tags": [
+        "Grammar",
+        "Numbers"
+      ]
+    },
+    {
+      "card_id": "hsk13_2f868400",
+      "hanzi": "快",
+      "pinyin": "kuài",
+      "english": "fast; quick",
+      "pos": "adj.",
+      "hsk": "HSK2",
+      "tags": [
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_1029bbba",
+      "hanzi": "快乐",
+      "pinyin": "kuài lè",
+      "english": "happy",
+      "pos": "adj.",
+      "hsk": "HSK2",
+      "tags": [
+        "Descriptions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_95d9cdef",
+      "hanzi": "筷子",
+      "pinyin": "kuài zi",
+      "english": "chopsticks",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_fa32f420",
+      "hanzi": "来",
+      "pinyin": "lái",
+      "english": "to come",
+      "pos": "verb",
+      "hsk": "HSK1",
+      "tags": [
+        "Daily Life",
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_45c76df2",
+      "hanzi": "蓝",
+      "pinyin": "lán",
+      "english": "blue",
+      "pos": "adj.",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_f208c56a",
+      "hanzi": "老",
+      "pinyin": "lǎo",
+      "english": "old; aged",
+      "pos": "adj.",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions",
+        "People"
+      ]
+    },
+    {
+      "card_id": "hsk13_0502c92b",
+      "hanzi": "老师",
+      "pinyin": "lǎo shī",
+      "english": "teacher",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "People",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_d7dbcde2",
+      "hanzi": "了",
+      "pinyin": "le",
+      "english": "[makes an exclamation]",
+      "pos": "aux.",
+      "hsk": "HSK1",
+      "tags": [
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_fb8dbac0",
+      "hanzi": "累",
+      "pinyin": "lèi",
+      "english": "tired",
+      "pos": "adj.",
+      "hsk": "HSK2",
+      "tags": [
+        "Descriptions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_5f3023d3",
+      "hanzi": "冷",
+      "pinyin": "lěng",
+      "english": "cold",
+      "pos": "adj.",
+      "hsk": "HSK1",
+      "tags": [
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_3ad70ed4",
+      "hanzi": "离",
+      "pinyin": "lí",
+      "english": "to be distant from; to leave",
+      "pos": "verb",
+      "hsk": "HSK2",
+      "tags": [
+        "Descriptions",
+        "Location",
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_759e92d2",
+      "hanzi": "里",
+      "pinyin": "lǐ",
+      "english": "in",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "Grammar",
+        "Location"
+      ]
+    },
+    {
+      "card_id": "hsk13_af95b247",
+      "hanzi": "离开",
+      "pinyin": "lí kāi",
+      "english": "leave",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_c02c0b40",
+      "hanzi": "历史",
+      "pinyin": "lì shǐ",
+      "english": "history",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions",
+        "Time"
+      ]
+    },
+    {
+      "card_id": "hsk13_e08f2179",
+      "hanzi": "礼物",
+      "pinyin": "lǐ wù",
+      "english": "gift; present",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_8c90e466",
+      "hanzi": "脸",
+      "pinyin": "liǎn",
+      "english": "face",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "People",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_4722c2cd",
+      "hanzi": "练习",
+      "pinyin": "liàn xí",
+      "english": "to practise",
+      "pos": "verb / noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_17437b5a",
+      "hanzi": "两",
+      "pinyin": "liǎng",
+      "english": "two (of something)",
+      "pos": "num.",
+      "hsk": "HSK2",
+      "tags": [
+        "Numbers",
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_b24357ba",
+      "hanzi": "辆",
+      "pinyin": "liàng",
+      "english": "[measure word for vehicles]",
+      "pos": "m.w.",
+      "hsk": "HSK3",
+      "tags": [
+        "Grammar",
+        "Numbers"
+      ]
+    },
+    {
+      "card_id": "hsk13_2b2dca41",
+      "hanzi": "了解",
+      "pinyin": "liǎo jiě",
+      "english": "understand",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_c68a5133",
+      "hanzi": "聊天",
+      "pinyin": "liáo tiān",
+      "english": "to chat",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Expressions"
+      ]
+    },
+    {
+      "card_id": "hsk13_e8ce68a5",
+      "hanzi": "邻居",
+      "pinyin": "lín jū",
+      "english": "neighbour",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "People"
+      ]
+    },
+    {
+      "card_id": "hsk13_c86ff019",
+      "hanzi": "零",
+      "pinyin": "líng",
+      "english": "zero",
+      "pos": "num.",
+      "hsk": "HSK2",
+      "tags": [
+        "Numbers"
+      ]
+    },
+    {
+      "card_id": "hsk13_2c920d70",
+      "hanzi": "六",
+      "pinyin": "liù",
+      "english": "six",
+      "pos": "num.",
+      "hsk": "HSK1",
+      "tags": [
+        "Numbers"
+      ]
+    },
+    {
+      "card_id": "hsk13_77b21507",
+      "hanzi": "留学",
+      "pinyin": "liú xué",
+      "english": "study abroad",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Location"
+      ]
+    },
+    {
+      "card_id": "hsk13_ff714b04",
+      "hanzi": "楼",
+      "pinyin": "lóu",
+      "english": "multi-storied building",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Location",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_31899147",
+      "hanzi": "路",
+      "pinyin": "lù",
+      "english": "road; route; bus number",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Location",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_5c0c9dec",
+      "hanzi": "绿",
+      "pinyin": "lǜ",
+      "english": "green",
+      "pos": "adj.",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_983bc774",
+      "hanzi": "旅游",
+      "pinyin": "lǚ yóu",
+      "english": "tourism",
+      "pos": "verb",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Location",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_849f192d",
+      "hanzi": "马",
+      "pinyin": "mǎ",
+      "english": "horse",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Nature",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_709d47f4",
+      "hanzi": "吗",
+      "pinyin": "ma",
+      "english": "[makes a yes; no question]",
+      "pos": "aux.",
+      "hsk": "HSK1",
+      "tags": [
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_5951c412",
+      "hanzi": "妈妈",
+      "pinyin": "mā ma",
+      "english": "mother",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "People",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_3ff62427",
+      "hanzi": "马上",
+      "pinyin": "mǎ shàng",
+      "english": "immediately",
+      "pos": "adv.",
+      "hsk": "HSK3",
+      "tags": [
+        "Time",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_925aba71",
+      "hanzi": "买",
+      "pinyin": "mǎi",
+      "english": "buy",
+      "pos": "verb",
+      "hsk": "HSK1",
+      "tags": [
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_c545f2e4",
+      "hanzi": "卖",
+      "pinyin": "mài",
+      "english": "to sell",
+      "pos": "verb",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_075df517",
+      "hanzi": "慢",
+      "pinyin": "màn",
+      "english": "slow",
+      "pos": "adj.",
+      "hsk": "HSK2",
+      "tags": [
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_0c9481a3",
+      "hanzi": "满意",
+      "pinyin": "mǎn yì",
+      "english": "pleased; satisfied",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_278d474d",
+      "hanzi": "忙",
+      "pinyin": "máng",
+      "english": "busy",
+      "pos": "adj.",
+      "hsk": "HSK2",
+      "tags": [
+        "Descriptions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_b1386774",
+      "hanzi": "猫",
+      "pinyin": "māo",
+      "english": "cat",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "Nature",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_4a48f311",
+      "hanzi": "帽子",
+      "pinyin": "mào zi",
+      "english": "hat",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_4c692b5c",
+      "hanzi": "每",
+      "pinyin": "měi",
+      "english": "every; each",
+      "pos": "pron.",
+      "hsk": "HSK2",
+      "tags": [
+        "Grammar",
+        "Numbers"
+      ]
+    },
+    {
+      "card_id": "hsk13_b4dee906",
+      "hanzi": "没关系",
+      "pinyin": "méi guān xi",
+      "english": "no problem",
+      "pos": "--",
+      "hsk": "HSK1",
+      "tags": [
+        "Expressions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_922ab5b3",
+      "hanzi": "妹妹",
+      "pinyin": "mèi mei",
+      "english": "younger sister",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "People",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_38bbcef2",
+      "hanzi": "没有",
+      "pinyin": "méi yǒu",
+      "english": "don't have",
+      "pos": "verb / adv.",
+      "hsk": "HSK1",
+      "tags": [
+        "Grammar",
+        "Descriptions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_146a286e",
+      "hanzi": "门",
+      "pinyin": "mén",
+      "english": "door",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Objects",
+        "Location"
+      ]
+    },
+    {
+      "card_id": "hsk13_7a7a21fa",
+      "hanzi": "米",
+      "pinyin": "mǐ",
+      "english": "rice; metre",
+      "pos": "m.w.",
+      "hsk": "HSK3",
+      "tags": [
+        "Grammar",
+        "Numbers",
+        "Objects",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_124729ef",
+      "hanzi": "米饭",
+      "pinyin": "mǐ fàn",
+      "english": "rice [cooked; boiled]",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_c0cd4bb5",
+      "hanzi": "面包",
+      "pinyin": "miàn bāo",
+      "english": "bread",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_9eecfc56",
+      "hanzi": "面条",
+      "pinyin": "miàn tiáo",
+      "english": "noodles",
+      "pos": "--",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_03aa3947",
+      "hanzi": "明白",
+      "pinyin": "míng bai",
+      "english": "to understand",
+      "pos": "verb / adj.",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_8020d733",
+      "hanzi": "明天",
+      "pinyin": "míng tiān",
+      "english": "tomorrow",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "Time",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_d96339bf",
+      "hanzi": "名字",
+      "pinyin": "míng zi",
+      "english": "given name",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "Daily Life",
+        "People",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_f9fdd47a",
+      "hanzi": "拿",
+      "pinyin": "ná",
+      "english": "to take",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_6e9d0582",
+      "hanzi": "哪",
+      "pinyin": "nǎ",
+      "english": "which?",
+      "pos": "pron.",
+      "hsk": "HSK1",
+      "tags": [
+        "Grammar",
+        "Expressions"
+      ]
+    },
+    {
+      "card_id": "hsk13_9fd7ba9d",
+      "hanzi": "那",
+      "pinyin": "nà",
+      "english": "that",
+      "pos": "pron.",
+      "hsk": "HSK1",
+      "tags": [
+        "Grammar",
+        "Location"
+      ]
+    },
+    {
+      "card_id": "hsk13_c099cdfc",
+      "hanzi": "哪儿",
+      "pinyin": "nǎ er",
+      "english": "where?",
+      "pos": "pron.",
+      "hsk": "HSK1",
+      "tags": [
+        "Grammar",
+        "Location",
+        "Expressions"
+      ]
+    },
+    {
+      "card_id": "hsk13_697a3c66",
+      "hanzi": "奶奶",
+      "pinyin": "nǎi nai",
+      "english": "grandmother [father's mother]     ",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "People",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_f837dd30",
+      "hanzi": "男",
+      "pinyin": "nán",
+      "english": "male",
+      "pos": "distinct.",
+      "hsk": "HSK2",
+      "tags": [
+        "People",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_7d3c584c",
+      "hanzi": "难",
+      "pinyin": "nán",
+      "english": "hard; difficult",
+      "pos": "adj.",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_95e6539f",
+      "hanzi": "南",
+      "pinyin": "nán",
+      "english": "south",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Location"
+      ]
+    },
+    {
+      "card_id": "hsk13_690430da",
+      "hanzi": "难过",
+      "pinyin": "nán guò",
+      "english": "have a hard time",
+      "pos": "adj.",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_a1eca4cb",
+      "hanzi": "呢",
+      "pinyin": "ne",
+      "english": "[returns; forwards a question]",
+      "pos": "aux.",
+      "hsk": "HSK1",
+      "tags": [
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_247771f2",
+      "hanzi": "能",
+      "pinyin": "néng",
+      "english": "to be able to; can",
+      "pos": "verb",
+      "hsk": "HSK1",
+      "tags": [
+        "Grammar",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_ab95edd9",
+      "hanzi": "你",
+      "pinyin": "nǐ",
+      "english": "you",
+      "pos": "pron.",
+      "hsk": "HSK1",
+      "tags": [
+        "People",
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_41013605",
+      "hanzi": "年",
+      "pinyin": "nián",
+      "english": "year",
+      "pos": "noun / m.w.",
+      "hsk": "HSK1",
+      "tags": [
+        "Time",
+        "Numbers",
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_68f57a71",
+      "hanzi": "年级",
+      "pinyin": "nián jí",
+      "english": "(school) year/grade",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Time",
+        "Numbers"
+      ]
+    },
+    {
+      "card_id": "hsk13_1a4f8e1e",
+      "hanzi": "年轻",
+      "pinyin": "nián qīng",
+      "english": "young",
+      "pos": "adj.",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions",
+        "People"
+      ]
+    },
+    {
+      "card_id": "hsk13_bd958a42",
+      "hanzi": "鸟",
+      "pinyin": "niǎo",
+      "english": "bird",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Nature",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_044a062c",
+      "hanzi": "您",
+      "pinyin": "nín",
+      "english": "you [polite form]",
+      "pos": "pron.",
+      "hsk": "HSK2",
+      "tags": [
+        "People",
+        "Expressions"
+      ]
+    },
+    {
+      "card_id": "hsk13_a338f150",
+      "hanzi": "牛奶",
+      "pinyin": "niú nǎi",
+      "english": "milk",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_3967ebcd",
+      "hanzi": "女",
+      "pinyin": "nǚ",
+      "english": "female",
+      "pos": "distinct.",
+      "hsk": "HSK2",
+      "tags": [
+        "People",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_d9c4cebc",
+      "hanzi": "女儿",
+      "pinyin": "nǚ ér",
+      "english": "daughter",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "People",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_64aa2f6b",
+      "hanzi": "努力",
+      "pinyin": "nǔ lì",
+      "english": "hardworking",
+      "pos": "adj.",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_ec9c47d9",
+      "hanzi": "爬山",
+      "pinyin": "pá shān",
+      "english": "to climb hills/mountains     ",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Nature",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_c08f003a",
+      "hanzi": "盘子",
+      "pinyin": "pán zi",
+      "english": "tray",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_5b75093c",
+      "hanzi": "胖",
+      "pinyin": "pàng",
+      "english": "fat",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions",
+        "People"
+      ]
+    },
+    {
+      "card_id": "hsk13_8f58a84b",
+      "hanzi": "旁边",
+      "pinyin": "páng biān",
+      "english": "next to",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "Location",
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_546a8d0d",
+      "hanzi": "跑步",
+      "pinyin": "pǎo bù",
+      "english": "running; jogging",
+      "pos": "verb",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_b1c37563",
+      "hanzi": "朋友",
+      "pinyin": "péng you",
+      "english": "friend",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "People",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_3896bd48",
+      "hanzi": "啤酒",
+      "pinyin": "pí jiǔ",
+      "english": "beer",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_504a03e3",
+      "hanzi": "皮鞋",
+      "pinyin": "pí xié",
+      "english": "leather shoes",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_3f28bf33",
+      "hanzi": "便宜",
+      "pinyin": "pián yi",
+      "english": "cheap",
+      "pos": "adj.",
+      "hsk": "HSK2",
+      "tags": [
+        "Descriptions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_713e1623",
+      "hanzi": "票",
+      "pinyin": "piào",
+      "english": "ticket",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_22046900",
+      "hanzi": "漂亮",
+      "pinyin": "piào liang",
+      "english": "beautiful",
+      "pos": "adj.",
+      "hsk": "HSK1",
+      "tags": [
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_6cb64fb1",
+      "hanzi": "苹果",
+      "pinyin": "píng guǒ",
+      "english": "apple",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "Daily Life",
+        "Objects",
+        "Nature"
+      ]
+    },
+    {
+      "card_id": "hsk13_e96316a3",
+      "hanzi": "瓶子",
+      "pinyin": "píng zi",
+      "english": "bottle",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Objects",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_0c07a8e9",
+      "hanzi": "七",
+      "pinyin": "qī",
+      "english": "seven",
+      "pos": "num.",
+      "hsk": "HSK1",
+      "tags": [
+        "Numbers"
+      ]
+    },
+    {
+      "card_id": "hsk13_1cb67a7b",
+      "hanzi": "骑",
+      "pinyin": "qí",
+      "english": "to ride (a bicycle, horse)",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_9e09505f",
+      "hanzi": "起床",
+      "pinyin": "qǐ chuáng",
+      "english": "get up (out of bed)",
+      "pos": "verb",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Time"
+      ]
+    },
+    {
+      "card_id": "hsk13_26ddbbaa",
+      "hanzi": "起飞",
+      "pinyin": "qǐ fēi",
+      "english": "take off [plane]",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_af12de26",
+      "hanzi": "奇怪",
+      "pinyin": "qí guài",
+      "english": "strange",
+      "pos": "adj.",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_ffc31270",
+      "hanzi": "起来",
+      "pinyin": "qǐ lái",
+      "english": "stand up; sit up; rise to one's feet",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_eb3f80e1",
+      "hanzi": "其实",
+      "pinyin": "qí shí",
+      "english": "in fact",
+      "pos": "adv.",
+      "hsk": "HSK3",
+      "tags": [
+        "Grammar",
+        "Expressions"
+      ]
+    },
+    {
+      "card_id": "hsk13_6b7ca10e",
+      "hanzi": "其他",
+      "pinyin": "qí tā",
+      "english": "other",
+      "pos": "pron.",
+      "hsk": "HSK3",
+      "tags": [
+        "Grammar",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_906c8ff4",
+      "hanzi": "妻子",
+      "pinyin": "qī zi",
+      "english": "wife",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "People",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_a2c693bd",
+      "hanzi": "千",
+      "pinyin": "qiān",
+      "english": "thousand",
+      "pos": "num.",
+      "hsk": "HSK2",
+      "tags": [
+        "Numbers"
+      ]
+    },
+    {
+      "card_id": "hsk13_8e6047ef",
+      "hanzi": "钱",
+      "pinyin": "qián",
+      "english": "money",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_4eccfae3",
+      "hanzi": "铅笔",
+      "pinyin": "qiān bǐ",
+      "english": "pencil",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "Objects",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_2d1bba5d",
+      "hanzi": "前面",
+      "pinyin": "qián miàn",
+      "english": "front",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "Location",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_02053035",
+      "hanzi": "晴",
+      "pinyin": "qíng",
+      "english": "fine; sunny",
+      "pos": "adj.",
+      "hsk": "HSK2",
+      "tags": [
+        "Nature",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_02b3df29",
+      "hanzi": "请",
+      "pinyin": "qǐng",
+      "english": "to invite; please",
+      "pos": "verb",
+      "hsk": "HSK1",
+      "tags": [
+        "Expressions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_a3d8aef3",
+      "hanzi": "清楚",
+      "pinyin": "qīng chu",
+      "english": "clear",
+      "pos": "adj.",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_25c527df",
+      "hanzi": "请假",
+      "pinyin": "qǐng jià",
+      "english": "ask for leave",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Expressions"
+      ]
+    },
+    {
+      "card_id": "hsk13_4bd8d2f1",
+      "hanzi": "秋",
+      "pinyin": "qiū",
+      "english": "autumn",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Nature",
+        "Time"
+      ]
+    },
+    {
+      "card_id": "hsk13_33726be5",
+      "hanzi": "去",
+      "pinyin": "qù",
+      "english": "to go",
+      "pos": "verb",
+      "hsk": "HSK1",
+      "tags": [
+        "Daily Life",
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_4c93a6b6",
+      "hanzi": "去年",
+      "pinyin": "qù nián",
+      "english": "last year",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "Time",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_5597c525",
+      "hanzi": "裙子",
+      "pinyin": "qún zi",
+      "english": "skirt",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_a2d18136",
+      "hanzi": "然后",
+      "pinyin": "rán hòu",
+      "english": "and then; after that",
+      "pos": "link.",
+      "hsk": "HSK3",
+      "tags": [
+        "Grammar",
+        "Time"
+      ]
+    },
+    {
+      "card_id": "hsk13_b6868ecc",
+      "hanzi": "让",
+      "pinyin": "ràng",
+      "english": "to let; allow",
+      "pos": "verb",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_84d9d24a",
+      "hanzi": "热",
+      "pinyin": "rè",
+      "english": "hot",
+      "pos": "adj.",
+      "hsk": "HSK1",
+      "tags": [
+        "Descriptions",
+        "Nature",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_59aa58c1",
+      "hanzi": "热情",
+      "pinyin": "rè qíng",
+      "english": "enthusiastic",
+      "pos": "adj.",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions",
+        "People",
+        "Expressions"
+      ]
+    },
+    {
+      "card_id": "hsk13_2503fdcb",
+      "hanzi": "人",
+      "pinyin": "rén",
+      "english": "person; people",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "People",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_af004a93",
+      "hanzi": "认识",
+      "pinyin": "rèn shi",
+      "english": "to know [be familiar with]",
+      "pos": "verb",
+      "hsk": "HSK1",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_37382592",
+      "hanzi": "认为",
+      "pinyin": "rèn wéi",
+      "english": "to think that; consider",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_a4ece0d3",
+      "hanzi": "认真",
+      "pinyin": "rèn zhēn",
+      "english": "earnest",
+      "pos": "adj.",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_7aadc8a9",
+      "hanzi": "日",
+      "pinyin": "rì",
+      "english": "day [date]; sun",
+      "pos": "m.w.",
+      "hsk": "HSK2",
+      "tags": [
+        "Time",
+        "Numbers",
+        "Grammar",
+        "Nature"
+      ]
+    },
+    {
+      "card_id": "hsk13_64dca2b5",
+      "hanzi": "容易",
+      "pinyin": "róng yì",
+      "english": "easy",
+      "pos": "adj.",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_4c57ab87",
+      "hanzi": "如果",
+      "pinyin": "rú guǒ",
+      "english": "if",
+      "pos": "link.",
+      "hsk": "HSK3",
+      "tags": [
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_bc1e306e",
+      "hanzi": "三",
+      "pinyin": "sān",
+      "english": "three",
+      "pos": "num.",
+      "hsk": "HSK1",
+      "tags": [
+        "Numbers"
+      ]
+    },
+    {
+      "card_id": "hsk13_24ffc937",
+      "hanzi": "伞",
+      "pinyin": "sǎn",
+      "english": "umbrella",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_83e85db0",
+      "hanzi": "上",
+      "pinyin": "shàng",
+      "english": "up; above",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "Location",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_e652cb15",
+      "hanzi": "上班",
+      "pinyin": "shàng bān",
+      "english": "start work",
+      "pos": "verb",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_637e5b24",
+      "hanzi": "商店",
+      "pinyin": "shāng diàn",
+      "english": "shop",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "Daily Life",
+        "Location",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_81dd3de6",
+      "hanzi": "上网",
+      "pinyin": "shàng wǎng",
+      "english": "get on the internet",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_8cae7ee8",
+      "hanzi": "上午",
+      "pinyin": "shàng wǔ",
+      "english": "morning",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "Time",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_6df851ca",
+      "hanzi": "少",
+      "pinyin": "shǎo",
+      "english": "few",
+      "pos": "adj.",
+      "hsk": "HSK1",
+      "tags": [
+        "Descriptions",
+        "Numbers"
+      ]
+    },
+    {
+      "card_id": "hsk13_93898028",
+      "hanzi": "谁",
+      "pinyin": "shéi",
+      "english": "who?",
+      "pos": "pron.",
+      "hsk": "HSK1",
+      "tags": [
+        "Grammar",
+        "People",
+        "Expressions"
+      ]
+    },
+    {
+      "card_id": "hsk13_f80c08ff",
+      "hanzi": "什么",
+      "pinyin": "shén me",
+      "english": "what?",
+      "pos": "pron.",
+      "hsk": "HSK1",
+      "tags": [
+        "Grammar",
+        "Expressions"
+      ]
+    },
+    {
+      "card_id": "hsk13_32a379ea",
+      "hanzi": "身体",
+      "pinyin": "shēn tǐ",
+      "english": "body; health",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "People",
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_4cd15529",
+      "hanzi": "生病",
+      "pinyin": "shēng bìng",
+      "english": "ill; sick; unwell",
+      "pos": "verb",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_bd2db7a5",
+      "hanzi": "生气",
+      "pinyin": "shēng qì",
+      "english": "to get angry",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_e1b714f5",
+      "hanzi": "生日",
+      "pinyin": "shēng rì",
+      "english": "birthday",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Time",
+        "People"
+      ]
+    },
+    {
+      "card_id": "hsk13_fe5eed12",
+      "hanzi": "声音",
+      "pinyin": "shēng yīn",
+      "english": "sound",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Objects",
+        "Daily Life",
+        "Nature"
+      ]
+    },
+    {
+      "card_id": "hsk13_63afe470",
+      "hanzi": "十",
+      "pinyin": "shí",
+      "english": "ten",
+      "pos": "num.",
+      "hsk": "HSK1",
+      "tags": [
+        "Numbers"
+      ]
+    },
+    {
+      "card_id": "hsk13_0b07de52",
+      "hanzi": "是",
+      "pinyin": "shì",
+      "english": "to be",
+      "pos": "verb",
+      "hsk": "HSK1",
+      "tags": [
+        "Grammar",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_b56b94ea",
+      "hanzi": "试",
+      "pinyin": "shì",
+      "english": "to try",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_02c4f479",
+      "hanzi": "时候",
+      "pinyin": "shí hou",
+      "english": "[duration of] time",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "Time",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_e833e899",
+      "hanzi": "时间",
+      "pinyin": "shí jiān",
+      "english": "time",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "Time",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_c3e015eb",
+      "hanzi": "世界",
+      "pinyin": "shì jiè",
+      "english": "world",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Location",
+        "Nature",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_4fbb7362",
+      "hanzi": "事情",
+      "pinyin": "shì qing",
+      "english": "matter; affair; thing",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_d1770f72",
+      "hanzi": "瘦",
+      "pinyin": "shòu",
+      "english": "thin",
+      "pos": "adj.",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_1e7a6397",
+      "hanzi": "手表",
+      "pinyin": "shǒu biǎo",
+      "english": "watch",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_c24b7b4b",
+      "hanzi": "手机",
+      "pinyin": "shǒu jī",
+      "english": "mobile phone",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_fc7c020e",
+      "hanzi": "书",
+      "pinyin": "shū",
+      "english": "book",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "Objects",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_0a401f91",
+      "hanzi": "树",
+      "pinyin": "shù",
+      "english": "tree",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Nature",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_ad137fbe",
+      "hanzi": "舒服",
+      "pinyin": "shū fu",
+      "english": "comfortable",
+      "pos": "adj.",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_e0a06b4c",
+      "hanzi": "叔叔",
+      "pinyin": "shū shu",
+      "english": "uncle [father's younger brother]",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "People",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_00f67ceb",
+      "hanzi": "数学",
+      "pinyin": "shù xué",
+      "english": "maths",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_0e58afe0",
+      "hanzi": "刷牙",
+      "pinyin": "shuā yá",
+      "english": "brush teeth",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_5a725d5b",
+      "hanzi": "双",
+      "pinyin": "shuāng",
+      "english": "a pair of",
+      "pos": "m.w.",
+      "hsk": "HSK3",
+      "tags": [
+        "Grammar",
+        "Numbers"
+      ]
+    },
+    {
+      "card_id": "hsk13_7f1c0cbb",
+      "hanzi": "水",
+      "pinyin": "shuǐ",
+      "english": "water",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "Objects",
+        "Nature",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_679dc9ae",
+      "hanzi": "水果",
+      "pinyin": "shuǐ guǒ",
+      "english": "fruit",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "Daily Life",
+        "Objects",
+        "Nature"
+      ]
+    },
+    {
+      "card_id": "hsk13_3f73c036",
+      "hanzi": "睡觉",
+      "pinyin": "shuì jiào",
+      "english": "to go to bed; to sleep",
+      "pos": "verb",
+      "hsk": "HSK1",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_fd18e33f",
+      "hanzi": "水平",
+      "pinyin": "shuǐ píng",
+      "english": "level",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_c1091961",
+      "hanzi": "说",
+      "pinyin": "shuō",
+      "english": "speak",
+      "pos": "verb",
+      "hsk": "HSK1",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_64523ce4",
+      "hanzi": "说话",
+      "pinyin": "shuō huà",
+      "english": "speak",
+      "pos": "verb",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Expressions"
+      ]
+    },
+    {
+      "card_id": "hsk13_f1fb39ce",
+      "hanzi": "四",
+      "pinyin": "sì",
+      "english": "four",
+      "pos": "num.",
+      "hsk": "HSK1",
+      "tags": [
+        "Numbers"
+      ]
+    },
+    {
+      "card_id": "hsk13_4bc27091",
+      "hanzi": "司机",
+      "pinyin": "sī jī",
+      "english": "driver",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "People",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_809e964d",
+      "hanzi": "送",
+      "pinyin": "sòng",
+      "english": "to give (present); deliver; see someone off",
+      "pos": "verb",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Descriptions",
+        "Expressions"
+      ]
+    },
+    {
+      "card_id": "hsk13_235b2a16",
+      "hanzi": "岁",
+      "pinyin": "suì",
+      "english": "year (of crop harvests)",
+      "pos": "m.w.",
+      "hsk": "HSK1",
+      "tags": [
+        "Grammar",
+        "Numbers",
+        "Time"
+      ]
+    },
+    {
+      "card_id": "hsk13_fa982c2d",
+      "hanzi": "虽然…但是…",
+      "pinyin": "suī rán … dàn shì …",
+      "english": "although",
+      "pos": "conj.",
+      "hsk": "HSK2",
+      "tags": [
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_53307f44",
+      "hanzi": "他",
+      "pinyin": "tā",
+      "english": "he; him",
+      "pos": "pron.",
+      "hsk": "HSK1",
+      "tags": [
+        "People",
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_12e8189b",
+      "hanzi": "她",
+      "pinyin": "tā",
+      "english": "she; her",
+      "pos": "pron.",
+      "hsk": "HSK1",
+      "tags": [
+        "People",
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_911395ad",
+      "hanzi": "它",
+      "pinyin": "tā",
+      "english": "it",
+      "pos": "pron.",
+      "hsk": "HSK2",
+      "tags": [
+        "Grammar",
+        "People"
+      ]
+    },
+    {
+      "card_id": "hsk13_67f72b92",
+      "hanzi": "太",
+      "pinyin": "tài",
+      "english": "very",
+      "pos": "adv.",
+      "hsk": "HSK1",
+      "tags": [
+        "Descriptions",
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_4e2051d0",
+      "hanzi": "太阳",
+      "pinyin": "tài yáng",
+      "english": "sun",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Nature",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_7bf3fafd",
+      "hanzi": "特别",
+      "pinyin": "tè bié",
+      "english": "special; especially",
+      "pos": "adv. / adj.",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions",
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_e7b789a4",
+      "hanzi": "疼",
+      "pinyin": "téng",
+      "english": "pain",
+      "pos": "adj.",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_3afb7fa5",
+      "hanzi": "题",
+      "pinyin": "tí",
+      "english": "question",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Descriptions",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_3fc746d1",
+      "hanzi": "提高",
+      "pinyin": "tí gāo",
+      "english": "raise",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_0fed3541",
+      "hanzi": "体育",
+      "pinyin": "tǐ yù",
+      "english": "physical education",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_ba6e102b",
+      "hanzi": "踢足球",
+      "pinyin": "tī zú qiú",
+      "english": "play football",
+      "pos": "--",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_d565f38b",
+      "hanzi": "甜",
+      "pinyin": "tián",
+      "english": "sweet",
+      "pos": "adj.",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_58459132",
+      "hanzi": "天气",
+      "pinyin": "tiān qì",
+      "english": "weather",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "Nature",
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_10144178",
+      "hanzi": "条",
+      "pinyin": "tiáo",
+      "english": "[measure word for long pieces (hair, branch, trousers etc.)]",
+      "pos": "m.w.",
+      "hsk": "HSK3",
+      "tags": [
+        "Grammar",
+        "Numbers"
+      ]
+    },
+    {
+      "card_id": "hsk13_66ff06da",
+      "hanzi": "跳舞",
+      "pinyin": "tiào wǔ",
+      "english": "to dance",
+      "pos": "verb",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_b47d42f9",
+      "hanzi": "听",
+      "pinyin": "tīng",
+      "english": "to listen; hear",
+      "pos": "verb",
+      "hsk": "HSK1",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_d7656e5d",
+      "hanzi": "同事",
+      "pinyin": "tóng shì",
+      "english": "colleague",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "People",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_08bf8d1b",
+      "hanzi": "同学",
+      "pinyin": "tóng xué",
+      "english": "schoolmate; classmate",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "People",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_16b812a7",
+      "hanzi": "同意",
+      "pinyin": "tóng yì",
+      "english": "to agree",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions",
+        "Expressions"
+      ]
+    },
+    {
+      "card_id": "hsk13_8c443d14",
+      "hanzi": "头发",
+      "pinyin": "tóu fa",
+      "english": "hair",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "People",
+        "Objects",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_f485b9df",
+      "hanzi": "突然",
+      "pinyin": "tū rán",
+      "english": "suddenly",
+      "pos": "adj.",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions",
+        "Time"
+      ]
+    },
+    {
+      "card_id": "hsk13_816ea998",
+      "hanzi": "图书馆",
+      "pinyin": "tú shū guǎn",
+      "english": "library",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Location",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_6201f42b",
+      "hanzi": "腿",
+      "pinyin": "tuǐ",
+      "english": "leg",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "People",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_9f87da55",
+      "hanzi": "外",
+      "pinyin": "wài",
+      "english": "outside",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "Location",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_85b2d866",
+      "hanzi": "完",
+      "pinyin": "wán",
+      "english": "to finish; [+ verb indicates completion]",
+      "pos": "verb",
+      "hsk": "HSK2",
+      "tags": [
+        "Grammar",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_76752b23",
+      "hanzi": "玩",
+      "pinyin": "wán",
+      "english": "to play",
+      "pos": "verb",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_d0135e11",
+      "hanzi": "碗",
+      "pinyin": "wǎn",
+      "english": "a bowl of",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Objects",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_cdbeccd7",
+      "hanzi": "万",
+      "pinyin": "wàn",
+      "english": "ten thousand",
+      "pos": "num.",
+      "hsk": "HSK3",
+      "tags": [
+        "Numbers"
+      ]
+    },
+    {
+      "card_id": "hsk13_e3177c18",
+      "hanzi": "完成",
+      "pinyin": "wán chéng",
+      "english": "complete",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_e99531ae",
+      "hanzi": "晚上",
+      "pinyin": "wǎn shang",
+      "english": "evening",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "Time",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_b416e1d0",
+      "hanzi": "往",
+      "pinyin": "wǎng",
+      "english": "towards",
+      "pos": "prep.",
+      "hsk": "HSK2",
+      "tags": [
+        "Grammar",
+        "Location"
+      ]
+    },
+    {
+      "card_id": "hsk13_ef7e3959",
+      "hanzi": "忘记",
+      "pinyin": "wàng jì",
+      "english": "forget",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_e5a993ae",
+      "hanzi": "喂",
+      "pinyin": "wèi",
+      "english": "hello",
+      "pos": "interject.",
+      "hsk": "HSK1",
+      "tags": [
+        "Expressions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_3f87b8a2",
+      "hanzi": "位",
+      "pinyin": "wèi",
+      "english": "position",
+      "pos": "m.w.",
+      "hsk": "HSK3",
+      "tags": [
+        "Grammar",
+        "Numbers"
+      ]
+    },
+    {
+      "card_id": "hsk13_47c60f00",
+      "hanzi": "为",
+      "pinyin": "wèi",
+      "english": "for (someone; something); to do; to be",
+      "pos": "prep.",
+      "hsk": "HSK3",
+      "tags": [
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_5393f96c",
+      "hanzi": "为了",
+      "pinyin": "wèi le",
+      "english": "in order to",
+      "pos": "prep.",
+      "hsk": "HSK3",
+      "tags": [
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_adbddb09",
+      "hanzi": "为什么",
+      "pinyin": "wèi shén me",
+      "english": "why?",
+      "pos": "--",
+      "hsk": "HSK2",
+      "tags": [
+        "Grammar",
+        "Expressions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_e9e424ef",
+      "hanzi": "问",
+      "pinyin": "wèn",
+      "english": "to ask",
+      "pos": "verb",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Expressions"
+      ]
+    },
+    {
+      "card_id": "hsk13_3dbe86a5",
+      "hanzi": "文化",
+      "pinyin": "wén huà",
+      "english": "culture",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_0efea30d",
+      "hanzi": "问题",
+      "pinyin": "wèn tí",
+      "english": "problem",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Descriptions",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_1e1a3596",
+      "hanzi": "我",
+      "pinyin": "wǒ",
+      "english": "I; me",
+      "pos": "pron.",
+      "hsk": "HSK1",
+      "tags": [
+        "People",
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_bc8adabb",
+      "hanzi": "我们",
+      "pinyin": "wǒ men",
+      "english": "we; us",
+      "pos": "pron.",
+      "hsk": "HSK1",
+      "tags": [
+        "People",
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_d6c1bc20",
+      "hanzi": "五",
+      "pinyin": "wǔ",
+      "english": "five",
+      "pos": "num.",
+      "hsk": "HSK1",
+      "tags": [
+        "Numbers"
+      ]
+    },
+    {
+      "card_id": "hsk13_2ccdcd0b",
+      "hanzi": "西",
+      "pinyin": "xī",
+      "english": "west",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Location"
+      ]
+    },
+    {
+      "card_id": "hsk13_2547955d",
+      "hanzi": "洗",
+      "pinyin": "xǐ",
+      "english": "to wash",
+      "pos": "verb",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_a38c05d9",
+      "hanzi": "西瓜",
+      "pinyin": "xī guā",
+      "english": "watermelon",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "Nature",
+        "Objects",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_e1c4ac74",
+      "hanzi": "习惯",
+      "pinyin": "xí guàn",
+      "english": "be used to",
+      "pos": "verb / noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_61989a63",
+      "hanzi": "喜欢",
+      "pinyin": "xǐ huan",
+      "english": "to like",
+      "pos": "verb",
+      "hsk": "HSK1",
+      "tags": [
+        "Descriptions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_57fb0765",
+      "hanzi": "洗手间",
+      "pinyin": "xǐ shǒu jiān",
+      "english": "toilets; washroom",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Location",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_bea56202",
+      "hanzi": "希望",
+      "pinyin": "xī wàng",
+      "english": "hope; wish",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "Descriptions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_46e7026d",
+      "hanzi": "洗澡",
+      "pinyin": "xǐ zǎo",
+      "english": "have a shower; bath",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_ca0debcd",
+      "hanzi": "下",
+      "pinyin": "xià",
+      "english": "down; below",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "Location",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_25829783",
+      "hanzi": "夏",
+      "pinyin": "xià",
+      "english": "summer",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Time",
+        "Nature"
+      ]
+    },
+    {
+      "card_id": "hsk13_6462b598",
+      "hanzi": "下午",
+      "pinyin": "xià wǔ",
+      "english": "afternoon",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "Time",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_7e5f5a2b",
+      "hanzi": "下雨",
+      "pinyin": "xià yǔ",
+      "english": "rain",
+      "pos": "verb",
+      "hsk": "HSK1",
+      "tags": [
+        "Nature",
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_e86059a9",
+      "hanzi": "先",
+      "pinyin": "xiān",
+      "english": "first",
+      "pos": "adv.",
+      "hsk": "HSK3",
+      "tags": [
+        "Grammar",
+        "Time",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_fc622ca6",
+      "hanzi": "先生",
+      "pinyin": "xiān sheng",
+      "english": "Mr; Sir",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "People",
+        "Expressions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_d4a693a1",
+      "hanzi": "现在",
+      "pinyin": "xiàn zài",
+      "english": "now",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "Time",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_74ec7903",
+      "hanzi": "想",
+      "pinyin": "xiǎng",
+      "english": "to want; to think",
+      "pos": "verb",
+      "hsk": "HSK1",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_56d36ae4",
+      "hanzi": "像",
+      "pinyin": "xiàng",
+      "english": "likeness; resemble; look as if",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions",
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_f94451b9",
+      "hanzi": "向",
+      "pinyin": "xiàng",
+      "english": "towards",
+      "pos": "prep.",
+      "hsk": "HSK3",
+      "tags": [
+        "Grammar",
+        "Location"
+      ]
+    },
+    {
+      "card_id": "hsk13_0113b0bd",
+      "hanzi": "香蕉",
+      "pinyin": "xiāng jiāo",
+      "english": "banana",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Objects",
+        "Nature"
+      ]
+    },
+    {
+      "card_id": "hsk13_3696c56b",
+      "hanzi": "相信",
+      "pinyin": "xiāng xìn",
+      "english": "to believe",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_ba424cc0",
+      "hanzi": "小",
+      "pinyin": "xiǎo",
+      "english": "small",
+      "pos": "adj.",
+      "hsk": "HSK1",
+      "tags": [
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_5ed54ee0",
+      "hanzi": "笑",
+      "pinyin": "xiào",
+      "english": "to laugh; smile",
+      "pos": "verb",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_50c7f22c",
+      "hanzi": "小姐",
+      "pinyin": "xiǎo jiě",
+      "english": "Miss; young lady",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "People",
+        "Daily Life",
+        "Expressions"
+      ]
+    },
+    {
+      "card_id": "hsk13_a0248f97",
+      "hanzi": "小时",
+      "pinyin": "xiǎo shí",
+      "english": "hour",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "Time",
+        "Numbers"
+      ]
+    },
+    {
+      "card_id": "hsk13_f987d7b9",
+      "hanzi": "小心",
+      "pinyin": "xiǎo xīn",
+      "english": "take care",
+      "pos": "adj. / verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions",
+        "Expressions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_ae4acb9c",
+      "hanzi": "校长",
+      "pinyin": "xiào zhǎng",
+      "english": "head teacher; principal",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "People",
+        "Daily Life",
+        "Location"
+      ]
+    },
+    {
+      "card_id": "hsk13_043eb562",
+      "hanzi": "些",
+      "pinyin": "xiē",
+      "english": "some",
+      "pos": "m.w.",
+      "hsk": "HSK1",
+      "tags": [
+        "Grammar",
+        "Numbers"
+      ]
+    },
+    {
+      "card_id": "hsk13_276ef218",
+      "hanzi": "写",
+      "pinyin": "xiě",
+      "english": "to write",
+      "pos": "verb",
+      "hsk": "HSK1",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_efaafa84",
+      "hanzi": "谢谢",
+      "pinyin": "xiè xie",
+      "english": "thank you",
+      "pos": "verb",
+      "hsk": "HSK1",
+      "tags": [
+        "Expressions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_e3aa7314",
+      "hanzi": "新",
+      "pinyin": "xīn",
+      "english": "new",
+      "pos": "adj.",
+      "hsk": "HSK2",
+      "tags": [
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_f7c007de",
+      "hanzi": "新闻",
+      "pinyin": "xīn wén",
+      "english": "news",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_a280fc6b",
+      "hanzi": "新鲜",
+      "pinyin": "xīn xiān",
+      "english": "fresh",
+      "pos": "adj.",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_28c4c313",
+      "hanzi": "信用卡",
+      "pinyin": "xìn yòng kǎ",
+      "english": "credit card",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_f0ee7f20",
+      "hanzi": "姓",
+      "pinyin": "xìng",
+      "english": "surname",
+      "pos": "verb",
+      "hsk": "HSK2",
+      "tags": [
+        "People",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_86eacebc",
+      "hanzi": "行李箱",
+      "pinyin": "xíng li xiāng",
+      "english": "trunk [luggage]",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_4453db28",
+      "hanzi": "星期",
+      "pinyin": "xīng qī",
+      "english": "week",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "Time",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_5a7fcb13",
+      "hanzi": "熊猫",
+      "pinyin": "xióng māo",
+      "english": "panda",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Nature",
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_6e32a991",
+      "hanzi": "休息",
+      "pinyin": "xiū xi",
+      "english": "to rest",
+      "pos": "verb",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_85419df4",
+      "hanzi": "需要",
+      "pinyin": "xū yào",
+      "english": "need",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_2cec415a",
+      "hanzi": "选择",
+      "pinyin": "xuǎn zé",
+      "english": "choice",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_e96f1697",
+      "hanzi": "雪",
+      "pinyin": "xuě",
+      "english": "snow",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "Nature",
+        "Descriptions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_6d3490e5",
+      "hanzi": "学生",
+      "pinyin": "xué sheng",
+      "english": "student",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "People",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_9dc8f7f2",
+      "hanzi": "学习",
+      "pinyin": "xué xí",
+      "english": "to learn; to study",
+      "pos": "verb",
+      "hsk": "HSK1",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_a3692b7d",
+      "hanzi": "学校",
+      "pinyin": "xué xiào",
+      "english": "school",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "Daily Life",
+        "Location"
+      ]
+    },
+    {
+      "card_id": "hsk13_ed209c6d",
+      "hanzi": "眼睛",
+      "pinyin": "yǎn jing",
+      "english": "eye",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "People",
+        "Objects",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_e8d50fd3",
+      "hanzi": "颜色",
+      "pinyin": "yán sè",
+      "english": "colour",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "Descriptions",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_12d70553",
+      "hanzi": "羊肉",
+      "pinyin": "yáng ròu",
+      "english": "mutton",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_68778625",
+      "hanzi": "要",
+      "pinyin": "yào",
+      "english": "want; be going to; ask for; demand",
+      "pos": "verb",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_a2756e8d",
+      "hanzi": "药",
+      "pinyin": "yào",
+      "english": "medicine",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_e86c6ed7",
+      "hanzi": "要求",
+      "pinyin": "yāo qiú",
+      "english": "requirement",
+      "pos": "verb / noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_9bb41a19",
+      "hanzi": "也",
+      "pinyin": "yě",
+      "english": "too; also",
+      "pos": "adv.",
+      "hsk": "HSK2",
+      "tags": [
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_cc34cf09",
+      "hanzi": "爷爷",
+      "pinyin": "yé ye",
+      "english": "grandfather [father's father]    ",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "People",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_c38864f3",
+      "hanzi": "一",
+      "pinyin": "yī",
+      "english": "one; once; first; structural word between two of the same verb; as soon as; throughout",
+      "pos": "num.",
+      "hsk": "HSK1",
+      "tags": [
+        "Numbers",
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_e72b62b1",
+      "hanzi": "一般",
+      "pinyin": "yī bān",
+      "english": "ordinary",
+      "pos": "adj.",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_de718605",
+      "hanzi": "一边",
+      "pinyin": "yī biān",
+      "english": "on the one hand …",
+      "pos": "adv.",
+      "hsk": "HSK3",
+      "tags": [
+        "Grammar",
+        "Time"
+      ]
+    },
+    {
+      "card_id": "hsk13_79e94e35",
+      "hanzi": "一点儿",
+      "pinyin": "yī diǎn er",
+      "english": "a bit",
+      "pos": "quantif.",
+      "hsk": "HSK1",
+      "tags": [
+        "Numbers",
+        "Descriptions",
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_3fd9498c",
+      "hanzi": "一定",
+      "pinyin": "yī dìng",
+      "english": "definitely",
+      "pos": "adv. / adj.",
+      "hsk": "HSK3",
+      "tags": [
+        "Grammar",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_b81f15fb",
+      "hanzi": "衣服",
+      "pinyin": "yī fu",
+      "english": "clothes",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_1feceb52",
+      "hanzi": "一共",
+      "pinyin": "yī gòng",
+      "english": "altogether",
+      "pos": "adv.",
+      "hsk": "HSK3",
+      "tags": [
+        "Grammar",
+        "Numbers"
+      ]
+    },
+    {
+      "card_id": "hsk13_6981290c",
+      "hanzi": "一会儿",
+      "pinyin": "yī huì er",
+      "english": "a short while",
+      "pos": "quantif.",
+      "hsk": "HSK3",
+      "tags": [
+        "Time",
+        "Daily Life",
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_eedafb9a",
+      "hanzi": "已经",
+      "pinyin": "yǐ jīng",
+      "english": "already",
+      "pos": "adv.",
+      "hsk": "HSK2",
+      "tags": [
+        "Grammar",
+        "Time"
+      ]
+    },
+    {
+      "card_id": "hsk13_b19bf6dc",
+      "hanzi": "一起",
+      "pinyin": "yì qǐ",
+      "english": "together",
+      "pos": "adv.",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_5df84d25",
+      "hanzi": "以前",
+      "pinyin": "yǐ qián",
+      "english": "before",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Time",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_c8dec407",
+      "hanzi": "医生",
+      "pinyin": "yī shēng",
+      "english": "doctor",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "People",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_70efebe1",
+      "hanzi": "意思",
+      "pinyin": "yì si",
+      "english": "meaning",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "Descriptions",
+        "Grammar",
+        "Expressions"
+      ]
+    },
+    {
+      "card_id": "hsk13_c57446fc",
+      "hanzi": "一下",
+      "pinyin": "yī xià",
+      "english": "[used after a verb] give something a go",
+      "pos": "quantif.",
+      "hsk": "HSK2",
+      "tags": [
+        "Grammar",
+        "Numbers"
+      ]
+    },
+    {
+      "card_id": "hsk13_18ae138c",
+      "hanzi": "一样",
+      "pinyin": "yī yàng",
+      "english": "same; identical",
+      "pos": "adj.",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions",
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_0920481c",
+      "hanzi": "医院",
+      "pinyin": "yī yuàn",
+      "english": "hospital",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "Daily Life",
+        "Location"
+      ]
+    },
+    {
+      "card_id": "hsk13_092b5972",
+      "hanzi": "一直",
+      "pinyin": "yī zhí",
+      "english": "straight on; always",
+      "pos": "adv.",
+      "hsk": "HSK3",
+      "tags": [
+        "Time",
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_55754059",
+      "hanzi": "椅子",
+      "pinyin": "yǐ zi",
+      "english": "chair",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "Objects",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_f067fdec",
+      "hanzi": "阴",
+      "pinyin": "yīn",
+      "english": "cloudy",
+      "pos": "adj.",
+      "hsk": "HSK2",
+      "tags": [
+        "Descriptions",
+        "Nature"
+      ]
+    },
+    {
+      "card_id": "hsk13_5c786083",
+      "hanzi": "银行",
+      "pinyin": "yín háng",
+      "english": "bank",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Location",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_c03ff36f",
+      "hanzi": "饮料",
+      "pinyin": "yǐn liào",
+      "english": "drink",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_e8063629",
+      "hanzi": "因为…所以…",
+      "pinyin": "yīn wèi … suǒ yǐ …",
+      "english": "because",
+      "pos": "conj.",
+      "hsk": "HSK2",
+      "tags": [
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_e1d01a3b",
+      "hanzi": "音乐",
+      "pinyin": "yīn yuè",
+      "english": "music",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_52993790",
+      "hanzi": "应该",
+      "pinyin": "yīng gāi",
+      "english": "should",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Grammar",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_a20f14f4",
+      "hanzi": "影响",
+      "pinyin": "yǐng xiǎng",
+      "english": "influence; to affect",
+      "pos": "verb / noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_817a9c56",
+      "hanzi": "用",
+      "pinyin": "yòng",
+      "english": "to use",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_09e69f80",
+      "hanzi": "有",
+      "pinyin": "yǒu",
+      "english": "to have",
+      "pos": "verb",
+      "hsk": "HSK1",
+      "tags": [
+        "Daily Life",
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_d18e7113",
+      "hanzi": "又",
+      "pinyin": "yòu",
+      "english": "again",
+      "pos": "adv.",
+      "hsk": "HSK3",
+      "tags": [
+        "Grammar",
+        "Time"
+      ]
+    },
+    {
+      "card_id": "hsk13_971a65da",
+      "hanzi": "右边",
+      "pinyin": "yòu bian",
+      "english": "on the right",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "Location",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_1da9333f",
+      "hanzi": "有名",
+      "pinyin": "yǒu míng",
+      "english": "famous",
+      "pos": "adj.",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_684bcf63",
+      "hanzi": "游戏",
+      "pinyin": "yóu xì",
+      "english": "game",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_0b050821",
+      "hanzi": "游泳",
+      "pinyin": "yóu yǒng",
+      "english": "swimming",
+      "pos": "verb",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_8d20b54e",
+      "hanzi": "鱼",
+      "pinyin": "yú",
+      "english": "fish",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "Nature",
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_a813ab59",
+      "hanzi": "遇到",
+      "pinyin": "yù dào",
+      "english": "to meet",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_8e6ddc84",
+      "hanzi": "元",
+      "pinyin": "yuán",
+      "english": "yuan [unit of Chinese currency]; dollar",
+      "pos": "m.w.",
+      "hsk": "HSK3",
+      "tags": [
+        "Grammar",
+        "Numbers",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_2b6c5588",
+      "hanzi": "远",
+      "pinyin": "yuǎn",
+      "english": "far",
+      "pos": "adj.",
+      "hsk": "HSK2",
+      "tags": [
+        "Descriptions",
+        "Location"
+      ]
+    },
+    {
+      "card_id": "hsk13_302b74f6",
+      "hanzi": "愿意",
+      "pinyin": "yuàn yì",
+      "english": "willing",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_79f59d0e",
+      "hanzi": "越",
+      "pinyin": "yuè",
+      "english": "the more...the more….",
+      "pos": "adv.",
+      "hsk": "HSK3",
+      "tags": [
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_e7d78799",
+      "hanzi": "月",
+      "pinyin": "yuè",
+      "english": "month; moon",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "Time",
+        "Nature"
+      ]
+    },
+    {
+      "card_id": "hsk13_29a2e35f",
+      "hanzi": "月亮",
+      "pinyin": "yuè liang",
+      "english": "moon",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Nature",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_f0360447",
+      "hanzi": "运动",
+      "pinyin": "yùn dòng",
+      "english": "sport",
+      "pos": "verb / noun",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_c95bbe30",
+      "hanzi": "在",
+      "pinyin": "zài",
+      "english": "in; at; on",
+      "pos": "verb / prep.",
+      "hsk": "HSK1",
+      "tags": [
+        "Grammar",
+        "Location"
+      ]
+    },
+    {
+      "card_id": "hsk13_bfbccecb",
+      "hanzi": "再",
+      "pinyin": "zài",
+      "english": "again",
+      "pos": "adv.",
+      "hsk": "HSK2",
+      "tags": [
+        "Grammar",
+        "Time",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_c313ff9a",
+      "hanzi": "再见",
+      "pinyin": "zài jiàn",
+      "english": "goodbye",
+      "pos": "verb",
+      "hsk": "HSK1",
+      "tags": [
+        "Expressions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_79a790b9",
+      "hanzi": "早上",
+      "pinyin": "zǎo shang",
+      "english": "early morning",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "Time",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_07874e8b",
+      "hanzi": "怎么",
+      "pinyin": "zěn me",
+      "english": "how?",
+      "pos": "pron.",
+      "hsk": "HSK1",
+      "tags": [
+        "Grammar",
+        "Expressions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_6519ac40",
+      "hanzi": "怎么样",
+      "pinyin": "zěn me yàng",
+      "english": "how about it",
+      "pos": "pron.",
+      "hsk": "HSK1",
+      "tags": [
+        "Expressions",
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_363d3c18",
+      "hanzi": "站",
+      "pinyin": "zhàn",
+      "english": "stand",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_738be74c",
+      "hanzi": "张",
+      "pinyin": "zhāng",
+      "english": "to open up; to spread; [measure word for table, picture, paper etc]",
+      "pos": "m.w.",
+      "hsk": "HSK3",
+      "tags": [
+        "Grammar",
+        "Numbers"
+      ]
+    },
+    {
+      "card_id": "hsk13_3a0cf295",
+      "hanzi": "长",
+      "pinyin": "zhǎng",
+      "english": "to grow",
+      "pos": "verb",
+      "hsk": "HSK2",
+      "tags": [
+        "Descriptions",
+        "Nature"
+      ]
+    },
+    {
+      "card_id": "hsk13_3c2bdbb2",
+      "hanzi": "丈夫",
+      "pinyin": "zhàng fu",
+      "english": "husband",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "People",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_f72ec421",
+      "hanzi": "找",
+      "pinyin": "zhǎo",
+      "english": "to find; to look for",
+      "pos": "verb",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_4794b157",
+      "hanzi": "照顾",
+      "pinyin": "zhào gu",
+      "english": "to look after",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "People",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_1e82f7ab",
+      "hanzi": "着急",
+      "pinyin": "zháo jí",
+      "english": "anxious",
+      "pos": "adj.",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_c0840a89",
+      "hanzi": "照片",
+      "pinyin": "zhào piàn",
+      "english": "photograph",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_c15320f7",
+      "hanzi": "照相机",
+      "pinyin": "zhào xiàng jī",
+      "english": "camera",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Objects",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_6450ee4d",
+      "hanzi": "这",
+      "pinyin": "zhè",
+      "english": "this",
+      "pos": "pron.",
+      "hsk": "HSK1",
+      "tags": [
+        "Grammar",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_967d32ae",
+      "hanzi": "着",
+      "pinyin": "zhe",
+      "english": "-ing",
+      "pos": "aux.",
+      "hsk": "HSK2",
+      "tags": [
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_86b25af0",
+      "hanzi": "真",
+      "pinyin": "zhēn",
+      "english": "real; so (+adjective)",
+      "pos": "adv.",
+      "hsk": "HSK2",
+      "tags": [
+        "Descriptions",
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_62527943",
+      "hanzi": "正在",
+      "pinyin": "zhèng zài",
+      "english": "to be in the process of",
+      "pos": "adv.",
+      "hsk": "HSK2",
+      "tags": [
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_cc2d8a46",
+      "hanzi": "只",
+      "pinyin": "zhī",
+      "english": "individual [measure word for small animals]",
+      "pos": "m.w.",
+      "hsk": "HSK2",
+      "tags": [
+        "Grammar",
+        "Numbers"
+      ]
+    },
+    {
+      "card_id": "hsk13_8e33b12d",
+      "hanzi": "只",
+      "pinyin": "zhǐ",
+      "english": "only",
+      "pos": "adv.",
+      "hsk": "HSK2",
+      "tags": [
+        "Grammar",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_3fa6cbd0",
+      "hanzi": "知道",
+      "pinyin": "zhī dào",
+      "english": "know; realise; be aware of",
+      "pos": "verb",
+      "hsk": "HSK2",
+      "tags": [
+        "Descriptions",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_01413147",
+      "hanzi": "只有…才…",
+      "pinyin": "zhǐ yǒu … cái …",
+      "english": "only if…then...",
+      "pos": "conj.",
+      "hsk": "HSK3",
+      "tags": [
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_62344742",
+      "hanzi": "种",
+      "pinyin": "zhǒng",
+      "english": "kind",
+      "pos": "m.w.",
+      "hsk": "HSK3",
+      "tags": [
+        "Grammar",
+        "Numbers"
+      ]
+    },
+    {
+      "card_id": "hsk13_73875956",
+      "hanzi": "中国",
+      "pinyin": "zhōng guó",
+      "english": "China",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "Location",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_0f0445da",
+      "hanzi": "中间",
+      "pinyin": "zhōng jiān",
+      "english": "middle",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Location",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_32126d27",
+      "hanzi": "中文",
+      "pinyin": "zhōng wén",
+      "english": "Chinese [written language]",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Objects",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_e7629560",
+      "hanzi": "中午",
+      "pinyin": "zhōng wǔ",
+      "english": "midday",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "Time",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_e8c77536",
+      "hanzi": "重要",
+      "pinyin": "zhòng yào",
+      "english": "important",
+      "pos": "adj.",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_90fdaa64",
+      "hanzi": "终于",
+      "pinyin": "zhōng yú",
+      "english": "at last",
+      "pos": "adv.",
+      "hsk": "HSK3",
+      "tags": [
+        "Time",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_499852da",
+      "hanzi": "周末",
+      "pinyin": "zhōu mò",
+      "english": "weekend",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Time",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_fa748627",
+      "hanzi": "住",
+      "pinyin": "zhù",
+      "english": "to live; stay (a number of nights)",
+      "pos": "verb",
+      "hsk": "HSK1",
+      "tags": [
+        "Daily Life",
+        "Location"
+      ]
+    },
+    {
+      "card_id": "hsk13_8ef8851a",
+      "hanzi": "主要",
+      "pinyin": "zhǔ yào",
+      "english": "mainly",
+      "pos": "adj.",
+      "hsk": "HSK3",
+      "tags": [
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_131a321e",
+      "hanzi": "注意",
+      "pinyin": "zhù yì",
+      "english": "take note of",
+      "pos": "verb",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_28c70238",
+      "hanzi": "准备",
+      "pinyin": "zhǔn bèi",
+      "english": "to prepare",
+      "pos": "verb",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_4ab238e7",
+      "hanzi": "桌子",
+      "pinyin": "zhuō zi",
+      "english": "table",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "Objects",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_87621650",
+      "hanzi": "字",
+      "pinyin": "zì",
+      "english": "(Chinese) character",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_aa083cc7",
+      "hanzi": "自己",
+      "pinyin": "zì jǐ",
+      "english": "self; oneself",
+      "pos": "pron.",
+      "hsk": "HSK3",
+      "tags": [
+        "People",
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_38e7a52e",
+      "hanzi": "自行车",
+      "pinyin": "zì xíng chē",
+      "english": "bicycle",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_a46fb3ae",
+      "hanzi": "总是",
+      "pinyin": "zǒng shì",
+      "english": "always",
+      "pos": "adv.",
+      "hsk": "HSK3",
+      "tags": [
+        "Time",
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_4bdaf05d",
+      "hanzi": "走",
+      "pinyin": "zǒu",
+      "english": "go; walk",
+      "pos": "verb",
+      "hsk": "HSK2",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_f752dd07",
+      "hanzi": "嘴",
+      "pinyin": "zuǐ",
+      "english": "mouth",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "People",
+        "Objects"
+      ]
+    },
+    {
+      "card_id": "hsk13_00cd414b",
+      "hanzi": "最",
+      "pinyin": "zuì",
+      "english": "most",
+      "pos": "adv.",
+      "hsk": "HSK2",
+      "tags": [
+        "Grammar",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_4e3f0889",
+      "hanzi": "最后",
+      "pinyin": "zuì hòu",
+      "english": "lastly",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Time",
+        "Grammar"
+      ]
+    },
+    {
+      "card_id": "hsk13_0942d7b5",
+      "hanzi": "最近",
+      "pinyin": "zuì jìn",
+      "english": "recently",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Time",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_e1004ec0",
+      "hanzi": "坐",
+      "pinyin": "zuò",
+      "english": "to sit",
+      "pos": "verb",
+      "hsk": "HSK1",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_7fd20772",
+      "hanzi": "做",
+      "pinyin": "zuò",
+      "english": "to do; to be; become (an occupation) ",
+      "pos": "verb",
+      "hsk": "HSK1",
+      "tags": [
+        "Daily Life",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_2c0fde70",
+      "hanzi": "左边",
+      "pinyin": "zuǒ bian",
+      "english": "on the left",
+      "pos": "noun",
+      "hsk": "HSK2",
+      "tags": [
+        "Location",
+        "Descriptions"
+      ]
+    },
+    {
+      "card_id": "hsk13_91e8d1a5",
+      "hanzi": "昨天",
+      "pinyin": "zuó tiān",
+      "english": "yesterday",
+      "pos": "noun",
+      "hsk": "HSK1",
+      "tags": [
+        "Time",
+        "Daily Life"
+      ]
+    },
+    {
+      "card_id": "hsk13_8ae32362",
+      "hanzi": "作业",
+      "pinyin": "zuò yè",
+      "english": "homework",
+      "pos": "noun",
+      "hsk": "HSK3",
+      "tags": [
+        "Daily Life",
+        "Objects"
+      ]
+    }
+  ]
 }
