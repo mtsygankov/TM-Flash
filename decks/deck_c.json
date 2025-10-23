@@ -1,7 +1,7 @@
 {
   "type": "hsk13",
   "deck_name": "HSK 1-3 Official Vocabulary",
-  "created_at": "2025-10-23T07:59:21.170867",
+  "created_at": "2025-10-23T12:44:44.886267",
   "version": "1",
   "description": "HSK 1-3 Official Vocabulary with simple tags associated to all items (Daily Life, Descriptions, Grammar, Location, Objects, People, Numbers, Time, Nature, Expressions)",
   "tag_definitions": {
@@ -18,7 +18,7 @@
   },
   "cards": [
     {
-      "card_id": "hsk13_efcac1be",
+      "card_id": "hsk13_851144c2",
       "hanzi": "啊",
       "pinyin": "a",
       "english": "ah",
@@ -30,10 +30,10 @@
       ]
     },
     {
-      "card_id": "hsk13_e4bb746b",
-      "hanzi": "阿姨",
+      "card_id": "hsk13_c60377d8",
+      "hanzi": "阿 姨",
       "pinyin": "ā yí",
-      "english": "auntie [mother's younger sister]    ",
+      "english": "auntie [mother's younger sister]",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -42,7 +42,7 @@
       ]
     },
     {
-      "card_id": "hsk13_cb3e9ab3",
+      "card_id": "hsk13_c6d00d06",
       "hanzi": "矮",
       "pinyin": "ǎi",
       "english": "short [height]",
@@ -53,7 +53,7 @@
       ]
     },
     {
-      "card_id": "hsk13_c9e174f3",
+      "card_id": "hsk13_6db1f201",
       "hanzi": "爱",
       "pinyin": "ài",
       "english": "to love",
@@ -66,8 +66,8 @@
       ]
     },
     {
-      "card_id": "hsk13_ae07459d",
-      "hanzi": "爱好",
+      "card_id": "hsk13_bbf43dc0",
+      "hanzi": "爱 好",
       "pinyin": "ài hào",
       "english": "interests; hobbies",
       "pos": "noun",
@@ -78,8 +78,8 @@
       ]
     },
     {
-      "card_id": "hsk13_dc0363a4",
-      "hanzi": "安静",
+      "card_id": "hsk13_00d61973",
+      "hanzi": "安 静",
       "pinyin": "ān jìng",
       "english": "to be quiet",
       "pos": "verb",
@@ -90,7 +90,7 @@
       ]
     },
     {
-      "card_id": "hsk13_92e2c698",
+      "card_id": "hsk13_d0084be1",
       "hanzi": "八",
       "pinyin": "bā",
       "english": "eight",
@@ -101,7 +101,7 @@
       ]
     },
     {
-      "card_id": "hsk13_ae77069d",
+      "card_id": "hsk13_5a1f459f",
       "hanzi": "把",
       "pinyin": "bǎ",
       "english": "grasp; [measure word for knives]",
@@ -113,7 +113,7 @@
       ]
     },
     {
-      "card_id": "hsk13_238c422f",
+      "card_id": "hsk13_8540f426",
       "hanzi": "吧",
       "pinyin": "ba",
       "english": "[makes a suggestion, eg. \"Let's …\")]",
@@ -125,8 +125,8 @@
       ]
     },
     {
-      "card_id": "hsk13_8d97e9e9",
-      "hanzi": "爸爸",
+      "card_id": "hsk13_984dee4a",
+      "hanzi": "爸 爸",
       "pinyin": "bà ba",
       "english": "father",
       "pos": "noun",
@@ -137,7 +137,7 @@
       ]
     },
     {
-      "card_id": "hsk13_a81314d6",
+      "card_id": "hsk13_13340715",
       "hanzi": "白",
       "pinyin": "bái",
       "english": "white",
@@ -148,7 +148,7 @@
       ]
     },
     {
-      "card_id": "hsk13_417e2df2",
+      "card_id": "hsk13_d254104e",
       "hanzi": "百",
       "pinyin": "bǎi",
       "english": "hundred",
@@ -159,7 +159,7 @@
       ]
     },
     {
-      "card_id": "hsk13_9c1f1ae2",
+      "card_id": "hsk13_f4078ed1",
       "hanzi": "搬",
       "pinyin": "bān",
       "english": "to move",
@@ -171,7 +171,7 @@
       ]
     },
     {
-      "card_id": "hsk13_6c61f45c",
+      "card_id": "hsk13_dd08259c",
       "hanzi": "班",
       "pinyin": "bān",
       "english": "class",
@@ -183,7 +183,7 @@
       ]
     },
     {
-      "card_id": "hsk13_e1d4deb0",
+      "card_id": "hsk13_aa36fdb0",
       "hanzi": "半",
       "pinyin": "bàn",
       "english": "half",
@@ -195,8 +195,8 @@
       ]
     },
     {
-      "card_id": "hsk13_ef828986",
-      "hanzi": "办法",
+      "card_id": "hsk13_acffc7f9",
+      "hanzi": "办 法",
       "pinyin": "bàn fǎ",
       "english": "way; method; solution",
       "pos": "noun",
@@ -207,8 +207,8 @@
       ]
     },
     {
-      "card_id": "hsk13_eba09a12",
-      "hanzi": "办公室",
+      "card_id": "hsk13_467d69f1",
+      "hanzi": "办 公 室",
       "pinyin": "bàn gōng shì",
       "english": "office",
       "pos": "noun",
@@ -220,8 +220,8 @@
       ]
     },
     {
-      "card_id": "hsk13_bcf931ed",
-      "hanzi": "帮忙",
+      "card_id": "hsk13_3bb871dd",
+      "hanzi": "帮 忙",
       "pinyin": "bāng máng",
       "english": "lend a hand",
       "pos": "verb",
@@ -232,8 +232,8 @@
       ]
     },
     {
-      "card_id": "hsk13_2497edf3",
-      "hanzi": "帮助",
+      "card_id": "hsk13_ae9939d2",
+      "hanzi": "帮 助",
       "pinyin": "bāng zhù",
       "english": "to help",
       "pos": "verb",
@@ -244,7 +244,7 @@
       ]
     },
     {
-      "card_id": "hsk13_f57f876b",
+      "card_id": "hsk13_4b4a5bea",
       "hanzi": "包",
       "pinyin": "bāo",
       "english": "a packet of; package",
@@ -256,7 +256,7 @@
       ]
     },
     {
-      "card_id": "hsk13_c62303c5",
+      "card_id": "hsk13_3288e7a7",
       "hanzi": "饱",
       "pinyin": "bǎo",
       "english": "full up; eaten to one’s satisfaction",
@@ -268,8 +268,8 @@
       ]
     },
     {
-      "card_id": "hsk13_e9efe54b",
-      "hanzi": "报纸",
+      "card_id": "hsk13_908e8d37",
+      "hanzi": "报 纸",
       "pinyin": "bào zhǐ",
       "english": "newspaper",
       "pos": "noun",
@@ -280,7 +280,7 @@
       ]
     },
     {
-      "card_id": "hsk13_22efb30d",
+      "card_id": "hsk13_cfdb072a",
       "hanzi": "被",
       "pinyin": "bèi",
       "english": "quilt; by (somebody/something)",
@@ -291,8 +291,8 @@
       ]
     },
     {
-      "card_id": "hsk13_d0a521f4",
-      "hanzi": "北方",
+      "card_id": "hsk13_a3a06027",
+      "hanzi": "北 方",
       "pinyin": "běi fāng",
       "english": "the north",
       "pos": "noun",
@@ -303,8 +303,8 @@
       ]
     },
     {
-      "card_id": "hsk13_280db0f5",
-      "hanzi": "北京",
+      "card_id": "hsk13_28576186",
+      "hanzi": "北 京",
       "pinyin": "běi jīng",
       "english": "Beijing",
       "pos": "noun",
@@ -315,8 +315,8 @@
       ]
     },
     {
-      "card_id": "hsk13_a82c4944",
-      "hanzi": "杯子",
+      "card_id": "hsk13_06b1879a",
+      "hanzi": "杯 子",
       "pinyin": "bēi zi",
       "english": "cup; glass; mug",
       "pos": "noun",
@@ -327,7 +327,7 @@
       ]
     },
     {
-      "card_id": "hsk13_8944db6f",
+      "card_id": "hsk13_b84aa570",
       "hanzi": "本",
       "pinyin": "běn",
       "english": "root; [measure word for books]",
@@ -339,7 +339,7 @@
       ]
     },
     {
-      "card_id": "hsk13_feb01c91",
+      "card_id": "hsk13_ff455447",
       "hanzi": "比",
       "pinyin": "bǐ",
       "english": "to compare",
@@ -351,8 +351,8 @@
       ]
     },
     {
-      "card_id": "hsk13_39ac22a1",
-      "hanzi": "笔记本",
+      "card_id": "hsk13_989eb7a4",
+      "hanzi": "笔 记 本",
       "pinyin": "bǐ jì běn",
       "english": "notebook",
       "pos": "noun",
@@ -363,8 +363,8 @@
       ]
     },
     {
-      "card_id": "hsk13_38cb3091",
-      "hanzi": "比较",
+      "card_id": "hsk13_c7d42e02",
+      "hanzi": "比 较",
       "pinyin": "bǐ jiào",
       "english": "compare",
       "pos": "adv.",
@@ -375,8 +375,8 @@
       ]
     },
     {
-      "card_id": "hsk13_4d8274dd",
-      "hanzi": "比赛",
+      "card_id": "hsk13_cfcf1c56",
+      "hanzi": "比 赛",
       "pinyin": "bǐ sài",
       "english": "competition; match",
       "pos": "noun",
@@ -387,8 +387,8 @@
       ]
     },
     {
-      "card_id": "hsk13_2884ca19",
-      "hanzi": "必须",
+      "card_id": "hsk13_cffde6ac",
+      "hanzi": "必 须",
       "pinyin": "bì xū",
       "english": "must",
       "pos": "adv.",
@@ -399,8 +399,8 @@
       ]
     },
     {
-      "card_id": "hsk13_c17321e0",
-      "hanzi": "鼻子",
+      "card_id": "hsk13_0d049eda",
+      "hanzi": "鼻 子",
       "pinyin": "bí zi",
       "english": "nose",
       "pos": "noun",
@@ -411,8 +411,8 @@
       ]
     },
     {
-      "card_id": "hsk13_95f4d78e",
-      "hanzi": "变化",
+      "card_id": "hsk13_77474dec",
+      "hanzi": "变 化",
       "pinyin": "biàn huà",
       "english": "change",
       "pos": "noun / verb",
@@ -423,7 +423,7 @@
       ]
     },
     {
-      "card_id": "hsk13_e17a24e0",
+      "card_id": "hsk13_daf6ae5d",
       "hanzi": "别",
       "pinyin": "bié",
       "english": "separate",
@@ -435,8 +435,8 @@
       ]
     },
     {
-      "card_id": "hsk13_c6a1d358",
-      "hanzi": "别人",
+      "card_id": "hsk13_8435b9a5",
+      "hanzi": "别 人",
       "pinyin": "bié ren",
       "english": "other people",
       "pos": "pron.",
@@ -447,8 +447,8 @@
       ]
     },
     {
-      "card_id": "hsk13_de085a19",
-      "hanzi": "宾馆",
+      "card_id": "hsk13_5b0f21cc",
+      "hanzi": "宾 馆",
       "pinyin": "bīn guǎn",
       "english": "guesthouse",
       "pos": "noun",
@@ -460,8 +460,8 @@
       ]
     },
     {
-      "card_id": "hsk13_43f2f613",
-      "hanzi": "冰箱",
+      "card_id": "hsk13_95885a3d",
+      "hanzi": "冰 箱",
       "pinyin": "bīng xiāng",
       "english": "fridge",
       "pos": "noun",
@@ -472,7 +472,7 @@
       ]
     },
     {
-      "card_id": "hsk13_38ec3463",
+      "card_id": "hsk13_4d22051c",
       "hanzi": "不",
       "pinyin": "bù",
       "english": "not; no",
@@ -483,8 +483,8 @@
       ]
     },
     {
-      "card_id": "hsk13_61dbc76a",
-      "hanzi": "不但…而且…",
+      "card_id": "hsk13_2bc2aa29",
+      "hanzi": "不 但 … 而 且 …",
       "pinyin": "bù dàn … ér qiě …",
       "english": "not only……but also……",
       "pos": "conj.",
@@ -494,8 +494,8 @@
       ]
     },
     {
-      "card_id": "hsk13_41481977",
-      "hanzi": "不客气",
+      "card_id": "hsk13_6cdc5cca",
+      "hanzi": "不 客 气",
       "pinyin": "bú kè qi",
       "english": "you're welcome; impolite",
       "pos": "--",
@@ -506,7 +506,7 @@
       ]
     },
     {
-      "card_id": "hsk13_8d8912bf",
+      "card_id": "hsk13_56768243",
       "hanzi": "菜",
       "pinyin": "cài",
       "english": "vegetable",
@@ -519,8 +519,8 @@
       ]
     },
     {
-      "card_id": "hsk13_b906260f",
-      "hanzi": "菜单",
+      "card_id": "hsk13_cab53c8a",
+      "hanzi": "菜 单",
       "pinyin": "cài dān",
       "english": "menu",
       "pos": "noun",
@@ -531,8 +531,8 @@
       ]
     },
     {
-      "card_id": "hsk13_657b9b3b",
-      "hanzi": "参加",
+      "card_id": "hsk13_085d39f3",
+      "hanzi": "参 加",
       "pinyin": "cān jiā",
       "english": "to take part",
       "pos": "verb",
@@ -543,7 +543,7 @@
       ]
     },
     {
-      "card_id": "hsk13_30c56baf",
+      "card_id": "hsk13_9198921a",
       "hanzi": "草",
       "pinyin": "cǎo",
       "english": "grass",
@@ -555,7 +555,7 @@
       ]
     },
     {
-      "card_id": "hsk13_a3908e97",
+      "card_id": "hsk13_4814058f",
       "hanzi": "层",
       "pinyin": "céng",
       "english": "storey",
@@ -567,7 +567,7 @@
       ]
     },
     {
-      "card_id": "hsk13_ffd46ed9",
+      "card_id": "hsk13_8f6c4dc9",
       "hanzi": "茶",
       "pinyin": "chá",
       "english": "tea",
@@ -579,7 +579,7 @@
       ]
     },
     {
-      "card_id": "hsk13_10f43fa9",
+      "card_id": "hsk13_cdbb1749",
       "hanzi": "差",
       "pinyin": "chà",
       "english": "lack; lacking",
@@ -591,7 +591,7 @@
       ]
     },
     {
-      "card_id": "hsk13_25ffe831",
+      "card_id": "hsk13_fe3147c1",
       "hanzi": "长",
       "pinyin": "cháng",
       "english": "long",
@@ -602,7 +602,7 @@
       ]
     },
     {
-      "card_id": "hsk13_8be51266",
+      "card_id": "hsk13_aeca8650",
       "hanzi": "尝",
       "pinyin": "cháng",
       "english": "taste",
@@ -614,8 +614,8 @@
       ]
     },
     {
-      "card_id": "hsk13_e182a41d",
-      "hanzi": "唱歌",
+      "card_id": "hsk13_9691874b",
+      "hanzi": "唱 歌",
       "pinyin": "chàng gē",
       "english": "to sing; singing",
       "pos": "verb",
@@ -626,8 +626,8 @@
       ]
     },
     {
-      "card_id": "hsk13_839bfbfd",
-      "hanzi": "超市",
+      "card_id": "hsk13_1cc71db7",
+      "hanzi": "超 市",
       "pinyin": "chāo shì",
       "english": "supermarket",
       "pos": "noun",
@@ -639,8 +639,8 @@
       ]
     },
     {
-      "card_id": "hsk13_3f9f942a",
-      "hanzi": "衬衫",
+      "card_id": "hsk13_14eb2c88",
+      "hanzi": "衬 衫",
       "pinyin": "chèn shān",
       "english": "shirt",
       "pos": "noun",
@@ -651,8 +651,8 @@
       ]
     },
     {
-      "card_id": "hsk13_b601a2ec",
-      "hanzi": "成绩",
+      "card_id": "hsk13_b3ff1545",
+      "hanzi": "成 绩",
       "pinyin": "chéng jì",
       "english": "results; marks; achievement",
       "pos": "noun",
@@ -663,8 +663,8 @@
       ]
     },
     {
-      "card_id": "hsk13_085b2c5f",
-      "hanzi": "城市",
+      "card_id": "hsk13_a482065a",
+      "hanzi": "城 市",
       "pinyin": "chéng shì",
       "english": "city",
       "pos": "noun",
@@ -675,7 +675,7 @@
       ]
     },
     {
-      "card_id": "hsk13_c4b9f1de",
+      "card_id": "hsk13_75f0668c",
       "hanzi": "吃",
       "pinyin": "chī",
       "english": "to eat",
@@ -687,8 +687,8 @@
       ]
     },
     {
-      "card_id": "hsk13_9dc2107d",
-      "hanzi": "迟到",
+      "card_id": "hsk13_6338cc05",
+      "hanzi": "迟 到",
       "pinyin": "chí dào",
       "english": "arrive late",
       "pos": "verb",
@@ -700,7 +700,7 @@
       ]
     },
     {
-      "card_id": "hsk13_1f9fd5e7",
+      "card_id": "hsk13_c2822cc3",
       "hanzi": "出",
       "pinyin": "chū",
       "english": "to go out",
@@ -712,8 +712,8 @@
       ]
     },
     {
-      "card_id": "hsk13_117282d4",
-      "hanzi": "除了",
+      "card_id": "hsk13_ca04326d",
+      "hanzi": "除 了",
       "pinyin": "chú le",
       "english": "apart from (\"chule...yiwai\" construction)",
       "pos": "prep.",
@@ -723,8 +723,8 @@
       ]
     },
     {
-      "card_id": "hsk13_171f89ae",
-      "hanzi": "出租车",
+      "card_id": "hsk13_ebba5731",
+      "hanzi": "出 租 车",
       "pinyin": "chū zū chē",
       "english": "taxi",
       "pos": "noun",
@@ -736,7 +736,7 @@
       ]
     },
     {
-      "card_id": "hsk13_bd0876e2",
+      "card_id": "hsk13_e0256e9d",
       "hanzi": "穿",
       "pinyin": "chuān",
       "english": "to wear; to put on",
@@ -748,7 +748,7 @@
       ]
     },
     {
-      "card_id": "hsk13_b0a4ad41",
+      "card_id": "hsk13_f136b5dc",
       "hanzi": "船",
       "pinyin": "chuán",
       "english": "boat; ship; ferry",
@@ -761,7 +761,7 @@
       ]
     },
     {
-      "card_id": "hsk13_b59ff930",
+      "card_id": "hsk13_483bff31",
       "hanzi": "春",
       "pinyin": "chūn",
       "english": "spring",
@@ -773,7 +773,7 @@
       ]
     },
     {
-      "card_id": "hsk13_83b5dd68",
+      "card_id": "hsk13_c075f4c8",
       "hanzi": "次",
       "pinyin": "cì",
       "english": "time",
@@ -786,8 +786,8 @@
       ]
     },
     {
-      "card_id": "hsk13_69e3e6ed",
-      "hanzi": "词典",
+      "card_id": "hsk13_f217eed7",
+      "hanzi": "词 典",
       "pinyin": "cí diǎn",
       "english": "dictionary",
       "pos": "noun",
@@ -798,7 +798,7 @@
       ]
     },
     {
-      "card_id": "hsk13_22e0cb4e",
+      "card_id": "hsk13_c20abcd3",
       "hanzi": "从",
       "pinyin": "cóng",
       "english": "from; follow; comply with",
@@ -809,10 +809,10 @@
       ]
     },
     {
-      "card_id": "hsk13_1e5fe10b",
-      "hanzi": "聪明",
+      "card_id": "hsk13_c5c92156",
+      "hanzi": "聪 明",
       "pinyin": "cōng ming",
-      "english": "clever; intelligent ",
+      "english": "clever; intelligent",
       "pos": "adj.",
       "hsk": "HSK3",
       "tags": [
@@ -820,7 +820,7 @@
       ]
     },
     {
-      "card_id": "hsk13_63503646",
+      "card_id": "hsk13_3da23c4f",
       "hanzi": "错",
       "pinyin": "cuò",
       "english": "wrong",
@@ -831,7 +831,7 @@
       ]
     },
     {
-      "card_id": "hsk13_4ed1b81f",
+      "card_id": "hsk13_4ea102de",
       "hanzi": "大",
       "pinyin": "dà",
       "english": "big",
@@ -842,8 +842,8 @@
       ]
     },
     {
-      "card_id": "hsk13_d7e5a14c",
-      "hanzi": "打电话",
+      "card_id": "hsk13_fbfc24de",
+      "hanzi": "打 电 话",
       "pinyin": "dǎ diàn huà",
       "english": "to make a telephone call",
       "pos": "--",
@@ -854,8 +854,8 @@
       ]
     },
     {
-      "card_id": "hsk13_f9e875ad",
-      "hanzi": "大家",
+      "card_id": "hsk13_b3646003",
+      "hanzi": "大 家",
       "pinyin": "dà jiā",
       "english": "everybody",
       "pos": "noun",
@@ -867,8 +867,8 @@
       ]
     },
     {
-      "card_id": "hsk13_c8ac00ff",
-      "hanzi": "打篮球",
+      "card_id": "hsk13_3710c225",
+      "hanzi": "打 篮 球",
       "pinyin": "dǎ lán qiú",
       "english": "play basketball",
       "pos": "--",
@@ -879,8 +879,8 @@
       ]
     },
     {
-      "card_id": "hsk13_caf4bad7",
-      "hanzi": "打扫",
+      "card_id": "hsk13_c736ac0c",
+      "hanzi": "打 扫",
       "pinyin": "dǎ sǎo",
       "english": "to clean",
       "pos": "verb",
@@ -891,8 +891,8 @@
       ]
     },
     {
-      "card_id": "hsk13_f4d7c957",
-      "hanzi": "打算",
+      "card_id": "hsk13_9cd5b12b",
+      "hanzi": "打 算",
       "pinyin": "dǎ suàn",
       "english": "plan; intention",
       "pos": "verb",
@@ -903,7 +903,7 @@
       ]
     },
     {
-      "card_id": "hsk13_fe83a7f6",
+      "card_id": "hsk13_8c7d1f42",
       "hanzi": "带",
       "pinyin": "dài",
       "english": "carry",
@@ -915,8 +915,8 @@
       ]
     },
     {
-      "card_id": "hsk13_6b47a67c",
-      "hanzi": "蛋糕",
+      "card_id": "hsk13_b04f8186",
+      "hanzi": "蛋 糕",
       "pinyin": "dàn gāo",
       "english": "cake",
       "pos": "noun",
@@ -927,8 +927,8 @@
       ]
     },
     {
-      "card_id": "hsk13_5762ea20",
-      "hanzi": "担心",
+      "card_id": "hsk13_c63edde3",
+      "hanzi": "担 心",
       "pinyin": "dān xīn",
       "english": "worry",
       "pos": "verb",
@@ -939,8 +939,8 @@
       ]
     },
     {
-      "card_id": "hsk13_8d5b1464",
-      "hanzi": "当然",
+      "card_id": "hsk13_35bc08f5",
+      "hanzi": "当 然",
       "pinyin": "dāng rán",
       "english": "of course",
       "pos": "adv.",
@@ -951,7 +951,7 @@
       ]
     },
     {
-      "card_id": "hsk13_3de30c4c",
+      "card_id": "hsk13_69efe645",
       "hanzi": "到",
       "pinyin": "dào",
       "english": "to arrive; to get to",
@@ -963,7 +963,7 @@
       ]
     },
     {
-      "card_id": "hsk13_f064361a",
+      "card_id": "hsk13_ba16581f",
       "hanzi": "得",
       "pinyin": "de",
       "english": "[particle to connect verb to adverb]",
@@ -974,7 +974,7 @@
       ]
     },
     {
-      "card_id": "hsk13_8285ad75",
+      "card_id": "hsk13_8bc5dad0",
       "hanzi": "地",
       "pinyin": "de",
       "english": "...ly [particle to connect adverb to verb]",
@@ -985,7 +985,7 @@
       ]
     },
     {
-      "card_id": "hsk13_cd3bf999",
+      "card_id": "hsk13_425d8e3b",
       "hanzi": "的",
       "pinyin": "de",
       "english": "of",
@@ -996,7 +996,7 @@
       ]
     },
     {
-      "card_id": "hsk13_24c556e7",
+      "card_id": "hsk13_a1f4673a",
       "hanzi": "灯",
       "pinyin": "dēng",
       "english": "lamp",
@@ -1008,7 +1008,7 @@
       ]
     },
     {
-      "card_id": "hsk13_651dc192",
+      "card_id": "hsk13_d6845d50",
       "hanzi": "等",
       "pinyin": "děng",
       "english": "wait",
@@ -1020,8 +1020,8 @@
       ]
     },
     {
-      "card_id": "hsk13_cac12686",
-      "hanzi": "弟弟",
+      "card_id": "hsk13_d91bfc36",
+      "hanzi": "弟 弟",
       "pinyin": "dì di",
       "english": "younger brother",
       "pos": "noun",
@@ -1032,8 +1032,8 @@
       ]
     },
     {
-      "card_id": "hsk13_2fe8e223",
-      "hanzi": "地方",
+      "card_id": "hsk13_1110963a",
+      "hanzi": "地 方",
       "pinyin": "dì fang",
       "english": "place",
       "pos": "noun",
@@ -1045,8 +1045,8 @@
       ]
     },
     {
-      "card_id": "hsk13_0e15b1b6",
-      "hanzi": "地铁",
+      "card_id": "hsk13_09d0a9f5",
+      "hanzi": "地 铁",
       "pinyin": "dì tiě",
       "english": "underground train; tube; metro",
       "pos": "noun",
@@ -1058,8 +1058,8 @@
       ]
     },
     {
-      "card_id": "hsk13_7972df8c",
-      "hanzi": "地图",
+      "card_id": "hsk13_05f63a2e",
+      "hanzi": "地 图",
       "pinyin": "dì tú",
       "english": "map",
       "pos": "noun",
@@ -1071,8 +1071,8 @@
       ]
     },
     {
-      "card_id": "hsk13_80a6c5b2",
-      "hanzi": "第一",
+      "card_id": "hsk13_8cf0b9e1",
+      "hanzi": "第 一",
       "pinyin": "dì yī",
       "english": "firstly",
       "pos": "num.",
@@ -1083,7 +1083,7 @@
       ]
     },
     {
-      "card_id": "hsk13_ae36226c",
+      "card_id": "hsk13_859c868b",
       "hanzi": "点",
       "pinyin": "diǎn",
       "english": "o’clock; spot; dot",
@@ -1096,8 +1096,8 @@
       ]
     },
     {
-      "card_id": "hsk13_3aeadc3f",
-      "hanzi": "电脑",
+      "card_id": "hsk13_40f671b4",
+      "hanzi": "电 脑",
       "pinyin": "diàn nǎo",
       "english": "computer",
       "pos": "noun",
@@ -1108,8 +1108,8 @@
       ]
     },
     {
-      "card_id": "hsk13_ae5dbb18",
-      "hanzi": "电视",
+      "card_id": "hsk13_1b234713",
+      "hanzi": "电 视",
       "pinyin": "diàn shì",
       "english": "TV",
       "pos": "noun",
@@ -1120,8 +1120,8 @@
       ]
     },
     {
-      "card_id": "hsk13_01761756",
-      "hanzi": "电梯",
+      "card_id": "hsk13_d2728bed",
+      "hanzi": "电 梯",
       "pinyin": "diàn tī",
       "english": "lift; elevator",
       "pos": "noun",
@@ -1133,8 +1133,8 @@
       ]
     },
     {
-      "card_id": "hsk13_35a6adce",
-      "hanzi": "电影",
+      "card_id": "hsk13_b7b1b746",
+      "hanzi": "电 影",
       "pinyin": "diàn yǐng",
       "english": "film; movie",
       "pos": "noun",
@@ -1145,10 +1145,10 @@
       ]
     },
     {
-      "card_id": "hsk13_f988f426",
-      "hanzi": "电子邮件",
+      "card_id": "hsk13_840e9caa",
+      "hanzi": "电 子 邮 件",
       "pinyin": "diàn zǐ yóu jiàn",
-      "english": "email ",
+      "english": "email",
       "pos": "--",
       "hsk": "HSK3",
       "tags": [
@@ -1157,7 +1157,7 @@
       ]
     },
     {
-      "card_id": "hsk13_1d22818a",
+      "card_id": "hsk13_9e3fada2",
       "hanzi": "东",
       "pinyin": "dōng",
       "english": "east",
@@ -1168,7 +1168,7 @@
       ]
     },
     {
-      "card_id": "hsk13_f76d3e28",
+      "card_id": "hsk13_b3b185be",
       "hanzi": "冬",
       "pinyin": "dōng",
       "english": "winter",
@@ -1180,7 +1180,7 @@
       ]
     },
     {
-      "card_id": "hsk13_73487e60",
+      "card_id": "hsk13_4c089bf6",
       "hanzi": "懂",
       "pinyin": "dǒng",
       "english": "to understand",
@@ -1192,8 +1192,8 @@
       ]
     },
     {
-      "card_id": "hsk13_5276cda6",
-      "hanzi": "动物",
+      "card_id": "hsk13_c96b12ba",
+      "hanzi": "动 物",
       "pinyin": "dòng wù",
       "english": "animals",
       "pos": "noun",
@@ -1204,8 +1204,8 @@
       ]
     },
     {
-      "card_id": "hsk13_715d923c",
-      "hanzi": "东西",
+      "card_id": "hsk13_2f3afa6a",
+      "hanzi": "东 西",
       "pinyin": "dōng xi",
       "english": "thing",
       "pos": "noun",
@@ -1216,7 +1216,7 @@
       ]
     },
     {
-      "card_id": "hsk13_5da25f44",
+      "card_id": "hsk13_a68be0ca",
       "hanzi": "都",
       "pinyin": "dōu",
       "english": "both; all",
@@ -1228,7 +1228,7 @@
       ]
     },
     {
-      "card_id": "hsk13_c1f37d49",
+      "card_id": "hsk13_6e66ada3",
       "hanzi": "读",
       "pinyin": "dú",
       "english": "read aloud",
@@ -1240,7 +1240,7 @@
       ]
     },
     {
-      "card_id": "hsk13_ca068d96",
+      "card_id": "hsk13_22765e03",
       "hanzi": "短",
       "pinyin": "duǎn",
       "english": "short",
@@ -1251,7 +1251,7 @@
       ]
     },
     {
-      "card_id": "hsk13_30b13d06",
+      "card_id": "hsk13_e0ffa7b2",
       "hanzi": "段",
       "pinyin": "duàn",
       "english": "section; paragraph; [measure word for stories, pieces of music, recordings etc.]",
@@ -1263,8 +1263,8 @@
       ]
     },
     {
-      "card_id": "hsk13_ea45b0aa",
-      "hanzi": "锻炼",
+      "card_id": "hsk13_cddcf5bb",
+      "hanzi": "锻 炼",
       "pinyin": "duàn liàn",
       "english": "to engage in physical exercise",
       "pos": "verb",
@@ -1275,7 +1275,7 @@
       ]
     },
     {
-      "card_id": "hsk13_f33db3e5",
+      "card_id": "hsk13_5f586cc3",
       "hanzi": "对",
       "pinyin": "duì",
       "english": "correct; right",
@@ -1287,8 +1287,8 @@
       ]
     },
     {
-      "card_id": "hsk13_b25f4c17",
-      "hanzi": "对不起",
+      "card_id": "hsk13_5b937e76",
+      "hanzi": "对 不 起",
       "pinyin": "duì bu qǐ",
       "english": "sorry",
       "pos": "verb",
@@ -1299,7 +1299,7 @@
       ]
     },
     {
-      "card_id": "hsk13_709bbcd7",
+      "card_id": "hsk13_18c377dc",
       "hanzi": "多",
       "pinyin": "duō",
       "english": "much/many; how [+adjective]",
@@ -1312,8 +1312,8 @@
       ]
     },
     {
-      "card_id": "hsk13_f7c419a0",
-      "hanzi": "多么",
+      "card_id": "hsk13_341c6b06",
+      "hanzi": "多 么",
       "pinyin": "duō me",
       "english": "how ...",
       "pos": "adv.",
@@ -1324,8 +1324,8 @@
       ]
     },
     {
-      "card_id": "hsk13_fbb95af2",
-      "hanzi": "多少",
+      "card_id": "hsk13_f1c6c3fe",
+      "hanzi": "多 少",
       "pinyin": "duō shǎo",
       "english": "how much/many?",
       "pos": "pron.",
@@ -1337,7 +1337,7 @@
       ]
     },
     {
-      "card_id": "hsk13_2e4fb121",
+      "card_id": "hsk13_8a6b30b4",
       "hanzi": "饿",
       "pinyin": "è",
       "english": "hungry",
@@ -1349,7 +1349,7 @@
       ]
     },
     {
-      "card_id": "hsk13_b5ea2b07",
+      "card_id": "hsk13_bd5d7e47",
       "hanzi": "二",
       "pinyin": "èr",
       "english": "two",
@@ -1360,8 +1360,8 @@
       ]
     },
     {
-      "card_id": "hsk13_d16d84a6",
-      "hanzi": "耳朵",
+      "card_id": "hsk13_ad925e08",
+      "hanzi": "耳 朵",
       "pinyin": "ěr duo",
       "english": "ears",
       "pos": "noun",
@@ -1372,8 +1372,8 @@
       ]
     },
     {
-      "card_id": "hsk13_de671d40",
-      "hanzi": "儿子",
+      "card_id": "hsk13_08870ec3",
+      "hanzi": "儿 子",
       "pinyin": "ér zi",
       "english": "son",
       "pos": "noun",
@@ -1384,10 +1384,10 @@
       ]
     },
     {
-      "card_id": "hsk13_5eda8bd6",
+      "card_id": "hsk13_e5878ca3",
       "hanzi": "发",
       "pinyin": "fā",
-      "english": "to send (an email)     ",
+      "english": "to send (an email)",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -1396,8 +1396,8 @@
       ]
     },
     {
-      "card_id": "hsk13_d1de5801",
-      "hanzi": "发烧",
+      "card_id": "hsk13_7763ea3b",
+      "hanzi": "发 烧",
       "pinyin": "fā shāo",
       "english": "fever; have a fever",
       "pos": "verb",
@@ -1408,8 +1408,8 @@
       ]
     },
     {
-      "card_id": "hsk13_41daaa66",
-      "hanzi": "发现",
+      "card_id": "hsk13_ef4f2704",
+      "hanzi": "发 现",
       "pinyin": "fā xiàn",
       "english": "discover",
       "pos": "verb",
@@ -1420,8 +1420,8 @@
       ]
     },
     {
-      "card_id": "hsk13_b4689e3a",
-      "hanzi": "饭店",
+      "card_id": "hsk13_c516eba1",
+      "hanzi": "饭 店",
       "pinyin": "fàn diàn",
       "english": "restaurant",
       "pos": "noun",
@@ -1433,7 +1433,7 @@
       ]
     },
     {
-      "card_id": "hsk13_00ebb568",
+      "card_id": "hsk13_3eb41009",
       "hanzi": "放",
       "pinyin": "fàng",
       "english": "to put; set free",
@@ -1445,8 +1445,8 @@
       ]
     },
     {
-      "card_id": "hsk13_2ebc8b87",
-      "hanzi": "方便",
+      "card_id": "hsk13_55cc51b9",
+      "hanzi": "方 便",
       "pinyin": "fāng biàn",
       "english": "convenient",
       "pos": "adj.",
@@ -1457,8 +1457,8 @@
       ]
     },
     {
-      "card_id": "hsk13_bbf29478",
-      "hanzi": "房间",
+      "card_id": "hsk13_429c26bb",
+      "hanzi": "房 间",
       "pinyin": "fáng jiān",
       "english": "room",
       "pos": "noun",
@@ -1470,8 +1470,8 @@
       ]
     },
     {
-      "card_id": "hsk13_37e8768c",
-      "hanzi": "放心",
+      "card_id": "hsk13_e57b147f",
+      "hanzi": "放 心",
       "pinyin": "fàng xīn",
       "english": "relax; feel relieved",
       "pos": "verb",
@@ -1483,8 +1483,8 @@
       ]
     },
     {
-      "card_id": "hsk13_c721a186",
-      "hanzi": "非常",
+      "card_id": "hsk13_49344515",
+      "hanzi": "非 常",
       "pinyin": "fēi cháng",
       "english": "extremely",
       "pos": "adv.",
@@ -1494,8 +1494,8 @@
       ]
     },
     {
-      "card_id": "hsk13_cf66a09d",
-      "hanzi": "飞机",
+      "card_id": "hsk13_10a514f7",
+      "hanzi": "飞 机",
       "pinyin": "fēi jī",
       "english": "plane",
       "pos": "noun",
@@ -1507,7 +1507,7 @@
       ]
     },
     {
-      "card_id": "hsk13_d24695fb",
+      "card_id": "hsk13_afd654d4",
       "hanzi": "分",
       "pinyin": "fēn",
       "english": "minute",
@@ -1520,8 +1520,8 @@
       ]
     },
     {
-      "card_id": "hsk13_138b1ba6",
-      "hanzi": "分钟",
+      "card_id": "hsk13_42a3ff03",
+      "hanzi": "分 钟",
       "pinyin": "fēn zhōng",
       "english": "minute",
       "pos": "m.w.",
@@ -1533,8 +1533,8 @@
       ]
     },
     {
-      "card_id": "hsk13_fb6d3b2a",
-      "hanzi": "附近",
+      "card_id": "hsk13_225e86e7",
+      "hanzi": "附 近",
       "pinyin": "fù jìn",
       "english": "nearby",
       "pos": "noun",
@@ -1545,8 +1545,8 @@
       ]
     },
     {
-      "card_id": "hsk13_5ea9231b",
-      "hanzi": "服务员",
+      "card_id": "hsk13_d091a433",
+      "hanzi": "服 务 员",
       "pinyin": "fú wù yuán",
       "english": "waiter/waitress; attendant",
       "pos": "noun",
@@ -1557,8 +1557,8 @@
       ]
     },
     {
-      "card_id": "hsk13_65afd837",
-      "hanzi": "复习",
+      "card_id": "hsk13_363322bd",
+      "hanzi": "复 习",
       "pinyin": "fù xí",
       "english": "revise",
       "pos": "verb",
@@ -1569,8 +1569,8 @@
       ]
     },
     {
-      "card_id": "hsk13_367359fd",
-      "hanzi": "干净",
+      "card_id": "hsk13_ab1ccc50",
+      "hanzi": "干 净",
       "pinyin": "gān jìng",
       "english": "clean",
       "pos": "adj.",
@@ -1581,8 +1581,8 @@
       ]
     },
     {
-      "card_id": "hsk13_a0ddb130",
-      "hanzi": "感冒",
+      "card_id": "hsk13_5d15e672",
+      "hanzi": "感 冒",
       "pinyin": "gǎn mào",
       "english": "to catch a cold",
       "pos": "verb",
@@ -1593,8 +1593,8 @@
       ]
     },
     {
-      "card_id": "hsk13_722e2fe1",
-      "hanzi": "感兴趣",
+      "card_id": "hsk13_dab8c6b0",
+      "hanzi": "感 兴 趣",
       "pinyin": "gǎn xìng qù",
       "english": "to be interested (in)",
       "pos": "verb",
@@ -1605,8 +1605,8 @@
       ]
     },
     {
-      "card_id": "hsk13_d5b1c4e7",
-      "hanzi": "刚才",
+      "card_id": "hsk13_0dc6c1b7",
+      "hanzi": "刚 才",
       "pinyin": "gāng cái",
       "english": "just now",
       "pos": "noun",
@@ -1617,7 +1617,7 @@
       ]
     },
     {
-      "card_id": "hsk13_ddc5f9ae",
+      "card_id": "hsk13_f71cb01c",
       "hanzi": "高",
       "pinyin": "gāo",
       "english": "high; tall",
@@ -1628,8 +1628,8 @@
       ]
     },
     {
-      "card_id": "hsk13_b799613b",
-      "hanzi": "告诉",
+      "card_id": "hsk13_b0938a83",
+      "hanzi": "告 诉",
       "pinyin": "gào su",
       "english": "to tell",
       "pos": "verb",
@@ -1640,8 +1640,8 @@
       ]
     },
     {
-      "card_id": "hsk13_8b344d7c",
-      "hanzi": "高兴",
+      "card_id": "hsk13_c8b46669",
+      "hanzi": "高 兴",
       "pinyin": "gāo xìng",
       "english": "pleased; happy",
       "pos": "adj.",
@@ -1652,7 +1652,7 @@
       ]
     },
     {
-      "card_id": "hsk13_b66331fb",
+      "card_id": "hsk13_4bcafacc",
       "hanzi": "个",
       "pinyin": "gè",
       "english": "individual; [general measure word]",
@@ -1664,8 +1664,8 @@
       ]
     },
     {
-      "card_id": "hsk13_f26fc521",
-      "hanzi": "哥哥",
+      "card_id": "hsk13_702d5857",
+      "hanzi": "哥 哥",
       "pinyin": "gē ge",
       "english": "elder brother",
       "pos": "noun",
@@ -1676,8 +1676,8 @@
       ]
     },
     {
-      "card_id": "hsk13_fb551352",
-      "hanzi": "个子",
+      "card_id": "hsk13_cc1a26ae",
+      "hanzi": "个 子",
       "pinyin": "gè zi",
       "english": "height; stature",
       "pos": "noun",
@@ -1689,7 +1689,7 @@
       ]
     },
     {
-      "card_id": "hsk13_82f4926d",
+      "card_id": "hsk13_c8d5f7a8",
       "hanzi": "给",
       "pinyin": "gěi",
       "english": "to give",
@@ -1701,7 +1701,7 @@
       ]
     },
     {
-      "card_id": "hsk13_d51db2b7",
+      "card_id": "hsk13_d400ff71",
       "hanzi": "跟",
       "pinyin": "gēn",
       "english": "with",
@@ -1712,8 +1712,8 @@
       ]
     },
     {
-      "card_id": "hsk13_94418d18",
-      "hanzi": "根据",
+      "card_id": "hsk13_ee0839e5",
+      "hanzi": "根 据",
       "pinyin": "gēn jù",
       "english": "according to",
       "pos": "prep. / noun",
@@ -1723,7 +1723,7 @@
       ]
     },
     {
-      "card_id": "hsk13_3a0f2872",
+      "card_id": "hsk13_455c086b",
       "hanzi": "更",
       "pinyin": "gèng",
       "english": "even more",
@@ -1735,8 +1735,8 @@
       ]
     },
     {
-      "card_id": "hsk13_9c2bce29",
-      "hanzi": "公共汽车",
+      "card_id": "hsk13_ae214572",
+      "hanzi": "公 共 汽 车",
       "pinyin": "gōng gòng qì chē",
       "english": "bus",
       "pos": "noun",
@@ -1748,8 +1748,8 @@
       ]
     },
     {
-      "card_id": "hsk13_c0bbb48e",
-      "hanzi": "公斤",
+      "card_id": "hsk13_4f61361d",
+      "hanzi": "公 斤",
       "pinyin": "gōng jīn",
       "english": "kilogram",
       "pos": "m.w.",
@@ -1760,8 +1760,8 @@
       ]
     },
     {
-      "card_id": "hsk13_5b9f2801",
-      "hanzi": "公司",
+      "card_id": "hsk13_a3752061",
+      "hanzi": "公 司",
       "pinyin": "gōng sī",
       "english": "company; office",
       "pos": "noun",
@@ -1773,8 +1773,8 @@
       ]
     },
     {
-      "card_id": "hsk13_6c36fd9f",
-      "hanzi": "公园",
+      "card_id": "hsk13_3ae80bd0",
+      "hanzi": "公 园",
       "pinyin": "gōng yuán",
       "english": "park",
       "pos": "noun",
@@ -1786,8 +1786,8 @@
       ]
     },
     {
-      "card_id": "hsk13_4965d515",
-      "hanzi": "工作",
+      "card_id": "hsk13_0b118092",
+      "hanzi": "工 作",
       "pinyin": "gōng zuò",
       "english": "job; work",
       "pos": "noun / verb",
@@ -1798,7 +1798,7 @@
       ]
     },
     {
-      "card_id": "hsk13_baa5806d",
+      "card_id": "hsk13_a8a6fc9a",
       "hanzi": "狗",
       "pinyin": "gǒu",
       "english": "dog",
@@ -1810,8 +1810,8 @@
       ]
     },
     {
-      "card_id": "hsk13_39dcaa53",
-      "hanzi": "故事",
+      "card_id": "hsk13_9018fbcb",
+      "hanzi": "故 事",
       "pinyin": "gù shi",
       "english": "story; tale; plot",
       "pos": "noun",
@@ -1823,8 +1823,8 @@
       ]
     },
     {
-      "card_id": "hsk13_f692a92c",
-      "hanzi": "刮风",
+      "card_id": "hsk13_c569dbae",
+      "hanzi": "刮 风",
       "pinyin": "guā fēng",
       "english": "windy",
       "pos": "verb",
@@ -1836,7 +1836,7 @@
       ]
     },
     {
-      "card_id": "hsk13_9b67312e",
+      "card_id": "hsk13_dcaa3896",
       "hanzi": "关",
       "pinyin": "guān",
       "english": "to close",
@@ -1848,8 +1848,8 @@
       ]
     },
     {
-      "card_id": "hsk13_dc4c3a72",
-      "hanzi": "关系",
+      "card_id": "hsk13_ade67a92",
+      "hanzi": "关 系",
       "pinyin": "guān xì",
       "english": "relationship",
       "pos": "noun",
@@ -1861,8 +1861,8 @@
       ]
     },
     {
-      "card_id": "hsk13_76c5fd5d",
-      "hanzi": "关心",
+      "card_id": "hsk13_8e5e4f41",
+      "hanzi": "关 心",
       "pinyin": "guān xīn",
       "english": "care about",
       "pos": "verb",
@@ -1874,8 +1874,8 @@
       ]
     },
     {
-      "card_id": "hsk13_e9f51ce7",
-      "hanzi": "关于",
+      "card_id": "hsk13_c0f6fc7d",
+      "hanzi": "关 于",
       "pinyin": "guān yú",
       "english": "about",
       "pos": "prep.",
@@ -1885,7 +1885,7 @@
       ]
     },
     {
-      "card_id": "hsk13_b94a59e0",
+      "card_id": "hsk13_f301f3f7",
       "hanzi": "贵",
       "pinyin": "guì",
       "english": "expensive",
@@ -1896,7 +1896,7 @@
       ]
     },
     {
-      "card_id": "hsk13_a7a3db61",
+      "card_id": "hsk13_8b7ba5ed",
       "hanzi": "过",
       "pinyin": "guò",
       "english": "[marker after a verb to indicate experience]",
@@ -1907,7 +1907,7 @@
       ]
     },
     {
-      "card_id": "hsk13_21b5df33",
+      "card_id": "hsk13_a76acdc6",
       "hanzi": "过",
       "pinyin": "guò",
       "english": "to celebrate (a birthday)",
@@ -1919,8 +1919,8 @@
       ]
     },
     {
-      "card_id": "hsk13_d8e0b44b",
-      "hanzi": "国家",
+      "card_id": "hsk13_7df6a1b8",
+      "hanzi": "国 家",
       "pinyin": "guó jiā",
       "english": "country",
       "pos": "noun",
@@ -1932,8 +1932,8 @@
       ]
     },
     {
-      "card_id": "hsk13_c6b0c9ff",
-      "hanzi": "过去",
+      "card_id": "hsk13_708a2de9",
+      "hanzi": "过 去",
       "pinyin": "guò qu",
       "english": "(in the) past",
       "pos": "noun",
@@ -1944,7 +1944,7 @@
       ]
     },
     {
-      "card_id": "hsk13_cf5d0b03",
+      "card_id": "hsk13_3645ba09",
       "hanzi": "还",
       "pinyin": "hái",
       "english": "even",
@@ -1956,8 +1956,8 @@
       ]
     },
     {
-      "card_id": "hsk13_33bef1b1",
-      "hanzi": "害怕",
+      "card_id": "hsk13_cbc0a63b",
+      "hanzi": "害 怕",
       "pinyin": "hài pà",
       "english": "afraid",
       "pos": "verb",
@@ -1968,8 +1968,8 @@
       ]
     },
     {
-      "card_id": "hsk13_34d0f01c",
-      "hanzi": "还是",
+      "card_id": "hsk13_b23f7d22",
+      "hanzi": "还 是",
       "pinyin": "hái shì",
       "english": "...or...? [in a question]",
       "pos": "adv. / link.",
@@ -1980,8 +1980,8 @@
       ]
     },
     {
-      "card_id": "hsk13_5fad38c9",
-      "hanzi": "孩子",
+      "card_id": "hsk13_35bdfdf8",
+      "hanzi": "孩 子",
       "pinyin": "hái zi",
       "english": "child; children",
       "pos": "noun",
@@ -1992,8 +1992,8 @@
       ]
     },
     {
-      "card_id": "hsk13_cb39e994",
-      "hanzi": "汉语",
+      "card_id": "hsk13_07a8f0f3",
+      "hanzi": "汉 语",
       "pinyin": "hàn yǔ",
       "english": "Standard Chinese language",
       "pos": "noun",
@@ -2004,7 +2004,7 @@
       ]
     },
     {
-      "card_id": "hsk13_9890b256",
+      "card_id": "hsk13_fe50a4bb",
       "hanzi": "好",
       "pinyin": "hǎo",
       "english": "good",
@@ -2016,7 +2016,7 @@
       ]
     },
     {
-      "card_id": "hsk13_a253903e",
+      "card_id": "hsk13_48358354",
       "hanzi": "号",
       "pinyin": "hào",
       "english": "number; day of a month",
@@ -2029,8 +2029,8 @@
       ]
     },
     {
-      "card_id": "hsk13_bab73d74",
-      "hanzi": "好吃",
+      "card_id": "hsk13_c19e0dbd",
+      "hanzi": "好 吃",
       "pinyin": "hǎo chī",
       "english": "delicious",
       "pos": "adj.",
@@ -2041,7 +2041,7 @@
       ]
     },
     {
-      "card_id": "hsk13_db79ac64",
+      "card_id": "hsk13_72dd39d1",
       "hanzi": "喝",
       "pinyin": "hē",
       "english": "to drink",
@@ -2053,10 +2053,10 @@
       ]
     },
     {
-      "card_id": "hsk13_063bdbf3",
+      "card_id": "hsk13_ff8abbb8",
       "hanzi": "和",
       "pinyin": "hé",
-      "english": "and ",
+      "english": "and",
       "pos": "link. / prep.",
       "hsk": "HSK1",
       "tags": [
@@ -2064,7 +2064,7 @@
       ]
     },
     {
-      "card_id": "hsk13_e89a0dff",
+      "card_id": "hsk13_c0888ee2",
       "hanzi": "黑",
       "pinyin": "hēi",
       "english": "black",
@@ -2075,8 +2075,8 @@
       ]
     },
     {
-      "card_id": "hsk13_14a2531c",
-      "hanzi": "黑板",
+      "card_id": "hsk13_61c471ce",
+      "hanzi": "黑 板",
       "pinyin": "hēi bǎn",
       "english": "blackboard",
       "pos": "noun",
@@ -2088,7 +2088,7 @@
       ]
     },
     {
-      "card_id": "hsk13_98b086e7",
+      "card_id": "hsk13_3ca3e8ec",
       "hanzi": "很",
       "pinyin": "hěn",
       "english": "very",
@@ -2100,7 +2100,7 @@
       ]
     },
     {
-      "card_id": "hsk13_993f8d1f",
+      "card_id": "hsk13_45be49a6",
       "hanzi": "红",
       "pinyin": "hóng",
       "english": "red",
@@ -2111,8 +2111,8 @@
       ]
     },
     {
-      "card_id": "hsk13_4cd986ef",
-      "hanzi": "后来",
+      "card_id": "hsk13_794a1bb3",
+      "hanzi": "后 来",
       "pinyin": "hòu lái",
       "english": "afterward",
       "pos": "noun",
@@ -2123,8 +2123,8 @@
       ]
     },
     {
-      "card_id": "hsk13_2565e75d",
-      "hanzi": "后面",
+      "card_id": "hsk13_4c9770f4",
+      "hanzi": "后 面",
       "pinyin": "hòu miàn",
       "english": "at the back; behind; later",
       "pos": "noun",
@@ -2136,8 +2136,8 @@
       ]
     },
     {
-      "card_id": "hsk13_07b9c91c",
-      "hanzi": "护照",
+      "card_id": "hsk13_07b1bc27",
+      "hanzi": "护 照",
       "pinyin": "hù zhào",
       "english": "passport",
       "pos": "noun",
@@ -2148,7 +2148,7 @@
       ]
     },
     {
-      "card_id": "hsk13_aef6979b",
+      "card_id": "hsk13_9e8bf30a",
       "hanzi": "花",
       "pinyin": "huā",
       "english": "spend",
@@ -2160,7 +2160,7 @@
       ]
     },
     {
-      "card_id": "hsk13_f8327634",
+      "card_id": "hsk13_19638015",
       "hanzi": "花",
       "pinyin": "huā",
       "english": "flower",
@@ -2173,7 +2173,7 @@
       ]
     },
     {
-      "card_id": "hsk13_6ed87d98",
+      "card_id": "hsk13_f448316f",
       "hanzi": "画",
       "pinyin": "huà",
       "english": "to draw; paint (pictures)",
@@ -2186,7 +2186,7 @@
       ]
     },
     {
-      "card_id": "hsk13_c3da9669",
+      "card_id": "hsk13_3e1e80a6",
       "hanzi": "坏",
       "pinyin": "huài",
       "english": "bad",
@@ -2197,7 +2197,7 @@
       ]
     },
     {
-      "card_id": "hsk13_5449a257",
+      "card_id": "hsk13_4ad1e39c",
       "hanzi": "还",
       "pinyin": "huán",
       "english": "to return",
@@ -2209,7 +2209,7 @@
       ]
     },
     {
-      "card_id": "hsk13_4e08f04f",
+      "card_id": "hsk13_2aac48f3",
       "hanzi": "换",
       "pinyin": "huàn",
       "english": "to change (to another one)",
@@ -2221,8 +2221,8 @@
       ]
     },
     {
-      "card_id": "hsk13_8921f8ce",
-      "hanzi": "环境",
+      "card_id": "hsk13_aac7703c",
+      "hanzi": "环 境",
       "pinyin": "huán jìng",
       "english": "environment",
       "pos": "noun",
@@ -2234,8 +2234,8 @@
       ]
     },
     {
-      "card_id": "hsk13_df5fe2ba",
-      "hanzi": "欢迎",
+      "card_id": "hsk13_39f6a780",
+      "hanzi": "欢 迎",
       "pinyin": "huān yíng",
       "english": "to welcome",
       "pos": "verb",
@@ -2246,8 +2246,8 @@
       ]
     },
     {
-      "card_id": "hsk13_9154b9da",
-      "hanzi": "黄河",
+      "card_id": "hsk13_68f544fe",
+      "hanzi": "黄 河",
       "pinyin": "huáng hé",
       "english": "Yellow River",
       "pos": "noun",
@@ -2258,7 +2258,7 @@
       ]
     },
     {
-      "card_id": "hsk13_c9264c56",
+      "card_id": "hsk13_288ddff9",
       "hanzi": "回",
       "pinyin": "huí",
       "english": "to return",
@@ -2270,7 +2270,7 @@
       ]
     },
     {
-      "card_id": "hsk13_5fb4d241",
+      "card_id": "hsk13_5d712a74",
       "hanzi": "会",
       "pinyin": "huì",
       "english": "to know how to; can; meeting",
@@ -2283,8 +2283,8 @@
       ]
     },
     {
-      "card_id": "hsk13_0c89fc21",
-      "hanzi": "回答",
+      "card_id": "hsk13_01294f5e",
+      "hanzi": "回 答",
       "pinyin": "huí dá",
       "english": "reply",
       "pos": "verb",
@@ -2295,8 +2295,8 @@
       ]
     },
     {
-      "card_id": "hsk13_90543d4c",
-      "hanzi": "会议",
+      "card_id": "hsk13_7f9006f7",
+      "hanzi": "会 议",
       "pinyin": "huì yì",
       "english": "meeting",
       "pos": "noun",
@@ -2307,8 +2307,8 @@
       ]
     },
     {
-      "card_id": "hsk13_e180415a",
-      "hanzi": "火车站",
+      "card_id": "hsk13_6fb98882",
+      "hanzi": "火 车 站",
       "pinyin": "huǒ chē zhàn",
       "english": "railway station",
       "pos": "noun",
@@ -2320,8 +2320,8 @@
       ]
     },
     {
-      "card_id": "hsk13_952f52df",
-      "hanzi": "或者",
+      "card_id": "hsk13_1758c940",
+      "hanzi": "或 者",
       "pinyin": "huò zhě",
       "english": "perhaps",
       "pos": "adv.",
@@ -2331,7 +2331,7 @@
       ]
     },
     {
-      "card_id": "hsk13_3a828a15",
+      "card_id": "hsk13_b5de188c",
       "hanzi": "极",
       "pinyin": "jí",
       "english": "extreme",
@@ -2342,7 +2342,7 @@
       ]
     },
     {
-      "card_id": "hsk13_ae04c5a6",
+      "card_id": "hsk13_1d1d3ad2",
       "hanzi": "几",
       "pinyin": "jǐ",
       "english": "how much/many? [expecting a small number]",
@@ -2354,8 +2354,8 @@
       ]
     },
     {
-      "card_id": "hsk13_333cce17",
-      "hanzi": "机场",
+      "card_id": "hsk13_3f9599d8",
+      "hanzi": "机 场",
       "pinyin": "jī chǎng",
       "english": "airport",
       "pos": "noun",
@@ -2367,8 +2367,8 @@
       ]
     },
     {
-      "card_id": "hsk13_c665335f",
-      "hanzi": "鸡蛋",
+      "card_id": "hsk13_a25b11de",
+      "hanzi": "鸡 蛋",
       "pinyin": "jī dàn",
       "english": "(chicken) egg",
       "pos": "noun",
@@ -2379,8 +2379,8 @@
       ]
     },
     {
-      "card_id": "hsk13_80bce84e",
-      "hanzi": "记得",
+      "card_id": "hsk13_a5583b36",
+      "hanzi": "记 得",
       "pinyin": "jì de",
       "english": "to remember",
       "pos": "verb",
@@ -2391,8 +2391,8 @@
       ]
     },
     {
-      "card_id": "hsk13_b58c9613",
-      "hanzi": "几乎",
+      "card_id": "hsk13_e3754bc1",
+      "hanzi": "几 乎",
       "pinyin": "jī hū",
       "english": "almost",
       "pos": "adv.",
@@ -2403,8 +2403,8 @@
       ]
     },
     {
-      "card_id": "hsk13_36cdb865",
-      "hanzi": "机会",
+      "card_id": "hsk13_8ca4dfb7",
+      "hanzi": "机 会",
       "pinyin": "jī huì",
       "english": "opportunity",
       "pos": "noun",
@@ -2415,8 +2415,8 @@
       ]
     },
     {
-      "card_id": "hsk13_63ed4d54",
-      "hanzi": "季节",
+      "card_id": "hsk13_2e2951f7",
+      "hanzi": "季 节",
       "pinyin": "jì jié",
       "english": "season",
       "pos": "noun",
@@ -2427,7 +2427,7 @@
       ]
     },
     {
-      "card_id": "hsk13_dfbb5d68",
+      "card_id": "hsk13_dd5beca9",
       "hanzi": "家",
       "pinyin": "jiā",
       "english": "family; home",
@@ -2440,7 +2440,7 @@
       ]
     },
     {
-      "card_id": "hsk13_b59f46b7",
+      "card_id": "hsk13_bef06a93",
       "hanzi": "件",
       "pinyin": "jiàn",
       "english": "item; [measure word for items of clothing]",
@@ -2452,8 +2452,8 @@
       ]
     },
     {
-      "card_id": "hsk13_38378540",
-      "hanzi": "检查",
+      "card_id": "hsk13_01b7a22b",
+      "hanzi": "检 查",
       "pinyin": "jiǎn chá",
       "english": "inspect",
       "pos": "verb",
@@ -2464,8 +2464,8 @@
       ]
     },
     {
-      "card_id": "hsk13_baaeabb2",
-      "hanzi": "简单",
+      "card_id": "hsk13_b0636e0e",
+      "hanzi": "简 单",
       "pinyin": "jiǎn dān",
       "english": "simple",
       "pos": "adj.",
@@ -2475,8 +2475,8 @@
       ]
     },
     {
-      "card_id": "hsk13_d2982c38",
-      "hanzi": "健康",
+      "card_id": "hsk13_77caa92d",
+      "hanzi": "健 康",
       "pinyin": "jiàn kāng",
       "english": "healthy; health",
       "pos": "adj.",
@@ -2487,8 +2487,8 @@
       ]
     },
     {
-      "card_id": "hsk13_6cf9f25e",
-      "hanzi": "见面",
+      "card_id": "hsk13_5df90472",
+      "hanzi": "见 面",
       "pinyin": "jiàn miàn",
       "english": "to meet",
       "pos": "verb",
@@ -2499,7 +2499,7 @@
       ]
     },
     {
-      "card_id": "hsk13_9c4023a9",
+      "card_id": "hsk13_8af62753",
       "hanzi": "讲",
       "pinyin": "jiǎng",
       "english": "speak",
@@ -2511,7 +2511,7 @@
       ]
     },
     {
-      "card_id": "hsk13_1769a9be",
+      "card_id": "hsk13_4a33b0a4",
       "hanzi": "教",
       "pinyin": "jiāo",
       "english": "to teach",
@@ -2523,7 +2523,7 @@
       ]
     },
     {
-      "card_id": "hsk13_14a7a31a",
+      "card_id": "hsk13_32f32bf2",
       "hanzi": "脚",
       "pinyin": "jiǎo",
       "english": "foot",
@@ -2535,7 +2535,7 @@
       ]
     },
     {
-      "card_id": "hsk13_70251af8",
+      "card_id": "hsk13_48fa9d87",
       "hanzi": "角",
       "pinyin": "jiǎo",
       "english": "horn; corner; jiao (written) [unit of currency = 0.1 yuan]",
@@ -2549,7 +2549,7 @@
       ]
     },
     {
-      "card_id": "hsk13_4908364f",
+      "card_id": "hsk13_b3289cdf",
       "hanzi": "叫",
       "pinyin": "jiào",
       "english": "to call; to be named",
@@ -2562,8 +2562,8 @@
       ]
     },
     {
-      "card_id": "hsk13_bb5859e0",
-      "hanzi": "教室",
+      "card_id": "hsk13_565f2233",
+      "hanzi": "教 室",
       "pinyin": "jiào shì",
       "english": "classroom",
       "pos": "noun",
@@ -2574,7 +2574,7 @@
       ]
     },
     {
-      "card_id": "hsk13_042805ec",
+      "card_id": "hsk13_2903bc19",
       "hanzi": "接",
       "pinyin": "jiē",
       "english": "connect",
@@ -2586,7 +2586,7 @@
       ]
     },
     {
-      "card_id": "hsk13_65ad97e2",
+      "card_id": "hsk13_32e85822",
       "hanzi": "借",
       "pinyin": "jiè",
       "english": "to lend",
@@ -2598,8 +2598,8 @@
       ]
     },
     {
-      "card_id": "hsk13_c11fa6db",
-      "hanzi": "街道",
+      "card_id": "hsk13_714069a2",
+      "hanzi": "街 道",
       "pinyin": "jiē dào",
       "english": "road",
       "pos": "noun",
@@ -2611,8 +2611,8 @@
       ]
     },
     {
-      "card_id": "hsk13_48060d3c",
-      "hanzi": "结婚",
+      "card_id": "hsk13_c62dbaf3",
+      "hanzi": "结 婚",
       "pinyin": "jié hūn",
       "english": "marry",
       "pos": "verb",
@@ -2624,8 +2624,8 @@
       ]
     },
     {
-      "card_id": "hsk13_436045ad",
-      "hanzi": "姐姐",
+      "card_id": "hsk13_00cd4f0b",
+      "hanzi": "姐 姐",
       "pinyin": "jiě jie",
       "english": "elder sister",
       "pos": "noun",
@@ -2636,8 +2636,8 @@
       ]
     },
     {
-      "card_id": "hsk13_a802af3b",
-      "hanzi": "解决",
+      "card_id": "hsk13_3b63e00d",
+      "hanzi": "解 决",
       "pinyin": "jiě jué",
       "english": "to resolve; solve",
       "pos": "verb",
@@ -2648,8 +2648,8 @@
       ]
     },
     {
-      "card_id": "hsk13_c7d18cc4",
-      "hanzi": "节目",
+      "card_id": "hsk13_09cc61a3",
+      "hanzi": "节 目",
       "pinyin": "jié mù",
       "english": "programme",
       "pos": "noun",
@@ -2660,8 +2660,8 @@
       ]
     },
     {
-      "card_id": "hsk13_01797b61",
-      "hanzi": "节日",
+      "card_id": "hsk13_5792b702",
+      "hanzi": "节 日",
       "pinyin": "jié rì",
       "english": "festival",
       "pos": "noun",
@@ -2673,8 +2673,8 @@
       ]
     },
     {
-      "card_id": "hsk13_363a51d6",
-      "hanzi": "介绍",
+      "card_id": "hsk13_c8b637be",
+      "hanzi": "介 绍",
       "pinyin": "jiè shào",
       "english": "introduce",
       "pos": "verb",
@@ -2685,8 +2685,8 @@
       ]
     },
     {
-      "card_id": "hsk13_2f6f4b83",
-      "hanzi": "结束",
+      "card_id": "hsk13_24bd4a0c",
+      "hanzi": "结 束",
       "pinyin": "jié shù",
       "english": "finish",
       "pos": "verb",
@@ -2697,7 +2697,7 @@
       ]
     },
     {
-      "card_id": "hsk13_2f23e0a5",
+      "card_id": "hsk13_5c8fad5f",
       "hanzi": "近",
       "pinyin": "jìn",
       "english": "near; close by",
@@ -2709,7 +2709,7 @@
       ]
     },
     {
-      "card_id": "hsk13_4eb9016d",
+      "card_id": "hsk13_2070dfdb",
       "hanzi": "进",
       "pinyin": "jìn",
       "english": "to enter",
@@ -2721,8 +2721,8 @@
       ]
     },
     {
-      "card_id": "hsk13_e98301ab",
-      "hanzi": "今天",
+      "card_id": "hsk13_b5797beb",
+      "hanzi": "今 天",
       "pinyin": "jīn tiān",
       "english": "today",
       "pos": "noun",
@@ -2733,8 +2733,8 @@
       ]
     },
     {
-      "card_id": "hsk13_dc5d374d",
-      "hanzi": "经常",
+      "card_id": "hsk13_7b6a72ad",
+      "hanzi": "经 常",
       "pinyin": "jīng cháng",
       "english": "often; regularly",
       "pos": "adv.",
@@ -2745,8 +2745,8 @@
       ]
     },
     {
-      "card_id": "hsk13_d84a8c2c",
-      "hanzi": "经过",
+      "card_id": "hsk13_314ecc67",
+      "hanzi": "经 过",
       "pinyin": "jīng guò",
       "english": "pass through",
       "pos": "verb",
@@ -2759,8 +2759,8 @@
       ]
     },
     {
-      "card_id": "hsk13_8633d22e",
-      "hanzi": "经理",
+      "card_id": "hsk13_9fea422c",
+      "hanzi": "经 理",
       "pinyin": "jīng lǐ",
       "english": "manager",
       "pos": "noun",
@@ -2771,7 +2771,7 @@
       ]
     },
     {
-      "card_id": "hsk13_5c1fd50e",
+      "card_id": "hsk13_b45416d6",
       "hanzi": "九",
       "pinyin": "jiǔ",
       "english": "nine",
@@ -2782,7 +2782,7 @@
       ]
     },
     {
-      "card_id": "hsk13_d9fa54df",
+      "card_id": "hsk13_0e20057c",
       "hanzi": "久",
       "pinyin": "jiǔ",
       "english": "long time",
@@ -2794,7 +2794,7 @@
       ]
     },
     {
-      "card_id": "hsk13_b035e6bb",
+      "card_id": "hsk13_bb9b0f86",
       "hanzi": "旧",
       "pinyin": "jiù",
       "english": "old; former",
@@ -2805,7 +2805,7 @@
       ]
     },
     {
-      "card_id": "hsk13_86f8fd72",
+      "card_id": "hsk13_aaa289c1",
       "hanzi": "就",
       "pinyin": "jiù",
       "english": "simply",
@@ -2817,8 +2817,8 @@
       ]
     },
     {
-      "card_id": "hsk13_1a467eb8",
-      "hanzi": "句子",
+      "card_id": "hsk13_7c26cd1c",
+      "hanzi": "句 子",
       "pinyin": "jù zi",
       "english": "sentence",
       "pos": "noun",
@@ -2829,8 +2829,8 @@
       ]
     },
     {
-      "card_id": "hsk13_c7219987",
-      "hanzi": "觉得",
+      "card_id": "hsk13_3502398b",
+      "hanzi": "觉 得",
       "pinyin": "jué de",
       "english": "to think; feel",
       "pos": "verb",
@@ -2841,8 +2841,8 @@
       ]
     },
     {
-      "card_id": "hsk13_e6af1265",
-      "hanzi": "决定",
+      "card_id": "hsk13_39d8053e",
+      "hanzi": "决 定",
       "pinyin": "jué dìng",
       "english": "decide",
       "pos": "verb",
@@ -2853,8 +2853,8 @@
       ]
     },
     {
-      "card_id": "hsk13_b1671445",
-      "hanzi": "咖啡",
+      "card_id": "hsk13_e94743a8",
+      "hanzi": "咖 啡",
       "pinyin": "kā fēi",
       "english": "coffee",
       "pos": "noun",
@@ -2865,7 +2865,7 @@
       ]
     },
     {
-      "card_id": "hsk13_8c404df3",
+      "card_id": "hsk13_95b2ba38",
       "hanzi": "开",
       "pinyin": "kāi",
       "english": "to switch on; open",
@@ -2877,8 +2877,8 @@
       ]
     },
     {
-      "card_id": "hsk13_ac4216ad",
-      "hanzi": "开始",
+      "card_id": "hsk13_3fda8bd9",
+      "hanzi": "开 始",
       "pinyin": "kāi shǐ",
       "english": "to begin",
       "pos": "verb",
@@ -2889,7 +2889,7 @@
       ]
     },
     {
-      "card_id": "hsk13_0005abe4",
+      "card_id": "hsk13_ee836f53",
       "hanzi": "看",
       "pinyin": "kàn",
       "english": "to see; to read; to watch; to look at",
@@ -2901,8 +2901,8 @@
       ]
     },
     {
-      "card_id": "hsk13_345376c8",
-      "hanzi": "看见",
+      "card_id": "hsk13_367e618c",
+      "hanzi": "看 见",
       "pinyin": "kàn jiàn",
       "english": "see",
       "pos": "verb",
@@ -2913,8 +2913,8 @@
       ]
     },
     {
-      "card_id": "hsk13_530595f5",
-      "hanzi": "考试",
+      "card_id": "hsk13_401cf666",
+      "hanzi": "考 试",
       "pinyin": "kǎo shì",
       "english": "examination",
       "pos": "verb",
@@ -2925,7 +2925,7 @@
       ]
     },
     {
-      "card_id": "hsk13_a9c97b96",
+      "card_id": "hsk13_e46f3040",
       "hanzi": "渴",
       "pinyin": "kě",
       "english": "thirsty",
@@ -2937,7 +2937,7 @@
       ]
     },
     {
-      "card_id": "hsk13_0d6e751a",
+      "card_id": "hsk13_1582aeed",
       "hanzi": "刻",
       "pinyin": "kè",
       "english": "quarter (of an hour); to carve",
@@ -2950,7 +2950,7 @@
       ]
     },
     {
-      "card_id": "hsk13_b2422587",
+      "card_id": "hsk13_0876ecef",
       "hanzi": "课",
       "pinyin": "kè",
       "english": "lesson",
@@ -2962,8 +2962,8 @@
       ]
     },
     {
-      "card_id": "hsk13_4d57bd8f",
-      "hanzi": "可爱",
+      "card_id": "hsk13_00c30ade",
+      "hanzi": "可 爱",
       "pinyin": "kě ài",
       "english": "lovely; loveable",
       "pos": "adj.",
@@ -2973,8 +2973,8 @@
       ]
     },
     {
-      "card_id": "hsk13_bcb42a73",
-      "hanzi": "可能",
+      "card_id": "hsk13_ba0e082e",
+      "hanzi": "可 能",
       "pinyin": "kě néng",
       "english": "perhaps; possibly",
       "pos": "verb",
@@ -2985,8 +2985,8 @@
       ]
     },
     {
-      "card_id": "hsk13_aa1768c2",
-      "hanzi": "客人",
+      "card_id": "hsk13_846b280b",
+      "hanzi": "客 人",
       "pinyin": "kè rén",
       "english": "guest",
       "pos": "noun",
@@ -2997,8 +2997,8 @@
       ]
     },
     {
-      "card_id": "hsk13_38450326",
-      "hanzi": "可以",
+      "card_id": "hsk13_5fa8219b",
+      "hanzi": "可 以",
       "pinyin": "kě yǐ",
       "english": "can; may",
       "pos": "verb",
@@ -3010,8 +3010,8 @@
       ]
     },
     {
-      "card_id": "hsk13_7c499f13",
-      "hanzi": "空调",
+      "card_id": "hsk13_e18b85a5",
+      "hanzi": "空 调",
       "pinyin": "kōng tiáo",
       "english": "air-conditioning",
       "pos": "noun",
@@ -3022,7 +3022,7 @@
       ]
     },
     {
-      "card_id": "hsk13_1a9ee5a6",
+      "card_id": "hsk13_a9af1570",
       "hanzi": "口",
       "pinyin": "kǒu",
       "english": "mouth; [measure word for family members]",
@@ -3036,7 +3036,7 @@
       ]
     },
     {
-      "card_id": "hsk13_4c47106f",
+      "card_id": "hsk13_322bcf13",
       "hanzi": "哭",
       "pinyin": "kū",
       "english": "cry",
@@ -3048,8 +3048,8 @@
       ]
     },
     {
-      "card_id": "hsk13_232df360",
-      "hanzi": "裤子",
+      "card_id": "hsk13_39fc706d",
+      "hanzi": "裤 子",
       "pinyin": "kù zi",
       "english": "trousers",
       "pos": "noun",
@@ -3060,7 +3060,7 @@
       ]
     },
     {
-      "card_id": "hsk13_ce4c5453",
+      "card_id": "hsk13_b11c8bdd",
       "hanzi": "块",
       "pinyin": "kuài",
       "english": "lump; piece",
@@ -3072,7 +3072,7 @@
       ]
     },
     {
-      "card_id": "hsk13_2f868400",
+      "card_id": "hsk13_0025191e",
       "hanzi": "快",
       "pinyin": "kuài",
       "english": "fast; quick",
@@ -3083,8 +3083,8 @@
       ]
     },
     {
-      "card_id": "hsk13_1029bbba",
-      "hanzi": "快乐",
+      "card_id": "hsk13_a96e1891",
+      "hanzi": "快 乐",
       "pinyin": "kuài lè",
       "english": "happy",
       "pos": "adj.",
@@ -3095,8 +3095,8 @@
       ]
     },
     {
-      "card_id": "hsk13_95d9cdef",
-      "hanzi": "筷子",
+      "card_id": "hsk13_a053289e",
+      "hanzi": "筷 子",
       "pinyin": "kuài zi",
       "english": "chopsticks",
       "pos": "noun",
@@ -3107,7 +3107,7 @@
       ]
     },
     {
-      "card_id": "hsk13_fa32f420",
+      "card_id": "hsk13_e6046a4c",
       "hanzi": "来",
       "pinyin": "lái",
       "english": "to come",
@@ -3119,7 +3119,7 @@
       ]
     },
     {
-      "card_id": "hsk13_45c76df2",
+      "card_id": "hsk13_7233dd34",
       "hanzi": "蓝",
       "pinyin": "lán",
       "english": "blue",
@@ -3130,7 +3130,7 @@
       ]
     },
     {
-      "card_id": "hsk13_f208c56a",
+      "card_id": "hsk13_fee09ce3",
       "hanzi": "老",
       "pinyin": "lǎo",
       "english": "old; aged",
@@ -3142,8 +3142,8 @@
       ]
     },
     {
-      "card_id": "hsk13_0502c92b",
-      "hanzi": "老师",
+      "card_id": "hsk13_17c17a8b",
+      "hanzi": "老 师",
       "pinyin": "lǎo shī",
       "english": "teacher",
       "pos": "noun",
@@ -3154,7 +3154,7 @@
       ]
     },
     {
-      "card_id": "hsk13_d7dbcde2",
+      "card_id": "hsk13_9275efd7",
       "hanzi": "了",
       "pinyin": "le",
       "english": "[makes an exclamation]",
@@ -3165,7 +3165,7 @@
       ]
     },
     {
-      "card_id": "hsk13_fb8dbac0",
+      "card_id": "hsk13_2203a451",
       "hanzi": "累",
       "pinyin": "lèi",
       "english": "tired",
@@ -3177,7 +3177,7 @@
       ]
     },
     {
-      "card_id": "hsk13_5f3023d3",
+      "card_id": "hsk13_7d72a040",
       "hanzi": "冷",
       "pinyin": "lěng",
       "english": "cold",
@@ -3188,7 +3188,7 @@
       ]
     },
     {
-      "card_id": "hsk13_3ad70ed4",
+      "card_id": "hsk13_93078f49",
       "hanzi": "离",
       "pinyin": "lí",
       "english": "to be distant from; to leave",
@@ -3201,7 +3201,7 @@
       ]
     },
     {
-      "card_id": "hsk13_759e92d2",
+      "card_id": "hsk13_3a92d960",
       "hanzi": "里",
       "pinyin": "lǐ",
       "english": "in",
@@ -3213,8 +3213,8 @@
       ]
     },
     {
-      "card_id": "hsk13_af95b247",
-      "hanzi": "离开",
+      "card_id": "hsk13_4a1bf11c",
+      "hanzi": "离 开",
       "pinyin": "lí kāi",
       "english": "leave",
       "pos": "verb",
@@ -3225,8 +3225,8 @@
       ]
     },
     {
-      "card_id": "hsk13_c02c0b40",
-      "hanzi": "历史",
+      "card_id": "hsk13_7fe2d513",
+      "hanzi": "历 史",
       "pinyin": "lì shǐ",
       "english": "history",
       "pos": "noun",
@@ -3238,8 +3238,8 @@
       ]
     },
     {
-      "card_id": "hsk13_e08f2179",
-      "hanzi": "礼物",
+      "card_id": "hsk13_e516d721",
+      "hanzi": "礼 物",
       "pinyin": "lǐ wù",
       "english": "gift; present",
       "pos": "noun",
@@ -3250,7 +3250,7 @@
       ]
     },
     {
-      "card_id": "hsk13_8c90e466",
+      "card_id": "hsk13_9d8b7282",
       "hanzi": "脸",
       "pinyin": "liǎn",
       "english": "face",
@@ -3262,8 +3262,8 @@
       ]
     },
     {
-      "card_id": "hsk13_4722c2cd",
-      "hanzi": "练习",
+      "card_id": "hsk13_1fb4f62c",
+      "hanzi": "练 习",
       "pinyin": "liàn xí",
       "english": "to practise",
       "pos": "verb / noun",
@@ -3274,7 +3274,7 @@
       ]
     },
     {
-      "card_id": "hsk13_17437b5a",
+      "card_id": "hsk13_a5011f89",
       "hanzi": "两",
       "pinyin": "liǎng",
       "english": "two (of something)",
@@ -3286,7 +3286,7 @@
       ]
     },
     {
-      "card_id": "hsk13_b24357ba",
+      "card_id": "hsk13_dc21929e",
       "hanzi": "辆",
       "pinyin": "liàng",
       "english": "[measure word for vehicles]",
@@ -3298,8 +3298,8 @@
       ]
     },
     {
-      "card_id": "hsk13_2b2dca41",
-      "hanzi": "了解",
+      "card_id": "hsk13_d1c7ada5",
+      "hanzi": "了 解",
       "pinyin": "liǎo jiě",
       "english": "understand",
       "pos": "verb",
@@ -3310,8 +3310,8 @@
       ]
     },
     {
-      "card_id": "hsk13_c68a5133",
-      "hanzi": "聊天",
+      "card_id": "hsk13_41ff004d",
+      "hanzi": "聊 天",
       "pinyin": "liáo tiān",
       "english": "to chat",
       "pos": "verb",
@@ -3322,8 +3322,8 @@
       ]
     },
     {
-      "card_id": "hsk13_e8ce68a5",
-      "hanzi": "邻居",
+      "card_id": "hsk13_b4667e9f",
+      "hanzi": "邻 居",
       "pinyin": "lín jū",
       "english": "neighbour",
       "pos": "noun",
@@ -3334,7 +3334,7 @@
       ]
     },
     {
-      "card_id": "hsk13_c86ff019",
+      "card_id": "hsk13_cdeeea0f",
       "hanzi": "零",
       "pinyin": "líng",
       "english": "zero",
@@ -3345,7 +3345,7 @@
       ]
     },
     {
-      "card_id": "hsk13_2c920d70",
+      "card_id": "hsk13_2423e79b",
       "hanzi": "六",
       "pinyin": "liù",
       "english": "six",
@@ -3356,8 +3356,8 @@
       ]
     },
     {
-      "card_id": "hsk13_77b21507",
-      "hanzi": "留学",
+      "card_id": "hsk13_7ec13499",
+      "hanzi": "留 学",
       "pinyin": "liú xué",
       "english": "study abroad",
       "pos": "verb",
@@ -3368,7 +3368,7 @@
       ]
     },
     {
-      "card_id": "hsk13_ff714b04",
+      "card_id": "hsk13_bbb979fc",
       "hanzi": "楼",
       "pinyin": "lóu",
       "english": "multi-storied building",
@@ -3381,7 +3381,7 @@
       ]
     },
     {
-      "card_id": "hsk13_31899147",
+      "card_id": "hsk13_36c14c4b",
       "hanzi": "路",
       "pinyin": "lù",
       "english": "road; route; bus number",
@@ -3394,7 +3394,7 @@
       ]
     },
     {
-      "card_id": "hsk13_5c0c9dec",
+      "card_id": "hsk13_5c5851b6",
       "hanzi": "绿",
       "pinyin": "lǜ",
       "english": "green",
@@ -3405,8 +3405,8 @@
       ]
     },
     {
-      "card_id": "hsk13_983bc774",
-      "hanzi": "旅游",
+      "card_id": "hsk13_4db57921",
+      "hanzi": "旅 游",
       "pinyin": "lǚ yóu",
       "english": "tourism",
       "pos": "verb",
@@ -3418,7 +3418,7 @@
       ]
     },
     {
-      "card_id": "hsk13_849f192d",
+      "card_id": "hsk13_bb71b4e7",
       "hanzi": "马",
       "pinyin": "mǎ",
       "english": "horse",
@@ -3430,7 +3430,7 @@
       ]
     },
     {
-      "card_id": "hsk13_709d47f4",
+      "card_id": "hsk13_655442c9",
       "hanzi": "吗",
       "pinyin": "ma",
       "english": "[makes a yes; no question]",
@@ -3441,8 +3441,8 @@
       ]
     },
     {
-      "card_id": "hsk13_5951c412",
-      "hanzi": "妈妈",
+      "card_id": "hsk13_89eb9507",
+      "hanzi": "妈 妈",
       "pinyin": "mā ma",
       "english": "mother",
       "pos": "noun",
@@ -3453,8 +3453,8 @@
       ]
     },
     {
-      "card_id": "hsk13_3ff62427",
-      "hanzi": "马上",
+      "card_id": "hsk13_a1535a19",
+      "hanzi": "马 上",
       "pinyin": "mǎ shàng",
       "english": "immediately",
       "pos": "adv.",
@@ -3465,7 +3465,7 @@
       ]
     },
     {
-      "card_id": "hsk13_925aba71",
+      "card_id": "hsk13_03ca88e3",
       "hanzi": "买",
       "pinyin": "mǎi",
       "english": "buy",
@@ -3476,7 +3476,7 @@
       ]
     },
     {
-      "card_id": "hsk13_c545f2e4",
+      "card_id": "hsk13_8aee4c22",
       "hanzi": "卖",
       "pinyin": "mài",
       "english": "to sell",
@@ -3487,7 +3487,7 @@
       ]
     },
     {
-      "card_id": "hsk13_075df517",
+      "card_id": "hsk13_d9aeec94",
       "hanzi": "慢",
       "pinyin": "màn",
       "english": "slow",
@@ -3498,8 +3498,8 @@
       ]
     },
     {
-      "card_id": "hsk13_0c9481a3",
-      "hanzi": "满意",
+      "card_id": "hsk13_dfc7a652",
+      "hanzi": "满 意",
       "pinyin": "mǎn yì",
       "english": "pleased; satisfied",
       "pos": "verb",
@@ -3510,7 +3510,7 @@
       ]
     },
     {
-      "card_id": "hsk13_278d474d",
+      "card_id": "hsk13_193aad5a",
       "hanzi": "忙",
       "pinyin": "máng",
       "english": "busy",
@@ -3522,7 +3522,7 @@
       ]
     },
     {
-      "card_id": "hsk13_b1386774",
+      "card_id": "hsk13_1efff030",
       "hanzi": "猫",
       "pinyin": "māo",
       "english": "cat",
@@ -3534,8 +3534,8 @@
       ]
     },
     {
-      "card_id": "hsk13_4a48f311",
-      "hanzi": "帽子",
+      "card_id": "hsk13_69831958",
+      "hanzi": "帽 子",
       "pinyin": "mào zi",
       "english": "hat",
       "pos": "noun",
@@ -3546,7 +3546,7 @@
       ]
     },
     {
-      "card_id": "hsk13_4c692b5c",
+      "card_id": "hsk13_0d577643",
       "hanzi": "每",
       "pinyin": "měi",
       "english": "every; each",
@@ -3558,8 +3558,8 @@
       ]
     },
     {
-      "card_id": "hsk13_b4dee906",
-      "hanzi": "没关系",
+      "card_id": "hsk13_6bdcdd3d",
+      "hanzi": "没 关 系",
       "pinyin": "méi guān xi",
       "english": "no problem",
       "pos": "--",
@@ -3570,8 +3570,8 @@
       ]
     },
     {
-      "card_id": "hsk13_922ab5b3",
-      "hanzi": "妹妹",
+      "card_id": "hsk13_cb69e761",
+      "hanzi": "妹 妹",
       "pinyin": "mèi mei",
       "english": "younger sister",
       "pos": "noun",
@@ -3582,8 +3582,8 @@
       ]
     },
     {
-      "card_id": "hsk13_38bbcef2",
-      "hanzi": "没有",
+      "card_id": "hsk13_50cd7993",
+      "hanzi": "没 有",
       "pinyin": "méi yǒu",
       "english": "don't have",
       "pos": "verb / adv.",
@@ -3595,7 +3595,7 @@
       ]
     },
     {
-      "card_id": "hsk13_146a286e",
+      "card_id": "hsk13_54884f2e",
       "hanzi": "门",
       "pinyin": "mén",
       "english": "door",
@@ -3608,7 +3608,7 @@
       ]
     },
     {
-      "card_id": "hsk13_7a7a21fa",
+      "card_id": "hsk13_7bf4027b",
       "hanzi": "米",
       "pinyin": "mǐ",
       "english": "rice; metre",
@@ -3622,8 +3622,8 @@
       ]
     },
     {
-      "card_id": "hsk13_124729ef",
-      "hanzi": "米饭",
+      "card_id": "hsk13_fe7203e5",
+      "hanzi": "米 饭",
       "pinyin": "mǐ fàn",
       "english": "rice [cooked; boiled]",
       "pos": "noun",
@@ -3634,8 +3634,8 @@
       ]
     },
     {
-      "card_id": "hsk13_c0cd4bb5",
-      "hanzi": "面包",
+      "card_id": "hsk13_50d5f1bc",
+      "hanzi": "面 包",
       "pinyin": "miàn bāo",
       "english": "bread",
       "pos": "noun",
@@ -3646,8 +3646,8 @@
       ]
     },
     {
-      "card_id": "hsk13_9eecfc56",
-      "hanzi": "面条",
+      "card_id": "hsk13_2c9e0c5e",
+      "hanzi": "面 条",
       "pinyin": "miàn tiáo",
       "english": "noodles",
       "pos": "--",
@@ -3658,8 +3658,8 @@
       ]
     },
     {
-      "card_id": "hsk13_03aa3947",
-      "hanzi": "明白",
+      "card_id": "hsk13_62d2c6f6",
+      "hanzi": "明 白",
       "pinyin": "míng bai",
       "english": "to understand",
       "pos": "verb / adj.",
@@ -3670,8 +3670,8 @@
       ]
     },
     {
-      "card_id": "hsk13_8020d733",
-      "hanzi": "明天",
+      "card_id": "hsk13_30b6ae45",
+      "hanzi": "明 天",
       "pinyin": "míng tiān",
       "english": "tomorrow",
       "pos": "noun",
@@ -3682,8 +3682,8 @@
       ]
     },
     {
-      "card_id": "hsk13_d96339bf",
-      "hanzi": "名字",
+      "card_id": "hsk13_9e8e2b76",
+      "hanzi": "名 字",
       "pinyin": "míng zi",
       "english": "given name",
       "pos": "noun",
@@ -3695,7 +3695,7 @@
       ]
     },
     {
-      "card_id": "hsk13_f9fdd47a",
+      "card_id": "hsk13_e818d10a",
       "hanzi": "拿",
       "pinyin": "ná",
       "english": "to take",
@@ -3707,7 +3707,7 @@
       ]
     },
     {
-      "card_id": "hsk13_6e9d0582",
+      "card_id": "hsk13_33a05abe",
       "hanzi": "哪",
       "pinyin": "nǎ",
       "english": "which?",
@@ -3719,7 +3719,7 @@
       ]
     },
     {
-      "card_id": "hsk13_9fd7ba9d",
+      "card_id": "hsk13_c39ca245",
       "hanzi": "那",
       "pinyin": "nà",
       "english": "that",
@@ -3731,8 +3731,8 @@
       ]
     },
     {
-      "card_id": "hsk13_c099cdfc",
-      "hanzi": "哪儿",
+      "card_id": "hsk13_b0a5934d",
+      "hanzi": "哪 儿",
       "pinyin": "nǎ er",
       "english": "where?",
       "pos": "pron.",
@@ -3744,10 +3744,10 @@
       ]
     },
     {
-      "card_id": "hsk13_697a3c66",
-      "hanzi": "奶奶",
+      "card_id": "hsk13_be48f604",
+      "hanzi": "奶 奶",
       "pinyin": "nǎi nai",
-      "english": "grandmother [father's mother]     ",
+      "english": "grandmother [father's mother]",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -3756,7 +3756,7 @@
       ]
     },
     {
-      "card_id": "hsk13_f837dd30",
+      "card_id": "hsk13_8cea535c",
       "hanzi": "男",
       "pinyin": "nán",
       "english": "male",
@@ -3768,7 +3768,7 @@
       ]
     },
     {
-      "card_id": "hsk13_7d3c584c",
+      "card_id": "hsk13_e9fa3ed7",
       "hanzi": "难",
       "pinyin": "nán",
       "english": "hard; difficult",
@@ -3779,7 +3779,7 @@
       ]
     },
     {
-      "card_id": "hsk13_95e6539f",
+      "card_id": "hsk13_d270366a",
       "hanzi": "南",
       "pinyin": "nán",
       "english": "south",
@@ -3790,8 +3790,8 @@
       ]
     },
     {
-      "card_id": "hsk13_690430da",
-      "hanzi": "难过",
+      "card_id": "hsk13_1c39fcfa",
+      "hanzi": "难 过",
       "pinyin": "nán guò",
       "english": "have a hard time",
       "pos": "adj.",
@@ -3802,7 +3802,7 @@
       ]
     },
     {
-      "card_id": "hsk13_a1eca4cb",
+      "card_id": "hsk13_408aa638",
       "hanzi": "呢",
       "pinyin": "ne",
       "english": "[returns; forwards a question]",
@@ -3813,7 +3813,7 @@
       ]
     },
     {
-      "card_id": "hsk13_247771f2",
+      "card_id": "hsk13_9fdef9d1",
       "hanzi": "能",
       "pinyin": "néng",
       "english": "to be able to; can",
@@ -3825,7 +3825,7 @@
       ]
     },
     {
-      "card_id": "hsk13_ab95edd9",
+      "card_id": "hsk13_f968ba61",
       "hanzi": "你",
       "pinyin": "nǐ",
       "english": "you",
@@ -3837,7 +3837,7 @@
       ]
     },
     {
-      "card_id": "hsk13_41013605",
+      "card_id": "hsk13_075a8a80",
       "hanzi": "年",
       "pinyin": "nián",
       "english": "year",
@@ -3850,8 +3850,8 @@
       ]
     },
     {
-      "card_id": "hsk13_68f57a71",
-      "hanzi": "年级",
+      "card_id": "hsk13_7f60c579",
+      "hanzi": "年 级",
       "pinyin": "nián jí",
       "english": "(school) year/grade",
       "pos": "noun",
@@ -3863,8 +3863,8 @@
       ]
     },
     {
-      "card_id": "hsk13_1a4f8e1e",
-      "hanzi": "年轻",
+      "card_id": "hsk13_91240017",
+      "hanzi": "年 轻",
       "pinyin": "nián qīng",
       "english": "young",
       "pos": "adj.",
@@ -3875,7 +3875,7 @@
       ]
     },
     {
-      "card_id": "hsk13_bd958a42",
+      "card_id": "hsk13_345c26ad",
       "hanzi": "鸟",
       "pinyin": "niǎo",
       "english": "bird",
@@ -3887,7 +3887,7 @@
       ]
     },
     {
-      "card_id": "hsk13_044a062c",
+      "card_id": "hsk13_0c295da3",
       "hanzi": "您",
       "pinyin": "nín",
       "english": "you [polite form]",
@@ -3899,8 +3899,8 @@
       ]
     },
     {
-      "card_id": "hsk13_a338f150",
-      "hanzi": "牛奶",
+      "card_id": "hsk13_9527c258",
+      "hanzi": "牛 奶",
       "pinyin": "niú nǎi",
       "english": "milk",
       "pos": "noun",
@@ -3911,7 +3911,7 @@
       ]
     },
     {
-      "card_id": "hsk13_3967ebcd",
+      "card_id": "hsk13_b9d2a825",
       "hanzi": "女",
       "pinyin": "nǚ",
       "english": "female",
@@ -3923,8 +3923,8 @@
       ]
     },
     {
-      "card_id": "hsk13_d9c4cebc",
-      "hanzi": "女儿",
+      "card_id": "hsk13_ab21bd40",
+      "hanzi": "女 儿",
       "pinyin": "nǚ ér",
       "english": "daughter",
       "pos": "noun",
@@ -3935,8 +3935,8 @@
       ]
     },
     {
-      "card_id": "hsk13_64aa2f6b",
-      "hanzi": "努力",
+      "card_id": "hsk13_0526eabb",
+      "hanzi": "努 力",
       "pinyin": "nǔ lì",
       "english": "hardworking",
       "pos": "adj.",
@@ -3947,10 +3947,10 @@
       ]
     },
     {
-      "card_id": "hsk13_ec9c47d9",
-      "hanzi": "爬山",
+      "card_id": "hsk13_8c1e47ad",
+      "hanzi": "爬 山",
       "pinyin": "pá shān",
-      "english": "to climb hills/mountains     ",
+      "english": "to climb hills/mountains",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -3960,8 +3960,8 @@
       ]
     },
     {
-      "card_id": "hsk13_c08f003a",
-      "hanzi": "盘子",
+      "card_id": "hsk13_9d8ab081",
+      "hanzi": "盘 子",
       "pinyin": "pán zi",
       "english": "tray",
       "pos": "noun",
@@ -3972,7 +3972,7 @@
       ]
     },
     {
-      "card_id": "hsk13_5b75093c",
+      "card_id": "hsk13_2be3df3a",
       "hanzi": "胖",
       "pinyin": "pàng",
       "english": "fat",
@@ -3984,8 +3984,8 @@
       ]
     },
     {
-      "card_id": "hsk13_8f58a84b",
-      "hanzi": "旁边",
+      "card_id": "hsk13_3f74f5a0",
+      "hanzi": "旁 边",
       "pinyin": "páng biān",
       "english": "next to",
       "pos": "noun",
@@ -3996,8 +3996,8 @@
       ]
     },
     {
-      "card_id": "hsk13_546a8d0d",
-      "hanzi": "跑步",
+      "card_id": "hsk13_0667c037",
+      "hanzi": "跑 步",
       "pinyin": "pǎo bù",
       "english": "running; jogging",
       "pos": "verb",
@@ -4008,8 +4008,8 @@
       ]
     },
     {
-      "card_id": "hsk13_b1c37563",
-      "hanzi": "朋友",
+      "card_id": "hsk13_885994ba",
+      "hanzi": "朋 友",
       "pinyin": "péng you",
       "english": "friend",
       "pos": "noun",
@@ -4020,8 +4020,8 @@
       ]
     },
     {
-      "card_id": "hsk13_3896bd48",
-      "hanzi": "啤酒",
+      "card_id": "hsk13_741621f1",
+      "hanzi": "啤 酒",
       "pinyin": "pí jiǔ",
       "english": "beer",
       "pos": "noun",
@@ -4032,8 +4032,8 @@
       ]
     },
     {
-      "card_id": "hsk13_504a03e3",
-      "hanzi": "皮鞋",
+      "card_id": "hsk13_9c47322e",
+      "hanzi": "皮 鞋",
       "pinyin": "pí xié",
       "english": "leather shoes",
       "pos": "noun",
@@ -4044,8 +4044,8 @@
       ]
     },
     {
-      "card_id": "hsk13_3f28bf33",
-      "hanzi": "便宜",
+      "card_id": "hsk13_03bccdc5",
+      "hanzi": "便 宜",
       "pinyin": "pián yi",
       "english": "cheap",
       "pos": "adj.",
@@ -4056,7 +4056,7 @@
       ]
     },
     {
-      "card_id": "hsk13_713e1623",
+      "card_id": "hsk13_eaf3ed26",
       "hanzi": "票",
       "pinyin": "piào",
       "english": "ticket",
@@ -4068,8 +4068,8 @@
       ]
     },
     {
-      "card_id": "hsk13_22046900",
-      "hanzi": "漂亮",
+      "card_id": "hsk13_0c7e36a8",
+      "hanzi": "漂 亮",
       "pinyin": "piào liang",
       "english": "beautiful",
       "pos": "adj.",
@@ -4079,8 +4079,8 @@
       ]
     },
     {
-      "card_id": "hsk13_6cb64fb1",
-      "hanzi": "苹果",
+      "card_id": "hsk13_faf7e2c7",
+      "hanzi": "苹 果",
       "pinyin": "píng guǒ",
       "english": "apple",
       "pos": "noun",
@@ -4092,8 +4092,8 @@
       ]
     },
     {
-      "card_id": "hsk13_e96316a3",
-      "hanzi": "瓶子",
+      "card_id": "hsk13_44d2cb7d",
+      "hanzi": "瓶 子",
       "pinyin": "píng zi",
       "english": "bottle",
       "pos": "noun",
@@ -4104,7 +4104,7 @@
       ]
     },
     {
-      "card_id": "hsk13_0c07a8e9",
+      "card_id": "hsk13_b48ccc69",
       "hanzi": "七",
       "pinyin": "qī",
       "english": "seven",
@@ -4115,7 +4115,7 @@
       ]
     },
     {
-      "card_id": "hsk13_1cb67a7b",
+      "card_id": "hsk13_a62f0f10",
       "hanzi": "骑",
       "pinyin": "qí",
       "english": "to ride (a bicycle, horse)",
@@ -4127,8 +4127,8 @@
       ]
     },
     {
-      "card_id": "hsk13_9e09505f",
-      "hanzi": "起床",
+      "card_id": "hsk13_71573a3d",
+      "hanzi": "起 床",
       "pinyin": "qǐ chuáng",
       "english": "get up (out of bed)",
       "pos": "verb",
@@ -4139,8 +4139,8 @@
       ]
     },
     {
-      "card_id": "hsk13_26ddbbaa",
-      "hanzi": "起飞",
+      "card_id": "hsk13_9a11ecce",
+      "hanzi": "起 飞",
       "pinyin": "qǐ fēi",
       "english": "take off [plane]",
       "pos": "verb",
@@ -4151,8 +4151,8 @@
       ]
     },
     {
-      "card_id": "hsk13_af12de26",
-      "hanzi": "奇怪",
+      "card_id": "hsk13_1e8846de",
+      "hanzi": "奇 怪",
       "pinyin": "qí guài",
       "english": "strange",
       "pos": "adj.",
@@ -4162,8 +4162,8 @@
       ]
     },
     {
-      "card_id": "hsk13_ffc31270",
-      "hanzi": "起来",
+      "card_id": "hsk13_c583181c",
+      "hanzi": "起 来",
       "pinyin": "qǐ lái",
       "english": "stand up; sit up; rise to one's feet",
       "pos": "verb",
@@ -4174,8 +4174,8 @@
       ]
     },
     {
-      "card_id": "hsk13_eb3f80e1",
-      "hanzi": "其实",
+      "card_id": "hsk13_acba5250",
+      "hanzi": "其 实",
       "pinyin": "qí shí",
       "english": "in fact",
       "pos": "adv.",
@@ -4186,8 +4186,8 @@
       ]
     },
     {
-      "card_id": "hsk13_6b7ca10e",
-      "hanzi": "其他",
+      "card_id": "hsk13_7b77d430",
+      "hanzi": "其 他",
       "pinyin": "qí tā",
       "english": "other",
       "pos": "pron.",
@@ -4198,8 +4198,8 @@
       ]
     },
     {
-      "card_id": "hsk13_906c8ff4",
-      "hanzi": "妻子",
+      "card_id": "hsk13_98e3a6d5",
+      "hanzi": "妻 子",
       "pinyin": "qī zi",
       "english": "wife",
       "pos": "noun",
@@ -4210,7 +4210,7 @@
       ]
     },
     {
-      "card_id": "hsk13_a2c693bd",
+      "card_id": "hsk13_856b9d14",
       "hanzi": "千",
       "pinyin": "qiān",
       "english": "thousand",
@@ -4221,7 +4221,7 @@
       ]
     },
     {
-      "card_id": "hsk13_8e6047ef",
+      "card_id": "hsk13_b4b2f3e0",
       "hanzi": "钱",
       "pinyin": "qián",
       "english": "money",
@@ -4233,8 +4233,8 @@
       ]
     },
     {
-      "card_id": "hsk13_4eccfae3",
-      "hanzi": "铅笔",
+      "card_id": "hsk13_9d70a46e",
+      "hanzi": "铅 笔",
       "pinyin": "qiān bǐ",
       "english": "pencil",
       "pos": "noun",
@@ -4245,8 +4245,8 @@
       ]
     },
     {
-      "card_id": "hsk13_2d1bba5d",
-      "hanzi": "前面",
+      "card_id": "hsk13_7ee3557e",
+      "hanzi": "前 面",
       "pinyin": "qián miàn",
       "english": "front",
       "pos": "noun",
@@ -4257,7 +4257,7 @@
       ]
     },
     {
-      "card_id": "hsk13_02053035",
+      "card_id": "hsk13_f3957fd0",
       "hanzi": "晴",
       "pinyin": "qíng",
       "english": "fine; sunny",
@@ -4269,7 +4269,7 @@
       ]
     },
     {
-      "card_id": "hsk13_02b3df29",
+      "card_id": "hsk13_c9f51ef4",
       "hanzi": "请",
       "pinyin": "qǐng",
       "english": "to invite; please",
@@ -4281,8 +4281,8 @@
       ]
     },
     {
-      "card_id": "hsk13_a3d8aef3",
-      "hanzi": "清楚",
+      "card_id": "hsk13_feae3f23",
+      "hanzi": "清 楚",
       "pinyin": "qīng chu",
       "english": "clear",
       "pos": "adj.",
@@ -4292,8 +4292,8 @@
       ]
     },
     {
-      "card_id": "hsk13_25c527df",
-      "hanzi": "请假",
+      "card_id": "hsk13_7d8f51c5",
+      "hanzi": "请 假",
       "pinyin": "qǐng jià",
       "english": "ask for leave",
       "pos": "verb",
@@ -4304,7 +4304,7 @@
       ]
     },
     {
-      "card_id": "hsk13_4bd8d2f1",
+      "card_id": "hsk13_f6f83d56",
       "hanzi": "秋",
       "pinyin": "qiū",
       "english": "autumn",
@@ -4316,7 +4316,7 @@
       ]
     },
     {
-      "card_id": "hsk13_33726be5",
+      "card_id": "hsk13_6975b374",
       "hanzi": "去",
       "pinyin": "qù",
       "english": "to go",
@@ -4328,8 +4328,8 @@
       ]
     },
     {
-      "card_id": "hsk13_4c93a6b6",
-      "hanzi": "去年",
+      "card_id": "hsk13_0b67a21a",
+      "hanzi": "去 年",
       "pinyin": "qù nián",
       "english": "last year",
       "pos": "noun",
@@ -4340,8 +4340,8 @@
       ]
     },
     {
-      "card_id": "hsk13_5597c525",
-      "hanzi": "裙子",
+      "card_id": "hsk13_3a66df8d",
+      "hanzi": "裙 子",
       "pinyin": "qún zi",
       "english": "skirt",
       "pos": "noun",
@@ -4352,8 +4352,8 @@
       ]
     },
     {
-      "card_id": "hsk13_a2d18136",
-      "hanzi": "然后",
+      "card_id": "hsk13_4eb6d5c7",
+      "hanzi": "然 后",
       "pinyin": "rán hòu",
       "english": "and then; after that",
       "pos": "link.",
@@ -4364,7 +4364,7 @@
       ]
     },
     {
-      "card_id": "hsk13_b6868ecc",
+      "card_id": "hsk13_6c78954b",
       "hanzi": "让",
       "pinyin": "ràng",
       "english": "to let; allow",
@@ -4376,7 +4376,7 @@
       ]
     },
     {
-      "card_id": "hsk13_84d9d24a",
+      "card_id": "hsk13_ac26dff9",
       "hanzi": "热",
       "pinyin": "rè",
       "english": "hot",
@@ -4389,8 +4389,8 @@
       ]
     },
     {
-      "card_id": "hsk13_59aa58c1",
-      "hanzi": "热情",
+      "card_id": "hsk13_9826246c",
+      "hanzi": "热 情",
       "pinyin": "rè qíng",
       "english": "enthusiastic",
       "pos": "adj.",
@@ -4402,7 +4402,7 @@
       ]
     },
     {
-      "card_id": "hsk13_2503fdcb",
+      "card_id": "hsk13_295960aa",
       "hanzi": "人",
       "pinyin": "rén",
       "english": "person; people",
@@ -4414,8 +4414,8 @@
       ]
     },
     {
-      "card_id": "hsk13_af004a93",
-      "hanzi": "认识",
+      "card_id": "hsk13_8420e3ee",
+      "hanzi": "认 识",
       "pinyin": "rèn shi",
       "english": "to know [be familiar with]",
       "pos": "verb",
@@ -4426,8 +4426,8 @@
       ]
     },
     {
-      "card_id": "hsk13_37382592",
-      "hanzi": "认为",
+      "card_id": "hsk13_f7835320",
+      "hanzi": "认 为",
       "pinyin": "rèn wéi",
       "english": "to think that; consider",
       "pos": "verb",
@@ -4438,8 +4438,8 @@
       ]
     },
     {
-      "card_id": "hsk13_a4ece0d3",
-      "hanzi": "认真",
+      "card_id": "hsk13_72cb67f6",
+      "hanzi": "认 真",
       "pinyin": "rèn zhēn",
       "english": "earnest",
       "pos": "adj.",
@@ -4449,7 +4449,7 @@
       ]
     },
     {
-      "card_id": "hsk13_7aadc8a9",
+      "card_id": "hsk13_a6f9f527",
       "hanzi": "日",
       "pinyin": "rì",
       "english": "day [date]; sun",
@@ -4463,8 +4463,8 @@
       ]
     },
     {
-      "card_id": "hsk13_64dca2b5",
-      "hanzi": "容易",
+      "card_id": "hsk13_98473a4e",
+      "hanzi": "容 易",
       "pinyin": "róng yì",
       "english": "easy",
       "pos": "adj.",
@@ -4474,8 +4474,8 @@
       ]
     },
     {
-      "card_id": "hsk13_4c57ab87",
-      "hanzi": "如果",
+      "card_id": "hsk13_6b975407",
+      "hanzi": "如 果",
       "pinyin": "rú guǒ",
       "english": "if",
       "pos": "link.",
@@ -4485,7 +4485,7 @@
       ]
     },
     {
-      "card_id": "hsk13_bc1e306e",
+      "card_id": "hsk13_65513117",
       "hanzi": "三",
       "pinyin": "sān",
       "english": "three",
@@ -4496,7 +4496,7 @@
       ]
     },
     {
-      "card_id": "hsk13_24ffc937",
+      "card_id": "hsk13_1b5419b9",
       "hanzi": "伞",
       "pinyin": "sǎn",
       "english": "umbrella",
@@ -4508,7 +4508,7 @@
       ]
     },
     {
-      "card_id": "hsk13_83e85db0",
+      "card_id": "hsk13_9ddc1172",
       "hanzi": "上",
       "pinyin": "shàng",
       "english": "up; above",
@@ -4520,8 +4520,8 @@
       ]
     },
     {
-      "card_id": "hsk13_e652cb15",
-      "hanzi": "上班",
+      "card_id": "hsk13_5f421fc3",
+      "hanzi": "上 班",
       "pinyin": "shàng bān",
       "english": "start work",
       "pos": "verb",
@@ -4531,8 +4531,8 @@
       ]
     },
     {
-      "card_id": "hsk13_637e5b24",
-      "hanzi": "商店",
+      "card_id": "hsk13_24ec799a",
+      "hanzi": "商 店",
       "pinyin": "shāng diàn",
       "english": "shop",
       "pos": "noun",
@@ -4544,8 +4544,8 @@
       ]
     },
     {
-      "card_id": "hsk13_81dd3de6",
-      "hanzi": "上网",
+      "card_id": "hsk13_c25100ab",
+      "hanzi": "上 网",
       "pinyin": "shàng wǎng",
       "english": "get on the internet",
       "pos": "verb",
@@ -4556,8 +4556,8 @@
       ]
     },
     {
-      "card_id": "hsk13_8cae7ee8",
-      "hanzi": "上午",
+      "card_id": "hsk13_02513872",
+      "hanzi": "上 午",
       "pinyin": "shàng wǔ",
       "english": "morning",
       "pos": "noun",
@@ -4568,7 +4568,7 @@
       ]
     },
     {
-      "card_id": "hsk13_6df851ca",
+      "card_id": "hsk13_25d5edc5",
       "hanzi": "少",
       "pinyin": "shǎo",
       "english": "few",
@@ -4580,7 +4580,7 @@
       ]
     },
     {
-      "card_id": "hsk13_93898028",
+      "card_id": "hsk13_2be2b81d",
       "hanzi": "谁",
       "pinyin": "shéi",
       "english": "who?",
@@ -4593,8 +4593,8 @@
       ]
     },
     {
-      "card_id": "hsk13_f80c08ff",
-      "hanzi": "什么",
+      "card_id": "hsk13_ec0a1cc7",
+      "hanzi": "什 么",
       "pinyin": "shén me",
       "english": "what?",
       "pos": "pron.",
@@ -4605,8 +4605,8 @@
       ]
     },
     {
-      "card_id": "hsk13_32a379ea",
-      "hanzi": "身体",
+      "card_id": "hsk13_0368d44a",
+      "hanzi": "身 体",
       "pinyin": "shēn tǐ",
       "english": "body; health",
       "pos": "noun",
@@ -4618,8 +4618,8 @@
       ]
     },
     {
-      "card_id": "hsk13_4cd15529",
-      "hanzi": "生病",
+      "card_id": "hsk13_860abb51",
+      "hanzi": "生 病",
       "pinyin": "shēng bìng",
       "english": "ill; sick; unwell",
       "pos": "verb",
@@ -4630,8 +4630,8 @@
       ]
     },
     {
-      "card_id": "hsk13_bd2db7a5",
-      "hanzi": "生气",
+      "card_id": "hsk13_15f41fe6",
+      "hanzi": "生 气",
       "pinyin": "shēng qì",
       "english": "to get angry",
       "pos": "verb",
@@ -4642,8 +4642,8 @@
       ]
     },
     {
-      "card_id": "hsk13_e1b714f5",
-      "hanzi": "生日",
+      "card_id": "hsk13_1c3881e5",
+      "hanzi": "生 日",
       "pinyin": "shēng rì",
       "english": "birthday",
       "pos": "noun",
@@ -4655,8 +4655,8 @@
       ]
     },
     {
-      "card_id": "hsk13_fe5eed12",
-      "hanzi": "声音",
+      "card_id": "hsk13_84452f90",
+      "hanzi": "声 音",
       "pinyin": "shēng yīn",
       "english": "sound",
       "pos": "noun",
@@ -4668,7 +4668,7 @@
       ]
     },
     {
-      "card_id": "hsk13_63afe470",
+      "card_id": "hsk13_04076a45",
       "hanzi": "十",
       "pinyin": "shí",
       "english": "ten",
@@ -4679,7 +4679,7 @@
       ]
     },
     {
-      "card_id": "hsk13_0b07de52",
+      "card_id": "hsk13_ca22ca74",
       "hanzi": "是",
       "pinyin": "shì",
       "english": "to be",
@@ -4691,7 +4691,7 @@
       ]
     },
     {
-      "card_id": "hsk13_b56b94ea",
+      "card_id": "hsk13_93fb738a",
       "hanzi": "试",
       "pinyin": "shì",
       "english": "to try",
@@ -4703,8 +4703,8 @@
       ]
     },
     {
-      "card_id": "hsk13_02c4f479",
-      "hanzi": "时候",
+      "card_id": "hsk13_f54387d5",
+      "hanzi": "时 候",
       "pinyin": "shí hou",
       "english": "[duration of] time",
       "pos": "noun",
@@ -4715,8 +4715,8 @@
       ]
     },
     {
-      "card_id": "hsk13_e833e899",
-      "hanzi": "时间",
+      "card_id": "hsk13_ca0c93cb",
+      "hanzi": "时 间",
       "pinyin": "shí jiān",
       "english": "time",
       "pos": "noun",
@@ -4727,8 +4727,8 @@
       ]
     },
     {
-      "card_id": "hsk13_c3e015eb",
-      "hanzi": "世界",
+      "card_id": "hsk13_15253b55",
+      "hanzi": "世 界",
       "pinyin": "shì jiè",
       "english": "world",
       "pos": "noun",
@@ -4740,8 +4740,8 @@
       ]
     },
     {
-      "card_id": "hsk13_4fbb7362",
-      "hanzi": "事情",
+      "card_id": "hsk13_638a5c2a",
+      "hanzi": "事 情",
       "pinyin": "shì qing",
       "english": "matter; affair; thing",
       "pos": "noun",
@@ -4752,7 +4752,7 @@
       ]
     },
     {
-      "card_id": "hsk13_d1770f72",
+      "card_id": "hsk13_342e96f0",
       "hanzi": "瘦",
       "pinyin": "shòu",
       "english": "thin",
@@ -4763,8 +4763,8 @@
       ]
     },
     {
-      "card_id": "hsk13_1e7a6397",
-      "hanzi": "手表",
+      "card_id": "hsk13_2224ea55",
+      "hanzi": "手 表",
       "pinyin": "shǒu biǎo",
       "english": "watch",
       "pos": "noun",
@@ -4775,8 +4775,8 @@
       ]
     },
     {
-      "card_id": "hsk13_c24b7b4b",
-      "hanzi": "手机",
+      "card_id": "hsk13_5f3b5b55",
+      "hanzi": "手 机",
       "pinyin": "shǒu jī",
       "english": "mobile phone",
       "pos": "noun",
@@ -4787,7 +4787,7 @@
       ]
     },
     {
-      "card_id": "hsk13_fc7c020e",
+      "card_id": "hsk13_aa469ed7",
       "hanzi": "书",
       "pinyin": "shū",
       "english": "book",
@@ -4799,7 +4799,7 @@
       ]
     },
     {
-      "card_id": "hsk13_0a401f91",
+      "card_id": "hsk13_91ed405b",
       "hanzi": "树",
       "pinyin": "shù",
       "english": "tree",
@@ -4811,8 +4811,8 @@
       ]
     },
     {
-      "card_id": "hsk13_ad137fbe",
-      "hanzi": "舒服",
+      "card_id": "hsk13_f16c58b1",
+      "hanzi": "舒 服",
       "pinyin": "shū fu",
       "english": "comfortable",
       "pos": "adj.",
@@ -4823,8 +4823,8 @@
       ]
     },
     {
-      "card_id": "hsk13_e0a06b4c",
-      "hanzi": "叔叔",
+      "card_id": "hsk13_309f072f",
+      "hanzi": "叔 叔",
       "pinyin": "shū shu",
       "english": "uncle [father's younger brother]",
       "pos": "noun",
@@ -4835,8 +4835,8 @@
       ]
     },
     {
-      "card_id": "hsk13_00f67ceb",
-      "hanzi": "数学",
+      "card_id": "hsk13_577c7c3e",
+      "hanzi": "数 学",
       "pinyin": "shù xué",
       "english": "maths",
       "pos": "noun",
@@ -4847,8 +4847,8 @@
       ]
     },
     {
-      "card_id": "hsk13_0e58afe0",
-      "hanzi": "刷牙",
+      "card_id": "hsk13_686cae87",
+      "hanzi": "刷 牙",
       "pinyin": "shuā yá",
       "english": "brush teeth",
       "pos": "verb",
@@ -4859,7 +4859,7 @@
       ]
     },
     {
-      "card_id": "hsk13_5a725d5b",
+      "card_id": "hsk13_fcd30a31",
       "hanzi": "双",
       "pinyin": "shuāng",
       "english": "a pair of",
@@ -4871,7 +4871,7 @@
       ]
     },
     {
-      "card_id": "hsk13_7f1c0cbb",
+      "card_id": "hsk13_997a3f54",
       "hanzi": "水",
       "pinyin": "shuǐ",
       "english": "water",
@@ -4884,8 +4884,8 @@
       ]
     },
     {
-      "card_id": "hsk13_679dc9ae",
-      "hanzi": "水果",
+      "card_id": "hsk13_61b958dd",
+      "hanzi": "水 果",
       "pinyin": "shuǐ guǒ",
       "english": "fruit",
       "pos": "noun",
@@ -4897,8 +4897,8 @@
       ]
     },
     {
-      "card_id": "hsk13_3f73c036",
-      "hanzi": "睡觉",
+      "card_id": "hsk13_89525cc1",
+      "hanzi": "睡 觉",
       "pinyin": "shuì jiào",
       "english": "to go to bed; to sleep",
       "pos": "verb",
@@ -4909,8 +4909,8 @@
       ]
     },
     {
-      "card_id": "hsk13_fd18e33f",
-      "hanzi": "水平",
+      "card_id": "hsk13_7fbd1f97",
+      "hanzi": "水 平",
       "pinyin": "shuǐ píng",
       "english": "level",
       "pos": "noun",
@@ -4921,7 +4921,7 @@
       ]
     },
     {
-      "card_id": "hsk13_c1091961",
+      "card_id": "hsk13_91d9348e",
       "hanzi": "说",
       "pinyin": "shuō",
       "english": "speak",
@@ -4933,8 +4933,8 @@
       ]
     },
     {
-      "card_id": "hsk13_64523ce4",
-      "hanzi": "说话",
+      "card_id": "hsk13_f746f8f3",
+      "hanzi": "说 话",
       "pinyin": "shuō huà",
       "english": "speak",
       "pos": "verb",
@@ -4945,7 +4945,7 @@
       ]
     },
     {
-      "card_id": "hsk13_f1fb39ce",
+      "card_id": "hsk13_1d73dfea",
       "hanzi": "四",
       "pinyin": "sì",
       "english": "four",
@@ -4956,8 +4956,8 @@
       ]
     },
     {
-      "card_id": "hsk13_4bc27091",
-      "hanzi": "司机",
+      "card_id": "hsk13_acf95cf2",
+      "hanzi": "司 机",
       "pinyin": "sī jī",
       "english": "driver",
       "pos": "noun",
@@ -4968,7 +4968,7 @@
       ]
     },
     {
-      "card_id": "hsk13_809e964d",
+      "card_id": "hsk13_e0532e15",
       "hanzi": "送",
       "pinyin": "sòng",
       "english": "to give (present); deliver; see someone off",
@@ -4981,7 +4981,7 @@
       ]
     },
     {
-      "card_id": "hsk13_235b2a16",
+      "card_id": "hsk13_ef6582c4",
       "hanzi": "岁",
       "pinyin": "suì",
       "english": "year (of crop harvests)",
@@ -4994,8 +4994,8 @@
       ]
     },
     {
-      "card_id": "hsk13_fa982c2d",
-      "hanzi": "虽然…但是…",
+      "card_id": "hsk13_75d799de",
+      "hanzi": "虽 然 … 但 是 …",
       "pinyin": "suī rán … dàn shì …",
       "english": "although",
       "pos": "conj.",
@@ -5005,7 +5005,7 @@
       ]
     },
     {
-      "card_id": "hsk13_53307f44",
+      "card_id": "hsk13_8bdc25fd",
       "hanzi": "他",
       "pinyin": "tā",
       "english": "he; him",
@@ -5017,7 +5017,7 @@
       ]
     },
     {
-      "card_id": "hsk13_12e8189b",
+      "card_id": "hsk13_c1db1853",
       "hanzi": "她",
       "pinyin": "tā",
       "english": "she; her",
@@ -5029,7 +5029,7 @@
       ]
     },
     {
-      "card_id": "hsk13_911395ad",
+      "card_id": "hsk13_1895e7cc",
       "hanzi": "它",
       "pinyin": "tā",
       "english": "it",
@@ -5041,7 +5041,7 @@
       ]
     },
     {
-      "card_id": "hsk13_67f72b92",
+      "card_id": "hsk13_62f620f7",
       "hanzi": "太",
       "pinyin": "tài",
       "english": "very",
@@ -5053,8 +5053,8 @@
       ]
     },
     {
-      "card_id": "hsk13_4e2051d0",
-      "hanzi": "太阳",
+      "card_id": "hsk13_798ef51d",
+      "hanzi": "太 阳",
       "pinyin": "tài yáng",
       "english": "sun",
       "pos": "noun",
@@ -5065,8 +5065,8 @@
       ]
     },
     {
-      "card_id": "hsk13_7bf3fafd",
-      "hanzi": "特别",
+      "card_id": "hsk13_668229de",
+      "hanzi": "特 别",
       "pinyin": "tè bié",
       "english": "special; especially",
       "pos": "adv. / adj.",
@@ -5077,7 +5077,7 @@
       ]
     },
     {
-      "card_id": "hsk13_e7b789a4",
+      "card_id": "hsk13_3e995a64",
       "hanzi": "疼",
       "pinyin": "téng",
       "english": "pain",
@@ -5089,7 +5089,7 @@
       ]
     },
     {
-      "card_id": "hsk13_3afb7fa5",
+      "card_id": "hsk13_b7c04f36",
       "hanzi": "题",
       "pinyin": "tí",
       "english": "question",
@@ -5102,8 +5102,8 @@
       ]
     },
     {
-      "card_id": "hsk13_3fc746d1",
-      "hanzi": "提高",
+      "card_id": "hsk13_fb30da4a",
+      "hanzi": "提 高",
       "pinyin": "tí gāo",
       "english": "raise",
       "pos": "verb",
@@ -5114,8 +5114,8 @@
       ]
     },
     {
-      "card_id": "hsk13_0fed3541",
-      "hanzi": "体育",
+      "card_id": "hsk13_0f004ef6",
+      "hanzi": "体 育",
       "pinyin": "tǐ yù",
       "english": "physical education",
       "pos": "noun",
@@ -5126,8 +5126,8 @@
       ]
     },
     {
-      "card_id": "hsk13_ba6e102b",
-      "hanzi": "踢足球",
+      "card_id": "hsk13_f1a07ce3",
+      "hanzi": "踢 足 球",
       "pinyin": "tī zú qiú",
       "english": "play football",
       "pos": "--",
@@ -5138,7 +5138,7 @@
       ]
     },
     {
-      "card_id": "hsk13_d565f38b",
+      "card_id": "hsk13_781647e4",
       "hanzi": "甜",
       "pinyin": "tián",
       "english": "sweet",
@@ -5149,8 +5149,8 @@
       ]
     },
     {
-      "card_id": "hsk13_58459132",
-      "hanzi": "天气",
+      "card_id": "hsk13_02218acc",
+      "hanzi": "天 气",
       "pinyin": "tiān qì",
       "english": "weather",
       "pos": "noun",
@@ -5162,7 +5162,7 @@
       ]
     },
     {
-      "card_id": "hsk13_10144178",
+      "card_id": "hsk13_0e3cd54d",
       "hanzi": "条",
       "pinyin": "tiáo",
       "english": "[measure word for long pieces (hair, branch, trousers etc.)]",
@@ -5174,8 +5174,8 @@
       ]
     },
     {
-      "card_id": "hsk13_66ff06da",
-      "hanzi": "跳舞",
+      "card_id": "hsk13_d4efa5b3",
+      "hanzi": "跳 舞",
       "pinyin": "tiào wǔ",
       "english": "to dance",
       "pos": "verb",
@@ -5186,7 +5186,7 @@
       ]
     },
     {
-      "card_id": "hsk13_b47d42f9",
+      "card_id": "hsk13_f785fea0",
       "hanzi": "听",
       "pinyin": "tīng",
       "english": "to listen; hear",
@@ -5198,8 +5198,8 @@
       ]
     },
     {
-      "card_id": "hsk13_d7656e5d",
-      "hanzi": "同事",
+      "card_id": "hsk13_da4f7ecd",
+      "hanzi": "同 事",
       "pinyin": "tóng shì",
       "english": "colleague",
       "pos": "noun",
@@ -5210,8 +5210,8 @@
       ]
     },
     {
-      "card_id": "hsk13_08bf8d1b",
-      "hanzi": "同学",
+      "card_id": "hsk13_60a73143",
+      "hanzi": "同 学",
       "pinyin": "tóng xué",
       "english": "schoolmate; classmate",
       "pos": "noun",
@@ -5222,8 +5222,8 @@
       ]
     },
     {
-      "card_id": "hsk13_16b812a7",
-      "hanzi": "同意",
+      "card_id": "hsk13_08c6cdcd",
+      "hanzi": "同 意",
       "pinyin": "tóng yì",
       "english": "to agree",
       "pos": "verb",
@@ -5235,8 +5235,8 @@
       ]
     },
     {
-      "card_id": "hsk13_8c443d14",
-      "hanzi": "头发",
+      "card_id": "hsk13_36484ec6",
+      "hanzi": "头 发",
       "pinyin": "tóu fa",
       "english": "hair",
       "pos": "noun",
@@ -5248,8 +5248,8 @@
       ]
     },
     {
-      "card_id": "hsk13_f485b9df",
-      "hanzi": "突然",
+      "card_id": "hsk13_b511865f",
+      "hanzi": "突 然",
       "pinyin": "tū rán",
       "english": "suddenly",
       "pos": "adj.",
@@ -5260,8 +5260,8 @@
       ]
     },
     {
-      "card_id": "hsk13_816ea998",
-      "hanzi": "图书馆",
+      "card_id": "hsk13_5a320e99",
+      "hanzi": "图 书 馆",
       "pinyin": "tú shū guǎn",
       "english": "library",
       "pos": "noun",
@@ -5273,7 +5273,7 @@
       ]
     },
     {
-      "card_id": "hsk13_6201f42b",
+      "card_id": "hsk13_3e63a885",
       "hanzi": "腿",
       "pinyin": "tuǐ",
       "english": "leg",
@@ -5285,7 +5285,7 @@
       ]
     },
     {
-      "card_id": "hsk13_9f87da55",
+      "card_id": "hsk13_3c79f105",
       "hanzi": "外",
       "pinyin": "wài",
       "english": "outside",
@@ -5297,7 +5297,7 @@
       ]
     },
     {
-      "card_id": "hsk13_85b2d866",
+      "card_id": "hsk13_792f526e",
       "hanzi": "完",
       "pinyin": "wán",
       "english": "to finish; [+ verb indicates completion]",
@@ -5309,7 +5309,7 @@
       ]
     },
     {
-      "card_id": "hsk13_76752b23",
+      "card_id": "hsk13_27843959",
       "hanzi": "玩",
       "pinyin": "wán",
       "english": "to play",
@@ -5321,7 +5321,7 @@
       ]
     },
     {
-      "card_id": "hsk13_d0135e11",
+      "card_id": "hsk13_218c06e2",
       "hanzi": "碗",
       "pinyin": "wǎn",
       "english": "a bowl of",
@@ -5333,7 +5333,7 @@
       ]
     },
     {
-      "card_id": "hsk13_cdbeccd7",
+      "card_id": "hsk13_0a39519a",
       "hanzi": "万",
       "pinyin": "wàn",
       "english": "ten thousand",
@@ -5344,8 +5344,8 @@
       ]
     },
     {
-      "card_id": "hsk13_e3177c18",
-      "hanzi": "完成",
+      "card_id": "hsk13_a32fe42d",
+      "hanzi": "完 成",
       "pinyin": "wán chéng",
       "english": "complete",
       "pos": "verb",
@@ -5356,8 +5356,8 @@
       ]
     },
     {
-      "card_id": "hsk13_e99531ae",
-      "hanzi": "晚上",
+      "card_id": "hsk13_ff38fa06",
+      "hanzi": "晚 上",
       "pinyin": "wǎn shang",
       "english": "evening",
       "pos": "noun",
@@ -5368,7 +5368,7 @@
       ]
     },
     {
-      "card_id": "hsk13_b416e1d0",
+      "card_id": "hsk13_f11b04b5",
       "hanzi": "往",
       "pinyin": "wǎng",
       "english": "towards",
@@ -5380,8 +5380,8 @@
       ]
     },
     {
-      "card_id": "hsk13_ef7e3959",
-      "hanzi": "忘记",
+      "card_id": "hsk13_d262c3d8",
+      "hanzi": "忘 记",
       "pinyin": "wàng jì",
       "english": "forget",
       "pos": "verb",
@@ -5392,7 +5392,7 @@
       ]
     },
     {
-      "card_id": "hsk13_e5a993ae",
+      "card_id": "hsk13_d8bcbe1e",
       "hanzi": "喂",
       "pinyin": "wèi",
       "english": "hello",
@@ -5404,7 +5404,7 @@
       ]
     },
     {
-      "card_id": "hsk13_3f87b8a2",
+      "card_id": "hsk13_110d4f9a",
       "hanzi": "位",
       "pinyin": "wèi",
       "english": "position",
@@ -5416,7 +5416,7 @@
       ]
     },
     {
-      "card_id": "hsk13_47c60f00",
+      "card_id": "hsk13_e5769d0f",
       "hanzi": "为",
       "pinyin": "wèi",
       "english": "for (someone; something); to do; to be",
@@ -5427,8 +5427,8 @@
       ]
     },
     {
-      "card_id": "hsk13_5393f96c",
-      "hanzi": "为了",
+      "card_id": "hsk13_c3e56638",
+      "hanzi": "为 了",
       "pinyin": "wèi le",
       "english": "in order to",
       "pos": "prep.",
@@ -5438,8 +5438,8 @@
       ]
     },
     {
-      "card_id": "hsk13_adbddb09",
-      "hanzi": "为什么",
+      "card_id": "hsk13_7a020c08",
+      "hanzi": "为 什 么",
       "pinyin": "wèi shén me",
       "english": "why?",
       "pos": "--",
@@ -5451,7 +5451,7 @@
       ]
     },
     {
-      "card_id": "hsk13_e9e424ef",
+      "card_id": "hsk13_c902fca7",
       "hanzi": "问",
       "pinyin": "wèn",
       "english": "to ask",
@@ -5463,8 +5463,8 @@
       ]
     },
     {
-      "card_id": "hsk13_3dbe86a5",
-      "hanzi": "文化",
+      "card_id": "hsk13_9f870dac",
+      "hanzi": "文 化",
       "pinyin": "wén huà",
       "english": "culture",
       "pos": "noun",
@@ -5476,8 +5476,8 @@
       ]
     },
     {
-      "card_id": "hsk13_0efea30d",
-      "hanzi": "问题",
+      "card_id": "hsk13_7edf5119",
+      "hanzi": "问 题",
       "pinyin": "wèn tí",
       "english": "problem",
       "pos": "noun",
@@ -5489,7 +5489,7 @@
       ]
     },
     {
-      "card_id": "hsk13_1e1a3596",
+      "card_id": "hsk13_ad59782e",
       "hanzi": "我",
       "pinyin": "wǒ",
       "english": "I; me",
@@ -5501,8 +5501,8 @@
       ]
     },
     {
-      "card_id": "hsk13_bc8adabb",
-      "hanzi": "我们",
+      "card_id": "hsk13_de1a17a8",
+      "hanzi": "我 们",
       "pinyin": "wǒ men",
       "english": "we; us",
       "pos": "pron.",
@@ -5513,7 +5513,7 @@
       ]
     },
     {
-      "card_id": "hsk13_d6c1bc20",
+      "card_id": "hsk13_9dab7549",
       "hanzi": "五",
       "pinyin": "wǔ",
       "english": "five",
@@ -5524,7 +5524,7 @@
       ]
     },
     {
-      "card_id": "hsk13_2ccdcd0b",
+      "card_id": "hsk13_90cc2f4c",
       "hanzi": "西",
       "pinyin": "xī",
       "english": "west",
@@ -5535,7 +5535,7 @@
       ]
     },
     {
-      "card_id": "hsk13_2547955d",
+      "card_id": "hsk13_f88c9584",
       "hanzi": "洗",
       "pinyin": "xǐ",
       "english": "to wash",
@@ -5547,8 +5547,8 @@
       ]
     },
     {
-      "card_id": "hsk13_a38c05d9",
-      "hanzi": "西瓜",
+      "card_id": "hsk13_03940f85",
+      "hanzi": "西 瓜",
       "pinyin": "xī guā",
       "english": "watermelon",
       "pos": "noun",
@@ -5560,8 +5560,8 @@
       ]
     },
     {
-      "card_id": "hsk13_e1c4ac74",
-      "hanzi": "习惯",
+      "card_id": "hsk13_911296c2",
+      "hanzi": "习 惯",
       "pinyin": "xí guàn",
       "english": "be used to",
       "pos": "verb / noun",
@@ -5572,8 +5572,8 @@
       ]
     },
     {
-      "card_id": "hsk13_61989a63",
-      "hanzi": "喜欢",
+      "card_id": "hsk13_a5cf36fa",
+      "hanzi": "喜 欢",
       "pinyin": "xǐ huan",
       "english": "to like",
       "pos": "verb",
@@ -5584,8 +5584,8 @@
       ]
     },
     {
-      "card_id": "hsk13_57fb0765",
-      "hanzi": "洗手间",
+      "card_id": "hsk13_b4d8f283",
+      "hanzi": "洗 手 间",
       "pinyin": "xǐ shǒu jiān",
       "english": "toilets; washroom",
       "pos": "noun",
@@ -5597,8 +5597,8 @@
       ]
     },
     {
-      "card_id": "hsk13_bea56202",
-      "hanzi": "希望",
+      "card_id": "hsk13_2b414bcd",
+      "hanzi": "希 望",
       "pinyin": "xī wàng",
       "english": "hope; wish",
       "pos": "noun",
@@ -5609,8 +5609,8 @@
       ]
     },
     {
-      "card_id": "hsk13_46e7026d",
-      "hanzi": "洗澡",
+      "card_id": "hsk13_60d3331c",
+      "hanzi": "洗 澡",
       "pinyin": "xǐ zǎo",
       "english": "have a shower; bath",
       "pos": "verb",
@@ -5621,7 +5621,7 @@
       ]
     },
     {
-      "card_id": "hsk13_ca0debcd",
+      "card_id": "hsk13_cec53cee",
       "hanzi": "下",
       "pinyin": "xià",
       "english": "down; below",
@@ -5633,7 +5633,7 @@
       ]
     },
     {
-      "card_id": "hsk13_25829783",
+      "card_id": "hsk13_852f0387",
       "hanzi": "夏",
       "pinyin": "xià",
       "english": "summer",
@@ -5645,8 +5645,8 @@
       ]
     },
     {
-      "card_id": "hsk13_6462b598",
-      "hanzi": "下午",
+      "card_id": "hsk13_643dc268",
+      "hanzi": "下 午",
       "pinyin": "xià wǔ",
       "english": "afternoon",
       "pos": "noun",
@@ -5657,8 +5657,8 @@
       ]
     },
     {
-      "card_id": "hsk13_7e5f5a2b",
-      "hanzi": "下雨",
+      "card_id": "hsk13_bae3891a",
+      "hanzi": "下 雨",
       "pinyin": "xià yǔ",
       "english": "rain",
       "pos": "verb",
@@ -5670,7 +5670,7 @@
       ]
     },
     {
-      "card_id": "hsk13_e86059a9",
+      "card_id": "hsk13_331542b4",
       "hanzi": "先",
       "pinyin": "xiān",
       "english": "first",
@@ -5683,8 +5683,8 @@
       ]
     },
     {
-      "card_id": "hsk13_fc622ca6",
-      "hanzi": "先生",
+      "card_id": "hsk13_54b47994",
+      "hanzi": "先 生",
       "pinyin": "xiān sheng",
       "english": "Mr; Sir",
       "pos": "noun",
@@ -5696,8 +5696,8 @@
       ]
     },
     {
-      "card_id": "hsk13_d4a693a1",
-      "hanzi": "现在",
+      "card_id": "hsk13_a278c70e",
+      "hanzi": "现 在",
       "pinyin": "xiàn zài",
       "english": "now",
       "pos": "noun",
@@ -5708,7 +5708,7 @@
       ]
     },
     {
-      "card_id": "hsk13_74ec7903",
+      "card_id": "hsk13_dda06122",
       "hanzi": "想",
       "pinyin": "xiǎng",
       "english": "to want; to think",
@@ -5720,7 +5720,7 @@
       ]
     },
     {
-      "card_id": "hsk13_56d36ae4",
+      "card_id": "hsk13_79743b5a",
       "hanzi": "像",
       "pinyin": "xiàng",
       "english": "likeness; resemble; look as if",
@@ -5732,7 +5732,7 @@
       ]
     },
     {
-      "card_id": "hsk13_f94451b9",
+      "card_id": "hsk13_96b69e4b",
       "hanzi": "向",
       "pinyin": "xiàng",
       "english": "towards",
@@ -5744,8 +5744,8 @@
       ]
     },
     {
-      "card_id": "hsk13_0113b0bd",
-      "hanzi": "香蕉",
+      "card_id": "hsk13_8fb4036b",
+      "hanzi": "香 蕉",
       "pinyin": "xiāng jiāo",
       "english": "banana",
       "pos": "noun",
@@ -5757,8 +5757,8 @@
       ]
     },
     {
-      "card_id": "hsk13_3696c56b",
-      "hanzi": "相信",
+      "card_id": "hsk13_2451323b",
+      "hanzi": "相 信",
       "pinyin": "xiāng xìn",
       "english": "to believe",
       "pos": "verb",
@@ -5769,7 +5769,7 @@
       ]
     },
     {
-      "card_id": "hsk13_ba424cc0",
+      "card_id": "hsk13_c3865f31",
       "hanzi": "小",
       "pinyin": "xiǎo",
       "english": "small",
@@ -5780,7 +5780,7 @@
       ]
     },
     {
-      "card_id": "hsk13_5ed54ee0",
+      "card_id": "hsk13_36906c95",
       "hanzi": "笑",
       "pinyin": "xiào",
       "english": "to laugh; smile",
@@ -5792,8 +5792,8 @@
       ]
     },
     {
-      "card_id": "hsk13_50c7f22c",
-      "hanzi": "小姐",
+      "card_id": "hsk13_aa8167de",
+      "hanzi": "小 姐",
       "pinyin": "xiǎo jiě",
       "english": "Miss; young lady",
       "pos": "noun",
@@ -5805,8 +5805,8 @@
       ]
     },
     {
-      "card_id": "hsk13_a0248f97",
-      "hanzi": "小时",
+      "card_id": "hsk13_20af1035",
+      "hanzi": "小 时",
       "pinyin": "xiǎo shí",
       "english": "hour",
       "pos": "noun",
@@ -5817,8 +5817,8 @@
       ]
     },
     {
-      "card_id": "hsk13_f987d7b9",
-      "hanzi": "小心",
+      "card_id": "hsk13_10ac3978",
+      "hanzi": "小 心",
       "pinyin": "xiǎo xīn",
       "english": "take care",
       "pos": "adj. / verb",
@@ -5830,8 +5830,8 @@
       ]
     },
     {
-      "card_id": "hsk13_ae4acb9c",
-      "hanzi": "校长",
+      "card_id": "hsk13_7b380e91",
+      "hanzi": "校 长",
       "pinyin": "xiào zhǎng",
       "english": "head teacher; principal",
       "pos": "noun",
@@ -5843,7 +5843,7 @@
       ]
     },
     {
-      "card_id": "hsk13_043eb562",
+      "card_id": "hsk13_8fb4c4ba",
       "hanzi": "些",
       "pinyin": "xiē",
       "english": "some",
@@ -5855,7 +5855,7 @@
       ]
     },
     {
-      "card_id": "hsk13_276ef218",
+      "card_id": "hsk13_c80f8df5",
       "hanzi": "写",
       "pinyin": "xiě",
       "english": "to write",
@@ -5867,8 +5867,8 @@
       ]
     },
     {
-      "card_id": "hsk13_efaafa84",
-      "hanzi": "谢谢",
+      "card_id": "hsk13_b065191b",
+      "hanzi": "谢 谢",
       "pinyin": "xiè xie",
       "english": "thank you",
       "pos": "verb",
@@ -5879,7 +5879,7 @@
       ]
     },
     {
-      "card_id": "hsk13_e3aa7314",
+      "card_id": "hsk13_224a4f64",
       "hanzi": "新",
       "pinyin": "xīn",
       "english": "new",
@@ -5890,8 +5890,8 @@
       ]
     },
     {
-      "card_id": "hsk13_f7c007de",
-      "hanzi": "新闻",
+      "card_id": "hsk13_ebd8f014",
+      "hanzi": "新 闻",
       "pinyin": "xīn wén",
       "english": "news",
       "pos": "noun",
@@ -5902,8 +5902,8 @@
       ]
     },
     {
-      "card_id": "hsk13_a280fc6b",
-      "hanzi": "新鲜",
+      "card_id": "hsk13_79bea25c",
+      "hanzi": "新 鲜",
       "pinyin": "xīn xiān",
       "english": "fresh",
       "pos": "adj.",
@@ -5914,8 +5914,8 @@
       ]
     },
     {
-      "card_id": "hsk13_28c4c313",
-      "hanzi": "信用卡",
+      "card_id": "hsk13_413d93fc",
+      "hanzi": "信 用 卡",
       "pinyin": "xìn yòng kǎ",
       "english": "credit card",
       "pos": "noun",
@@ -5926,7 +5926,7 @@
       ]
     },
     {
-      "card_id": "hsk13_f0ee7f20",
+      "card_id": "hsk13_58802b50",
       "hanzi": "姓",
       "pinyin": "xìng",
       "english": "surname",
@@ -5938,8 +5938,8 @@
       ]
     },
     {
-      "card_id": "hsk13_86eacebc",
-      "hanzi": "行李箱",
+      "card_id": "hsk13_71569ad0",
+      "hanzi": "行 李 箱",
       "pinyin": "xíng li xiāng",
       "english": "trunk [luggage]",
       "pos": "noun",
@@ -5950,8 +5950,8 @@
       ]
     },
     {
-      "card_id": "hsk13_4453db28",
-      "hanzi": "星期",
+      "card_id": "hsk13_7fc21633",
+      "hanzi": "星 期",
       "pinyin": "xīng qī",
       "english": "week",
       "pos": "noun",
@@ -5962,8 +5962,8 @@
       ]
     },
     {
-      "card_id": "hsk13_5a7fcb13",
-      "hanzi": "熊猫",
+      "card_id": "hsk13_e1fcdd31",
+      "hanzi": "熊 猫",
       "pinyin": "xióng māo",
       "english": "panda",
       "pos": "noun",
@@ -5975,8 +5975,8 @@
       ]
     },
     {
-      "card_id": "hsk13_6e32a991",
-      "hanzi": "休息",
+      "card_id": "hsk13_c791f216",
+      "hanzi": "休 息",
       "pinyin": "xiū xi",
       "english": "to rest",
       "pos": "verb",
@@ -5987,8 +5987,8 @@
       ]
     },
     {
-      "card_id": "hsk13_85419df4",
-      "hanzi": "需要",
+      "card_id": "hsk13_4f565d77",
+      "hanzi": "需 要",
       "pinyin": "xū yào",
       "english": "need",
       "pos": "verb",
@@ -5999,8 +5999,8 @@
       ]
     },
     {
-      "card_id": "hsk13_2cec415a",
-      "hanzi": "选择",
+      "card_id": "hsk13_3a2870a7",
+      "hanzi": "选 择",
       "pinyin": "xuǎn zé",
       "english": "choice",
       "pos": "verb",
@@ -6011,7 +6011,7 @@
       ]
     },
     {
-      "card_id": "hsk13_e96f1697",
+      "card_id": "hsk13_d70d0e48",
       "hanzi": "雪",
       "pinyin": "xuě",
       "english": "snow",
@@ -6024,8 +6024,8 @@
       ]
     },
     {
-      "card_id": "hsk13_6d3490e5",
-      "hanzi": "学生",
+      "card_id": "hsk13_9ff66fca",
+      "hanzi": "学 生",
       "pinyin": "xué sheng",
       "english": "student",
       "pos": "noun",
@@ -6036,8 +6036,8 @@
       ]
     },
     {
-      "card_id": "hsk13_9dc8f7f2",
-      "hanzi": "学习",
+      "card_id": "hsk13_f032e7b4",
+      "hanzi": "学 习",
       "pinyin": "xué xí",
       "english": "to learn; to study",
       "pos": "verb",
@@ -6048,8 +6048,8 @@
       ]
     },
     {
-      "card_id": "hsk13_a3692b7d",
-      "hanzi": "学校",
+      "card_id": "hsk13_0c52985c",
+      "hanzi": "学 校",
       "pinyin": "xué xiào",
       "english": "school",
       "pos": "noun",
@@ -6060,8 +6060,8 @@
       ]
     },
     {
-      "card_id": "hsk13_ed209c6d",
-      "hanzi": "眼睛",
+      "card_id": "hsk13_8e751d05",
+      "hanzi": "眼 睛",
       "pinyin": "yǎn jing",
       "english": "eye",
       "pos": "noun",
@@ -6073,8 +6073,8 @@
       ]
     },
     {
-      "card_id": "hsk13_e8d50fd3",
-      "hanzi": "颜色",
+      "card_id": "hsk13_0ed6cbef",
+      "hanzi": "颜 色",
       "pinyin": "yán sè",
       "english": "colour",
       "pos": "noun",
@@ -6085,8 +6085,8 @@
       ]
     },
     {
-      "card_id": "hsk13_12d70553",
-      "hanzi": "羊肉",
+      "card_id": "hsk13_ddf75223",
+      "hanzi": "羊 肉",
       "pinyin": "yáng ròu",
       "english": "mutton",
       "pos": "noun",
@@ -6097,7 +6097,7 @@
       ]
     },
     {
-      "card_id": "hsk13_68778625",
+      "card_id": "hsk13_f583b014",
       "hanzi": "要",
       "pinyin": "yào",
       "english": "want; be going to; ask for; demand",
@@ -6109,7 +6109,7 @@
       ]
     },
     {
-      "card_id": "hsk13_a2756e8d",
+      "card_id": "hsk13_7fa171f4",
       "hanzi": "药",
       "pinyin": "yào",
       "english": "medicine",
@@ -6121,8 +6121,8 @@
       ]
     },
     {
-      "card_id": "hsk13_e86c6ed7",
-      "hanzi": "要求",
+      "card_id": "hsk13_62f48b00",
+      "hanzi": "要 求",
       "pinyin": "yāo qiú",
       "english": "requirement",
       "pos": "verb / noun",
@@ -6133,7 +6133,7 @@
       ]
     },
     {
-      "card_id": "hsk13_9bb41a19",
+      "card_id": "hsk13_7a330788",
       "hanzi": "也",
       "pinyin": "yě",
       "english": "too; also",
@@ -6144,10 +6144,10 @@
       ]
     },
     {
-      "card_id": "hsk13_cc34cf09",
-      "hanzi": "爷爷",
+      "card_id": "hsk13_c0f0c756",
+      "hanzi": "爷 爷",
       "pinyin": "yé ye",
-      "english": "grandfather [father's father]    ",
+      "english": "grandfather [father's father]",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -6156,7 +6156,7 @@
       ]
     },
     {
-      "card_id": "hsk13_c38864f3",
+      "card_id": "hsk13_74306135",
       "hanzi": "一",
       "pinyin": "yī",
       "english": "one; once; first; structural word between two of the same verb; as soon as; throughout",
@@ -6168,8 +6168,8 @@
       ]
     },
     {
-      "card_id": "hsk13_e72b62b1",
-      "hanzi": "一般",
+      "card_id": "hsk13_19fa3ac7",
+      "hanzi": "一 般",
       "pinyin": "yī bān",
       "english": "ordinary",
       "pos": "adj.",
@@ -6179,8 +6179,8 @@
       ]
     },
     {
-      "card_id": "hsk13_de718605",
-      "hanzi": "一边",
+      "card_id": "hsk13_7872f4c5",
+      "hanzi": "一 边",
       "pinyin": "yī biān",
       "english": "on the one hand …",
       "pos": "adv.",
@@ -6191,8 +6191,8 @@
       ]
     },
     {
-      "card_id": "hsk13_79e94e35",
-      "hanzi": "一点儿",
+      "card_id": "hsk13_cae01e4d",
+      "hanzi": "一 点 儿",
       "pinyin": "yī diǎn er",
       "english": "a bit",
       "pos": "quantif.",
@@ -6204,8 +6204,8 @@
       ]
     },
     {
-      "card_id": "hsk13_3fd9498c",
-      "hanzi": "一定",
+      "card_id": "hsk13_9d6b4253",
+      "hanzi": "一 定",
       "pinyin": "yī dìng",
       "english": "definitely",
       "pos": "adv. / adj.",
@@ -6216,8 +6216,8 @@
       ]
     },
     {
-      "card_id": "hsk13_b81f15fb",
-      "hanzi": "衣服",
+      "card_id": "hsk13_5d194799",
+      "hanzi": "衣 服",
       "pinyin": "yī fu",
       "english": "clothes",
       "pos": "noun",
@@ -6228,8 +6228,8 @@
       ]
     },
     {
-      "card_id": "hsk13_1feceb52",
-      "hanzi": "一共",
+      "card_id": "hsk13_c691dfe5",
+      "hanzi": "一 共",
       "pinyin": "yī gòng",
       "english": "altogether",
       "pos": "adv.",
@@ -6240,8 +6240,8 @@
       ]
     },
     {
-      "card_id": "hsk13_6981290c",
-      "hanzi": "一会儿",
+      "card_id": "hsk13_dd4d7e58",
+      "hanzi": "一 会 儿",
       "pinyin": "yī huì er",
       "english": "a short while",
       "pos": "quantif.",
@@ -6253,8 +6253,8 @@
       ]
     },
     {
-      "card_id": "hsk13_eedafb9a",
-      "hanzi": "已经",
+      "card_id": "hsk13_a58f58bd",
+      "hanzi": "已 经",
       "pinyin": "yǐ jīng",
       "english": "already",
       "pos": "adv.",
@@ -6265,8 +6265,8 @@
       ]
     },
     {
-      "card_id": "hsk13_b19bf6dc",
-      "hanzi": "一起",
+      "card_id": "hsk13_9083ca1c",
+      "hanzi": "一 起",
       "pinyin": "yì qǐ",
       "english": "together",
       "pos": "adv.",
@@ -6277,8 +6277,8 @@
       ]
     },
     {
-      "card_id": "hsk13_5df84d25",
-      "hanzi": "以前",
+      "card_id": "hsk13_b72933e8",
+      "hanzi": "以 前",
       "pinyin": "yǐ qián",
       "english": "before",
       "pos": "noun",
@@ -6289,8 +6289,8 @@
       ]
     },
     {
-      "card_id": "hsk13_c8dec407",
-      "hanzi": "医生",
+      "card_id": "hsk13_d4e8b08d",
+      "hanzi": "医 生",
       "pinyin": "yī shēng",
       "english": "doctor",
       "pos": "noun",
@@ -6301,8 +6301,8 @@
       ]
     },
     {
-      "card_id": "hsk13_70efebe1",
-      "hanzi": "意思",
+      "card_id": "hsk13_304989ca",
+      "hanzi": "意 思",
       "pinyin": "yì si",
       "english": "meaning",
       "pos": "noun",
@@ -6314,8 +6314,8 @@
       ]
     },
     {
-      "card_id": "hsk13_c57446fc",
-      "hanzi": "一下",
+      "card_id": "hsk13_17bd3b68",
+      "hanzi": "一 下",
       "pinyin": "yī xià",
       "english": "[used after a verb] give something a go",
       "pos": "quantif.",
@@ -6326,8 +6326,8 @@
       ]
     },
     {
-      "card_id": "hsk13_18ae138c",
-      "hanzi": "一样",
+      "card_id": "hsk13_64bc637a",
+      "hanzi": "一 样",
       "pinyin": "yī yàng",
       "english": "same; identical",
       "pos": "adj.",
@@ -6338,8 +6338,8 @@
       ]
     },
     {
-      "card_id": "hsk13_0920481c",
-      "hanzi": "医院",
+      "card_id": "hsk13_390ff199",
+      "hanzi": "医 院",
       "pinyin": "yī yuàn",
       "english": "hospital",
       "pos": "noun",
@@ -6350,8 +6350,8 @@
       ]
     },
     {
-      "card_id": "hsk13_092b5972",
-      "hanzi": "一直",
+      "card_id": "hsk13_c87df605",
+      "hanzi": "一 直",
       "pinyin": "yī zhí",
       "english": "straight on; always",
       "pos": "adv.",
@@ -6362,8 +6362,8 @@
       ]
     },
     {
-      "card_id": "hsk13_55754059",
-      "hanzi": "椅子",
+      "card_id": "hsk13_b11e393b",
+      "hanzi": "椅 子",
       "pinyin": "yǐ zi",
       "english": "chair",
       "pos": "noun",
@@ -6374,7 +6374,7 @@
       ]
     },
     {
-      "card_id": "hsk13_f067fdec",
+      "card_id": "hsk13_1bde1a16",
       "hanzi": "阴",
       "pinyin": "yīn",
       "english": "cloudy",
@@ -6386,8 +6386,8 @@
       ]
     },
     {
-      "card_id": "hsk13_5c786083",
-      "hanzi": "银行",
+      "card_id": "hsk13_e0f8250a",
+      "hanzi": "银 行",
       "pinyin": "yín háng",
       "english": "bank",
       "pos": "noun",
@@ -6399,8 +6399,8 @@
       ]
     },
     {
-      "card_id": "hsk13_c03ff36f",
-      "hanzi": "饮料",
+      "card_id": "hsk13_6a84b482",
+      "hanzi": "饮 料",
       "pinyin": "yǐn liào",
       "english": "drink",
       "pos": "noun",
@@ -6411,8 +6411,8 @@
       ]
     },
     {
-      "card_id": "hsk13_e8063629",
-      "hanzi": "因为…所以…",
+      "card_id": "hsk13_a9724416",
+      "hanzi": "因 为 … 所 以 …",
       "pinyin": "yīn wèi … suǒ yǐ …",
       "english": "because",
       "pos": "conj.",
@@ -6422,8 +6422,8 @@
       ]
     },
     {
-      "card_id": "hsk13_e1d01a3b",
-      "hanzi": "音乐",
+      "card_id": "hsk13_026d5db0",
+      "hanzi": "音 乐",
       "pinyin": "yīn yuè",
       "english": "music",
       "pos": "noun",
@@ -6435,8 +6435,8 @@
       ]
     },
     {
-      "card_id": "hsk13_52993790",
-      "hanzi": "应该",
+      "card_id": "hsk13_29f4f9af",
+      "hanzi": "应 该",
       "pinyin": "yīng gāi",
       "english": "should",
       "pos": "verb",
@@ -6447,8 +6447,8 @@
       ]
     },
     {
-      "card_id": "hsk13_a20f14f4",
-      "hanzi": "影响",
+      "card_id": "hsk13_be98a010",
+      "hanzi": "影 响",
       "pinyin": "yǐng xiǎng",
       "english": "influence; to affect",
       "pos": "verb / noun",
@@ -6459,7 +6459,7 @@
       ]
     },
     {
-      "card_id": "hsk13_817a9c56",
+      "card_id": "hsk13_ae177290",
       "hanzi": "用",
       "pinyin": "yòng",
       "english": "to use",
@@ -6471,7 +6471,7 @@
       ]
     },
     {
-      "card_id": "hsk13_09e69f80",
+      "card_id": "hsk13_640642f2",
       "hanzi": "有",
       "pinyin": "yǒu",
       "english": "to have",
@@ -6483,7 +6483,7 @@
       ]
     },
     {
-      "card_id": "hsk13_d18e7113",
+      "card_id": "hsk13_d4107d53",
       "hanzi": "又",
       "pinyin": "yòu",
       "english": "again",
@@ -6495,8 +6495,8 @@
       ]
     },
     {
-      "card_id": "hsk13_971a65da",
-      "hanzi": "右边",
+      "card_id": "hsk13_484a431f",
+      "hanzi": "右 边",
       "pinyin": "yòu bian",
       "english": "on the right",
       "pos": "noun",
@@ -6507,8 +6507,8 @@
       ]
     },
     {
-      "card_id": "hsk13_1da9333f",
-      "hanzi": "有名",
+      "card_id": "hsk13_2c13474f",
+      "hanzi": "有 名",
       "pinyin": "yǒu míng",
       "english": "famous",
       "pos": "adj.",
@@ -6518,8 +6518,8 @@
       ]
     },
     {
-      "card_id": "hsk13_684bcf63",
-      "hanzi": "游戏",
+      "card_id": "hsk13_e590a39b",
+      "hanzi": "游 戏",
       "pinyin": "yóu xì",
       "english": "game",
       "pos": "noun",
@@ -6530,8 +6530,8 @@
       ]
     },
     {
-      "card_id": "hsk13_0b050821",
-      "hanzi": "游泳",
+      "card_id": "hsk13_2adae42f",
+      "hanzi": "游 泳",
       "pinyin": "yóu yǒng",
       "english": "swimming",
       "pos": "verb",
@@ -6542,7 +6542,7 @@
       ]
     },
     {
-      "card_id": "hsk13_8d20b54e",
+      "card_id": "hsk13_4d74f285",
       "hanzi": "鱼",
       "pinyin": "yú",
       "english": "fish",
@@ -6555,8 +6555,8 @@
       ]
     },
     {
-      "card_id": "hsk13_a813ab59",
-      "hanzi": "遇到",
+      "card_id": "hsk13_17e5fe0a",
+      "hanzi": "遇 到",
       "pinyin": "yù dào",
       "english": "to meet",
       "pos": "verb",
@@ -6567,7 +6567,7 @@
       ]
     },
     {
-      "card_id": "hsk13_8e6ddc84",
+      "card_id": "hsk13_ca6469ee",
       "hanzi": "元",
       "pinyin": "yuán",
       "english": "yuan [unit of Chinese currency]; dollar",
@@ -6580,7 +6580,7 @@
       ]
     },
     {
-      "card_id": "hsk13_2b6c5588",
+      "card_id": "hsk13_ffb6df82",
       "hanzi": "远",
       "pinyin": "yuǎn",
       "english": "far",
@@ -6592,8 +6592,8 @@
       ]
     },
     {
-      "card_id": "hsk13_302b74f6",
-      "hanzi": "愿意",
+      "card_id": "hsk13_80744e6e",
+      "hanzi": "愿 意",
       "pinyin": "yuàn yì",
       "english": "willing",
       "pos": "verb",
@@ -6604,7 +6604,7 @@
       ]
     },
     {
-      "card_id": "hsk13_79f59d0e",
+      "card_id": "hsk13_ae289e4f",
       "hanzi": "越",
       "pinyin": "yuè",
       "english": "the more...the more….",
@@ -6615,7 +6615,7 @@
       ]
     },
     {
-      "card_id": "hsk13_e7d78799",
+      "card_id": "hsk13_3d6b5ae8",
       "hanzi": "月",
       "pinyin": "yuè",
       "english": "month; moon",
@@ -6627,8 +6627,8 @@
       ]
     },
     {
-      "card_id": "hsk13_29a2e35f",
-      "hanzi": "月亮",
+      "card_id": "hsk13_1b799a12",
+      "hanzi": "月 亮",
       "pinyin": "yuè liang",
       "english": "moon",
       "pos": "noun",
@@ -6639,8 +6639,8 @@
       ]
     },
     {
-      "card_id": "hsk13_f0360447",
-      "hanzi": "运动",
+      "card_id": "hsk13_4de47c72",
+      "hanzi": "运 动",
       "pinyin": "yùn dòng",
       "english": "sport",
       "pos": "verb / noun",
@@ -6651,7 +6651,7 @@
       ]
     },
     {
-      "card_id": "hsk13_c95bbe30",
+      "card_id": "hsk13_7d83c6b4",
       "hanzi": "在",
       "pinyin": "zài",
       "english": "in; at; on",
@@ -6663,7 +6663,7 @@
       ]
     },
     {
-      "card_id": "hsk13_bfbccecb",
+      "card_id": "hsk13_a1fe6ad5",
       "hanzi": "再",
       "pinyin": "zài",
       "english": "again",
@@ -6676,8 +6676,8 @@
       ]
     },
     {
-      "card_id": "hsk13_c313ff9a",
-      "hanzi": "再见",
+      "card_id": "hsk13_4650f58d",
+      "hanzi": "再 见",
       "pinyin": "zài jiàn",
       "english": "goodbye",
       "pos": "verb",
@@ -6688,8 +6688,8 @@
       ]
     },
     {
-      "card_id": "hsk13_79a790b9",
-      "hanzi": "早上",
+      "card_id": "hsk13_52c7efb3",
+      "hanzi": "早 上",
       "pinyin": "zǎo shang",
       "english": "early morning",
       "pos": "noun",
@@ -6700,8 +6700,8 @@
       ]
     },
     {
-      "card_id": "hsk13_07874e8b",
-      "hanzi": "怎么",
+      "card_id": "hsk13_39d7ee20",
+      "hanzi": "怎 么",
       "pinyin": "zěn me",
       "english": "how?",
       "pos": "pron.",
@@ -6713,8 +6713,8 @@
       ]
     },
     {
-      "card_id": "hsk13_6519ac40",
-      "hanzi": "怎么样",
+      "card_id": "hsk13_2b9fbedd",
+      "hanzi": "怎 么 样",
       "pinyin": "zěn me yàng",
       "english": "how about it",
       "pos": "pron.",
@@ -6725,7 +6725,7 @@
       ]
     },
     {
-      "card_id": "hsk13_363d3c18",
+      "card_id": "hsk13_43cb4328",
       "hanzi": "站",
       "pinyin": "zhàn",
       "english": "stand",
@@ -6737,7 +6737,7 @@
       ]
     },
     {
-      "card_id": "hsk13_738be74c",
+      "card_id": "hsk13_2a90680f",
       "hanzi": "张",
       "pinyin": "zhāng",
       "english": "to open up; to spread; [measure word for table, picture, paper etc]",
@@ -6749,7 +6749,7 @@
       ]
     },
     {
-      "card_id": "hsk13_3a0cf295",
+      "card_id": "hsk13_b57730bf",
       "hanzi": "长",
       "pinyin": "zhǎng",
       "english": "to grow",
@@ -6761,8 +6761,8 @@
       ]
     },
     {
-      "card_id": "hsk13_3c2bdbb2",
-      "hanzi": "丈夫",
+      "card_id": "hsk13_1f433250",
+      "hanzi": "丈 夫",
       "pinyin": "zhàng fu",
       "english": "husband",
       "pos": "noun",
@@ -6773,7 +6773,7 @@
       ]
     },
     {
-      "card_id": "hsk13_f72ec421",
+      "card_id": "hsk13_cbc90a5d",
       "hanzi": "找",
       "pinyin": "zhǎo",
       "english": "to find; to look for",
@@ -6785,8 +6785,8 @@
       ]
     },
     {
-      "card_id": "hsk13_4794b157",
-      "hanzi": "照顾",
+      "card_id": "hsk13_53fcc011",
+      "hanzi": "照 顾",
       "pinyin": "zhào gu",
       "english": "to look after",
       "pos": "verb",
@@ -6798,8 +6798,8 @@
       ]
     },
     {
-      "card_id": "hsk13_1e82f7ab",
-      "hanzi": "着急",
+      "card_id": "hsk13_ca5c80d2",
+      "hanzi": "着 急",
       "pinyin": "zháo jí",
       "english": "anxious",
       "pos": "adj.",
@@ -6810,8 +6810,8 @@
       ]
     },
     {
-      "card_id": "hsk13_c0840a89",
-      "hanzi": "照片",
+      "card_id": "hsk13_6348618f",
+      "hanzi": "照 片",
       "pinyin": "zhào piàn",
       "english": "photograph",
       "pos": "noun",
@@ -6822,8 +6822,8 @@
       ]
     },
     {
-      "card_id": "hsk13_c15320f7",
-      "hanzi": "照相机",
+      "card_id": "hsk13_1d0be398",
+      "hanzi": "照 相 机",
       "pinyin": "zhào xiàng jī",
       "english": "camera",
       "pos": "noun",
@@ -6834,7 +6834,7 @@
       ]
     },
     {
-      "card_id": "hsk13_6450ee4d",
+      "card_id": "hsk13_2d98cb6d",
       "hanzi": "这",
       "pinyin": "zhè",
       "english": "this",
@@ -6846,7 +6846,7 @@
       ]
     },
     {
-      "card_id": "hsk13_967d32ae",
+      "card_id": "hsk13_8151bfdf",
       "hanzi": "着",
       "pinyin": "zhe",
       "english": "-ing",
@@ -6857,7 +6857,7 @@
       ]
     },
     {
-      "card_id": "hsk13_86b25af0",
+      "card_id": "hsk13_8e9d22a0",
       "hanzi": "真",
       "pinyin": "zhēn",
       "english": "real; so (+adjective)",
@@ -6869,8 +6869,8 @@
       ]
     },
     {
-      "card_id": "hsk13_62527943",
-      "hanzi": "正在",
+      "card_id": "hsk13_a6e2bfcc",
+      "hanzi": "正 在",
       "pinyin": "zhèng zài",
       "english": "to be in the process of",
       "pos": "adv.",
@@ -6880,7 +6880,7 @@
       ]
     },
     {
-      "card_id": "hsk13_cc2d8a46",
+      "card_id": "hsk13_d201eeea",
       "hanzi": "只",
       "pinyin": "zhī",
       "english": "individual [measure word for small animals]",
@@ -6892,7 +6892,7 @@
       ]
     },
     {
-      "card_id": "hsk13_8e33b12d",
+      "card_id": "hsk13_f34013c1",
       "hanzi": "只",
       "pinyin": "zhǐ",
       "english": "only",
@@ -6904,8 +6904,8 @@
       ]
     },
     {
-      "card_id": "hsk13_3fa6cbd0",
-      "hanzi": "知道",
+      "card_id": "hsk13_d4e64aed",
+      "hanzi": "知 道",
       "pinyin": "zhī dào",
       "english": "know; realise; be aware of",
       "pos": "verb",
@@ -6916,8 +6916,8 @@
       ]
     },
     {
-      "card_id": "hsk13_01413147",
-      "hanzi": "只有…才…",
+      "card_id": "hsk13_7fc043db",
+      "hanzi": "只 有 … 才 …",
       "pinyin": "zhǐ yǒu … cái …",
       "english": "only if…then...",
       "pos": "conj.",
@@ -6927,7 +6927,7 @@
       ]
     },
     {
-      "card_id": "hsk13_62344742",
+      "card_id": "hsk13_a581d519",
       "hanzi": "种",
       "pinyin": "zhǒng",
       "english": "kind",
@@ -6939,8 +6939,8 @@
       ]
     },
     {
-      "card_id": "hsk13_73875956",
-      "hanzi": "中国",
+      "card_id": "hsk13_ca8b6070",
+      "hanzi": "中 国",
       "pinyin": "zhōng guó",
       "english": "China",
       "pos": "noun",
@@ -6951,8 +6951,8 @@
       ]
     },
     {
-      "card_id": "hsk13_0f0445da",
-      "hanzi": "中间",
+      "card_id": "hsk13_bb9633f5",
+      "hanzi": "中 间",
       "pinyin": "zhōng jiān",
       "english": "middle",
       "pos": "noun",
@@ -6963,8 +6963,8 @@
       ]
     },
     {
-      "card_id": "hsk13_32126d27",
-      "hanzi": "中文",
+      "card_id": "hsk13_40addff8",
+      "hanzi": "中 文",
       "pinyin": "zhōng wén",
       "english": "Chinese [written language]",
       "pos": "noun",
@@ -6976,8 +6976,8 @@
       ]
     },
     {
-      "card_id": "hsk13_e7629560",
-      "hanzi": "中午",
+      "card_id": "hsk13_927ce67b",
+      "hanzi": "中 午",
       "pinyin": "zhōng wǔ",
       "english": "midday",
       "pos": "noun",
@@ -6988,8 +6988,8 @@
       ]
     },
     {
-      "card_id": "hsk13_e8c77536",
-      "hanzi": "重要",
+      "card_id": "hsk13_839b12de",
+      "hanzi": "重 要",
       "pinyin": "zhòng yào",
       "english": "important",
       "pos": "adj.",
@@ -6999,8 +6999,8 @@
       ]
     },
     {
-      "card_id": "hsk13_90fdaa64",
-      "hanzi": "终于",
+      "card_id": "hsk13_66532723",
+      "hanzi": "终 于",
       "pinyin": "zhōng yú",
       "english": "at last",
       "pos": "adv.",
@@ -7011,8 +7011,8 @@
       ]
     },
     {
-      "card_id": "hsk13_499852da",
-      "hanzi": "周末",
+      "card_id": "hsk13_a992739a",
+      "hanzi": "周 末",
       "pinyin": "zhōu mò",
       "english": "weekend",
       "pos": "noun",
@@ -7023,7 +7023,7 @@
       ]
     },
     {
-      "card_id": "hsk13_fa748627",
+      "card_id": "hsk13_ecb76be1",
       "hanzi": "住",
       "pinyin": "zhù",
       "english": "to live; stay (a number of nights)",
@@ -7035,8 +7035,8 @@
       ]
     },
     {
-      "card_id": "hsk13_8ef8851a",
-      "hanzi": "主要",
+      "card_id": "hsk13_15781715",
+      "hanzi": "主 要",
       "pinyin": "zhǔ yào",
       "english": "mainly",
       "pos": "adj.",
@@ -7046,8 +7046,8 @@
       ]
     },
     {
-      "card_id": "hsk13_131a321e",
-      "hanzi": "注意",
+      "card_id": "hsk13_b1c8af27",
+      "hanzi": "注 意",
       "pinyin": "zhù yì",
       "english": "take note of",
       "pos": "verb",
@@ -7058,8 +7058,8 @@
       ]
     },
     {
-      "card_id": "hsk13_28c70238",
-      "hanzi": "准备",
+      "card_id": "hsk13_65c2caca",
+      "hanzi": "准 备",
       "pinyin": "zhǔn bèi",
       "english": "to prepare",
       "pos": "verb",
@@ -7070,8 +7070,8 @@
       ]
     },
     {
-      "card_id": "hsk13_4ab238e7",
-      "hanzi": "桌子",
+      "card_id": "hsk13_eb0030af",
+      "hanzi": "桌 子",
       "pinyin": "zhuō zi",
       "english": "table",
       "pos": "noun",
@@ -7082,7 +7082,7 @@
       ]
     },
     {
-      "card_id": "hsk13_87621650",
+      "card_id": "hsk13_1a656f5d",
       "hanzi": "字",
       "pinyin": "zì",
       "english": "(Chinese) character",
@@ -7094,8 +7094,8 @@
       ]
     },
     {
-      "card_id": "hsk13_aa083cc7",
-      "hanzi": "自己",
+      "card_id": "hsk13_174d004b",
+      "hanzi": "自 己",
       "pinyin": "zì jǐ",
       "english": "self; oneself",
       "pos": "pron.",
@@ -7106,8 +7106,8 @@
       ]
     },
     {
-      "card_id": "hsk13_38e7a52e",
-      "hanzi": "自行车",
+      "card_id": "hsk13_63ca0424",
+      "hanzi": "自 行 车",
       "pinyin": "zì xíng chē",
       "english": "bicycle",
       "pos": "noun",
@@ -7118,8 +7118,8 @@
       ]
     },
     {
-      "card_id": "hsk13_a46fb3ae",
-      "hanzi": "总是",
+      "card_id": "hsk13_789157de",
+      "hanzi": "总 是",
       "pinyin": "zǒng shì",
       "english": "always",
       "pos": "adv.",
@@ -7130,7 +7130,7 @@
       ]
     },
     {
-      "card_id": "hsk13_4bdaf05d",
+      "card_id": "hsk13_81aaa60b",
       "hanzi": "走",
       "pinyin": "zǒu",
       "english": "go; walk",
@@ -7142,7 +7142,7 @@
       ]
     },
     {
-      "card_id": "hsk13_f752dd07",
+      "card_id": "hsk13_90995851",
       "hanzi": "嘴",
       "pinyin": "zuǐ",
       "english": "mouth",
@@ -7154,7 +7154,7 @@
       ]
     },
     {
-      "card_id": "hsk13_00cd414b",
+      "card_id": "hsk13_1c7b6e63",
       "hanzi": "最",
       "pinyin": "zuì",
       "english": "most",
@@ -7166,8 +7166,8 @@
       ]
     },
     {
-      "card_id": "hsk13_4e3f0889",
-      "hanzi": "最后",
+      "card_id": "hsk13_b8642ea1",
+      "hanzi": "最 后",
       "pinyin": "zuì hòu",
       "english": "lastly",
       "pos": "noun",
@@ -7178,8 +7178,8 @@
       ]
     },
     {
-      "card_id": "hsk13_0942d7b5",
-      "hanzi": "最近",
+      "card_id": "hsk13_1ac402a4",
+      "hanzi": "最 近",
       "pinyin": "zuì jìn",
       "english": "recently",
       "pos": "noun",
@@ -7190,7 +7190,7 @@
       ]
     },
     {
-      "card_id": "hsk13_e1004ec0",
+      "card_id": "hsk13_d88e8181",
       "hanzi": "坐",
       "pinyin": "zuò",
       "english": "to sit",
@@ -7202,10 +7202,10 @@
       ]
     },
     {
-      "card_id": "hsk13_7fd20772",
+      "card_id": "hsk13_fa256862",
       "hanzi": "做",
       "pinyin": "zuò",
-      "english": "to do; to be; become (an occupation) ",
+      "english": "to do; to be; become (an occupation)",
       "pos": "verb",
       "hsk": "HSK1",
       "tags": [
@@ -7214,8 +7214,8 @@
       ]
     },
     {
-      "card_id": "hsk13_2c0fde70",
-      "hanzi": "左边",
+      "card_id": "hsk13_df78457e",
+      "hanzi": "左 边",
       "pinyin": "zuǒ bian",
       "english": "on the left",
       "pos": "noun",
@@ -7226,8 +7226,8 @@
       ]
     },
     {
-      "card_id": "hsk13_91e8d1a5",
-      "hanzi": "昨天",
+      "card_id": "hsk13_6cee25cf",
+      "hanzi": "昨 天",
       "pinyin": "zuó tiān",
       "english": "yesterday",
       "pos": "noun",
@@ -7238,8 +7238,8 @@
       ]
     },
     {
-      "card_id": "hsk13_8ae32362",
-      "hanzi": "作业",
+      "card_id": "hsk13_2f08e7ae",
+      "hanzi": "作 业",
       "pinyin": "zuò yè",
       "english": "homework",
       "pos": "noun",
