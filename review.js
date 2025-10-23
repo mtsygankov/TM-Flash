@@ -14,8 +14,13 @@ const Review = {
     Message.hide('card-container');
     if (!card) {
       const table = document.getElementById("card-table");
+      const englishSection = document.getElementById("card-english");
       if (table) {
         table.innerHTML = "";
+      }
+      if (englishSection) {
+        englishSection.querySelector('.pos-prefix').textContent = '';
+        englishSection.querySelector('.english-text').textContent = '';
       }
       return;
     }
@@ -23,7 +28,10 @@ const Review = {
     const pinyinTokens = card.pinyin.split(" ");
     const enWords = card.en_words || [];
     const table = document.getElementById("card-table");
-    if (!table) return;
+    const englishSection = document.getElementById("card-english");
+    if (!table || !englishSection) return;
+    
+    // Render table with only hanzi, pinyin, and en-words rows
     table.innerHTML = `
             <tr class="row-hanzi">
                 ${hanziTokens.map((token) => `<td>${this.escapeHtml(token)}</td>`).join("")}
@@ -34,26 +42,36 @@ const Review = {
             <tr class="row-en-words">
                 ${enWords.map((word) => `<td>${this.escapeHtml(word)}</td>`).join("")}
             </tr>
-            <tr class="row-english">
-                <td colspan="${hanziTokens.length}">
-                    ${card.pos ? `<span class="pos-prefix">${this.escapeHtml(card.pos)}</span> ` : ''}
-                    ${this.escapeHtml(card.english)}
-                </td>
-            </tr>
         `;
 
-    // Dynamic font scaling based on content and available space
+    // Render english section separately
+    const posPrefix = englishSection.querySelector('.pos-prefix');
+    const englishText = englishSection.querySelector('.english-text');
+    posPrefix.textContent = card.pos ? `${this.escapeHtml(card.pos)} ` : '';
+    englishText.textContent = this.escapeHtml(card.english);
+
+    // Dynamic font scaling for hanzi/pinyin table (more accurate now)
     const columns = hanziTokens.length;
     const totalChars = hanziTokens.reduce((sum, token) => sum + token.length, 0);
-    const container = document.getElementById('card-container');
-    const containerPadding = parseFloat(getComputedStyle(container).paddingLeft) + parseFloat(getComputedStyle(container).paddingRight);
-    const availableWidth = container.clientWidth - containerPadding;
+    const tableWrapper = document.getElementById('card-table-wrapper');
+    const tableWrapperPadding = parseFloat(getComputedStyle(tableWrapper).paddingLeft) + parseFloat(getComputedStyle(tableWrapper).paddingRight);
+    const availableWidth = tableWrapper.clientWidth - tableWrapperPadding;
     const baseCharSize = 4 * 16; // 4rem in px per hanzi char
     const cellPadding = 0.75 * 2 * 16; // 0.75rem * 2 sides in px
     const borderSpacing = 0.5 * 16; // 0.5rem in px
     const estimatedWidth = totalChars * baseCharSize + (columns - 1) * borderSpacing + columns * cellPadding;
     const scale = Math.max(0.5, Math.min(1, availableWidth / estimatedWidth));
     table.style.setProperty('--scale-factor', scale);
+
+    // Independent font scaling for english section
+    const container = document.getElementById('card-container');
+    const containerPadding = parseFloat(getComputedStyle(container).paddingLeft) + parseFloat(getComputedStyle(container).paddingRight);
+    const englishAvailableWidth = container.clientWidth - containerPadding;
+    const englishTextLength = card.english.length + (card.pos ? card.pos.length : 0);
+    const englishBaseCharSize = 3 * 16; // 3rem in px per english char
+    const englishEstimatedWidth = englishTextLength * englishBaseCharSize * 0.6; // English chars are narrower
+    const englishScale = Math.max(0.6, Math.min(1, englishAvailableWidth / englishEstimatedWidth));
+    englishSection.style.setProperty('--english-scale-factor', englishScale);
 
     // Add click handlers for search
     const hanziCells = table.querySelectorAll('.row-hanzi td');
@@ -93,6 +111,17 @@ const Review = {
         Nav.show("search");
         Search.performSearch();
       });
+    });
+
+    // Add click handler for english text
+    englishText.style.cursor = 'pointer';
+    englishText.addEventListener('click', (e) => {
+      e.stopPropagation();
+      document.getElementById("search-query").value = englishText.textContent;
+      Search.currentType = "english";
+      Search.updateToggleButton();
+      Nav.show("search");
+      Search.performSearch();
     });
 
     this.updateFlagButtons(card);
@@ -144,9 +173,14 @@ const Review = {
 
   applyDirectionAndFlip() {
     const table = document.getElementById("card-table");
+    const englishSection = document.getElementById("card-english");
     const direction = App.currentDirection;
     const flipped = App.flipped;
-    table.className = `direction-${direction.toLowerCase().replace("->", "-")} ${flipped ? "flipped" : ""}`;
+    
+    // Apply classes to both table and english section
+    const className = `direction-${direction.toLowerCase().replace("->", "-")} ${flipped ? "flipped" : ""}`;
+    table.className = className;
+    englishSection.className = className;
 
     const buttons = document.getElementById("card-buttons");
     if (buttons) {
