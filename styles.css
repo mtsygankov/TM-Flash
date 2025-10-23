@@ -750,6 +750,21 @@ h2 {
     color: #666;
 }
 
+.result-english-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.result-pos {
+    font-size: clamp(0.7rem, 1.5vw, 0.9rem);
+    color: #999;
+    font-style: italic;
+    min-width: 3rem;
+    text-align: right;
+}
+
 @media (min-width: 1200px) {
     .view {
         padding: clamp(2rem, 4vw, 3rem);

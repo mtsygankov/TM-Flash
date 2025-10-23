@@ -79,7 +79,10 @@ const Search = {
         <div class="search-result-content">
           <div class="result-hanzi">${card.hanzi}</div>
           <div class="result-pinyin">${card.pinyin}</div>
-          <div class="result-english">${card.english}</div>
+          <div class="result-english-row">
+            ${card.pos ? `<span class="result-pos">[ ${card.pos} ]</span>` : ''}
+            <div class="result-english">${card.english}</div>
+          </div>
         </div>
       </div>
     `;
