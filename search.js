@@ -70,9 +70,10 @@ const Search = {
           const cardStats = App.currentStats?.cards[card.card_id] || {};
           const starred = cardStats.starred || false;
           const ignored = cardStats.ignored || false;
+          const tagsHtml = this.renderTags(card.tags || []);
           return `
       <div class="search-result" data-card-id="${card.card_id}">
-
+        ${tagsHtml}
         <div class="search-result-content">
           <div class="result-hanzi">${card.hanzi}</div>
           <div class="result-pinyin">${card.pinyin}</div>
@@ -88,6 +89,33 @@ const Search = {
       .join("");
     container.innerHTML = `<div class="search-results-list">${list}</div>`;
 
+  },
+
+  renderTags(tags) {
+    if (!tags || tags.length === 0) return '';
+
+    const tagBadges = tags.map(tag => {
+      const colorClass = this.getTagColorClass(tag);
+      return `<span class="tag-badge ${colorClass}">${tag}</span>`;
+    }).join('');
+
+    return `<div class="search-result-tags">${tagBadges}</div>`;
+  },
+
+  getTagColorClass(tag) {
+    const colorMap = {
+      'Daily Life': 'tag-daily-life',
+      'Descriptions': 'tag-descriptions',
+      'Grammar': 'tag-grammar',
+      'Location': 'tag-location',
+      'Objects': 'tag-objects',
+      'People': 'tag-people',
+      'Numbers': 'tag-numbers',
+      'Time': 'tag-time',
+      'Nature': 'tag-nature',
+      'Expressions': 'tag-expressions'
+    };
+    return colorMap[tag] || 'tag-default';
   },
 
     toggleStarFlag(cardId) {
