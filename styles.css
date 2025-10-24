@@ -705,7 +705,7 @@ h2 {
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
-    margin-right: 0.5rem;
+    margin-right: 1rem;
     min-width: 60px;
 }
 
@@ -737,7 +737,9 @@ h2 {
 
 .search-result-content {
     flex: 1;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .result-hanzi {
@@ -756,19 +758,27 @@ h2 {
     color: #666;
 }
 
-.result-english-row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-}
+
 
 .result-pos {
     font-size: clamp(0.7rem, 1.5vw, 0.9rem);
     color: #999;
     font-style: italic;
     min-width: 3rem;
-    text-align: right;
+    text-align: left;
+}
+
+.result-left {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.result-right {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 @media (min-width: 1200px) {
