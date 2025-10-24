@@ -86,8 +86,6 @@ const Search = {
       .map(
         (card) => {
           const cardStats = App.currentStats?.cards[card.card_id] || {};
-          const starred = cardStats.starred || false;
-          const ignored = cardStats.ignored || false;
           const tagsHtml = this.renderTags(card.tags || []);
             const cleanHanzi = card.hanzi.replace(/\s/g, '');
             return `
@@ -141,35 +139,4 @@ const Search = {
     return colorMap[tag] || 'tag-default';
   },
 
-    toggleStarFlag(cardId) {
-      const cardStats = App.currentStats.cards[cardId];
-      if (!cardStats) return;
-      const current = cardStats.starred || false;
-      cardStats.starred = !current;
-      Storage.setDeckStats(App.currentDeckId, App.currentStats);
-      // Update button appearance
-      const resultEl = document.querySelector(`.search-result[data-card-id="${cardId}"]`);
-      if (resultEl) {
-        const btn = resultEl.querySelector(".search-star-btn");
-        if (btn) {
-          btn.dataset.starred = cardStats.starred;
-        }
-      }
-    },
-
-    toggleIgnoreFlag(cardId) {
-      const cardStats = App.currentStats.cards[cardId];
-      if (!cardStats) return;
-      const current = cardStats.ignored || false;
-      cardStats.ignored = !current;
-      Storage.setDeckStats(App.currentDeckId, App.currentStats);
-      // Update button appearance
-      const resultEl = document.querySelector(`.search-result[data-card-id="${cardId}"]`);
-      if (resultEl) {
-        const btn = resultEl.querySelector(".search-ignore-btn");
-        if (btn) {
-          btn.dataset.ignored = cardStats.ignored;
-        }
-      }
-    },
 };

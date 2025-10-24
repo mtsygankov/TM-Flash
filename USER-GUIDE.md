@@ -181,10 +181,6 @@ Each deck maintains completely independent statistics:
 - **Function**: Switch study direction instantly
 - **Persistence**: Your choice is saved automatically
 
-#### Star/Ignore Toggles
-- **Star (⭐️)**: Mark cards as favorites for focused practice
-- **Ignore (🚫)**: Temporarily hide cards from review
-
 ### Navigation Tabs
 
 Three main views accessible via tabs in the header:
@@ -209,10 +205,6 @@ Three main views accessible via tabs in the header:
 #### Primary Actions
 - **Correct (Green)**: Right arrow key, swipe right, or click button
 - **Incorrect (Red)**: Left arrow key, swipe left, or click button
-
-#### Card Actions
-- **Star (⭐️)**: Mark as favorite
-- **Ignore (🚫)**: Hide from future reviews
 
 ---
 
@@ -325,11 +317,6 @@ The card with the highest score is shown next, ensuring optimal learning efficie
 
 #### Star System
 - **Mark Difficult Cards**: Use ⭐️ to flag challenging vocabulary
-
-#### Ignore Feature
-- **Temporary Breaks**: Use 🚫 to hide cards that are frustrating you
-- **Topic Focus**: Ignore cards from completed topics to focus on new material
-- **Recovery**: Un-ignore cards when you're ready to try again
 
 #### Search for Review
 - **Pattern Recognition**: Search for similar characters or words
@@ -460,8 +447,6 @@ If you encounter persistent issues:
 - Practice both directions (CH→EN and EN→CH)
 - Be honest when marking answers
 - Review your worst-performing cards regularly
-- Use star/ignore features strategically
-
 ---
 
 *This user guide covers all aspects of TM-Flash. For technical details about data storage, custom deck creation, or advanced configuration, see the separate TECHNICAL-NOTES.md file.*

@@ -9,8 +9,6 @@ const Stats = {
      cards.forEach((card) => {
        if (!deckStats.cards[card.card_id]) {
          syncedCards[card.card_id] = {
-           starred: false,
-           ignored: false,
            "CH->EN": {
              total_correct: 0,
              total_incorrect: 0,
@@ -34,13 +32,6 @@ const Stats = {
          };
        } else {
          syncedCards[card.card_id] = deckStats.cards[card.card_id];
-         // Ensure starred and ignored flags exist (for schema migration)
-         if (syncedCards[card.card_id].starred === undefined) {
-           syncedCards[card.card_id].starred = false;
-         }
-         if (syncedCards[card.card_id].ignored === undefined) {
-           syncedCards[card.card_id].ignored = false;
-         }
        }
      });
 
@@ -79,8 +70,6 @@ const Stats = {
    updateCardStats(deckId, cardId, direction, isCorrect) {
      const deckStats = Storage.getDeckStats(deckId);
      const cardStats = deckStats.cards[cardId] || {
-       starred: false,
-       ignored: false,
        "CH->EN": {
          total_correct: 0,
          total_incorrect: 0,
@@ -158,16 +147,11 @@ const Stats = {
     App.currentStats = deckStats;
   },
 
-  computeMetrics(deckId, direction, starredFilter, ignoredFilter) {
+  computeMetrics(deckId, direction) {
     const deckStats = Storage.getDeckStats(deckId);
     let totalCards = 0;
     let reviewedCount = 0;
     Object.values(deckStats.cards).forEach((cardStats) => {
-      const starred = cardStats.starred || false;
-      const ignored = cardStats.ignored || false;
-      if (starredFilter && !starred) return;
-      if (!ignoredFilter && ignored) return;
-      else if (ignoredFilter && !ignored) return;
       totalCards++;
       const dirStat = cardStats[direction];
       if (dirStat && dirStat.total_correct + dirStat.total_incorrect > 0) reviewedCount++;

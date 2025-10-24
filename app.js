@@ -6,8 +6,6 @@ const App = {
   flipped: false,
   currentDirection: "CH->EN",
   currentDeckId: null,
-  starredToggle: false,
-  ignoredToggle: false,
   savedReviewCardId: null,
   savedReviewFlipped: false,
 

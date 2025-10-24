@@ -51,11 +51,6 @@ const StatsView = {
       const cardMap = new Map((App.currentCards || []).map((card) => [card.card_id.toString(), card]));
      const cardData = [];
       Object.entries(deckStats.cards || {}).forEach(([cardId, cardStats]) => {
-        const starred = cardStats.starred || false;
-        const ignored = cardStats.ignored || false;
-        if (this.currentStarred && !starred) return;
-        if (!this.currentIgnored && ignored) return;
-        else if (this.currentIgnored && !ignored) return;
         const dirStat = cardStats[this.currentDirection];
         if (!dirStat) return;
         const total = (dirStat.total_correct || 0) + (dirStat.total_incorrect || 0);
@@ -98,11 +93,6 @@ const StatsView = {
        const dueBuckets = [0, 0, 0, 0, 0, 0, 0, 0, 0];
        (App.currentCards || []).forEach((card) => {
          const cardStats = deckStats.cards?.[card.card_id];
-         const starred = cardStats?.starred || false;
-         const ignored = cardStats?.ignored || false;
-         if (this.currentStarred && !starred) return;
-         if (!this.currentIgnored && ignored) return;
-         else if (this.currentIgnored && !ignored) return;
          const stats = deckStats.cards?.[card.card_id]?.[this.currentDirection];
         if (!stats) {
           // new card, due now -> count in first bucket (<=30m)

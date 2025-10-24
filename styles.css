@@ -291,25 +291,6 @@ h2 {
     flex-direction: row;
 }
 
-#btn-star,
-#btn-ignore {
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #fff;
-    font-size: 1.2rem;
-    cursor: pointer;
-    min-width: 40px;
-}
-
-#starred-toggle[data-starred="true"],
-#btn-star[data-starred="true"],
-#btn-ignore[data-ignored="true"] {
-    background-color: #007bff;
-    color: white;
-    border-color: #007bff;
-}
-
 #btn-incorrect {
     background-color: #dc3545;
     color: white;
