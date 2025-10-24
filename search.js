@@ -72,10 +72,7 @@ const Search = {
           const ignored = cardStats.ignored || false;
           return `
       <div class="search-result" data-card-id="${card.card_id}">
-        <div class="search-result-buttons">
-          <button class="search-star-btn" data-starred="${starred}" type="button">⭐️</button>
-          <button class="search-ignore-btn" data-ignored="${ignored}" type="button">🚫</button>
-        </div>
+
         <div class="search-result-content">
           <div class="result-hanzi">${card.hanzi}</div>
           <div class="result-pinyin">${card.pinyin}</div>
@@ -90,21 +87,7 @@ const Search = {
       )
       .join("");
     container.innerHTML = `<div class="search-results-list">${list}</div>`;
-    // Bind click events for buttons
-    container.querySelectorAll(".search-star-btn").forEach((btn) => {
-      btn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        const cardId = e.target.closest(".search-result").dataset.cardId;
-        this.toggleStarFlag(cardId);
-      });
-    });
-    container.querySelectorAll(".search-ignore-btn").forEach((btn) => {
-      btn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        const cardId = e.target.closest(".search-result").dataset.cardId;
-        this.toggleIgnoreFlag(cardId);
-      });
-    });
+
   },
 
     toggleStarFlag(cardId) {
