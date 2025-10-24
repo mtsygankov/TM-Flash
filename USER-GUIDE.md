@@ -184,7 +184,6 @@ Each deck maintains completely independent statistics:
 #### Star/Ignore Toggles
 - **Star (⭐️)**: Mark cards as favorites for focused practice
 - **Ignore (🚫)**: Temporarily hide cards from review
-- **Numbers**: Show count of starred/ignored cards in current deck
 
 ### Navigation Tabs
 
@@ -326,8 +325,6 @@ The card with the highest score is shown next, ensuring optimal learning efficie
 
 #### Star System
 - **Mark Difficult Cards**: Use ⭐️ to flag challenging vocabulary
-- **Focused Practice**: Switch to starred cards for intensive review
-- **Progress Tracking**: Watch starred cards move to your "best" list
 
 #### Ignore Feature
 - **Temporary Breaks**: Use 🚫 to hide cards that are frustrating you

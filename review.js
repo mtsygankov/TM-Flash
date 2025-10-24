@@ -122,10 +122,9 @@ const Review = {
       Search.updateToggleButton();
       Nav.show("search");
       Search.performSearch();
-    });
+     });
 
-    this.updateFlagButtons(card);
-    this.applyDirectionAndFlip();
+     this.applyDirectionAndFlip();
   },
 
   escapeHtml(text) {
@@ -134,33 +133,14 @@ const Review = {
     return div.innerHTML;
   },
 
-  updateFlagButtons(card) {
-    if (!card) return;
-    const cardStats = App.currentStats.cards[card.card_id];
-    const starred = cardStats?.starred || false;
-    const ignored = cardStats?.ignored || false;
 
-    const btnStar = document.getElementById("btn-star");
-    const btnIgnore = document.getElementById("btn-ignore");
 
-    if (btnStar) {
-      btnStar.textContent = "⭐️";
-      btnStar.dataset.starred = starred;
-    }
-    if (btnIgnore) {
-      btnIgnore.textContent = "🚫";
-      btnIgnore.dataset.ignored = ignored;
-    }
-  },
-
-  updateReviewTogglesDisplay() {
-    const counts = SRS.countFilteredCards(
-      App.currentCards,
-      App.currentStats.cards,
-      App.currentDirection,
-      App.starredToggle,
-      App.ignoredToggle
-    );
+   updateReviewTogglesDisplay() {
+     const counts = SRS.countFilteredCards(
+       App.currentCards,
+       App.currentStats.cards,
+       App.currentDirection
+     );
 
     const future = counts.total - counts.overdue;
     const displayText = `${counts.overdue} / ${future} / ${counts.total}`;
@@ -193,23 +173,7 @@ const Review = {
     this.applyDirectionAndFlip();
   },
 
-  toggleStarFlag() {
-    if (!App.currentCard) return;
-    const cardStats = App.currentStats.cards[App.currentCard.card_id];
-    const current = cardStats.starred || false;
-    cardStats.starred = !current;
-    Storage.setDeckStats(App.currentDeckId, App.currentStats);
-    this.updateFlagButtons(App.currentCard);
-  },
 
-  toggleIgnoreFlag() {
-    if (!App.currentCard) return;
-    const cardStats = App.currentStats.cards[App.currentCard.card_id];
-    const current = cardStats.ignored || false;
-    cardStats.ignored = !current;
-    Storage.setDeckStats(App.currentDeckId, App.currentStats);
-    this.updateFlagButtons(App.currentCard);
-  },
 
   onCorrect() {
     if (!App.currentCard) {
@@ -244,16 +208,14 @@ const Review = {
         App.currentCard = SRS.selectNextCard(
           App.currentCards,
           App.currentStats.cards,
-          App.currentDirection,
-          App.starredToggle,
-          App.ignoredToggle,
+          App.currentDirection
         );
         this.updateReviewTogglesDisplay();
         if (App.currentCard) {
           this.renderCard(App.currentCard);
         } else {
          this.renderCard(null); // Clear the table
-          const nextReviewInfo = SRS.getNextReviewInfo(App.currentCards, App.currentStats.cards, App.currentDirection, App.starredToggle, App.ignoredToggle);
+          const nextReviewInfo = SRS.getNextReviewInfo(App.currentCards, App.currentStats.cards, App.currentDirection);
          let message;
          if (nextReviewInfo) {
                 message = `No cards due for review. Next review: (${nextReviewInfo.cardsInWindow} card${nextReviewInfo.cardsInWindow > 1 ? 's' : ''} in ~${nextReviewInfo.timeString}).`;
@@ -261,18 +223,7 @@ const Review = {
             message = 'No cards due for review.';
           }
 
-          // Add info about starred/unstarred cards
-          const starredCount = SRS.countDueCards(App.currentCards, App.currentStats.cards, App.currentDirection, true, null);
-          const unstarredCount = SRS.countDueCards(App.currentCards, App.currentStats.cards, App.currentDirection, false, null);
-          if (App.starredToggle) {
-            if (unstarredCount > 0) {
-              message += ` There are ${unstarredCount} unstarred cards due.`;
-            }
-          } else {
-            if (starredCount > 0) {
-              message += ` There are ${starredCount} starred cards due.`;
-            }
-          }
+
 
           Message.show('card-container', message);
        }
@@ -296,21 +247,7 @@ const Review = {
       this.onIncorrect();
     });
 
-    // Flag buttons
-    const btnStar = document.getElementById("btn-star");
-    const btnIgnore = document.getElementById("btn-ignore");
-    if (btnStar) {
-      btnStar.addEventListener("click", (e) => {
-        e.stopPropagation();
-        this.toggleStarFlag();
-      });
-    }
-    if (btnIgnore) {
-      btnIgnore.addEventListener("click", (e) => {
-        e.stopPropagation();
-        this.toggleIgnoreFlag();
-      });
-    }
+
 
     // Keyboard
     document.addEventListener("keydown", (e) => {
@@ -319,13 +256,11 @@ const Review = {
         document.activeElement.tagName === "SELECT"
       )
         return;
-      if (e.code === "Space") {
-        e.preventDefault();
-        if (!App.flipped) {
-          this.toggleFlip();
-        } else {
-          this.toggleStarFlag();
-        }
+       if (e.code === "Space") {
+         e.preventDefault();
+         if (!App.flipped) {
+           this.toggleFlip();
+         }
       } else if (e.code === "ArrowRight") {
         if (App.flipped) {
           e.preventDefault();

@@ -1,8 +1,7 @@
 // StatsView module
 const StatsView = {
   currentDirection: "CH->EN",
-  currentStarred: false,
-  currentIgnored: false,
+
 
   init() {
     this.bindEvents();
@@ -20,20 +19,7 @@ const StatsView = {
         this.render();
       });
     }
-    const starredToggle = document.getElementById("stats-starred-toggle");
-    if (starredToggle) {
-      starredToggle.addEventListener("click", () => {
-        this.currentStarred = !this.currentStarred;
-        this.render();
-      });
-    }
-    const ignoredToggle = document.getElementById("stats-ignored-toggle");
-    if (ignoredToggle) {
-      ignoredToggle.addEventListener("click", () => {
-        this.currentIgnored = !this.currentIgnored;
-        this.render();
-      });
-    }
+
     const resetBtn = document.getElementById("reset-stats-btn");
     if (resetBtn) {
       resetBtn.addEventListener("click", () => {
@@ -51,21 +37,14 @@ const StatsView = {
     if (toggle) {
       toggle.textContent = this.currentDirection;
     }
-    const starredToggle = document.getElementById("stats-starred-toggle");
-    if (starredToggle) {
-      starredToggle.dataset.starred = this.currentStarred;
-    }
-    const ignoredToggle = document.getElementById("stats-ignored-toggle");
-    if (ignoredToggle) {
-      ignoredToggle.dataset.ignored = this.currentIgnored;
-    }
+
     const content = document.getElementById("stats-content");
     if (!content) return;
     if (!App.currentDeckId) {
       content.innerHTML = "<p>No deck loaded.</p>";
       return;
     }
-    const metrics = Stats.computeMetrics(App.currentDeckId, this.currentDirection, this.currentStarred, this.currentIgnored);
+    const metrics = Stats.computeMetrics(App.currentDeckId, this.currentDirection, false, false);
 
      // Compute histogram and top lists
      const deckStats = Storage.getDeckStats(App.currentDeckId) || { cards: {} };

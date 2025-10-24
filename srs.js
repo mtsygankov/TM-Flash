@@ -70,7 +70,9 @@ const SRS = {
     return isDue;
   },
 
-  selectNextCard(cards, statsMap, direction, starredToggle = false, ignoredToggle = false) {
+  selectNextCard(cards, statsMap, direction) {
+    const starredToggle = false;
+    const ignoredToggle = false;
 
     if (!cards || cards.length === 0) {
      console.warn("❌ No cards array or empty array");
@@ -235,7 +237,9 @@ const SRS = {
     }).length;
   },
 
-  countFilteredCards(cards, statsMap, direction, starredToggle = false, ignoredToggle = false) {
+  countFilteredCards(cards, statsMap, direction) {
+    const starredToggle = false;
+    const ignoredToggle = false;
     if (!cards || cards.length === 0) {
       return { total: 0, overdue: 0 };
     }
@@ -289,7 +293,9 @@ const SRS = {
     return { total, overdue };
   },
 
-  getNextReviewInfo(cards, statsMap, direction, starredToggle = false, ignoredToggle = false) {
+  getNextReviewInfo(cards, statsMap, direction) {
+    const starredToggle = false;
+    const ignoredToggle = false;
     if (!cards || cards.length === 0) {
       return null;
     }

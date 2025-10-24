@@ -39,9 +39,7 @@ h1 {
 }
 
 #deck-selector,
-#direction-toggle,
-#starred-toggle,
-#ignored-toggle {
+#direction-toggle {
     padding: 0.4rem;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -306,10 +304,7 @@ h2 {
 
 #starred-toggle[data-starred="true"],
 #btn-star[data-starred="true"],
-#stats-starred-toggle[data-starred="true"],
-#ignored-toggle[data-ignored="true"],
-#btn-ignore[data-ignored="true"],
-#stats-ignored-toggle[data-ignored="true"] {
+#btn-ignore[data-ignored="true"] {
     background-color: #007bff;
     color: white;
     border-color: #007bff;
@@ -412,8 +407,6 @@ h2 {
 }
 
 #stats-direction-toggle,
-#stats-starred-toggle,
-#stats-ignored-toggle,
 #reset-stats-btn {
     padding: 0.5rem 1rem;
     border: 1px solid #ccc;
