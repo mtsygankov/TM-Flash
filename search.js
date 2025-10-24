@@ -102,8 +102,8 @@ const Search = {
           <div class="result-english">${card.english}</div>
         </div>
         <div class="search-result-buttons">
-          <button class="dict-btn bkrs-btn" data-hanzi="${cleanHanzi}">BKRS</button>
-          <button class="dict-btn mdbg-btn" data-hanzi="${cleanHanzi}">MDBG</button>
+          <button class="dict-btn bkrs-btn" data-hanzi="${cleanHanzi}">🔗 BKRS</button>
+          <button class="dict-btn mdbg-btn" data-hanzi="${cleanHanzi}">🔗 MDBG</button>
         </div>
        </div>
      `;

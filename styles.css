@@ -737,13 +737,21 @@ h2 {
 
 .dict-btn {
     padding: 0.2rem 0.4rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #e0e0e0;
-    color: #333;
-    font-size: 0.75rem;
+    border: 2px solid #4dabf700;
+    border-radius: 20px;
+    background-color: transparent;
+    color: #aaa;
+    font-size: 0.6rem;
+    font-weight: bold;
     cursor: pointer;
     width: fit-content;
+    transition: background-color 0.2s;
+}
+
+.dict-btn:hover {
+    background-color: #4dabf7;
+    color: white;
+/*    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);*/
 }
 
 .tag-badge {
@@ -784,6 +792,7 @@ h2 {
 }
 
 .hanzi-char:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
     background-color: #f0f000;
 }
 
