@@ -709,7 +709,8 @@ h2 {
     flex-direction: column;
     gap: 0.2rem;
     margin-right: 1rem;
-    min-width: 60px;
+    align-items: center;
+    width: 60px;
 }
 
 .result-hanzi-pinyin {
@@ -768,19 +769,16 @@ h2 {
     max-width: 100%;
 }
 
-.tag-daily-life { background-color: #add8e6; }
-.tag-descriptions { background-color: #90ee90; }
-.tag-grammar { background-color: #dda0dd; }
-.tag-location { background-color: #ffb366; }
-.tag-objects { background-color: #d2b48c; }
-.tag-people { background-color: #ffb6c1; }
-.tag-numbers { background-color: #ff9999; }
-.tag-time { background-color: #87ceeb; }
-.tag-nature { background-color: #98fb98; }
-.tag-expressions { background-color: #efef89;}
-.tag-default { background-color: #d3d3d3; }
-
-
+.tag-daily-life { background-color: #C5D8E8; }
+.tag-descriptions { background-color: #B8EBE5; }
+.tag-grammar { background-color: #E4CDEE; }
+.tag-location { background-color: #FFD8C3; }
+.tag-objects { background-color: #EDE2D4; }
+.tag-people { background-color: #FFD6DE; }
+.tag-numbers { background-color: #FBD6E3; }
+.tag-time { background-color: #C4DEF8; }
+.tag-nature { background-color: #C8E8C8; }
+.tag-expressions { background-color: #F7E98E; }
 
 .result-hanzi {
     font-size: clamp(1rem, 3vw, 2rem);
