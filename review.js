@@ -135,12 +135,12 @@ const Review = {
 
 
 
-   updateReviewTogglesDisplay() {
-     const counts = SRS.countFilteredCards(
-       App.currentCards,
-       App.currentStats.cards,
-       App.currentDirection
-     );
+  updateReviewTogglesDisplay() {
+    const counts = SRS.countFilteredCards(
+      Filters.getFilteredCards(),
+      App.currentStats.cards,
+      App.currentDirection
+    );
 
     const future = counts.total - counts.overdue;
     const displayText = `${counts.overdue} / ${future} / ${counts.total}`;
@@ -203,25 +203,25 @@ const Review = {
     this.advanceToNextCard();
   },
 
-    advanceToNextCard() {
-      App.flipped = false;
-        App.currentCard = SRS.selectNextCard(
-          App.currentCards,
-          App.currentStats.cards,
-          App.currentDirection
-        );
+  advanceToNextCard() {
+    App.flipped = false;
+      App.currentCard = SRS.selectNextCard(
+        Filters.getFilteredCards(),
+        App.currentStats.cards,
+        App.currentDirection
+      );
         this.updateReviewTogglesDisplay();
         if (App.currentCard) {
           this.renderCard(App.currentCard);
-        } else {
-         this.renderCard(null); // Clear the table
-          const nextReviewInfo = SRS.getNextReviewInfo(App.currentCards, App.currentStats.cards, App.currentDirection);
-         let message;
-         if (nextReviewInfo) {
-                message = `No cards due for review. Next review: (${nextReviewInfo.cardsInWindow} card${nextReviewInfo.cardsInWindow > 1 ? 's' : ''} in ~${nextReviewInfo.timeString}).`;
           } else {
-            message = 'No cards due for review.';
-          }
+          this.renderCard(null); // Clear the table
+           const nextReviewInfo = SRS.getNextReviewInfo(Filters.getFilteredCards(), App.currentStats.cards, App.currentDirection);
+          let message;
+          if (nextReviewInfo) {
+                 message = `No cards due for review with current filters. Next review: (${nextReviewInfo.cardsInWindow} card${nextReviewInfo.cardsInWindow > 1 ? 's' : ''} in ~${nextReviewInfo.timeString}).`;
+           } else {
+             message = 'No cards due for review with current filters.';
+           }
 
 
 

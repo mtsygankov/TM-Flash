@@ -1,6 +1,7 @@
 // TM-Flash Application
 const App = {
   currentCards: null,
+  currentFilteredCards: null,
   currentStats: null,
   currentCard: null,
   flipped: false,

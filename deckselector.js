@@ -7,6 +7,7 @@ const DeckSelector = {
     await this.populateOptions();
     await this.loadSelectedDeck();
     this.bindSelector();
+    Filters.init();
   },
 
   async populateOptions() {
@@ -143,52 +144,59 @@ const DeckSelector = {
       deckStats.errorCount = 0;
       Storage.setDeckStats(deckId, deckStats);
 
-      // Normalize and augment cards
-      const augmentedCards =
-        Normalizer.augmentCardsWithNormalizedPinyin(validCards);
+       // Normalize and augment cards
+       const augmentedCards =
+         Normalizer.augmentCardsWithNormalizedPinyin(validCards);
 
-      // Sync stats with the loaded deck
-      const syncedStats = Stats.sync(deckId, augmentedCards);
+       // Sync stats with the loaded deck
+       const syncedStats = Stats.sync(deckId, augmentedCards);
 
-      // Update storage with selected deck
-      Storage.setSettings({ selected_deck: deckId });
+       // Update storage with selected deck
+       Storage.setSettings({ selected_deck: deckId });
 
-      // Clear saved review state if switching decks
-      if (deckId !== this.currentDeckId) {
-        App.savedReviewCardId = null;
-        App.savedReviewFlipped = false;
-      }
+       // Clear saved review state if switching decks
+       if (deckId !== this.currentDeckId) {
+         App.savedReviewCardId = null;
+         App.savedReviewFlipped = false;
+       }
 
-      // Update current deck tracking
-      this.currentDeckId = deckId;
+       // Update current deck tracking
+       this.currentDeckId = deckId;
 
-        // Set app state
-        App.currentCards = augmentedCards;
-        App.currentStats = syncedStats;
-        App.currentDirection = Storage.getSettings().direction;
-        App.currentDeckId = deckId;
-        App.flipped = false;
-        App.currentCard = SRS.selectNextCard(
-          App.currentCards,
-          App.currentStats.cards,
-          App.currentDirection,
-        );
+         // Set app state
+         App.currentCards = augmentedCards;
+         App.currentFilteredCards = augmentedCards; // Initialize filtered cards
+         App.currentStats = syncedStats;
+         App.currentDirection = Storage.getSettings().direction;
+         App.currentDeckId = deckId;
+         App.flipped = false;
+
+         // Extract and apply filters
+         Filters.extractAvailableFilters(augmentedCards);
+         Filters.applyFilters();
+
+         // Select next card from filtered set
+         App.currentCard = SRS.selectNextCard(
+           Filters.getFilteredCards(),
+           App.currentStats.cards,
+           App.currentDirection,
+         );
         Review.updateReviewTogglesDisplay();
           if (App.currentCard) {
             Review.renderCard(App.currentCard);
-          } else {
-            Review.renderCard(null);
-            let message;
-            if (!App.currentCards || App.currentCards.length === 0) {
-              message = 'No valid cards in this deck.';
-            } else {
-               const nextReviewInfo = SRS.getNextReviewInfo(App.currentCards, App.currentStats.cards, App.currentDirection);
-              if (nextReviewInfo) {
-                message = `No cards due for review. Next review: (${nextReviewInfo.cardsInWindow} card${nextReviewInfo.cardsInWindow > 1 ? 's' : ''} in ~${nextReviewInfo.timeString}).`;
-            } else {
-              message = 'No cards due for review.';
-            }
-            }
+           } else {
+             Review.renderCard(null);
+             let message;
+             if (!App.currentCards || App.currentCards.length === 0) {
+               message = 'No valid cards in this deck.';
+             } else {
+                const nextReviewInfo = SRS.getNextReviewInfo(Filters.getFilteredCards(), App.currentStats.cards, App.currentDirection);
+               if (nextReviewInfo) {
+                 message = `No cards due for review with current filters. Next review: (${nextReviewInfo.cardsInWindow} card${nextReviewInfo.cardsInWindow > 1 ? 's' : ''} in ~${nextReviewInfo.timeString}).`;
+             } else {
+               message = 'No cards due for review with current filters.';
+             }
+             }
             Message.show('card-container', message);
           }
 

@@ -19,6 +19,7 @@
     <script src="review.js"></script>
     <script src="statsview.js"></script>
     <script src="search.js"></script>
+    <script src="filters.js"></script>
     <script src="nav.js"></script>
     <script src="app.js"></script>
 </head>
@@ -28,6 +29,24 @@
             <select id="deck-selector">
                 <option value="">Select Deck</option>
             </select>
+            <div id="filter-controls" style="display: none;">
+                <div class="filter-dropdown">
+                    <button id="tag-filter-btn" class="filter-btn">
+                        Tags <span class="filter-count">(0)</span> ▼
+                    </button>
+                    <div id="tag-filter-menu" class="filter-menu is-hidden">
+                        <!-- Tag checkboxes will be inserted here -->
+                    </div>
+                </div>
+                <div class="filter-dropdown">
+                    <button id="hsk-filter-btn" class="filter-btn">
+                        HSK <span class="filter-count">(0)</span> ▼
+                    </button>
+                    <div id="hsk-filter-menu" class="filter-menu is-hidden">
+                        <!-- HSK checkboxes will be inserted here -->
+                    </div>
+                </div>
+            </div>
             <span id="review-toggles">
                 <button id="direction-toggle">CH→EN</button>
                 <span id="review-toggles-numbers"></span>
