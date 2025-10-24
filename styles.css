@@ -689,6 +689,7 @@ h2 {
     transition: background-color 0.2s;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .search-result:nth-child(even) {
@@ -707,6 +708,21 @@ h2 {
     gap: 0.2rem;
     margin-right: 1rem;
     min-width: 60px;
+}
+
+.result-hanzi-pinyin {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.result-english-column {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: left;
 }
 
 .tag-badge {
@@ -735,12 +751,7 @@ h2 {
 .tag-expressions { background-color: #ffc107; color: #333; }
 .tag-default { background-color: #6c757d; }
 
-.search-result-content {
-    flex: 1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+
 
 .result-hanzi {
     font-size: clamp(1rem, 3vw, 2rem);
@@ -756,6 +767,7 @@ h2 {
 .result-english {
     font-size: clamp(0.9rem, 2.5vw, 1.5rem);
     color: #666;
+    text-align: left;
 }
 
 
@@ -768,18 +780,9 @@ h2 {
     text-align: left;
 }
 
-.result-left {
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-.result-right {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
+
+
 
 @media (min-width: 1200px) {
     .view {

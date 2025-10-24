@@ -71,21 +71,19 @@ const Search = {
           const starred = cardStats.starred || false;
           const ignored = cardStats.ignored || false;
           const tagsHtml = this.renderTags(card.tags || []);
-          return `
+           return `
       <div class="search-result" data-card-id="${card.card_id}">
         ${tagsHtml}
-         <div class="search-result-content">
-           <div class="result-left">
-             <div class="result-hanzi">${card.hanzi}</div>
-             <div class="result-pinyin">${card.pinyin}</div>
-           </div>
-           <div class="result-right">
-             ${card.pos ? `<span class="result-pos">[ ${card.pos} ]</span>` : ''}
-             <div class="result-english">${card.english}</div>
-           </div>
-         </div>
-      </div>
-    `;
+        <div class="result-hanzi-pinyin">
+          <div class="result-hanzi">${card.hanzi}</div>
+          <div class="result-pinyin">${card.pinyin}</div>
+        </div>
+        <div class="result-english-column">
+          ${card.pos ? `<span class="result-pos">[ ${card.pos} ]</span>` : ''}
+          <div class="result-english">${card.english}</div>
+        </div>
+       </div>
+     `;
         },
       )
       .join("");
