@@ -760,7 +760,7 @@ h2 {
     font-weight: 500;
     padding: 0.1rem 0.2rem;
     border-radius: 1.0rem;
-    color: white;
+    color: #333;
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
@@ -768,17 +768,17 @@ h2 {
     max-width: 100%;
 }
 
-.tag-daily-life { background-color: #007bff; }
-.tag-descriptions { background-color: #28a745; }
-.tag-grammar { background-color: #6f42c1; }
-.tag-location { background-color: #fd7e14; }
-.tag-objects { background-color: #795548; }
-.tag-people { background-color: #e83e8c; }
-.tag-numbers { background-color: #dc3545; }
-.tag-time { background-color: #17a2b8; }
-.tag-nature { background-color: #7cbd1e; }
-.tag-expressions { background-color: #ffc107; color: #333; }
-.tag-default { background-color: #6c757d; }
+.tag-daily-life { background-color: #add8e6; }
+.tag-descriptions { background-color: #90ee90; }
+.tag-grammar { background-color: #dda0dd; }
+.tag-location { background-color: #ffb366; }
+.tag-objects { background-color: #d2b48c; }
+.tag-people { background-color: #ffb6c1; }
+.tag-numbers { background-color: #ff9999; }
+.tag-time { background-color: #87ceeb; }
+.tag-nature { background-color: #98fb98; }
+.tag-expressions { background-color: #efef89;}
+.tag-default { background-color: #d3d3d3; }
 
 
 
