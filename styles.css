@@ -687,9 +687,10 @@ h2 {
     border-bottom: 1px solid #ddd;
     cursor: pointer;
     transition: background-color 0.2s;
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 200px 1fr auto;
     align-items: center;
-    justify-content: space-between;
+    gap: 0.5rem;
 }
 
 .search-result:nth-child(even) {
@@ -724,6 +725,25 @@ h2 {
     align-items: center;
     gap: 0.5rem;
     text-align: left;
+}
+
+.search-result-buttons {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.dict-btn {
+    padding: 0.2rem 0.4rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #e0e0e0;
+    color: #333;
+    font-size: 0.75rem;
+    cursor: pointer;
+    width: fit-content;
 }
 
 .tag-badge {

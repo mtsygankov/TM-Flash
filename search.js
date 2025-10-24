@@ -17,16 +17,24 @@ const Search = {
        this.toggleType();
        this.performSearch();
      });
-     document.addEventListener('click', (e) => {
-       if (e.target.classList.contains('hanzi-char')) {
-         const char = e.target.dataset.char;
-         this.currentType = "pinyin";
-         this.updateToggleButton();
-         document.getElementById("search-query").value = char;
-         this.performSearch();
-         document.getElementById("search-query").focus();
-       }
-     });
+      document.addEventListener('click', (e) => {
+        if (e.target.classList.contains('hanzi-char')) {
+          const char = e.target.dataset.char;
+          this.currentType = "pinyin";
+          this.updateToggleButton();
+          document.getElementById("search-query").value = char;
+          this.performSearch();
+          document.getElementById("search-query").focus();
+        }
+        if (e.target.classList.contains('bkrs-btn')) {
+          const hanzi = e.target.dataset.hanzi;
+          window.open(`https://bkrs.info/slovo.php?ch=${hanzi}`, '_blank');
+        }
+        if (e.target.classList.contains('mdbg-btn')) {
+          const hanzi = e.target.dataset.hanzi;
+          window.open(`https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb=${hanzi}`, '_blank');
+        }
+      });
    },
 
   toggleType() {
@@ -81,7 +89,8 @@ const Search = {
           const starred = cardStats.starred || false;
           const ignored = cardStats.ignored || false;
           const tagsHtml = this.renderTags(card.tags || []);
-           return `
+            const cleanHanzi = card.hanzi.replace(/\s/g, '');
+            return `
       <div class="search-result" data-card-id="${card.card_id}">
         ${tagsHtml}
          <div class="result-hanzi-pinyin">
@@ -91,6 +100,10 @@ const Search = {
         <div class="result-english-column">
           ${card.pos ? `<span class="result-pos">[ ${card.pos} ]</span>` : ''}
           <div class="result-english">${card.english}</div>
+        </div>
+        <div class="search-result-buttons">
+          <button class="dict-btn bkrs-btn" data-hanzi="${cleanHanzi}">BKRS</button>
+          <button class="dict-btn mdbg-btn" data-hanzi="${cleanHanzi}">MDBG</button>
         </div>
        </div>
      `;
