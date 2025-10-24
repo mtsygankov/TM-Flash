@@ -7,17 +7,27 @@ const Search = {
     this.bindEvents();
   },
 
-  bindEvents() {
-    const queryInput = document.getElementById("search-query");
-    const typeToggle = document.getElementById("search-type-toggle");
-    queryInput.addEventListener("input", () => {
-      this.performSearch();
-    });
-    typeToggle.addEventListener("click", () => {
-      this.toggleType();
-      this.performSearch();
-    });
-  },
+   bindEvents() {
+     const queryInput = document.getElementById("search-query");
+     const typeToggle = document.getElementById("search-type-toggle");
+     queryInput.addEventListener("input", () => {
+       this.performSearch();
+     });
+     typeToggle.addEventListener("click", () => {
+       this.toggleType();
+       this.performSearch();
+     });
+     document.addEventListener('click', (e) => {
+       if (e.target.classList.contains('hanzi-char')) {
+         const char = e.target.dataset.char;
+         this.currentType = "pinyin";
+         this.updateToggleButton();
+         document.getElementById("search-query").value = char;
+         this.performSearch();
+         document.getElementById("search-query").focus();
+       }
+     });
+   },
 
   toggleType() {
     this.currentType = this.currentType === "pinyin" ? "english" : "pinyin";
@@ -74,10 +84,10 @@ const Search = {
            return `
       <div class="search-result" data-card-id="${card.card_id}">
         ${tagsHtml}
-        <div class="result-hanzi-pinyin">
-          <div class="result-hanzi">${card.hanzi}</div>
-          <div class="result-pinyin">${card.pinyin}</div>
-        </div>
+         <div class="result-hanzi-pinyin">
+           <div class="result-hanzi">${card.hanzi.replace(/(\S)/g, '<span class="hanzi-char" data-char="$1">$1</span>')}</div>
+           <div class="result-pinyin">${card.pinyin}</div>
+         </div>
         <div class="result-english-column">
           ${card.pos ? `<span class="result-pos">[ ${card.pos} ]</span>` : ''}
           <div class="result-english">${card.english}</div>

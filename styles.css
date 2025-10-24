@@ -758,6 +758,14 @@ h2 {
     margin-bottom: 0.1rem;
 }
 
+.hanzi-char {
+    cursor: pointer;
+}
+
+.hanzi-char:hover {
+    background-color: #f0f0f0;
+}
+
 .result-pinyin {
     font-size: clamp(0.8rem, 2vw, 1.2rem);
     color: #888;
