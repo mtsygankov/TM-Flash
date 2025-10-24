@@ -285,10 +285,6 @@ h2 {
     visibility: hidden;
 }
 
-#card-english:not(.flipped).direction-en-ch {
-    visibility: hidden;
-}
-
 /* Card buttons */
 #card-buttons {
     display: none;
