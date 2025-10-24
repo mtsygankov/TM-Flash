@@ -188,19 +188,6 @@ const DeckSelector = {
             } else {
               message = 'No cards due for review.';
             }
-
-            // Add info about starred/unstarred cards
-            const starredCount = SRS.countDueCards(App.currentCards, App.currentStats.cards, App.currentDirection, true, null);
-            const unstarredCount = SRS.countDueCards(App.currentCards, App.currentStats.cards, App.currentDirection, false, null);
-            if (App.starredToggle) {
-              if (unstarredCount > 0) {
-                message += ` There are ${unstarredCount} unstarred cards due.`;
-              }
-            } else {
-              if (starredCount > 0) {
-                message += ` There are ${starredCount} starred cards due.`;
-              }
-            }
             }
             Message.show('card-container', message);
           }
