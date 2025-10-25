@@ -109,7 +109,6 @@ const Filters = {
       const colorClass = Search.getTagColorClass(tag);
       return `
         <div class="filter-option ${isSelected ? 'selected' : ''}" data-type="tag" data-value="${tag}">
-          <input type="checkbox" class="filter-checkbox" ${isSelected ? 'checked' : ''}>
           <span class="tag-badge ${colorClass}">${tag}</span>
         </div>
       `;
@@ -127,7 +126,6 @@ const Filters = {
       const isSelected = this.selectedHskLevels.has(level);
       return `
         <div class="filter-option ${isSelected ? 'selected' : ''}" data-type="hsk" data-value="${level}">
-          <input type="checkbox" class="filter-checkbox" ${isSelected ? 'checked' : ''}>
           <span class="hsk-badge">${level}</span>
         </div>
       `;
@@ -143,26 +141,21 @@ const Filters = {
       option.addEventListener('click', (e) => {
         e.stopPropagation();
         const value = option.dataset.value;
-        const checkbox = option.querySelector('.filter-checkbox');
 
         if (type === 'tag') {
           if (this.selectedTags.has(value)) {
             this.selectedTags.delete(value);
-            checkbox.checked = false;
             option.classList.remove('selected');
           } else {
             this.selectedTags.add(value);
-            checkbox.checked = true;
             option.classList.add('selected');
           }
         } else if (type === 'hsk') {
           if (this.selectedHskLevels.has(value)) {
             this.selectedHskLevels.delete(value);
-            checkbox.checked = false;
             option.classList.remove('selected');
           } else {
             this.selectedHskLevels.add(value);
-            checkbox.checked = true;
             option.classList.add('selected');
           }
         }
