@@ -138,6 +138,9 @@ const Filters = {
     menu.innerHTML = menuContent;
     this.bindFilterOptionEvents('tag');
     this.bindFilterOptionEvents('hsk');
+
+    // Equalize column widths based on content
+    this.equalizeColumnWidths();
   },
 
   bindFilterOptionEvents(type) {
@@ -257,6 +260,48 @@ const Filters = {
     };
 
     Storage.setSettings(settings);
+  },
+
+  equalizeColumnWidths() {
+    const menu = document.getElementById('filters-menu');
+    if (!menu) return;
+
+    const columns = menu.querySelectorAll('.filter-column');
+    if (columns.length !== 2) return;
+
+    // Use requestAnimationFrame to ensure DOM is fully rendered
+    requestAnimationFrame(() => {
+      // Reset any previously set widths
+      columns.forEach(column => {
+        column.style.width = '';
+      });
+
+      // Force reflow to ensure styles are applied
+      menu.offsetWidth;
+
+      // Measure badge content widths instead of container widths
+      let maxBadgeWidth = 0;
+      columns.forEach(column => {
+        const badgeElements = column.querySelectorAll('.tag-badge, .hsk-badge');
+        badgeElements.forEach(badge => {
+          const badgeWidth = badge.scrollWidth;
+          maxBadgeWidth = Math.max(maxBadgeWidth, badgeWidth);
+        });
+      });
+
+      // Add padding for the filter-option container (0.3rem * 2 * 16px = 9.6px)
+      // Plus gap (0.5rem * 16px = 8px) and some buffer
+      const containerPadding = 24; // Total buffer for padding, gaps, and safety
+      let maxWidth = maxBadgeWidth + containerPadding;
+
+      // Ensure minimum width for usability
+      maxWidth = Math.max(maxWidth, 100);
+
+      // Set uniform width to both columns
+      columns.forEach(column => {
+        column.style.width = maxWidth + 'px';
+      });
+    });
   },
 
   // Utility method to get filtered cards for SRS functions
