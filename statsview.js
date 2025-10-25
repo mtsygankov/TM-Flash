@@ -148,17 +148,13 @@ const StatsView = {
           <div class="metric-title">Overall Accuracy</div>
           <div class="metric-value large">${this.formatPct(overallAccuracy)}</div>
         </div>
-        <div class="metric-card"  align="center">
-          <div class="metric-title">New cards / Errors</div>
-          <div class="metric-value large">${metrics.newCount} / ${metrics.deckErrors}</div>
-        </div>
         <div class="metric-card" align="center">
           <div class="metric-title">Max Streaks</div>
           <div class="metric-value large"><span style="color: green;">${maxCorrectStreak}</span> <span style="color: black;">/</span> <span style="color: red;">${maxIncorrectStreak}</span></div>
         </div>
-        <div class="metric-card">
+        <div class="metric-card" align="center">
           <div class="metric-title">Avg. Correct Streak</div>
-          <div class="metric-value">${avgStreak}</div>
+          <div class="metric-value large"><span style="color: green;">${avgStreak}</span></div>
         </div>
 
       </div>
