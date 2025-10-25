@@ -9,6 +9,17 @@ const SRS_MAX_DAYS = 14;
 
 const DEFAULT_SELECTED_DECK = "deck_a";
 
+// Direction constants
+const DIRECTION_KEYS = {
+  CH_TO_EN: "CH->EN",
+  EN_TO_CH: "EN->CH",
+};
+
+const DIRECTION_DISPLAY = {
+  [DIRECTION_KEYS.CH_TO_EN]: "CH⇆EN",
+  [DIRECTION_KEYS.EN_TO_CH]: "EN⇆CH",
+};
+
 // Deck registry
 const DECKS = {
   deck_a: {

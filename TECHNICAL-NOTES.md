@@ -77,7 +77,7 @@ All application data is stored in browser localStorage under the key `tmFlash`:
 {
   "schema_version": 1,
   "settings": {
-    "direction": "CH->EN",
+    "direction": "DIRECTION_KEYS.CH_TO_EN",
     "selected_deck": "deck_a",
     "theme": "light"
   },
@@ -86,16 +86,16 @@ All application data is stored in browser localStorage under the key `tmFlash`:
       "cards": {
         "card_id_001": {
           "directions": {
-            "CH->EN": {
-              "correct": 5,
-              "incorrect": 1,
-              "last_reviewed": 1694726400000
-            },
-            "EN->CH": {
-              "correct": 3,
-              "incorrect": 2,
-              "last_reviewed": 1694726400000
-            }
+             [DIRECTION_KEYS.CH_TO_EN]: {
+               "correct": 5,
+               "incorrect": 1,
+               "last_reviewed": 1694726400000
+             },
+             [DIRECTION_KEYS.EN_TO_CH]: {
+               "correct": 3,
+               "incorrect": 2,
+               "last_reviewed": 1694726400000
+             }
           }
         }
       },
@@ -129,7 +129,7 @@ All application data is stored in browser localStorage under the key `tmFlash`:
 ### Data Types
 
 #### Settings
-- `direction`: String, values "CH->EN" or "EN->CH"
+- `direction`: String, values DIRECTION_KEYS.CH_TO_EN or DIRECTION_KEYS.EN_TO_CH
 - `selected_deck`: String, deck identifier ("deck_a", "deck_b", etc.)
 - `theme`: String, currently only "light" supported
 
@@ -641,7 +641,7 @@ DeckLoader.fetch('deck_a')
 // Debug statistics
 const stats = Stats.getCardStats('deck_a', 'card_001');
 console.log('Card stats:', stats);
-console.log('Direction stats:', stats.directions['CH->EN']);
+console.log('Direction stats:', stats.directions[DIRECTION_KEYS.CH_TO_EN]);
 ```
 
 #### Storage Issues

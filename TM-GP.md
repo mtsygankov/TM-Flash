@@ -9,7 +9,7 @@ Greenfield specification for TM-Flash: a lightweight, dependency-free web app fo
 - Client-side only (HTML/CSS/Vanilla JS), static hosting ready. Development server runs on http://localhost:8000.
 - Mobile-first UI; responsive to desktop. 
 - Three views: Review, Statistics, Real-time Search.
-- Four selectable decks via deck selector; per-deck stats are isolated per direction (CH->EN and EN->CH).
+- Four selectable decks via deck selector; per-deck stats are isolated per direction (CH⇆EN and EN⇆CH; internal keys: CH->EN and EN->CH).
 - Future: virtual “Hardest” deck (composed from the 4 decks) — design included below but not required at launch.
 
 ### 2) File Structure and Deck Registry
@@ -83,7 +83,7 @@ Validation behavior:
 {
   "schema_version": 1,
   "settings": {
-    "direction": "CH->EN",     
+    "direction": "DIRECTION_KEYS.CH_TO_EN",     
     "selected_deck": "deck_a",
     "theme": "light"
   },
@@ -92,8 +92,8 @@ Validation behavior:
        "cards": {
          "uniq_id_001": {
            "directions": {
-             "CH->EN": { "correct": 5, "incorrect": 1, "last_reviewed": 1694726400000 },
-             "EN->CH": { "correct": 3, "incorrect": 2, "last_reviewed": 1694726400000 }
+             [DIRECTION_KEYS.CH_TO_EN]: { "correct": 5, "incorrect": 1, "last_reviewed": 1694726400000 },
+             [DIRECTION_KEYS.EN_TO_CH]: { "correct": 3, "incorrect": 2, "last_reviewed": 1694726400000 }
            }
          }
        },
@@ -128,7 +128,7 @@ On `DOMContentLoaded`:
 - `pinyin_normalized` field per card (Unicode NFD, remove diacritics, lowercase).
 
 6. Sync stats for the active deck only:
-- Add missing card entries with directions: `{"directions": {"CH->EN": {correct:0, incorrect:0, last_reviewed:null}, "EN->CH": {correct:0, incorrect:0, last_reviewed:null}}}`.
+- Add missing card entries with directions: `{"directions": {[DIRECTION_KEYS.CH_TO_EN]: {correct:0, incorrect:0, last_reviewed:null}, [DIRECTION_KEYS.EN_TO_CH]: {correct:0, incorrect:0, last_reviewed:null}}}`.
 - Remove stats for missing `card_id`s.
 
 7. Render Review view as default (unflipped).
@@ -185,8 +185,8 @@ Select the card with the maximum score over the active deck.
     3. English words (one cell per token)
     4. English translation (one cell spanning all columns)
 - Direction toggle persists in `settings.direction`:
-    - CH->EN: show 1–2 initially; hide 3–4.
-    - EN->CH: show 3–4 initially; hide 1–2.
+    - CH⇆EN: show 1–2 initially; hide 3–4.
+    - EN⇆CH: show 3–4 initially; hide 1–2.
 - Flip: Click/tap or Space. Flipped shows all rows. Use CSS `visibility` on `<tr>` to avoid layout shift.
 - Mark answer:
     - Correct: green button "Correct", ArrowRight, swipe right.

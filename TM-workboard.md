@@ -9,7 +9,7 @@ Pinned Invariants (keep in context)
 - Files: index.html, styles.css, app.js, decks/deck_a.json, deck_b.json, deck_c.json, deck_d.json.
 - Storage key: tmFlash; schema_version: 1.
 - Card fields: card_id, hanzi, pinyin, en_words, english.
-- Direction settings: "CH->EN" | "EN->CH" (global).
+- Direction settings: "CH⇆EN" | "EN⇆CH" (global; internal keys: "CH->EN" | "EN->CH").
 - SRS: weights NEW=5.0, ERROR=3.0, DAYS=0.25; SRS_MAX_DAYS=14.
 - Four decks; per-deck stats isolated per direction (CH->EN and EN->CH).
 
@@ -56,7 +56,7 @@ Ticket W-010 — LocalStorage Schema Init [DONE]
 - Description: Implement storage module with schema_version=1 and default settings.
 - Deliverables:
     - Storage object with: loadState(), saveState(), getSettings(), setSettings(), getDeckStats(deckId), setDeckStats(deckId, statsObj).
-      - Default state: { schema_version:1, settings:{ direction:"CH->EN", selected_deck: DEFAULT_SELECTED_DECK, theme:"light" }, decks:{ deck_a:{cards:{}}, deck_b:{cards:{}}, deck_c:{cards:{}}, deck_d:{cards:{}} } } (cards entries will have directions: { "CH->EN": {correct:0, incorrect:0, last_reviewed:null}, "EN->CH": {...} }).
+      - Default state: { schema_version:1, settings:{ direction:DIRECTION_KEYS.CH_TO_EN, selected_deck: DEFAULT_SELECTED_DECK, theme:"light" }, decks:{ deck_a:{cards:{}}, deck_b:{cards:{}}, deck_c:{cards:{}}, deck_d:{cards:{}} } } (cards entries will have directions: { [DIRECTION_KEYS.CH_TO_EN]: {correct:0, incorrect:0, last_reviewed:null}, [DIRECTION_KEYS.EN_TO_CH]: {...} }).
 - Acceptance Criteria:
     - On first run, tmFlash key is created matching the schema.
     - Subsequent runs read and preserve values.
@@ -107,7 +107,7 @@ Ticket W-022 — Pinyin Normalization Cache [DONE]
 Ticket W-023 — Stats Sync (Per-Deck) [DONE]
 - Description: Align storage stats with the validated card set for the active deck, per direction.
 - Deliverables:
-    - Stats.sync(deckId, cards) adds missing entries with directions { "CH->EN": {correct:0, incorrect:0, last_reviewed:null}, "EN->CH": {...} } and removes orphaned ones.
+    - Stats.sync(deckId, cards) adds missing entries with directions { [DIRECTION_KEYS.CH_TO_EN]: {correct:0, incorrect:0, last_reviewed:null}, [DIRECTION_KEYS.EN_TO_CH]: {...} } and removes orphaned ones.
 - Acceptance Criteria:
     - After sync, stats map size equals valid card count; no stale IDs.
 - Dependencies: W-021.
@@ -164,7 +164,7 @@ Ticket W-051 — Direction & Flip State [DONE]
 - Deliverables:
     - applyFlipState(flipped), applyDirection(direction).
 - Acceptance Criteria:
-    - CH->EN shows rows 1–2 unflipped; EN->CH shows rows 3–4; flipped shows all.
+    - CH⇆EN shows rows 1–2 unflipped; EN⇆CH shows rows 3–4; flipped shows all.
 - Dependencies: W-050, W-011.
 
 Ticket W-052 — Answer Capture & Advance [DONE]
@@ -189,7 +189,7 @@ Ticket W-060 — Aggregations & Metrics [DONE]
 - Dependencies: W-023.
 
 Ticket W-063 — Direction Selector in Stats View [DONE]
-- Description: Add direction toggle in stats view to switch between CH->EN and EN->CH stats display.
+- Description: Add direction toggle in stats view to switch between CH⇆EN and EN⇆CH stats display.
 - Deliverables:
     - UI toggle in #view-stats; onChange rerenders metrics/histogram/top lists for selected direction.
 - Acceptance Criteria:

@@ -118,7 +118,7 @@ Track your learning progress with detailed statistics.
 
 #### Direction-Specific Stats
 
-Statistics are tracked separately for each direction (CH→EN and EN→CH). Use the direction toggle in the stats view to switch between them.
+Statistics are tracked separately for each direction (CH⇆EN and EN⇆CH). Use the direction toggle in the stats view to switch between them.
 
 #### Resetting Stats
 

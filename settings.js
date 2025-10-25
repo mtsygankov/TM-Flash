@@ -9,14 +9,14 @@ const Settings = {
     this.applyDirection(settings.direction);
   },
 
-    applyDirection(direction) {
-      const button = document.getElementById("direction-toggle");
-      if (button) {
-        button.textContent = direction;
-        button.dataset.direction = direction;
-      } else {
-        console.warn("❌ Direction toggle button not found");
-      }
+     applyDirection(direction) {
+       const button = document.getElementById("direction-toggle");
+       if (button) {
+         button.textContent = DIRECTION_DISPLAY[direction];
+         button.dataset.direction = direction;
+       } else {
+         console.warn("❌ Direction toggle button not found");
+       }
 
       App.currentDirection = direction;
       App.flipped = false;
@@ -57,12 +57,12 @@ const Settings = {
        }
    },
 
-  toggleDirection() {
-    const currentDirection = Storage.getSettings().direction;
-    const newDirection = currentDirection === "CH->EN" ? "EN->CH" : "CH->EN";
-    Storage.setSettings({ direction: newDirection });
-    this.applyDirection(newDirection);
-  },
+   toggleDirection() {
+     const currentDirection = Storage.getSettings().direction;
+     const newDirection = currentDirection === DIRECTION_KEYS.CH_TO_EN ? DIRECTION_KEYS.EN_TO_CH : DIRECTION_KEYS.CH_TO_EN;
+     Storage.setSettings({ direction: newDirection });
+     this.applyDirection(newDirection);
+   },
 
   bindDirectionToggle() {
     const button = document.getElementById("direction-toggle");

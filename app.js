@@ -5,7 +5,7 @@ const App = {
   currentStats: null,
   currentCard: null,
   flipped: false,
-  currentDirection: "CH->EN",
+   currentDirection: DIRECTION_KEYS.CH_TO_EN,
   currentDeckId: null,
   savedReviewCardId: null,
   savedReviewFlipped: false,

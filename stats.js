@@ -8,28 +8,28 @@ const Stats = {
       // Add missing entries for valid cards
      cards.forEach((card) => {
        if (!deckStats.cards[card.card_id]) {
-         syncedCards[card.card_id] = {
-           "CH->EN": {
-             total_correct: 0,
-             total_incorrect: 0,
-             last_correct_at: null,
-             last_incorrect_at: null,
-             correct_streak_len: 0,
-             incorrect_streak_len: 0,
-             correct_streak_started_at: null,
-             incorrect_streak_started_at: null
-           },
-           "EN->CH": {
-             total_correct: 0,
-             total_incorrect: 0,
-             last_correct_at: null,
-             last_incorrect_at: null,
-             correct_streak_len: 0,
-             incorrect_streak_len: 0,
-             correct_streak_started_at: null,
-             incorrect_streak_started_at: null
-           },
-         };
+          syncedCards[card.card_id] = {
+            [DIRECTION_KEYS.CH_TO_EN]: {
+              total_correct: 0,
+              total_incorrect: 0,
+              last_correct_at: null,
+              last_incorrect_at: null,
+              correct_streak_len: 0,
+              incorrect_streak_len: 0,
+              correct_streak_started_at: null,
+              incorrect_streak_started_at: null
+            },
+            [DIRECTION_KEYS.EN_TO_CH]: {
+              total_correct: 0,
+              total_incorrect: 0,
+              last_correct_at: null,
+              last_incorrect_at: null,
+              correct_streak_len: 0,
+              incorrect_streak_len: 0,
+              correct_streak_started_at: null,
+              incorrect_streak_started_at: null
+            },
+          };
        } else {
          syncedCards[card.card_id] = deckStats.cards[card.card_id];
        }
@@ -69,28 +69,28 @@ const Stats = {
 
    updateCardStats(deckId, cardId, direction, isCorrect) {
      const deckStats = Storage.getDeckStats(deckId);
-     const cardStats = deckStats.cards[cardId] || {
-       "CH->EN": {
-         total_correct: 0,
-         total_incorrect: 0,
-         last_correct_at: null,
-         last_incorrect_at: null,
-         correct_streak_len: 0,
-         incorrect_streak_len: 0,
-         correct_streak_started_at: null,
-         incorrect_streak_started_at: null
-       },
-       "EN->CH": {
-         total_correct: 0,
-         total_incorrect: 0,
-         last_correct_at: null,
-         last_incorrect_at: null,
-         correct_streak_len: 0,
-         incorrect_streak_len: 0,
-         correct_streak_started_at: null,
-         incorrect_streak_started_at: null
-       },
-     };
+      const cardStats = deckStats.cards[cardId] || {
+        [DIRECTION_KEYS.CH_TO_EN]: {
+          total_correct: 0,
+          total_incorrect: 0,
+          last_correct_at: null,
+          last_incorrect_at: null,
+          correct_streak_len: 0,
+          incorrect_streak_len: 0,
+          correct_streak_started_at: null,
+          incorrect_streak_started_at: null
+        },
+        [DIRECTION_KEYS.EN_TO_CH]: {
+          total_correct: 0,
+          total_incorrect: 0,
+          last_correct_at: null,
+          last_incorrect_at: null,
+          correct_streak_len: 0,
+          incorrect_streak_len: 0,
+          correct_streak_started_at: null,
+          incorrect_streak_started_at: null
+        },
+      };
 
     if (!cardStats[direction]) {
       cardStats[direction] = {
