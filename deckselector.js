@@ -160,18 +160,22 @@ const DeckSelector = {
          App.savedReviewFlipped = false;
        }
 
-       // Update current deck tracking
-       this.currentDeckId = deckId;
+        // Update current deck tracking
+        this.currentDeckId = deckId;
 
-         // Set app state
-         App.currentCards = augmentedCards;
+          // Set app state
+          App.currentCards = augmentedCards;
          App.currentFilteredCards = augmentedCards; // Initialize filtered cards
          App.currentStats = syncedStats;
          App.currentDirection = Storage.getSettings().direction;
-         App.currentDeckId = deckId;
-         App.flipped = false;
+          App.currentDeckId = deckId;
+          App.flipped = false;
 
-         // Extract and apply filters
+          // Load saved filters for this deck
+          Filters.loadSavedFilters();
+          console.log('DeckSelector.loadDeck: after loadSavedFilters, selectedTags:', Array.from(Filters.selectedTags), 'selectedHskLevels:', Array.from(Filters.selectedHskLevels));
+
+          // Extract and apply filters
          Filters.extractAvailableFilters(augmentedCards);
          Filters.applyFilters();
 

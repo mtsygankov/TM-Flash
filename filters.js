@@ -10,7 +10,6 @@ const Filters = {
     if (this.isInitialized) return;
     this.isInitialized = true;
     this.bindEvents();
-    this.loadSavedFilters();
   },
 
   bindEvents() {
@@ -142,6 +141,7 @@ const Filters = {
     const options = document.querySelectorAll(`[data-type="${type}"]`);
     options.forEach(option => {
       option.addEventListener('click', (e) => {
+        e.stopPropagation();
         const value = option.dataset.value;
         const checkbox = option.querySelector('.filter-checkbox');
 
