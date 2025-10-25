@@ -201,6 +201,11 @@ const Filters = {
     // Update review display
     Review.updateReviewTogglesDisplay();
 
+    // Rerender stats if in stats view
+    if (Nav.currentView === 'stats') {
+      StatsView.render();
+    }
+
     // If no card is currently selected or it's not in filtered set, select next
     if (!App.currentCard || !filteredCards.find(card => card.card_id === App.currentCard.card_id)) {
       App.currentCard = SRS.selectNextCard(

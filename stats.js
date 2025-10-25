@@ -147,17 +147,18 @@ const Stats = {
     App.currentStats = deckStats;
   },
 
-  computeMetrics(deckId, direction) {
-    const deckStats = Storage.getDeckStats(deckId);
-    let totalCards = 0;
-    let reviewedCount = 0;
-    Object.values(deckStats.cards).forEach((cardStats) => {
-      totalCards++;
-      const dirStat = cardStats[direction];
-      if (dirStat && dirStat.total_correct + dirStat.total_incorrect > 0) reviewedCount++;
-    });
-    const newCount = totalCards - reviewedCount;
-    const deckErrors = deckStats.errorCount || 0;
-    return { totalCards, reviewedCount, newCount, deckErrors };
-  },
+   computeMetrics(deckId, direction, cards = null) {
+     const deckStats = Storage.getDeckStats(deckId);
+     let totalCards = 0;
+     let reviewedCount = 0;
+     const cardList = cards || Object.keys(deckStats.cards).map(id => ({ card_id: id }));
+     cardList.forEach((card) => {
+       totalCards++;
+       const dirStat = deckStats.cards[card.card_id]?.[direction];
+       if (dirStat && dirStat.total_correct + dirStat.total_incorrect > 0) reviewedCount++;
+     });
+     const newCount = totalCards - reviewedCount;
+     const deckErrors = deckStats.errorCount || 0;
+     return { totalCards, reviewedCount, newCount, deckErrors };
+   },
 };

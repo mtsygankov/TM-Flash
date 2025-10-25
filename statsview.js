@@ -1,25 +1,11 @@
 // StatsView module
 const StatsView = {
-  currentDirection: "CH->EN",
-
 
   init() {
     this.bindEvents();
-    this.currentDirection = Storage.getSettings().direction;
   },
 
   bindEvents() {
-    const toggle = document.getElementById("stats-direction-toggle");
-    if (toggle) {
-      toggle.addEventListener("click", () => {
-        this.currentDirection =
-          this.currentDirection === "CH->EN" ? "EN->CH" : "CH->EN";
-        Storage.setSettings({direction: this.currentDirection});
-        App.currentDirection = this.currentDirection;
-        this.render();
-      });
-    }
-
     const resetBtn = document.getElementById("reset-stats-btn");
     if (resetBtn) {
       resetBtn.addEventListener("click", () => {
@@ -33,25 +19,20 @@ const StatsView = {
   },
 
   render() {
-    const toggle = document.getElementById("stats-direction-toggle");
-    if (toggle) {
-      toggle.textContent = this.currentDirection;
-    }
-
     const content = document.getElementById("stats-content");
     if (!content) return;
     if (!App.currentDeckId) {
       content.innerHTML = "<p>No deck loaded.</p>";
       return;
     }
-    const metrics = Stats.computeMetrics(App.currentDeckId, this.currentDirection, false, false);
+    const metrics = Stats.computeMetrics(App.currentDeckId, App.currentDirection, App.currentFilteredCards || App.currentCards);
 
      // Compute histogram and top lists
-     const deckStats = Storage.getDeckStats(App.currentDeckId) || { cards: {} };
-      const cardMap = new Map((App.currentCards || []).map((card) => [card.card_id.toString(), card]));
+      const deckStats = Storage.getDeckStats(App.currentDeckId) || { cards: {} };
+       const cardMap = new Map(((App.currentFilteredCards || App.currentCards) || []).map((card) => [card.card_id.toString(), card]));
      const cardData = [];
-      Object.entries(deckStats.cards || {}).forEach(([cardId, cardStats]) => {
-        const dirStat = cardStats[this.currentDirection];
+       Object.entries(deckStats.cards || {}).forEach(([cardId, cardStats]) => {
+         const dirStat = cardStats[App.currentDirection];
         if (!dirStat) return;
         const total = (dirStat.total_correct || 0) + (dirStat.total_incorrect || 0);
         if (total === 0) return;
@@ -90,10 +71,10 @@ const StatsView = {
      const worst = sortedByRatioAsc.slice(0, 10);
 
        // Compute due timeline with buckets: Overdue, <=30m, <=1h, <=4h, <=12h, <=24h, <=7d, <=30d, >30d
-       const dueBuckets = [0, 0, 0, 0, 0, 0, 0, 0, 0];
-       (App.currentCards || []).forEach((card) => {
+        const dueBuckets = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+        ((App.currentFilteredCards || App.currentCards) || []).forEach((card) => {
          const cardStats = deckStats.cards?.[card.card_id];
-         const stats = deckStats.cards?.[card.card_id]?.[this.currentDirection];
+          const stats = deckStats.cards?.[card.card_id]?.[App.currentDirection];
         if (!stats) {
           // new card, due now -> count in first bucket (<=30m)
           dueBuckets[0]++;
@@ -130,8 +111,8 @@ const StatsView = {
 
      // Streak histogram
      const streakBuckets = [0, 0, 0, 0, 0]; // 0,1,2-3,4-5,6+
-     cardData.forEach((data) => {
-       const stats = deckStats.cards[data.cardId][this.currentDirection];
+      cardData.forEach((data) => {
+        const stats = deckStats.cards[data.cardId][App.currentDirection];
        const streak = stats.correct_streak_len;
        if (streak === 0) streakBuckets[0]++;
        else if (streak === 1) streakBuckets[1]++;
@@ -143,8 +124,8 @@ const StatsView = {
 
      // Streak records
      let maxCorrectStreak = 0, maxIncorrectStreak = 0, totalStreak = 0, count = 0;
-     cardData.forEach((data) => {
-      const stats = deckStats.cards?.[data.cardId]?.[this.currentDirection] || {};
+      cardData.forEach((data) => {
+       const stats = deckStats.cards?.[data.cardId]?.[App.currentDirection] || {};
       const cs = stats.correct_streak_len || 0;
       const is = stats.incorrect_streak_len || 0;
       maxCorrectStreak = Math.max(maxCorrectStreak, cs);
@@ -225,13 +206,13 @@ const StatsView = {
     if (!App.currentDeckId) return;
     if (
       !confirm(
-        `Reset all stats for ${DECKS[App.currentDeckId].label} in ${this.currentDirection} direction? This cannot be undone.`,
+        `Reset all stats for ${DECKS[App.currentDeckId].label} in ${App.currentDirection} direction? This cannot be undone.`,
       )
     )
       return;
     const deckStats = Storage.getDeckStats(App.currentDeckId);
     Object.values(deckStats.cards).forEach((cardStats) => {
-      if (cardStats[this.currentDirection]) {
+      if (cardStats[App.currentDirection]) {
         cardStats[this.currentDirection] = {
           total_correct: 0,
           total_incorrect: 0,

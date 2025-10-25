@@ -62,7 +62,7 @@ const Nav = {
 
     // Toggle visibility of review toggles
     const reviewToggles = document.getElementById('review-toggles');
-    if (viewId === 'review') {
+    if (viewId === 'review' || viewId === 'stats') {
       reviewToggles.classList.remove('is-hidden');
     } else {
       reviewToggles.classList.add('is-hidden');
