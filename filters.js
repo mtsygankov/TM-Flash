@@ -13,23 +13,13 @@ const Filters = {
   },
 
   bindEvents() {
-    // Tag filter dropdown toggle
-    const tagBtn = document.getElementById('tag-filter-btn');
-    const tagMenu = document.getElementById('tag-filter-menu');
-    if (tagBtn && tagMenu) {
-      tagBtn.addEventListener('click', (e) => {
+    // Combined filters dropdown toggle
+    const filtersBtn = document.getElementById('filters-btn');
+    const filtersMenu = document.getElementById('filters-menu');
+    if (filtersBtn && filtersMenu) {
+      filtersBtn.addEventListener('click', (e) => {
         e.stopPropagation();
-        this.toggleDropdown('tag');
-      });
-    }
-
-    // HSK filter dropdown toggle
-    const hskBtn = document.getElementById('hsk-filter-btn');
-    const hskMenu = document.getElementById('hsk-filter-menu');
-    if (hskBtn && hskMenu) {
-      hskBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        this.toggleDropdown('hsk');
+        this.toggleDropdown('filters');
       });
     }
 
@@ -47,7 +37,7 @@ const Filters = {
   },
 
   toggleDropdown(type) {
-    const menu = document.getElementById(`${type}-filter-menu`);
+    const menu = document.getElementById(`${type}-menu`);
     const isVisible = !menu.classList.contains('is-hidden');
 
     this.closeAllDropdowns();
@@ -94,44 +84,59 @@ const Filters = {
     }
 
     if (hasFilters) {
-      this.renderTagFilterMenu();
-      this.renderHskFilterMenu();
-      this.updateFilterButtons();
+      this.renderCombinedFilterMenu();
     }
   },
 
-  renderTagFilterMenu() {
-    const menu = document.getElementById('tag-filter-menu');
-    if (!menu || this.availableTags.size === 0) return;
+  renderCombinedFilterMenu() {
+    const menu = document.getElementById('filters-menu');
+    if (!menu) return;
 
-    const options = Array.from(this.availableTags).map(tag => {
-      const isSelected = this.selectedTags.has(tag);
-      const colorClass = Search.getTagColorClass(tag);
-      return `
-        <div class="filter-option ${isSelected ? 'selected' : ''}" data-type="tag" data-value="${tag}">
-          <span class="tag-badge ${colorClass}">${tag}</span>
-        </div>
-      `;
-    }).join('');
+    const hasTags = this.availableTags.size > 0;
+    const hasHsk = this.availableHskLevels.size > 0;
 
-    menu.innerHTML = options;
+    if (!hasTags && !hasHsk) return;
+
+    let tagOptions = '';
+    if (hasTags) {
+      tagOptions = Array.from(this.availableTags).map(tag => {
+        const isSelected = this.selectedTags.has(tag);
+        const colorClass = Search.getTagColorClass(tag);
+        return `
+          <div class="filter-option ${isSelected ? 'selected' : ''}" data-type="tag" data-value="${tag}">
+            <span class="tag-badge ${colorClass}">${tag}</span>
+          </div>
+        `;
+      }).join('');
+    }
+
+    let hskOptions = '';
+    if (hasHsk) {
+      hskOptions = Array.from(this.availableHskLevels).map(level => {
+        const isSelected = this.selectedHskLevels.has(level);
+        return `
+          <div class="filter-option ${isSelected ? 'selected' : ''}" data-type="hsk" data-value="${level}">
+            <span class="hsk-badge">${level}</span>
+          </div>
+        `;
+      }).join('');
+    }
+
+    const menuContent = `
+      <div class="filter-menu-columns">
+        ${hasTags ? `<div class="filter-column">
+          <div class="filter-column-header">Tags</div>
+          <div class="filter-column-content">${tagOptions}</div>
+        </div>` : ''}
+        ${hasHsk ? `<div class="filter-column">
+          <div class="filter-column-header">HSK</div>
+          <div class="filter-column-content">${hskOptions}</div>
+        </div>` : ''}
+      </div>
+    `;
+
+    menu.innerHTML = menuContent;
     this.bindFilterOptionEvents('tag');
-  },
-
-  renderHskFilterMenu() {
-    const menu = document.getElementById('hsk-filter-menu');
-    if (!menu || this.availableHskLevels.size === 0) return;
-
-    const options = Array.from(this.availableHskLevels).map(level => {
-      const isSelected = this.selectedHskLevels.has(level);
-      return `
-        <div class="filter-option ${isSelected ? 'selected' : ''}" data-type="hsk" data-value="${level}">
-          <span class="hsk-badge">${level}</span>
-        </div>
-      `;
-    }).join('');
-
-    menu.innerHTML = options;
     this.bindFilterOptionEvents('hsk');
   },
 
@@ -162,30 +167,11 @@ const Filters = {
 
         this.saveFilters();
         this.applyFilters();
-        this.updateFilterButtons();
       });
     });
   },
 
-  updateFilterButtons() {
-    // Update tag filter button
-    const tagBtn = document.getElementById('tag-filter-btn');
-    const tagCount = document.querySelector('#tag-filter-btn .filter-count');
-    if (tagBtn && tagCount) {
-      const count = this.selectedTags.size;
-      tagCount.textContent = `(${count})`;
-      tagBtn.style.display = this.availableTags.size > 0 ? 'flex' : 'none';
-    }
 
-    // Update HSK filter button
-    const hskBtn = document.getElementById('hsk-filter-btn');
-    const hskCount = document.querySelector('#hsk-filter-btn .filter-count');
-    if (hskBtn && hskCount) {
-      const count = this.selectedHskLevels.size;
-      hskCount.textContent = `(${count})`;
-      hskBtn.style.display = this.availableHskLevels.size > 0 ? 'flex' : 'none';
-    }
-  },
 
   applyFilters() {
     if (!App.currentCards || !App.currentCards.length) return;
@@ -240,9 +226,7 @@ const Filters = {
     this.selectedHskLevels.clear();
     this.saveFilters();
     this.applyFilters();
-    this.updateFilterButtons();
-    this.renderTagFilterMenu();
-    this.renderHskFilterMenu();
+    this.renderCombinedFilterMenu();
   },
 
   loadSavedFilters() {
