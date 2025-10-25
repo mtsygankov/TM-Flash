@@ -30,26 +30,28 @@ const StatsView = {
      // Compute histogram and top lists
       const deckStats = Storage.getDeckStats(App.currentDeckId) || { cards: {} };
        const cardMap = new Map(((App.currentFilteredCards || App.currentCards) || []).map((card) => [card.card_id.toString(), card]));
-     const cardData = [];
-       Object.entries(deckStats.cards || {}).forEach(([cardId, cardStats]) => {
-         const dirStat = cardStats[App.currentDirection];
-        if (!dirStat) return;
-        const total = (dirStat.total_correct || 0) + (dirStat.total_incorrect || 0);
-        if (total === 0) return;
-        const ratio = (dirStat.total_correct || 0) / total;
-         const card = cardMap.get(cardId) || { hanzi: cardId, pinyin: "", english: "" };
+      const cardData = [];
+        Object.entries(deckStats.cards || {}).forEach(([cardId, cardStats]) => {
+          // Only include cards present in the current filtered selection
+          if (!cardMap.has(cardId)) return;
+          const dirStat = cardStats[App.currentDirection];
+         if (!dirStat) return;
+         const total = (dirStat.total_correct || 0) + (dirStat.total_incorrect || 0);
+         if (total === 0) return;
+         const ratio = (dirStat.total_correct || 0) / total;
+          const card = cardMap.get(cardId) || { hanzi: cardId, pinyin: "", english: "" };
 
-         cardData.push({
-           cardId,
-           hanzi: card.hanzi,
-           pinyin: card.pinyin,
-           english: card.english,
-           correct: dirStat.total_correct,
-           incorrect: dirStat.total_incorrect,
-           total,
-           ratio,
-         });
-      });
+          cardData.push({
+            cardId,
+            hanzi: card.hanzi,
+            pinyin: card.pinyin,
+            english: card.english,
+            correct: dirStat.total_correct,
+            incorrect: dirStat.total_incorrect,
+            total,
+            ratio,
+          });
+       });
 
      // Histogram buckets: 10 buckets (0-9%,10-19%,...,90-100%)
      const buckets = new Array(10).fill(0);
