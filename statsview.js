@@ -202,16 +202,32 @@ const StatsView = {
 
   resetCurrentDeckStats() {
     if (!App.currentDeckId) return;
+    let filterDesc = '';
+    if (Filters.selectedHskLevels.size > 0) {
+      filterDesc += `${Array.from(Filters.selectedHskLevels).join(', ')}`;
+    }
+    if (Filters.selectedTags.size > 0) {
+      if (filterDesc) filterDesc += ', ';
+      filterDesc += `${Array.from(Filters.selectedTags).join(', ')}`;
+    }
+    if (!filterDesc) {
+      filterDesc = 'all cards';
+    } else {
+      filterDesc = `filtered by ${filterDesc}`;
+    }
     if (
       !confirm(
-        `Reset all stats for ${DECKS[App.currentDeckId].label} in ${App.currentDirection} direction? This cannot be undone.`,
+        `Reset all stats for ${DECKS[App.currentDeckId].label} in ${App.currentDirection} direction (${filterDesc})? This cannot be undone.`,
       )
     )
       return;
     const deckStats = Storage.getDeckStats(App.currentDeckId);
-    Object.values(deckStats.cards).forEach((cardStats) => {
-      if (cardStats[App.currentDirection]) {
-        cardStats[this.currentDirection] = {
+    const filteredCards = App.currentFilteredCards || App.currentCards;
+    const filteredCardIds = new Set(filteredCards.map(card => card.card_id.toString()));
+    filteredCardIds.forEach(cardId => {
+      const cardStats = deckStats.cards[cardId];
+      if (cardStats && cardStats[App.currentDirection]) {
+        cardStats[App.currentDirection] = {
           total_correct: 0,
           total_incorrect: 0,
           last_correct_at: null,
