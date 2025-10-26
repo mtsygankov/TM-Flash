@@ -818,9 +818,13 @@ h2 {
     cursor: pointer;
     transition: background-color 0.2s;
     display: grid;
-    grid-template-columns: auto 200px 1fr auto;
+    grid-template-columns: auto 300px 1fr auto;
     align-items: center;
     gap: 0.5rem;
+}
+
+.search-result.no-tags {
+    grid-template-columns: 300px 1fr auto;
 }
 
 .search-result:nth-child(even) {
@@ -844,7 +848,7 @@ h2 {
 }
 
 .result-hanzi-pinyin {
-    width: 200px;
+    width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;

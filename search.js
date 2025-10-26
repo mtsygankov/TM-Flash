@@ -87,9 +87,10 @@ const Search = {
         (card) => {
           const cardStats = App.currentStats?.cards[card.card_id] || {};
           const tagsHtml = this.renderTags(card);
+          const hasTags = tagsHtml !== '';
             const cleanHanzi = card.hanzi.replace(/\s/g, '');
             return `
-      <div class="search-result" data-card-id="${card.card_id}">
+      <div class="search-result ${hasTags ? 'has-tags' : 'no-tags'}" data-card-id="${card.card_id}">
         ${tagsHtml}
          <div class="result-hanzi-pinyin">
            <div class="result-hanzi">${card.hanzi.replace(/(\S)/g, '<span class="hanzi-char" data-char="$1">$1</span>')}</div>
