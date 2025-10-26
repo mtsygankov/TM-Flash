@@ -82,7 +82,8 @@ const Nav = {
       } else {
         // Deck already loaded, restore saved state if exists
         if (App.savedReviewCardId) {
-          const card = App.currentCards.find(c => c.card_id === App.savedReviewCardId);
+          const filteredCards = Filters.getFilteredCards();
+          const card = filteredCards.find(c => c.card_id === App.savedReviewCardId);
           if (card) {
             App.currentCard = card;
             App.flipped = App.savedReviewFlipped;
@@ -92,9 +93,9 @@ const Nav = {
             App.savedReviewCardId = null;
             App.savedReviewFlipped = false;
           } else {
-            // Card not found, select next
+            // Card not in filtered set, select next from filtered
             App.currentCard = SRS.selectNextCard(
-              App.currentCards,
+              filteredCards,
               App.currentStats.cards,
               App.currentDirection,
             );
@@ -107,10 +108,11 @@ const Nav = {
             }
           }
         } else {
-          // No saved state, select or show message
-          if (!App.currentCard) {
+          // No saved state, ensure current card is valid for filters
+          const filteredCards = Filters.getFilteredCards();
+          if (!App.currentCard || !filteredCards.find(card => card.card_id === App.currentCard.card_id)) {
             App.currentCard = SRS.selectNextCard(
-              App.currentCards,
+              filteredCards,
               App.currentStats.cards,
               App.currentDirection,
             );
@@ -126,12 +128,13 @@ const Nav = {
   },
 
   showNoCardsMessage() {
-    const nextReviewInfo = SRS.getNextReviewInfo(App.currentCards, App.currentStats.cards, App.currentDirection);
+    const filteredCards = Filters.getFilteredCards();
+    const nextReviewInfo = SRS.getNextReviewInfo(filteredCards, App.currentStats.cards, App.currentDirection);
     let message;
     if (nextReviewInfo) {
-      message = `No cards due for review. Next review: (${nextReviewInfo.cardsInWindow} card${nextReviewInfo.cardsInWindow > 1 ? 's' : ''} in ~${nextReviewInfo.timeString}).`;
+      message = `No cards due for review with current filters. Next review: (${nextReviewInfo.cardsInWindow} card${nextReviewInfo.cardsInWindow > 1 ? 's' : ''} in ~${nextReviewInfo.timeString}).`;
     } else {
-      message = 'No cards due for review.';
+      message = 'No cards due for review with current filters.';
     }
     Message.show('card-container', message);
   },
