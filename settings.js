@@ -21,18 +21,15 @@ const Settings = {
       App.currentDirection = direction;
       App.flipped = false;
 
-     // Debug current app state
-     if (App.currentStats && App.currentStats.cards) {
-     }
 
-      // Only select/render card if data is available (not during initialization)
-      if (App.currentCards && App.currentStats) {
-         // Select a new card for the new direction
-          App.currentCard = SRS.selectNextCard(
-            App.currentCards,
-            App.currentStats.cards,
-            App.currentDirection
-          );
+       // Only select/render card if data is available (not during initialization)
+       if (App.currentCards && App.currentStats) {
+          // Select a new card for the new direction
+           App.currentCard = SRS.selectNextCard(
+             Filters.getFilteredCards(),
+             App.currentStats.cards,
+             App.currentDirection
+           );
 
           if (App.currentCard) {
             Review.renderCard(App.currentCard);
