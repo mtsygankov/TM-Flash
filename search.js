@@ -86,7 +86,7 @@ const Search = {
       .map(
         (card) => {
           const cardStats = App.currentStats?.cards[card.card_id] || {};
-          const tagsHtml = this.renderTags(card.tags || []);
+          const tagsHtml = this.renderTags(card);
             const cleanHanzi = card.hanzi.replace(/\s/g, '');
             return `
       <div class="search-result" data-card-id="${card.card_id}">
@@ -112,15 +112,20 @@ const Search = {
 
   },
 
-  renderTags(tags) {
-    if (!tags || tags.length === 0) return '';
-
-    const tagBadges = tags.map(tag => {
-      const colorClass = this.getTagColorClass(tag);
-      return `<span class="tag-badge ${colorClass}">${tag}</span>`;
-    }).join('');
-
-    return `<div class="search-result-tags">${tagBadges}</div>`;
+  renderTags(card) {
+    let badges = [];
+    if (card.hsk) {
+      badges.push(`<span class="hsk-badge">${card.hsk}</span>`);
+    }
+    if (card.tags && card.tags.length > 0) {
+      const tagBadges = card.tags.map(tag => {
+        const colorClass = this.getTagColorClass(tag);
+        return `<span class="tag-badge ${colorClass}">${tag}</span>`;
+      });
+      badges = badges.concat(tagBadges);
+    }
+    if (badges.length === 0) return '';
+    return `<div class="search-result-tags">${badges.join('')}</div>`;
   },
 
   getTagColorClass(tag) {
