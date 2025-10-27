@@ -283,19 +283,19 @@ const StatsView = {
             data: timeBuckets,
             backgroundColor: 'rgba(0, 123, 255, 0.6)',
             borderColor: 'rgba(0, 123, 255, 1)',
-            borderWidth: 1
+            borderWidth: 0
           }]
         },
         options: {
           scales: {
             x: {
               ticks: {
-                font: { size: 10 },
+                font: { size: 11 },
                 maxTicksLimit: 24,
-                 callback: function(value, index) {
-                   if (index % 4 === 0) {
-                     return Math.floor(index / 4) + 'h';
-                   }
+                  callback: function(value, index) {
+                    if (index % 12 === 0 && index !== 0) {
+                      return Math.floor(index / 4)// + 'h';
+                    }
                    return '';
                  }
               }
