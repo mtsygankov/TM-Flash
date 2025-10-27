@@ -152,47 +152,38 @@ const Review = {
     // Clear existing segments
     progressBar.innerHTML = '';
 
-    // Define segments with colors and labels
-    const segments = [
-      { key: 'overdue', color: '#dc3545', label: 'Overdue' },
-      { key: 'dueSoon15min', color: '#fd7e14', label: 'Due <15min' },
-      { key: 'dueSoon1h', color: '#ffc107', label: 'Due <1h' },
-      { key: 'dueSoon6h', color: '#28a745', label: 'Due <6h' },
-      { key: 'dueSoon24h', color: '#20c997', label: 'Due <24h' },
-      { key: 'dueLater', color: '#6f42c1', label: 'Due >=24h' }
+    // Define segment border colors for gradient
+    // const SEGMENT_COLORS = ['#dc3545', '#fd7e14', '#ffc107', '#28a745', '#20c997', '#17a2b8', '#6f42c1'];
+    const SEGMENT_COLORS = [
+      '#dc3545', // red
+      '#fd7e14', // orange
+      '#ffc107', // yellow
+      '#28a745', // green
+      '#1fa87a', // teal (darker + slightly bluish)
+      '#007bff', // blue (clean vivid)
+      '#8b3cf0', // purple (brighter & slightly lighter)
     ];
 
-    // Base colors for gradient borders
-    const baseColors = segments.map(s => s.color);
-
-    // Function to blend two colors by averaging RGB values
-    function blendColors(color1, color2) {
-      const r1 = parseInt(color1.slice(1,3), 16);
-      const g1 = parseInt(color1.slice(3,5), 16);
-      const b1 = parseInt(color1.slice(5,7), 16);
-      const r2 = parseInt(color2.slice(1,3), 16);
-      const g2 = parseInt(color2.slice(3,5), 16);
-      const b2 = parseInt(color2.slice(5,7), 16);
-      const r = Math.round((r1 + r2) / 2);
-      const g = Math.round((g1 + g2) / 2);
-      const b = Math.round((b1 + b2) / 2);
-      return `rgb(${r}, ${g}, ${b})`;
-    }
+    // Define segments with colors and labels
+    const segments = [
+      { key: 'overdue', color: SEGMENT_COLORS[0], label: 'Overdue' },
+      { key: 'dueSoon15min', color: SEGMENT_COLORS[1], label: 'Due <15min' },
+      { key: 'dueSoon1h', color: SEGMENT_COLORS[2], label: 'Due <1h' },
+      { key: 'dueSoon6h', color: SEGMENT_COLORS[3], label: 'Due <6h' },
+      { key: 'dueSoon24h', color: SEGMENT_COLORS[4], label: 'Due <24h' },
+      { key: 'dueLater', color: SEGMENT_COLORS[5], label: 'Due >=24h' }
+    ];
 
     segments.forEach((segment, i) => {
       const count = dueCounts[segment.key];
       const segmentDiv = document.createElement('div');
       segmentDiv.className = 'progress-segment';
-
       if (count > 0) {
-        const leftColor = baseColors[i];
-        const rightColor = baseColors[i + 1];
-        const middleColor = blendColors(leftColor, rightColor);
-        segmentDiv.style.background = `linear-gradient(to right, ${leftColor}, ${middleColor}, ${rightColor})`;
+        const nextColor = SEGMENT_COLORS[i + 1];
+        segmentDiv.style.background = `linear-gradient(to right, ${segment.color}, ${nextColor})`;
       } else {
         segmentDiv.style.backgroundColor = '#e0e0e0'; // Gray for empty segments
       }
-
       segmentDiv.title = `${segment.label}: ${count}`;
 
       // Add number overlay
