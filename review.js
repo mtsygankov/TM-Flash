@@ -140,19 +140,43 @@ const Review = {
 
 
   updateReviewTogglesDisplay() {
-    const counts = SRS.countFilteredCards(
+    const dueCounts = SRS.getDueCountsByTime(
       Filters.getFilteredCards(),
       App.currentStats.cards,
       App.currentDirection
     );
 
-    const future = counts.total - counts.overdue;
-    const displayText = `${counts.overdue} / ${future} / ${counts.total}`;
+    const progressBar = document.getElementById("review-progress-bar");
+    if (!progressBar) return;
 
-    const numbersSpan = document.getElementById("review-toggles-numbers");
-    if (numbersSpan) {
-      numbersSpan.textContent = displayText;
-    }
+    // Clear existing segments
+    progressBar.innerHTML = '';
+
+    // Define segments with colors and labels
+    const segments = [
+      { key: 'overdue', color: '#dc3545', label: 'Overdue' },
+      { key: 'dueSoon15min', color: '#fd7e14', label: 'Due <15min' },
+      { key: 'dueSoon1h', color: '#ffc107', label: 'Due <1h' },
+      { key: 'dueSoon6h', color: '#20c997', label: 'Due <6h' },
+      { key: 'dueSoon24h', color: '#17a2b8', label: 'Due <24h' },
+      { key: 'dueLater', color: '#007bff', label: 'Due >=24h' }
+    ];
+
+    segments.forEach(segment => {
+      const count = dueCounts[segment.key];
+      const segmentDiv = document.createElement('div');
+      segmentDiv.className = 'progress-segment';
+      segmentDiv.style.backgroundColor = count > 0 ? segment.color : '#e0e0e0'; // Gray for empty segments
+      segmentDiv.title = `${segment.label}: ${count}`;
+
+      // Add number overlay
+      const numberSpan = document.createElement('span');
+      numberSpan.className = 'segment-number';
+      numberSpan.textContent = count;
+      segmentDiv.appendChild(numberSpan);
+
+      progressBar.appendChild(segmentDiv);
+    });
   },
 
   applyDirectionAndFlip() {

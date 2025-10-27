@@ -226,6 +226,66 @@ const SRS = {
     return { total, overdue };
   },
 
+  getDueCountsByTime(cards, statsMap, direction) {
+    if (!cards || cards.length === 0) {
+      return { overdue: 0, dueSoon15min: 0, dueSoon1h: 0, dueSoon6h: 0, dueSoon24h: 0, dueLater: 0 };
+    }
+
+    const now = Date.now();
+    const buckets = {
+      overdue: 0,      // already due
+      dueSoon15min: 0, // due in <15min
+      dueSoon1h: 0,    // due in <1h
+      dueSoon6h: 0,    // due in <6h
+      dueSoon24h: 0,   // due in <24h
+      dueLater: 0      // due in >=24h or never
+    };
+
+    cards.forEach(card => {
+      const cardStats = statsMap[card.card_id];
+      const stats = cardStats?.[direction] || {
+        total_correct: 0,
+        total_incorrect: 0,
+        last_correct_at: null,
+        last_incorrect_at: null,
+        correct_streak_len: 0,
+        incorrect_streak_len: 0,
+        correct_streak_started_at: null,
+        incorrect_streak_started_at: null
+      };
+
+      // Calculate next review time
+      let nextReviewTime;
+      if (!stats.last_correct_at && !stats.last_incorrect_at) {
+        // New card - due now
+        nextReviewTime = now;
+      } else {
+        const lastReview = Math.max(stats.last_correct_at || 0, stats.last_incorrect_at || 0);
+        const intervalHours = this.calculateNextReviewInterval(stats);
+        nextReviewTime = lastReview + (intervalHours * 60 * 60 * 1000);
+      }
+
+      const timeUntilDue = nextReviewTime - now;
+      const hoursUntilDue = timeUntilDue / (60 * 60 * 1000);
+
+      if (timeUntilDue <= 0) {
+        buckets.overdue++;
+      } else if (hoursUntilDue < 0.25) { // <15min
+        buckets.dueSoon15min++;
+      } else if (hoursUntilDue < 1) { // <1h
+        buckets.dueSoon1h++;
+      } else if (hoursUntilDue < 6) { // <6h
+        buckets.dueSoon6h++;
+      } else if (hoursUntilDue < 24) { // <24h
+        buckets.dueSoon24h++;
+      } else {
+        buckets.dueLater++;
+      }
+    });
+
+    return buckets;
+  },
+
   getNextReviewInfo(cards, statsMap, direction) {
     if (!cards || cards.length === 0) {
       return null;

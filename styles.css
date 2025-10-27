@@ -76,6 +76,44 @@ h1 {
     align-items: center;
 }
 
+#review-toggles {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Progress bar styles */
+#review-progress-bar {
+    display: flex;
+    height: 100%;
+    width: 200px;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+}
+
+.progress-segment {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    min-height: 30px;
+    transition: opacity 0.2s;
+}
+
+.progress-segment:hover {
+    opacity: 0.8;
+}
+
+.segment-number {
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+    pointer-events: none;
+}
+
 #filter-controls {
     display: flex;
     gap: 0.5rem;
@@ -537,6 +575,15 @@ h2 {
     #btn-incorrect, #btn-correct {
         padding: 0.75rem 1.5rem;
         font-size: 1rem;
+    }
+
+    /* Progress bar responsive */
+    #review-progress-bar {
+        width: 150px; /* Reduce width on mobile */
+    }
+
+    .segment-number {
+        display: none; /* Hide numbers on mobile, show on tap via title */
     }
 }
 
