@@ -8,6 +8,10 @@ const Review = {
         this.renderCard(App.currentCard);
       }
     });
+    // Periodic update of review toggles display
+    this.updateInterval = setInterval(() => {
+      this.updateReviewTogglesDisplay();
+    }, 5 * 60 * 1000); // 5 minutes
   },
 
   renderCard(card) {

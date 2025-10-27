@@ -31,19 +31,22 @@ const Settings = {
              App.currentDirection
            );
 
-          if (App.currentCard) {
-            Review.renderCard(App.currentCard);
-          } else {
-            Review.renderCard(null);
-              const nextReviewInfo = SRS.getNextReviewInfo(App.currentCards, App.currentStats.cards, App.currentDirection);
-            let message;
-            if (nextReviewInfo) {
-                 message = `No cards due for review. Next review: (${nextReviewInfo.cardsInWindow} card${nextReviewInfo.cardsInWindow > 1 ? 's' : ''} in ~${nextReviewInfo.timeString}).`;
-            } else {
-              message = 'No cards due for review in this direction.';
-            }
-            Message.show('card-container', message);
-          }
+           if (App.currentCard) {
+             Review.renderCard(App.currentCard);
+           } else {
+             Review.renderCard(null);
+               const nextReviewInfo = SRS.getNextReviewInfo(App.currentCards, App.currentStats.cards, App.currentDirection);
+             let message;
+             if (nextReviewInfo) {
+                  message = `No cards due for review. Next review: (${nextReviewInfo.cardsInWindow} card${nextReviewInfo.cardsInWindow > 1 ? 's' : ''} in ~${nextReviewInfo.timeString}).`;
+             } else {
+               message = 'No cards due for review in this direction.';
+             }
+             Message.show('card-container', message);
+           }
+
+           // Update review toggles display after direction change
+           Review.updateReviewTogglesDisplay();
        } else {
          console.warn("❌ Conditional check failed - app data not available");
        }
