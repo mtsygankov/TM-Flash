@@ -154,14 +154,23 @@ const Review = {
 
     // Define segment border colors for gradient
     // const SEGMENT_COLORS = ['#dc3545', '#fd7e14', '#ffc107', '#28a745', '#20c997', '#17a2b8', '#6f42c1'];
+    // const SEGMENT_COLORS = [
+    //   '#dc3545', // red
+    //   '#fd7e14', // orange
+    //   '#ffc107', // yellow
+    //   '#28a745', // green
+    //   '#1fa87a', // teal (darker + slightly bluish)
+    //   '#007bff', // blue (clean vivid)
+    //   '#8b3cf0', // purple (brighter & slightly lighter)
+    // ];
     const SEGMENT_COLORS = [
-      '#dc3545', // red
-      '#fd7e14', // orange
-      '#ffc107', // yellow
-      '#28a745', // green
-      '#1fa87a', // teal (darker + slightly bluish)
-      '#007bff', // blue (clean vivid)
-      '#8b3cf0', // purple (brighter & slightly lighter)
+      '#e63946', // vivid red (balanced brightness)
+      '#f8961e', // orange (slightly deeper for even value)
+      '#ffd60a', // yellow (warmer, not too pale)
+      '#2ea44f', // green (slightly lighter & vibrant)
+      '#18a999', // teal (darker + richer than before)
+      '#0077ff', // blue (vivid, slightly lighter)
+      '#9d4edd', // purple (lighter & more saturated)
     ];
 
     // Define segments with colors and labels
@@ -178,19 +187,17 @@ const Review = {
       const count = dueCounts[segment.key];
       const segmentDiv = document.createElement('div');
       segmentDiv.className = 'progress-segment';
-      if (count > 0) {
-        const nextColor = SEGMENT_COLORS[i + 1];
-        segmentDiv.style.background = `linear-gradient(to right, ${segment.color}, ${nextColor})`;
-      } else {
-        segmentDiv.style.backgroundColor = '#e0e0e0'; // Gray for empty segments
-      }
+      const nextColor = SEGMENT_COLORS[i + 1];
+      segmentDiv.style.background = `linear-gradient(to right, ${segment.color}, ${nextColor})`;
       segmentDiv.title = `${segment.label}: ${count}`;
 
-      // Add number overlay
-      const numberSpan = document.createElement('span');
-      numberSpan.className = 'segment-number';
-      numberSpan.textContent = count;
-      segmentDiv.appendChild(numberSpan);
+      // Add number overlay only if count > 0
+      if (count > 0) {
+        const numberSpan = document.createElement('span');
+        numberSpan.className = 'segment-number';
+        numberSpan.textContent = count;
+        segmentDiv.appendChild(numberSpan);
+      }
 
       progressBar.appendChild(segmentDiv);
     });
