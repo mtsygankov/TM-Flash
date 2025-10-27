@@ -283,7 +283,9 @@ const StatsView = {
             data: timeBuckets,
             backgroundColor: 'rgba(0, 123, 255, 0.6)',
             borderColor: 'rgba(0, 123, 255, 1)',
-            borderWidth: 0
+            borderWidth: 0,
+            minBarThickness: 5,
+            maxBarThickness: 8
           }]
         },
         options: {
@@ -308,7 +310,9 @@ const StatsView = {
                   const showIndices = [12, 24, 36, 48, 60, 72, 84];
                   return showIndices.includes(context.index) ? '#e0e0e0' : 'transparent';
                 }
-              }
+              },
+              barPercentage: 1,
+              categoryPercentage: 1
             },
             y: {
               beginAtZero: true
