@@ -157,16 +157,42 @@ const Review = {
       { key: 'overdue', color: '#dc3545', label: 'Overdue' },
       { key: 'dueSoon15min', color: '#fd7e14', label: 'Due <15min' },
       { key: 'dueSoon1h', color: '#ffc107', label: 'Due <1h' },
-      { key: 'dueSoon6h', color: '#20c997', label: 'Due <6h' },
-      { key: 'dueSoon24h', color: '#17a2b8', label: 'Due <24h' },
-      { key: 'dueLater', color: '#007bff', label: 'Due >=24h' }
+      { key: 'dueSoon6h', color: '#28a745', label: 'Due <6h' },
+      { key: 'dueSoon24h', color: '#20c997', label: 'Due <24h' },
+      { key: 'dueLater', color: '#6f42c1', label: 'Due >=24h' }
     ];
 
-    segments.forEach(segment => {
+    // Base colors for gradient borders
+    const baseColors = segments.map(s => s.color);
+
+    // Function to blend two colors by averaging RGB values
+    function blendColors(color1, color2) {
+      const r1 = parseInt(color1.slice(1,3), 16);
+      const g1 = parseInt(color1.slice(3,5), 16);
+      const b1 = parseInt(color1.slice(5,7), 16);
+      const r2 = parseInt(color2.slice(1,3), 16);
+      const g2 = parseInt(color2.slice(3,5), 16);
+      const b2 = parseInt(color2.slice(5,7), 16);
+      const r = Math.round((r1 + r2) / 2);
+      const g = Math.round((g1 + g2) / 2);
+      const b = Math.round((b1 + b2) / 2);
+      return `rgb(${r}, ${g}, ${b})`;
+    }
+
+    segments.forEach((segment, i) => {
       const count = dueCounts[segment.key];
       const segmentDiv = document.createElement('div');
       segmentDiv.className = 'progress-segment';
-      segmentDiv.style.backgroundColor = count > 0 ? segment.color : '#e0e0e0'; // Gray for empty segments
+
+      if (count > 0) {
+        const leftColor = baseColors[i];
+        const rightColor = baseColors[i + 1];
+        const middleColor = blendColors(leftColor, rightColor);
+        segmentDiv.style.background = `linear-gradient(to right, ${leftColor}, ${middleColor}, ${rightColor})`;
+      } else {
+        segmentDiv.style.backgroundColor = '#e0e0e0'; // Gray for empty segments
+      }
+
       segmentDiv.title = `${segment.label}: ${count}`;
 
       // Add number overlay
