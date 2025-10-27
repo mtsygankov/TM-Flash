@@ -53,18 +53,7 @@ const StatsView = {
           });
        });
 
-     // Histogram buckets: 10 buckets (0-9%,10-19%,...,90-100%)
-     const buckets = new Array(10).fill(0);
-     cardData.forEach((data) => {
-       // Ensure ratio between 0 and 1
-       const ratio = Math.max(0, Math.min(1, Number(data.ratio) || 0));
-       const pct = Math.floor(ratio * 100);
-       let bucketIndex = Math.floor(pct / 10);
-       if (bucketIndex < 0) bucketIndex = 0;
-       if (bucketIndex > 9) bucketIndex = 9;
-       buckets[bucketIndex]++;
-     });
-    const maxBucket = Math.max(...buckets) || 1;
+
 
      // Top 10 best and worst
      const sortedByRatioDesc = cardData.slice().sort((a, b) => b.ratio - a.ratio || b.total - a.total);
@@ -103,7 +92,38 @@ const StatsView = {
      });
     const maxDue = Math.max(...dueBuckets) || 1;
 
-     // Overall accuracy
+      // Time buckets for due rate: overdue + 15-min intervals for next 24 hours (95 intervals, last removed)
+      const numTimeBuckets = 95; // 1440/15 -1 =95
+      const timeBuckets = new Array(numTimeBuckets).fill(0); // 95
+      ((App.currentFilteredCards || App.currentCards) || []).forEach((card) => {
+        const cardStats = deckStats.cards?.[card.card_id];
+        const stats = deckStats.cards?.[card.card_id]?.[App.currentDirection];
+        if (!stats) {
+          // New card, due now
+          timeBuckets[0]++;
+          return;
+        }
+        const lastReview = Math.max(stats.last_correct_at || 0, stats.last_incorrect_at || 0);
+        if (lastReview === 0) {
+          timeBuckets[0]++;
+          return;
+        }
+        const intervalHours = SRS.calculateNextReviewInterval(stats);
+        const nextReview = lastReview + intervalHours * 60 * 60 * 1000;
+        const now = Date.now();
+        const diffMin = (nextReview - now) / (60 * 1000);
+        if (diffMin <= 0) {
+          timeBuckets[0]++; // overdue -> first bucket
+        } else if (diffMin < 15) {
+          timeBuckets[0]++; // 0-15m -> first bucket
+        } else if (diffMin < 1425) { // Exclude last 15-min bucket (1425-1440)
+          const bucketIndex = Math.floor(diffMin / 15);
+          if (bucketIndex < numTimeBuckets) timeBuckets[bucketIndex]++;
+        }
+        // Ignore cards due after 24 hours
+      });
+
+      // Overall accuracy
      let totalCorrect = 0, totalIncorrect = 0;
      cardData.forEach((data) => {
        totalCorrect += data.correct || 0;
@@ -163,9 +183,9 @@ const StatsView = {
         
         <div class="panel-grid">
         <div class="panel">
-        <h3>Correct Ratio Histogram</h3>
-        <canvas id="histogram-chart" width="400" height="200"></canvas>
-        </div>
+         <h3>Cards Due Rate (15-min intervals)</h3>
+         <canvas id="histogram-chart" width="400" height="200"></canvas>
+         </div>
         
         <div class="panel">
         <h3>Cards Due Timeline</h3>
@@ -197,7 +217,7 @@ const StatsView = {
     `;
 
     // Initialize Chart.js charts
-    this.initCharts(buckets, dueBuckets, streakBuckets, overallAccuracy);
+    this.initCharts(timeBuckets, dueBuckets, streakBuckets, overallAccuracy);
   },
 
   resetCurrentDeckStats() {
@@ -246,17 +266,21 @@ const StatsView = {
     this.render();
   },
 
-  initCharts(buckets, dueBuckets, streakBuckets, overallAccuracy) {
-    // Correct Ratio Histogram
+  initCharts(timeBuckets, dueBuckets, streakBuckets, overallAccuracy) {
+    // Cards Due Rate (15-min intervals)
     const histCtx = document.getElementById('histogram-chart');
     if (histCtx) {
+      const labels = [];
+      for (let i = 0; i < 95; i++) {
+        labels.push(`${i*15}-${(i+1)*15}m`);
+      }
       new Chart(histCtx, {
         type: 'bar',
         data: {
-          labels: ['10%', '20%', '30%', '40%', '50%', '60%', '70%', '80%', '90%', '100%'],
+          labels: labels,
           datasets: [{
-            label: 'Cards',
-            data: buckets,
+            label: 'Cards Due',
+            data: timeBuckets,
             backgroundColor: 'rgba(0, 123, 255, 0.6)',
             borderColor: 'rgba(0, 123, 255, 1)',
             borderWidth: 1
@@ -266,9 +290,14 @@ const StatsView = {
           scales: {
             x: {
               ticks: {
-                font: { size: 11 },
-                maxRotation: 0,
-                minRotation: 0
+                font: { size: 10 },
+                maxTicksLimit: 24,
+                 callback: function(value, index) {
+                   if (index % 4 === 0) {
+                     return Math.floor(index / 4) + 'h';
+                   }
+                   return '';
+                 }
               }
             },
             y: {
