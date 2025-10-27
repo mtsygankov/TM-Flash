@@ -291,13 +291,23 @@ const StatsView = {
             x: {
               ticks: {
                 font: { size: 11 },
-                maxTicksLimit: 24,
-                  callback: function(value, index) {
-                    if (index % 12 === 0 && index !== 0) {
-                      return Math.floor(index / 4)// + 'h';
-                    }
-                   return '';
-                 }
+                maxRotation: 0,
+                minRotation: 0,
+                callback: function(value, index) {
+                  const showIndices = [12, 24, 36, 48, 60, 72, 84];
+                  // if the next index (index+1) is in showIndices, show label as hour
+                  if (showIndices.includes(index)) {
+                    return Math.floor((index) / 4) + 'h';
+                  }
+                  return '';
+                }
+              },
+              grid: {
+                display: true,
+                color: function(context) {
+                  const showIndices = [12, 24, 36, 48, 60, 72, 84];
+                  return showIndices.includes(context.index) ? '#e0e0e0' : 'transparent';
+                }
               }
             },
             y: {
