@@ -452,6 +452,31 @@ h2 {
     color: #aaa;
 }
 
+/* Table cells are now interactive for hover detection on padding */
+
+/* Make word text spans interactive */
+.word-text {
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+/* Make table rows interactive for whole expression */
+#card-table tr {
+  cursor: pointer;
+}
+
+/* Hover effect for whole expression (shows on row padding/space) */
+#card-table tr.space-hover {
+  background-color: #f0f000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+/* Hover effect for individual words */
+.word-text.word-hover {
+  background-color: #f0f000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+}
+
 /* English section styles */
 #card-english {
     text-align: center;

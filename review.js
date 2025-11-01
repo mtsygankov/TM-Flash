@@ -38,13 +38,13 @@ const Review = {
     // Render table with only hanzi, pinyin, and en-words rows
     table.innerHTML = `
             <tr class="row-hanzi">
-                ${hanziTokens.map((token) => `<td>${this.escapeHtml(token)}</td>`).join("")}
+                ${hanziTokens.map((token) => `<td><span class="word-text hanzi-word">${this.escapeHtml(token)}</span></td>`).join("")}
             </tr>
             <tr class="row-pinyin">
-                ${pinyinTokens.map((token) => `<td>${this.escapeHtml(token)}</td>`).join("")}
+                ${pinyinTokens.map((token) => `<td><span class="word-text pinyin-word">${this.escapeHtml(token)}</span></td>`).join("")}
             </tr>
             <tr class="row-en-words">
-                ${enWords.map((word) => `<td>${this.escapeHtml(word)}</td>`).join("")}
+                ${enWords.map((word) => `<td><span class="word-text en-word">${this.escapeHtml(word)}</span></td>`).join("")}
             </tr>
         `;
 
@@ -77,56 +77,109 @@ const Review = {
     const englishScale = Math.max(0.6, Math.min(1, englishAvailableWidth / englishEstimatedWidth));
     englishSection.style.setProperty('--english-scale-factor', englishScale);
 
-    // Add click handlers for search
-    const hanziCells = table.querySelectorAll('.row-hanzi td');
-    hanziCells.forEach(cell => {
-      cell.style.cursor = 'pointer';
-      cell.addEventListener('click', (e) => {
+    // Add click handlers for individual word search
+    const hanziWords = table.querySelectorAll('.hanzi-word');
+    hanziWords.forEach(span => {
+      span.addEventListener('click', (e) => {
         e.stopPropagation();
-        document.getElementById("search-query").value = cell.textContent;
+        document.getElementById("search-query").value = span.textContent;
         Search.currentType = "pinyin";
         Search.updateToggleButton();
         Nav.show("search");
         Search.performSearch();
       });
+      span.addEventListener('mouseenter', () => {
+        const tr = span.closest('tr');
+        tr.classList.remove('space-hover');
+        span.classList.add('word-hover');
+      });
+      span.addEventListener('mouseleave', () => {
+        span.classList.remove('word-hover');
+        const tr = span.closest('tr');
+        tr.classList.add('space-hover');
+      });
     });
 
-    const pinyinCells = table.querySelectorAll('.row-pinyin td');
-    pinyinCells.forEach(cell => {
-      cell.style.cursor = 'pointer';
-      cell.addEventListener('click', (e) => {
+    const pinyinWords = table.querySelectorAll('.pinyin-word');
+    pinyinWords.forEach(span => {
+      span.addEventListener('click', (e) => {
         e.stopPropagation();
-        document.getElementById("search-query").value = Normalizer.normalizePinyin(cell.textContent);
+        document.getElementById("search-query").value = Normalizer.normalizePinyin(span.textContent);
         Search.currentType = "pinyin";
         Search.updateToggleButton();
         Nav.show("search");
         Search.performSearch();
       });
+      span.addEventListener('mouseenter', () => {
+        const tr = span.closest('tr');
+        tr.classList.remove('space-hover');
+        span.classList.add('word-hover');
+      });
+      span.addEventListener('mouseleave', () => {
+        span.classList.remove('word-hover');
+        const tr = span.closest('tr');
+        tr.classList.add('space-hover');
+      });
     });
 
-    const enWordsCells = table.querySelectorAll('.row-en-words td');
-    enWordsCells.forEach(cell => {
-      cell.style.cursor = 'pointer';
-      cell.addEventListener('click', (e) => {
+    const enWordSpans = table.querySelectorAll('.en-word');
+    enWordSpans.forEach(span => {
+      span.addEventListener('click', (e) => {
         e.stopPropagation();
-        document.getElementById("search-query").value = cell.textContent;
+        document.getElementById("search-query").value = span.textContent;
         Search.currentType = "english";
         Search.updateToggleButton();
         Nav.show("search");
         Search.performSearch();
       });
+      span.addEventListener('mouseenter', () => {
+        const tr = span.closest('tr');
+        tr.classList.remove('space-hover');
+        span.classList.add('word-hover');
+      });
+      span.addEventListener('mouseleave', () => {
+        span.classList.remove('word-hover');
+        const tr = span.closest('tr');
+        tr.classList.add('space-hover');
+      });
     });
 
-    // Add click handler for english text
-    englishText.style.cursor = 'pointer';
-    englishText.addEventListener('click', (e) => {
-      e.stopPropagation();
-      document.getElementById("search-query").value = englishText.textContent;
-      Search.currentType = "english";
-      Search.updateToggleButton();
-      Nav.show("search");
-      Search.performSearch();
-     });
+    // Add hover management for td padding (space between words)
+    const tableCells = table.querySelectorAll('td');
+    tableCells.forEach(td => {
+      const tr = td.closest('tr');
+      td.addEventListener('mouseenter', () => {
+        tr.classList.add('space-hover');
+      });
+    });
+
+    // Add click handler for whole expression search on td elements
+    tableCells.forEach(td => {
+      td.addEventListener('click', (e) => {
+        e.stopPropagation(); // Prevent bubbling to card-container flip handler
+        // Only handle if not clicking on word text
+        if (!e.target.classList.contains('word-text')) {
+          const hanziTokens = App.currentCard.hanzi.split(' ');
+          const query = hanziTokens.join(''); // Remove spaces for whole expression search
+          document.getElementById("search-query").value = query;
+          Search.currentType = "pinyin";
+          Search.updateToggleButton();
+          Nav.show("search");
+          Search.performSearch();
+        }
+      });
+    });
+
+    // Add hover management for space highlighting (additional coverage)
+    const tableRows = table.querySelectorAll('tr');
+    tableRows.forEach(tr => {
+      tr.addEventListener('mouseenter', () => {
+        tr.classList.add('space-hover');
+      });
+      tr.addEventListener('mouseleave', () => {
+        tr.classList.remove('space-hover');
+      });
+    });
 
      this.applyDirectionAndFlip();
   },
@@ -153,16 +206,7 @@ const Review = {
     progressBar.innerHTML = '';
 
     // Define segment border colors for gradient
-    // const SEGMENT_COLORS = ['#dc3545', '#fd7e14', '#ffc107', '#28a745', '#20c997', '#17a2b8', '#6f42c1'];
-    // const SEGMENT_COLORS = [
-    //   '#dc3545', // red
-    //   '#fd7e14', // orange
-    //   '#ffc107', // yellow
-    //   '#28a745', // green
-    //   '#1fa87a', // teal (darker + slightly bluish)
-    //   '#007bff', // blue (clean vivid)
-    //   '#8b3cf0', // purple (brighter & slightly lighter)
-    // ];
+    
     const SEGMENT_COLORS = [
       '#e63946', // vivid red (balanced brightness)
       '#f8961e', // orange (slightly deeper for even value)

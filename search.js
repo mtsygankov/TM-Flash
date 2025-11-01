@@ -65,12 +65,13 @@ const Search = {
     if (!App.currentCards) return [];
     return App.currentCards.filter((card) => {
       if (type === "pinyin") {
-        const lowerQuery = query.toLowerCase();
-        return !query || card.pinyin_normalized.includes(lowerQuery) || card.hanzi.includes(query);
+        const normalizedQuery = Normalizer.normalizePinyin(query).replace(/\s/g, '');
+        const normalizedPinyin = card.pinyin_normalized.replace(/\s/g, '');
+        const normalizedHanzi = card.hanzi.replace(/\s/g, '');
+        return !query || normalizedPinyin.includes(normalizedQuery) || normalizedHanzi.includes(normalizedQuery);
       } else if (type === "english") {
-        return (
-          !query || card.english.toLowerCase().includes(query.toLowerCase())
-        );
+        // Keep spaces for English search as words are separate
+        return !query || card.english.toLowerCase().includes(query.toLowerCase());
       }
       return false;
     });
