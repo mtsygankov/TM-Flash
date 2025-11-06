@@ -21,7 +21,8 @@
       "card_id": "hsk13_851144c2",
       "hanzi": "啊",
       "pinyin": "a",
-      "english": "ah",
+      "tones": "5",
+      "def": "ah",
       "pos": "aux.",
       "hsk": "HSK3",
       "tags": [
@@ -33,7 +34,8 @@
       "card_id": "hsk13_c60377d8",
       "hanzi": "阿 姨",
       "pinyin": "ā yí",
-      "english": "auntie [mother's younger sister]",
+      "tones": "12",
+      "def": "auntie [mother's younger sister]",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -45,7 +47,8 @@
       "card_id": "hsk13_c6d00d06",
       "hanzi": "矮",
       "pinyin": "ǎi",
-      "english": "short [height]",
+      "tones": "3",
+      "def": "short [height]",
       "pos": "adj.",
       "hsk": "HSK3",
       "tags": [
@@ -56,7 +59,8 @@
       "card_id": "hsk13_6db1f201",
       "hanzi": "爱",
       "pinyin": "ài",
-      "english": "to love",
+      "tones": "4",
+      "def": "to love",
       "pos": "verb",
       "hsk": "HSK1",
       "tags": [
@@ -69,7 +73,8 @@
       "card_id": "hsk13_bbf43dc0",
       "hanzi": "爱 好",
       "pinyin": "ài hào",
-      "english": "interests; hobbies",
+      "tones": "44",
+      "def": "interests; hobbies",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -81,7 +86,8 @@
       "card_id": "hsk13_00d61973",
       "hanzi": "安 静",
       "pinyin": "ān jìng",
-      "english": "to be quiet",
+      "tones": "14",
+      "def": "to be quiet",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -93,7 +99,8 @@
       "card_id": "hsk13_d0084be1",
       "hanzi": "八",
       "pinyin": "bā",
-      "english": "eight",
+      "tones": "1",
+      "def": "eight",
       "pos": "num.",
       "hsk": "HSK1",
       "tags": [
@@ -104,7 +111,8 @@
       "card_id": "hsk13_5a1f459f",
       "hanzi": "把",
       "pinyin": "bǎ",
-      "english": "grasp; [measure word for knives]",
+      "tones": "3",
+      "def": "grasp; [measure word for knives]",
       "pos": "prep.",
       "hsk": "HSK3",
       "tags": [
@@ -116,7 +124,8 @@
       "card_id": "hsk13_8540f426",
       "hanzi": "吧",
       "pinyin": "ba",
-      "english": "[makes a suggestion, eg. \"Let's …\")]",
+      "tones": "5",
+      "def": "[makes a suggestion, eg. \"Let's …\")]",
       "pos": "aux.",
       "hsk": "HSK2",
       "tags": [
@@ -128,7 +137,8 @@
       "card_id": "hsk13_984dee4a",
       "hanzi": "爸 爸",
       "pinyin": "bà ba",
-      "english": "father",
+      "tones": "45",
+      "def": "father",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -140,7 +150,8 @@
       "card_id": "hsk13_13340715",
       "hanzi": "白",
       "pinyin": "bái",
-      "english": "white",
+      "tones": "2",
+      "def": "white",
       "pos": "adj.",
       "hsk": "HSK2",
       "tags": [
@@ -151,7 +162,8 @@
       "card_id": "hsk13_d254104e",
       "hanzi": "百",
       "pinyin": "bǎi",
-      "english": "hundred",
+      "tones": "3",
+      "def": "hundred",
       "pos": "num.",
       "hsk": "HSK2",
       "tags": [
@@ -162,7 +174,8 @@
       "card_id": "hsk13_f4078ed1",
       "hanzi": "搬",
       "pinyin": "bān",
-      "english": "to move",
+      "tones": "1",
+      "def": "to move",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -174,7 +187,8 @@
       "card_id": "hsk13_dd08259c",
       "hanzi": "班",
       "pinyin": "bān",
-      "english": "class",
+      "tones": "1",
+      "def": "class",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -186,7 +200,8 @@
       "card_id": "hsk13_aa36fdb0",
       "hanzi": "半",
       "pinyin": "bàn",
-      "english": "half",
+      "tones": "4",
+      "def": "half",
       "pos": "num.",
       "hsk": "HSK3",
       "tags": [
@@ -198,7 +213,8 @@
       "card_id": "hsk13_acffc7f9",
       "hanzi": "办 法",
       "pinyin": "bàn fǎ",
-      "english": "way; method; solution",
+      "tones": "43",
+      "def": "way; method; solution",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -210,7 +226,8 @@
       "card_id": "hsk13_467d69f1",
       "hanzi": "办 公 室",
       "pinyin": "bàn gōng shì",
-      "english": "office",
+      "tones": "414",
+      "def": "office",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -223,7 +240,8 @@
       "card_id": "hsk13_3bb871dd",
       "hanzi": "帮 忙",
       "pinyin": "bāng máng",
-      "english": "lend a hand",
+      "tones": "12",
+      "def": "lend a hand",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -235,7 +253,8 @@
       "card_id": "hsk13_ae9939d2",
       "hanzi": "帮 助",
       "pinyin": "bāng zhù",
-      "english": "to help",
+      "tones": "14",
+      "def": "to help",
       "pos": "verb",
       "hsk": "HSK2",
       "tags": [
@@ -247,7 +266,8 @@
       "card_id": "hsk13_4b4a5bea",
       "hanzi": "包",
       "pinyin": "bāo",
-      "english": "a packet of; package",
+      "tones": "1",
+      "def": "a packet of; package",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -259,7 +279,8 @@
       "card_id": "hsk13_3288e7a7",
       "hanzi": "饱",
       "pinyin": "bǎo",
-      "english": "full up; eaten to one’s satisfaction",
+      "tones": "3",
+      "def": "full up; eaten to one’s satisfaction",
       "pos": "adj.",
       "hsk": "HSK3",
       "tags": [
@@ -271,7 +292,8 @@
       "card_id": "hsk13_908e8d37",
       "hanzi": "报 纸",
       "pinyin": "bào zhǐ",
-      "english": "newspaper",
+      "tones": "43",
+      "def": "newspaper",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -283,7 +305,8 @@
       "card_id": "hsk13_cfdb072a",
       "hanzi": "被",
       "pinyin": "bèi",
-      "english": "quilt; by (somebody/something)",
+      "tones": "4",
+      "def": "quilt; by (somebody/something)",
       "pos": "prep.",
       "hsk": "HSK3",
       "tags": [
@@ -294,7 +317,8 @@
       "card_id": "hsk13_a3a06027",
       "hanzi": "北 方",
       "pinyin": "běi fāng",
-      "english": "the north",
+      "tones": "31",
+      "def": "the north",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -306,7 +330,8 @@
       "card_id": "hsk13_28576186",
       "hanzi": "北 京",
       "pinyin": "běi jīng",
-      "english": "Beijing",
+      "tones": "31",
+      "def": "Beijing",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -318,7 +343,8 @@
       "card_id": "hsk13_06b1879a",
       "hanzi": "杯 子",
       "pinyin": "bēi zi",
-      "english": "cup; glass; mug",
+      "tones": "15",
+      "def": "cup; glass; mug",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -330,7 +356,8 @@
       "card_id": "hsk13_b84aa570",
       "hanzi": "本",
       "pinyin": "běn",
-      "english": "root; [measure word for books]",
+      "tones": "3",
+      "def": "root; [measure word for books]",
       "pos": "m.w.",
       "hsk": "HSK1",
       "tags": [
@@ -342,7 +369,8 @@
       "card_id": "hsk13_ff455447",
       "hanzi": "比",
       "pinyin": "bǐ",
-      "english": "to compare",
+      "tones": "3",
+      "def": "to compare",
       "pos": "prep.",
       "hsk": "HSK2",
       "tags": [
@@ -354,7 +382,8 @@
       "card_id": "hsk13_989eb7a4",
       "hanzi": "笔 记 本",
       "pinyin": "bǐ jì běn",
-      "english": "notebook",
+      "tones": "343",
+      "def": "notebook",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -366,7 +395,8 @@
       "card_id": "hsk13_c7d42e02",
       "hanzi": "比 较",
       "pinyin": "bǐ jiào",
-      "english": "compare",
+      "tones": "34",
+      "def": "compare",
       "pos": "adv.",
       "hsk": "HSK3",
       "tags": [
@@ -378,7 +408,8 @@
       "card_id": "hsk13_cfcf1c56",
       "hanzi": "比 赛",
       "pinyin": "bǐ sài",
-      "english": "competition; match",
+      "tones": "34",
+      "def": "competition; match",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -390,7 +421,8 @@
       "card_id": "hsk13_cffde6ac",
       "hanzi": "必 须",
       "pinyin": "bì xū",
-      "english": "must",
+      "tones": "41",
+      "def": "must",
       "pos": "adv.",
       "hsk": "HSK3",
       "tags": [
@@ -402,7 +434,8 @@
       "card_id": "hsk13_0d049eda",
       "hanzi": "鼻 子",
       "pinyin": "bí zi",
-      "english": "nose",
+      "tones": "25",
+      "def": "nose",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -414,7 +447,8 @@
       "card_id": "hsk13_77474dec",
       "hanzi": "变 化",
       "pinyin": "biàn huà",
-      "english": "change",
+      "tones": "44",
+      "def": "change",
       "pos": "noun / verb",
       "hsk": "HSK3",
       "tags": [
@@ -426,7 +460,8 @@
       "card_id": "hsk13_daf6ae5d",
       "hanzi": "别",
       "pinyin": "bié",
-      "english": "separate",
+      "tones": "2",
+      "def": "separate",
       "pos": "adv.",
       "hsk": "HSK2",
       "tags": [
@@ -438,7 +473,8 @@
       "card_id": "hsk13_8435b9a5",
       "hanzi": "别 人",
       "pinyin": "bié ren",
-      "english": "other people",
+      "tones": "25",
+      "def": "other people",
       "pos": "pron.",
       "hsk": "HSK3",
       "tags": [
@@ -450,7 +486,8 @@
       "card_id": "hsk13_5b0f21cc",
       "hanzi": "宾 馆",
       "pinyin": "bīn guǎn",
-      "english": "guesthouse",
+      "tones": "13",
+      "def": "guesthouse",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -463,7 +500,8 @@
       "card_id": "hsk13_95885a3d",
       "hanzi": "冰 箱",
       "pinyin": "bīng xiāng",
-      "english": "fridge",
+      "tones": "11",
+      "def": "fridge",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -475,7 +513,8 @@
       "card_id": "hsk13_4d22051c",
       "hanzi": "不",
       "pinyin": "bù",
-      "english": "not; no",
+      "tones": "4",
+      "def": "not; no",
       "pos": "adv.",
       "hsk": "HSK1",
       "tags": [
@@ -486,7 +525,8 @@
       "card_id": "hsk13_2bc2aa29",
       "hanzi": "不 但 … 而 且 …",
       "pinyin": "bù dàn … ér qiě …",
-      "english": "not only……but also……",
+      "tones": "445235",
+      "def": "not only……but also……",
       "pos": "conj.",
       "hsk": "HSK3",
       "tags": [
@@ -497,7 +537,8 @@
       "card_id": "hsk13_6cdc5cca",
       "hanzi": "不 客 气",
       "pinyin": "bú kè qi",
-      "english": "you're welcome; impolite",
+      "tones": "245",
+      "def": "you're welcome; impolite",
       "pos": "--",
       "hsk": "HSK1",
       "tags": [
@@ -509,7 +550,8 @@
       "card_id": "hsk13_56768243",
       "hanzi": "菜",
       "pinyin": "cài",
-      "english": "vegetable",
+      "tones": "4",
+      "def": "vegetable",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -522,7 +564,8 @@
       "card_id": "hsk13_cab53c8a",
       "hanzi": "菜 单",
       "pinyin": "cài dān",
-      "english": "menu",
+      "tones": "41",
+      "def": "menu",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -534,7 +577,8 @@
       "card_id": "hsk13_085d39f3",
       "hanzi": "参 加",
       "pinyin": "cān jiā",
-      "english": "to take part",
+      "tones": "11",
+      "def": "to take part",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -546,7 +590,8 @@
       "card_id": "hsk13_9198921a",
       "hanzi": "草",
       "pinyin": "cǎo",
-      "english": "grass",
+      "tones": "3",
+      "def": "grass",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -558,7 +603,8 @@
       "card_id": "hsk13_4814058f",
       "hanzi": "层",
       "pinyin": "céng",
-      "english": "storey",
+      "tones": "2",
+      "def": "storey",
       "pos": "m.w.",
       "hsk": "HSK3",
       "tags": [
@@ -570,7 +616,8 @@
       "card_id": "hsk13_8f6c4dc9",
       "hanzi": "茶",
       "pinyin": "chá",
-      "english": "tea",
+      "tones": "2",
+      "def": "tea",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -582,7 +629,8 @@
       "card_id": "hsk13_cdbb1749",
       "hanzi": "差",
       "pinyin": "chà",
-      "english": "lack; lacking",
+      "tones": "4",
+      "def": "lack; lacking",
       "pos": "verb / adj.",
       "hsk": "HSK3",
       "tags": [
@@ -594,7 +642,8 @@
       "card_id": "hsk13_fe3147c1",
       "hanzi": "长",
       "pinyin": "cháng",
-      "english": "long",
+      "tones": "2",
+      "def": "long",
       "pos": "adj.",
       "hsk": "HSK2",
       "tags": [
@@ -605,7 +654,8 @@
       "card_id": "hsk13_aeca8650",
       "hanzi": "尝",
       "pinyin": "cháng",
-      "english": "taste",
+      "tones": "2",
+      "def": "taste",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -617,7 +667,8 @@
       "card_id": "hsk13_9691874b",
       "hanzi": "唱 歌",
       "pinyin": "chàng gē",
-      "english": "to sing; singing",
+      "tones": "41",
+      "def": "to sing; singing",
       "pos": "verb",
       "hsk": "HSK2",
       "tags": [
@@ -629,7 +680,8 @@
       "card_id": "hsk13_1cc71db7",
       "hanzi": "超 市",
       "pinyin": "chāo shì",
-      "english": "supermarket",
+      "tones": "14",
+      "def": "supermarket",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -642,7 +694,8 @@
       "card_id": "hsk13_14eb2c88",
       "hanzi": "衬 衫",
       "pinyin": "chèn shān",
-      "english": "shirt",
+      "tones": "41",
+      "def": "shirt",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -654,7 +707,8 @@
       "card_id": "hsk13_b3ff1545",
       "hanzi": "成 绩",
       "pinyin": "chéng jì",
-      "english": "results; marks; achievement",
+      "tones": "24",
+      "def": "results; marks; achievement",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -666,7 +720,8 @@
       "card_id": "hsk13_a482065a",
       "hanzi": "城 市",
       "pinyin": "chéng shì",
-      "english": "city",
+      "tones": "24",
+      "def": "city",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -678,7 +733,8 @@
       "card_id": "hsk13_75f0668c",
       "hanzi": "吃",
       "pinyin": "chī",
-      "english": "to eat",
+      "tones": "1",
+      "def": "to eat",
       "pos": "verb",
       "hsk": "HSK1",
       "tags": [
@@ -690,7 +746,8 @@
       "card_id": "hsk13_6338cc05",
       "hanzi": "迟 到",
       "pinyin": "chí dào",
-      "english": "arrive late",
+      "tones": "24",
+      "def": "arrive late",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -703,7 +760,8 @@
       "card_id": "hsk13_c2822cc3",
       "hanzi": "出",
       "pinyin": "chū",
-      "english": "to go out",
+      "tones": "1",
+      "def": "to go out",
       "pos": "verb",
       "hsk": "HSK2",
       "tags": [
@@ -715,7 +773,8 @@
       "card_id": "hsk13_ca04326d",
       "hanzi": "除 了",
       "pinyin": "chú le",
-      "english": "apart from (\"chule...yiwai\" construction)",
+      "tones": "25",
+      "def": "apart from (\"chule...yiwai\" construction)",
       "pos": "prep.",
       "hsk": "HSK3",
       "tags": [
@@ -726,7 +785,8 @@
       "card_id": "hsk13_ebba5731",
       "hanzi": "出 租 车",
       "pinyin": "chū zū chē",
-      "english": "taxi",
+      "tones": "111",
+      "def": "taxi",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -739,7 +799,8 @@
       "card_id": "hsk13_e0256e9d",
       "hanzi": "穿",
       "pinyin": "chuān",
-      "english": "to wear; to put on",
+      "tones": "1",
+      "def": "to wear; to put on",
       "pos": "verb",
       "hsk": "HSK2",
       "tags": [
@@ -751,7 +812,8 @@
       "card_id": "hsk13_f136b5dc",
       "hanzi": "船",
       "pinyin": "chuán",
-      "english": "boat; ship; ferry",
+      "tones": "2",
+      "def": "boat; ship; ferry",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -764,7 +826,8 @@
       "card_id": "hsk13_483bff31",
       "hanzi": "春",
       "pinyin": "chūn",
-      "english": "spring",
+      "tones": "1",
+      "def": "spring",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -776,7 +839,8 @@
       "card_id": "hsk13_c075f4c8",
       "hanzi": "次",
       "pinyin": "cì",
-      "english": "time",
+      "tones": "4",
+      "def": "time",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -789,7 +853,8 @@
       "card_id": "hsk13_f217eed7",
       "hanzi": "词 典",
       "pinyin": "cí diǎn",
-      "english": "dictionary",
+      "tones": "23",
+      "def": "dictionary",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -801,7 +866,8 @@
       "card_id": "hsk13_c20abcd3",
       "hanzi": "从",
       "pinyin": "cóng",
-      "english": "from; follow; comply with",
+      "tones": "2",
+      "def": "from; follow; comply with",
       "pos": "prep.",
       "hsk": "HSK2",
       "tags": [
@@ -812,7 +878,8 @@
       "card_id": "hsk13_c5c92156",
       "hanzi": "聪 明",
       "pinyin": "cōng ming",
-      "english": "clever; intelligent",
+      "tones": "15",
+      "def": "clever; intelligent",
       "pos": "adj.",
       "hsk": "HSK3",
       "tags": [
@@ -823,7 +890,8 @@
       "card_id": "hsk13_3da23c4f",
       "hanzi": "错",
       "pinyin": "cuò",
-      "english": "wrong",
+      "tones": "4",
+      "def": "wrong",
       "pos": "adj.",
       "hsk": "HSK2",
       "tags": [
@@ -834,7 +902,8 @@
       "card_id": "hsk13_4ea102de",
       "hanzi": "大",
       "pinyin": "dà",
-      "english": "big",
+      "tones": "4",
+      "def": "big",
       "pos": "adj.",
       "hsk": "HSK1",
       "tags": [
@@ -845,7 +914,8 @@
       "card_id": "hsk13_fbfc24de",
       "hanzi": "打 电 话",
       "pinyin": "dǎ diàn huà",
-      "english": "to make a telephone call",
+      "tones": "344",
+      "def": "to make a telephone call",
       "pos": "--",
       "hsk": "HSK1",
       "tags": [
@@ -857,7 +927,8 @@
       "card_id": "hsk13_b3646003",
       "hanzi": "大 家",
       "pinyin": "dà jiā",
-      "english": "everybody",
+      "tones": "41",
+      "def": "everybody",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -870,7 +941,8 @@
       "card_id": "hsk13_3710c225",
       "hanzi": "打 篮 球",
       "pinyin": "dǎ lán qiú",
-      "english": "play basketball",
+      "tones": "322",
+      "def": "play basketball",
       "pos": "--",
       "hsk": "HSK2",
       "tags": [
@@ -882,7 +954,8 @@
       "card_id": "hsk13_c736ac0c",
       "hanzi": "打 扫",
       "pinyin": "dǎ sǎo",
-      "english": "to clean",
+      "tones": "33",
+      "def": "to clean",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -894,7 +967,8 @@
       "card_id": "hsk13_9cd5b12b",
       "hanzi": "打 算",
       "pinyin": "dǎ suàn",
-      "english": "plan; intention",
+      "tones": "34",
+      "def": "plan; intention",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -906,7 +980,8 @@
       "card_id": "hsk13_8c7d1f42",
       "hanzi": "带",
       "pinyin": "dài",
-      "english": "carry",
+      "tones": "4",
+      "def": "carry",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -918,7 +993,8 @@
       "card_id": "hsk13_b04f8186",
       "hanzi": "蛋 糕",
       "pinyin": "dàn gāo",
-      "english": "cake",
+      "tones": "41",
+      "def": "cake",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -930,7 +1006,8 @@
       "card_id": "hsk13_c63edde3",
       "hanzi": "担 心",
       "pinyin": "dān xīn",
-      "english": "worry",
+      "tones": "11",
+      "def": "worry",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -942,7 +1019,8 @@
       "card_id": "hsk13_35bc08f5",
       "hanzi": "当 然",
       "pinyin": "dāng rán",
-      "english": "of course",
+      "tones": "12",
+      "def": "of course",
       "pos": "adv.",
       "hsk": "HSK3",
       "tags": [
@@ -954,7 +1032,8 @@
       "card_id": "hsk13_69efe645",
       "hanzi": "到",
       "pinyin": "dào",
-      "english": "to arrive; to get to",
+      "tones": "4",
+      "def": "to arrive; to get to",
       "pos": "verb",
       "hsk": "HSK2",
       "tags": [
@@ -966,7 +1045,8 @@
       "card_id": "hsk13_ba16581f",
       "hanzi": "得",
       "pinyin": "de",
-      "english": "[particle to connect verb to adverb]",
+      "tones": "5",
+      "def": "[particle to connect verb to adverb]",
       "pos": "aux.",
       "hsk": "HSK2",
       "tags": [
@@ -977,7 +1057,8 @@
       "card_id": "hsk13_8bc5dad0",
       "hanzi": "地",
       "pinyin": "de",
-      "english": "...ly [particle to connect adverb to verb]",
+      "tones": "5",
+      "def": "...ly [particle to connect adverb to verb]",
       "pos": "aux.",
       "hsk": "HSK3",
       "tags": [
@@ -988,7 +1069,8 @@
       "card_id": "hsk13_425d8e3b",
       "hanzi": "的",
       "pinyin": "de",
-      "english": "of",
+      "tones": "5",
+      "def": "of",
       "pos": "aux.",
       "hsk": "HSK1",
       "tags": [
@@ -999,7 +1081,8 @@
       "card_id": "hsk13_a1f4673a",
       "hanzi": "灯",
       "pinyin": "dēng",
-      "english": "lamp",
+      "tones": "1",
+      "def": "lamp",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -1011,7 +1094,8 @@
       "card_id": "hsk13_d6845d50",
       "hanzi": "等",
       "pinyin": "děng",
-      "english": "wait",
+      "tones": "3",
+      "def": "wait",
       "pos": "verb",
       "hsk": "HSK2",
       "tags": [
@@ -1023,7 +1107,8 @@
       "card_id": "hsk13_d91bfc36",
       "hanzi": "弟 弟",
       "pinyin": "dì di",
-      "english": "younger brother",
+      "tones": "45",
+      "def": "younger brother",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -1035,7 +1120,8 @@
       "card_id": "hsk13_1110963a",
       "hanzi": "地 方",
       "pinyin": "dì fang",
-      "english": "place",
+      "tones": "45",
+      "def": "place",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -1048,7 +1134,8 @@
       "card_id": "hsk13_09d0a9f5",
       "hanzi": "地 铁",
       "pinyin": "dì tiě",
-      "english": "underground train; tube; metro",
+      "tones": "43",
+      "def": "underground train; tube; metro",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -1061,7 +1148,8 @@
       "card_id": "hsk13_05f63a2e",
       "hanzi": "地 图",
       "pinyin": "dì tú",
-      "english": "map",
+      "tones": "42",
+      "def": "map",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -1074,7 +1162,8 @@
       "card_id": "hsk13_8cf0b9e1",
       "hanzi": "第 一",
       "pinyin": "dì yī",
-      "english": "firstly",
+      "tones": "41",
+      "def": "firstly",
       "pos": "num.",
       "hsk": "HSK2",
       "tags": [
@@ -1086,7 +1175,8 @@
       "card_id": "hsk13_859c868b",
       "hanzi": "点",
       "pinyin": "diǎn",
-      "english": "o’clock; spot; dot",
+      "tones": "3",
+      "def": "o’clock; spot; dot",
       "pos": "m.w.",
       "hsk": "HSK1",
       "tags": [
@@ -1099,7 +1189,8 @@
       "card_id": "hsk13_40f671b4",
       "hanzi": "电 脑",
       "pinyin": "diàn nǎo",
-      "english": "computer",
+      "tones": "43",
+      "def": "computer",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -1111,7 +1202,8 @@
       "card_id": "hsk13_1b234713",
       "hanzi": "电 视",
       "pinyin": "diàn shì",
-      "english": "TV",
+      "tones": "44",
+      "def": "TV",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -1123,7 +1215,8 @@
       "card_id": "hsk13_d2728bed",
       "hanzi": "电 梯",
       "pinyin": "diàn tī",
-      "english": "lift; elevator",
+      "tones": "41",
+      "def": "lift; elevator",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -1136,7 +1229,8 @@
       "card_id": "hsk13_b7b1b746",
       "hanzi": "电 影",
       "pinyin": "diàn yǐng",
-      "english": "film; movie",
+      "tones": "43",
+      "def": "film; movie",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -1148,7 +1242,8 @@
       "card_id": "hsk13_840e9caa",
       "hanzi": "电 子 邮 件",
       "pinyin": "diàn zǐ yóu jiàn",
-      "english": "email",
+      "tones": "4324",
+      "def": "email",
       "pos": "--",
       "hsk": "HSK3",
       "tags": [
@@ -1160,7 +1255,8 @@
       "card_id": "hsk13_9e3fada2",
       "hanzi": "东",
       "pinyin": "dōng",
-      "english": "east",
+      "tones": "1",
+      "def": "east",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -1171,7 +1267,8 @@
       "card_id": "hsk13_b3b185be",
       "hanzi": "冬",
       "pinyin": "dōng",
-      "english": "winter",
+      "tones": "1",
+      "def": "winter",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -1183,7 +1280,8 @@
       "card_id": "hsk13_4c089bf6",
       "hanzi": "懂",
       "pinyin": "dǒng",
-      "english": "to understand",
+      "tones": "3",
+      "def": "to understand",
       "pos": "verb",
       "hsk": "HSK2",
       "tags": [
@@ -1195,7 +1293,8 @@
       "card_id": "hsk13_c96b12ba",
       "hanzi": "动 物",
       "pinyin": "dòng wù",
-      "english": "animals",
+      "tones": "44",
+      "def": "animals",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -1207,7 +1306,8 @@
       "card_id": "hsk13_2f3afa6a",
       "hanzi": "东 西",
       "pinyin": "dōng xi",
-      "english": "thing",
+      "tones": "15",
+      "def": "thing",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -1219,7 +1319,8 @@
       "card_id": "hsk13_a68be0ca",
       "hanzi": "都",
       "pinyin": "dōu",
-      "english": "both; all",
+      "tones": "1",
+      "def": "both; all",
       "pos": "adv.",
       "hsk": "HSK1",
       "tags": [
@@ -1231,7 +1332,8 @@
       "card_id": "hsk13_6e66ada3",
       "hanzi": "读",
       "pinyin": "dú",
-      "english": "read aloud",
+      "tones": "2",
+      "def": "read aloud",
       "pos": "verb",
       "hsk": "HSK1",
       "tags": [
@@ -1243,7 +1345,8 @@
       "card_id": "hsk13_22765e03",
       "hanzi": "短",
       "pinyin": "duǎn",
-      "english": "short",
+      "tones": "3",
+      "def": "short",
       "pos": "adj.",
       "hsk": "HSK3",
       "tags": [
@@ -1254,7 +1357,8 @@
       "card_id": "hsk13_e0ffa7b2",
       "hanzi": "段",
       "pinyin": "duàn",
-      "english": "section; paragraph; [measure word for stories, pieces of music, recordings etc.]",
+      "tones": "4",
+      "def": "section; paragraph; [measure word for stories, pieces of music, recordings etc.]",
       "pos": "m.w.",
       "hsk": "HSK3",
       "tags": [
@@ -1266,7 +1370,8 @@
       "card_id": "hsk13_cddcf5bb",
       "hanzi": "锻 炼",
       "pinyin": "duàn liàn",
-      "english": "to engage in physical exercise",
+      "tones": "44",
+      "def": "to engage in physical exercise",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -1278,7 +1383,8 @@
       "card_id": "hsk13_5f586cc3",
       "hanzi": "对",
       "pinyin": "duì",
-      "english": "correct; right",
+      "tones": "4",
+      "def": "correct; right",
       "pos": "prep. / adj.",
       "hsk": "HSK2",
       "tags": [
@@ -1290,7 +1396,8 @@
       "card_id": "hsk13_5b937e76",
       "hanzi": "对 不 起",
       "pinyin": "duì bu qǐ",
-      "english": "sorry",
+      "tones": "453",
+      "def": "sorry",
       "pos": "verb",
       "hsk": "HSK1",
       "tags": [
@@ -1302,7 +1409,8 @@
       "card_id": "hsk13_18c377dc",
       "hanzi": "多",
       "pinyin": "duō",
-      "english": "much/many; how [+adjective]",
+      "tones": "1",
+      "def": "much/many; how [+adjective]",
       "pos": "adj. / pron.",
       "hsk": "HSK1",
       "tags": [
@@ -1315,7 +1423,8 @@
       "card_id": "hsk13_341c6b06",
       "hanzi": "多 么",
       "pinyin": "duō me",
-      "english": "how ...",
+      "tones": "15",
+      "def": "how ...",
       "pos": "adv.",
       "hsk": "HSK3",
       "tags": [
@@ -1327,7 +1436,8 @@
       "card_id": "hsk13_f1c6c3fe",
       "hanzi": "多 少",
       "pinyin": "duō shǎo",
-      "english": "how much/many?",
+      "tones": "13",
+      "def": "how much/many?",
       "pos": "pron.",
       "hsk": "HSK1",
       "tags": [
@@ -1340,7 +1450,8 @@
       "card_id": "hsk13_8a6b30b4",
       "hanzi": "饿",
       "pinyin": "è",
-      "english": "hungry",
+      "tones": "4",
+      "def": "hungry",
       "pos": "adj.",
       "hsk": "HSK3",
       "tags": [
@@ -1352,7 +1463,8 @@
       "card_id": "hsk13_bd5d7e47",
       "hanzi": "二",
       "pinyin": "èr",
-      "english": "two",
+      "tones": "4",
+      "def": "two",
       "pos": "num.",
       "hsk": "HSK1",
       "tags": [
@@ -1363,7 +1475,8 @@
       "card_id": "hsk13_ad925e08",
       "hanzi": "耳 朵",
       "pinyin": "ěr duo",
-      "english": "ears",
+      "tones": "35",
+      "def": "ears",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -1375,7 +1488,8 @@
       "card_id": "hsk13_08870ec3",
       "hanzi": "儿 子",
       "pinyin": "ér zi",
-      "english": "son",
+      "tones": "25",
+      "def": "son",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -1387,7 +1501,8 @@
       "card_id": "hsk13_e5878ca3",
       "hanzi": "发",
       "pinyin": "fā",
-      "english": "to send (an email)",
+      "tones": "1",
+      "def": "to send (an email)",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -1399,7 +1514,8 @@
       "card_id": "hsk13_7763ea3b",
       "hanzi": "发 烧",
       "pinyin": "fā shāo",
-      "english": "fever; have a fever",
+      "tones": "11",
+      "def": "fever; have a fever",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -1411,7 +1527,8 @@
       "card_id": "hsk13_ef4f2704",
       "hanzi": "发 现",
       "pinyin": "fā xiàn",
-      "english": "discover",
+      "tones": "14",
+      "def": "discover",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -1423,7 +1540,8 @@
       "card_id": "hsk13_c516eba1",
       "hanzi": "饭 店",
       "pinyin": "fàn diàn",
-      "english": "restaurant",
+      "tones": "44",
+      "def": "restaurant",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -1436,7 +1554,8 @@
       "card_id": "hsk13_3eb41009",
       "hanzi": "放",
       "pinyin": "fàng",
-      "english": "to put; set free",
+      "tones": "4",
+      "def": "to put; set free",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -1448,7 +1567,8 @@
       "card_id": "hsk13_55cc51b9",
       "hanzi": "方 便",
       "pinyin": "fāng biàn",
-      "english": "convenient",
+      "tones": "14",
+      "def": "convenient",
       "pos": "adj.",
       "hsk": "HSK3",
       "tags": [
@@ -1460,7 +1580,8 @@
       "card_id": "hsk13_429c26bb",
       "hanzi": "房 间",
       "pinyin": "fáng jiān",
-      "english": "room",
+      "tones": "21",
+      "def": "room",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -1473,7 +1594,8 @@
       "card_id": "hsk13_e57b147f",
       "hanzi": "放 心",
       "pinyin": "fàng xīn",
-      "english": "relax; feel relieved",
+      "tones": "41",
+      "def": "relax; feel relieved",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -1486,7 +1608,8 @@
       "card_id": "hsk13_49344515",
       "hanzi": "非 常",
       "pinyin": "fēi cháng",
-      "english": "extremely",
+      "tones": "12",
+      "def": "extremely",
       "pos": "adv.",
       "hsk": "HSK2",
       "tags": [
@@ -1497,7 +1620,8 @@
       "card_id": "hsk13_10a514f7",
       "hanzi": "飞 机",
       "pinyin": "fēi jī",
-      "english": "plane",
+      "tones": "11",
+      "def": "plane",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -1510,7 +1634,8 @@
       "card_id": "hsk13_afd654d4",
       "hanzi": "分",
       "pinyin": "fēn",
-      "english": "minute",
+      "tones": "1",
+      "def": "minute",
       "pos": "m.w. / verb",
       "hsk": "HSK3",
       "tags": [
@@ -1523,7 +1648,8 @@
       "card_id": "hsk13_42a3ff03",
       "hanzi": "分 钟",
       "pinyin": "fēn zhōng",
-      "english": "minute",
+      "tones": "11",
+      "def": "minute",
       "pos": "m.w.",
       "hsk": "HSK1",
       "tags": [
@@ -1536,7 +1662,8 @@
       "card_id": "hsk13_225e86e7",
       "hanzi": "附 近",
       "pinyin": "fù jìn",
-      "english": "nearby",
+      "tones": "44",
+      "def": "nearby",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -1548,7 +1675,8 @@
       "card_id": "hsk13_d091a433",
       "hanzi": "服 务 员",
       "pinyin": "fú wù yuán",
-      "english": "waiter/waitress; attendant",
+      "tones": "242",
+      "def": "waiter/waitress; attendant",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -1560,7 +1688,8 @@
       "card_id": "hsk13_363322bd",
       "hanzi": "复 习",
       "pinyin": "fù xí",
-      "english": "revise",
+      "tones": "42",
+      "def": "revise",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -1572,7 +1701,8 @@
       "card_id": "hsk13_ab1ccc50",
       "hanzi": "干 净",
       "pinyin": "gān jìng",
-      "english": "clean",
+      "tones": "14",
+      "def": "clean",
       "pos": "adj.",
       "hsk": "HSK3",
       "tags": [
@@ -1584,7 +1714,8 @@
       "card_id": "hsk13_5d15e672",
       "hanzi": "感 冒",
       "pinyin": "gǎn mào",
-      "english": "to catch a cold",
+      "tones": "34",
+      "def": "to catch a cold",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -1596,7 +1727,8 @@
       "card_id": "hsk13_dab8c6b0",
       "hanzi": "感 兴 趣",
       "pinyin": "gǎn xìng qù",
-      "english": "to be interested (in)",
+      "tones": "344",
+      "def": "to be interested (in)",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -1608,7 +1740,8 @@
       "card_id": "hsk13_0dc6c1b7",
       "hanzi": "刚 才",
       "pinyin": "gāng cái",
-      "english": "just now",
+      "tones": "12",
+      "def": "just now",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -1620,7 +1753,8 @@
       "card_id": "hsk13_f71cb01c",
       "hanzi": "高",
       "pinyin": "gāo",
-      "english": "high; tall",
+      "tones": "1",
+      "def": "high; tall",
       "pos": "adj.",
       "hsk": "HSK2",
       "tags": [
@@ -1631,7 +1765,8 @@
       "card_id": "hsk13_b0938a83",
       "hanzi": "告 诉",
       "pinyin": "gào su",
-      "english": "to tell",
+      "tones": "45",
+      "def": "to tell",
       "pos": "verb",
       "hsk": "HSK2",
       "tags": [
@@ -1643,7 +1778,8 @@
       "card_id": "hsk13_c8b46669",
       "hanzi": "高 兴",
       "pinyin": "gāo xìng",
-      "english": "pleased; happy",
+      "tones": "14",
+      "def": "pleased; happy",
       "pos": "adj.",
       "hsk": "HSK1",
       "tags": [
@@ -1655,7 +1791,8 @@
       "card_id": "hsk13_4bcafacc",
       "hanzi": "个",
       "pinyin": "gè",
-      "english": "individual; [general measure word]",
+      "tones": "4",
+      "def": "individual; [general measure word]",
       "pos": "m.w.",
       "hsk": "HSK1",
       "tags": [
@@ -1667,7 +1804,8 @@
       "card_id": "hsk13_702d5857",
       "hanzi": "哥 哥",
       "pinyin": "gē ge",
-      "english": "elder brother",
+      "tones": "15",
+      "def": "elder brother",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -1679,7 +1817,8 @@
       "card_id": "hsk13_cc1a26ae",
       "hanzi": "个 子",
       "pinyin": "gè zi",
-      "english": "height; stature",
+      "tones": "45",
+      "def": "height; stature",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -1692,7 +1831,8 @@
       "card_id": "hsk13_c8d5f7a8",
       "hanzi": "给",
       "pinyin": "gěi",
-      "english": "to give",
+      "tones": "3",
+      "def": "to give",
       "pos": "verb",
       "hsk": "HSK2",
       "tags": [
@@ -1704,7 +1844,8 @@
       "card_id": "hsk13_d400ff71",
       "hanzi": "跟",
       "pinyin": "gēn",
-      "english": "with",
+      "tones": "1",
+      "def": "with",
       "pos": "prep.",
       "hsk": "HSK3",
       "tags": [
@@ -1715,7 +1856,8 @@
       "card_id": "hsk13_ee0839e5",
       "hanzi": "根 据",
       "pinyin": "gēn jù",
-      "english": "according to",
+      "tones": "14",
+      "def": "according to",
       "pos": "prep. / noun",
       "hsk": "HSK3",
       "tags": [
@@ -1726,7 +1868,8 @@
       "card_id": "hsk13_455c086b",
       "hanzi": "更",
       "pinyin": "gèng",
-      "english": "even more",
+      "tones": "4",
+      "def": "even more",
       "pos": "adv.",
       "hsk": "HSK3",
       "tags": [
@@ -1738,7 +1881,8 @@
       "card_id": "hsk13_ae214572",
       "hanzi": "公 共 汽 车",
       "pinyin": "gōng gòng qì chē",
-      "english": "bus",
+      "tones": "1441",
+      "def": "bus",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -1751,7 +1895,8 @@
       "card_id": "hsk13_4f61361d",
       "hanzi": "公 斤",
       "pinyin": "gōng jīn",
-      "english": "kilogram",
+      "tones": "11",
+      "def": "kilogram",
       "pos": "m.w.",
       "hsk": "HSK3",
       "tags": [
@@ -1763,7 +1908,8 @@
       "card_id": "hsk13_a3752061",
       "hanzi": "公 司",
       "pinyin": "gōng sī",
-      "english": "company; office",
+      "tones": "11",
+      "def": "company; office",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -1776,7 +1922,8 @@
       "card_id": "hsk13_3ae80bd0",
       "hanzi": "公 园",
       "pinyin": "gōng yuán",
-      "english": "park",
+      "tones": "12",
+      "def": "park",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -1789,7 +1936,8 @@
       "card_id": "hsk13_0b118092",
       "hanzi": "工 作",
       "pinyin": "gōng zuò",
-      "english": "job; work",
+      "tones": "14",
+      "def": "job; work",
       "pos": "noun / verb",
       "hsk": "HSK1",
       "tags": [
@@ -1801,7 +1949,8 @@
       "card_id": "hsk13_a8a6fc9a",
       "hanzi": "狗",
       "pinyin": "gǒu",
-      "english": "dog",
+      "tones": "3",
+      "def": "dog",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -1813,7 +1962,8 @@
       "card_id": "hsk13_9018fbcb",
       "hanzi": "故 事",
       "pinyin": "gù shi",
-      "english": "story; tale; plot",
+      "tones": "45",
+      "def": "story; tale; plot",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -1826,7 +1976,8 @@
       "card_id": "hsk13_c569dbae",
       "hanzi": "刮 风",
       "pinyin": "guā fēng",
-      "english": "windy",
+      "tones": "11",
+      "def": "windy",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -1839,7 +1990,8 @@
       "card_id": "hsk13_dcaa3896",
       "hanzi": "关",
       "pinyin": "guān",
-      "english": "to close",
+      "tones": "1",
+      "def": "to close",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -1851,7 +2003,8 @@
       "card_id": "hsk13_ade67a92",
       "hanzi": "关 系",
       "pinyin": "guān xì",
-      "english": "relationship",
+      "tones": "14",
+      "def": "relationship",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -1864,7 +2017,8 @@
       "card_id": "hsk13_8e5e4f41",
       "hanzi": "关 心",
       "pinyin": "guān xīn",
-      "english": "care about",
+      "tones": "11",
+      "def": "care about",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -1877,7 +2031,8 @@
       "card_id": "hsk13_c0f6fc7d",
       "hanzi": "关 于",
       "pinyin": "guān yú",
-      "english": "about",
+      "tones": "12",
+      "def": "about",
       "pos": "prep.",
       "hsk": "HSK3",
       "tags": [
@@ -1888,7 +2043,8 @@
       "card_id": "hsk13_f301f3f7",
       "hanzi": "贵",
       "pinyin": "guì",
-      "english": "expensive",
+      "tones": "4",
+      "def": "expensive",
       "pos": "adj.",
       "hsk": "HSK2",
       "tags": [
@@ -1899,7 +2055,8 @@
       "card_id": "hsk13_8b7ba5ed",
       "hanzi": "过",
       "pinyin": "guò",
-      "english": "[marker after a verb to indicate experience]",
+      "tones": "4",
+      "def": "[marker after a verb to indicate experience]",
       "pos": "aux.",
       "hsk": "HSK2",
       "tags": [
@@ -1910,7 +2067,8 @@
       "card_id": "hsk13_a76acdc6",
       "hanzi": "过",
       "pinyin": "guò",
-      "english": "to celebrate (a birthday)",
+      "tones": "4",
+      "def": "to celebrate (a birthday)",
       "pos": "verb",
       "hsk": "HSK2",
       "tags": [
@@ -1922,7 +2080,8 @@
       "card_id": "hsk13_7df6a1b8",
       "hanzi": "国 家",
       "pinyin": "guó jiā",
-      "english": "country",
+      "tones": "21",
+      "def": "country",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -1935,7 +2094,8 @@
       "card_id": "hsk13_708a2de9",
       "hanzi": "过 去",
       "pinyin": "guò qu",
-      "english": "(in the) past",
+      "tones": "45",
+      "def": "(in the) past",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -1947,7 +2107,8 @@
       "card_id": "hsk13_3645ba09",
       "hanzi": "还",
       "pinyin": "hái",
-      "english": "even",
+      "tones": "2",
+      "def": "even",
       "pos": "adv.",
       "hsk": "HSK2",
       "tags": [
@@ -1959,7 +2120,8 @@
       "card_id": "hsk13_cbc0a63b",
       "hanzi": "害 怕",
       "pinyin": "hài pà",
-      "english": "afraid",
+      "tones": "44",
+      "def": "afraid",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -1971,7 +2133,8 @@
       "card_id": "hsk13_b23f7d22",
       "hanzi": "还 是",
       "pinyin": "hái shì",
-      "english": "...or...? [in a question]",
+      "tones": "24",
+      "def": "...or...? [in a question]",
       "pos": "adv. / link.",
       "hsk": "HSK3",
       "tags": [
@@ -1983,7 +2146,8 @@
       "card_id": "hsk13_35bdfdf8",
       "hanzi": "孩 子",
       "pinyin": "hái zi",
-      "english": "child; children",
+      "tones": "25",
+      "def": "child; children",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -1995,7 +2159,8 @@
       "card_id": "hsk13_07a8f0f3",
       "hanzi": "汉 语",
       "pinyin": "hàn yǔ",
-      "english": "Standard Chinese language",
+      "tones": "43",
+      "def": "Standard Chinese language",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -2007,7 +2172,8 @@
       "card_id": "hsk13_fe50a4bb",
       "hanzi": "好",
       "pinyin": "hǎo",
-      "english": "good",
+      "tones": "3",
+      "def": "good",
       "pos": "adj.",
       "hsk": "HSK1",
       "tags": [
@@ -2019,7 +2185,8 @@
       "card_id": "hsk13_48358354",
       "hanzi": "号",
       "pinyin": "hào",
-      "english": "number; day of a month",
+      "tones": "4",
+      "def": "number; day of a month",
       "pos": "m.w.",
       "hsk": "HSK1",
       "tags": [
@@ -2032,7 +2199,8 @@
       "card_id": "hsk13_c19e0dbd",
       "hanzi": "好 吃",
       "pinyin": "hǎo chī",
-      "english": "delicious",
+      "tones": "31",
+      "def": "delicious",
       "pos": "adj.",
       "hsk": "HSK2",
       "tags": [
@@ -2044,7 +2212,8 @@
       "card_id": "hsk13_72dd39d1",
       "hanzi": "喝",
       "pinyin": "hē",
-      "english": "to drink",
+      "tones": "1",
+      "def": "to drink",
       "pos": "verb",
       "hsk": "HSK1",
       "tags": [
@@ -2056,7 +2225,8 @@
       "card_id": "hsk13_ff8abbb8",
       "hanzi": "和",
       "pinyin": "hé",
-      "english": "and",
+      "tones": "2",
+      "def": "and",
       "pos": "link. / prep.",
       "hsk": "HSK1",
       "tags": [
@@ -2067,7 +2237,8 @@
       "card_id": "hsk13_c0888ee2",
       "hanzi": "黑",
       "pinyin": "hēi",
-      "english": "black",
+      "tones": "1",
+      "def": "black",
       "pos": "adj.",
       "hsk": "HSK2",
       "tags": [
@@ -2078,7 +2249,8 @@
       "card_id": "hsk13_61c471ce",
       "hanzi": "黑 板",
       "pinyin": "hēi bǎn",
-      "english": "blackboard",
+      "tones": "13",
+      "def": "blackboard",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -2091,7 +2263,8 @@
       "card_id": "hsk13_3ca3e8ec",
       "hanzi": "很",
       "pinyin": "hěn",
-      "english": "very",
+      "tones": "3",
+      "def": "very",
       "pos": "adv.",
       "hsk": "HSK1",
       "tags": [
@@ -2103,7 +2276,8 @@
       "card_id": "hsk13_45be49a6",
       "hanzi": "红",
       "pinyin": "hóng",
-      "english": "red",
+      "tones": "2",
+      "def": "red",
       "pos": "adj.",
       "hsk": "HSK2",
       "tags": [
@@ -2114,7 +2288,8 @@
       "card_id": "hsk13_794a1bb3",
       "hanzi": "后 来",
       "pinyin": "hòu lái",
-      "english": "afterward",
+      "tones": "42",
+      "def": "afterward",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -2126,7 +2301,8 @@
       "card_id": "hsk13_4c9770f4",
       "hanzi": "后 面",
       "pinyin": "hòu miàn",
-      "english": "at the back; behind; later",
+      "tones": "44",
+      "def": "at the back; behind; later",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -2139,7 +2315,8 @@
       "card_id": "hsk13_07b1bc27",
       "hanzi": "护 照",
       "pinyin": "hù zhào",
-      "english": "passport",
+      "tones": "44",
+      "def": "passport",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -2151,7 +2328,8 @@
       "card_id": "hsk13_9e8bf30a",
       "hanzi": "花",
       "pinyin": "huā",
-      "english": "spend",
+      "tones": "1",
+      "def": "spend",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -2163,7 +2341,8 @@
       "card_id": "hsk13_19638015",
       "hanzi": "花",
       "pinyin": "huā",
-      "english": "flower",
+      "tones": "1",
+      "def": "flower",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -2176,7 +2355,8 @@
       "card_id": "hsk13_f448316f",
       "hanzi": "画",
       "pinyin": "huà",
-      "english": "to draw; paint (pictures)",
+      "tones": "4",
+      "def": "to draw; paint (pictures)",
       "pos": "noun / verb",
       "hsk": "HSK3",
       "tags": [
@@ -2189,7 +2369,8 @@
       "card_id": "hsk13_3e1e80a6",
       "hanzi": "坏",
       "pinyin": "huài",
-      "english": "bad",
+      "tones": "4",
+      "def": "bad",
       "pos": "adj.",
       "hsk": "HSK3",
       "tags": [
@@ -2200,7 +2381,8 @@
       "card_id": "hsk13_4ad1e39c",
       "hanzi": "还",
       "pinyin": "huán",
-      "english": "to return",
+      "tones": "2",
+      "def": "to return",
       "pos": "verb",
       "hsk": "HSK2",
       "tags": [
@@ -2212,7 +2394,8 @@
       "card_id": "hsk13_2aac48f3",
       "hanzi": "换",
       "pinyin": "huàn",
-      "english": "to change (to another one)",
+      "tones": "4",
+      "def": "to change (to another one)",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -2224,7 +2407,8 @@
       "card_id": "hsk13_aac7703c",
       "hanzi": "环 境",
       "pinyin": "huán jìng",
-      "english": "environment",
+      "tones": "24",
+      "def": "environment",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -2237,7 +2421,8 @@
       "card_id": "hsk13_39f6a780",
       "hanzi": "欢 迎",
       "pinyin": "huān yíng",
-      "english": "to welcome",
+      "tones": "12",
+      "def": "to welcome",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -2249,7 +2434,8 @@
       "card_id": "hsk13_68f544fe",
       "hanzi": "黄 河",
       "pinyin": "huáng hé",
-      "english": "Yellow River",
+      "tones": "22",
+      "def": "Yellow River",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -2261,7 +2447,8 @@
       "card_id": "hsk13_288ddff9",
       "hanzi": "回",
       "pinyin": "huí",
-      "english": "to return",
+      "tones": "2",
+      "def": "to return",
       "pos": "verb",
       "hsk": "HSK1",
       "tags": [
@@ -2273,7 +2460,8 @@
       "card_id": "hsk13_5d712a74",
       "hanzi": "会",
       "pinyin": "huì",
-      "english": "to know how to; can; meeting",
+      "tones": "4",
+      "def": "to know how to; can; meeting",
       "pos": "verb",
       "hsk": "HSK1",
       "tags": [
@@ -2286,7 +2474,8 @@
       "card_id": "hsk13_01294f5e",
       "hanzi": "回 答",
       "pinyin": "huí dá",
-      "english": "reply",
+      "tones": "22",
+      "def": "reply",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -2298,7 +2487,8 @@
       "card_id": "hsk13_7f9006f7",
       "hanzi": "会 议",
       "pinyin": "huì yì",
-      "english": "meeting",
+      "tones": "44",
+      "def": "meeting",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -2310,7 +2500,8 @@
       "card_id": "hsk13_6fb98882",
       "hanzi": "火 车 站",
       "pinyin": "huǒ chē zhàn",
-      "english": "railway station",
+      "tones": "314",
+      "def": "railway station",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -2323,7 +2514,8 @@
       "card_id": "hsk13_1758c940",
       "hanzi": "或 者",
       "pinyin": "huò zhě",
-      "english": "perhaps",
+      "tones": "43",
+      "def": "perhaps",
       "pos": "adv.",
       "hsk": "HSK3",
       "tags": [
@@ -2334,7 +2526,8 @@
       "card_id": "hsk13_b5de188c",
       "hanzi": "极",
       "pinyin": "jí",
-      "english": "extreme",
+      "tones": "2",
+      "def": "extreme",
       "pos": "adv.",
       "hsk": "HSK3",
       "tags": [
@@ -2345,7 +2538,8 @@
       "card_id": "hsk13_1d1d3ad2",
       "hanzi": "几",
       "pinyin": "jǐ",
-      "english": "how much/many? [expecting a small number]",
+      "tones": "3",
+      "def": "how much/many? [expecting a small number]",
       "pos": "pron. / num.",
       "hsk": "HSK1",
       "tags": [
@@ -2357,7 +2551,8 @@
       "card_id": "hsk13_3f9599d8",
       "hanzi": "机 场",
       "pinyin": "jī chǎng",
-      "english": "airport",
+      "tones": "13",
+      "def": "airport",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -2370,7 +2565,8 @@
       "card_id": "hsk13_a25b11de",
       "hanzi": "鸡 蛋",
       "pinyin": "jī dàn",
-      "english": "(chicken) egg",
+      "tones": "14",
+      "def": "(chicken) egg",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -2382,7 +2578,8 @@
       "card_id": "hsk13_a5583b36",
       "hanzi": "记 得",
       "pinyin": "jì de",
-      "english": "to remember",
+      "tones": "45",
+      "def": "to remember",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -2394,7 +2591,8 @@
       "card_id": "hsk13_e3754bc1",
       "hanzi": "几 乎",
       "pinyin": "jī hū",
-      "english": "almost",
+      "tones": "11",
+      "def": "almost",
       "pos": "adv.",
       "hsk": "HSK3",
       "tags": [
@@ -2406,7 +2604,8 @@
       "card_id": "hsk13_8ca4dfb7",
       "hanzi": "机 会",
       "pinyin": "jī huì",
-      "english": "opportunity",
+      "tones": "14",
+      "def": "opportunity",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -2418,7 +2617,8 @@
       "card_id": "hsk13_2e2951f7",
       "hanzi": "季 节",
       "pinyin": "jì jié",
-      "english": "season",
+      "tones": "42",
+      "def": "season",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -2430,7 +2630,8 @@
       "card_id": "hsk13_dd5beca9",
       "hanzi": "家",
       "pinyin": "jiā",
-      "english": "family; home",
+      "tones": "1",
+      "def": "family; home",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -2443,7 +2644,8 @@
       "card_id": "hsk13_bef06a93",
       "hanzi": "件",
       "pinyin": "jiàn",
-      "english": "item; [measure word for items of clothing]",
+      "tones": "4",
+      "def": "item; [measure word for items of clothing]",
       "pos": "m.w.",
       "hsk": "HSK2",
       "tags": [
@@ -2455,7 +2657,8 @@
       "card_id": "hsk13_01b7a22b",
       "hanzi": "检 查",
       "pinyin": "jiǎn chá",
-      "english": "inspect",
+      "tones": "32",
+      "def": "inspect",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -2467,7 +2670,8 @@
       "card_id": "hsk13_b0636e0e",
       "hanzi": "简 单",
       "pinyin": "jiǎn dān",
-      "english": "simple",
+      "tones": "31",
+      "def": "simple",
       "pos": "adj.",
       "hsk": "HSK3",
       "tags": [
@@ -2478,7 +2682,8 @@
       "card_id": "hsk13_77caa92d",
       "hanzi": "健 康",
       "pinyin": "jiàn kāng",
-      "english": "healthy; health",
+      "tones": "41",
+      "def": "healthy; health",
       "pos": "adj.",
       "hsk": "HSK3",
       "tags": [
@@ -2490,7 +2695,8 @@
       "card_id": "hsk13_5df90472",
       "hanzi": "见 面",
       "pinyin": "jiàn miàn",
-      "english": "to meet",
+      "tones": "44",
+      "def": "to meet",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -2502,7 +2708,8 @@
       "card_id": "hsk13_8af62753",
       "hanzi": "讲",
       "pinyin": "jiǎng",
-      "english": "speak",
+      "tones": "3",
+      "def": "speak",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -2514,7 +2721,8 @@
       "card_id": "hsk13_4a33b0a4",
       "hanzi": "教",
       "pinyin": "jiāo",
-      "english": "to teach",
+      "tones": "1",
+      "def": "to teach",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -2526,7 +2734,8 @@
       "card_id": "hsk13_32f32bf2",
       "hanzi": "脚",
       "pinyin": "jiǎo",
-      "english": "foot",
+      "tones": "3",
+      "def": "foot",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -2538,7 +2747,8 @@
       "card_id": "hsk13_48fa9d87",
       "hanzi": "角",
       "pinyin": "jiǎo",
-      "english": "horn; corner; jiao (written) [unit of currency = 0.1 yuan]",
+      "tones": "3",
+      "def": "horn; corner; jiao (written) [unit of currency = 0.1 yuan]",
       "pos": "m.w.",
       "hsk": "HSK3",
       "tags": [
@@ -2552,7 +2762,8 @@
       "card_id": "hsk13_b3289cdf",
       "hanzi": "叫",
       "pinyin": "jiào",
-      "english": "to call; to be named",
+      "tones": "4",
+      "def": "to call; to be named",
       "pos": "verb",
       "hsk": "HSK1",
       "tags": [
@@ -2565,7 +2776,8 @@
       "card_id": "hsk13_565f2233",
       "hanzi": "教 室",
       "pinyin": "jiào shì",
-      "english": "classroom",
+      "tones": "44",
+      "def": "classroom",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -2577,7 +2789,8 @@
       "card_id": "hsk13_2903bc19",
       "hanzi": "接",
       "pinyin": "jiē",
-      "english": "connect",
+      "tones": "1",
+      "def": "connect",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -2589,7 +2802,8 @@
       "card_id": "hsk13_32e85822",
       "hanzi": "借",
       "pinyin": "jiè",
-      "english": "to lend",
+      "tones": "4",
+      "def": "to lend",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -2601,7 +2815,8 @@
       "card_id": "hsk13_714069a2",
       "hanzi": "街 道",
       "pinyin": "jiē dào",
-      "english": "road",
+      "tones": "14",
+      "def": "road",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -2614,7 +2829,8 @@
       "card_id": "hsk13_c62dbaf3",
       "hanzi": "结 婚",
       "pinyin": "jié hūn",
-      "english": "marry",
+      "tones": "21",
+      "def": "marry",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -2627,7 +2843,8 @@
       "card_id": "hsk13_00cd4f0b",
       "hanzi": "姐 姐",
       "pinyin": "jiě jie",
-      "english": "elder sister",
+      "tones": "35",
+      "def": "elder sister",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -2639,7 +2856,8 @@
       "card_id": "hsk13_3b63e00d",
       "hanzi": "解 决",
       "pinyin": "jiě jué",
-      "english": "to resolve; solve",
+      "tones": "32",
+      "def": "to resolve; solve",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -2651,7 +2869,8 @@
       "card_id": "hsk13_09cc61a3",
       "hanzi": "节 目",
       "pinyin": "jié mù",
-      "english": "programme",
+      "tones": "24",
+      "def": "programme",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -2663,7 +2882,8 @@
       "card_id": "hsk13_5792b702",
       "hanzi": "节 日",
       "pinyin": "jié rì",
-      "english": "festival",
+      "tones": "24",
+      "def": "festival",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -2676,7 +2896,8 @@
       "card_id": "hsk13_c8b637be",
       "hanzi": "介 绍",
       "pinyin": "jiè shào",
-      "english": "introduce",
+      "tones": "44",
+      "def": "introduce",
       "pos": "verb",
       "hsk": "HSK2",
       "tags": [
@@ -2688,7 +2909,8 @@
       "card_id": "hsk13_24bd4a0c",
       "hanzi": "结 束",
       "pinyin": "jié shù",
-      "english": "finish",
+      "tones": "24",
+      "def": "finish",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -2700,7 +2922,8 @@
       "card_id": "hsk13_5c8fad5f",
       "hanzi": "近",
       "pinyin": "jìn",
-      "english": "near; close by",
+      "tones": "4",
+      "def": "near; close by",
       "pos": "adj.",
       "hsk": "HSK2",
       "tags": [
@@ -2712,7 +2935,8 @@
       "card_id": "hsk13_2070dfdb",
       "hanzi": "进",
       "pinyin": "jìn",
-      "english": "to enter",
+      "tones": "4",
+      "def": "to enter",
       "pos": "verb",
       "hsk": "HSK2",
       "tags": [
@@ -2724,7 +2948,8 @@
       "card_id": "hsk13_b5797beb",
       "hanzi": "今 天",
       "pinyin": "jīn tiān",
-      "english": "today",
+      "tones": "11",
+      "def": "today",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -2736,7 +2961,8 @@
       "card_id": "hsk13_7b6a72ad",
       "hanzi": "经 常",
       "pinyin": "jīng cháng",
-      "english": "often; regularly",
+      "tones": "12",
+      "def": "often; regularly",
       "pos": "adv.",
       "hsk": "HSK3",
       "tags": [
@@ -2748,7 +2974,8 @@
       "card_id": "hsk13_314ecc67",
       "hanzi": "经 过",
       "pinyin": "jīng guò",
-      "english": "pass through",
+      "tones": "14",
+      "def": "pass through",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -2762,7 +2989,8 @@
       "card_id": "hsk13_9fea422c",
       "hanzi": "经 理",
       "pinyin": "jīng lǐ",
-      "english": "manager",
+      "tones": "13",
+      "def": "manager",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -2774,7 +3002,8 @@
       "card_id": "hsk13_b45416d6",
       "hanzi": "九",
       "pinyin": "jiǔ",
-      "english": "nine",
+      "tones": "3",
+      "def": "nine",
       "pos": "num.",
       "hsk": "HSK1",
       "tags": [
@@ -2785,7 +3014,8 @@
       "card_id": "hsk13_0e20057c",
       "hanzi": "久",
       "pinyin": "jiǔ",
-      "english": "long time",
+      "tones": "3",
+      "def": "long time",
       "pos": "adj.",
       "hsk": "HSK3",
       "tags": [
@@ -2797,7 +3027,8 @@
       "card_id": "hsk13_bb9b0f86",
       "hanzi": "旧",
       "pinyin": "jiù",
-      "english": "old; former",
+      "tones": "4",
+      "def": "old; former",
       "pos": "adj.",
       "hsk": "HSK3",
       "tags": [
@@ -2808,7 +3039,8 @@
       "card_id": "hsk13_aaa289c1",
       "hanzi": "就",
       "pinyin": "jiù",
-      "english": "simply",
+      "tones": "4",
+      "def": "simply",
       "pos": "adv.",
       "hsk": "HSK2",
       "tags": [
@@ -2820,7 +3052,8 @@
       "card_id": "hsk13_7c26cd1c",
       "hanzi": "句 子",
       "pinyin": "jù zi",
-      "english": "sentence",
+      "tones": "45",
+      "def": "sentence",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -2832,7 +3065,8 @@
       "card_id": "hsk13_3502398b",
       "hanzi": "觉 得",
       "pinyin": "jué de",
-      "english": "to think; feel",
+      "tones": "25",
+      "def": "to think; feel",
       "pos": "verb",
       "hsk": "HSK2",
       "tags": [
@@ -2844,7 +3078,8 @@
       "card_id": "hsk13_39d8053e",
       "hanzi": "决 定",
       "pinyin": "jué dìng",
-      "english": "decide",
+      "tones": "24",
+      "def": "decide",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -2856,7 +3091,8 @@
       "card_id": "hsk13_e94743a8",
       "hanzi": "咖 啡",
       "pinyin": "kā fēi",
-      "english": "coffee",
+      "tones": "11",
+      "def": "coffee",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -2868,7 +3104,8 @@
       "card_id": "hsk13_95b2ba38",
       "hanzi": "开",
       "pinyin": "kāi",
-      "english": "to switch on; open",
+      "tones": "1",
+      "def": "to switch on; open",
       "pos": "verb",
       "hsk": "HSK1",
       "tags": [
@@ -2880,7 +3117,8 @@
       "card_id": "hsk13_3fda8bd9",
       "hanzi": "开 始",
       "pinyin": "kāi shǐ",
-      "english": "to begin",
+      "tones": "13",
+      "def": "to begin",
       "pos": "verb",
       "hsk": "HSK2",
       "tags": [
@@ -2892,7 +3130,8 @@
       "card_id": "hsk13_ee836f53",
       "hanzi": "看",
       "pinyin": "kàn",
-      "english": "to see; to read; to watch; to look at",
+      "tones": "4",
+      "def": "to see; to read; to watch; to look at",
       "pos": "verb",
       "hsk": "HSK1",
       "tags": [
@@ -2904,7 +3143,8 @@
       "card_id": "hsk13_367e618c",
       "hanzi": "看 见",
       "pinyin": "kàn jiàn",
-      "english": "see",
+      "tones": "44",
+      "def": "see",
       "pos": "verb",
       "hsk": "HSK1",
       "tags": [
@@ -2916,7 +3156,8 @@
       "card_id": "hsk13_401cf666",
       "hanzi": "考 试",
       "pinyin": "kǎo shì",
-      "english": "examination",
+      "tones": "34",
+      "def": "examination",
       "pos": "verb",
       "hsk": "HSK2",
       "tags": [
@@ -2928,7 +3169,8 @@
       "card_id": "hsk13_e46f3040",
       "hanzi": "渴",
       "pinyin": "kě",
-      "english": "thirsty",
+      "tones": "3",
+      "def": "thirsty",
       "pos": "adj.",
       "hsk": "HSK3",
       "tags": [
@@ -2940,7 +3182,8 @@
       "card_id": "hsk13_1582aeed",
       "hanzi": "刻",
       "pinyin": "kè",
-      "english": "quarter (of an hour); to carve",
+      "tones": "4",
+      "def": "quarter (of an hour); to carve",
       "pos": "m.w.",
       "hsk": "HSK3",
       "tags": [
@@ -2953,7 +3196,8 @@
       "card_id": "hsk13_0876ecef",
       "hanzi": "课",
       "pinyin": "kè",
-      "english": "lesson",
+      "tones": "4",
+      "def": "lesson",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -2965,7 +3209,8 @@
       "card_id": "hsk13_00c30ade",
       "hanzi": "可 爱",
       "pinyin": "kě ài",
-      "english": "lovely; loveable",
+      "tones": "34",
+      "def": "lovely; loveable",
       "pos": "adj.",
       "hsk": "HSK3",
       "tags": [
@@ -2976,7 +3221,8 @@
       "card_id": "hsk13_ba0e082e",
       "hanzi": "可 能",
       "pinyin": "kě néng",
-      "english": "perhaps; possibly",
+      "tones": "32",
+      "def": "perhaps; possibly",
       "pos": "verb",
       "hsk": "HSK2",
       "tags": [
@@ -2988,7 +3234,8 @@
       "card_id": "hsk13_846b280b",
       "hanzi": "客 人",
       "pinyin": "kè rén",
-      "english": "guest",
+      "tones": "42",
+      "def": "guest",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -3000,7 +3247,8 @@
       "card_id": "hsk13_5fa8219b",
       "hanzi": "可 以",
       "pinyin": "kě yǐ",
-      "english": "can; may",
+      "tones": "33",
+      "def": "can; may",
       "pos": "verb",
       "hsk": "HSK2",
       "tags": [
@@ -3013,7 +3261,8 @@
       "card_id": "hsk13_e18b85a5",
       "hanzi": "空 调",
       "pinyin": "kōng tiáo",
-      "english": "air-conditioning",
+      "tones": "12",
+      "def": "air-conditioning",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -3025,7 +3274,8 @@
       "card_id": "hsk13_a9af1570",
       "hanzi": "口",
       "pinyin": "kǒu",
-      "english": "mouth; [measure word for family members]",
+      "tones": "3",
+      "def": "mouth; [measure word for family members]",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -3039,7 +3289,8 @@
       "card_id": "hsk13_322bcf13",
       "hanzi": "哭",
       "pinyin": "kū",
-      "english": "cry",
+      "tones": "1",
+      "def": "cry",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -3051,7 +3302,8 @@
       "card_id": "hsk13_39fc706d",
       "hanzi": "裤 子",
       "pinyin": "kù zi",
-      "english": "trousers",
+      "tones": "45",
+      "def": "trousers",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -3063,7 +3315,8 @@
       "card_id": "hsk13_b11c8bdd",
       "hanzi": "块",
       "pinyin": "kuài",
-      "english": "lump; piece",
+      "tones": "4",
+      "def": "lump; piece",
       "pos": "m.w.",
       "hsk": "HSK1",
       "tags": [
@@ -3075,7 +3328,8 @@
       "card_id": "hsk13_0025191e",
       "hanzi": "快",
       "pinyin": "kuài",
-      "english": "fast; quick",
+      "tones": "4",
+      "def": "fast; quick",
       "pos": "adj.",
       "hsk": "HSK2",
       "tags": [
@@ -3086,7 +3340,8 @@
       "card_id": "hsk13_a96e1891",
       "hanzi": "快 乐",
       "pinyin": "kuài lè",
-      "english": "happy",
+      "tones": "44",
+      "def": "happy",
       "pos": "adj.",
       "hsk": "HSK2",
       "tags": [
@@ -3098,7 +3353,8 @@
       "card_id": "hsk13_a053289e",
       "hanzi": "筷 子",
       "pinyin": "kuài zi",
-      "english": "chopsticks",
+      "tones": "45",
+      "def": "chopsticks",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -3110,7 +3366,8 @@
       "card_id": "hsk13_e6046a4c",
       "hanzi": "来",
       "pinyin": "lái",
-      "english": "to come",
+      "tones": "2",
+      "def": "to come",
       "pos": "verb",
       "hsk": "HSK1",
       "tags": [
@@ -3122,7 +3379,8 @@
       "card_id": "hsk13_7233dd34",
       "hanzi": "蓝",
       "pinyin": "lán",
-      "english": "blue",
+      "tones": "2",
+      "def": "blue",
       "pos": "adj.",
       "hsk": "HSK3",
       "tags": [
@@ -3133,7 +3391,8 @@
       "card_id": "hsk13_fee09ce3",
       "hanzi": "老",
       "pinyin": "lǎo",
-      "english": "old; aged",
+      "tones": "3",
+      "def": "old; aged",
       "pos": "adj.",
       "hsk": "HSK3",
       "tags": [
@@ -3145,7 +3404,8 @@
       "card_id": "hsk13_17c17a8b",
       "hanzi": "老 师",
       "pinyin": "lǎo shī",
-      "english": "teacher",
+      "tones": "31",
+      "def": "teacher",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -3157,7 +3417,8 @@
       "card_id": "hsk13_9275efd7",
       "hanzi": "了",
       "pinyin": "le",
-      "english": "[makes an exclamation]",
+      "tones": "5",
+      "def": "[makes an exclamation]",
       "pos": "aux.",
       "hsk": "HSK1",
       "tags": [
@@ -3168,7 +3429,8 @@
       "card_id": "hsk13_2203a451",
       "hanzi": "累",
       "pinyin": "lèi",
-      "english": "tired",
+      "tones": "4",
+      "def": "tired",
       "pos": "adj.",
       "hsk": "HSK2",
       "tags": [
@@ -3180,7 +3442,8 @@
       "card_id": "hsk13_7d72a040",
       "hanzi": "冷",
       "pinyin": "lěng",
-      "english": "cold",
+      "tones": "3",
+      "def": "cold",
       "pos": "adj.",
       "hsk": "HSK1",
       "tags": [
@@ -3191,7 +3454,8 @@
       "card_id": "hsk13_93078f49",
       "hanzi": "离",
       "pinyin": "lí",
-      "english": "to be distant from; to leave",
+      "tones": "2",
+      "def": "to be distant from; to leave",
       "pos": "verb",
       "hsk": "HSK2",
       "tags": [
@@ -3204,7 +3468,8 @@
       "card_id": "hsk13_3a92d960",
       "hanzi": "里",
       "pinyin": "lǐ",
-      "english": "in",
+      "tones": "3",
+      "def": "in",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -3216,7 +3481,8 @@
       "card_id": "hsk13_4a1bf11c",
       "hanzi": "离 开",
       "pinyin": "lí kāi",
-      "english": "leave",
+      "tones": "21",
+      "def": "leave",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -3228,7 +3494,8 @@
       "card_id": "hsk13_7fe2d513",
       "hanzi": "历 史",
       "pinyin": "lì shǐ",
-      "english": "history",
+      "tones": "43",
+      "def": "history",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -3241,7 +3508,8 @@
       "card_id": "hsk13_e516d721",
       "hanzi": "礼 物",
       "pinyin": "lǐ wù",
-      "english": "gift; present",
+      "tones": "34",
+      "def": "gift; present",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -3253,7 +3521,8 @@
       "card_id": "hsk13_9d8b7282",
       "hanzi": "脸",
       "pinyin": "liǎn",
-      "english": "face",
+      "tones": "3",
+      "def": "face",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -3265,7 +3534,8 @@
       "card_id": "hsk13_1fb4f62c",
       "hanzi": "练 习",
       "pinyin": "liàn xí",
-      "english": "to practise",
+      "tones": "42",
+      "def": "to practise",
       "pos": "verb / noun",
       "hsk": "HSK3",
       "tags": [
@@ -3277,7 +3547,8 @@
       "card_id": "hsk13_a5011f89",
       "hanzi": "两",
       "pinyin": "liǎng",
-      "english": "two (of something)",
+      "tones": "3",
+      "def": "two (of something)",
       "pos": "num.",
       "hsk": "HSK2",
       "tags": [
@@ -3289,7 +3560,8 @@
       "card_id": "hsk13_dc21929e",
       "hanzi": "辆",
       "pinyin": "liàng",
-      "english": "[measure word for vehicles]",
+      "tones": "4",
+      "def": "[measure word for vehicles]",
       "pos": "m.w.",
       "hsk": "HSK3",
       "tags": [
@@ -3301,7 +3573,8 @@
       "card_id": "hsk13_d1c7ada5",
       "hanzi": "了 解",
       "pinyin": "liǎo jiě",
-      "english": "understand",
+      "tones": "33",
+      "def": "understand",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -3313,7 +3586,8 @@
       "card_id": "hsk13_41ff004d",
       "hanzi": "聊 天",
       "pinyin": "liáo tiān",
-      "english": "to chat",
+      "tones": "21",
+      "def": "to chat",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -3325,7 +3599,8 @@
       "card_id": "hsk13_b4667e9f",
       "hanzi": "邻 居",
       "pinyin": "lín jū",
-      "english": "neighbour",
+      "tones": "21",
+      "def": "neighbour",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -3337,7 +3612,8 @@
       "card_id": "hsk13_cdeeea0f",
       "hanzi": "零",
       "pinyin": "líng",
-      "english": "zero",
+      "tones": "2",
+      "def": "zero",
       "pos": "num.",
       "hsk": "HSK2",
       "tags": [
@@ -3348,7 +3624,8 @@
       "card_id": "hsk13_2423e79b",
       "hanzi": "六",
       "pinyin": "liù",
-      "english": "six",
+      "tones": "4",
+      "def": "six",
       "pos": "num.",
       "hsk": "HSK1",
       "tags": [
@@ -3359,7 +3636,8 @@
       "card_id": "hsk13_7ec13499",
       "hanzi": "留 学",
       "pinyin": "liú xué",
-      "english": "study abroad",
+      "tones": "22",
+      "def": "study abroad",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -3371,7 +3649,8 @@
       "card_id": "hsk13_bbb979fc",
       "hanzi": "楼",
       "pinyin": "lóu",
-      "english": "multi-storied building",
+      "tones": "2",
+      "def": "multi-storied building",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -3384,7 +3663,8 @@
       "card_id": "hsk13_36c14c4b",
       "hanzi": "路",
       "pinyin": "lù",
-      "english": "road; route; bus number",
+      "tones": "4",
+      "def": "road; route; bus number",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -3397,7 +3677,8 @@
       "card_id": "hsk13_5c5851b6",
       "hanzi": "绿",
       "pinyin": "lǜ",
-      "english": "green",
+      "tones": "4",
+      "def": "green",
       "pos": "adj.",
       "hsk": "HSK3",
       "tags": [
@@ -3408,7 +3689,8 @@
       "card_id": "hsk13_4db57921",
       "hanzi": "旅 游",
       "pinyin": "lǚ yóu",
-      "english": "tourism",
+      "tones": "32",
+      "def": "tourism",
       "pos": "verb",
       "hsk": "HSK2",
       "tags": [
@@ -3421,7 +3703,8 @@
       "card_id": "hsk13_bb71b4e7",
       "hanzi": "马",
       "pinyin": "mǎ",
-      "english": "horse",
+      "tones": "3",
+      "def": "horse",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -3433,7 +3716,8 @@
       "card_id": "hsk13_655442c9",
       "hanzi": "吗",
       "pinyin": "ma",
-      "english": "[makes a yes; no question]",
+      "tones": "5",
+      "def": "[makes a yes; no question]",
       "pos": "aux.",
       "hsk": "HSK1",
       "tags": [
@@ -3444,7 +3728,8 @@
       "card_id": "hsk13_89eb9507",
       "hanzi": "妈 妈",
       "pinyin": "mā ma",
-      "english": "mother",
+      "tones": "15",
+      "def": "mother",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -3456,7 +3741,8 @@
       "card_id": "hsk13_a1535a19",
       "hanzi": "马 上",
       "pinyin": "mǎ shàng",
-      "english": "immediately",
+      "tones": "34",
+      "def": "immediately",
       "pos": "adv.",
       "hsk": "HSK3",
       "tags": [
@@ -3468,7 +3754,8 @@
       "card_id": "hsk13_03ca88e3",
       "hanzi": "买",
       "pinyin": "mǎi",
-      "english": "buy",
+      "tones": "3",
+      "def": "buy",
       "pos": "verb",
       "hsk": "HSK1",
       "tags": [
@@ -3479,7 +3766,8 @@
       "card_id": "hsk13_8aee4c22",
       "hanzi": "卖",
       "pinyin": "mài",
-      "english": "to sell",
+      "tones": "4",
+      "def": "to sell",
       "pos": "verb",
       "hsk": "HSK2",
       "tags": [
@@ -3490,7 +3778,8 @@
       "card_id": "hsk13_d9aeec94",
       "hanzi": "慢",
       "pinyin": "màn",
-      "english": "slow",
+      "tones": "4",
+      "def": "slow",
       "pos": "adj.",
       "hsk": "HSK2",
       "tags": [
@@ -3501,7 +3790,8 @@
       "card_id": "hsk13_dfc7a652",
       "hanzi": "满 意",
       "pinyin": "mǎn yì",
-      "english": "pleased; satisfied",
+      "tones": "34",
+      "def": "pleased; satisfied",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -3513,7 +3803,8 @@
       "card_id": "hsk13_193aad5a",
       "hanzi": "忙",
       "pinyin": "máng",
-      "english": "busy",
+      "tones": "2",
+      "def": "busy",
       "pos": "adj.",
       "hsk": "HSK2",
       "tags": [
@@ -3525,7 +3816,8 @@
       "card_id": "hsk13_1efff030",
       "hanzi": "猫",
       "pinyin": "māo",
-      "english": "cat",
+      "tones": "1",
+      "def": "cat",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -3537,7 +3829,8 @@
       "card_id": "hsk13_69831958",
       "hanzi": "帽 子",
       "pinyin": "mào zi",
-      "english": "hat",
+      "tones": "45",
+      "def": "hat",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -3549,7 +3842,8 @@
       "card_id": "hsk13_0d577643",
       "hanzi": "每",
       "pinyin": "měi",
-      "english": "every; each",
+      "tones": "3",
+      "def": "every; each",
       "pos": "pron.",
       "hsk": "HSK2",
       "tags": [
@@ -3561,7 +3855,8 @@
       "card_id": "hsk13_6bdcdd3d",
       "hanzi": "没 关 系",
       "pinyin": "méi guān xi",
-      "english": "no problem",
+      "tones": "215",
+      "def": "no problem",
       "pos": "--",
       "hsk": "HSK1",
       "tags": [
@@ -3573,7 +3868,8 @@
       "card_id": "hsk13_cb69e761",
       "hanzi": "妹 妹",
       "pinyin": "mèi mei",
-      "english": "younger sister",
+      "tones": "45",
+      "def": "younger sister",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -3585,7 +3881,8 @@
       "card_id": "hsk13_50cd7993",
       "hanzi": "没 有",
       "pinyin": "méi yǒu",
-      "english": "don't have",
+      "tones": "23",
+      "def": "don't have",
       "pos": "verb / adv.",
       "hsk": "HSK1",
       "tags": [
@@ -3598,7 +3895,8 @@
       "card_id": "hsk13_54884f2e",
       "hanzi": "门",
       "pinyin": "mén",
-      "english": "door",
+      "tones": "2",
+      "def": "door",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -3611,7 +3909,8 @@
       "card_id": "hsk13_7bf4027b",
       "hanzi": "米",
       "pinyin": "mǐ",
-      "english": "rice; metre",
+      "tones": "3",
+      "def": "rice; metre",
       "pos": "m.w.",
       "hsk": "HSK3",
       "tags": [
@@ -3625,7 +3924,8 @@
       "card_id": "hsk13_fe7203e5",
       "hanzi": "米 饭",
       "pinyin": "mǐ fàn",
-      "english": "rice [cooked; boiled]",
+      "tones": "34",
+      "def": "rice [cooked; boiled]",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -3637,7 +3937,8 @@
       "card_id": "hsk13_50d5f1bc",
       "hanzi": "面 包",
       "pinyin": "miàn bāo",
-      "english": "bread",
+      "tones": "41",
+      "def": "bread",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -3649,7 +3950,8 @@
       "card_id": "hsk13_2c9e0c5e",
       "hanzi": "面 条",
       "pinyin": "miàn tiáo",
-      "english": "noodles",
+      "tones": "42",
+      "def": "noodles",
       "pos": "--",
       "hsk": "HSK2",
       "tags": [
@@ -3661,7 +3963,8 @@
       "card_id": "hsk13_62d2c6f6",
       "hanzi": "明 白",
       "pinyin": "míng bai",
-      "english": "to understand",
+      "tones": "25",
+      "def": "to understand",
       "pos": "verb / adj.",
       "hsk": "HSK3",
       "tags": [
@@ -3673,7 +3976,8 @@
       "card_id": "hsk13_30b6ae45",
       "hanzi": "明 天",
       "pinyin": "míng tiān",
-      "english": "tomorrow",
+      "tones": "21",
+      "def": "tomorrow",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -3685,7 +3989,8 @@
       "card_id": "hsk13_9e8e2b76",
       "hanzi": "名 字",
       "pinyin": "míng zi",
-      "english": "given name",
+      "tones": "25",
+      "def": "given name",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -3698,7 +4003,8 @@
       "card_id": "hsk13_e818d10a",
       "hanzi": "拿",
       "pinyin": "ná",
-      "english": "to take",
+      "tones": "2",
+      "def": "to take",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -3710,7 +4016,8 @@
       "card_id": "hsk13_33a05abe",
       "hanzi": "哪",
       "pinyin": "nǎ",
-      "english": "which?",
+      "tones": "3",
+      "def": "which?",
       "pos": "pron.",
       "hsk": "HSK1",
       "tags": [
@@ -3722,7 +4029,8 @@
       "card_id": "hsk13_c39ca245",
       "hanzi": "那",
       "pinyin": "nà",
-      "english": "that",
+      "tones": "4",
+      "def": "that",
       "pos": "pron.",
       "hsk": "HSK1",
       "tags": [
@@ -3734,7 +4042,8 @@
       "card_id": "hsk13_b0a5934d",
       "hanzi": "哪 儿",
       "pinyin": "nǎ er",
-      "english": "where?",
+      "tones": "35",
+      "def": "where?",
       "pos": "pron.",
       "hsk": "HSK1",
       "tags": [
@@ -3747,7 +4056,8 @@
       "card_id": "hsk13_be48f604",
       "hanzi": "奶 奶",
       "pinyin": "nǎi nai",
-      "english": "grandmother [father's mother]",
+      "tones": "35",
+      "def": "grandmother [father's mother]",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -3759,7 +4069,8 @@
       "card_id": "hsk13_8cea535c",
       "hanzi": "男",
       "pinyin": "nán",
-      "english": "male",
+      "tones": "2",
+      "def": "male",
       "pos": "distinct.",
       "hsk": "HSK2",
       "tags": [
@@ -3771,7 +4082,8 @@
       "card_id": "hsk13_e9fa3ed7",
       "hanzi": "难",
       "pinyin": "nán",
-      "english": "hard; difficult",
+      "tones": "2",
+      "def": "hard; difficult",
       "pos": "adj.",
       "hsk": "HSK3",
       "tags": [
@@ -3782,7 +4094,8 @@
       "card_id": "hsk13_d270366a",
       "hanzi": "南",
       "pinyin": "nán",
-      "english": "south",
+      "tones": "2",
+      "def": "south",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -3793,7 +4106,8 @@
       "card_id": "hsk13_1c39fcfa",
       "hanzi": "难 过",
       "pinyin": "nán guò",
-      "english": "have a hard time",
+      "tones": "24",
+      "def": "have a hard time",
       "pos": "adj.",
       "hsk": "HSK3",
       "tags": [
@@ -3805,7 +4119,8 @@
       "card_id": "hsk13_408aa638",
       "hanzi": "呢",
       "pinyin": "ne",
-      "english": "[returns; forwards a question]",
+      "tones": "5",
+      "def": "[returns; forwards a question]",
       "pos": "aux.",
       "hsk": "HSK1",
       "tags": [
@@ -3816,7 +4131,8 @@
       "card_id": "hsk13_9fdef9d1",
       "hanzi": "能",
       "pinyin": "néng",
-      "english": "to be able to; can",
+      "tones": "2",
+      "def": "to be able to; can",
       "pos": "verb",
       "hsk": "HSK1",
       "tags": [
@@ -3828,7 +4144,8 @@
       "card_id": "hsk13_f968ba61",
       "hanzi": "你",
       "pinyin": "nǐ",
-      "english": "you",
+      "tones": "3",
+      "def": "you",
       "pos": "pron.",
       "hsk": "HSK1",
       "tags": [
@@ -3840,7 +4157,8 @@
       "card_id": "hsk13_075a8a80",
       "hanzi": "年",
       "pinyin": "nián",
-      "english": "year",
+      "tones": "2",
+      "def": "year",
       "pos": "noun / m.w.",
       "hsk": "HSK1",
       "tags": [
@@ -3853,7 +4171,8 @@
       "card_id": "hsk13_7f60c579",
       "hanzi": "年 级",
       "pinyin": "nián jí",
-      "english": "(school) year/grade",
+      "tones": "22",
+      "def": "(school) year/grade",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -3866,7 +4185,8 @@
       "card_id": "hsk13_91240017",
       "hanzi": "年 轻",
       "pinyin": "nián qīng",
-      "english": "young",
+      "tones": "21",
+      "def": "young",
       "pos": "adj.",
       "hsk": "HSK3",
       "tags": [
@@ -3878,7 +4198,8 @@
       "card_id": "hsk13_345c26ad",
       "hanzi": "鸟",
       "pinyin": "niǎo",
-      "english": "bird",
+      "tones": "3",
+      "def": "bird",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -3890,7 +4211,8 @@
       "card_id": "hsk13_0c295da3",
       "hanzi": "您",
       "pinyin": "nín",
-      "english": "you [polite form]",
+      "tones": "2",
+      "def": "you [polite form]",
       "pos": "pron.",
       "hsk": "HSK2",
       "tags": [
@@ -3902,7 +4224,8 @@
       "card_id": "hsk13_9527c258",
       "hanzi": "牛 奶",
       "pinyin": "niú nǎi",
-      "english": "milk",
+      "tones": "23",
+      "def": "milk",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -3914,7 +4237,8 @@
       "card_id": "hsk13_b9d2a825",
       "hanzi": "女",
       "pinyin": "nǚ",
-      "english": "female",
+      "tones": "3",
+      "def": "female",
       "pos": "distinct.",
       "hsk": "HSK2",
       "tags": [
@@ -3926,7 +4250,8 @@
       "card_id": "hsk13_ab21bd40",
       "hanzi": "女 儿",
       "pinyin": "nǚ ér",
-      "english": "daughter",
+      "tones": "32",
+      "def": "daughter",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -3938,7 +4263,8 @@
       "card_id": "hsk13_0526eabb",
       "hanzi": "努 力",
       "pinyin": "nǔ lì",
-      "english": "hardworking",
+      "tones": "34",
+      "def": "hardworking",
       "pos": "adj.",
       "hsk": "HSK3",
       "tags": [
@@ -3950,7 +4276,8 @@
       "card_id": "hsk13_8c1e47ad",
       "hanzi": "爬 山",
       "pinyin": "pá shān",
-      "english": "to climb hills/mountains",
+      "tones": "21",
+      "def": "to climb hills/mountains",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -3963,7 +4290,8 @@
       "card_id": "hsk13_9d8ab081",
       "hanzi": "盘 子",
       "pinyin": "pán zi",
-      "english": "tray",
+      "tones": "25",
+      "def": "tray",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -3975,7 +4303,8 @@
       "card_id": "hsk13_2be3df3a",
       "hanzi": "胖",
       "pinyin": "pàng",
-      "english": "fat",
+      "tones": "4",
+      "def": "fat",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -3987,7 +4316,8 @@
       "card_id": "hsk13_3f74f5a0",
       "hanzi": "旁 边",
       "pinyin": "páng biān",
-      "english": "next to",
+      "tones": "21",
+      "def": "next to",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -3999,7 +4329,8 @@
       "card_id": "hsk13_0667c037",
       "hanzi": "跑 步",
       "pinyin": "pǎo bù",
-      "english": "running; jogging",
+      "tones": "34",
+      "def": "running; jogging",
       "pos": "verb",
       "hsk": "HSK2",
       "tags": [
@@ -4011,7 +4342,8 @@
       "card_id": "hsk13_885994ba",
       "hanzi": "朋 友",
       "pinyin": "péng you",
-      "english": "friend",
+      "tones": "25",
+      "def": "friend",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -4023,7 +4355,8 @@
       "card_id": "hsk13_741621f1",
       "hanzi": "啤 酒",
       "pinyin": "pí jiǔ",
-      "english": "beer",
+      "tones": "23",
+      "def": "beer",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -4035,7 +4368,8 @@
       "card_id": "hsk13_9c47322e",
       "hanzi": "皮 鞋",
       "pinyin": "pí xié",
-      "english": "leather shoes",
+      "tones": "22",
+      "def": "leather shoes",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -4047,7 +4381,8 @@
       "card_id": "hsk13_03bccdc5",
       "hanzi": "便 宜",
       "pinyin": "pián yi",
-      "english": "cheap",
+      "tones": "25",
+      "def": "cheap",
       "pos": "adj.",
       "hsk": "HSK2",
       "tags": [
@@ -4059,7 +4394,8 @@
       "card_id": "hsk13_eaf3ed26",
       "hanzi": "票",
       "pinyin": "piào",
-      "english": "ticket",
+      "tones": "4",
+      "def": "ticket",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -4071,7 +4407,8 @@
       "card_id": "hsk13_0c7e36a8",
       "hanzi": "漂 亮",
       "pinyin": "piào liang",
-      "english": "beautiful",
+      "tones": "45",
+      "def": "beautiful",
       "pos": "adj.",
       "hsk": "HSK1",
       "tags": [
@@ -4082,7 +4419,8 @@
       "card_id": "hsk13_faf7e2c7",
       "hanzi": "苹 果",
       "pinyin": "píng guǒ",
-      "english": "apple",
+      "tones": "23",
+      "def": "apple",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -4095,7 +4433,8 @@
       "card_id": "hsk13_44d2cb7d",
       "hanzi": "瓶 子",
       "pinyin": "píng zi",
-      "english": "bottle",
+      "tones": "25",
+      "def": "bottle",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -4107,7 +4446,8 @@
       "card_id": "hsk13_b48ccc69",
       "hanzi": "七",
       "pinyin": "qī",
-      "english": "seven",
+      "tones": "1",
+      "def": "seven",
       "pos": "num.",
       "hsk": "HSK1",
       "tags": [
@@ -4118,7 +4458,8 @@
       "card_id": "hsk13_a62f0f10",
       "hanzi": "骑",
       "pinyin": "qí",
-      "english": "to ride (a bicycle, horse)",
+      "tones": "2",
+      "def": "to ride (a bicycle, horse)",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -4130,7 +4471,8 @@
       "card_id": "hsk13_71573a3d",
       "hanzi": "起 床",
       "pinyin": "qǐ chuáng",
-      "english": "get up (out of bed)",
+      "tones": "32",
+      "def": "get up (out of bed)",
       "pos": "verb",
       "hsk": "HSK2",
       "tags": [
@@ -4142,7 +4484,8 @@
       "card_id": "hsk13_9a11ecce",
       "hanzi": "起 飞",
       "pinyin": "qǐ fēi",
-      "english": "take off [plane]",
+      "tones": "31",
+      "def": "take off [plane]",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -4154,7 +4497,8 @@
       "card_id": "hsk13_1e8846de",
       "hanzi": "奇 怪",
       "pinyin": "qí guài",
-      "english": "strange",
+      "tones": "24",
+      "def": "strange",
       "pos": "adj.",
       "hsk": "HSK3",
       "tags": [
@@ -4165,7 +4509,8 @@
       "card_id": "hsk13_c583181c",
       "hanzi": "起 来",
       "pinyin": "qǐ lái",
-      "english": "stand up; sit up; rise to one's feet",
+      "tones": "32",
+      "def": "stand up; sit up; rise to one's feet",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -4177,7 +4522,8 @@
       "card_id": "hsk13_acba5250",
       "hanzi": "其 实",
       "pinyin": "qí shí",
-      "english": "in fact",
+      "tones": "22",
+      "def": "in fact",
       "pos": "adv.",
       "hsk": "HSK3",
       "tags": [
@@ -4189,7 +4535,8 @@
       "card_id": "hsk13_7b77d430",
       "hanzi": "其 他",
       "pinyin": "qí tā",
-      "english": "other",
+      "tones": "21",
+      "def": "other",
       "pos": "pron.",
       "hsk": "HSK3",
       "tags": [
@@ -4201,7 +4548,8 @@
       "card_id": "hsk13_98e3a6d5",
       "hanzi": "妻 子",
       "pinyin": "qī zi",
-      "english": "wife",
+      "tones": "15",
+      "def": "wife",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -4213,7 +4561,8 @@
       "card_id": "hsk13_856b9d14",
       "hanzi": "千",
       "pinyin": "qiān",
-      "english": "thousand",
+      "tones": "1",
+      "def": "thousand",
       "pos": "num.",
       "hsk": "HSK2",
       "tags": [
@@ -4224,7 +4573,8 @@
       "card_id": "hsk13_b4b2f3e0",
       "hanzi": "钱",
       "pinyin": "qián",
-      "english": "money",
+      "tones": "2",
+      "def": "money",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -4236,7 +4586,8 @@
       "card_id": "hsk13_9d70a46e",
       "hanzi": "铅 笔",
       "pinyin": "qiān bǐ",
-      "english": "pencil",
+      "tones": "13",
+      "def": "pencil",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -4248,7 +4599,8 @@
       "card_id": "hsk13_7ee3557e",
       "hanzi": "前 面",
       "pinyin": "qián miàn",
-      "english": "front",
+      "tones": "24",
+      "def": "front",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -4260,7 +4612,8 @@
       "card_id": "hsk13_f3957fd0",
       "hanzi": "晴",
       "pinyin": "qíng",
-      "english": "fine; sunny",
+      "tones": "2",
+      "def": "fine; sunny",
       "pos": "adj.",
       "hsk": "HSK2",
       "tags": [
@@ -4272,7 +4625,8 @@
       "card_id": "hsk13_c9f51ef4",
       "hanzi": "请",
       "pinyin": "qǐng",
-      "english": "to invite; please",
+      "tones": "3",
+      "def": "to invite; please",
       "pos": "verb",
       "hsk": "HSK1",
       "tags": [
@@ -4284,7 +4638,8 @@
       "card_id": "hsk13_feae3f23",
       "hanzi": "清 楚",
       "pinyin": "qīng chu",
-      "english": "clear",
+      "tones": "15",
+      "def": "clear",
       "pos": "adj.",
       "hsk": "HSK3",
       "tags": [
@@ -4295,7 +4650,8 @@
       "card_id": "hsk13_7d8f51c5",
       "hanzi": "请 假",
       "pinyin": "qǐng jià",
-      "english": "ask for leave",
+      "tones": "34",
+      "def": "ask for leave",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -4307,7 +4663,8 @@
       "card_id": "hsk13_f6f83d56",
       "hanzi": "秋",
       "pinyin": "qiū",
-      "english": "autumn",
+      "tones": "1",
+      "def": "autumn",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -4319,7 +4676,8 @@
       "card_id": "hsk13_6975b374",
       "hanzi": "去",
       "pinyin": "qù",
-      "english": "to go",
+      "tones": "4",
+      "def": "to go",
       "pos": "verb",
       "hsk": "HSK1",
       "tags": [
@@ -4331,7 +4689,8 @@
       "card_id": "hsk13_0b67a21a",
       "hanzi": "去 年",
       "pinyin": "qù nián",
-      "english": "last year",
+      "tones": "42",
+      "def": "last year",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -4343,7 +4702,8 @@
       "card_id": "hsk13_3a66df8d",
       "hanzi": "裙 子",
       "pinyin": "qún zi",
-      "english": "skirt",
+      "tones": "25",
+      "def": "skirt",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -4355,7 +4715,8 @@
       "card_id": "hsk13_4eb6d5c7",
       "hanzi": "然 后",
       "pinyin": "rán hòu",
-      "english": "and then; after that",
+      "tones": "24",
+      "def": "and then; after that",
       "pos": "link.",
       "hsk": "HSK3",
       "tags": [
@@ -4367,7 +4728,8 @@
       "card_id": "hsk13_6c78954b",
       "hanzi": "让",
       "pinyin": "ràng",
-      "english": "to let; allow",
+      "tones": "4",
+      "def": "to let; allow",
       "pos": "verb",
       "hsk": "HSK2",
       "tags": [
@@ -4379,7 +4741,8 @@
       "card_id": "hsk13_ac26dff9",
       "hanzi": "热",
       "pinyin": "rè",
-      "english": "hot",
+      "tones": "4",
+      "def": "hot",
       "pos": "adj.",
       "hsk": "HSK1",
       "tags": [
@@ -4392,7 +4755,8 @@
       "card_id": "hsk13_9826246c",
       "hanzi": "热 情",
       "pinyin": "rè qíng",
-      "english": "enthusiastic",
+      "tones": "42",
+      "def": "enthusiastic",
       "pos": "adj.",
       "hsk": "HSK3",
       "tags": [
@@ -4405,7 +4769,8 @@
       "card_id": "hsk13_295960aa",
       "hanzi": "人",
       "pinyin": "rén",
-      "english": "person; people",
+      "tones": "2",
+      "def": "person; people",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -4417,7 +4782,8 @@
       "card_id": "hsk13_8420e3ee",
       "hanzi": "认 识",
       "pinyin": "rèn shi",
-      "english": "to know [be familiar with]",
+      "tones": "45",
+      "def": "to know [be familiar with]",
       "pos": "verb",
       "hsk": "HSK1",
       "tags": [
@@ -4429,7 +4795,8 @@
       "card_id": "hsk13_f7835320",
       "hanzi": "认 为",
       "pinyin": "rèn wéi",
-      "english": "to think that; consider",
+      "tones": "42",
+      "def": "to think that; consider",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -4441,7 +4808,8 @@
       "card_id": "hsk13_72cb67f6",
       "hanzi": "认 真",
       "pinyin": "rèn zhēn",
-      "english": "earnest",
+      "tones": "41",
+      "def": "earnest",
       "pos": "adj.",
       "hsk": "HSK3",
       "tags": [
@@ -4452,7 +4820,8 @@
       "card_id": "hsk13_a6f9f527",
       "hanzi": "日",
       "pinyin": "rì",
-      "english": "day [date]; sun",
+      "tones": "4",
+      "def": "day [date]; sun",
       "pos": "m.w.",
       "hsk": "HSK2",
       "tags": [
@@ -4466,7 +4835,8 @@
       "card_id": "hsk13_98473a4e",
       "hanzi": "容 易",
       "pinyin": "róng yì",
-      "english": "easy",
+      "tones": "24",
+      "def": "easy",
       "pos": "adj.",
       "hsk": "HSK3",
       "tags": [
@@ -4477,7 +4847,8 @@
       "card_id": "hsk13_6b975407",
       "hanzi": "如 果",
       "pinyin": "rú guǒ",
-      "english": "if",
+      "tones": "23",
+      "def": "if",
       "pos": "link.",
       "hsk": "HSK3",
       "tags": [
@@ -4488,7 +4859,8 @@
       "card_id": "hsk13_65513117",
       "hanzi": "三",
       "pinyin": "sān",
-      "english": "three",
+      "tones": "1",
+      "def": "three",
       "pos": "num.",
       "hsk": "HSK1",
       "tags": [
@@ -4499,7 +4871,8 @@
       "card_id": "hsk13_1b5419b9",
       "hanzi": "伞",
       "pinyin": "sǎn",
-      "english": "umbrella",
+      "tones": "3",
+      "def": "umbrella",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -4511,7 +4884,8 @@
       "card_id": "hsk13_9ddc1172",
       "hanzi": "上",
       "pinyin": "shàng",
-      "english": "up; above",
+      "tones": "4",
+      "def": "up; above",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -4523,7 +4897,8 @@
       "card_id": "hsk13_5f421fc3",
       "hanzi": "上 班",
       "pinyin": "shàng bān",
-      "english": "start work",
+      "tones": "41",
+      "def": "start work",
       "pos": "verb",
       "hsk": "HSK2",
       "tags": [
@@ -4534,7 +4909,8 @@
       "card_id": "hsk13_24ec799a",
       "hanzi": "商 店",
       "pinyin": "shāng diàn",
-      "english": "shop",
+      "tones": "14",
+      "def": "shop",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -4547,7 +4923,8 @@
       "card_id": "hsk13_c25100ab",
       "hanzi": "上 网",
       "pinyin": "shàng wǎng",
-      "english": "get on the internet",
+      "tones": "43",
+      "def": "get on the internet",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -4559,7 +4936,8 @@
       "card_id": "hsk13_02513872",
       "hanzi": "上 午",
       "pinyin": "shàng wǔ",
-      "english": "morning",
+      "tones": "43",
+      "def": "morning",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -4571,7 +4949,8 @@
       "card_id": "hsk13_25d5edc5",
       "hanzi": "少",
       "pinyin": "shǎo",
-      "english": "few",
+      "tones": "3",
+      "def": "few",
       "pos": "adj.",
       "hsk": "HSK1",
       "tags": [
@@ -4583,7 +4962,8 @@
       "card_id": "hsk13_2be2b81d",
       "hanzi": "谁",
       "pinyin": "shéi",
-      "english": "who?",
+      "tones": "2",
+      "def": "who?",
       "pos": "pron.",
       "hsk": "HSK1",
       "tags": [
@@ -4596,7 +4976,8 @@
       "card_id": "hsk13_ec0a1cc7",
       "hanzi": "什 么",
       "pinyin": "shén me",
-      "english": "what?",
+      "tones": "25",
+      "def": "what?",
       "pos": "pron.",
       "hsk": "HSK1",
       "tags": [
@@ -4608,7 +4989,8 @@
       "card_id": "hsk13_0368d44a",
       "hanzi": "身 体",
       "pinyin": "shēn tǐ",
-      "english": "body; health",
+      "tones": "13",
+      "def": "body; health",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -4621,7 +5003,8 @@
       "card_id": "hsk13_860abb51",
       "hanzi": "生 病",
       "pinyin": "shēng bìng",
-      "english": "ill; sick; unwell",
+      "tones": "14",
+      "def": "ill; sick; unwell",
       "pos": "verb",
       "hsk": "HSK2",
       "tags": [
@@ -4633,7 +5016,8 @@
       "card_id": "hsk13_15f41fe6",
       "hanzi": "生 气",
       "pinyin": "shēng qì",
-      "english": "to get angry",
+      "tones": "14",
+      "def": "to get angry",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -4645,7 +5029,8 @@
       "card_id": "hsk13_1c3881e5",
       "hanzi": "生 日",
       "pinyin": "shēng rì",
-      "english": "birthday",
+      "tones": "14",
+      "def": "birthday",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -4658,7 +5043,8 @@
       "card_id": "hsk13_84452f90",
       "hanzi": "声 音",
       "pinyin": "shēng yīn",
-      "english": "sound",
+      "tones": "11",
+      "def": "sound",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -4671,7 +5057,8 @@
       "card_id": "hsk13_04076a45",
       "hanzi": "十",
       "pinyin": "shí",
-      "english": "ten",
+      "tones": "2",
+      "def": "ten",
       "pos": "num.",
       "hsk": "HSK1",
       "tags": [
@@ -4682,7 +5069,8 @@
       "card_id": "hsk13_ca22ca74",
       "hanzi": "是",
       "pinyin": "shì",
-      "english": "to be",
+      "tones": "4",
+      "def": "to be",
       "pos": "verb",
       "hsk": "HSK1",
       "tags": [
@@ -4694,7 +5082,8 @@
       "card_id": "hsk13_93fb738a",
       "hanzi": "试",
       "pinyin": "shì",
-      "english": "to try",
+      "tones": "4",
+      "def": "to try",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -4706,7 +5095,8 @@
       "card_id": "hsk13_f54387d5",
       "hanzi": "时 候",
       "pinyin": "shí hou",
-      "english": "[duration of] time",
+      "tones": "25",
+      "def": "[duration of] time",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -4718,7 +5108,8 @@
       "card_id": "hsk13_ca0c93cb",
       "hanzi": "时 间",
       "pinyin": "shí jiān",
-      "english": "time",
+      "tones": "21",
+      "def": "time",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -4730,7 +5121,8 @@
       "card_id": "hsk13_15253b55",
       "hanzi": "世 界",
       "pinyin": "shì jiè",
-      "english": "world",
+      "tones": "44",
+      "def": "world",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -4743,7 +5135,8 @@
       "card_id": "hsk13_638a5c2a",
       "hanzi": "事 情",
       "pinyin": "shì qing",
-      "english": "matter; affair; thing",
+      "tones": "45",
+      "def": "matter; affair; thing",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -4755,7 +5148,8 @@
       "card_id": "hsk13_342e96f0",
       "hanzi": "瘦",
       "pinyin": "shòu",
-      "english": "thin",
+      "tones": "4",
+      "def": "thin",
       "pos": "adj.",
       "hsk": "HSK3",
       "tags": [
@@ -4766,7 +5160,8 @@
       "card_id": "hsk13_2224ea55",
       "hanzi": "手 表",
       "pinyin": "shǒu biǎo",
-      "english": "watch",
+      "tones": "33",
+      "def": "watch",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -4778,7 +5173,8 @@
       "card_id": "hsk13_5f3b5b55",
       "hanzi": "手 机",
       "pinyin": "shǒu jī",
-      "english": "mobile phone",
+      "tones": "31",
+      "def": "mobile phone",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -4790,7 +5186,8 @@
       "card_id": "hsk13_aa469ed7",
       "hanzi": "书",
       "pinyin": "shū",
-      "english": "book",
+      "tones": "1",
+      "def": "book",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -4802,7 +5199,8 @@
       "card_id": "hsk13_91ed405b",
       "hanzi": "树",
       "pinyin": "shù",
-      "english": "tree",
+      "tones": "4",
+      "def": "tree",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -4814,7 +5212,8 @@
       "card_id": "hsk13_f16c58b1",
       "hanzi": "舒 服",
       "pinyin": "shū fu",
-      "english": "comfortable",
+      "tones": "15",
+      "def": "comfortable",
       "pos": "adj.",
       "hsk": "HSK3",
       "tags": [
@@ -4826,7 +5225,8 @@
       "card_id": "hsk13_309f072f",
       "hanzi": "叔 叔",
       "pinyin": "shū shu",
-      "english": "uncle [father's younger brother]",
+      "tones": "15",
+      "def": "uncle [father's younger brother]",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -4838,7 +5238,8 @@
       "card_id": "hsk13_577c7c3e",
       "hanzi": "数 学",
       "pinyin": "shù xué",
-      "english": "maths",
+      "tones": "42",
+      "def": "maths",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -4850,7 +5251,8 @@
       "card_id": "hsk13_686cae87",
       "hanzi": "刷 牙",
       "pinyin": "shuā yá",
-      "english": "brush teeth",
+      "tones": "12",
+      "def": "brush teeth",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -4862,7 +5264,8 @@
       "card_id": "hsk13_fcd30a31",
       "hanzi": "双",
       "pinyin": "shuāng",
-      "english": "a pair of",
+      "tones": "1",
+      "def": "a pair of",
       "pos": "m.w.",
       "hsk": "HSK3",
       "tags": [
@@ -4874,7 +5277,8 @@
       "card_id": "hsk13_997a3f54",
       "hanzi": "水",
       "pinyin": "shuǐ",
-      "english": "water",
+      "tones": "3",
+      "def": "water",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -4887,7 +5291,8 @@
       "card_id": "hsk13_61b958dd",
       "hanzi": "水 果",
       "pinyin": "shuǐ guǒ",
-      "english": "fruit",
+      "tones": "33",
+      "def": "fruit",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -4900,7 +5305,8 @@
       "card_id": "hsk13_89525cc1",
       "hanzi": "睡 觉",
       "pinyin": "shuì jiào",
-      "english": "to go to bed; to sleep",
+      "tones": "44",
+      "def": "to go to bed; to sleep",
       "pos": "verb",
       "hsk": "HSK1",
       "tags": [
@@ -4912,7 +5318,8 @@
       "card_id": "hsk13_7fbd1f97",
       "hanzi": "水 平",
       "pinyin": "shuǐ píng",
-      "english": "level",
+      "tones": "32",
+      "def": "level",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -4924,7 +5331,8 @@
       "card_id": "hsk13_91d9348e",
       "hanzi": "说",
       "pinyin": "shuō",
-      "english": "speak",
+      "tones": "1",
+      "def": "speak",
       "pos": "verb",
       "hsk": "HSK1",
       "tags": [
@@ -4936,7 +5344,8 @@
       "card_id": "hsk13_f746f8f3",
       "hanzi": "说 话",
       "pinyin": "shuō huà",
-      "english": "speak",
+      "tones": "14",
+      "def": "speak",
       "pos": "verb",
       "hsk": "HSK2",
       "tags": [
@@ -4948,7 +5357,8 @@
       "card_id": "hsk13_1d73dfea",
       "hanzi": "四",
       "pinyin": "sì",
-      "english": "four",
+      "tones": "4",
+      "def": "four",
       "pos": "num.",
       "hsk": "HSK1",
       "tags": [
@@ -4959,7 +5369,8 @@
       "card_id": "hsk13_acf95cf2",
       "hanzi": "司 机",
       "pinyin": "sī jī",
-      "english": "driver",
+      "tones": "11",
+      "def": "driver",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -4971,7 +5382,8 @@
       "card_id": "hsk13_e0532e15",
       "hanzi": "送",
       "pinyin": "sòng",
-      "english": "to give (present); deliver; see someone off",
+      "tones": "4",
+      "def": "to give (present); deliver; see someone off",
       "pos": "verb",
       "hsk": "HSK2",
       "tags": [
@@ -4984,7 +5396,8 @@
       "card_id": "hsk13_ef6582c4",
       "hanzi": "岁",
       "pinyin": "suì",
-      "english": "year (of crop harvests)",
+      "tones": "4",
+      "def": "year (of crop harvests)",
       "pos": "m.w.",
       "hsk": "HSK1",
       "tags": [
@@ -4997,7 +5410,8 @@
       "card_id": "hsk13_75d799de",
       "hanzi": "虽 然 … 但 是 …",
       "pinyin": "suī rán … dàn shì …",
-      "english": "although",
+      "tones": "125445",
+      "def": "although",
       "pos": "conj.",
       "hsk": "HSK2",
       "tags": [
@@ -5008,7 +5422,8 @@
       "card_id": "hsk13_8bdc25fd",
       "hanzi": "他",
       "pinyin": "tā",
-      "english": "he; him",
+      "tones": "1",
+      "def": "he; him",
       "pos": "pron.",
       "hsk": "HSK1",
       "tags": [
@@ -5020,7 +5435,8 @@
       "card_id": "hsk13_c1db1853",
       "hanzi": "她",
       "pinyin": "tā",
-      "english": "she; her",
+      "tones": "1",
+      "def": "she; her",
       "pos": "pron.",
       "hsk": "HSK1",
       "tags": [
@@ -5032,7 +5448,8 @@
       "card_id": "hsk13_1895e7cc",
       "hanzi": "它",
       "pinyin": "tā",
-      "english": "it",
+      "tones": "1",
+      "def": "it",
       "pos": "pron.",
       "hsk": "HSK2",
       "tags": [
@@ -5044,7 +5461,8 @@
       "card_id": "hsk13_62f620f7",
       "hanzi": "太",
       "pinyin": "tài",
-      "english": "very",
+      "tones": "4",
+      "def": "very",
       "pos": "adv.",
       "hsk": "HSK1",
       "tags": [
@@ -5056,7 +5474,8 @@
       "card_id": "hsk13_798ef51d",
       "hanzi": "太 阳",
       "pinyin": "tài yáng",
-      "english": "sun",
+      "tones": "42",
+      "def": "sun",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -5068,7 +5487,8 @@
       "card_id": "hsk13_668229de",
       "hanzi": "特 别",
       "pinyin": "tè bié",
-      "english": "special; especially",
+      "tones": "42",
+      "def": "special; especially",
       "pos": "adv. / adj.",
       "hsk": "HSK3",
       "tags": [
@@ -5080,7 +5500,8 @@
       "card_id": "hsk13_3e995a64",
       "hanzi": "疼",
       "pinyin": "téng",
-      "english": "pain",
+      "tones": "2",
+      "def": "pain",
       "pos": "adj.",
       "hsk": "HSK3",
       "tags": [
@@ -5092,7 +5513,8 @@
       "card_id": "hsk13_b7c04f36",
       "hanzi": "题",
       "pinyin": "tí",
-      "english": "question",
+      "tones": "2",
+      "def": "question",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -5105,7 +5527,8 @@
       "card_id": "hsk13_fb30da4a",
       "hanzi": "提 高",
       "pinyin": "tí gāo",
-      "english": "raise",
+      "tones": "21",
+      "def": "raise",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -5117,7 +5540,8 @@
       "card_id": "hsk13_0f004ef6",
       "hanzi": "体 育",
       "pinyin": "tǐ yù",
-      "english": "physical education",
+      "tones": "34",
+      "def": "physical education",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -5129,7 +5553,8 @@
       "card_id": "hsk13_f1a07ce3",
       "hanzi": "踢 足 球",
       "pinyin": "tī zú qiú",
-      "english": "play football",
+      "tones": "122",
+      "def": "play football",
       "pos": "--",
       "hsk": "HSK2",
       "tags": [
@@ -5141,7 +5566,8 @@
       "card_id": "hsk13_781647e4",
       "hanzi": "甜",
       "pinyin": "tián",
-      "english": "sweet",
+      "tones": "2",
+      "def": "sweet",
       "pos": "adj.",
       "hsk": "HSK3",
       "tags": [
@@ -5152,7 +5578,8 @@
       "card_id": "hsk13_02218acc",
       "hanzi": "天 气",
       "pinyin": "tiān qì",
-      "english": "weather",
+      "tones": "14",
+      "def": "weather",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -5165,7 +5592,8 @@
       "card_id": "hsk13_0e3cd54d",
       "hanzi": "条",
       "pinyin": "tiáo",
-      "english": "[measure word for long pieces (hair, branch, trousers etc.)]",
+      "tones": "2",
+      "def": "[measure word for long pieces (hair, branch, trousers etc.)]",
       "pos": "m.w.",
       "hsk": "HSK3",
       "tags": [
@@ -5177,7 +5605,8 @@
       "card_id": "hsk13_d4efa5b3",
       "hanzi": "跳 舞",
       "pinyin": "tiào wǔ",
-      "english": "to dance",
+      "tones": "43",
+      "def": "to dance",
       "pos": "verb",
       "hsk": "HSK2",
       "tags": [
@@ -5189,7 +5618,8 @@
       "card_id": "hsk13_f785fea0",
       "hanzi": "听",
       "pinyin": "tīng",
-      "english": "to listen; hear",
+      "tones": "1",
+      "def": "to listen; hear",
       "pos": "verb",
       "hsk": "HSK1",
       "tags": [
@@ -5201,7 +5631,8 @@
       "card_id": "hsk13_da4f7ecd",
       "hanzi": "同 事",
       "pinyin": "tóng shì",
-      "english": "colleague",
+      "tones": "24",
+      "def": "colleague",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -5213,7 +5644,8 @@
       "card_id": "hsk13_60a73143",
       "hanzi": "同 学",
       "pinyin": "tóng xué",
-      "english": "schoolmate; classmate",
+      "tones": "22",
+      "def": "schoolmate; classmate",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -5225,7 +5657,8 @@
       "card_id": "hsk13_08c6cdcd",
       "hanzi": "同 意",
       "pinyin": "tóng yì",
-      "english": "to agree",
+      "tones": "24",
+      "def": "to agree",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -5238,7 +5671,8 @@
       "card_id": "hsk13_36484ec6",
       "hanzi": "头 发",
       "pinyin": "tóu fa",
-      "english": "hair",
+      "tones": "25",
+      "def": "hair",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -5251,7 +5685,8 @@
       "card_id": "hsk13_b511865f",
       "hanzi": "突 然",
       "pinyin": "tū rán",
-      "english": "suddenly",
+      "tones": "12",
+      "def": "suddenly",
       "pos": "adj.",
       "hsk": "HSK3",
       "tags": [
@@ -5263,7 +5698,8 @@
       "card_id": "hsk13_5a320e99",
       "hanzi": "图 书 馆",
       "pinyin": "tú shū guǎn",
-      "english": "library",
+      "tones": "213",
+      "def": "library",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -5276,7 +5712,8 @@
       "card_id": "hsk13_3e63a885",
       "hanzi": "腿",
       "pinyin": "tuǐ",
-      "english": "leg",
+      "tones": "3",
+      "def": "leg",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -5288,7 +5725,8 @@
       "card_id": "hsk13_3c79f105",
       "hanzi": "外",
       "pinyin": "wài",
-      "english": "outside",
+      "tones": "4",
+      "def": "outside",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -5300,7 +5738,8 @@
       "card_id": "hsk13_792f526e",
       "hanzi": "完",
       "pinyin": "wán",
-      "english": "to finish; [+ verb indicates completion]",
+      "tones": "2",
+      "def": "to finish; [+ verb indicates completion]",
       "pos": "verb",
       "hsk": "HSK2",
       "tags": [
@@ -5312,7 +5751,8 @@
       "card_id": "hsk13_27843959",
       "hanzi": "玩",
       "pinyin": "wán",
-      "english": "to play",
+      "tones": "2",
+      "def": "to play",
       "pos": "verb",
       "hsk": "HSK2",
       "tags": [
@@ -5324,7 +5764,8 @@
       "card_id": "hsk13_218c06e2",
       "hanzi": "碗",
       "pinyin": "wǎn",
-      "english": "a bowl of",
+      "tones": "3",
+      "def": "a bowl of",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -5336,7 +5777,8 @@
       "card_id": "hsk13_0a39519a",
       "hanzi": "万",
       "pinyin": "wàn",
-      "english": "ten thousand",
+      "tones": "4",
+      "def": "ten thousand",
       "pos": "num.",
       "hsk": "HSK3",
       "tags": [
@@ -5347,7 +5789,8 @@
       "card_id": "hsk13_a32fe42d",
       "hanzi": "完 成",
       "pinyin": "wán chéng",
-      "english": "complete",
+      "tones": "22",
+      "def": "complete",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -5359,7 +5802,8 @@
       "card_id": "hsk13_ff38fa06",
       "hanzi": "晚 上",
       "pinyin": "wǎn shang",
-      "english": "evening",
+      "tones": "35",
+      "def": "evening",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -5371,7 +5815,8 @@
       "card_id": "hsk13_f11b04b5",
       "hanzi": "往",
       "pinyin": "wǎng",
-      "english": "towards",
+      "tones": "3",
+      "def": "towards",
       "pos": "prep.",
       "hsk": "HSK2",
       "tags": [
@@ -5383,7 +5828,8 @@
       "card_id": "hsk13_d262c3d8",
       "hanzi": "忘 记",
       "pinyin": "wàng jì",
-      "english": "forget",
+      "tones": "44",
+      "def": "forget",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -5395,7 +5841,8 @@
       "card_id": "hsk13_d8bcbe1e",
       "hanzi": "喂",
       "pinyin": "wèi",
-      "english": "hello",
+      "tones": "4",
+      "def": "hello",
       "pos": "interject.",
       "hsk": "HSK1",
       "tags": [
@@ -5407,7 +5854,8 @@
       "card_id": "hsk13_110d4f9a",
       "hanzi": "位",
       "pinyin": "wèi",
-      "english": "position",
+      "tones": "4",
+      "def": "position",
       "pos": "m.w.",
       "hsk": "HSK3",
       "tags": [
@@ -5419,7 +5867,8 @@
       "card_id": "hsk13_e5769d0f",
       "hanzi": "为",
       "pinyin": "wèi",
-      "english": "for (someone; something); to do; to be",
+      "tones": "4",
+      "def": "for (someone; something); to do; to be",
       "pos": "prep.",
       "hsk": "HSK3",
       "tags": [
@@ -5430,7 +5879,8 @@
       "card_id": "hsk13_c3e56638",
       "hanzi": "为 了",
       "pinyin": "wèi le",
-      "english": "in order to",
+      "tones": "45",
+      "def": "in order to",
       "pos": "prep.",
       "hsk": "HSK3",
       "tags": [
@@ -5441,7 +5891,8 @@
       "card_id": "hsk13_7a020c08",
       "hanzi": "为 什 么",
       "pinyin": "wèi shén me",
-      "english": "why?",
+      "tones": "425",
+      "def": "why?",
       "pos": "--",
       "hsk": "HSK2",
       "tags": [
@@ -5454,7 +5905,8 @@
       "card_id": "hsk13_c902fca7",
       "hanzi": "问",
       "pinyin": "wèn",
-      "english": "to ask",
+      "tones": "4",
+      "def": "to ask",
       "pos": "verb",
       "hsk": "HSK2",
       "tags": [
@@ -5466,7 +5918,8 @@
       "card_id": "hsk13_9f870dac",
       "hanzi": "文 化",
       "pinyin": "wén huà",
-      "english": "culture",
+      "tones": "24",
+      "def": "culture",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -5479,7 +5932,8 @@
       "card_id": "hsk13_7edf5119",
       "hanzi": "问 题",
       "pinyin": "wèn tí",
-      "english": "problem",
+      "tones": "42",
+      "def": "problem",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -5492,7 +5946,8 @@
       "card_id": "hsk13_ad59782e",
       "hanzi": "我",
       "pinyin": "wǒ",
-      "english": "I; me",
+      "tones": "3",
+      "def": "I; me",
       "pos": "pron.",
       "hsk": "HSK1",
       "tags": [
@@ -5504,7 +5959,8 @@
       "card_id": "hsk13_de1a17a8",
       "hanzi": "我 们",
       "pinyin": "wǒ men",
-      "english": "we; us",
+      "tones": "35",
+      "def": "we; us",
       "pos": "pron.",
       "hsk": "HSK1",
       "tags": [
@@ -5516,7 +5972,8 @@
       "card_id": "hsk13_9dab7549",
       "hanzi": "五",
       "pinyin": "wǔ",
-      "english": "five",
+      "tones": "3",
+      "def": "five",
       "pos": "num.",
       "hsk": "HSK1",
       "tags": [
@@ -5527,7 +5984,8 @@
       "card_id": "hsk13_90cc2f4c",
       "hanzi": "西",
       "pinyin": "xī",
-      "english": "west",
+      "tones": "1",
+      "def": "west",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -5538,7 +5996,8 @@
       "card_id": "hsk13_f88c9584",
       "hanzi": "洗",
       "pinyin": "xǐ",
-      "english": "to wash",
+      "tones": "3",
+      "def": "to wash",
       "pos": "verb",
       "hsk": "HSK2",
       "tags": [
@@ -5550,7 +6009,8 @@
       "card_id": "hsk13_03940f85",
       "hanzi": "西 瓜",
       "pinyin": "xī guā",
-      "english": "watermelon",
+      "tones": "11",
+      "def": "watermelon",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -5563,7 +6023,8 @@
       "card_id": "hsk13_911296c2",
       "hanzi": "习 惯",
       "pinyin": "xí guàn",
-      "english": "be used to",
+      "tones": "24",
+      "def": "be used to",
       "pos": "verb / noun",
       "hsk": "HSK3",
       "tags": [
@@ -5575,7 +6036,8 @@
       "card_id": "hsk13_a5cf36fa",
       "hanzi": "喜 欢",
       "pinyin": "xǐ huan",
-      "english": "to like",
+      "tones": "35",
+      "def": "to like",
       "pos": "verb",
       "hsk": "HSK1",
       "tags": [
@@ -5587,7 +6049,8 @@
       "card_id": "hsk13_b4d8f283",
       "hanzi": "洗 手 间",
       "pinyin": "xǐ shǒu jiān",
-      "english": "toilets; washroom",
+      "tones": "331",
+      "def": "toilets; washroom",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -5600,7 +6063,8 @@
       "card_id": "hsk13_2b414bcd",
       "hanzi": "希 望",
       "pinyin": "xī wàng",
-      "english": "hope; wish",
+      "tones": "14",
+      "def": "hope; wish",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -5612,7 +6076,8 @@
       "card_id": "hsk13_60d3331c",
       "hanzi": "洗 澡",
       "pinyin": "xǐ zǎo",
-      "english": "have a shower; bath",
+      "tones": "33",
+      "def": "have a shower; bath",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -5624,7 +6089,8 @@
       "card_id": "hsk13_cec53cee",
       "hanzi": "下",
       "pinyin": "xià",
-      "english": "down; below",
+      "tones": "4",
+      "def": "down; below",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -5636,7 +6102,8 @@
       "card_id": "hsk13_852f0387",
       "hanzi": "夏",
       "pinyin": "xià",
-      "english": "summer",
+      "tones": "4",
+      "def": "summer",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -5648,7 +6115,8 @@
       "card_id": "hsk13_643dc268",
       "hanzi": "下 午",
       "pinyin": "xià wǔ",
-      "english": "afternoon",
+      "tones": "43",
+      "def": "afternoon",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -5660,7 +6128,8 @@
       "card_id": "hsk13_bae3891a",
       "hanzi": "下 雨",
       "pinyin": "xià yǔ",
-      "english": "rain",
+      "tones": "43",
+      "def": "rain",
       "pos": "verb",
       "hsk": "HSK1",
       "tags": [
@@ -5673,7 +6142,8 @@
       "card_id": "hsk13_331542b4",
       "hanzi": "先",
       "pinyin": "xiān",
-      "english": "first",
+      "tones": "1",
+      "def": "first",
       "pos": "adv.",
       "hsk": "HSK3",
       "tags": [
@@ -5686,7 +6156,8 @@
       "card_id": "hsk13_54b47994",
       "hanzi": "先 生",
       "pinyin": "xiān sheng",
-      "english": "Mr; Sir",
+      "tones": "15",
+      "def": "Mr; Sir",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -5699,7 +6170,8 @@
       "card_id": "hsk13_a278c70e",
       "hanzi": "现 在",
       "pinyin": "xiàn zài",
-      "english": "now",
+      "tones": "44",
+      "def": "now",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -5711,7 +6183,8 @@
       "card_id": "hsk13_dda06122",
       "hanzi": "想",
       "pinyin": "xiǎng",
-      "english": "to want; to think",
+      "tones": "3",
+      "def": "to want; to think",
       "pos": "verb",
       "hsk": "HSK1",
       "tags": [
@@ -5723,7 +6196,8 @@
       "card_id": "hsk13_79743b5a",
       "hanzi": "像",
       "pinyin": "xiàng",
-      "english": "likeness; resemble; look as if",
+      "tones": "4",
+      "def": "likeness; resemble; look as if",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -5735,7 +6209,8 @@
       "card_id": "hsk13_96b69e4b",
       "hanzi": "向",
       "pinyin": "xiàng",
-      "english": "towards",
+      "tones": "4",
+      "def": "towards",
       "pos": "prep.",
       "hsk": "HSK3",
       "tags": [
@@ -5747,7 +6222,8 @@
       "card_id": "hsk13_8fb4036b",
       "hanzi": "香 蕉",
       "pinyin": "xiāng jiāo",
-      "english": "banana",
+      "tones": "11",
+      "def": "banana",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -5760,7 +6236,8 @@
       "card_id": "hsk13_2451323b",
       "hanzi": "相 信",
       "pinyin": "xiāng xìn",
-      "english": "to believe",
+      "tones": "14",
+      "def": "to believe",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -5772,7 +6249,8 @@
       "card_id": "hsk13_c3865f31",
       "hanzi": "小",
       "pinyin": "xiǎo",
-      "english": "small",
+      "tones": "3",
+      "def": "small",
       "pos": "adj.",
       "hsk": "HSK1",
       "tags": [
@@ -5783,7 +6261,8 @@
       "card_id": "hsk13_36906c95",
       "hanzi": "笑",
       "pinyin": "xiào",
-      "english": "to laugh; smile",
+      "tones": "4",
+      "def": "to laugh; smile",
       "pos": "verb",
       "hsk": "HSK2",
       "tags": [
@@ -5795,7 +6274,8 @@
       "card_id": "hsk13_aa8167de",
       "hanzi": "小 姐",
       "pinyin": "xiǎo jiě",
-      "english": "Miss; young lady",
+      "tones": "33",
+      "def": "Miss; young lady",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -5808,7 +6288,8 @@
       "card_id": "hsk13_20af1035",
       "hanzi": "小 时",
       "pinyin": "xiǎo shí",
-      "english": "hour",
+      "tones": "32",
+      "def": "hour",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -5820,7 +6301,8 @@
       "card_id": "hsk13_10ac3978",
       "hanzi": "小 心",
       "pinyin": "xiǎo xīn",
-      "english": "take care",
+      "tones": "31",
+      "def": "take care",
       "pos": "adj. / verb",
       "hsk": "HSK3",
       "tags": [
@@ -5833,7 +6315,8 @@
       "card_id": "hsk13_7b380e91",
       "hanzi": "校 长",
       "pinyin": "xiào zhǎng",
-      "english": "head teacher; principal",
+      "tones": "43",
+      "def": "head teacher; principal",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -5846,7 +6329,8 @@
       "card_id": "hsk13_8fb4c4ba",
       "hanzi": "些",
       "pinyin": "xiē",
-      "english": "some",
+      "tones": "1",
+      "def": "some",
       "pos": "m.w.",
       "hsk": "HSK1",
       "tags": [
@@ -5858,7 +6342,8 @@
       "card_id": "hsk13_c80f8df5",
       "hanzi": "写",
       "pinyin": "xiě",
-      "english": "to write",
+      "tones": "3",
+      "def": "to write",
       "pos": "verb",
       "hsk": "HSK1",
       "tags": [
@@ -5870,7 +6355,8 @@
       "card_id": "hsk13_b065191b",
       "hanzi": "谢 谢",
       "pinyin": "xiè xie",
-      "english": "thank you",
+      "tones": "45",
+      "def": "thank you",
       "pos": "verb",
       "hsk": "HSK1",
       "tags": [
@@ -5882,7 +6368,8 @@
       "card_id": "hsk13_224a4f64",
       "hanzi": "新",
       "pinyin": "xīn",
-      "english": "new",
+      "tones": "1",
+      "def": "new",
       "pos": "adj.",
       "hsk": "HSK2",
       "tags": [
@@ -5893,7 +6380,8 @@
       "card_id": "hsk13_ebd8f014",
       "hanzi": "新 闻",
       "pinyin": "xīn wén",
-      "english": "news",
+      "tones": "12",
+      "def": "news",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -5905,7 +6393,8 @@
       "card_id": "hsk13_79bea25c",
       "hanzi": "新 鲜",
       "pinyin": "xīn xiān",
-      "english": "fresh",
+      "tones": "11",
+      "def": "fresh",
       "pos": "adj.",
       "hsk": "HSK3",
       "tags": [
@@ -5917,7 +6406,8 @@
       "card_id": "hsk13_413d93fc",
       "hanzi": "信 用 卡",
       "pinyin": "xìn yòng kǎ",
-      "english": "credit card",
+      "tones": "443",
+      "def": "credit card",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -5929,7 +6419,8 @@
       "card_id": "hsk13_58802b50",
       "hanzi": "姓",
       "pinyin": "xìng",
-      "english": "surname",
+      "tones": "4",
+      "def": "surname",
       "pos": "verb",
       "hsk": "HSK2",
       "tags": [
@@ -5941,7 +6432,8 @@
       "card_id": "hsk13_71569ad0",
       "hanzi": "行 李 箱",
       "pinyin": "xíng li xiāng",
-      "english": "trunk [luggage]",
+      "tones": "251",
+      "def": "trunk [luggage]",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -5953,7 +6445,8 @@
       "card_id": "hsk13_7fc21633",
       "hanzi": "星 期",
       "pinyin": "xīng qī",
-      "english": "week",
+      "tones": "11",
+      "def": "week",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -5965,7 +6458,8 @@
       "card_id": "hsk13_e1fcdd31",
       "hanzi": "熊 猫",
       "pinyin": "xióng māo",
-      "english": "panda",
+      "tones": "21",
+      "def": "panda",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -5978,7 +6472,8 @@
       "card_id": "hsk13_c791f216",
       "hanzi": "休 息",
       "pinyin": "xiū xi",
-      "english": "to rest",
+      "tones": "15",
+      "def": "to rest",
       "pos": "verb",
       "hsk": "HSK2",
       "tags": [
@@ -5990,7 +6485,8 @@
       "card_id": "hsk13_4f565d77",
       "hanzi": "需 要",
       "pinyin": "xū yào",
-      "english": "need",
+      "tones": "14",
+      "def": "need",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -6002,7 +6498,8 @@
       "card_id": "hsk13_3a2870a7",
       "hanzi": "选 择",
       "pinyin": "xuǎn zé",
-      "english": "choice",
+      "tones": "32",
+      "def": "choice",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -6014,7 +6511,8 @@
       "card_id": "hsk13_d70d0e48",
       "hanzi": "雪",
       "pinyin": "xuě",
-      "english": "snow",
+      "tones": "3",
+      "def": "snow",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -6027,7 +6525,8 @@
       "card_id": "hsk13_9ff66fca",
       "hanzi": "学 生",
       "pinyin": "xué sheng",
-      "english": "student",
+      "tones": "25",
+      "def": "student",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -6039,7 +6538,8 @@
       "card_id": "hsk13_f032e7b4",
       "hanzi": "学 习",
       "pinyin": "xué xí",
-      "english": "to learn; to study",
+      "tones": "22",
+      "def": "to learn; to study",
       "pos": "verb",
       "hsk": "HSK1",
       "tags": [
@@ -6051,7 +6551,8 @@
       "card_id": "hsk13_0c52985c",
       "hanzi": "学 校",
       "pinyin": "xué xiào",
-      "english": "school",
+      "tones": "24",
+      "def": "school",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -6063,7 +6564,8 @@
       "card_id": "hsk13_8e751d05",
       "hanzi": "眼 睛",
       "pinyin": "yǎn jing",
-      "english": "eye",
+      "tones": "35",
+      "def": "eye",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -6076,7 +6578,8 @@
       "card_id": "hsk13_0ed6cbef",
       "hanzi": "颜 色",
       "pinyin": "yán sè",
-      "english": "colour",
+      "tones": "24",
+      "def": "colour",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -6088,7 +6591,8 @@
       "card_id": "hsk13_ddf75223",
       "hanzi": "羊 肉",
       "pinyin": "yáng ròu",
-      "english": "mutton",
+      "tones": "24",
+      "def": "mutton",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -6100,7 +6604,8 @@
       "card_id": "hsk13_f583b014",
       "hanzi": "要",
       "pinyin": "yào",
-      "english": "want; be going to; ask for; demand",
+      "tones": "4",
+      "def": "want; be going to; ask for; demand",
       "pos": "verb",
       "hsk": "HSK2",
       "tags": [
@@ -6112,7 +6617,8 @@
       "card_id": "hsk13_7fa171f4",
       "hanzi": "药",
       "pinyin": "yào",
-      "english": "medicine",
+      "tones": "4",
+      "def": "medicine",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -6124,7 +6630,8 @@
       "card_id": "hsk13_62f48b00",
       "hanzi": "要 求",
       "pinyin": "yāo qiú",
-      "english": "requirement",
+      "tones": "12",
+      "def": "requirement",
       "pos": "verb / noun",
       "hsk": "HSK3",
       "tags": [
@@ -6136,7 +6643,8 @@
       "card_id": "hsk13_7a330788",
       "hanzi": "也",
       "pinyin": "yě",
-      "english": "too; also",
+      "tones": "3",
+      "def": "too; also",
       "pos": "adv.",
       "hsk": "HSK2",
       "tags": [
@@ -6147,7 +6655,8 @@
       "card_id": "hsk13_c0f0c756",
       "hanzi": "爷 爷",
       "pinyin": "yé ye",
-      "english": "grandfather [father's father]",
+      "tones": "25",
+      "def": "grandfather [father's father]",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -6159,7 +6668,8 @@
       "card_id": "hsk13_74306135",
       "hanzi": "一",
       "pinyin": "yī",
-      "english": "one; once; first; structural word between two of the same verb; as soon as; throughout",
+      "tones": "1",
+      "def": "one; once; first; structural word between two of the same verb; as soon as; throughout",
       "pos": "num.",
       "hsk": "HSK1",
       "tags": [
@@ -6171,7 +6681,8 @@
       "card_id": "hsk13_19fa3ac7",
       "hanzi": "一 般",
       "pinyin": "yī bān",
-      "english": "ordinary",
+      "tones": "11",
+      "def": "ordinary",
       "pos": "adj.",
       "hsk": "HSK3",
       "tags": [
@@ -6182,7 +6693,8 @@
       "card_id": "hsk13_7872f4c5",
       "hanzi": "一 边",
       "pinyin": "yī biān",
-      "english": "on the one hand …",
+      "tones": "11",
+      "def": "on the one hand …",
       "pos": "adv.",
       "hsk": "HSK3",
       "tags": [
@@ -6194,7 +6706,8 @@
       "card_id": "hsk13_cae01e4d",
       "hanzi": "一 点 儿",
       "pinyin": "yī diǎn er",
-      "english": "a bit",
+      "tones": "135",
+      "def": "a bit",
       "pos": "quantif.",
       "hsk": "HSK1",
       "tags": [
@@ -6207,7 +6720,8 @@
       "card_id": "hsk13_9d6b4253",
       "hanzi": "一 定",
       "pinyin": "yī dìng",
-      "english": "definitely",
+      "tones": "14",
+      "def": "definitely",
       "pos": "adv. / adj.",
       "hsk": "HSK3",
       "tags": [
@@ -6219,7 +6733,8 @@
       "card_id": "hsk13_5d194799",
       "hanzi": "衣 服",
       "pinyin": "yī fu",
-      "english": "clothes",
+      "tones": "15",
+      "def": "clothes",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -6231,7 +6746,8 @@
       "card_id": "hsk13_c691dfe5",
       "hanzi": "一 共",
       "pinyin": "yī gòng",
-      "english": "altogether",
+      "tones": "14",
+      "def": "altogether",
       "pos": "adv.",
       "hsk": "HSK3",
       "tags": [
@@ -6243,7 +6759,8 @@
       "card_id": "hsk13_dd4d7e58",
       "hanzi": "一 会 儿",
       "pinyin": "yī huì er",
-      "english": "a short while",
+      "tones": "145",
+      "def": "a short while",
       "pos": "quantif.",
       "hsk": "HSK3",
       "tags": [
@@ -6256,7 +6773,8 @@
       "card_id": "hsk13_a58f58bd",
       "hanzi": "已 经",
       "pinyin": "yǐ jīng",
-      "english": "already",
+      "tones": "31",
+      "def": "already",
       "pos": "adv.",
       "hsk": "HSK2",
       "tags": [
@@ -6268,7 +6786,8 @@
       "card_id": "hsk13_9083ca1c",
       "hanzi": "一 起",
       "pinyin": "yì qǐ",
-      "english": "together",
+      "tones": "43",
+      "def": "together",
       "pos": "adv.",
       "hsk": "HSK2",
       "tags": [
@@ -6280,7 +6799,8 @@
       "card_id": "hsk13_b72933e8",
       "hanzi": "以 前",
       "pinyin": "yǐ qián",
-      "english": "before",
+      "tones": "32",
+      "def": "before",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -6292,7 +6812,8 @@
       "card_id": "hsk13_d4e8b08d",
       "hanzi": "医 生",
       "pinyin": "yī shēng",
-      "english": "doctor",
+      "tones": "11",
+      "def": "doctor",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -6304,7 +6825,8 @@
       "card_id": "hsk13_304989ca",
       "hanzi": "意 思",
       "pinyin": "yì si",
-      "english": "meaning",
+      "tones": "45",
+      "def": "meaning",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -6317,7 +6839,8 @@
       "card_id": "hsk13_17bd3b68",
       "hanzi": "一 下",
       "pinyin": "yī xià",
-      "english": "[used after a verb] give something a go",
+      "tones": "14",
+      "def": "[used after a verb] give something a go",
       "pos": "quantif.",
       "hsk": "HSK2",
       "tags": [
@@ -6329,7 +6852,8 @@
       "card_id": "hsk13_64bc637a",
       "hanzi": "一 样",
       "pinyin": "yī yàng",
-      "english": "same; identical",
+      "tones": "14",
+      "def": "same; identical",
       "pos": "adj.",
       "hsk": "HSK3",
       "tags": [
@@ -6341,7 +6865,8 @@
       "card_id": "hsk13_390ff199",
       "hanzi": "医 院",
       "pinyin": "yī yuàn",
-      "english": "hospital",
+      "tones": "14",
+      "def": "hospital",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -6353,7 +6878,8 @@
       "card_id": "hsk13_c87df605",
       "hanzi": "一 直",
       "pinyin": "yī zhí",
-      "english": "straight on; always",
+      "tones": "12",
+      "def": "straight on; always",
       "pos": "adv.",
       "hsk": "HSK3",
       "tags": [
@@ -6365,7 +6891,8 @@
       "card_id": "hsk13_b11e393b",
       "hanzi": "椅 子",
       "pinyin": "yǐ zi",
-      "english": "chair",
+      "tones": "35",
+      "def": "chair",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -6377,7 +6904,8 @@
       "card_id": "hsk13_1bde1a16",
       "hanzi": "阴",
       "pinyin": "yīn",
-      "english": "cloudy",
+      "tones": "1",
+      "def": "cloudy",
       "pos": "adj.",
       "hsk": "HSK2",
       "tags": [
@@ -6389,7 +6917,8 @@
       "card_id": "hsk13_e0f8250a",
       "hanzi": "银 行",
       "pinyin": "yín háng",
-      "english": "bank",
+      "tones": "22",
+      "def": "bank",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -6402,7 +6931,8 @@
       "card_id": "hsk13_6a84b482",
       "hanzi": "饮 料",
       "pinyin": "yǐn liào",
-      "english": "drink",
+      "tones": "34",
+      "def": "drink",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -6414,7 +6944,8 @@
       "card_id": "hsk13_a9724416",
       "hanzi": "因 为 … 所 以 …",
       "pinyin": "yīn wèi … suǒ yǐ …",
-      "english": "because",
+      "tones": "145335",
+      "def": "because",
       "pos": "conj.",
       "hsk": "HSK2",
       "tags": [
@@ -6425,7 +6956,8 @@
       "card_id": "hsk13_026d5db0",
       "hanzi": "音 乐",
       "pinyin": "yīn yuè",
-      "english": "music",
+      "tones": "14",
+      "def": "music",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -6438,7 +6970,8 @@
       "card_id": "hsk13_29f4f9af",
       "hanzi": "应 该",
       "pinyin": "yīng gāi",
-      "english": "should",
+      "tones": "11",
+      "def": "should",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -6450,7 +6983,8 @@
       "card_id": "hsk13_be98a010",
       "hanzi": "影 响",
       "pinyin": "yǐng xiǎng",
-      "english": "influence; to affect",
+      "tones": "33",
+      "def": "influence; to affect",
       "pos": "verb / noun",
       "hsk": "HSK3",
       "tags": [
@@ -6462,7 +6996,8 @@
       "card_id": "hsk13_ae177290",
       "hanzi": "用",
       "pinyin": "yòng",
-      "english": "to use",
+      "tones": "4",
+      "def": "to use",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -6474,7 +7009,8 @@
       "card_id": "hsk13_640642f2",
       "hanzi": "有",
       "pinyin": "yǒu",
-      "english": "to have",
+      "tones": "3",
+      "def": "to have",
       "pos": "verb",
       "hsk": "HSK1",
       "tags": [
@@ -6486,7 +7022,8 @@
       "card_id": "hsk13_d4107d53",
       "hanzi": "又",
       "pinyin": "yòu",
-      "english": "again",
+      "tones": "4",
+      "def": "again",
       "pos": "adv.",
       "hsk": "HSK3",
       "tags": [
@@ -6498,7 +7035,8 @@
       "card_id": "hsk13_484a431f",
       "hanzi": "右 边",
       "pinyin": "yòu bian",
-      "english": "on the right",
+      "tones": "45",
+      "def": "on the right",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -6510,7 +7048,8 @@
       "card_id": "hsk13_2c13474f",
       "hanzi": "有 名",
       "pinyin": "yǒu míng",
-      "english": "famous",
+      "tones": "32",
+      "def": "famous",
       "pos": "adj.",
       "hsk": "HSK3",
       "tags": [
@@ -6521,7 +7060,8 @@
       "card_id": "hsk13_e590a39b",
       "hanzi": "游 戏",
       "pinyin": "yóu xì",
-      "english": "game",
+      "tones": "24",
+      "def": "game",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -6533,7 +7073,8 @@
       "card_id": "hsk13_2adae42f",
       "hanzi": "游 泳",
       "pinyin": "yóu yǒng",
-      "english": "swimming",
+      "tones": "23",
+      "def": "swimming",
       "pos": "verb",
       "hsk": "HSK2",
       "tags": [
@@ -6545,7 +7086,8 @@
       "card_id": "hsk13_4d74f285",
       "hanzi": "鱼",
       "pinyin": "yú",
-      "english": "fish",
+      "tones": "2",
+      "def": "fish",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -6558,7 +7100,8 @@
       "card_id": "hsk13_17e5fe0a",
       "hanzi": "遇 到",
       "pinyin": "yù dào",
-      "english": "to meet",
+      "tones": "44",
+      "def": "to meet",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -6570,7 +7113,8 @@
       "card_id": "hsk13_ca6469ee",
       "hanzi": "元",
       "pinyin": "yuán",
-      "english": "yuan [unit of Chinese currency]; dollar",
+      "tones": "2",
+      "def": "yuan [unit of Chinese currency]; dollar",
       "pos": "m.w.",
       "hsk": "HSK3",
       "tags": [
@@ -6583,7 +7127,8 @@
       "card_id": "hsk13_ffb6df82",
       "hanzi": "远",
       "pinyin": "yuǎn",
-      "english": "far",
+      "tones": "3",
+      "def": "far",
       "pos": "adj.",
       "hsk": "HSK2",
       "tags": [
@@ -6595,7 +7140,8 @@
       "card_id": "hsk13_80744e6e",
       "hanzi": "愿 意",
       "pinyin": "yuàn yì",
-      "english": "willing",
+      "tones": "44",
+      "def": "willing",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -6607,7 +7153,8 @@
       "card_id": "hsk13_ae289e4f",
       "hanzi": "越",
       "pinyin": "yuè",
-      "english": "the more...the more….",
+      "tones": "4",
+      "def": "the more...the more….",
       "pos": "adv.",
       "hsk": "HSK3",
       "tags": [
@@ -6618,7 +7165,8 @@
       "card_id": "hsk13_3d6b5ae8",
       "hanzi": "月",
       "pinyin": "yuè",
-      "english": "month; moon",
+      "tones": "4",
+      "def": "month; moon",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -6630,7 +7178,8 @@
       "card_id": "hsk13_1b799a12",
       "hanzi": "月 亮",
       "pinyin": "yuè liang",
-      "english": "moon",
+      "tones": "45",
+      "def": "moon",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -6642,7 +7191,8 @@
       "card_id": "hsk13_4de47c72",
       "hanzi": "运 动",
       "pinyin": "yùn dòng",
-      "english": "sport",
+      "tones": "44",
+      "def": "sport",
       "pos": "verb / noun",
       "hsk": "HSK2",
       "tags": [
@@ -6654,7 +7204,8 @@
       "card_id": "hsk13_7d83c6b4",
       "hanzi": "在",
       "pinyin": "zài",
-      "english": "in; at; on",
+      "tones": "4",
+      "def": "in; at; on",
       "pos": "verb / prep.",
       "hsk": "HSK1",
       "tags": [
@@ -6666,7 +7217,8 @@
       "card_id": "hsk13_a1fe6ad5",
       "hanzi": "再",
       "pinyin": "zài",
-      "english": "again",
+      "tones": "4",
+      "def": "again",
       "pos": "adv.",
       "hsk": "HSK2",
       "tags": [
@@ -6679,7 +7231,8 @@
       "card_id": "hsk13_4650f58d",
       "hanzi": "再 见",
       "pinyin": "zài jiàn",
-      "english": "goodbye",
+      "tones": "44",
+      "def": "goodbye",
       "pos": "verb",
       "hsk": "HSK1",
       "tags": [
@@ -6691,7 +7244,8 @@
       "card_id": "hsk13_52c7efb3",
       "hanzi": "早 上",
       "pinyin": "zǎo shang",
-      "english": "early morning",
+      "tones": "35",
+      "def": "early morning",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -6703,7 +7257,8 @@
       "card_id": "hsk13_39d7ee20",
       "hanzi": "怎 么",
       "pinyin": "zěn me",
-      "english": "how?",
+      "tones": "35",
+      "def": "how?",
       "pos": "pron.",
       "hsk": "HSK1",
       "tags": [
@@ -6716,7 +7271,8 @@
       "card_id": "hsk13_2b9fbedd",
       "hanzi": "怎 么 样",
       "pinyin": "zěn me yàng",
-      "english": "how about it",
+      "tones": "354",
+      "def": "how about it",
       "pos": "pron.",
       "hsk": "HSK1",
       "tags": [
@@ -6728,7 +7284,8 @@
       "card_id": "hsk13_43cb4328",
       "hanzi": "站",
       "pinyin": "zhàn",
-      "english": "stand",
+      "tones": "4",
+      "def": "stand",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -6740,7 +7297,8 @@
       "card_id": "hsk13_2a90680f",
       "hanzi": "张",
       "pinyin": "zhāng",
-      "english": "to open up; to spread; [measure word for table, picture, paper etc]",
+      "tones": "1",
+      "def": "to open up; to spread; [measure word for table, picture, paper etc]",
       "pos": "m.w.",
       "hsk": "HSK3",
       "tags": [
@@ -6752,7 +7310,8 @@
       "card_id": "hsk13_b57730bf",
       "hanzi": "长",
       "pinyin": "zhǎng",
-      "english": "to grow",
+      "tones": "3",
+      "def": "to grow",
       "pos": "verb",
       "hsk": "HSK2",
       "tags": [
@@ -6764,7 +7323,8 @@
       "card_id": "hsk13_1f433250",
       "hanzi": "丈 夫",
       "pinyin": "zhàng fu",
-      "english": "husband",
+      "tones": "45",
+      "def": "husband",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -6776,7 +7336,8 @@
       "card_id": "hsk13_cbc90a5d",
       "hanzi": "找",
       "pinyin": "zhǎo",
-      "english": "to find; to look for",
+      "tones": "3",
+      "def": "to find; to look for",
       "pos": "verb",
       "hsk": "HSK2",
       "tags": [
@@ -6788,7 +7349,8 @@
       "card_id": "hsk13_53fcc011",
       "hanzi": "照 顾",
       "pinyin": "zhào gu",
-      "english": "to look after",
+      "tones": "45",
+      "def": "to look after",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -6801,7 +7363,8 @@
       "card_id": "hsk13_ca5c80d2",
       "hanzi": "着 急",
       "pinyin": "zháo jí",
-      "english": "anxious",
+      "tones": "22",
+      "def": "anxious",
       "pos": "adj.",
       "hsk": "HSK3",
       "tags": [
@@ -6813,7 +7376,8 @@
       "card_id": "hsk13_6348618f",
       "hanzi": "照 片",
       "pinyin": "zhào piàn",
-      "english": "photograph",
+      "tones": "44",
+      "def": "photograph",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -6825,7 +7389,8 @@
       "card_id": "hsk13_1d0be398",
       "hanzi": "照 相 机",
       "pinyin": "zhào xiàng jī",
-      "english": "camera",
+      "tones": "441",
+      "def": "camera",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -6837,7 +7402,8 @@
       "card_id": "hsk13_2d98cb6d",
       "hanzi": "这",
       "pinyin": "zhè",
-      "english": "this",
+      "tones": "4",
+      "def": "this",
       "pos": "pron.",
       "hsk": "HSK1",
       "tags": [
@@ -6849,7 +7415,8 @@
       "card_id": "hsk13_8151bfdf",
       "hanzi": "着",
       "pinyin": "zhe",
-      "english": "-ing",
+      "tones": "5",
+      "def": "-ing",
       "pos": "aux.",
       "hsk": "HSK2",
       "tags": [
@@ -6860,7 +7427,8 @@
       "card_id": "hsk13_8e9d22a0",
       "hanzi": "真",
       "pinyin": "zhēn",
-      "english": "real; so (+adjective)",
+      "tones": "1",
+      "def": "real; so (+adjective)",
       "pos": "adv.",
       "hsk": "HSK2",
       "tags": [
@@ -6872,7 +7440,8 @@
       "card_id": "hsk13_a6e2bfcc",
       "hanzi": "正 在",
       "pinyin": "zhèng zài",
-      "english": "to be in the process of",
+      "tones": "44",
+      "def": "to be in the process of",
       "pos": "adv.",
       "hsk": "HSK2",
       "tags": [
@@ -6883,7 +7452,8 @@
       "card_id": "hsk13_d201eeea",
       "hanzi": "只",
       "pinyin": "zhī",
-      "english": "individual [measure word for small animals]",
+      "tones": "1",
+      "def": "individual [measure word for small animals]",
       "pos": "m.w.",
       "hsk": "HSK2",
       "tags": [
@@ -6895,7 +7465,8 @@
       "card_id": "hsk13_f34013c1",
       "hanzi": "只",
       "pinyin": "zhǐ",
-      "english": "only",
+      "tones": "3",
+      "def": "only",
       "pos": "adv.",
       "hsk": "HSK2",
       "tags": [
@@ -6907,7 +7478,8 @@
       "card_id": "hsk13_d4e64aed",
       "hanzi": "知 道",
       "pinyin": "zhī dào",
-      "english": "know; realise; be aware of",
+      "tones": "14",
+      "def": "know; realise; be aware of",
       "pos": "verb",
       "hsk": "HSK2",
       "tags": [
@@ -6919,7 +7491,8 @@
       "card_id": "hsk13_7fc043db",
       "hanzi": "只 有 … 才 …",
       "pinyin": "zhǐ yǒu … cái …",
-      "english": "only if…then...",
+      "tones": "33525",
+      "def": "only if…then...",
       "pos": "conj.",
       "hsk": "HSK3",
       "tags": [
@@ -6930,7 +7503,8 @@
       "card_id": "hsk13_a581d519",
       "hanzi": "种",
       "pinyin": "zhǒng",
-      "english": "kind",
+      "tones": "3",
+      "def": "kind",
       "pos": "m.w.",
       "hsk": "HSK3",
       "tags": [
@@ -6942,7 +7516,8 @@
       "card_id": "hsk13_ca8b6070",
       "hanzi": "中 国",
       "pinyin": "zhōng guó",
-      "english": "China",
+      "tones": "12",
+      "def": "China",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -6954,7 +7529,8 @@
       "card_id": "hsk13_bb9633f5",
       "hanzi": "中 间",
       "pinyin": "zhōng jiān",
-      "english": "middle",
+      "tones": "11",
+      "def": "middle",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -6966,7 +7542,8 @@
       "card_id": "hsk13_40addff8",
       "hanzi": "中 文",
       "pinyin": "zhōng wén",
-      "english": "Chinese [written language]",
+      "tones": "12",
+      "def": "Chinese [written language]",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -6979,7 +7556,8 @@
       "card_id": "hsk13_927ce67b",
       "hanzi": "中 午",
       "pinyin": "zhōng wǔ",
-      "english": "midday",
+      "tones": "13",
+      "def": "midday",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -6991,7 +7569,8 @@
       "card_id": "hsk13_839b12de",
       "hanzi": "重 要",
       "pinyin": "zhòng yào",
-      "english": "important",
+      "tones": "44",
+      "def": "important",
       "pos": "adj.",
       "hsk": "HSK3",
       "tags": [
@@ -7002,7 +7581,8 @@
       "card_id": "hsk13_66532723",
       "hanzi": "终 于",
       "pinyin": "zhōng yú",
-      "english": "at last",
+      "tones": "12",
+      "def": "at last",
       "pos": "adv.",
       "hsk": "HSK3",
       "tags": [
@@ -7014,7 +7594,8 @@
       "card_id": "hsk13_a992739a",
       "hanzi": "周 末",
       "pinyin": "zhōu mò",
-      "english": "weekend",
+      "tones": "14",
+      "def": "weekend",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -7026,7 +7607,8 @@
       "card_id": "hsk13_ecb76be1",
       "hanzi": "住",
       "pinyin": "zhù",
-      "english": "to live; stay (a number of nights)",
+      "tones": "4",
+      "def": "to live; stay (a number of nights)",
       "pos": "verb",
       "hsk": "HSK1",
       "tags": [
@@ -7038,7 +7620,8 @@
       "card_id": "hsk13_15781715",
       "hanzi": "主 要",
       "pinyin": "zhǔ yào",
-      "english": "mainly",
+      "tones": "34",
+      "def": "mainly",
       "pos": "adj.",
       "hsk": "HSK3",
       "tags": [
@@ -7049,7 +7632,8 @@
       "card_id": "hsk13_b1c8af27",
       "hanzi": "注 意",
       "pinyin": "zhù yì",
-      "english": "take note of",
+      "tones": "44",
+      "def": "take note of",
       "pos": "verb",
       "hsk": "HSK3",
       "tags": [
@@ -7061,7 +7645,8 @@
       "card_id": "hsk13_65c2caca",
       "hanzi": "准 备",
       "pinyin": "zhǔn bèi",
-      "english": "to prepare",
+      "tones": "34",
+      "def": "to prepare",
       "pos": "verb",
       "hsk": "HSK2",
       "tags": [
@@ -7073,7 +7658,8 @@
       "card_id": "hsk13_eb0030af",
       "hanzi": "桌 子",
       "pinyin": "zhuō zi",
-      "english": "table",
+      "tones": "15",
+      "def": "table",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -7085,7 +7671,8 @@
       "card_id": "hsk13_1a656f5d",
       "hanzi": "字",
       "pinyin": "zì",
-      "english": "(Chinese) character",
+      "tones": "4",
+      "def": "(Chinese) character",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -7097,7 +7684,8 @@
       "card_id": "hsk13_174d004b",
       "hanzi": "自 己",
       "pinyin": "zì jǐ",
-      "english": "self; oneself",
+      "tones": "43",
+      "def": "self; oneself",
       "pos": "pron.",
       "hsk": "HSK3",
       "tags": [
@@ -7109,7 +7697,8 @@
       "card_id": "hsk13_63ca0424",
       "hanzi": "自 行 车",
       "pinyin": "zì xíng chē",
-      "english": "bicycle",
+      "tones": "421",
+      "def": "bicycle",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -7121,7 +7710,8 @@
       "card_id": "hsk13_789157de",
       "hanzi": "总 是",
       "pinyin": "zǒng shì",
-      "english": "always",
+      "tones": "34",
+      "def": "always",
       "pos": "adv.",
       "hsk": "HSK3",
       "tags": [
@@ -7133,7 +7723,8 @@
       "card_id": "hsk13_81aaa60b",
       "hanzi": "走",
       "pinyin": "zǒu",
-      "english": "go; walk",
+      "tones": "3",
+      "def": "go; walk",
       "pos": "verb",
       "hsk": "HSK2",
       "tags": [
@@ -7145,7 +7736,8 @@
       "card_id": "hsk13_90995851",
       "hanzi": "嘴",
       "pinyin": "zuǐ",
-      "english": "mouth",
+      "tones": "3",
+      "def": "mouth",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -7157,7 +7749,8 @@
       "card_id": "hsk13_1c7b6e63",
       "hanzi": "最",
       "pinyin": "zuì",
-      "english": "most",
+      "tones": "4",
+      "def": "most",
       "pos": "adv.",
       "hsk": "HSK2",
       "tags": [
@@ -7169,7 +7762,8 @@
       "card_id": "hsk13_b8642ea1",
       "hanzi": "最 后",
       "pinyin": "zuì hòu",
-      "english": "lastly",
+      "tones": "44",
+      "def": "lastly",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -7181,7 +7775,8 @@
       "card_id": "hsk13_1ac402a4",
       "hanzi": "最 近",
       "pinyin": "zuì jìn",
-      "english": "recently",
+      "tones": "44",
+      "def": "recently",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
@@ -7193,7 +7788,8 @@
       "card_id": "hsk13_d88e8181",
       "hanzi": "坐",
       "pinyin": "zuò",
-      "english": "to sit",
+      "tones": "4",
+      "def": "to sit",
       "pos": "verb",
       "hsk": "HSK1",
       "tags": [
@@ -7205,7 +7801,8 @@
       "card_id": "hsk13_fa256862",
       "hanzi": "做",
       "pinyin": "zuò",
-      "english": "to do; to be; become (an occupation)",
+      "tones": "4",
+      "def": "to do; to be; become (an occupation)",
       "pos": "verb",
       "hsk": "HSK1",
       "tags": [
@@ -7217,7 +7814,8 @@
       "card_id": "hsk13_df78457e",
       "hanzi": "左 边",
       "pinyin": "zuǒ bian",
-      "english": "on the left",
+      "tones": "35",
+      "def": "on the left",
       "pos": "noun",
       "hsk": "HSK2",
       "tags": [
@@ -7229,7 +7827,8 @@
       "card_id": "hsk13_6cee25cf",
       "hanzi": "昨 天",
       "pinyin": "zuó tiān",
-      "english": "yesterday",
+      "tones": "21",
+      "def": "yesterday",
       "pos": "noun",
       "hsk": "HSK1",
       "tags": [
@@ -7241,7 +7840,8 @@
       "card_id": "hsk13_2f08e7ae",
       "hanzi": "作 业",
       "pinyin": "zuò yè",
-      "english": "homework",
+      "tones": "44",
+      "def": "homework",
       "pos": "noun",
       "hsk": "HSK3",
       "tags": [
