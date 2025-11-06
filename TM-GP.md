@@ -56,8 +56,8 @@ All deck JSON files follow the same schema and constraints (see §3).
      "card_id": "uniq_id_001",
      "hanzi": "我 要 咖啡",
      "pinyin": "wǒ yào kāfēi",
-     "en_words": ["I", "want", "coffee"],
-     "english": "I want coffee"
+     "def_words": ["I", "want", "coffee"],
+     "def": "I want coffee"
    }
   ]
 }
@@ -66,9 +66,9 @@ All deck JSON files follow the same schema and constraints (see §3).
 Constraints:
 
 - `card_id` unique within a deck.
-- Token counts across `hanzi`, `pinyin`, and `en_words` must match exactly.
+- Token counts across `hanzi`, `pinyin`, and `def_words` must match exactly.
 - `hanzi` and `pinyin` are space-separated strings.
-- `en_words` is an array of strings, one for each corresponding hanzi token.
+- `def_words` is an array of strings, one for each corresponding hanzi token.
 - All string values are trimmed of whitespace.
 
 Validation behavior:
@@ -203,10 +203,10 @@ Select the card with the maximum score over the active deck.
 
 #### 6.5 Real-time Search View
 
-- Inputs: Hanzi, Pinyin, English (searches `en_words` and `english`).
+- Inputs: Hanzi, Pinyin, English (searches `def_words` and `def`).
 - Filter on each input change (AND across non-empty fields).
 - Pinyin search: tone-insensitive via normalized cache.
-- Results: rows with hanzi | pinyin | english. Click to jump to Review with that card with the possibility to return back to same search view easily.
+- Results: rows with hanzi | pinyin | def. Click to jump to Review with that card with the possibility to return back to same search view easily.
 
 ### 7) Usability
 

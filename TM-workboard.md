@@ -8,7 +8,7 @@ Pinned Invariants (keep in context)
 - Tech: Vanilla HTML/CSS/JS only. No frameworks.
 - Files: index.html, styles.css, app.js, decks/deck_a.json, deck_b.json, deck_c.json, deck_d.json.
 - Storage key: tmFlash; schema_version: 1.
-- Card fields: card_id, hanzi, pinyin, en_words, english.
+- Card fields: card_id, hanzi, pinyin, def_words, def.
 - Direction settings: "CH⇆EN" | "EN⇆CH" (global; internal keys: "CH->EN" | "EN->CH").
 - SRS: weights NEW=5.0, ERROR=3.0, DAYS=0.25; SRS_MAX_DAYS=14.
 - Four decks; per-deck stats isolated per direction (CH->EN and EN->CH).
@@ -87,7 +87,7 @@ Ticket W-020 — Deck Fetch with Retry [DONE]
 - Dependencies: W-010.
 
 Ticket W-021 — Deck Validation [DONE]
-- Description: Validate uniqueness of card_id and token-count equality across hanzi/pinyin/en_words.
+- Description: Validate uniqueness of card_id and token-count equality across hanzi/pinyin/def_words.
 - Deliverables:
     - Validator.validate(deckJson) → { validCards, errors$$$$ }.
     - Error summary UI (non-blocking) and per-deck error count stored for Stats.
@@ -199,7 +199,7 @@ Ticket W-063 — Direction Selector in Stats View [DONE]
 Ticket W-061 — Histogram & Top Lists [DONE]
 - Description: Render histogram buckets 0–20,21–40,41–60,61–80,81–100 and top 10 best/worst for active direction.
 - Deliverables:
-    - Simple CSS bars or canvas; lists with hanzi + english + stats.
+    - Simple CSS bars or canvas; lists with hanzi + def + stats.
 - Acceptance Criteria:
     - Correct bucket counts; sorting as specified with tie-breaker by total desc.
 - Dependencies: W-060.
@@ -217,7 +217,7 @@ Ticket W-062 — Reset Active Deck Stats [DONE]
 EPIC 8 — Search View
 
 Ticket W-070 — Real-Time Search (Pinyin/English) [DONE]
-- Description: One search input field with selector (button) to switch between pinyin or english search.
+- Description: One search input field with selector (button) to switch between pinyin or def search.
 - Deliverables:
     - Search.filter(query, type) and render results list; click-to-jump to Review.
 - Acceptance Criteria:

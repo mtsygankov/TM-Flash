@@ -170,8 +170,8 @@ Custom decks must follow this exact schema:
       "card_id": "unique_card_identifier",
       "hanzi": "我 要 咖啡",
       "pinyin": "wǒ yào kāfēi",
-      "en_words": ["I", "want", "coffee"],
-      "english": "I want coffee"
+      "def_words": ["I", "want", "coffee"],
+      "def": "I want coffee"
     }
   ]
 }
@@ -189,8 +189,8 @@ Custom decks must follow this exact schema:
 - `card_id`: String, unique within deck
 - `hanzi`: String, space-separated Chinese characters
 - `pinyin`: String, space-separated pinyin with tone marks
-- `en_words`: Array of strings, individual English words
-- `english`: String, complete English translation
+- `def_words`: Array of strings, individual English words
+- `def`: String, complete English translation
 
 ### Validation Rules
 
@@ -199,14 +199,14 @@ Custom decks must follow this exact schema:
 - Duplicate IDs are skipped and logged as errors
 
 #### Token Matching
-- Token count must match exactly across `hanzi`, `pinyin`, and `en_words`
+- Token count must match exactly across `hanzi`, `pinyin`, and `def_words`
 - Example: "我 要 咖啡" (3 tokens) = ["wǒ", "yào", "kāfēi"] (3 tokens) = ["I", "want", "coffee"] (3 tokens)
 
 #### Format Requirements
 - All strings are trimmed of leading/trailing whitespace
 - `hanzi` and `pinyin` use single spaces as separators
-- `en_words` is an array of individual words
-- `english` is a complete sentence or phrase
+- `def_words` is an array of individual words
+- `def` is a complete sentence or phrase
 
 ### Creating Custom Decks
 

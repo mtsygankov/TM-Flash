@@ -54,7 +54,7 @@ tm-flash/
 
 ### Data Handling
 - **LocalStorage**: Use key `tmFlash` with schema_version=1; schema includes nested "directions" per card: { [DIRECTION_KEYS.CH_TO_EN]: {correct, incorrect, last_reviewed}, [DIRECTION_KEYS.EN_TO_CH]: {...} }
-- **en_words format**: Array of strings for word-by-word translations, e.g., ["I", "love", "you"] instead of "I love you"
+- **def_words format**: Array of strings for word-by-word translations, e.g., ["I", "love", "you"] instead of "I love you"
 - **Stats tracking**: Separate per-direction stats for each card to support bidirectional learning
 - **JSON validation**: Validate deck structure and card data integrity
 - **Error recovery**: Graceful handling of corrupted data or network failures
