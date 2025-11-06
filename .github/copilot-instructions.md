@@ -13,7 +13,7 @@ Key files & examples
 - `index.html` — entry point and script order. Example: deck selector `<select id="deck-selector">` and review pane `#card-table`.
 - `constants.js` — deck registry `DECKS` and default constants (e.g., `DEFAULT_SELECTED_DECK`). Edit carefully; tests and UI expect these names.
 - `deckloader.js` — uses `fetch(url)` + timeout and shows an error banner on failure. Use `DeckLoader.fetch(deckId)` when programmatically loading decks.
-- `decks/*.json` — deck format example (see `decks/deck_a.json`): top-level `cards` array; each card has `card_id`, `hanzi`, `pinyin`, `en_words` (array of words), and `english` (string). Preserve `en_words` as an array — UI tokenizes by table columns.
+- `decks/*.json` — deck format example (see `decks/deck_a.json`): top-level `cards` array; each card has `card_id`, `hanzi`, `pinyin`, `def_words` (array of words), and `def` (string). Preserve `def_words` as an array — UI tokenizes by table columns.
 - `storage.js` / `stats.js` — localStorage schema: top-level `schema_version` and `settings`, and `decks` mapping. Stats shape per card: each direction (`"CH->EN"` and `"EN->CH"`) contains `total_correct`, `total_incorrect`, `last_correct_at`, `last_incorrect_at`, `correct_streak_len`, `incorrect_streak_len`, and their `_started_at` timestamps. Use `Storage.getDeckStats(deckId)` and `Storage.setDeckStats(deckId, stats)` for reads/writes.
 - `srs.js` — selection and scheduling logic lives here. Prefer small, focused changes and include console logs for debugging (the file contains detailed logger statements).
 
@@ -61,7 +61,7 @@ Developer workflows (discovered)
 
 Project-specific conventions & gotchas
 - Script load order matters. Adding a new module requires adding a script tag in `index.html` in the correct position.
-- Deck JSON must use `en_words` as an array of tokens; `hanzi` is space-separated tokens that control table columns. `Review.renderCard()` depends on these tokens for layout and scaling.
+- Deck JSON must use `def_words` as an array of tokens; `hanzi` is space-separated tokens that control table columns. `Review.renderCard()` depends on these tokens for layout and scaling.
 - `Storage.CURRENT_SCHEMA_VERSION` is used to reset state on mismatch. Changing schema requires migration logic (currently the code resets to defaults on mismatch).
 - `Stats.sync(deckId, cards)` is called to create per-card stats entries — don't assume stats exist until sync runs.
 - Branching and remote pushes are not used (local-only workflow documented). Commits should be atomic and mention workboard tickets if present.
