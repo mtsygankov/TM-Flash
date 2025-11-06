@@ -39,13 +39,13 @@ const StatsView = {
          const total = (dirStat.total_correct || 0) + (dirStat.total_incorrect || 0);
          if (total === 0) return;
          const ratio = (dirStat.total_correct || 0) / total;
-          const card = cardMap.get(cardId) || { hanzi: cardId, pinyin: "", english: "" };
+          const card = cardMap.get(cardId) || { hanzi: cardId, pinyin: "", def: "" };
 
           cardData.push({
             cardId,
             hanzi: card.hanzi,
             pinyin: card.pinyin,
-            english: card.english,
+            def: card.def,
             correct: dirStat.total_correct,
             incorrect: dirStat.total_incorrect,
             total,
@@ -200,7 +200,7 @@ const StatsView = {
         <!--div class="panel">
         <h3>Top 10 Best</h3>
         <ul class="small-list">
-        ${best.length ? best.map((data) => `<li class="small-item"><span class="mini-hanzi">${data.hanzi}</span><span class="mini-eng">${data.english}</span><span class="mini-stats">${data.correct}/${data.total} (${(data.ratio*100).toFixed(0)}%)</span></li>`).join("") : "<li class='small-item'>No data</li>"}
+        ${best.length ? best.map((data) => `<li class="small-item"><span class="mini-hanzi">${data.hanzi}</span><span class="mini-def">${data.def}</span><span class="mini-stats">${data.correct}/${data.total} (${(data.ratio*100).toFixed(0)}%)</span></li>`).join("") : "<li class='small-item'>No data</li>"}
         </ul>
         </div-->
         </div>
@@ -209,7 +209,7 @@ const StatsView = {
         <div class="panel" width="300">
           <h3>Top 10 Worst</h3>
           <ul class="small-list">
-             ${worst.length ? worst.map((data) => `<li class="small-item"><span class="mini-hanzi">${data.hanzi}</span><span class="mini-pinyin">${data.pinyin}</span><span class="mini-eng">${data.english}</span><span class="mini-stats">${data.correct}/${data.total} (${(data.ratio*100).toFixed(0)}%)</span></li>`).join("") : "<li class='small-item'>No data</li>"}
+             ${worst.length ? worst.map((data) => `<li class="small-item"><span class="mini-hanzi">${data.hanzi}</span><span class="mini-pinyin">${data.pinyin}</span><span class="mini-def">${data.def}</span><span class="mini-stats">${data.correct}/${data.total} (${(data.ratio*100).toFixed(0)}%)</span></li>`).join("") : "<li class='small-item'>No data</li>"}
           </ul>
         </div>
 

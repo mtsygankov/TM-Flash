@@ -38,7 +38,7 @@ const Search = {
    },
 
   toggleType() {
-    this.currentType = this.currentType === "pinyin" ? "english" : "pinyin";
+    this.currentType = this.currentType === "pinyin" ? "def" : "pinyin";
     this.updateToggleButton();
     document.getElementById("search-query").focus();
   },
@@ -69,9 +69,9 @@ const Search = {
         const normalizedPinyin = card.pinyin_normalized.replace(/\s/g, '');
         const normalizedHanzi = card.hanzi.replace(/\s/g, '');
         return !query || normalizedPinyin.includes(normalizedQuery) || normalizedHanzi.includes(normalizedQuery);
-      } else if (type === "english") {
+      } else if (type === "def") {
         // Keep spaces for English search as words are separate
-        return !query || card.english.toLowerCase().includes(query.toLowerCase());
+        return !query || card.def.toLowerCase().includes(query.toLowerCase());
       }
       return false;
     });
@@ -97,9 +97,9 @@ const Search = {
            <div class="result-hanzi">${card.hanzi.replace(/(\S)/g, '<span class="hanzi-char" data-char="$1">$1</span>')}</div>
            <div class="result-pinyin">${card.pinyin}</div>
          </div>
-        <div class="result-english-column">
+        <div class="result-def-column">
           ${card.pos ? `<span class="result-pos">[ ${card.pos} ]</span>` : ''}
-          <div class="result-english">${card.english}</div>
+          <div class="result-def">${card.def}</div>
         </div>
         <div class="search-result-buttons">
           <button class="dict-btn bkrs-btn" data-hanzi="${cleanHanzi}">🔗 BKRS</button>

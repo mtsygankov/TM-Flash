@@ -447,7 +447,7 @@ h2 {
     color: #888;
 }
 
-#card-table .row-en-words td {
+#card-table .row-def-words td {
     font-size: calc(1rem * var(--scale-factor));
     color: #aaa;
 }
@@ -478,39 +478,39 @@ h2 {
 }
 
 /* English section styles */
-#card-english {
+#card-def {
     text-align: center;
     margin: 0 auto 2rem auto;
     max-width: 1200px;
     padding: 1rem 0.75rem;
-    font-size: calc(3rem * var(--english-scale-factor));
-    --english-scale-factor: 1;
+    font-size: calc(3rem * var(--def-scale-factor));
+    --def-scale-factor: 1;
 }
 
-#card-english .pos-prefix {
-    font-size: calc(1.3rem * var(--english-scale-factor));
+#card-def .pos-prefix {
+    font-size: calc(1.3rem * var(--def-scale-factor));
     color: #888;
     font-style: italic;
     margin-right: 0.5em;
 }
 
-#card-english .english-text {
+#card-def .def-text {
     color: #333;
 }
 
 /* Flip and direction visibility */
-#card-table:not(.flipped).direction-ch-en .row-en-words {
+#card-table:not(.flipped).direction-ch-en .row-def-words {
     visibility: hidden;
 }
 
-#card-table:not(.flipped).direction-en-ch .row-hanzi,
-#card-table:not(.flipped).direction-en-ch .row-pinyin,
-#card-table:not(.flipped).direction-en-ch .row-en-words {
+#card-table:not(.flipped).direction-def-ch .row-hanzi,
+#card-table:not(.flipped).direction-def-ch .row-pinyin,
+#card-table:not(.flipped).direction-def-ch .row-def-words {
     visibility: hidden;
 }
 
 /* English section visibility */
-#card-english:not(.flipped).direction-ch-en {
+#card-def:not(.flipped).direction-ch-en {
     visibility: hidden;
 }
 
@@ -596,7 +596,7 @@ h2 {
         font-size: 1.3rem;
     }
 
-    #card-english {
+    #card-def {
         font-size: 1.5rem;
         padding: 0.75rem 0.5rem;
     }
@@ -818,7 +818,7 @@ h2 {
     min-width: 4rem;
 }
 
-.mini-eng {
+.mini-def {
     color: #111827;
     font-size: 1rem;
     flex: 1;
@@ -934,7 +934,7 @@ h2 {
     align-items: center;
 }
 
-.result-english-column {
+.result-def-column {
     flex: 1;
     display: flex;
     align-items: center;
@@ -1014,7 +1014,7 @@ h2 {
     margin-bottom: 0.1rem;
 }
 
-.result-english {
+.result-def {
     font-size: clamp(0.9rem, 2.5vw, 1.5rem);
     color: #666;
     text-align: left;

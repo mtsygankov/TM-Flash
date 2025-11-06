@@ -18,24 +18,24 @@ const Review = {
     Message.hide('card-container');
     if (!card) {
       const table = document.getElementById("card-table");
-      const englishSection = document.getElementById("card-english");
+      const defSection = document.getElementById("card-def");
       if (table) {
         table.innerHTML = "";
       }
-      if (englishSection) {
-        englishSection.querySelector('.pos-prefix').textContent = '';
-        englishSection.querySelector('.english-text').textContent = '';
+      if (defSection) {
+        defSection.querySelector('.pos-prefix').textContent = '';
+        defSection.querySelector('.def-text').textContent = '';
       }
       return;
     }
     const hanziTokens = card.hanzi.split(" ");
     const pinyinTokens = card.pinyin.split(" ");
-    const enWords = card.en_words || [];
+    const enWords = card.def_words || [];
     const table = document.getElementById("card-table");
-    const englishSection = document.getElementById("card-english");
-    if (!table || !englishSection) return;
+    const defSection = document.getElementById("card-def");
+    if (!table || !defSection) return;
     
-    // Render table with only hanzi, pinyin, and en-words rows
+    // Render table with only hanzi, pinyin, and def-words rows
     table.innerHTML = `
             <tr class="row-hanzi">
                 ${hanziTokens.map((token) => `<td><span class="word-text hanzi-word">${this.escapeHtml(token)}</span></td>`).join("")}
@@ -43,16 +43,16 @@ const Review = {
             <tr class="row-pinyin">
                 ${pinyinTokens.map((token) => `<td><span class="word-text pinyin-word">${this.escapeHtml(token)}</span></td>`).join("")}
             </tr>
-            <tr class="row-en-words">
-                ${enWords.map((word) => `<td><span class="word-text en-word">${this.escapeHtml(word)}</span></td>`).join("")}
+            <tr class="row-def-words">
+                ${enWords.map((word) => `<td><span class="word-text def-word">${this.escapeHtml(word)}</span></td>`).join("")}
             </tr>
         `;
 
-    // Render english section separately
-    const posPrefix = englishSection.querySelector('.pos-prefix');
-    const englishText = englishSection.querySelector('.english-text');
+    // Render def section separately
+    const posPrefix = defSection.querySelector('.pos-prefix');
+    const defText = defSection.querySelector('.def-text');
     posPrefix.textContent = card.pos ? `[ ${this.escapeHtml(card.pos)} ] ` : '';
-    englishText.textContent = this.escapeHtml(card.english);
+    defText.textContent = this.escapeHtml(card.def);
 
     // Dynamic font scaling for hanzi/pinyin table (more accurate now)
     const columns = hanziTokens.length;
@@ -67,15 +67,15 @@ const Review = {
     const scale = Math.max(0.5, Math.min(1, availableWidth / estimatedWidth));
     table.style.setProperty('--scale-factor', scale);
 
-    // Independent font scaling for english section
+    // Independent font scaling for def section
     const container = document.getElementById('card-container');
     const containerPadding = parseFloat(getComputedStyle(container).paddingLeft) + parseFloat(getComputedStyle(container).paddingRight);
-    const englishAvailableWidth = container.clientWidth - containerPadding;
-    const englishTextLength = card.english.length + (card.pos ? card.pos.length : 0);
-    const englishBaseCharSize = 3 * 16; // 3rem in px per english char
-    const englishEstimatedWidth = englishTextLength * englishBaseCharSize * 0.6; // English chars are narrower
-    const englishScale = Math.max(0.6, Math.min(1, englishAvailableWidth / englishEstimatedWidth));
-    englishSection.style.setProperty('--english-scale-factor', englishScale);
+    const defAvailableWidth = container.clientWidth - containerPadding;
+    const defTextLength = card.def.length + (card.pos ? card.pos.length : 0);
+    const defBaseCharSize = 3 * 16; // 3rem in px per def char
+    const defEstimatedWidth = defTextLength * defBaseCharSize * 0.6; // English chars are narrower
+    const defScale = Math.max(0.6, Math.min(1, defAvailableWidth / defEstimatedWidth));
+    defSection.style.setProperty('--def-scale-factor', defScale);
 
     // Add click handlers for individual word search
     const hanziWords = table.querySelectorAll('.hanzi-word');
@@ -122,12 +122,12 @@ const Review = {
       });
     });
 
-    const enWordSpans = table.querySelectorAll('.en-word');
-    enWordSpans.forEach(span => {
+    const defWordSpans = table.querySelectorAll('.def-word');
+    defWordSpans.forEach(span => {
       span.addEventListener('click', (e) => {
         e.stopPropagation();
         document.getElementById("search-query").value = span.textContent;
-        Search.currentType = "english";
+        Search.currentType = "def";
         Search.updateToggleButton();
         Nav.show("search");
         Search.performSearch();
@@ -249,14 +249,14 @@ const Review = {
 
   applyDirectionAndFlip() {
     const table = document.getElementById("card-table");
-    const englishSection = document.getElementById("card-english");
+    const defSection = document.getElementById("card-def");
     const direction = App.currentDirection;
     const flipped = App.flipped;
     
-    // Apply classes to both table and english section
+    // Apply classes to both table and def section
     const className = `direction-${direction.toLowerCase().replace("->", "-")} ${flipped ? "flipped" : ""}`;
     table.className = className;
-    englishSection.className = className;
+    defSection.className = className;
 
     const buttons = document.getElementById("card-buttons");
     if (buttons) {

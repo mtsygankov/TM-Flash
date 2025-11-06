@@ -53,13 +53,13 @@ const Validator = {
         message: "Missing pinyin",
       });
     }
-    // en_words is now optional - no validation required
-    if (!card.english) {
+    // def_words is now optional - no validation required
+    if (!card.def) {
       errors.push({
         type: "missing_field",
         cardIndex: index,
-        field: "english",
-        message: "Missing english",
+        field: "def",
+        message: "Missing def",
       });
     }
 
@@ -84,25 +84,25 @@ const Validator = {
     const hanziTokens = this.tokenize(card.hanzi);
     const pinyinTokens = this.tokenize(card.pinyin);
     
-    // Only check token count if en_words is present
-    if (card.en_words) {
-      const enWordsTokens = Array.isArray(card.en_words)
-        ? card.en_words
-        : this.tokenize(card.en_words);
+    // Only check token count if def_words is present
+    if (card.def_words) {
+      const defWordsTokens = Array.isArray(card.def_words)
+        ? card.def_words
+        : this.tokenize(card.def_words);
 
       if (
         hanziTokens.length !== pinyinTokens.length ||
-        hanziTokens.length !== enWordsTokens.length
+        hanziTokens.length !== defWordsTokens.length
       ) {
         errors.push({
           type: "token_mismatch",
           cardIndex: index,
           cardId: card.card_id,
-          message: `Token count mismatch - hanzi: ${hanziTokens.length}, pinyin: ${pinyinTokens.length}, en_words: ${enWordsTokens.length}`,
+          message: `Token count mismatch - hanzi: ${hanziTokens.length}, pinyin: ${pinyinTokens.length}, def_words: ${defWordsTokens.length}`,
         });
       }
     } else {
-      // If no en_words, just check hanzi/pinyin match
+      // If no def_words, just check hanzi/pinyin match
       if (hanziTokens.length !== pinyinTokens.length) {
         errors.push({
           type: "token_mismatch",

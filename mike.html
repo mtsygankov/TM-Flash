@@ -127,12 +127,12 @@
             color: #0288d1;
         }
         
-        .en-word {
+        .def-word {
             font-size: 1.2rem;
             color: #388e3c;
         }
         
-        .english-translation {
+        .def-translation {
             font-size: 1.8rem;
             font-weight: 500;
             color: #455a64;
@@ -257,7 +257,7 @@
                     <table class="card-table" id="backTable">
                         <!-- Content will be populated by JavaScript -->
                     </table>
-                    <div class="english-translation" id="englishTranslation">
+                    <div class="def-translation" id="defTranslation">
                         <!-- English translation will be populated by JavaScript -->
                     </div>
                 </div>
@@ -288,7 +288,7 @@
             const cardBack = document.getElementById('cardBack');
             const frontTable = document.getElementById('frontTable');
             const backTable = document.getElementById('backTable');
-            const englishTranslation = document.getElementById('englishTranslation');
+            const defTranslation = document.getElementById('defTranslation');
             const deckInfo = document.getElementById('deckInfo');
             const cardCounter = document.getElementById('cardCounter');
             const loading = document.getElementById('loading');
@@ -384,7 +384,7 @@
                 });
                 frontTable.appendChild(pinyinRow);
                 
-                // Populate back table (hanzi, pinyin, en_words)
+                // Populate back table (hanzi, pinyin, def_words)
                 backTable.innerHTML = '';
                 
                 // Create hanzi row
@@ -407,12 +407,12 @@
                 });
                 backTable.appendChild(backPinyinRow);
                 
-                // Create English words row (if en_words exists)
-                if (card.en_words) {
+                // Create English words row (if def_words exists)
+                if (card.def_words) {
                     const enWordsRow = document.createElement('tr');
-                    card.en_words.forEach(word => {
+                    card.def_words.forEach(word => {
                         const td = document.createElement('td');
-                        td.className = 'en-word';
+                        td.className = 'def-word';
                         td.textContent = word;
                         enWordsRow.appendChild(td);
                     });
@@ -420,7 +420,7 @@
                 }
                 
                 // Set English translation
-                englishTranslation.textContent = card.english;
+                defTranslation.textContent = card.def;
             }
             
             function handleKeyPress(event) {
