@@ -15,6 +15,15 @@ const DIRECTION_KEYS = {
   EN_TO_CH: "EN->CH",
 };
 
+// Tone color mappings
+const TONE_COLORS = {
+  1: 'rgb(255, 0, 0)',    // Red
+  2: 'rgb(208, 144, 0)',  // Light Brown
+  3: 'rgb(0, 160, 0)',    // Green
+  4: 'rgb(0, 68, 255)',   // Blue
+  5: 'rgb(0, 0, 0)',      // Black
+};
+
 const DIRECTION_DISPLAY = {
   [DIRECTION_KEYS.CH_TO_EN]: "CH⇆EN",
   [DIRECTION_KEYS.EN_TO_CH]: "EN⇆CH",

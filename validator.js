@@ -83,32 +83,53 @@ const Validator = {
     // Tokenize fields and check token count equality
     const hanziTokens = this.tokenize(card.hanzi);
     const pinyinTokens = this.tokenize(card.pinyin);
-    
-    // Only check token count if def_words is present
-    if (card.def_words) {
-      const defWordsTokens = Array.isArray(card.def_words)
-        ? card.def_words
-        : this.tokenize(card.def_words);
 
-      if (
-        hanziTokens.length !== pinyinTokens.length ||
-        hanziTokens.length !== defWordsTokens.length
-      ) {
+    // Check tones field
+    if (!card.tones) {
+      errors.push({
+        type: "missing_field",
+        cardIndex: index,
+        field: "tones",
+        message: "Missing tones",
+      });
+    } else {
+      const wordTones = this.tokenize(card.tones);
+      const toneDigits = card.tones.replace(/\s/g, '').split('');
+
+      // Validate tone digits are 1-5
+      const invalidTones = toneDigits.filter(d => !['1','2','3','4','5'].includes(d));
+      if (invalidTones.length > 0) {
         errors.push({
-          type: "token_mismatch",
+          type: "invalid_tones",
           cardIndex: index,
           cardId: card.card_id,
-          message: `Token count mismatch - hanzi: ${hanziTokens.length}, pinyin: ${pinyinTokens.length}, def_words: ${defWordsTokens.length}`,
+          message: `Invalid tone digits: ${invalidTones.join(', ')} (must be 1-5)`,
         });
       }
-    } else {
-      // If no def_words, just check hanzi/pinyin match
+
+      // Data integrity checks
       if (hanziTokens.length !== pinyinTokens.length) {
         errors.push({
           type: "token_mismatch",
           cardIndex: index,
           cardId: card.card_id,
-          message: `Token count mismatch - hanzi: ${hanziTokens.length}, pinyin: ${pinyinTokens.length}`,
+          message: `Hanzi and pinyin token count mismatch - hanzi: ${hanziTokens.length}, pinyin: ${pinyinTokens.length}`,
+        });
+      }
+      if (hanziTokens.length !== toneDigits.length) {
+        errors.push({
+          type: "tone_token_mismatch",
+          cardIndex: index,
+          cardId: card.card_id,
+          message: `Token count vs tone digits mismatch - tokens: ${hanziTokens.length}, tone digits: ${toneDigits.length}`,
+        });
+      }
+      if (card.def_words && wordTones.length !== card.def_words.length) {
+        errors.push({
+          type: "word_tone_mismatch",
+          cardIndex: index,
+          cardId: card.card_id,
+          message: `Word tones vs def_words count mismatch - word tones: ${wordTones.length}, def_words: ${card.def_words.length}`,
         });
       }
     }

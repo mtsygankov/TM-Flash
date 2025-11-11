@@ -30,18 +30,35 @@ const Review = {
     }
     const hanziTokens = card.hanzi.split(" ");
     const pinyinTokens = card.pinyin.split(" ");
+    const wordTones = card.tones.split(" ");
     const enWords = card.def_words || [];
     const table = document.getElementById("card-table");
     const defSection = document.getElementById("card-def");
     if (!table || !defSection) return;
-    
-    // Render table with only hanzi, pinyin, and def-words rows
+
+    // Helper to generate colored spans for a row
+    const generateColoredRow = (tokens, isHanzi) => {
+      let tokenIndex = 0;
+      return wordTones.map(wordTone => {
+        const digits = wordTone.split("");
+        let html = '';
+        digits.forEach(digit => {
+          const color = TONE_COLORS[digit];
+          const className = isHanzi ? 'hanzi-word' : 'pinyin-word';
+          html += `<span class="word-text ${className}" style="color: ${color};">${this.escapeHtml(tokens[tokenIndex])}</span>`;
+          tokenIndex++;
+        });
+        return `<td>${html}</td>`;
+      }).join("");
+    };
+
+    // Render table with hanzi, pinyin, and def-words rows
     table.innerHTML = `
             <tr class="row-hanzi">
-                ${hanziTokens.map((token) => `<td><span class="word-text hanzi-word">${this.escapeHtml(token)}</span></td>`).join("")}
+                ${generateColoredRow(hanziTokens, true)}
             </tr>
             <tr class="row-pinyin">
-                ${pinyinTokens.map((token) => `<td><span class="word-text pinyin-word">${this.escapeHtml(token)}</span></td>`).join("")}
+                ${generateColoredRow(pinyinTokens, false)}
             </tr>
             <tr class="row-def-words">
                 ${enWords.map((word) => `<td><span class="word-text def-word">${this.escapeHtml(word)}</span></td>`).join("")}
@@ -55,7 +72,7 @@ const Review = {
     defText.textContent = this.escapeHtml(card.def);
 
     // Dynamic font scaling for hanzi/pinyin table (more accurate now)
-    const columns = hanziTokens.length;
+    const columns = wordTones.length;
     const totalChars = hanziTokens.reduce((sum, token) => sum + token.length, 0);
     const tableWrapper = document.getElementById('card-table-wrapper');
     const tableWrapperPadding = parseFloat(getComputedStyle(tableWrapper).paddingLeft) + parseFloat(getComputedStyle(tableWrapper).paddingRight);

@@ -83,6 +83,43 @@ const Search = {
       container.innerHTML = "<p>No results found.</p>";
       return;
     }
+
+    // Helper to generate colored hanzi spans
+    const generateColoredHanzi = (hanzi, tones) => {
+      const tokens = hanzi.split(" ");
+      const wordTones = tones.split(" ");
+      let tokenIndex = 0;
+      let html = '';
+      wordTones.forEach(wordTone => {
+        const digits = wordTone.split("");
+        digits.forEach(digit => {
+          const color = TONE_COLORS[digit];
+          const char = tokens[tokenIndex];
+          html += `<span class="hanzi-char" data-char="${char}" style="color: ${color};">${char}</span>`;
+          tokenIndex++;
+        });
+      });
+      return html;
+    };
+
+    // Helper to generate colored pinyin spans
+    const generateColoredPinyin = (pinyin, tones) => {
+      const tokens = pinyin.split(" ");
+      const wordTones = tones.split(" ");
+      let tokenIndex = 0;
+      let html = '';
+      wordTones.forEach(wordTone => {
+        const digits = wordTone.split("");
+        digits.forEach(digit => {
+          const color = TONE_COLORS[digit];
+          const syllable = tokens[tokenIndex];
+          html += `<span style="color: ${color};">${syllable}</span> `;
+          tokenIndex++;
+        });
+      });
+      return html.trim();
+    };
+
     const list = results
       .map(
         (card) => {
@@ -94,8 +131,8 @@ const Search = {
       <div class="search-result ${hasTags ? 'has-tags' : 'no-tags'}" data-card-id="${card.card_id}">
         ${tagsHtml}
          <div class="result-hanzi-pinyin">
-           <div class="result-hanzi">${card.hanzi.replace(/(\S)/g, '<span class="hanzi-char" data-char="$1">$1</span>')}</div>
-           <div class="result-pinyin">${card.pinyin}</div>
+           <div class="result-hanzi">${generateColoredHanzi(card.hanzi, card.tones)}</div>
+           <div class="result-pinyin">${generateColoredPinyin(card.pinyin, card.tones)}</div>
          </div>
         <div class="result-def-column">
           ${card.pos ? `<span class="result-pos">[ ${card.pos} ]</span>` : ''}
