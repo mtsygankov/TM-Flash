@@ -36,16 +36,15 @@ const Review = {
     const defSection = document.getElementById("card-def");
     if (!table || !defSection) return;
 
-    // Helper to generate colored spans for a row
+    // Helper to generate tone-classed spans for a row
     const generateColoredRow = (tokens, isHanzi) => {
       let tokenIndex = 0;
       return wordTones.map(wordTone => {
         const digits = wordTone.split("");
         let html = '';
         digits.forEach(digit => {
-          const color = TONE_COLORS[digit];
           const className = isHanzi ? 'hanzi-word' : 'pinyin-word';
-          html += `<span class="word-text ${className}" style="color: ${color};">${this.escapeHtml(tokens[tokenIndex])}</span>`;
+          html += `<span class="word-text ${className} tone-${digit}">${this.escapeHtml(tokens[tokenIndex])}</span>`;
           tokenIndex++;
         });
         return `<td>${html}</td>`;

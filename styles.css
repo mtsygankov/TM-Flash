@@ -514,6 +514,32 @@ h2 {
     visibility: hidden;
 }
 
+/* Tone color classes - unflipped: all black */
+#card-table:not(.flipped) .tone-1,
+#card-table:not(.flipped) .tone-2,
+#card-table:not(.flipped) .tone-3,
+#card-table:not(.flipped) .tone-4,
+#card-table:not(.flipped) .tone-5 {
+    color: rgb(0, 0, 0);
+}
+
+/* Tone color classes - flipped: apply tone colors */
+#card-table.flipped .tone-1 {
+    color: rgb(255, 0, 0);
+}
+#card-table.flipped .tone-2 {
+    color: rgb(208, 144, 0);
+}
+#card-table.flipped .tone-3 {
+    color: rgb(0, 160, 0);
+}
+#card-table.flipped .tone-4 {
+    color: rgb(0, 68, 255);
+}
+#card-table.flipped .tone-5 {
+    color: rgb(0, 0, 0);
+}
+
 /* Card buttons */
 #card-buttons {
     display: none;
