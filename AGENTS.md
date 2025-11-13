@@ -56,7 +56,7 @@ tm-flash/
 ```
 
 ### Data Handling
-- **LocalStorage**: Use key `tmFlash` with schema_version=3; includes settings for modal controls: showProgress, darkMode, soundEffects
+- **LocalStorage**: Use key `tmFlash` with schema_version=3; includes settings for modal controls: showProgress, soundEffects
 - **Modal Settings**: Hamburger menu modal consolidates deck selection, filters, direction toggle, and app settings
 - **def_words format**: Array of strings for word-by-word translations, e.g., ["I", "love", "you"] instead of "I love you"
 - **Stats tracking**: Separate per-direction stats for each card to support bidirectional learning

@@ -6,14 +6,13 @@ const Storage = {
   getDefaultState() {
     return {
       schema_version: this.CURRENT_SCHEMA_VERSION,
-        settings: {
-          direction: DIRECTION_KEYS.CH_TO_EN,
-          selected_deck: DEFAULT_SELECTED_DECK,
-          theme: "light",
-          showProgress: true,
-          darkMode: false,
-          soundEffects: false,
-        },
+         settings: {
+           direction: DIRECTION_KEYS.CH_TO_EN,
+           selected_deck: DEFAULT_SELECTED_DECK,
+           theme: "light",
+           showProgress: true,
+           soundEffects: false,
+         },
       decks: {
         deck_a: { cards: {} },
         deck_b: { cards: {} },

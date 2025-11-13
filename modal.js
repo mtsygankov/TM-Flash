@@ -41,7 +41,7 @@ const Modal = {
         });
 
         // Settings checkboxes
-        const settingIds = ['setting-show-progress', 'setting-dark-mode', 'setting-sound-effects'];
+        const settingIds = ['setting-show-progress', 'setting-sound-effects'];
         settingIds.forEach(id => {
             const checkbox = document.getElementById(id);
             if (checkbox) {
@@ -161,11 +161,6 @@ const Modal = {
             showProgress.checked = settings.showProgress !== false; // Default to true
         }
 
-        const darkMode = document.getElementById('setting-dark-mode');
-        if (darkMode) {
-            darkMode.checked = settings.darkMode || false;
-        }
-
         const soundEffects = document.getElementById('setting-sound-effects');
         if (soundEffects) {
             soundEffects.checked = settings.soundEffects || false;
@@ -178,7 +173,6 @@ const Modal = {
         const settings = Storage.getSettings();
 
         settings.showProgress = document.getElementById('setting-show-progress')?.checked || false;
-        settings.darkMode = document.getElementById('setting-dark-mode')?.checked || false;
         settings.soundEffects = document.getElementById('setting-sound-effects')?.checked || false;
 
         Storage.setSettings(settings);
@@ -193,9 +187,6 @@ const Modal = {
         if (progressBar) {
             progressBar.style.display = settings.showProgress ? 'block' : 'none';
         }
-
-        // Apply dark mode
-        document.body.classList.toggle('dark-mode', settings.darkMode);
 
         // Note: soundEffects would need additional implementation
         // in the audio modules respectively
