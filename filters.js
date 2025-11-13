@@ -83,9 +83,7 @@ const Filters = {
       filterControls.style.display = hasFilters ? 'flex' : 'none';
     }
 
-    if (hasFilters) {
-      this.renderCombinedFilterMenu();
-    }
+    this.renderCombinedFilterMenu();
   },
 
   renderCombinedFilterMenu() {
@@ -95,45 +93,46 @@ const Filters = {
     const hasTags = this.availableTags.size > 0;
     const hasHsk = this.availableHskLevels.size > 0;
 
-    if (!hasTags && !hasHsk) return;
+    let menuContent = '';
+    if (hasTags || hasHsk) {
+      let tagOptions = '';
+      if (hasTags) {
+        tagOptions = Array.from(this.availableTags).map(tag => {
+          const isSelected = this.selectedTags.has(tag);
+          const colorClass = Search.getTagColorClass(tag);
+          return `
+            <div class="filter-option ${isSelected ? 'selected' : ''}" data-type="tag" data-value="${tag}">
+              <span class="tag-badge ${colorClass}">${tag}</span>
+            </div>
+          `;
+        }).join('');
+      }
 
-    let tagOptions = '';
-    if (hasTags) {
-      tagOptions = Array.from(this.availableTags).map(tag => {
-        const isSelected = this.selectedTags.has(tag);
-        const colorClass = Search.getTagColorClass(tag);
-        return `
-          <div class="filter-option ${isSelected ? 'selected' : ''}" data-type="tag" data-value="${tag}">
-            <span class="tag-badge ${colorClass}">${tag}</span>
-          </div>
-        `;
-      }).join('');
+      let hskOptions = '';
+      if (hasHsk) {
+        hskOptions = Array.from(this.availableHskLevels).map(level => {
+          const isSelected = this.selectedHskLevels.has(level);
+          return `
+            <div class="filter-option ${isSelected ? 'selected' : ''}" data-type="hsk" data-value="${level}">
+              <span class="hsk-badge">${level}</span>
+            </div>
+          `;
+        }).join('');
+      }
+
+      menuContent = `
+        <div class="filter-menu-columns">
+          ${hasTags ? `<div class="filter-column">
+            <div class="filter-column-header">Tags</div>
+            <div class="filter-column-content">${tagOptions}</div>
+          </div>` : ''}
+          ${hasHsk ? `<div class="filter-column">
+            <div class="filter-column-header">HSK</div>
+            <div class="filter-column-content">${hskOptions}</div>
+          </div>` : ''}
+        </div>
+      `;
     }
-
-    let hskOptions = '';
-    if (hasHsk) {
-      hskOptions = Array.from(this.availableHskLevels).map(level => {
-        const isSelected = this.selectedHskLevels.has(level);
-        return `
-          <div class="filter-option ${isSelected ? 'selected' : ''}" data-type="hsk" data-value="${level}">
-            <span class="hsk-badge">${level}</span>
-          </div>
-        `;
-      }).join('');
-    }
-
-    const menuContent = `
-      <div class="filter-menu-columns">
-        ${hasTags ? `<div class="filter-column">
-          <div class="filter-column-header">Tags</div>
-          <div class="filter-column-content">${tagOptions}</div>
-        </div>` : ''}
-        ${hasHsk ? `<div class="filter-column">
-          <div class="filter-column-header">HSK</div>
-          <div class="filter-column-content">${hskOptions}</div>
-        </div>` : ''}
-      </div>
-    `;
 
     menu.innerHTML = menuContent;
     this.bindFilterOptionEvents('tag');
@@ -273,6 +272,10 @@ const Filters = {
 
     const columns = menu.querySelectorAll('.filter-column');
     if (columns.length !== 2) return;
+
+    // Skip equalization if using flex-wrap layout
+    const content = columns[0].querySelector('.filter-column-content');
+    if (content && getComputedStyle(content).display === 'flex') return;
 
     // Use requestAnimationFrame to ensure DOM is fully rendered
     requestAnimationFrame(() => {

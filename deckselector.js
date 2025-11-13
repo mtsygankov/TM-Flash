@@ -179,9 +179,20 @@ const DeckSelector = {
           Filters.loadSavedFilters();
           console.log('DeckSelector.loadDeck: after loadSavedFilters, selectedTags:', Array.from(Filters.selectedTags), 'selectedHskLevels:', Array.from(Filters.selectedHskLevels));
 
-          // Extract and apply filters
-         Filters.extractAvailableFilters(augmentedCards);
-         Filters.applyFilters();
+           // Extract and apply filters
+          Filters.extractAvailableFilters(augmentedCards);
+
+          // Clean selected filters to only include available options for this deck
+          Filters.selectedTags = new Set([...Filters.selectedTags].filter(tag => Filters.availableTags.has(tag)));
+          Filters.selectedHskLevels = new Set([...Filters.selectedHskLevels].filter(level => Filters.availableHskLevels.has(level)));
+          Filters.saveFilters();
+
+          Filters.applyFilters();
+
+          // Update modal filters if modal is open
+          if (Modal.isOpen) {
+            Modal.updateFiltersInModal();
+          }
 
          // Select next card from filtered set
          App.currentCard = SRS.selectNextCard(

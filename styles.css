@@ -184,8 +184,11 @@ h1 {
 }
 
 .filter-column-content {
-    max-height: 250px;
-    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    max-height: none;
+    overflow-y: visible;
     margin-top: 0.5rem;
 }
 
@@ -212,14 +215,14 @@ h1 {
 }
 
 .filter-option {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 0.5rem;
     padding: 0.3rem;
     cursor: pointer;
     border-radius: 3px;
     transition: background-color 0.2s;
-    width: fit-content;
+    white-space: nowrap;
 }
 
 .filter-option:hover {
@@ -1254,8 +1257,16 @@ h2 {
 
 /* Modal filter styles */
 #modal-filters-content {
-    max-height: 200px;
-    overflow-y: auto;
+    max-height: none;
+    overflow-y: visible;
+}
+
+#modal-filters-content .filter-column-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    max-height: none;
+    overflow-y: visible;
 }
 
 #modal-filters-content .filter-menu-columns {
