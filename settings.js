@@ -9,17 +9,16 @@ const Settings = {
     this.applyDirection(settings.direction);
   },
 
-     applyDirection(direction) {
-       const button = document.getElementById("direction-toggle");
-       if (button) {
-         button.textContent = DIRECTION_DISPLAY[direction];
-         button.dataset.direction = direction;
-       } else {
-         console.warn("❌ Direction toggle button not found");
-       }
+       applyDirection(direction) {
+         // Update modal direction toggle
+         const button = document.getElementById("modal-direction-toggle");
+         if (button) {
+           button.textContent = DIRECTION_DISPLAY[direction];
+           button.dataset.direction = direction;
+         }
 
-      App.currentDirection = direction;
-      App.flipped = false;
+       App.currentDirection = direction;
+       App.flipped = false;
 
 
        // Only select/render card if data is available (not during initialization)
@@ -64,15 +63,15 @@ const Settings = {
      this.applyDirection(newDirection);
    },
 
-  bindDirectionToggle() {
-    const button = document.getElementById("direction-toggle");
-    if (button) {
-      button.addEventListener("click", () => {
-        this.toggleDirection();
-      });
-      button.disabled = false;
-    }
-  },
+    bindDirectionToggle() {
+      const button = document.getElementById("modal-direction-toggle");
+      if (button) {
+        button.addEventListener("click", () => {
+          this.toggleDirection();
+        });
+        button.disabled = false;
+      }
+    },
 
 
 

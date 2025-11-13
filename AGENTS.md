@@ -35,9 +35,11 @@
 
 ### CSS
 - **Organization**: Group related styles, use consistent naming
-- **Responsive**: Mobile-first approach, flexible layouts
+- **Responsive**: Mobile-first approach, flexible layouts with modal breakpoints at 600px
+- **Modal System**: Hamburger menu modal for settings; full-screen on mobile, centered on desktop
+- **Dark Mode**: CSS custom properties for theme switching
 - **Performance**: Minimize repaints/reflows, use CSS transforms
-- **Accessibility**: Sufficient color contrast, focus indicators
+- **Accessibility**: Sufficient color contrast, focus indicators, keyboard navigation
 
 ### File Structure
 ```
@@ -45,6 +47,7 @@ tm-flash/
 ├─ index.html          # Main HTML file
 ├─ styles.css          # All styles
 ├─ app.js             # Main application logic
+├─ modal.js           # Settings modal management
 └─ decks/             # Deck data files
     ├─ deck_a.json
     ├─ deck_b.json
@@ -53,7 +56,8 @@ tm-flash/
 ```
 
 ### Data Handling
-- **LocalStorage**: Use key `tmFlash` with schema_version=1; schema includes nested "directions" per card: { [DIRECTION_KEYS.CH_TO_EN]: {correct, incorrect, last_reviewed}, [DIRECTION_KEYS.EN_TO_CH]: {...} }
+- **LocalStorage**: Use key `tmFlash` with schema_version=3; includes settings for modal controls: showProgress, darkMode, soundEffects
+- **Modal Settings**: Hamburger menu modal consolidates deck selection, filters, direction toggle, and app settings
 - **def_words format**: Array of strings for word-by-word translations, e.g., ["I", "love", "you"] instead of "I love you"
 - **Stats tracking**: Separate per-direction stats for each card to support bidirectional learning
 - **JSON validation**: Validate deck structure and card data integrity

@@ -10,45 +10,47 @@ const DeckSelector = {
     Filters.init();
   },
 
-  async populateOptions() {
-    const selector = document.getElementById("deck-selector");
-    if (!selector) return;
+   async populateOptions() {
+      const selector = document.getElementById("modal-deck-selector");
+      if (!selector) return;
 
-    this.setStatusMessage("Loading deck list...", "info");
+     this.setStatusMessage("Loading deck list...", "info");
 
-    // Clear existing options except the first one
-    while (selector.options.length > 1) {
-      selector.remove(1);
-    }
-
-    // Add deck options with names from JSON
-    for (const deckId of Object.keys(DECKS)) {
-      try {
-        const deckData = await this.fetchDeckData(deckId);
-        const deckName = deckData.deck_name || DECKS[deckId].label;
-
-        const option = document.createElement("option");
-        option.value = deckId;
-        option.textContent = deckName;
-        selector.appendChild(option);
-      } catch (error) {
-        console.warn(
-          `Failed to load deck name for ${deckId}, using fallback:`,
-          error,
-        );
-        // Fallback to hardcoded label if fetch fails
-        const option = document.createElement("option");
-        option.value = deckId;
-        option.textContent = DECKS[deckId].label;
-        selector.appendChild(option);
+      // Clear existing options except the first one
+      while (selector.options.length > 1) {
+        selector.remove(1);
       }
-    }
 
-    this.setStatusMessage(
-      `${Object.keys(DECKS).length} decks available`,
-      "success",
-    );
-  },
+      // Add deck options with names from JSON
+      for (const deckId of Object.keys(DECKS)) {
+        try {
+          const deckData = await this.fetchDeckData(deckId);
+          const deckName = deckData.deck_name || DECKS[deckId].label;
+
+          const option = document.createElement("option");
+          option.value = deckId;
+          option.textContent = deckName;
+
+          selector.appendChild(option);
+        } catch (error) {
+          console.warn(
+            `Failed to load deck name for ${deckId}, using fallback:`,
+            error,
+          );
+          // Fallback to hardcoded label if fetch fails
+          const option = document.createElement("option");
+          option.value = deckId;
+          option.textContent = DECKS[deckId].label;
+
+          selector.appendChild(option);
+        }
+      }
+
+     this.setStatusMessage(
+       `${Object.keys(DECKS).length} decks available`,
+       "success",
+     );
+   },
 
   async fetchDeckData(deckId) {
     const deck = DECKS[deckId];
@@ -64,49 +66,51 @@ const DeckSelector = {
     return await response.json();
   },
 
-  async loadSelectedDeck() {
-    const settings = Storage.getSettings();
-    const selector = document.getElementById("deck-selector");
-    if (selector && settings.selected_deck) {
-      selector.value = settings.selected_deck;
-      this.currentDeckId = settings.selected_deck;
-      // Load the default deck
-      try {
-        await this.loadDeck(settings.selected_deck);
-      } catch (error) {
-        console.error("Failed to load default deck:", error);
-        // If default deck fails, try to load the first available deck
-        const firstDeckId = Object.keys(DECKS)[0];
-        if (firstDeckId && firstDeckId !== settings.selected_deck) {
-          console.log("Falling back to first available deck:", firstDeckId);
-          await this.loadDeck(firstDeckId);
-        }
-      }
-    }
-  },
+   async loadSelectedDeck() {
+     const settings = Storage.getSettings();
+     const selector = document.getElementById("modal-deck-selector");
+     if (selector && settings.selected_deck) {
+       selector.value = settings.selected_deck;
+       this.currentDeckId = settings.selected_deck;
+       // Load the default deck
+       try {
+         await this.loadDeck(settings.selected_deck);
+       } catch (error) {
+         console.error("Failed to load default deck:", error);
+         // If default deck fails, try to load the first available deck
+         const firstDeckId = Object.keys(DECKS)[0];
+         if (firstDeckId && firstDeckId !== settings.selected_deck) {
+           console.log("Falling back to first available deck:", firstDeckId);
+           await this.loadDeck(firstDeckId);
+         }
+       }
+     }
+   },
 
-  bindSelector() {
-    const selector = document.getElementById("deck-selector");
-    if (selector) {
-      selector.addEventListener("change", (e) => {
-        const selectedDeck = e.target.value;
-        if (selectedDeck && selectedDeck !== this.currentDeckId) {
-          console.log(`Switching to deck: ${selectedDeck}`);
-          this.loadDeck(selectedDeck).catch(() => {
-            // If loading fails, revert selector to current deck
+    bindSelector() {
+      const selector = document.getElementById("modal-deck-selector");
+      if (selector) {
+        selector.addEventListener("change", (e) => {
+          const selectedDeck = e.target.value;
+          if (selectedDeck && selectedDeck !== this.currentDeckId) {
+            console.log(`Switching to deck: ${selectedDeck}`);
+            this.loadDeck(selectedDeck).catch(() => {
+              // If loading fails, revert selector to current deck
+              if (this.currentDeckId) {
+                selector.value = this.currentDeckId;
+              }
+            });
+          } else if (!selectedDeck) {
+            // If user selects empty option, revert to current deck
             if (this.currentDeckId) {
               selector.value = this.currentDeckId;
             }
-          });
-        } else if (!selectedDeck) {
-          // If user selects empty option, revert to current deck
-          if (this.currentDeckId) {
-            selector.value = this.currentDeckId;
           }
-        }
-      });
-    }
-  },
+        });
+      }
+    },
+
+    // No sync needed since only modal selector exists
 
   async loadDeck(deckId) {
     if (this.isLoading) {
@@ -204,11 +208,11 @@ const DeckSelector = {
             Message.show('card-container', message);
           }
 
-      // Ensure selector shows current selection
-      const selector = document.getElementById("deck-selector");
-      if (selector && selector.value !== deckId) {
-        selector.value = deckId;
-      }
+        // Ensure selector shows current selection
+        const selector = document.getElementById("modal-deck-selector");
+        if (selector && selector.value !== deckId) {
+          selector.value = deckId;
+        }
 
       // Reset review view to show first card
       this.resetReviewView();
@@ -237,25 +241,25 @@ const DeckSelector = {
     }
   },
 
-  setLoadingState(loading) {
-    const selector = document.getElementById("deck-selector");
-    const statusElement = document.getElementById("deck-status");
+    setLoadingState(loading) {
+      const selector = document.getElementById("modal-deck-selector");
+      const statusElement = document.getElementById("deck-status");
 
-    if (selector) {
-      selector.disabled = loading;
-      selector.style.opacity = loading ? "0.6" : "1";
-    }
-
-    if (statusElement) {
-      if (loading) {
-        statusElement.textContent = "Loading deck...";
-        statusElement.className = "deck-status loading";
-      } else {
-        statusElement.textContent = "";
-        statusElement.className = "deck-status";
+      if (selector) {
+        selector.disabled = loading;
+        selector.style.opacity = loading ? "0.6" : "1";
       }
-    }
-  },
+
+     if (statusElement) {
+       if (loading) {
+         statusElement.textContent = "Loading deck...";
+         statusElement.className = "deck-status loading";
+       } else {
+         statusElement.textContent = "";
+         statusElement.className = "deck-status";
+       }
+     }
+   },
 
   setStatusMessage(message, type = "info") {
     const statusElement = document.getElementById("deck-status");

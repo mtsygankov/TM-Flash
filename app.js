@@ -26,7 +26,9 @@ const App = {
     Review.init();
     // Initialize stats view
     StatsView.init();
-    // Initialize search
-    Search.init();
+     // Initialize search
+     Search.init();
+     // Initialize modal
+     Modal.init();
   },
 };

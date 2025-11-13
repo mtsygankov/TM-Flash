@@ -20,29 +20,24 @@
     <script src="statsview.js"></script>
     <script src="search.js"></script>
     <script src="filters.js"></script>
+    <script src="modal.js"></script>
     <script src="nav.js"></script>
     <script src="app.js"></script>
 </head>
 <body>
     <header>
-        <div class="controls">
-            <select id="deck-selector" class="control-element">
-                <option value="">Select Deck</option>
-            </select>
-            <div id="filter-controls" style="display: none;">
-                <div class="filter-dropdown">
-                     <button id="filters-btn" class="filter-btn control-element">
-                         Filters ▼
-                     </button>
-                    <div id="filters-menu" class="filter-menu is-hidden">
-                        <!-- Combined filter menu will be inserted here -->
-                    </div>
+        <button id="menu-toggle" class="hamburger-btn">☰</button>
+        <span id="review-toggles">
+            <div id="review-progress-bar" class="progress-bar"></div>
+        </span>
+        <!-- Hidden filter controls for logic compatibility -->
+        <div id="filter-controls" style="display: none;">
+            <div class="filter-dropdown">
+                <button id="filters-btn" class="filter-btn control-element" style="display: none;">Filters ▼</button>
+                <div id="filters-menu" class="filter-menu is-hidden">
+                    <!-- Combined filter menu will be inserted here -->
                 </div>
             </div>
-              <span id="review-toggles">
-                  <button id="direction-toggle" class="control-element">CH⇆EN</button>
-                  <div id="review-progress-bar" class="progress-bar"></div>
-              </span>
         </div>
         <nav>
             <button class="tab active" data-view="review">Review</button>
@@ -87,6 +82,56 @@
             <div id="search-results"></div>
         </section>
     </main>
+
+    <!-- Settings Modal -->
+    <div id="modal-overlay" class="modal-overlay is-hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Settings</h2>
+                <button id="modal-close" class="modal-close-btn">×</button>
+            </div>
+            <div class="modal-body">
+                <section class="modal-section">
+                    <h3>Deck</h3>
+                    <select id="modal-deck-selector" class="modal-control">
+                        <option value="">Select Deck</option>
+                    </select>
+                </section>
+
+                <section class="modal-section">
+                    <h3>Filters</h3>
+                    <div id="modal-filter-controls" style="display: none;">
+                        <div id="modal-filters-content">
+                            <!-- Filter controls will be inserted here -->
+                        </div>
+                    </div>
+                </section>
+
+                <section class="modal-section">
+                    <h3>Direction</h3>
+                    <button id="modal-direction-toggle" class="modal-control">CH⇆EN</button>
+                </section>
+
+                <section class="modal-section">
+                    <h3>Settings</h3>
+                    <div class="settings-controls">
+                        <label class="setting-item">
+                            <input type="checkbox" id="setting-show-progress">
+                            <span>Show progress bar</span>
+                        </label>
+                         <label class="setting-item">
+                             <input type="checkbox" id="setting-dark-mode">
+                             <span>Dark mode</span>
+                         </label>
+                         <label class="setting-item">
+                             <input type="checkbox" id="setting-sound-effects">
+                             <span>Sound effects</span>
+                         </label>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
 
 </body>
 <script>
