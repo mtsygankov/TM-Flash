@@ -185,7 +185,7 @@ const Modal = {
         // Apply progress bar visibility
         const progressBar = document.getElementById('review-progress-bar');
         if (progressBar) {
-            progressBar.style.display = settings.showProgress ? 'block' : 'none';
+            progressBar.style.display = settings.showProgress ? 'flex' : 'none';
         }
 
         // Note: soundEffects would need additional implementation

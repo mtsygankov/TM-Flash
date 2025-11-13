@@ -84,7 +84,7 @@ h1 {
 
 /* Progress bar styles */
 #review-progress-bar {
-    display: flex !important;
+    display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     height: 1.5rem;
