@@ -136,10 +136,6 @@ h1 {
     display: inline-block;
 }
 
-
-
-
-
 .filter-menu {
     position: absolute;
     top: 100%;
@@ -228,8 +224,6 @@ h1 {
 .filter-option:hover {
     background-color: #f5f5f5;
 }
-
-
 
 /* Tag badge styling in filters */
 .filter-option .tag-badge {
@@ -756,10 +750,6 @@ h2 {
     color: #666;
 }
 
-
-
-
-
 .stats-streak-records p {
     margin-bottom: 0.5rem;
     font-size: 1rem;
@@ -825,8 +815,6 @@ h2 {
     margin-bottom: 0.2rem;
     color: #374151;
 }
-
-
 
 /* Small lists */
 .small-list {
@@ -957,8 +945,6 @@ h2 {
 */
 }
 
-
-
 .search-result-tags {
     display: flex;
     flex-direction: column;
@@ -1070,10 +1056,6 @@ h2 {
     min-width: 3rem;
     text-align: left;
 }
-
-
-
-
 
 @media (min-width: 1200px) {
     .view {
