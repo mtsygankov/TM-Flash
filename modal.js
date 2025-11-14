@@ -96,21 +96,71 @@ const Modal = {
         this.updateFiltersInModal();
     },
 
-    updateFiltersInModal() {
+    renderFilterMenu() {
         const modalFiltersContent = document.getElementById('modal-filters-content');
-        const originalFiltersMenu = document.getElementById('filters-menu');
+        if (!modalFiltersContent) return;
+
+        const hasTags = Filters.availableTags.size > 0;
+        const hasHsk = Filters.availableHskLevels.size > 0;
+
+        let menuContent = '';
+        if (hasTags || hasHsk) {
+            let tagOptions = '';
+            if (hasTags) {
+                tagOptions = Array.from(Filters.availableTags).map(tag => {
+                    const isSelected = Filters.selectedTags.has(tag);
+                    const colorClass = Search.getTagColorClass(tag);
+                    return `
+                        <div class="filter-option ${isSelected ? 'selected' : ''}" data-type="tag" data-value="${tag}">
+                            <span class="tag-badge ${colorClass}">${tag}</span>
+                        </div>
+                    `;
+                }).join('');
+            }
+
+            let hskOptions = '';
+            if (hasHsk) {
+                hskOptions = Array.from(Filters.availableHskLevels).map(level => {
+                    const isSelected = Filters.selectedHskLevels.has(level);
+                    return `
+                        <div class="filter-option ${isSelected ? 'selected' : ''}" data-type="hsk" data-value="${level}">
+                            <span class="hsk-badge">${level}</span>
+                        </div>
+                    `;
+                }).join('');
+            }
+
+            menuContent = `
+                <div class="filter-menu-columns">
+                    ${hasTags ? `<div class="filter-column">
+                        <div class="filter-column-header">Tags</div>
+                        <div class="filter-column-content">${tagOptions}</div>
+                    </div>` : ''}
+                    ${hasHsk ? `<div class="filter-column">
+                        <div class="filter-column-header">HSK</div>
+                        <div class="filter-column-content">${hskOptions}</div>
+                    </div>` : ''}
+                </div>
+            `;
+        }
+
+        modalFiltersContent.innerHTML = menuContent;
+        this.bindFilterEventsInModal();
+
+        // Equalize column widths based on content
+        this.equalizeColumnWidths();
+    },
+
+    updateFiltersInModal() {
         const filterControls = document.getElementById('modal-filter-controls');
 
-        if (modalFiltersContent && originalFiltersMenu && filterControls) {
-            // Copy filter content
-            modalFiltersContent.innerHTML = originalFiltersMenu.innerHTML;
-
+        if (filterControls) {
             // Show/hide filter controls based on availability
-            const hasFilters = originalFiltersMenu.innerHTML.trim() !== '';
+            const hasFilters = Filters.availableTags.size > 0 || Filters.availableHskLevels.size > 0;
             filterControls.style.display = hasFilters ? 'block' : 'none';
 
-            // Re-bind filter events for modal context
-            this.bindFilterEventsInModal();
+            // Render filter menu directly
+            this.renderFilterMenu();
         }
     },
 
@@ -190,5 +240,51 @@ const Modal = {
 
         // Note: soundEffects would need additional implementation
         // in the audio modules respectively
+    },
+
+    equalizeColumnWidths() {
+        const modalFiltersContent = document.getElementById('modal-filters-content');
+        if (!modalFiltersContent) return;
+
+        const columns = modalFiltersContent.querySelectorAll('.filter-column');
+        if (columns.length !== 2) return;
+
+        // Skip equalization if using flex-wrap layout
+        const content = columns[0].querySelector('.filter-column-content');
+        if (content && getComputedStyle(content).display === 'flex') return;
+
+        // Use requestAnimationFrame to ensure DOM is fully rendered
+        requestAnimationFrame(() => {
+            // Reset any previously set widths
+            columns.forEach(column => {
+                column.style.width = '';
+            });
+
+            // Force reflow to ensure styles are applied
+            modalFiltersContent.offsetWidth;
+
+            // Measure badge content widths instead of container widths
+            let maxBadgeWidth = 0;
+            columns.forEach(column => {
+                const badgeElements = column.querySelectorAll('.tag-badge, .hsk-badge');
+                badgeElements.forEach(badge => {
+                    const badgeWidth = badge.scrollWidth;
+                    maxBadgeWidth = Math.max(maxBadgeWidth, badgeWidth);
+                });
+            });
+
+            // Add padding for the filter-option container (0.3rem * 2 * 16px = 9.6px)
+            // Plus gap (0.5rem * 16px = 8px) and some buffer
+            const containerPadding = 24; // Total buffer for padding, gaps, and safety
+            let maxWidth = maxBadgeWidth + containerPadding;
+
+            // Ensure minimum width for usability
+            maxWidth = Math.max(maxWidth, 100);
+
+            // Set uniform width to both columns
+            columns.forEach(column => {
+                column.style.width = maxWidth + 'px';
+            });
+        });
     }
 };
