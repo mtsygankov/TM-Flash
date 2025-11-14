@@ -615,6 +615,11 @@ h2 {
 }
 /* Responsive design */
 @media (max-width: 499px) {
+    :root {
+        --scale-factor: 0.65;
+        --def-scale-factor: 0.5;
+    }
+
     main {
         padding: 0;
     }
@@ -625,15 +630,10 @@ h2 {
 
     #card-table td {
         padding: 0.5rem;
-        font-size: 1rem;
     }
 
-    #card-table .row-hanzi td {
-        font-size: 1.3rem;
-    }
 
     #card-def {
-        font-size: 1.5rem;
         padding: 0.75rem 0.5rem;
     }
 
