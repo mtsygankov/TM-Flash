@@ -303,14 +303,14 @@ nav {
 }
 
 .tab {
-    padding: 0.3rem 0.6rem;
+    padding: 0 0.6rem;
     border: 1px solid #ccc;
     background-color: #f9f9f9;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.2s;
     font-size: 0.8rem;
-    height: 2rem;
+    height: 1.5rem;
     display: flex;
     align-items: center;
 }
@@ -621,7 +621,7 @@ h2 {
 /* Responsive design */
 @media (max-width: 499px) {
     main {
-        padding: 1rem;
+        padding: 0;
     }
 
     .view {
@@ -1098,15 +1098,15 @@ h2 {
 
 /* Hamburger button styles */
 .hamburger-btn {
-    background: none;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 0.3rem;
-    font-size: 1rem;
+    background: none    ;
+    border: 0px solid #ccc;
+    border-radius: 0.7rem;
+    padding: 0 0;
+    font-size: 1.5rem;
     cursor: pointer;
     transition: background-color 0.2s;
     min-width: 2rem;
-    height: 2rem;
+    height: 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
