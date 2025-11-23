@@ -1,1193 +1,1295 @@
 {
-  "type": "expr",
-  "deck_name": "Common Expressions (TM-Level1)",
-  "created_at": "2025-09-30T07:03:40.578837",
-  "version": "2",
-  "description": "Common Chinese expressions for beginners (based on That's Mandarin Level 1 course vocabulary)",
-  "cards": [
-    {
-      "card_id": "expr_4873373676193209515",
-      "pinyin": "huān yíng guāng lín",
-      "hanzi": "欢 迎 光 临",
-      "tones": "12 12",
-      "def": "Welcome",
-      "def_words": [
-        "welcome",
-        "arrival"
-      ]
-    },
-    {
-      "card_id": "expr_-7063327483802198250",
-      "pinyin": "hā hā",
-      "hanzi": "哈 哈",
-      "tones": "11",
-      "def": "Haha",
-      "def_words": [
-        "haha"
-      ]
-    },
-    {
-      "card_id": "expr_-3698507462434702843",
-      "pinyin": "wǒ bāng nǐ zuò",
-      "hanzi": "我 帮 你 做",
-      "tones": "3 1 3 4",
-      "def": "I'll help you do it.",
-      "def_words": [
-        "I",
-        "help",
-        "you",
-        "do"
-      ]
-    },
-    {
-      "card_id": "expr_4479841420926613939",
-      "pinyin": "zài tīng yī biàn",
-      "hanzi": "再 听 一 遍",
-      "tones": "4 1 14",
-      "def": "Listen again once",
-      "def_words": [
-        "again",
-        "listen",
-        "once"
-      ]
-    },
-    {
-      "card_id": "expr_291942850668933730",
-      "pinyin": "míng tiān zǎo shang jiàn !",
-      "hanzi": "明 天 早 上 见 !",
-      "tones": "21 35 4 5",
-      "def": "See you tomorrow morning!",
-      "def_words": [
-        "tomorrow",
-        "morning",
-        "see",
-        "!"
-      ]
-    },
-    {
-      "card_id": "expr_3638177020378037525",
-      "pinyin": "kàn de dǒng",
-      "hanzi": "看 得 懂",
-      "tones": "4 5 3",
-      "def": "Can understand by looking",
-      "def_words": [
-        "look",
-        "[particle indicating ability]",
-        "understand"
-      ]
-    },
-    {
-      "card_id": "expr_3111519016326540210",
-      "pinyin": "xiè xie",
-      "hanzi": "谢 谢",
-      "tones": "45",
-      "def": "Thank you",
-      "def_words": [
-        "thank you"
-      ]
-    },
-    {
-      "card_id": "expr_-8153619613199655636",
-      "pinyin": "duō shao qián ?",
-      "hanzi": "多 少 钱 ?",
-      "tones": "15 2 5",
-      "def": "How much money?",
-      "def_words": [
-        "how much",
-        "money",
-        "?"
-      ]
-    },
-    {
-      "card_id": "expr_1342763903939872769",
-      "pinyin": "qǐng bāng wǒ",
-      "hanzi": "请 帮 我",
-      "tones": "3 1 3",
-      "def": "Please help me.",
-      "def_words": [
-        "please",
-        "help",
-        "me"
-      ]
-    },
-    {
-      "card_id": "expr_-5331954559274341722",
-      "pinyin": "shāo děng yī xià",
-      "hanzi": "稍 等 一 下",
-      "tones": "1 3 14",
-      "def": "Wait a moment",
-      "def_words": [
-        "a little",
-        "wait",
-        "a moment"
-      ]
-    },
-    {
-      "card_id": "expr_-540198930051296566",
-      "pinyin": "bāng wǒ gè máng",
-      "hanzi": "帮 我 个 忙",
-      "tones": "1 3 4 2",
-      "def": "Do me a favor",
-      "def_words": [
-        "help",
-        "me",
-        "[m.w.]",
-        "favor"
-      ]
-    },
-    {
-      "card_id": "expr_-2758889925264113850",
-      "pinyin": "nǐ de tóng xué",
-      "hanzi": "你 的 同 学",
-      "tones": "3 5 22",
-      "def": "Your classmate",
-      "def_words": [
-        "your",
-        "[possessive particle]",
-        "classmate"
-      ]
-    },
-    {
-      "card_id": "expr_983634093740094494",
-      "pinyin": "wǒ yě jué de",
-      "hanzi": "我 也 觉 得",
-      "tones": "3 3 25",
-      "def": "I also think",
-      "def_words": [
-        "I",
-        "also",
-        "think"
-      ]
-    },
-    {
-      "card_id": "expr_-5966428506882963776",
-      "pinyin": "hái kě yǐ",
-      "hanzi": "还 可 以",
-      "tones": "2 33",
-      "def": "It's still okay",
-      "def_words": [
-        "still",
-        "can"
-      ]
-    },
-    {
-      "card_id": "expr_964558499220385478",
-      "pinyin": "a",
-      "hanzi": "啊",
-      "tones": "5",
-      "def": "Ah",
-      "def_words": [
-        "[interjection expressing emotion]"
-      ]
-    },
-    {
-      "card_id": "expr_-4609374951990833120",
-      "pinyin": "wǒ bāng nǐ mǎi",
-      "hanzi": "我 帮 你 买",
-      "tones": "3 1 3 3",
-      "def": "I'll help you buy it",
-      "def_words": [
-        "I",
-        "help",
-        "you",
-        "buy"
-      ]
-    },
-    {
-      "card_id": "expr_-2472531048032614548",
-      "pinyin": "yī huǐ r jiàn",
-      "hanzi": "一 会 儿 见",
-      "tones": "135 4",
-      "def": "See you in a moment",
-      "def_words": [
-        "in a moment",
-        "see"
-      ]
-    },
-    {
-      "card_id": "expr_-3456844731352920405",
-      "pinyin": "zěn me yàng",
-      "hanzi": "怎 么 样",
-      "tones": "354",
-      "def": "How about it?",
-      "def_words": [
-        "how about"
-      ]
-    },
-    {
-      "card_id": "expr_-2294790070303828414",
-      "pinyin": "yǒu diǎn r",
-      "hanzi": "有 点 儿",
-      "tones": "3 35",
-      "def": "A little bit",
-      "def_words": [
-        "have",
-        "a bit"
-      ]
-    },
-    {
-      "card_id": "expr_-7681756604168727347",
-      "pinyin": "zǒu ba !",
-      "hanzi": "走 吧 !",
-      "tones": "3 5 5",
-      "def": "Let's go!",
-      "def_words": [
-        "go",
-        "[particle suggesting or urging]",
-        "!"
-      ]
-    },
-    {
-      "card_id": "expr_-717144015256407847",
-      "pinyin": "hǎo de",
-      "hanzi": "好 的",
-      "tones": "3 5",
-      "def": "Okay",
-      "def_words": [
-        "good",
-        "[particle indicating agreement]"
-      ]
-    },
-    {
-      "card_id": "expr_3184623767654319190",
-      "pinyin": "zài jiàn",
-      "hanzi": "再 见",
-      "tones": "44",
-      "def": "Goodbye",
-      "def_words": [
-        "goodbye"
-      ]
-    },
-    {
-      "card_id": "expr_-50023187287602352",
-      "pinyin": "bù yào kāi mén !",
-      "hanzi": "不 要 开 门 !",
-      "tones": "44 12 5",
-      "def": "Don't open the door!",
-      "def_words": [
-        "do not",
-        "open the door",
-        "!"
-      ]
-    },
-    {
-      "card_id": "expr_5600995783959688408",
-      "pinyin": "duì ma ?",
-      "hanzi": "对 吗 ?",
-      "tones": "4 5 5",
-      "def": "Is that right?",
-      "def_words": [
-        "correct",
-        "[question particle]",
-        "?"
-      ]
-    },
-    {
-      "card_id": "expr_-8735858687172698664",
-      "pinyin": "ńg",
-      "hanzi": "嗯",
-      "tones": "5",
-      "def": "Hmm",
-      "def_words": [
-        "[interjection indicating agreement or hesitation]"
-      ]
-    },
-    {
-      "card_id": "expr_4054681057290118867",
-      "pinyin": "qǐng pián yi yī diǎn er !",
-      "hanzi": "请 便 宜 一 点 儿 !",
-      "tones": "3 25 13 5 5",
-      "def": "Please make it a little cheaper!",
-      "def_words": [
-        "please",
-        "cheap",
-        "a little",
-        "[diminutive suffix]",
-        "!"
-      ]
-    },
-    {
-      "card_id": "expr_4224188711861057274",
-      "pinyin": "wǒ kě le",
-      "hanzi": "我 渴 了",
-      "tones": "3 3 5",
-      "def": "I'm thirsty",
-      "def_words": [
-        "I",
-        "thirsty",
-        "[particle indicating change of state]"
-      ]
-    },
-    {
-      "card_id": "expr_3423680620621734900",
-      "pinyin": "kàn bù dǒng",
-      "hanzi": "看 不 懂",
-      "tones": "4 4 3",
-      "def": "Can't understand",
-      "def_words": [
-        "look",
-        "not",
-        "understand"
-      ]
-    },
-    {
-      "card_id": "expr_5312299566684889550",
-      "pinyin": "nǐ hái yào shén me ?",
-      "hanzi": "你 还 要 什 么 ?",
-      "tones": "3 2 4 25 5",
-      "def": "What else do you want?",
-      "def_words": [
-        "you",
-        "still",
-        "want",
-        "what",
-        "?"
-      ]
-    },
-    {
-      "card_id": "expr_-915281894467030744",
-      "pinyin": "míng tiān jiàn",
-      "hanzi": "明 天 见",
-      "tones": "21 4",
-      "def": "See you tomorrow",
-      "def_words": [
-        "tomorrow",
-        "see"
-      ]
-    },
-    {
-      "card_id": "expr_-7424520119800339578",
-      "pinyin": "jǐ kuài ?",
-      "hanzi": "几 块 ?",
-      "tones": "3 4 5",
-      "def": "How many pieces?",
-      "def_words": [
-        "how many",
-        "pieces",
-        "?"
-      ]
-    },
-    {
-      "card_id": "expr_7266244406894141798",
-      "pinyin": "bù tài xǐ huan",
-      "hanzi": "不 太 喜 欢",
-      "tones": "4 4 35",
-      "def": "Don't really like",
-      "def_words": [
-        "not",
-        "very",
-        "like"
-      ]
-    },
-    {
-      "card_id": "expr_-5084575028965123535",
-      "pinyin": "duì bu qǐ",
-      "hanzi": "对 不 起",
-      "tones": "453",
-      "def": "Sorry",
-      "def_words": [
-        "sorry"
-      ]
-    },
-    {
-      "card_id": "expr_9007209026522559900",
-      "pinyin": "hāi",
-      "hanzi": "嗨",
-      "tones": "1",
-      "def": "Hi",
-      "def_words": [
-        "hi"
-      ]
-    },
-    {
-      "card_id": "expr_-6403810598708013686",
-      "pinyin": "qǐng màn man shuō",
-      "hanzi": "请 慢 慢 说",
-      "tones": "3 45 1",
-      "def": "Please speak slowly.",
-      "def_words": [
-        "please",
-        "slowly",
-        "speak"
-      ]
-    },
-    {
-      "card_id": "expr_-5589350754891762338",
-      "pinyin": "bāng wǒ yī gè máng",
-      "hanzi": "帮 我 一 个 忙",
-      "tones": "1 3 14 2",
-      "def": "Help me with a favor",
-      "def_words": [
-        "help",
-        "me",
-        "one",
-        "favor"
-      ]
-    },
-    {
-      "card_id": "expr_5544913534435017962",
-      "pinyin": "nǐ hǎo",
-      "hanzi": "你 好",
-      "tones": "3 3",
-      "def": "Hello",
-      "def_words": [
-        "you",
-        "good"
-      ]
-    },
-    {
-      "card_id": "expr_-3294487399347253541",
-      "pinyin": "nǐ zěn me yàng a ?",
-      "hanzi": "你 怎 么 样 啊 ?",
-      "tones": "3 354 5 5",
-      "def": "How are you?",
-      "def_words": [
-        "you",
-        "how",
-        "[interjection particle]",
-        "?"
-      ]
-    },
-    {
-      "card_id": "expr_786481118140861593",
-      "pinyin": "hǎo le",
-      "hanzi": "好 了",
-      "tones": "3 5",
-      "def": "Alright",
-      "def_words": [
-        "good",
-        "[particle indicating completion]"
-      ]
-    },
-    {
-      "card_id": "expr_3714544433215845954",
-      "pinyin": "duō shao rén ?",
-      "hanzi": "多 少 人 ?",
-      "tones": "15 2 5",
-      "def": "How many people?",
-      "def_words": [
-        "how many",
-        "people",
-        "?"
-      ]
-    },
-    {
-      "card_id": "expr_9030921163044840705",
-      "pinyin": "tīng bù dǒng",
-      "hanzi": "听 不 懂",
-      "tones": "1 4 3",
-      "def": "I don't understand",
-      "def_words": [
-        "listen",
-        "not",
-        "understand"
-      ]
-    },
-    {
-      "card_id": "expr_5039599843549767963",
-      "pinyin": "wǒ bāng nǐ gěi tā dǎ diàn huà",
-      "hanzi": "我 帮 你 给 他 打 电 话",
-      "tones": "3 1 3 3 1 3 44",
-      "def": "I'll help you call him.",
-      "def_words": [
-        "I",
-        "help",
-        "you",
-        "for",
-        "him",
-        "make",
-        "phone call"
-      ]
-    },
-    {
-      "card_id": "expr_-450413640357301295",
-      "pinyin": "ne",
-      "hanzi": "呢",
-      "tones": "5",
-      "def": "And?",
-      "def_words": [
-        "[particle indicating continuation or question]"
-      ]
-    },
-    {
-      "card_id": "expr_-8778575364394828709",
-      "pinyin": "nǐ zěn me yàng ?",
-      "hanzi": "你 怎 么 样 ?",
-      "tones": "3 354 5",
-      "def": "How are you?",
-      "def_words": [
-        "you",
-        "how",
-        "?"
-      ]
-    },
-    {
-      "card_id": "expr_8175733916459035096",
-      "pinyin": "zǒu le !",
-      "hanzi": "走 了 !",
-      "tones": "3 5 5",
-      "def": "Let's go!",
-      "def_words": [
-        "go",
-        "[particle indicating completion]",
-        "!"
-      ]
-    },
-    {
-      "card_id": "expr_-61372637146492753",
-      "pinyin": "bù yào , xiè xie .",
-      "hanzi": "不 要 , 谢 谢 .",
-      "tones": "44 5 45 5",
-      "def": "No, thank you.",
-      "def_words": [
-        "do not want",
-        ",",
-        "thank you",
-        "."
-      ]
-    },
-    {
-      "card_id": "expr_6246394843001885347",
-      "pinyin": "kě yǐ .",
-      "hanzi": "可 以 .",
-      "tones": "33 5",
-      "def": "Okay.",
-      "def_words": [
-        "can",
-        "."
-      ]
-    },
-    {
-      "card_id": "expr_685191548815523831",
-      "pinyin": "wǒ yě shì",
-      "hanzi": "我 也 是",
-      "tones": "3 3 4",
-      "def": "I am too",
-      "def_words": [
-        "I",
-        "also",
-        "am"
-      ]
-    },
-    {
-      "card_id": "expr_9191864187913560745",
-      "pinyin": "jǐ diǎn ?",
-      "hanzi": "几 点 ?",
-      "tones": "3 3 5",
-      "def": "What time?",
-      "def_words": [
-        "how many",
-        "o'clock",
-        "?"
-      ]
-    },
-    {
-      "card_id": "expr_6845296250659524693",
-      "pinyin": "wǒ bāng nǐ kàn kan",
-      "hanzi": "我 帮 你 看 看",
-      "tones": "3 1 3 45",
-      "def": "I'll help you take a look",
-      "def_words": [
-        "I",
-        "help",
-        "you",
-        "take a look"
-      ]
-    },
-    {
-      "card_id": "expr_1674019830796997575",
-      "pinyin": "bù rèn shi",
-      "hanzi": "不 认 识",
-      "tones": "4 45",
-      "def": "Don't know",
-      "def_words": [
-        "not",
-        "know"
-      ]
-    },
-    {
-      "card_id": "expr_-4723230703380057403",
-      "pinyin": "wǒ bāng nǐ zhǎo yī zhǎo",
-      "hanzi": "我 帮 你 找 一 找",
-      "tones": "3 1 3 3 1 3",
-      "def": "I'll help you look for it",
-      "def_words": [
-        "I",
-        "help",
-        "you",
-        "look",
-        "one",
-        "look"
-      ]
-    },
-    {
-      "card_id": "expr_-2752901793723597207",
-      "pinyin": "zài lù shang",
-      "hanzi": "在 路 上",
-      "tones": "4 45",
-      "def": "On the road",
-      "def_words": [
-        "on",
-        "road"
-      ]
-    },
-    {
-      "card_id": "expr_-3269568803771390286",
-      "pinyin": "méi shì r",
-      "hanzi": "没 事 儿",
-      "tones": "2 45",
-      "def": "No problem",
-      "def_words": [
-        "no",
-        "matter"
-      ]
-    },
-    {
-      "card_id": "expr_6831232615464327265",
-      "pinyin": "qǐng shāo děng .",
-      "hanzi": "请 稍 等 .",
-      "tones": "3 1 3 5",
-      "def": "Please wait a moment",
-      "def_words": [
-        "please",
-        "a little",
-        "wait",
-        "."
-      ]
-    },
-    {
-      "card_id": "expr_6203791330850341032",
-      "pinyin": "wǒ wèn yī xià",
-      "hanzi": "我 问 一 下",
-      "tones": "3 4 14",
-      "def": "Let me ask a question",
-      "def_words": [
-        "I",
-        "ask",
-        "a bit"
-      ]
-    },
-    {
-      "card_id": "expr_8777202727437256018",
-      "pinyin": "tīng de dǒng",
-      "hanzi": "听 得 懂",
-      "tones": "1 5 3",
-      "def": "Can understand by listening",
-      "def_words": [
-        "listen",
-        "[particle indicating ability]",
-        "understand"
-      ]
-    },
-    {
-      "card_id": "expr_3866985963723252670",
-      "pinyin": "Jìng ān sì jiàn !",
-      "hanzi": "静 安 寺 见 !",
-      "tones": "414 4 5",
-      "def": "See you at Jing'an Temple!",
-      "def_words": [
-        "Jing'an Temple",
-        "see",
-        "!"
-      ]
-    },
-    {
-      "card_id": "expr_-1879086329733344445",
-      "pinyin": "yǒu diǎn r là",
-      "hanzi": "有 点 儿 辣",
-      "tones": "3 35 4",
-      "def": "It's a bit spicy.",
-      "def_words": [
-        "have",
-        "a bit",
-        "spicy"
-      ]
-    },
-    {
-      "card_id": "expr_-5633012125638492551",
-      "pinyin": "yǒu .",
-      "hanzi": "有 .",
-      "tones": "3 5",
-      "def": "Have.",
-      "def_words": [
-        "have",
-        "."
-      ]
-    },
-    {
-      "card_id": "expr_7990637748725852667",
-      "pinyin": "duì le",
-      "hanzi": "对 了",
-      "tones": "4 5",
-      "def": "That's right",
-      "def_words": [
-        "correct",
-        "[particle indicating realization]"
-      ]
-    },
-    {
-      "card_id": "expr_7624893962125451147",
-      "pinyin": "duì",
-      "hanzi": "对",
-      "tones": "4",
-      "def": "Correct",
-      "def_words": [
-        "correct"
-      ]
-    },
-    {
-      "card_id": "expr_5361734826448697686",
-      "pinyin": "mǎi dān",
-      "hanzi": "买 单",
-      "tones": "31",
-      "def": "Pay the bill",
-      "def_words": [
-        "pay the bill"
-      ]
-    },
-    {
-      "card_id": "expr_534837539663632371",
-      "pinyin": "nǐ hǎo ma ?",
-      "hanzi": "你 好 吗 ?",
-      "tones": "3 3 5 5",
-      "def": "How are you?",
-      "def_words": [
-        "you",
-        "good",
-        "[question particle]",
-        "?"
-      ]
-    },
-    {
-      "card_id": "expr_-1884640825485332511",
-      "pinyin": "néng",
-      "hanzi": "能",
-      "tones": "2",
-      "def": "Can",
-      "def_words": [
-        "can"
-      ]
-    },
-    {
-      "card_id": "expr_5885952609888418524",
-      "pinyin": "bù tài hǎo",
-      "hanzi": "不 太 好",
-      "tones": "4 4 3",
-      "def": "Not very good",
-      "def_words": [
-        "not",
-        "very",
-        "good"
-      ]
-    },
-    {
-      "card_id": "expr_8379986330776055580",
-      "pinyin": "rèn shi nǐ wǒ yě hěn gāo xìng",
-      "hanzi": "认 识 你 我 也 很 高 兴",
-      "tones": "45 3 3 3 3 14",
-      "def": "I'm also very happy to know you",
-      "def_words": [
-        "know",
-        "you",
-        "I",
-        "also",
-        "very",
-        "happy"
-      ]
-    },
-    {
-      "card_id": "expr_5299338330351538872",
-      "pinyin": "kàn yī xià",
-      "hanzi": "看 一 下",
-      "tones": "4 14",
-      "def": "Take a look",
-      "def_words": [
-        "look",
-        "a bit"
-      ]
-    },
-    {
-      "card_id": "expr_6097280068261129409",
-      "pinyin": "méi guān xi",
-      "hanzi": "没 关 系",
-      "tones": "2 15",
-      "def": "No problem",
-      "def_words": [
-        "no",
-        "relation"
-      ]
-    },
-    {
-      "card_id": "expr_-410849842051616789",
-      "pinyin": "duō shǎo bēi ?",
-      "hanzi": "多 少 杯 ?",
-      "tones": "13 1 5",
-      "def": "How many cups?",
-      "def_words": [
-        "how many",
-        "cup(s)",
-        "?"
-      ]
-    },
-    {
-      "card_id": "expr_-2405023042137466315",
-      "pinyin": "rèn shi nǐ hěn gāo xìng",
-      "hanzi": "认 识 你 很 高 兴",
-      "tones": "45 3 3 14",
-      "def": "Nice to meet you",
-      "def_words": [
-        "know",
-        "you",
-        "very",
-        "happy"
-      ]
-    },
-    {
-      "card_id": "expr_-1403886739101656504",
-      "pinyin": "zài shuō yī biàn",
-      "hanzi": "再 说 一 遍",
-      "tones": "4 1 14",
-      "def": "Say it again",
-      "def_words": [
-        "again",
-        "say",
-        "once"
-      ]
-    },
-    {
-      "card_id": "expr_3897712501057665440",
-      "pinyin": "gěi .",
-      "hanzi": "给 .",
-      "tones": "3 5",
-      "def": "Give.",
-      "def_words": [
-        "give",
-        "."
-      ]
-    },
-    {
-      "card_id": "expr_8390150267713286091",
-      "pinyin": "bù hǎo yì si",
-      "hanzi": "不 好 意 思",
-      "tones": "4 3 45",
-      "def": "Excuse me",
-      "def_words": [
-        "not",
-        "good",
-        "meaning"
-      ]
-    },
-    {
-      "card_id": "expr_-1569601323127647294",
-      "pinyin": "hěn bù hǎo",
-      "hanzi": "很 不 好",
-      "tones": "3 4 3",
-      "def": "Very bad",
-      "def_words": [
-        "very",
-        "not",
-        "good"
-      ]
-    },
-    {
-      "card_id": "expr_6237027248278137106",
-      "pinyin": "TM jiàn !",
-      "hanzi": "TM 见 !",
-      "tones": "5 4 5",
-      "def": "See you, TM!",
-      "def_words": [
-        "TM",
-        "see",
-        "!"
-      ]
-    },
-    {
-      "card_id": "expr_75018190709738459",
-      "pinyin": "bù kè qi",
-      "hanzi": "不 客 气",
-      "tones": "4 45",
-      "def": "You're welcome",
-      "def_words": [
-        "not",
-        "polite"
-      ]
-    },
-    {
-      "card_id": "expr_494840912824147275",
-      "pinyin": "shì de",
-      "hanzi": "是 的",
-      "tones": "4 5",
-      "def": "Yes",
-      "def_words": [
-        "yes",
-        "[particle indicating agreement]"
-      ]
-    },
-    {
-      "card_id": "expr_-1393302405270562484",
-      "pinyin": "yī wèi .",
-      "hanzi": "一 位 .",
-      "tones": "1 4 5",
-      "def": "One person.",
-      "def_words": [
-        "one",
-        "[m.w. for people]",
-        "."
-      ]
-    },
-    {
-      "card_id": "expr_2793573130823922265",
-      "pinyin": "zhī dao le",
-      "hanzi": "知 道 了",
-      "tones": "15 5",
-      "def": "Got it",
-      "def_words": [
-        "know",
-        "[particle indicating completion]"
-      ]
-    },
-    {
-      "card_id": "expr_6528687171123037200",
-      "pinyin": "fēi cháng hǎo",
-      "hanzi": "非 常 好",
-      "tones": "12 3",
-      "def": "Very good",
-      "def_words": [
-        "very",
-        "good"
-      ]
-    },
-    {
-      "card_id": "expr_-1678487067170168984",
-      "pinyin": "shāo děng",
-      "hanzi": "稍 等",
-      "tones": "1 3",
-      "def": "Wait a moment",
-      "def_words": [
-        "momentarily",
-        "wait"
-      ]
-    },
-    {
-      "card_id": "expr_-6801217348304556404",
-      "pinyin": "wǒ è le",
-      "hanzi": "我 饿 了",
-      "tones": "3 4 5",
-      "def": "I'm hungry",
-      "def_words": [
-        "I",
-        "hungry",
-        "[particle indicating change of state]"
-      ]
-    },
-    {
-      "card_id": "expr_-8840998642177445286",
-      "pinyin": "bù yào shuō huà",
-      "hanzi": "不 要 说 话",
-      "tones": "44 14",
-      "def": "Don't speak",
-      "def_words": [
-        "do not",
-        "speak"
-      ]
-    },
-    {
-      "card_id": "expr_6491434390378180537",
-      "pinyin": "yǒu diǎn r tián",
-      "hanzi": "有 点 儿 甜",
-      "tones": "3 35 2",
-      "def": "It's a bit sweet.",
-      "def_words": [
-        "have",
-        "a bit",
-        "sweet"
-      ]
-    },
-    {
-      "card_id": "expr_1662614877335907548",
-      "pinyin": "hǎo de , míng tiān jiàn !",
-      "hanzi": "好 的 , 明 天 见 !",
-      "tones": "3 5 5 21 4 5",
-      "def": "Alright, see you tomorrow!",
-      "def_words": [
-        "good",
-        "[particle indicating agreement]",
-        ",",
-        "tomorrow",
-        "see",
-        "!"
-      ]
-    },
-    {
-      "card_id": "expr_5771271664201683714",
-      "pinyin": "bài bai",
-      "hanzi": "拜 拜",
-      "tones": "45",
-      "def": "Bye-bye",
-      "def_words": [
-        "bye-bye"
-      ]
-    },
-    {
-      "card_id": "expr_-6189519267699713682",
-      "pinyin": "bù cuò",
-      "hanzi": "不 错",
-      "tones": "44",
-      "def": "Not bad",
-      "def_words": [
-        "not bad"
-      ]
-    },
-    {
-      "card_id": "expr_6835653352928224917",
-      "pinyin": "zhè biān qǐng",
-      "hanzi": "这 边 请",
-      "tones": "41 3",
-      "def": "This way, please",
-      "def_words": [
-        "this side",
-        "please"
-      ]
-    },
-    {
-      "card_id": "expr_-5616257985855846300",
-      "pinyin": "hǎo jiǔ bù jiàn !",
-      "hanzi": "好 久 不 见 !",
-      "tones": "33 44 5",
-      "def": "Long time no see!",
-      "def_words": [
-        "long time",
-        "no see",
-        "!"
-      ]
-    },
-    {
-      "card_id": "expr_-6361204267574224943",
-      "pinyin": "shàng kè le",
-      "hanzi": "上 课 了",
-      "tones": "4 4 5",
-      "def": "Class has started",
-      "def_words": [
-        "attend",
-        "class",
-        "[particle indicating completion]"
-      ]
-    },
-    {
-      "card_id": "expr_8794639585287559125",
-      "pinyin": "tuì tuì tuì",
-      "hanzi": "退 退 退",
-      "tones": "4 4 4",
-      "def": "Retreat retreat retreat",
-      "def_words": [
-        "retreat",
-        "retreat",
-        "retreat"
-      ]
-    },
-    {
-      "card_id": "expr_-4104072363658666248",
-      "pinyin": "tài hǎo le",
-      "hanzi": "太 好 了",
-      "tones": "4 3 5",
-      "def": "Great",
-      "def_words": [
-        "too",
-        "good",
-        "[particle indicating completion]"
-      ]
-    },
-    {
-      "card_id": "expr_-420410871514018734",
-      "pinyin": "yǒu méi yǒu ?",
-      "hanzi": "有 没 有 ?",
-      "tones": "3 2 3 5",
-      "def": "Is there any?",
-      "def_words": [
-        "have",
-        "not",
-        "have",
-        "?"
-      ]
-    },
-    {
-      "card_id": "expr_-8871821727797155986",
-      "pinyin": "wǒ lèi le",
-      "hanzi": "我 累 了",
-      "tones": "3 4 5",
-      "def": "I'm tired",
-      "def_words": [
-        "I",
-        "tired",
-        "[particle indicating change of state]"
-      ]
-    },
-    {
-      "card_id": "expr_-2912336643512109473",
-      "pinyin": "bù tài là",
-      "hanzi": "不 太 辣",
-      "tones": "4 4 4",
-      "def": "Not very spicy",
-      "def_words": [
-        "not",
-        "very",
-        "spicy"
-      ]
-    },
-    {
-      "card_id": "expr_-499372770635341844",
-      "pinyin": "xiàn zài !",
-      "hanzi": "现 在 !",
-      "tones": "44 5",
-      "def": "Now!",
-      "def_words": [
-        "now",
-        "!"
-      ]
-    },
-    {
-      "card_id": "expr_7015562458463305128",
-      "pinyin": "méi wèn tí",
-      "hanzi": "没 问 题",
-      "tones": "2 42",
-      "def": "No problem",
-      "def_words": [
-        "no",
-        "problem"
-      ]
-    },
-    {
-      "card_id": "expr_597430886880126368",
-      "pinyin": "fēi cháng bù hǎo",
-      "hanzi": "非 常 不 好",
-      "tones": "12 4 3",
-      "def": "Very bad",
-      "def_words": [
-        "very",
-        "not",
-        "good"
-      ]
-    },
-    {
-      "card_id": "expr_-1528891466335304990",
-      "pinyin": "jǐ wèi",
-      "hanzi": "几 位",
-      "tones": "3 4",
-      "def": "How many people",
-      "def_words": [
-        "how many",
-        "people (polite m.w.)"
-      ]
-    },
-    {
-      "card_id": "expr_-3855218207551990606",
-      "pinyin": "rèn shi",
-      "hanzi": "认 识",
-      "tones": "45",
-      "def": "Know",
-      "def_words": [
-        "know"
-      ]
-    }
-  ]
+    "type": "expr",
+    "deck_name": "Common Expressions (TM-Level1)",
+    "created_at": "2025-09-30T07:03:40.578837",
+    "version": "2",
+    "description": "Common Chinese expressions for beginners (based on That's Mandarin Level 1 course vocabulary)",
+    "updated": "2025-11-21T11:08:54.238632",
+    "cards": [
+        {
+            "card_id": "expr_4873373676193209515",
+            "pinyin": "huān yíng guāng lín",
+            "hanzi": "欢 迎 光 临",
+            "tones": "12 12",
+            "def": "Welcome",
+            "def_words": [
+                "welcome",
+                "arrival"
+            ],
+            "audio": "expr_4873373676193209515.mp3"
+        },
+        {
+            "card_id": "expr_-7063327483802198250",
+            "pinyin": "hā hā",
+            "hanzi": "哈 哈",
+            "tones": "11",
+            "def": "Haha",
+            "def_words": [
+                "haha"
+            ],
+            "audio": "expr_-7063327483802198250.mp3"
+        },
+        {
+            "card_id": "expr_-3698507462434702843",
+            "pinyin": "wǒ bāng nǐ zuò",
+            "hanzi": "我 帮 你 做",
+            "tones": "3 1 3 4",
+            "def": "I'll help you do it.",
+            "def_words": [
+                "I",
+                "help",
+                "you",
+                "do"
+            ],
+            "audio": "expr_-3698507462434702843.mp3"
+        },
+        {
+            "card_id": "expr_4479841420926613939",
+            "pinyin": "zài tīng yī biàn",
+            "hanzi": "再 听 一 遍",
+            "tones": "4 1 14",
+            "def": "Listen again once",
+            "def_words": [
+                "again",
+                "listen",
+                "once"
+            ],
+            "audio": "expr_4479841420926613939.mp3"
+        },
+        {
+            "card_id": "expr_291942850668933730",
+            "pinyin": "míng tiān zǎo shang jiàn !",
+            "hanzi": "明 天 早 上 见 !",
+            "tones": "21 35 4 5",
+            "def": "See you tomorrow morning!",
+            "def_words": [
+                "tomorrow",
+                "morning",
+                "see",
+                "!"
+            ],
+            "audio": "expr_291942850668933730.mp3"
+        },
+        {
+            "card_id": "expr_3638177020378037525",
+            "pinyin": "kàn de dǒng",
+            "hanzi": "看 得 懂",
+            "tones": "4 5 3",
+            "def": "Can understand by looking",
+            "def_words": [
+                "look",
+                "[particle indicating ability]",
+                "understand"
+            ],
+            "audio": "expr_3638177020378037525.mp3"
+        },
+        {
+            "card_id": "expr_3111519016326540210",
+            "pinyin": "xiè xie",
+            "hanzi": "谢 谢",
+            "tones": "45",
+            "def": "Thank you",
+            "def_words": [
+                "thank you"
+            ],
+            "audio": "expr_3111519016326540210.mp3"
+        },
+        {
+            "card_id": "expr_-8153619613199655636",
+            "pinyin": "duō shao qián ?",
+            "hanzi": "多 少 钱 ?",
+            "tones": "15 2 5",
+            "def": "How much money?",
+            "def_words": [
+                "how much",
+                "money",
+                "?"
+            ],
+            "audio": "expr_-8153619613199655636.mp3"
+        },
+        {
+            "card_id": "expr_1342763903939872769",
+            "pinyin": "qǐng bāng wǒ",
+            "hanzi": "请 帮 我",
+            "tones": "3 1 3",
+            "def": "Please help me.",
+            "def_words": [
+                "please",
+                "help",
+                "me"
+            ],
+            "audio": "expr_1342763903939872769.mp3"
+        },
+        {
+            "card_id": "expr_-5331954559274341722",
+            "pinyin": "shāo děng yī xià",
+            "hanzi": "稍 等 一 下",
+            "tones": "1 3 14",
+            "def": "Wait a moment",
+            "def_words": [
+                "a little",
+                "wait",
+                "a moment"
+            ],
+            "audio": "expr_-5331954559274341722.mp3"
+        },
+        {
+            "card_id": "expr_-540198930051296566",
+            "pinyin": "bāng wǒ gè máng",
+            "hanzi": "帮 我 个 忙",
+            "tones": "1 3 4 2",
+            "def": "Do me a favor",
+            "def_words": [
+                "help",
+                "me",
+                "[m.w.]",
+                "favor"
+            ],
+            "audio": "expr_-540198930051296566.mp3"
+        },
+        {
+            "card_id": "expr_-2758889925264113850",
+            "pinyin": "nǐ de tóng xué",
+            "hanzi": "你 的 同 学",
+            "tones": "3 5 22",
+            "def": "Your classmate",
+            "def_words": [
+                "your",
+                "[possessive particle]",
+                "classmate"
+            ],
+            "audio": "expr_-2758889925264113850.mp3"
+        },
+        {
+            "card_id": "expr_983634093740094494",
+            "pinyin": "wǒ yě jué de",
+            "hanzi": "我 也 觉 得",
+            "tones": "3 3 25",
+            "def": "I also think",
+            "def_words": [
+                "I",
+                "also",
+                "think"
+            ],
+            "audio": "expr_983634093740094494.mp3"
+        },
+        {
+            "card_id": "expr_-5966428506882963776",
+            "pinyin": "hái kě yǐ",
+            "hanzi": "还 可 以",
+            "tones": "2 33",
+            "def": "It's still okay",
+            "def_words": [
+                "still",
+                "can"
+            ],
+            "audio": "expr_-5966428506882963776.mp3"
+        },
+        {
+            "card_id": "expr_964558499220385478",
+            "pinyin": "a",
+            "hanzi": "啊",
+            "tones": "5",
+            "def": "Ah",
+            "def_words": [
+                "[interjection expressing emotion]"
+            ],
+            "audio": "expr_964558499220385478.mp3"
+        },
+        {
+            "card_id": "expr_-4609374951990833120",
+            "pinyin": "wǒ bāng nǐ mǎi",
+            "hanzi": "我 帮 你 买",
+            "tones": "3 1 3 3",
+            "def": "I'll help you buy it",
+            "def_words": [
+                "I",
+                "help",
+                "you",
+                "buy"
+            ],
+            "audio": "expr_-4609374951990833120.mp3"
+        },
+        {
+            "card_id": "expr_-2472531048032614548",
+            "pinyin": "yī huǐ r jiàn",
+            "hanzi": "一 会 儿 见",
+            "tones": "135 4",
+            "def": "See you in a moment",
+            "def_words": [
+                "in a moment",
+                "see"
+            ],
+            "audio": "expr_-2472531048032614548.mp3"
+        },
+        {
+            "card_id": "expr_-3456844731352920405",
+            "pinyin": "zěn me yàng",
+            "hanzi": "怎 么 样",
+            "tones": "354",
+            "def": "How about it?",
+            "def_words": [
+                "how about"
+            ],
+            "audio": "expr_-3456844731352920405.mp3"
+        },
+        {
+            "card_id": "expr_-2294790070303828414",
+            "pinyin": "yǒu diǎn r",
+            "hanzi": "有 点 儿",
+            "tones": "3 35",
+            "def": "A little bit",
+            "def_words": [
+                "have",
+                "a bit"
+            ],
+            "audio": "expr_-2294790070303828414.mp3"
+        },
+        {
+            "card_id": "expr_-7681756604168727347",
+            "pinyin": "zǒu ba !",
+            "hanzi": "走 吧 !",
+            "tones": "3 5 5",
+            "def": "Let's go!",
+            "def_words": [
+                "go",
+                "[particle suggesting or urging]",
+                "!"
+            ],
+            "audio": "expr_-7681756604168727347.mp3"
+        },
+        {
+            "card_id": "expr_-717144015256407847",
+            "pinyin": "hǎo de",
+            "hanzi": "好 的",
+            "tones": "3 5",
+            "def": "Okay",
+            "def_words": [
+                "good",
+                "[particle indicating agreement]"
+            ],
+            "audio": "expr_-717144015256407847.mp3"
+        },
+        {
+            "card_id": "expr_3184623767654319190",
+            "pinyin": "zài jiàn",
+            "hanzi": "再 见",
+            "tones": "44",
+            "def": "Goodbye",
+            "def_words": [
+                "goodbye"
+            ],
+            "audio": "expr_3184623767654319190.mp3"
+        },
+        {
+            "card_id": "expr_-50023187287602352",
+            "pinyin": "bù yào kāi mén !",
+            "hanzi": "不 要 开 门 !",
+            "tones": "44 12 5",
+            "def": "Don't open the door!",
+            "def_words": [
+                "do not",
+                "open the door",
+                "!"
+            ],
+            "audio": "expr_-50023187287602352.mp3"
+        },
+        {
+            "card_id": "expr_5600995783959688408",
+            "pinyin": "duì ma ?",
+            "hanzi": "对 吗 ?",
+            "tones": "4 5 5",
+            "def": "Is that right?",
+            "def_words": [
+                "correct",
+                "[question particle]",
+                "?"
+            ],
+            "audio": "expr_5600995783959688408.mp3"
+        },
+        {
+            "card_id": "expr_-8735858687172698664",
+            "pinyin": "ńg",
+            "hanzi": "嗯",
+            "tones": "5",
+            "def": "Hmm",
+            "def_words": [
+                "[interjection indicating agreement or hesitation]"
+            ],
+            "audio": "expr_-8735858687172698664.mp3"
+        },
+        {
+            "card_id": "expr_4054681057290118867",
+            "pinyin": "qǐng pián yi yī diǎn er !",
+            "hanzi": "请 便 宜 一 点 儿 !",
+            "tones": "3 25 13 5 5",
+            "def": "Please make it a little cheaper!",
+            "def_words": [
+                "please",
+                "cheap",
+                "a little",
+                "[diminutive suffix]",
+                "!"
+            ],
+            "audio": "expr_4054681057290118867.mp3"
+        },
+        {
+            "card_id": "expr_4224188711861057274",
+            "pinyin": "wǒ kě le",
+            "hanzi": "我 渴 了",
+            "tones": "3 3 5",
+            "def": "I'm thirsty",
+            "def_words": [
+                "I",
+                "thirsty",
+                "[particle indicating change of state]"
+            ],
+            "audio": "expr_4224188711861057274.mp3"
+        },
+        {
+            "card_id": "expr_3423680620621734900",
+            "pinyin": "kàn bù dǒng",
+            "hanzi": "看 不 懂",
+            "tones": "4 4 3",
+            "def": "Can't understand",
+            "def_words": [
+                "look",
+                "not",
+                "understand"
+            ],
+            "audio": "expr_3423680620621734900.mp3"
+        },
+        {
+            "card_id": "expr_5312299566684889550",
+            "pinyin": "nǐ hái yào shén me ?",
+            "hanzi": "你 还 要 什 么 ?",
+            "tones": "3 2 4 25 5",
+            "def": "What else do you want?",
+            "def_words": [
+                "you",
+                "still",
+                "want",
+                "what",
+                "?"
+            ],
+            "audio": "expr_5312299566684889550.mp3"
+        },
+        {
+            "card_id": "expr_-915281894467030744",
+            "pinyin": "míng tiān jiàn",
+            "hanzi": "明 天 见",
+            "tones": "21 4",
+            "def": "See you tomorrow",
+            "def_words": [
+                "tomorrow",
+                "see"
+            ],
+            "audio": "expr_-915281894467030744.mp3"
+        },
+        {
+            "card_id": "expr_-7424520119800339578",
+            "pinyin": "jǐ kuài ?",
+            "hanzi": "几 块 ?",
+            "tones": "3 4 5",
+            "def": "How many pieces?",
+            "def_words": [
+                "how many",
+                "pieces",
+                "?"
+            ],
+            "audio": "expr_-7424520119800339578.mp3"
+        },
+        {
+            "card_id": "expr_7266244406894141798",
+            "pinyin": "bù tài xǐ huan",
+            "hanzi": "不 太 喜 欢",
+            "tones": "4 4 35",
+            "def": "Don't really like",
+            "def_words": [
+                "not",
+                "very",
+                "like"
+            ],
+            "audio": "expr_7266244406894141798.mp3"
+        },
+        {
+            "card_id": "expr_-5084575028965123535",
+            "pinyin": "duì bu qǐ",
+            "hanzi": "对 不 起",
+            "tones": "453",
+            "def": "Sorry",
+            "def_words": [
+                "sorry"
+            ],
+            "audio": "expr_-5084575028965123535.mp3"
+        },
+        {
+            "card_id": "expr_9007209026522559900",
+            "pinyin": "hāi",
+            "hanzi": "嗨",
+            "tones": "1",
+            "def": "Hi",
+            "def_words": [
+                "hi"
+            ],
+            "audio": "expr_9007209026522559900.mp3"
+        },
+        {
+            "card_id": "expr_-6403810598708013686",
+            "pinyin": "qǐng màn man shuō",
+            "hanzi": "请 慢 慢 说",
+            "tones": "3 45 1",
+            "def": "Please speak slowly.",
+            "def_words": [
+                "please",
+                "slowly",
+                "speak"
+            ],
+            "audio": "expr_-6403810598708013686.mp3"
+        },
+        {
+            "card_id": "expr_-5589350754891762338",
+            "pinyin": "bāng wǒ yī gè máng",
+            "hanzi": "帮 我 一 个 忙",
+            "tones": "1 3 14 2",
+            "def": "Help me with a favor",
+            "def_words": [
+                "help",
+                "me",
+                "one",
+                "favor"
+            ],
+            "audio": "expr_-5589350754891762338.mp3"
+        },
+        {
+            "card_id": "expr_5544913534435017962",
+            "pinyin": "nǐ hǎo",
+            "hanzi": "你 好",
+            "tones": "3 3",
+            "def": "Hello",
+            "def_words": [
+                "you",
+                "good"
+            ],
+            "audio": "expr_5544913534435017962.mp3"
+        },
+        {
+            "card_id": "expr_-3294487399347253541",
+            "pinyin": "nǐ zěn me yàng a ?",
+            "hanzi": "你 怎 么 样 啊 ?",
+            "tones": "3 354 5 5",
+            "def": "How are you?",
+            "def_words": [
+                "you",
+                "how",
+                "[interjection particle]",
+                "?"
+            ],
+            "audio": "expr_-3294487399347253541.mp3"
+        },
+        {
+            "card_id": "expr_786481118140861593",
+            "pinyin": "hǎo le",
+            "hanzi": "好 了",
+            "tones": "3 5",
+            "def": "Alright",
+            "def_words": [
+                "good",
+                "[particle indicating completion]"
+            ],
+            "audio": "expr_786481118140861593.mp3"
+        },
+        {
+            "card_id": "expr_3714544433215845954",
+            "pinyin": "duō shao rén ?",
+            "hanzi": "多 少 人 ?",
+            "tones": "15 2 5",
+            "def": "How many people?",
+            "def_words": [
+                "how many",
+                "people",
+                "?"
+            ],
+            "audio": "expr_3714544433215845954.mp3"
+        },
+        {
+            "card_id": "expr_9030921163044840705",
+            "pinyin": "tīng bù dǒng",
+            "hanzi": "听 不 懂",
+            "tones": "1 4 3",
+            "def": "I don't understand",
+            "def_words": [
+                "listen",
+                "not",
+                "understand"
+            ],
+            "audio": "expr_9030921163044840705.mp3"
+        },
+        {
+            "card_id": "expr_5039599843549767963",
+            "pinyin": "wǒ bāng nǐ gěi tā dǎ diàn huà",
+            "hanzi": "我 帮 你 给 他 打 电 话",
+            "tones": "3 1 3 3 1 3 44",
+            "def": "I'll help you call him.",
+            "def_words": [
+                "I",
+                "help",
+                "you",
+                "for",
+                "him",
+                "make",
+                "phone call"
+            ],
+            "audio": "expr_5039599843549767963.mp3"
+        },
+        {
+            "card_id": "expr_-450413640357301295",
+            "pinyin": "ne",
+            "hanzi": "呢",
+            "tones": "5",
+            "def": "And?",
+            "def_words": [
+                "[particle indicating continuation or question]"
+            ],
+            "audio": "expr_-450413640357301295.mp3"
+        },
+        {
+            "card_id": "expr_-8778575364394828709",
+            "pinyin": "nǐ zěn me yàng ?",
+            "hanzi": "你 怎 么 样 ?",
+            "tones": "3 354 5",
+            "def": "How are you?",
+            "def_words": [
+                "you",
+                "how",
+                "?"
+            ],
+            "audio": "expr_-8778575364394828709.mp3"
+        },
+        {
+            "card_id": "expr_8175733916459035096",
+            "pinyin": "zǒu le !",
+            "hanzi": "走 了 !",
+            "tones": "3 5 5",
+            "def": "Let's go!",
+            "def_words": [
+                "go",
+                "[particle indicating completion]",
+                "!"
+            ],
+            "audio": "expr_8175733916459035096.mp3"
+        },
+        {
+            "card_id": "expr_-61372637146492753",
+            "pinyin": "bù yào , xiè xie .",
+            "hanzi": "不 要 , 谢 谢 .",
+            "tones": "44 5 45 5",
+            "def": "No, thank you.",
+            "def_words": [
+                "do not want",
+                ",",
+                "thank you",
+                "."
+            ],
+            "audio": "expr_-61372637146492753.mp3"
+        },
+        {
+            "card_id": "expr_6246394843001885347",
+            "pinyin": "kě yǐ .",
+            "hanzi": "可 以 .",
+            "tones": "33 5",
+            "def": "Okay.",
+            "def_words": [
+                "can",
+                "."
+            ],
+            "audio": "expr_6246394843001885347.mp3"
+        },
+        {
+            "card_id": "expr_685191548815523831",
+            "pinyin": "wǒ yě shì",
+            "hanzi": "我 也 是",
+            "tones": "3 3 4",
+            "def": "I am too",
+            "def_words": [
+                "I",
+                "also",
+                "am"
+            ],
+            "audio": "expr_685191548815523831.mp3"
+        },
+        {
+            "card_id": "expr_9191864187913560745",
+            "pinyin": "jǐ diǎn ?",
+            "hanzi": "几 点 ?",
+            "tones": "3 3 5",
+            "def": "What time?",
+            "def_words": [
+                "how many",
+                "o'clock",
+                "?"
+            ],
+            "audio": "expr_9191864187913560745.mp3"
+        },
+        {
+            "card_id": "expr_6845296250659524693",
+            "pinyin": "wǒ bāng nǐ kàn kan",
+            "hanzi": "我 帮 你 看 看",
+            "tones": "3 1 3 45",
+            "def": "I'll help you take a look",
+            "def_words": [
+                "I",
+                "help",
+                "you",
+                "take a look"
+            ],
+            "audio": "expr_6845296250659524693.mp3"
+        },
+        {
+            "card_id": "expr_1674019830796997575",
+            "pinyin": "bù rèn shi",
+            "hanzi": "不 认 识",
+            "tones": "4 45",
+            "def": "Don't know",
+            "def_words": [
+                "not",
+                "know"
+            ],
+            "audio": "expr_1674019830796997575.mp3"
+        },
+        {
+            "card_id": "expr_-4723230703380057403",
+            "pinyin": "wǒ bāng nǐ zhǎo yī zhǎo",
+            "hanzi": "我 帮 你 找 一 找",
+            "tones": "3 1 3 3 1 3",
+            "def": "I'll help you look for it",
+            "def_words": [
+                "I",
+                "help",
+                "you",
+                "look",
+                "one",
+                "look"
+            ],
+            "audio": "expr_-4723230703380057403.mp3"
+        },
+        {
+            "card_id": "expr_-2752901793723597207",
+            "pinyin": "zài lù shang",
+            "hanzi": "在 路 上",
+            "tones": "4 45",
+            "def": "On the road",
+            "def_words": [
+                "on",
+                "road"
+            ],
+            "audio": "expr_-2752901793723597207.mp3"
+        },
+        {
+            "card_id": "expr_-3269568803771390286",
+            "pinyin": "méi shì r",
+            "hanzi": "没 事 儿",
+            "tones": "2 45",
+            "def": "No problem",
+            "def_words": [
+                "no",
+                "matter"
+            ],
+            "audio": "expr_-3269568803771390286.mp3"
+        },
+        {
+            "card_id": "expr_6831232615464327265",
+            "pinyin": "qǐng shāo děng .",
+            "hanzi": "请 稍 等 .",
+            "tones": "3 1 3 5",
+            "def": "Please wait a moment",
+            "def_words": [
+                "please",
+                "a little",
+                "wait",
+                "."
+            ],
+            "audio": "expr_6831232615464327265.mp3"
+        },
+        {
+            "card_id": "expr_6203791330850341032",
+            "pinyin": "wǒ wèn yī xià",
+            "hanzi": "我 问 一 下",
+            "tones": "3 4 14",
+            "def": "Let me ask a question",
+            "def_words": [
+                "I",
+                "ask",
+                "a bit"
+            ],
+            "audio": "expr_6203791330850341032.mp3"
+        },
+        {
+            "card_id": "expr_8777202727437256018",
+            "pinyin": "tīng de dǒng",
+            "hanzi": "听 得 懂",
+            "tones": "1 5 3",
+            "def": "Can understand by listening",
+            "def_words": [
+                "listen",
+                "[particle indicating ability]",
+                "understand"
+            ],
+            "audio": "expr_8777202727437256018.mp3"
+        },
+        {
+            "card_id": "expr_3866985963723252670",
+            "pinyin": "Jìng ān sì jiàn !",
+            "hanzi": "静 安 寺 见 !",
+            "tones": "414 4 5",
+            "def": "See you at Jing'an Temple!",
+            "def_words": [
+                "Jing'an Temple",
+                "see",
+                "!"
+            ],
+            "audio": "expr_3866985963723252670.mp3"
+        },
+        {
+            "card_id": "expr_-1879086329733344445",
+            "pinyin": "yǒu diǎn r là",
+            "hanzi": "有 点 儿 辣",
+            "tones": "3 35 4",
+            "def": "It's a bit spicy.",
+            "def_words": [
+                "have",
+                "a bit",
+                "spicy"
+            ],
+            "audio": "expr_-1879086329733344445.mp3"
+        },
+        {
+            "card_id": "expr_-5633012125638492551",
+            "pinyin": "yǒu .",
+            "hanzi": "有 .",
+            "tones": "3 5",
+            "def": "Have.",
+            "def_words": [
+                "have",
+                "."
+            ],
+            "audio": "expr_-5633012125638492551.mp3"
+        },
+        {
+            "card_id": "expr_7990637748725852667",
+            "pinyin": "duì le",
+            "hanzi": "对 了",
+            "tones": "4 5",
+            "def": "That's right",
+            "def_words": [
+                "correct",
+                "[particle indicating realization]"
+            ],
+            "audio": "expr_7990637748725852667.mp3"
+        },
+        {
+            "card_id": "expr_7624893962125451147",
+            "pinyin": "duì",
+            "hanzi": "对",
+            "tones": "4",
+            "def": "Correct",
+            "def_words": [
+                "correct"
+            ],
+            "audio": "expr_7624893962125451147.mp3"
+        },
+        {
+            "card_id": "expr_5361734826448697686",
+            "pinyin": "mǎi dān",
+            "hanzi": "买 单",
+            "tones": "31",
+            "def": "Pay the bill",
+            "def_words": [
+                "pay the bill"
+            ],
+            "audio": "expr_5361734826448697686.mp3"
+        },
+        {
+            "card_id": "expr_534837539663632371",
+            "pinyin": "nǐ hǎo ma ?",
+            "hanzi": "你 好 吗 ?",
+            "tones": "3 3 5 5",
+            "def": "How are you?",
+            "def_words": [
+                "you",
+                "good",
+                "[question particle]",
+                "?"
+            ],
+            "audio": "expr_534837539663632371.mp3"
+        },
+        {
+            "card_id": "expr_-1884640825485332511",
+            "pinyin": "néng",
+            "hanzi": "能",
+            "tones": "2",
+            "def": "Can",
+            "def_words": [
+                "can"
+            ],
+            "audio": "expr_-1884640825485332511.mp3"
+        },
+        {
+            "card_id": "expr_5885952609888418524",
+            "pinyin": "bù tài hǎo",
+            "hanzi": "不 太 好",
+            "tones": "4 4 3",
+            "def": "Not very good",
+            "def_words": [
+                "not",
+                "very",
+                "good"
+            ],
+            "audio": "expr_5885952609888418524.mp3"
+        },
+        {
+            "card_id": "expr_8379986330776055580",
+            "pinyin": "rèn shi nǐ wǒ yě hěn gāo xìng",
+            "hanzi": "认 识 你 我 也 很 高 兴",
+            "tones": "45 3 3 3 3 14",
+            "def": "I'm also very happy to know you",
+            "def_words": [
+                "know",
+                "you",
+                "I",
+                "also",
+                "very",
+                "happy"
+            ],
+            "audio": "expr_8379986330776055580.mp3"
+        },
+        {
+            "card_id": "expr_5299338330351538872",
+            "pinyin": "kàn yī xià",
+            "hanzi": "看 一 下",
+            "tones": "4 14",
+            "def": "Take a look",
+            "def_words": [
+                "look",
+                "a bit"
+            ],
+            "audio": "expr_5299338330351538872.mp3"
+        },
+        {
+            "card_id": "expr_6097280068261129409",
+            "pinyin": "méi guān xi",
+            "hanzi": "没 关 系",
+            "tones": "2 15",
+            "def": "No problem",
+            "def_words": [
+                "no",
+                "relation"
+            ],
+            "audio": "expr_6097280068261129409.mp3"
+        },
+        {
+            "card_id": "expr_-410849842051616789",
+            "pinyin": "duō shǎo bēi ?",
+            "hanzi": "多 少 杯 ?",
+            "tones": "13 1 5",
+            "def": "How many cups?",
+            "def_words": [
+                "how many",
+                "cup(s)",
+                "?"
+            ],
+            "audio": "expr_-410849842051616789.mp3"
+        },
+        {
+            "card_id": "expr_-2405023042137466315",
+            "pinyin": "rèn shi nǐ hěn gāo xìng",
+            "hanzi": "认 识 你 很 高 兴",
+            "tones": "45 3 3 14",
+            "def": "Nice to meet you",
+            "def_words": [
+                "know",
+                "you",
+                "very",
+                "happy"
+            ],
+            "audio": "expr_-2405023042137466315.mp3"
+        },
+        {
+            "card_id": "expr_-1403886739101656504",
+            "pinyin": "zài shuō yī biàn",
+            "hanzi": "再 说 一 遍",
+            "tones": "4 1 14",
+            "def": "Say it again",
+            "def_words": [
+                "again",
+                "say",
+                "once"
+            ],
+            "audio": "expr_-1403886739101656504.mp3"
+        },
+        {
+            "card_id": "expr_3897712501057665440",
+            "pinyin": "gěi .",
+            "hanzi": "给 .",
+            "tones": "3 5",
+            "def": "Give.",
+            "def_words": [
+                "give",
+                "."
+            ],
+            "audio": "expr_3897712501057665440.mp3"
+        },
+        {
+            "card_id": "expr_8390150267713286091",
+            "pinyin": "bù hǎo yì si",
+            "hanzi": "不 好 意 思",
+            "tones": "4 3 45",
+            "def": "Excuse me",
+            "def_words": [
+                "not",
+                "good",
+                "meaning"
+            ],
+            "audio": "expr_8390150267713286091.mp3"
+        },
+        {
+            "card_id": "expr_-1569601323127647294",
+            "pinyin": "hěn bù hǎo",
+            "hanzi": "很 不 好",
+            "tones": "3 4 3",
+            "def": "Very bad",
+            "def_words": [
+                "very",
+                "not",
+                "good"
+            ],
+            "audio": "expr_-1569601323127647294.mp3"
+        },
+        {
+            "card_id": "expr_6237027248278137106",
+            "pinyin": "TM jiàn !",
+            "hanzi": "TM 见 !",
+            "tones": "5 4 5",
+            "def": "See you, TM!",
+            "def_words": [
+                "TM",
+                "see",
+                "!"
+            ],
+            "audio": "expr_6237027248278137106.mp3"
+        },
+        {
+            "card_id": "expr_75018190709738459",
+            "pinyin": "bù kè qi",
+            "hanzi": "不 客 气",
+            "tones": "4 45",
+            "def": "You're welcome",
+            "def_words": [
+                "not",
+                "polite"
+            ],
+            "audio": "expr_75018190709738459.mp3"
+        },
+        {
+            "card_id": "expr_494840912824147275",
+            "pinyin": "shì de",
+            "hanzi": "是 的",
+            "tones": "4 5",
+            "def": "Yes",
+            "def_words": [
+                "yes",
+                "[particle indicating agreement]"
+            ],
+            "audio": "expr_494840912824147275.mp3"
+        },
+        {
+            "card_id": "expr_-1393302405270562484",
+            "pinyin": "yī wèi .",
+            "hanzi": "一 位 .",
+            "tones": "1 4 5",
+            "def": "One person.",
+            "def_words": [
+                "one",
+                "[m.w. for people]",
+                "."
+            ],
+            "audio": "expr_-1393302405270562484.mp3"
+        },
+        {
+            "card_id": "expr_2793573130823922265",
+            "pinyin": "zhī dao le",
+            "hanzi": "知 道 了",
+            "tones": "15 5",
+            "def": "Got it",
+            "def_words": [
+                "know",
+                "[particle indicating completion]"
+            ],
+            "audio": "expr_2793573130823922265.mp3"
+        },
+        {
+            "card_id": "expr_6528687171123037200",
+            "pinyin": "fēi cháng hǎo",
+            "hanzi": "非 常 好",
+            "tones": "12 3",
+            "def": "Very good",
+            "def_words": [
+                "very",
+                "good"
+            ],
+            "audio": "expr_6528687171123037200.mp3"
+        },
+        {
+            "card_id": "expr_-1678487067170168984",
+            "pinyin": "shāo děng",
+            "hanzi": "稍 等",
+            "tones": "1 3",
+            "def": "Wait a moment",
+            "def_words": [
+                "momentarily",
+                "wait"
+            ],
+            "audio": "expr_-1678487067170168984.mp3"
+        },
+        {
+            "card_id": "expr_-6801217348304556404",
+            "pinyin": "wǒ è le",
+            "hanzi": "我 饿 了",
+            "tones": "3 4 5",
+            "def": "I'm hungry",
+            "def_words": [
+                "I",
+                "hungry",
+                "[particle indicating change of state]"
+            ],
+            "audio": "expr_-6801217348304556404.mp3"
+        },
+        {
+            "card_id": "expr_-8840998642177445286",
+            "pinyin": "bù yào shuō huà",
+            "hanzi": "不 要 说 话",
+            "tones": "44 14",
+            "def": "Don't speak",
+            "def_words": [
+                "do not",
+                "speak"
+            ],
+            "audio": "expr_-8840998642177445286.mp3"
+        },
+        {
+            "card_id": "expr_6491434390378180537",
+            "pinyin": "yǒu diǎn r tián",
+            "hanzi": "有 点 儿 甜",
+            "tones": "3 35 2",
+            "def": "It's a bit sweet.",
+            "def_words": [
+                "have",
+                "a bit",
+                "sweet"
+            ],
+            "audio": "expr_6491434390378180537.mp3"
+        },
+        {
+            "card_id": "expr_1662614877335907548",
+            "pinyin": "hǎo de , míng tiān jiàn !",
+            "hanzi": "好 的 , 明 天 见 !",
+            "tones": "3 5 5 21 4 5",
+            "def": "Alright, see you tomorrow!",
+            "def_words": [
+                "good",
+                "[particle indicating agreement]",
+                ",",
+                "tomorrow",
+                "see",
+                "!"
+            ],
+            "audio": "expr_1662614877335907548.mp3"
+        },
+        {
+            "card_id": "expr_5771271664201683714",
+            "pinyin": "bài bai",
+            "hanzi": "拜 拜",
+            "tones": "45",
+            "def": "Bye-bye",
+            "def_words": [
+                "bye-bye"
+            ],
+            "audio": "expr_5771271664201683714.mp3"
+        },
+        {
+            "card_id": "expr_-6189519267699713682",
+            "pinyin": "bù cuò",
+            "hanzi": "不 错",
+            "tones": "44",
+            "def": "Not bad",
+            "def_words": [
+                "not bad"
+            ],
+            "audio": "expr_-6189519267699713682.mp3"
+        },
+        {
+            "card_id": "expr_6835653352928224917",
+            "pinyin": "zhè biān qǐng",
+            "hanzi": "这 边 请",
+            "tones": "41 3",
+            "def": "This way, please",
+            "def_words": [
+                "this side",
+                "please"
+            ],
+            "audio": "expr_6835653352928224917.mp3"
+        },
+        {
+            "card_id": "expr_-5616257985855846300",
+            "pinyin": "hǎo jiǔ bù jiàn !",
+            "hanzi": "好 久 不 见 !",
+            "tones": "33 44 5",
+            "def": "Long time no see!",
+            "def_words": [
+                "long time",
+                "no see",
+                "!"
+            ],
+            "audio": "expr_-5616257985855846300.mp3"
+        },
+        {
+            "card_id": "expr_-6361204267574224943",
+            "pinyin": "shàng kè le",
+            "hanzi": "上 课 了",
+            "tones": "4 4 5",
+            "def": "Class has started",
+            "def_words": [
+                "attend",
+                "class",
+                "[particle indicating completion]"
+            ],
+            "audio": "expr_-6361204267574224943.mp3"
+        },
+        {
+            "card_id": "expr_8794639585287559125",
+            "pinyin": "tuì tuì tuì",
+            "hanzi": "退 退 退",
+            "tones": "4 4 4",
+            "def": "Retreat retreat retreat",
+            "def_words": [
+                "retreat",
+                "retreat",
+                "retreat"
+            ],
+            "audio": "expr_8794639585287559125.mp3"
+        },
+        {
+            "card_id": "expr_-4104072363658666248",
+            "pinyin": "tài hǎo le",
+            "hanzi": "太 好 了",
+            "tones": "4 3 5",
+            "def": "Great",
+            "def_words": [
+                "too",
+                "good",
+                "[particle indicating completion]"
+            ],
+            "audio": "expr_-4104072363658666248.mp3"
+        },
+        {
+            "card_id": "expr_-420410871514018734",
+            "pinyin": "yǒu méi yǒu ?",
+            "hanzi": "有 没 有 ?",
+            "tones": "3 2 3 5",
+            "def": "Is there any?",
+            "def_words": [
+                "have",
+                "not",
+                "have",
+                "?"
+            ],
+            "audio": "expr_-420410871514018734.mp3"
+        },
+        {
+            "card_id": "expr_-8871821727797155986",
+            "pinyin": "wǒ lèi le",
+            "hanzi": "我 累 了",
+            "tones": "3 4 5",
+            "def": "I'm tired",
+            "def_words": [
+                "I",
+                "tired",
+                "[particle indicating change of state]"
+            ],
+            "audio": "expr_-8871821727797155986.mp3"
+        },
+        {
+            "card_id": "expr_-2912336643512109473",
+            "pinyin": "bù tài là",
+            "hanzi": "不 太 辣",
+            "tones": "4 4 4",
+            "def": "Not very spicy",
+            "def_words": [
+                "not",
+                "very",
+                "spicy"
+            ],
+            "audio": "expr_-2912336643512109473.mp3"
+        },
+        {
+            "card_id": "expr_-499372770635341844",
+            "pinyin": "xiàn zài !",
+            "hanzi": "现 在 !",
+            "tones": "44 5",
+            "def": "Now!",
+            "def_words": [
+                "now",
+                "!"
+            ],
+            "audio": "expr_-499372770635341844.mp3"
+        },
+        {
+            "card_id": "expr_7015562458463305128",
+            "pinyin": "méi wèn tí",
+            "hanzi": "没 问 题",
+            "tones": "2 42",
+            "def": "No problem",
+            "def_words": [
+                "no",
+                "problem"
+            ],
+            "audio": "expr_7015562458463305128.mp3"
+        },
+        {
+            "card_id": "expr_597430886880126368",
+            "pinyin": "fēi cháng bù hǎo",
+            "hanzi": "非 常 不 好",
+            "tones": "12 4 3",
+            "def": "Very bad",
+            "def_words": [
+                "very",
+                "not",
+                "good"
+            ],
+            "audio": "expr_597430886880126368.mp3"
+        },
+        {
+            "card_id": "expr_-1528891466335304990",
+            "pinyin": "jǐ wèi",
+            "hanzi": "几 位",
+            "tones": "3 4",
+            "def": "How many people",
+            "def_words": [
+                "how many",
+                "people (polite m.w.)"
+            ],
+            "audio": "expr_-1528891466335304990.mp3"
+        },
+        {
+            "card_id": "expr_-3855218207551990606",
+            "pinyin": "rèn shi",
+            "hanzi": "认 识",
+            "tones": "45",
+            "def": "Know",
+            "def_words": [
+                "know"
+            ],
+            "audio": "expr_-3855218207551990606.mp3"
+        }
+    ]
 }
