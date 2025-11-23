@@ -152,19 +152,8 @@ const Search = {
   },
 
   renderTags(card) {
-    let badges = [];
-    if (card.hsk) {
-      badges.push(`<span class="hsk-badge">${card.hsk}</span>`);
-    }
-    if (card.tags && card.tags.length > 0) {
-      const tagBadges = card.tags.map(tag => {
-        const colorClass = this.getTagColorClass(tag);
-        return `<span class="tag-badge ${colorClass}">${tag}</span>`;
-      });
-      badges = badges.concat(tagBadges);
-    }
-    if (badges.length === 0) return '';
-    return `<div class="search-result-tags">${badges.join('')}</div>`;
+    if (!card.hsk) return '';
+    return `<div class="search-result-tags"><span class="hsk-badge">${card.hsk}</span></div>`;
   },
 
   getTagColorClass(tag) {
