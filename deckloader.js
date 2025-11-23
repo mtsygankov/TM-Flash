@@ -59,7 +59,7 @@ const DeckLoader = {
 
     banner.innerHTML = `
             <div class="error-content">
-                <span class="error-message">Failed to load ${DECKS[deckId].label}: ${errorMessage}</span>
+                <span class="error-message">Failed to load ${deckId}: ${errorMessage}</span>
                 <button class="retry-btn" onclick="DeckLoader.retryFetch('${deckId}')">Retry</button>
             </div>
         `;

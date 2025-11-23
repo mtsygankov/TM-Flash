@@ -31,6 +31,7 @@ tm-flash/
 ├── index.html          # Main application entry point
 ├── styles.css          # All application styles
 ├── app.js             # Main application controller
+├── configloader.js    # Dynamic deck configuration loading
 ├── constants.js       # Global constants and configuration
 ├── storage.js         # LocalStorage management
 ├── stats.js           # Statistics calculations
@@ -46,7 +47,8 @@ tm-flash/
 ├── search.js          # Search functionality
 ├── nav.js             # Navigation between views
 ├── chart.js           # Chart rendering utilities
-└── decks/             # Deck data files
+└── decks/             # Deck data files and configuration
+    ├── config.json    # Deck registry configuration
     ├── deck_a.json
     ├── deck_b.json
     ├── deck_c.json
@@ -218,16 +220,25 @@ Custom decks must follow this exact schema:
 #### Deck Registration
 To add a custom deck to the application:
 
-1. **Create JSON file** following the schema above
-2. **Add to DECKS registry** in `constants.js`:
-```javascript
-const DECKS = {
-  // existing decks...
-  custom_deck: { label: "Custom Deck", url: "./decks/custom_deck.json" }
-};
+1. **Create JSON file** following the schema above and place it in the `decks/` directory
+2. **Add to config.json** in the `decks/` directory:
+```json
+{
+  "version": "1.0",
+  "decks": {
+    "custom_deck": {
+      "label": "Custom Deck",
+      "url": "decks/custom_deck.json",
+      "description": "Optional description of the deck",
+      "enabled": true
+    }
+  }
+}
 ```
-3. **Update storage schema** in `storage.js` to include the new deck
+3. **Restart the application** or refresh the page to load the new configuration
 4. **Test validation** by loading the deck and checking for errors
+
+The application will automatically detect and load the updated `decks/config.json` file on startup.
 
 #### Best Practices
 - **Keep decks focused**: Group related vocabulary together
@@ -235,7 +246,60 @@ const DECKS = {
 - **Quality over quantity**: Ensure accurate translations and pinyin
 - **Test thoroughly**: Validate deck before distribution
 
+### Flexible Deck Configuration
+
+Starting with version 1.0, TM-Flash supports flexible deck configuration through a `config.json` file located in the `decks/` directory. This replaces the hardcoded `DECKS` constant in `constants.js`.
+
+#### Configuration File Structure
+
+```json
+{
+  "version": "1.0",
+  "decks": {
+    "deck_id": {
+      "label": "Display Name",
+      "url": "decks/filename.json",
+      "description": "Optional description",
+      "enabled": true
+    }
+  }
+}
+```
+
+#### Configuration Fields
+
+- **version**: Configuration format version (currently "1.0")
+- **decks**: Object containing deck definitions
+  - **deck_id**: Unique identifier for the deck (used internally)
+  - **label**: Human-readable name displayed in the UI
+  - **url**: Path to the deck JSON file (relative to application root)
+  - **description**: Optional description of the deck's content
+  - **enabled**: Boolean flag to enable/disable decks (default: true)
+
+#### Dynamic Loading
+
+The application loads `decks/config.json` at startup:
+
+1. **ConfigLoader.load()** fetches and validates the configuration
+2. **Fallback Logic**: If config.json is missing or invalid, uses hardcoded defaults
+3. **Hot Reloading**: Configuration changes require page refresh to take effect
+4. **Validation**: Ensures all required fields are present and URLs are valid
+
+#### Backward Compatibility
+
+- **Automatic Fallback**: Missing config.json falls back to original hardcoded decks
+- **Proxy Access**: The `DECKS` constant remains available for existing code
+- **No Breaking Changes**: All existing APIs continue to work unchanged
+
+#### Benefits
+
+- **Easy Customization**: Add/remove decks without code changes
+- **Flexible URLs**: Support for external deck files or different directory structures
+- **Deck Management**: Enable/disable decks without deleting files
+- **Version Control**: Configuration can be versioned alongside deck files
+
 ---
+
 
 ## Offline Capabilities
 

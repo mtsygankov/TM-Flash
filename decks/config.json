@@ -1,0 +1,25 @@
+{
+  "version": "1.0",
+  "decks": {
+    "deck_a": {
+      "url": "decks/deck_a.json",
+      "enabled": true
+    },
+    "deck_b": {
+      "url": "decks/deck_b.json",
+      "enabled": true
+    },
+    "MIKT_deck": {
+      "url": "decks/deck_b.json",
+      "enabled": false
+    },
+    "deck_c": {
+      "url": "decks/deck_c.json",
+      "enabled": true
+    },
+    "deck_d": {
+      "url": "decks/deck_d.json",
+      "enabled": true
+    }
+  }
+}

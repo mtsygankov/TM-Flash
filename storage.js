@@ -68,7 +68,11 @@ const Storage = {
 
   getDeckStats(deckId) {
     const state = this.loadState();
-    return state.decks[deckId] || { cards: {} };
+    const deckData = state.decks[deckId];
+    if (!deckData || typeof deckData !== 'object' || !deckData.cards) {
+      return { cards: {} };
+    }
+    return deckData;
   },
 
   setDeckStats(deckId, statsObj) {

@@ -25,7 +25,7 @@ const DeckSelector = {
       for (const deckId of Object.keys(DECKS)) {
         try {
           const deckData = await this.fetchDeckData(deckId);
-          const deckName = deckData.deck_name || DECKS[deckId].label;
+          const deckName = deckData.deck_name || deckId;
 
           const option = document.createElement("option");
           option.value = deckId;
@@ -37,10 +37,10 @@ const DeckSelector = {
             `Failed to load deck name for ${deckId}, using fallback:`,
             error,
           );
-          // Fallback to hardcoded label if fetch fails
+          // Fallback to deckId if fetch fails
           const option = document.createElement("option");
           option.value = deckId;
-          option.textContent = DECKS[deckId].label;
+          option.textContent = deckId;
 
           selector.appendChild(option);
         }
@@ -67,25 +67,49 @@ const DeckSelector = {
   },
 
    async loadSelectedDeck() {
-     const settings = Storage.getSettings();
-     const selector = document.getElementById("modal-deck-selector");
-     if (selector && settings.selected_deck) {
-       selector.value = settings.selected_deck;
-       this.currentDeckId = settings.selected_deck;
-       // Load the default deck
-       try {
-         await this.loadDeck(settings.selected_deck);
-       } catch (error) {
-         console.error("Failed to load default deck:", error);
-         // If default deck fails, try to load the first available deck
-         const firstDeckId = Object.keys(DECKS)[0];
-         if (firstDeckId && firstDeckId !== settings.selected_deck) {
-           console.log("Falling back to first available deck:", firstDeckId);
-           await this.loadDeck(firstDeckId);
-         }
-       }
-     }
-   },
+      const settings = Storage.getSettings();
+      const selector = document.getElementById("modal-deck-selector");
+      if (!selector) return;
+
+      let deckToLoad = settings.selected_deck;
+
+      // Check if the stored selected_deck exists in DECKS (is enabled)
+      if (!DECKS[deckToLoad]) {
+        // Select the first available enabled deck
+        const availableDecks = Object.keys(DECKS);
+        if (availableDecks.length > 0) {
+          deckToLoad = availableDecks[0];
+          // Update the selector value
+          selector.value = deckToLoad;
+          // Save the new selection to settings
+          Storage.setSettings({ selected_deck: deckToLoad });
+          console.log(`Selected deck '${settings.selected_deck}' not available, falling back to '${deckToLoad}'`);
+        } else {
+          console.error("No decks available");
+          return;
+        }
+      } else {
+        // Set selector value to the stored deck
+        selector.value = deckToLoad;
+      }
+
+      this.currentDeckId = deckToLoad;
+      // Load the deck
+      try {
+        await this.loadDeck(deckToLoad);
+      } catch (error) {
+        console.error("Failed to load deck:", error);
+        // If loading fails, try to load the first available deck as fallback
+        const firstDeckId = Object.keys(DECKS)[0];
+        if (firstDeckId && firstDeckId !== deckToLoad) {
+          console.log("Falling back to first available deck:", firstDeckId);
+          selector.value = firstDeckId;
+          Storage.setSettings({ selected_deck: firstDeckId });
+          this.currentDeckId = firstDeckId;
+          await this.loadDeck(firstDeckId);
+        }
+      }
+    },
 
     bindSelector() {
       const selector = document.getElementById("modal-deck-selector");
@@ -238,12 +262,12 @@ const DeckSelector = {
       }
 
       this.setStatusMessage(
-        `Loaded ${DECKS[deckId].label} (${augmentedCards.length} cards)`,
+        `Loaded ${deckId} (${augmentedCards.length} cards)`,
         "success",
       );
-      console.log(`Successfully loaded deck: ${DECKS[deckId].label} with ${augmentedCards.length} cards`);
+      console.log(`Successfully loaded deck: ${deckId} with ${augmentedCards.length} cards`);
     } catch (error) {
-      this.setStatusMessage(`Failed to load ${DECKS[deckId].label}`, "error");
+      this.setStatusMessage(`Failed to load ${deckId}`, "error");
       console.error(`Failed to load deck ${deckId}:`, error);
       // Error handling is done in DeckLoader.fetch()
     } finally {

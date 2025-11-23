@@ -237,7 +237,7 @@ const StatsView = {
     }
     if (
       !confirm(
-        `Reset all stats for ${DECKS[App.currentDeckId].label} in ${App.currentDirection} direction (${filterDesc})? This cannot be undone.`,
+        `Reset all stats for ${App.currentDeckId} in ${App.currentDirection} direction (${filterDesc})? This cannot be undone.`,
       )
     )
       return;

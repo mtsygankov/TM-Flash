@@ -168,7 +168,7 @@ const Validator = {
     banner.innerHTML = `
             <div class="validation-content">
                 <span class="validation-message">
-                    <strong>${DECKS[deckId].label} validation:</strong> ${errors.length} errors found<br>
+                    <strong>${deckId} validation:</strong> ${errors.length} errors found<br>
                     ${errorSummary}${remainingText}
                 </span>
             </div>

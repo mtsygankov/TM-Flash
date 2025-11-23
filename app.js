@@ -11,6 +11,8 @@ const App = {
   savedReviewFlipped: false,
 
   async init() {
+    // Load deck configuration first
+    await ConfigLoader.load();
     console.log("Deck registry:", DECKS);
     // Initialize storage
     Storage.loadState();
@@ -30,5 +32,5 @@ const App = {
      Search.init();
      // Initialize modal
      Modal.init();
-  },
+   },
 };
