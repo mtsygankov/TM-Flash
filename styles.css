@@ -979,13 +979,13 @@ h2 {
 }
 
 .dict-btn {
-    padding: 0.2rem 0.4rem;
-    border: 2px solid #4dabf700;
-    border-radius: 20px;
-    background-color: transparent;
-    color: #aaa;
+    background-color: #e0e0e000;
+    color: #0033ff;
+    padding: 0.1rem 0.2rem;
+    border-radius: 1.0rem;
+    font-weight: 500;
     font-size: 0.5rem;
-    font-weight: bold;
+    border: none;
     cursor: pointer;
     width: fit-content;
     transition: background-color 0.2s;
@@ -994,7 +994,6 @@ h2 {
 .dict-btn:hover {
     background-color: #4dabf7;
     color: white;
-/*    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);*/
 }
 
 .tag-badge {

@@ -148,7 +148,7 @@ const Search = {
 
   renderTags(card) {
     const cleanHanzi = card.hanzi.replace(/\s/g, '');
-    let tags = `<button class="dict-btn bkrs-btn" data-hanzi="${cleanHanzi}">🔗 BKRS</button><button class="dict-btn mdbg-btn" data-hanzi="${cleanHanzi}">🔗 MDBG</button>`;
+    let tags = `<button class="dict-btn bkrs-btn" data-hanzi="${cleanHanzi}"> BKRS... </button><button class="dict-btn mdbg-btn" data-hanzi="${cleanHanzi}"> MDBG...</button>`;
     if (card.hsk) {
       tags = `<span class="hsk-badge">${card.hsk}</span>` + tags;
     }
@@ -172,3 +172,4 @@ const Search = {
   },
 
 };
+
