@@ -16,9 +16,9 @@ const DeckSelector = {
 
      this.setStatusMessage("Loading deck list...", "info");
 
-      // Clear existing options except the first one
-      while (selector.options.length > 1) {
-        selector.remove(1);
+      // Clear all existing options
+      while (selector.options.length > 0) {
+        selector.remove(0);
       }
 
       // Add deck options with names from JSON
