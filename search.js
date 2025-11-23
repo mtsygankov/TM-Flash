@@ -126,7 +126,6 @@ const Search = {
           const cardStats = App.currentStats?.cards[card.card_id] || {};
           const tagsHtml = this.renderTags(card);
           const hasTags = tagsHtml !== '';
-            const cleanHanzi = card.hanzi.replace(/\s/g, '');
             return `
       <div class="search-result ${hasTags ? 'has-tags' : 'no-tags'}" data-card-id="${card.card_id}">
         ${tagsHtml}
@@ -138,10 +137,6 @@ const Search = {
           ${card.pos ? `<span class="result-pos">[ ${card.pos} ]</span>` : ''}
           <div class="result-def">${card.def}</div>
         </div>
-        <div class="search-result-buttons">
-          <button class="dict-btn bkrs-btn" data-hanzi="${cleanHanzi}">🔗 BKRS</button>
-          <button class="dict-btn mdbg-btn" data-hanzi="${cleanHanzi}">🔗 MDBG</button>
-        </div>
        </div>
      `;
         },
@@ -152,8 +147,12 @@ const Search = {
   },
 
   renderTags(card) {
-    if (!card.hsk) return '';
-    return `<div class="search-result-tags"><span class="hsk-badge">${card.hsk}</span></div>`;
+    const cleanHanzi = card.hanzi.replace(/\s/g, '');
+    let tags = `<button class="dict-btn bkrs-btn" data-hanzi="${cleanHanzi}">🔗 BKRS</button><button class="dict-btn mdbg-btn" data-hanzi="${cleanHanzi}">🔗 MDBG</button>`;
+    if (card.hsk) {
+      tags = `<span class="hsk-badge">${card.hsk}</span>` + tags;
+    }
+    return `<div class="search-result-tags">${tags}</div>`;
   },
 
   getTagColorClass(tag) {
