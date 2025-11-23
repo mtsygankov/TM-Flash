@@ -5,6 +5,7 @@
     "version": "1",
     "description": "HSK 6: 40 lessons vocabulary",
     "updated": "2025-11-21T12:26:33.940353",
+    "audio_path": "decks/deck_d_audio/",
     "cards": [
         {
             "card_id": "hsk6:40_dea94761",
