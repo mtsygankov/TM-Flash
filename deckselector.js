@@ -106,7 +106,15 @@ const DeckSelector = {
           selector.value = firstDeckId;
           Storage.setSettings({ selected_deck: firstDeckId });
           this.currentDeckId = firstDeckId;
-          await this.loadDeck(firstDeckId);
+          try {
+            await this.loadDeck(firstDeckId);
+          } catch (fallbackError) {
+            console.error("Fallback deck loading also failed:", fallbackError);
+            this.hideLoadingProgress();
+          }
+        } else {
+          // No fallback available, hide progress bar
+          this.hideLoadingProgress();
         }
       }
     },
@@ -144,6 +152,8 @@ const DeckSelector = {
 
     this.isLoading = true;
     this.setLoadingState(true);
+    // Progress bar is already shown by app.js, just update the message
+    this.updateLoadingProgress(60, "Fetching deck data...");
 
     try {
       console.log(`Loading deck: ${deckId}`);
@@ -151,6 +161,7 @@ const DeckSelector = {
 
       // Extract cards array from deck object
       const cards = deckData.cards || [];
+      this.updateLoadingProgress(70, "Validating cards...");
 
       // Validate the cards
       const { validCards, errors } = Validator.validate(cards);
@@ -175,12 +186,16 @@ const DeckSelector = {
       // Set App.currentDeck to the loaded deck data
       App.currentDeck = deckData;
 
-       // Normalize and augment cards
-       const augmentedCards =
-         Normalizer.augmentCardsWithNormalizedPinyin(validCards);
+      this.updateLoadingProgress(80, "Processing cards...");
 
-       // Sync stats with the loaded deck
-       const syncedStats = Stats.sync(deckId, augmentedCards);
+       // Normalize and augment cards
+        const augmentedCards =
+          Normalizer.augmentCardsWithNormalizedPinyin(validCards);
+
+      this.updateLoadingProgress(90, "Syncing statistics...");
+
+        // Sync stats with the loaded deck
+        const syncedStats = Stats.sync(deckId, augmentedCards);
 
        // Update storage with selected deck
        Storage.setSettings({ selected_deck: deckId });
@@ -270,6 +285,7 @@ const DeckSelector = {
       );
       console.log(`Successfully loaded deck: ${deckId} with ${augmentedCards.length} cards`);
     } catch (error) {
+      this.hideLoadingProgress();
       this.setStatusMessage(`Failed to load ${deckId}`, "error");
       console.error(`Failed to load deck ${deckId}:`, error);
       // Error handling is done in DeckLoader.fetch()
@@ -319,6 +335,32 @@ const DeckSelector = {
       }
     } catch (e) {
       console.warn('StatsView.render failed in resetReviewView:', e);
+    }
+  },
+
+  showLoadingProgress() {
+    const container = document.getElementById("loading-progress-container");
+    if (container) {
+      container.style.display = "flex";
+    }
+  },
+
+  updateLoadingProgress(percentage, text) {
+    const fill = document.querySelector(".loading-progress-fill");
+    const textElement = document.querySelector(".loading-progress-text");
+
+    if (fill) {
+      fill.style.width = `${percentage}%`;
+    }
+    if (textElement) {
+      textElement.textContent = text;
+    }
+  },
+
+  hideLoadingProgress() {
+    const container = document.getElementById("loading-progress-container");
+    if (container) {
+      container.style.display = "none";
     }
   },
 };

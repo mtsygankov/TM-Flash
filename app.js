@@ -11,17 +11,27 @@ const App = {
   savedReviewFlipped: false,
 
   async init() {
+    // Show loading progress from the start
+    DeckSelector.showLoadingProgress();
+    DeckSelector.updateLoadingProgress(5, "Loading configuration...");
+
     // Load deck configuration first
     await ConfigLoader.load();
     console.log("Deck registry:", DECKS);
+    DeckSelector.updateLoadingProgress(15, "Initializing storage...");
+
     // Initialize storage
     Storage.loadState();
     // Initialize settings FIRST (loads toggles)
     Settings.init();
+    DeckSelector.updateLoadingProgress(25, "Loading deck list...");
+
     // Initialize deck selector (now toggles are loaded)
     await DeckSelector.init();
     // Load direction now that deck is loaded
     Settings.loadDirection();
+    DeckSelector.updateLoadingProgress(50, "Initializing interface...");
+
     // Initialize navigation
     Nav.init();
     // Initialize review (now safe to bind events)
@@ -32,5 +42,8 @@ const App = {
      Search.init();
      // Initialize modal
      Modal.init();
+
+    DeckSelector.updateLoadingProgress(100, "Ready!");
+    DeckSelector.hideLoadingProgress();
    },
 };
