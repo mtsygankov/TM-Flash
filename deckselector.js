@@ -172,6 +172,9 @@ const DeckSelector = {
       deckStats.errorCount = 0;
       Storage.setDeckStats(deckId, deckStats);
 
+      // Set App.currentDeck to the loaded deck data
+      App.currentDeck = deckData;
+
        // Normalize and augment cards
        const augmentedCards =
          Normalizer.augmentCardsWithNormalizedPinyin(validCards);

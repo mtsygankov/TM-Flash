@@ -656,6 +656,23 @@ h2 {
     }
 }
 
+/* Play audio button styles */
+.play-audio-btn {
+    background-color: #4dabf730;
+    color: white;
+    border: none;
+    padding: 0.2rem 0.5rem;
+    border-radius: 1.5rem;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-right: 0.5rem;
+}
+
+.play-audio-btn:hover {
+    background-color: #4dabf7;
+}
+
 /* Stats view styles */
 .stats-controls {
     margin-bottom: 1rem;
@@ -979,11 +996,11 @@ h2 {
 }
 
 .dict-btn {
-    background-color: #e0e0e000;
+    background-color: #4dabf730;
     color: #0033ff;
-    padding: 0.1rem 0.2rem;
+    padding: 0.1rem 0.4rem;
     border-radius: 1.0rem;
-    font-weight: 500;
+    font-weight: 900;
     font-size: 0.5rem;
     border: none;
     cursor: pointer;

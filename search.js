@@ -10,12 +10,33 @@ const Search = {
    bindEvents() {
      const queryInput = document.getElementById("search-query");
      const typeToggle = document.getElementById("search-type-toggle");
+     const searchResults = document.getElementById("search-results");
      queryInput.addEventListener("input", () => {
        this.performSearch();
      });
      typeToggle.addEventListener("click", () => {
        this.toggleType();
        this.performSearch();
+     });
+     searchResults.addEventListener("click", (e) => {
+       if (e.target.classList.contains("play-audio-btn")) {
+         const audioPath = e.target.dataset.audioPath;
+         const audioFilename = e.target.dataset.audioFilename;
+         const fullUrl = audioPath + '/' + audioFilename;
+         console.log('Audio URL:', fullUrl);
+         fetch(fullUrl)
+           .then(response => {
+             console.log('Fetch status:', response.status);
+             console.log('Content-Type:', response.headers.get('content-type'));
+           })
+           .catch(error => {
+             console.error('Fetch error:', error);
+           });
+         const audio = new Audio(fullUrl);
+         audio.play().catch(error => {
+           console.error("Error playing audio:", error);
+         });
+       }
      });
       document.addEventListener('click', (e) => {
         if (e.target.classList.contains('hanzi-char')) {
@@ -128,6 +149,7 @@ const Search = {
           const hasTags = tagsHtml !== '';
             return `
       <div class="search-result ${hasTags ? 'has-tags' : 'no-tags'}" data-card-id="${card.card_id}">
+        ${card.audio ? `<button class="play-audio-btn" data-audio-path="${App.currentDeck?.audio_path || ''}" data-audio-filename="${card.audio}">🔊</button>` : ''}
         ${tagsHtml}
          <div class="result-hanzi-pinyin">
            <div class="result-hanzi">${generateColoredHanzi(card.hanzi, card.tones)}</div>
