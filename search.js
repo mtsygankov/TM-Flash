@@ -23,12 +23,7 @@ const Search = {
          const audioPath = e.target.dataset.audioPath;
          const audioFilename = e.target.dataset.audioFilename;
          const fullUrl = audioPath + '/' + audioFilename;
-         console.log('Audio URL:', fullUrl);
          fetch(fullUrl)
-           .then(response => {
-             console.log('Fetch status:', response.status);
-             console.log('Content-Type:', response.headers.get('content-type'));
-           })
            .catch(error => {
              console.error('Fetch error:', error);
            });
