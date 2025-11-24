@@ -253,7 +253,7 @@ h1 {
     display: inline-block;
     font-size: 0.5rem;
     font-weight: 500;
-    padding: 0.1rem 0.2rem;
+    padding: 0.1rem 0.4rem;
     border-radius: 1.0rem;
     color: #333;
     text-align: center;
@@ -1000,7 +1000,7 @@ h2 {
     display: inline-block;
     font-size: 0.5rem;
     font-weight: 500;
-    padding: 0.1rem 0.2rem;
+    padding: 0.1rem 0.4rem;
     border-radius: 1.0rem;
     color: #333;
     text-align: center;
