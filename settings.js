@@ -1,50 +1,43 @@
 // Settings module
 const Settings = {
   init() {
-    this.bindDirectionToggle();
+    this.bindModeToggle();
   },
 
-  loadDirection() {
+  loadMode() {
     const settings = Storage.getSettings();
-    this.applyDirection(settings.direction);
+    this.applyMode(settings.mode);
   },
 
-       applyDirection(direction) {
-         // Update modal direction toggle
-         const button = document.getElementById("modal-direction-toggle");
-         if (button) {
-           button.textContent = DIRECTION_DISPLAY[direction];
-           button.dataset.direction = direction;
-         }
-
-       App.currentDirection = direction;
+       applyMode(mode) {
+       App.currentMode = mode;
        App.flipped = false;
 
 
        // Only select/render card if data is available (not during initialization)
        if (App.currentCards && App.currentStats) {
-          // Select a new card for the new direction
+          // Select a new card for the new mode
            App.currentCard = SRS.selectNextCard(
              Filters.getFilteredCards(),
              App.currentStats.cards,
-             App.currentDirection
+             App.currentMode
            );
 
            if (App.currentCard) {
              Review.renderCard(App.currentCard);
            } else {
              Review.renderCard(null);
-               const nextReviewInfo = SRS.getNextReviewInfo(App.currentCards, App.currentStats.cards, App.currentDirection);
+               const nextReviewInfo = SRS.getNextReviewInfo(App.currentCards, App.currentStats.cards, App.currentMode);
              let message;
              if (nextReviewInfo) {
                   message = `No cards due for review. Next review: (${nextReviewInfo.cardsInWindow} card${nextReviewInfo.cardsInWindow > 1 ? 's' : ''} in ~${nextReviewInfo.timeString}).`;
              } else {
-               message = 'No cards due for review in this direction.';
+               message = 'No cards due for review in this mode.';
              }
              Message.show('card-container', message);
            }
 
-           // Update review toggles display after direction change
+           // Update review toggles display after mode change
            Review.updateReviewTogglesDisplay();
        } else {
          console.warn("❌ Conditional check failed - app data not available");
@@ -56,21 +49,18 @@ const Settings = {
        }
    },
 
-   toggleDirection() {
-     const currentDirection = Storage.getSettings().direction;
-     const newDirection = currentDirection === DIRECTION_KEYS.CH_TO_EN ? DIRECTION_KEYS.EN_TO_CH : DIRECTION_KEYS.CH_TO_EN;
-     Storage.setSettings({ direction: newDirection });
-     this.applyDirection(newDirection);
+   toggleMode() {
+     const modes = Object.values(LEARNING_MODES);
+     const currentMode = Storage.getSettings().mode;
+     const currentIndex = modes.findIndex(m => m.id === currentMode);
+     const nextIndex = (currentIndex + 1) % modes.length;
+     const newMode = modes[nextIndex].id;
+     Storage.setSettings({ mode: newMode });
+     this.applyMode(newMode);
    },
 
-    bindDirectionToggle() {
-      const button = document.getElementById("modal-direction-toggle");
-      if (button) {
-        button.addEventListener("click", () => {
-          this.toggleDirection();
-        });
-        button.disabled = false;
-      }
+    bindModeToggle() {
+      // For potential future use, e.g., keyboard shortcut
     },
 
 

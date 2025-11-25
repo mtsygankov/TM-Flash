@@ -25,7 +25,7 @@ const StatsView = {
       content.innerHTML = "<p>No deck loaded.</p>";
       return;
     }
-    const metrics = Stats.computeMetrics(App.currentDeckId, App.currentDirection, App.currentFilteredCards || App.currentCards);
+    const metrics = Stats.computeMetrics(App.currentDeckId, App.currentMode, App.currentFilteredCards || App.currentCards);
 
      // Compute histogram and top lists
       const deckStats = Storage.getDeckStats(App.currentDeckId) || { cards: {} };
@@ -34,7 +34,7 @@ const StatsView = {
         Object.entries(deckStats.cards || {}).forEach(([cardId, cardStats]) => {
           // Only include cards present in the current filtered selection
           if (!cardMap.has(cardId)) return;
-          const dirStat = cardStats[App.currentDirection];
+          const dirStat = cardStats[App.currentMode];
          if (!dirStat) return;
          const total = (dirStat.total_correct || 0) + (dirStat.total_incorrect || 0);
          if (total === 0) return;
@@ -65,7 +65,7 @@ const StatsView = {
         const dueBuckets = [0, 0, 0, 0, 0, 0, 0, 0, 0];
         ((App.currentFilteredCards || App.currentCards) || []).forEach((card) => {
          const cardStats = deckStats.cards?.[card.card_id];
-          const stats = deckStats.cards?.[card.card_id]?.[App.currentDirection];
+          const stats = deckStats.cards?.[card.card_id]?.[App.currentMode];
         if (!stats) {
           // new card, due now -> count in first bucket (<=30m)
           dueBuckets[0]++;
@@ -97,7 +97,7 @@ const StatsView = {
       const timeBuckets = new Array(numTimeBuckets).fill(0); // 95
       ((App.currentFilteredCards || App.currentCards) || []).forEach((card) => {
         const cardStats = deckStats.cards?.[card.card_id];
-        const stats = deckStats.cards?.[card.card_id]?.[App.currentDirection];
+        const stats = deckStats.cards?.[card.card_id]?.[App.currentMode];
         if (!stats) {
           // New card, due now
           timeBuckets[0]++;
@@ -134,7 +134,7 @@ const StatsView = {
      // Streak histogram
      const streakBuckets = [0, 0, 0, 0, 0]; // 0,1,2-3,4-5,6+
       cardData.forEach((data) => {
-        const stats = deckStats.cards[data.cardId][App.currentDirection];
+        const stats = deckStats.cards[data.cardId][App.currentMode];
        const streak = stats.correct_streak_len;
        if (streak === 0) streakBuckets[0]++;
        else if (streak === 1) streakBuckets[1]++;
@@ -147,7 +147,7 @@ const StatsView = {
      // Streak records
      let maxCorrectStreak = 0, maxIncorrectStreak = 0, totalStreak = 0, count = 0;
       cardData.forEach((data) => {
-       const stats = deckStats.cards?.[data.cardId]?.[App.currentDirection] || {};
+       const stats = deckStats.cards?.[data.cardId]?.[App.currentMode] || {};
       const cs = stats.correct_streak_len || 0;
       const is = stats.incorrect_streak_len || 0;
       maxCorrectStreak = Math.max(maxCorrectStreak, cs);
@@ -237,7 +237,7 @@ const StatsView = {
     }
     if (
       !confirm(
-        `Reset all stats for ${App.currentDeckId} in ${App.currentDirection} direction (${filterDesc})? This cannot be undone.`,
+        `Reset all stats for ${App.currentDeckId} in ${App.currentMode} mode (${filterDesc})? This cannot be undone.`,
       )
     )
       return;
@@ -246,8 +246,8 @@ const StatsView = {
     const filteredCardIds = new Set(filteredCards.map(card => card.card_id.toString()));
     filteredCardIds.forEach(cardId => {
       const cardStats = deckStats.cards[cardId];
-      if (cardStats && cardStats[App.currentDirection]) {
-        cardStats[App.currentDirection] = {
+      if (cardStats && cardStats[App.currentMode]) {
+        cardStats[App.currentMode] = {
           total_correct: 0,
           total_incorrect: 0,
           last_correct_at: null,

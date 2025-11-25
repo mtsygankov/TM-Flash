@@ -5,7 +5,7 @@ const App = {
   currentStats: null,
   currentCard: null,
   flipped: false,
-   currentDirection: DIRECTION_KEYS.CH_TO_EN,
+   currentMode: DEFAULT_MODE.id,
   currentDeckId: null,
   savedReviewCardId: null,
   savedReviewFlipped: false,
@@ -28,8 +28,8 @@ const App = {
 
     // Initialize deck selector (now toggles are loaded)
     await DeckSelector.init();
-    // Load direction now that deck is loaded
-    Settings.loadDirection();
+    // Load mode now that deck is loaded
+    Settings.loadMode();
     DeckSelector.updateLoadingProgress(50, "Initializing interface...");
 
     // Initialize navigation

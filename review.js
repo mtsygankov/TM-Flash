@@ -197,8 +197,8 @@ const Review = {
       });
     });
 
-     this.applyDirectionAndFlip();
-  },
+     this.applyModeAndFlip();
+   },
 
   escapeHtml(text) {
     const div = document.createElement("div");
@@ -212,7 +212,7 @@ const Review = {
     const dueCounts = SRS.getDueCountsByTime(
       Filters.getFilteredCards(),
       App.currentStats.cards,
-      App.currentDirection
+      App.currentMode
     );
 
     const progressBar = document.getElementById("review-progress-bar");
@@ -263,14 +263,15 @@ const Review = {
     });
   },
 
-  applyDirectionAndFlip() {
+  applyModeAndFlip() {
     const table = document.getElementById("card-table");
     const defSection = document.getElementById("card-def");
-    const direction = App.currentDirection;
+    const mode = App.currentMode;
     const flipped = App.flipped;
-    
+
     // Apply classes to both table and def section
-    const className = `direction-${direction.toLowerCase().replace("->", "-")} ${flipped ? "flipped" : ""}`;
+    const modeClass = `mode-${mode.replace('LM-', '').replace('-', '-')}`;
+    const className = `${modeClass} ${flipped ? "flipped" : ""}`;
     table.className = className;
     defSection.className = className;
 
@@ -278,11 +279,35 @@ const Review = {
     if (buttons) {
       buttons.style.display = flipped ? "flex" : "none";
     }
+
+    // Auto-play audio for Listening mode front
+    if (!flipped && mode === LEARNING_MODES.LISTENING.id) {
+      this.playAudioForCard(App.currentCard);
+    }
+  },
+
+  playAudioForCard(card) {
+    if (!card || !card.audio) return;
+
+    const audioPath = App.currentDeck?.audio_path || '';
+    const fullUrl = audioPath + '/' + card.audio;
+
+    fetch(fullUrl)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const audio = new Audio(fullUrl);
+        return audio.play();
+      })
+      .catch(error => {
+        console.error("Error playing audio:", error);
+      });
   },
 
   toggleFlip() {
     App.flipped = !App.flipped;
-    this.applyDirectionAndFlip();
+    this.applyModeAndFlip();
   },
 
 
@@ -295,7 +320,7 @@ const Review = {
     Stats.updateCardStats(
       App.currentDeckId,
       App.currentCard.card_id,
-      App.currentDirection,
+      App.currentMode,
       true,
     );
     this.advanceToNextCard();
@@ -309,7 +334,7 @@ const Review = {
     Stats.updateCardStats(
       App.currentDeckId,
       App.currentCard.card_id,
-      App.currentDirection,
+      App.currentMode,
       false,
     );
     this.advanceToNextCard();
@@ -320,14 +345,14 @@ const Review = {
       App.currentCard = SRS.selectNextCard(
         Filters.getFilteredCards(),
         App.currentStats.cards,
-        App.currentDirection
+        App.currentMode
       );
         this.updateReviewTogglesDisplay();
         if (App.currentCard) {
           this.renderCard(App.currentCard);
           } else {
           this.renderCard(null); // Clear the table
-           const nextReviewInfo = SRS.getNextReviewInfo(Filters.getFilteredCards(), App.currentStats.cards, App.currentDirection);
+           const nextReviewInfo = SRS.getNextReviewInfo(Filters.getFilteredCards(), App.currentStats.cards, App.currentMode);
           let message;
           if (nextReviewInfo) {
                  message = `No cards due for review with current filters. Next review: (${nextReviewInfo.cardsInWindow} card${nextReviewInfo.cardsInWindow > 1 ? 's' : ''} in ~${nextReviewInfo.timeString}).`;

@@ -501,25 +501,39 @@ h2 {
     color: #333;
 }
 
-/* Flip and direction visibility */
-#card-table:not(.flipped).direction-ch-en .row-def-words {
+/* Flip and mode visibility */
+/* Hanzi First: front hanzi only */
+#card-table:not(.flipped).mode-hanzi-first .row-pinyin,
+#card-table:not(.flipped).mode-hanzi-first .row-def-words {
+    visibility: hidden;
+}
+#card-def:not(.flipped).mode-hanzi-first {
     visibility: hidden;
 }
 
-#card-table:not(.flipped).direction-def-ch .row-hanzi,
-#card-table:not(.flipped).direction-def-ch .row-pinyin,
-#card-table:not(.flipped).direction-def-ch .row-def-words {
+/* Listening: front audio only */
+#card-table:not(.flipped).mode-listening .row-hanzi,
+#card-table:not(.flipped).mode-listening .row-pinyin,
+#card-table:not(.flipped).mode-listening .row-def-words {
+    visibility: hidden;
+}
+#card-def:not(.flipped).mode-listening {
     visibility: hidden;
 }
 
-#card-table:not(.flipped).direction-en-ch .row-hanzi,
-#card-table:not(.flipped).direction-en-ch .row-pinyin,
-#card-table:not(.flipped).direction-en-ch .row-def-words {
+/* Meaning to Chinese: front def only */
+#card-table:not(.flipped).mode-meaning-to-chinese .row-hanzi,
+#card-table:not(.flipped).mode-meaning-to-chinese .row-pinyin,
+#card-table:not(.flipped).mode-meaning-to-chinese .row-def-words {
     visibility: hidden;
 }
 
-/* English section visibility */
-#card-def:not(.flipped).direction-ch-en {
+/* Pronunciation: front hanzi only */
+#card-table:not(.flipped).mode-pronunciation .row-pinyin,
+#card-table:not(.flipped).mode-pronunciation .row-def-words {
+    visibility: hidden;
+}
+#card-def:not(.flipped).mode-pronunciation {
     visibility: hidden;
 }
 
@@ -1287,6 +1301,58 @@ h2 {
 
 .modal-control:hover {
     border-color: #999;
+}
+
+/* Mode selector */
+.mode-selector {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.mode-option {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+    background-color: #fafafa;
+}
+
+.mode-option:hover {
+    background-color: #f0f0f0;
+    border-color: #ccc;
+}
+
+.mode-option input[type="radio"] {
+    margin: 0;
+    width: 1rem;
+    height: 1rem;
+}
+
+.mode-icon {
+    font-size: 1.5rem;
+    min-width: 1.5rem;
+    text-align: center;
+}
+
+.mode-details {
+    flex: 1;
+}
+
+.mode-name {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.25rem;
+}
+
+.mode-description {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.3;
 }
 
 /* Settings controls */

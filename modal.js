@@ -85,15 +85,59 @@ const Modal = {
             deckSelector.value = settings.selected_deck;
         }
 
-        // Update direction toggle from settings
-        const directionToggle = document.getElementById('modal-direction-toggle');
-        if (directionToggle && settings.direction) {
-            directionToggle.textContent = DIRECTION_DISPLAY[settings.direction];
-            directionToggle.dataset.direction = settings.direction;
-        }
+        // Update mode selector from settings
+        this.updateModeSelector(settings.mode);
 
         // Update filters
         this.updateFiltersInModal();
+    },
+
+    updateModeSelector(currentMode) {
+        const modeSelector = document.getElementById('modal-mode-selector');
+        if (!modeSelector) return;
+
+        // Render mode options if not already rendered
+        const existingRadios = modeSelector.querySelectorAll('input[type="radio"]');
+        if (existingRadios.length === 0) {
+            this.renderModeSelector();
+        }
+
+        // Set checked state based on current mode
+        const radios = modeSelector.querySelectorAll('input[type="radio"]');
+        radios.forEach(radio => {
+            radio.checked = radio.value === currentMode;
+        });
+    },
+
+    renderModeSelector() {
+        const modeSelector = document.getElementById('modal-mode-selector');
+        if (!modeSelector) return;
+
+        const modeOptions = Object.values(LEARNING_MODES).map(mode => `
+            <label class="mode-option">
+                <input type="radio" name="learning-mode" value="${mode.id}">
+                <span class="mode-icon">${mode.icon}</span>
+                <div class="mode-details">
+                    <div class="mode-name">${mode.name}</div>
+                    <div class="mode-description">${mode.description}</div>
+                </div>
+            </label>
+        `).join('');
+
+        modeSelector.innerHTML = modeOptions;
+
+        // Bind change events
+        const radios = modeSelector.querySelectorAll('input[type="radio"]');
+        radios.forEach(radio => {
+            radio.addEventListener('change', (e) => {
+                const selectedMode = e.target.value;
+                const settings = Storage.getSettings();
+                settings.mode = selectedMode;
+                Storage.setSettings(settings);
+                // Apply the mode change
+                Settings.applyMode(selectedMode);
+            });
+        });
     },
 
     renderFilterMenu() {

@@ -1,13 +1,13 @@
 // Storage module
 const Storage = {
   STORAGE_KEY: "tmFlash",
-  CURRENT_SCHEMA_VERSION: 3,
+  CURRENT_SCHEMA_VERSION: 4,
 
   getDefaultState() {
     return {
       schema_version: this.CURRENT_SCHEMA_VERSION,
          settings: {
-           direction: DIRECTION_KEYS.CH_TO_EN,
+           mode: DEFAULT_MODE.id,
            selected_deck: DEFAULT_SELECTED_DECK,
            theme: "light",
            showProgress: true,

@@ -70,7 +70,7 @@ const SRS = {
     return isDue;
   },
 
-  selectNextCard(cards, statsMap, direction) {
+  selectNextCard(cards, statsMap, mode) {
     if (!cards || cards.length === 0) {
      console.warn("❌ No cards array or empty array");
       return null;
@@ -78,7 +78,7 @@ const SRS = {
 
     const dueCards = cards.filter(card => {
       const cardStats = statsMap[card.card_id];
-      const stats = cardStats?.[direction];
+      const stats = cardStats?.[mode];
       const isDue = this.shouldReviewCard(stats || {
         total_correct: 0,
         total_incorrect: 0,
@@ -100,7 +100,7 @@ const SRS = {
     const excludedCards = cards.filter(card => !dueCards.includes(card));
     excludedCards.forEach(card => {
       const cardStats = statsMap[card.card_id];
-      const stats = cardStats?.[direction];
+      const stats = cardStats?.[mode];
       const isDue = this.shouldReviewCard(stats || {
         total_correct: 0,
         total_incorrect: 0,
@@ -120,7 +120,7 @@ const SRS = {
 
     // Priority scoring for due cards
     const scoredCards = dueCards.map(card => {
-      const stats = statsMap[card.card_id]?.[direction] || {
+      const stats = statsMap[card.card_id]?.[mode] || {
         total_correct: 0,
         total_incorrect: 0,
         last_correct_at: null,
@@ -167,7 +167,7 @@ const SRS = {
     // Sort by priority (highest first) and return top card
     scoredCards.sort((a, b) => b.priority - a.priority);
     const top = scoredCards[0];
-    const topStats = statsMap?.[top.card.card_id]?.[direction] || null;
+    const topStats = statsMap?.[top.card.card_id]?.[mode] || null;
     const lastReview = topStats
       ? Math.max(topStats.last_correct_at || 0, topStats.last_incorrect_at || 0)
       : 0;
@@ -175,10 +175,10 @@ const SRS = {
     return scoredCards[0].card;
   },
 
-  countDueCards(cards, statsMap, direction) {
+  countDueCards(cards, statsMap, mode) {
     return cards.filter(card => {
       const cardStats = statsMap[card.card_id];
-      const stats = cardStats?.[direction];
+      const stats = cardStats?.[mode];
       const isDue = this.shouldReviewCard(stats || {
         total_correct: 0,
         total_incorrect: 0,
@@ -193,7 +193,7 @@ const SRS = {
     }).length;
   },
 
-  countFilteredCards(cards, statsMap, direction) {
+  countFilteredCards(cards, statsMap, mode) {
     if (!cards || cards.length === 0) {
       return { total: 0, overdue: 0 };
     }
@@ -206,7 +206,7 @@ const SRS = {
       total++;
 
       // Check if overdue
-      const stats = cardStats?.[direction];
+      const stats = cardStats?.[mode];
       const isDue = this.shouldReviewCard(stats || {
         total_correct: 0,
         total_incorrect: 0,
@@ -226,7 +226,7 @@ const SRS = {
     return { total, overdue };
   },
 
-  getDueCountsByTime(cards, statsMap, direction) {
+  getDueCountsByTime(cards, statsMap, mode) {
     if (!cards || cards.length === 0) {
       return { overdue: 0, dueSoon15min: 0, dueSoon1h: 0, dueSoon6h: 0, dueSoon24h: 0, dueLater: 0 };
     }
@@ -243,7 +243,7 @@ const SRS = {
 
     cards.forEach(card => {
       const cardStats = statsMap[card.card_id];
-      const stats = cardStats?.[direction] || {
+      const stats = cardStats?.[mode] || {
         total_correct: 0,
         total_incorrect: 0,
         last_correct_at: null,
@@ -286,7 +286,7 @@ const SRS = {
     return buckets;
   },
 
-  getNextReviewInfo(cards, statsMap, direction) {
+  getNextReviewInfo(cards, statsMap, mode) {
     if (!cards || cards.length === 0) {
       return null;
     }
@@ -297,7 +297,7 @@ const SRS = {
 
     cards.forEach(card => {
       const cardStats = statsMap[card.card_id];
-      const stats = cardStats?.[direction];
+      const stats = cardStats?.[mode];
       if (!stats) return;
 
       // Skip new cards (no reviews yet)

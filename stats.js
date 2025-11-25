@@ -8,28 +8,20 @@ const Stats = {
       // Add missing entries for valid cards
      cards.forEach((card) => {
        if (!deckStats.cards[card.card_id]) {
-          syncedCards[card.card_id] = {
-            [DIRECTION_KEYS.CH_TO_EN]: {
-              total_correct: 0,
-              total_incorrect: 0,
-              last_correct_at: null,
-              last_incorrect_at: null,
-              correct_streak_len: 0,
-              incorrect_streak_len: 0,
-              correct_streak_started_at: null,
-              incorrect_streak_started_at: null
-            },
-            [DIRECTION_KEYS.EN_TO_CH]: {
-              total_correct: 0,
-              total_incorrect: 0,
-              last_correct_at: null,
-              last_incorrect_at: null,
-              correct_streak_len: 0,
-              incorrect_streak_len: 0,
-              correct_streak_started_at: null,
-              incorrect_streak_started_at: null
-            },
-          };
+           const cardStats = {};
+           Object.values(LEARNING_MODES).forEach((mode) => {
+             cardStats[mode.id] = {
+               total_correct: 0,
+               total_incorrect: 0,
+               last_correct_at: null,
+               last_incorrect_at: null,
+               correct_streak_len: 0,
+               incorrect_streak_len: 0,
+               correct_streak_started_at: null,
+               incorrect_streak_started_at: null
+             };
+           });
+           syncedCards[card.card_id] = cardStats;
        } else {
          syncedCards[card.card_id] = deckStats.cards[card.card_id];
        }
@@ -51,10 +43,10 @@ const Stats = {
     return syncedStats;
   },
 
-  getCardStats(deckId, cardId, direction) {
+  getCardStats(deckId, cardId, mode) {
     const deckStats = Storage.getDeckStats(deckId);
     return (
-      deckStats.cards[cardId]?.[direction] || {
+      deckStats.cards[cardId]?.[mode] || {
         total_correct: 0,
         total_incorrect: 0,
         last_correct_at: null,
@@ -67,33 +59,27 @@ const Stats = {
     );
   },
 
-   updateCardStats(deckId, cardId, direction, isCorrect) {
+   updateCardStats(deckId, cardId, mode, isCorrect) {
      const deckStats = Storage.getDeckStats(deckId);
-      const cardStats = deckStats.cards[cardId] || {
-        [DIRECTION_KEYS.CH_TO_EN]: {
-          total_correct: 0,
-          total_incorrect: 0,
-          last_correct_at: null,
-          last_incorrect_at: null,
-          correct_streak_len: 0,
-          incorrect_streak_len: 0,
-          correct_streak_started_at: null,
-          incorrect_streak_started_at: null
-        },
-        [DIRECTION_KEYS.EN_TO_CH]: {
-          total_correct: 0,
-          total_incorrect: 0,
-          last_correct_at: null,
-          last_incorrect_at: null,
-          correct_streak_len: 0,
-          incorrect_streak_len: 0,
-          correct_streak_started_at: null,
-          incorrect_streak_started_at: null
-        },
-      };
+      const cardStats = deckStats.cards[cardId] || {};
+      // Ensure all modes are initialized
+      Object.values(LEARNING_MODES).forEach((modeObj) => {
+        if (!cardStats[modeObj.id]) {
+          cardStats[modeObj.id] = {
+            total_correct: 0,
+            total_incorrect: 0,
+            last_correct_at: null,
+            last_incorrect_at: null,
+            correct_streak_len: 0,
+            incorrect_streak_len: 0,
+            correct_streak_started_at: null,
+            incorrect_streak_started_at: null
+          };
+        }
+      });
 
-    if (!cardStats[direction]) {
-      cardStats[direction] = {
+    if (!cardStats[mode]) {
+      cardStats[mode] = {
         total_correct: 0,
         total_incorrect: 0,
         last_correct_at: null,
@@ -108,36 +94,36 @@ const Stats = {
     const now = Date.now();
 
     if (isCorrect) {
-      cardStats[direction].total_correct++;
-      cardStats[direction].last_correct_at = now;
+      cardStats[mode].total_correct++;
+      cardStats[mode].last_correct_at = now;
 
-      if (cardStats[direction].incorrect_streak_len > 0) {
+      if (cardStats[mode].incorrect_streak_len > 0) {
         // Reset incorrect streak
-        cardStats[direction].incorrect_streak_len = 0;
-        cardStats[direction].correct_streak_len = 1;
-        cardStats[direction].correct_streak_started_at = now;
+        cardStats[mode].incorrect_streak_len = 0;
+        cardStats[mode].correct_streak_len = 1;
+        cardStats[mode].correct_streak_started_at = now;
       } else {
         // Starting or continuing correct streak
-        if (cardStats[direction].correct_streak_len === 0) {
-          cardStats[direction].correct_streak_started_at = now;
+        if (cardStats[mode].correct_streak_len === 0) {
+          cardStats[mode].correct_streak_started_at = now;
         }
-        cardStats[direction].correct_streak_len++;
+        cardStats[mode].correct_streak_len++;
       }
     } else {
-      cardStats[direction].total_incorrect++;
-      cardStats[direction].last_incorrect_at = now;
+      cardStats[mode].total_incorrect++;
+      cardStats[mode].last_incorrect_at = now;
 
-      if (cardStats[direction].correct_streak_len > 0) {
+      if (cardStats[mode].correct_streak_len > 0) {
         // Reset correct streak
-        cardStats[direction].correct_streak_len = 0;
-        cardStats[direction].incorrect_streak_len = 1;
-        cardStats[direction].incorrect_streak_started_at = now;
+        cardStats[mode].correct_streak_len = 0;
+        cardStats[mode].incorrect_streak_len = 1;
+        cardStats[mode].incorrect_streak_started_at = now;
       } else {
         // Starting or continuing incorrect streak
-        if (cardStats[direction].incorrect_streak_len === 0) {
-          cardStats[direction].incorrect_streak_started_at = now;
+        if (cardStats[mode].incorrect_streak_len === 0) {
+          cardStats[mode].incorrect_streak_started_at = now;
         }
-        cardStats[direction].incorrect_streak_len++;
+        cardStats[mode].incorrect_streak_len++;
       }
     }
 
@@ -147,15 +133,15 @@ const Stats = {
     App.currentStats = deckStats;
   },
 
-   computeMetrics(deckId, direction, cards = null) {
+   computeMetrics(deckId, mode, cards = null) {
      const deckStats = Storage.getDeckStats(deckId);
      let totalCards = 0;
      let reviewedCount = 0;
      const cardList = cards || Object.keys(deckStats.cards).map(id => ({ card_id: id }));
      cardList.forEach((card) => {
        totalCards++;
-       const dirStat = deckStats.cards[card.card_id]?.[direction];
-       if (dirStat && dirStat.total_correct + dirStat.total_incorrect > 0) reviewedCount++;
+       const modeStat = deckStats.cards[card.card_id]?.[mode];
+       if (modeStat && modeStat.total_correct + modeStat.total_incorrect > 0) reviewedCount++;
      });
      const newCount = totalCards - reviewedCount;
      const deckErrors = deckStats.errorCount || 0;
