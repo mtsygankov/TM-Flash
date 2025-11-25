@@ -725,6 +725,79 @@ h2 {
             font-size: 0.8rem;
         }
     }
+    
+    /* Start screen styles */
+    #start-screen {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 2rem;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    #start-screen > div {
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+        line-height: 1.4;
+    }
+    
+    #start-deck-info {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: #333;
+    }
+    
+    #start-filters-info,
+    #start-mode-info,
+    #start-cards-due {
+        color: #666;
+    }
+    
+    #start-learning-btn {
+        background-color: #28a745;
+        color: white;
+        border: none;
+        padding: 1rem 2rem;
+        border-radius: 8px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.2s;
+        margin-top: 1rem;
+    }
+    
+    #start-learning-btn:hover {
+        background-color: #218838;
+    }
+    
+    #start-learning-btn:focus {
+        outline: 2px solid #007bff;
+        outline-offset: 2px;
+    }
+    
+    /* Mobile responsive for start screen */
+    @media (max-width: 499px) {
+        #start-screen {
+            padding: 1rem;
+        }
+    
+        #start-screen > div {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+    
+        #start-deck-info {
+            font-size: 1.1rem;
+        }
+    
+        #start-learning-btn {
+            padding: 0.875rem 1.5rem;
+            font-size: 1.1rem;
+        }
+    }
 }
 
 /* Play audio button styles */

@@ -24,24 +24,26 @@ const App = {
     Storage.loadState();
     // Initialize settings FIRST (loads toggles)
     Settings.init();
+    // Load saved mode
+    Settings.loadMode();
     DeckSelector.updateLoadingProgress(25, "Loading deck list...");
 
     // Initialize deck selector (now toggles are loaded)
     await DeckSelector.init();
-    // Load mode now that deck is loaded
-    Settings.loadMode();
     DeckSelector.updateLoadingProgress(50, "Initializing interface...");
 
     // Initialize navigation
     Nav.init();
+    // Initialize start screen
+    Start.init();
     // Initialize review (now safe to bind events)
     Review.init();
     // Initialize stats view
     StatsView.init();
-     // Initialize search
-     Search.init();
-     // Initialize modal
-     Modal.init();
+    // Initialize search
+    Search.init();
+    // Initialize modal
+    Modal.init();
 
     DeckSelector.updateLoadingProgress(100, "Ready!");
     DeckSelector.hideLoadingProgress();

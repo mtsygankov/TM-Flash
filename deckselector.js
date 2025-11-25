@@ -236,30 +236,33 @@ const DeckSelector = {
             Modal.updateFiltersInModal();
           }
 
-         // Select next card from filtered set
-         App.currentCard = SRS.selectNextCard(
-           Filters.getFilteredCards(),
-           App.currentStats.cards,
-           App.currentDirection,
-         );
-        Review.updateReviewTogglesDisplay();
-          if (App.currentCard) {
-            Review.renderCard(App.currentCard);
-           } else {
-             Review.renderCard(null);
-             let message;
-             if (!App.currentCards || App.currentCards.length === 0) {
-               message = 'No valid cards in this deck.';
+         // Only auto-select and render card if in review view
+         if (Nav.currentView === 'review') {
+           // Select next card from filtered set
+           App.currentCard = SRS.selectNextCard(
+             Filters.getFilteredCards(),
+             App.currentStats.cards,
+             App.currentDirection,
+           );
+          Review.updateReviewTogglesDisplay();
+            if (App.currentCard) {
+              Review.renderCard(App.currentCard);
              } else {
-                const nextReviewInfo = SRS.getNextReviewInfo(Filters.getFilteredCards(), App.currentStats.cards, App.currentDirection);
-               if (nextReviewInfo) {
-                 message = `No cards due for review with current filters. Next review: (${nextReviewInfo.cardsInWindow} card${nextReviewInfo.cardsInWindow > 1 ? 's' : ''} in ~${nextReviewInfo.timeString}).`;
-             } else {
-               message = 'No cards due for review with current filters.';
-             }
-             }
-            Message.show('card-container', message);
-          }
+               Review.renderCard(null);
+               let message;
+               if (!App.currentCards || App.currentCards.length === 0) {
+                 message = 'No valid cards in this deck.';
+               } else {
+                  const nextReviewInfo = SRS.getNextReviewInfo(Filters.getFilteredCards(), App.currentStats.cards, App.currentDirection);
+                 if (nextReviewInfo) {
+                   message = `No cards due for review with current filters. Next review: (${nextReviewInfo.cardsInWindow} card${nextReviewInfo.cardsInWindow > 1 ? 's' : ''} in ~${nextReviewInfo.timeString}).`;
+               } else {
+                 message = 'No cards due for review with current filters.';
+               }
+               }
+              Message.show('card-container', message);
+            }
+         }
 
         // Ensure selector shows current selection
         const selector = document.getElementById("modal-deck-selector");
@@ -278,6 +281,9 @@ const DeckSelector = {
       } catch (e) {
         console.warn('StatsView.render failed after deck load:', e);
       }
+
+      // Check if start screen should be shown after deck change
+      Start.checkAndShow();
 
       this.setStatusMessage(
         `Loaded ${deckId} (${augmentedCards.length} cards)`,

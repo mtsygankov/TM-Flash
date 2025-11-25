@@ -1,6 +1,6 @@
 // Navigation module
 const Nav = {
-  currentView: "review",  // Track active view for keyboard shortcuts
+  currentView: "start",  // Track active view for keyboard shortcuts
   init() {
     const tabs = document.querySelectorAll(".tab");
     tabs.forEach((tab) => {
@@ -71,6 +71,11 @@ const Nav = {
     // Render stats if showing stats view
     if (viewId === "stats") {
       StatsView.render();
+    }
+
+    // Render start screen if showing start view
+    if (viewId === "start") {
+      Start.render();
     }
 
     // Handle review view

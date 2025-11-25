@@ -73,6 +73,9 @@ const Filters = {
       StatsView.render();
     }
 
+    // Check if start screen should be shown after filter change
+    Start.checkAndShow();
+
     // If no card is currently selected or it's not in filtered set, select next
     if (!App.currentCard || !filteredCards.find(card => card.card_id === App.currentCard.card_id)) {
       App.flipped = false;

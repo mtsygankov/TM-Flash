@@ -10,12 +10,18 @@ const Settings = {
   },
 
        applyMode(mode) {
+       // Check if mode is a valid learning mode id
+       const validMode = Object.values(LEARNING_MODES).find(m => m.id === mode);
+       if (!validMode) {
+         console.warn(`Invalid mode '${mode}', using default`);
+         mode = DEFAULT_MODE.id;
+       }
        App.currentMode = mode;
        App.flipped = false;
 
 
-       // Only select/render card if data is available (not during initialization)
-       if (App.currentCards && App.currentStats) {
+       // Only select/render card if data is available and in review view (not during initialization)
+       if (App.currentCards && App.currentStats && Nav.currentView === 'review') {
           // Select a new card for the new mode
            App.currentCard = SRS.selectNextCard(
              Filters.getFilteredCards(),
@@ -40,13 +46,16 @@ const Settings = {
            // Update review toggles display after mode change
            Review.updateReviewTogglesDisplay();
        } else {
-         console.warn("❌ Conditional check failed - app data not available");
+         console.warn("❌ Conditional check failed - app data not available or not in review view");
        }
 
        // Rerender stats if in stats view
        if (Nav.currentView === 'stats') {
          StatsView.render();
        }
+
+       // Check if start screen should be shown after mode change
+       Start.checkAndShow();
    },
 
    toggleMode() {
