@@ -21,7 +21,7 @@ const Start = {
     }
 
     const filteredCards = Filters.getFilteredCards();
-    const dueCount = SRS.countDueCards(filteredCards, App.currentStats.cards, App.currentDirection);
+    const dueCount = SRS.countDueCards(filteredCards, App.currentStats.cards, App.currentMode);
 
     // Don't show if no cards due
     if (dueCount === 0) {
@@ -54,7 +54,7 @@ const Start = {
     }
 
     const filteredCards = Filters.getFilteredCards();
-    const dueCount = SRS.countDueCards(filteredCards, App.currentStats.cards, App.currentDirection);
+    const dueCount = SRS.countDueCards(filteredCards, App.currentStats.cards, App.currentMode);
 
     // Deck info
     const deckInfo = document.getElementById('start-deck-info');

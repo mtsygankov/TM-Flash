@@ -9,12 +9,6 @@ const SRS_MAX_DAYS = 14;
 
 const DEFAULT_SELECTED_DECK = "deck_a";
 
-// Direction constants
-const DIRECTION_KEYS = {
-  CH_TO_EN: "CH->EN",
-  EN_TO_CH: "EN->CH",
-};
-
 // Tone color mappings
 const TONE_COLORS = {
   1: 'rgb(255, 0, 0)',    // Red
@@ -22,11 +16,6 @@ const TONE_COLORS = {
   3: 'rgb(0, 160, 0)',    // Green
   4: 'rgb(0, 68, 255)',   // Blue
   5: 'rgb(0, 0, 0)',      // Black
-};
-
-const DIRECTION_DISPLAY = {
-  [DIRECTION_KEYS.CH_TO_EN]: "CH⇆EN",
-  [DIRECTION_KEYS.EN_TO_CH]: "EN⇆CH",
 };
 
 // Learning Modes - replacing direction-based system
