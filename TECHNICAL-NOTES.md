@@ -2,13 +2,11 @@
 
 ## Table of Contents
 1. [Architecture Overview](#architecture-overview)
-2. [Data Storage Schema](#data-storage-schema)
-3. [Custom Deck Creation](#custom-deck-creation)
-4. [Offline Capabilities](#offline-capabilities)
-5. [Performance Considerations](#performance-considerations)
-6. [Security & Privacy](#security--privacy)
-7. [Browser Compatibility Details](#browser-compatibility-details)
-8. [Development & Debugging](#development--debugging)
+2. [Core Functionalities](#core-functionalities)
+3. [Data Structures](#data-structures)
+4. [SRS Algorithm Implementation](#srs-algorithm-implementation)
+5. [Potential Issues and Improvements](#potential-issues-and-improvements)
+6. [Maintenance Notes](#maintenance-notes)
 
 ---
 
@@ -16,715 +14,356 @@
 
 ### Technology Stack
 
-TM-Flash is built using pure web technologies without external dependencies:
+TM-Flash is a pure web application built with vanilla HTML5, CSS3, and ES6+ JavaScript, intentionally avoiding frameworks to maintain minimal dependencies and optimal performance. The application runs entirely client-side with no server components, using browser localStorage for data persistence.
 
-- **Frontend**: Vanilla HTML5, CSS3, JavaScript (ES6+)
-- **Storage**: Browser localStorage API
-- **Data Format**: JSON for deck files
-- **No Frameworks**: Intentionally lightweight and dependency-free
-- **No Build Process**: Direct file serving, no compilation needed
+### Application Structure
 
-### File Structure
+The codebase follows a modular architecture with clear separation of concerns:
+
+- **Entry Point**: `index.html` serves as the single-page application container
+- **Core Modules**: Storage, Settings, Constants provide foundational services
+- **Data Layer**: DeckLoader, Validator, Stats, SRS handle data management and algorithms
+- **UI Layer**: Nav, StatsView, DeckSelector, Review, Search manage user interactions
+- **Utilities**: Message, Normalizer, Chart provide supporting functionality
+
+### Data Flow Architecture
 
 ```
-tm-flash/
-├── index.html          # Main application entry point
-├── styles.css          # All application styles
-├── app.js             # Main application controller
-├── configloader.js    # Dynamic deck configuration loading
-├── constants.js       # Global constants and configuration
-├── storage.js         # LocalStorage management
-├── stats.js           # Statistics calculations
-├── srs.js             # Spaced Repetition System algorithm
-├── message.js         # User messaging system
-├── normalizer.js      # Text normalization utilities
-├── validator.js       # Deck data validation
-├── deckloader.js      # Deck loading and caching
-├── deckselector.js    # Deck selection UI
-├── settings.js        # Application settings management
-├── review.js          # Review mode logic
-├── statsview.js       # Statistics view rendering
-├── search.js          # Search functionality
-├── nav.js             # Navigation between views
-├── chart.js           # Chart rendering utilities
-└── decks/             # Deck data files and configuration
-    ├── config.json    # Deck registry configuration
-    ├── deck_a.json
-    ├── deck_b.json
-    ├── deck_c.json
-    └── deck_d.json
+JSON Decks (decks/*.json) → DeckLoader.fetch() → Memory Cache → SRS Algorithm → Review UI
+                                      ↓
+localStorage (tmFlash key) ← Storage Module ← Stats Module ← User Interactions
 ```
 
-### Module Architecture
+The application implements a session-based caching strategy where decks are loaded once per session and kept in memory, with statistics persisted to localStorage immediately after each review.
 
-The application follows a modular architecture with clear separation of concerns:
+### Module Loading Strategy
 
-- **Core Modules**: Storage, Settings, Constants
-- **Data Modules**: DeckLoader, Validator, Normalizer, Stats
-- **Logic Modules**: SRS, Review, Search
-- **UI Modules**: Nav, StatsView, DeckSelector, Message
-- **Utilities**: Chart, Message
-
-Each module is self-contained with minimal dependencies, making the codebase maintainable and testable.
+Critical script loading order is maintained in `index.html`:
+1. `constants.js` - Global constants and deck registry
+2. `storage.js` - localStorage management
+3. `stats.js` - Statistics calculations
+4. `srs.js` - Spaced repetition algorithm
+5. `deckloader.js` - Deck loading and validation
+6. `deckselector.js` - Deck selection UI
+7. `settings.js` - User settings
+8. `review.js` - Review interface
+9. `statsview.js` - Statistics visualization
+10. `search.js` - Search functionality
+11. `nav.js` - Navigation
+12. `app.js` - Main application coordinator
 
 ---
 
-## Data Storage Schema
+## Core Functionalities
 
-### LocalStorage Structure
+### Deck Management
+- **Dynamic Configuration**: `configloader.js` enables runtime deck configuration via `decks/config.json`
+- **Validation**: `validator.js` ensures deck JSON integrity with token matching and format validation
+- **Loading**: `deckloader.js` implements HTTP fetching with timeout handling and error recovery
+- **Selection**: `deckselector.js` manages deck switching with stats synchronization
 
-All application data is stored in browser localStorage under the key `tmFlash`:
+### Review System
+- **Card Presentation**: `review.js` handles flip mechanics, keyboard/touch interactions, and progress tracking
+- **Direction Support**: Bidirectional learning (Chinese→English, English→Chinese)
+- **Audio Integration**: Pronunciation playback for supported cards
+- **Progress Visualization**: Real-time progress bar and session statistics
 
-```json
-{
-  "schema_version": 1,
-  "settings": {
-    "direction": "DIRECTION_KEYS.CH_TO_EN",
-    "selected_deck": "deck_a",
-    "theme": "light"
-  },
-  "decks": {
-    "deck_a": {
-      "cards": {
-        "card_id_001": {
-          "directions": {
-             [DIRECTION_KEYS.CH_TO_EN]: {
-               "correct": 5,
-               "incorrect": 1,
-               "last_reviewed": 1694726400000
-             },
-             [DIRECTION_KEYS.EN_TO_CH]: {
-               "correct": 3,
-               "incorrect": 2,
-               "last_reviewed": 1694726400000
-             }
-          }
-        }
-      },
-      "meta_cache": {
-        "last_loaded": 1694726400000,
-        "deck_name": "Deck A"
-      }
-    },
-    "deck_b": {
-      "cards": {},
-      "meta_cache": {}
-    },
-    "deck_c": {
-      "cards": {},
-      "meta_cache": {}
-    },
-    "deck_d": {
-      "cards": {},
-      "meta_cache": {}
-    }
-  }
-}
-```
+### Statistics & Analytics
+- **Per-Card Tracking**: Separate statistics for each learning direction
+- **Streak Analysis**: Correct/incorrect streak lengths and timestamps
+- **Visualization**: Chart.js integration for timeline and distribution charts
+- **Export Capability**: Data accessible via browser developer tools
 
-### Schema Versioning
+### Search & Filtering
+- **Real-time Search**: Pinyin and English text matching with normalization
+- **Tag-based Filtering**: HSK level and category filtering for deck_c
+- **Audio Links**: Integration with external dictionary services
 
-- **Current Version**: 1
-- **Migration Strategy**: Schema version allows for future data migrations
-- **Backward Compatibility**: New versions must handle older schemas gracefully
-
-### Data Types
-
-#### Settings
-- `direction`: String, values DIRECTION_KEYS.CH_TO_EN or DIRECTION_KEYS.EN_TO_CH
-- `selected_deck`: String, deck identifier ("deck_a", "deck_b", etc.)
-- `theme`: String, currently only "light" supported
-
-#### Card Statistics
-- `correct`: Number, count of correct answers
-- `incorrect`: Number, count of incorrect answers
-- `last_reviewed`: Number, Unix timestamp in milliseconds, null if never reviewed
-
-#### Meta Cache
-- `last_loaded`: Number, Unix timestamp when deck was last loaded
-- `deck_name`: String, human-readable deck name from deck metadata
-
-### Data Validation
-
-The application validates all data before storage:
-- **Type Checking**: Ensures data types match expected schema
-- **Range Validation**: Verifies counts are non-negative integers
-- **Timestamp Validation**: Checks timestamps are valid Unix times
-- **Structure Validation**: Ensures required fields exist
+### Settings Management
+- **Modal Interface**: Hamburger menu consolidates all settings
+- **Theme Support**: Light/dark mode via CSS custom properties
+- **Direction Toggle**: Runtime switching between learning directions
+- **Progress Controls**: Show/hide progress indicators
 
 ---
 
-## Custom Deck Creation
+## Data Structures
 
 ### Deck JSON Schema
 
-Custom decks must follow this exact schema:
-
 ```json
 {
-  "type": "word",
-  "deck_name": "Custom Deck Name",
-  "created_at": "2025-01-01T00:00:00.000000",
-  "version": "2",
-  "description": "Optional deck description",
+  "type": "word|expression|hsk13",
+  "deck_name": "string",
+  "created_at": "ISO timestamp",
+  "version": "string",
+  "description": "string",
+  "tag_definitions": {"tag": "description"}, // deck_c only
+  "audio_path": "string", // relative path
   "cards": [
     {
-      "card_id": "unique_card_identifier",
-      "hanzi": "我 要 咖啡",
-      "pinyin": "wǒ yào kāfēi",
-      "def_words": ["I", "want", "coffee"],
-      "def": "I want coffee"
+      "card_id": "unique_string",
+      "hanzi": "space_separated_characters",
+      "pinyin": "space_separated_pinyin",
+      "tones": "digit_string",
+      "def": "english_definition",
+      "def_words": ["word", "array"],
+      "pos": "part_of_speech", // deck_c only
+      "hsk": "HSK_level", // deck_c only
+      "tags": ["tag_array"] // deck_c only
     }
   ]
 }
 ```
 
-### Required Fields
-
-#### Metadata
-- `type`: String, must be "word"
-- `deck_name`: String, human-readable name
-- `created_at`: String, ISO 8601 timestamp
-- `version`: String, deck format version
-
-#### Card Fields
-- `card_id`: String, unique within deck
-- `hanzi`: String, space-separated Chinese characters
-- `pinyin`: String, space-separated pinyin with tone marks
-- `def_words`: Array of strings, individual English words
-- `def`: String, complete English translation
-
-### Validation Rules
-
-#### Uniqueness
-- `card_id` must be unique within each deck
-- Duplicate IDs are skipped and logged as errors
-
-#### Token Matching
-- Token count must match exactly across `hanzi`, `pinyin`, and `def_words`
-- Example: "我 要 咖啡" (3 tokens) = ["wǒ", "yào", "kāfēi"] (3 tokens) = ["I", "want", "coffee"] (3 tokens)
-
-#### Format Requirements
-- All strings are trimmed of leading/trailing whitespace
-- `hanzi` and `pinyin` use single spaces as separators
-- `def_words` is an array of individual words
-- `def` is a complete sentence or phrase
-
-### Creating Custom Decks
-
-#### File Naming
-- Use lowercase letters, numbers, and underscores only
-- Example: `custom_hsk1.json`, `business_vocab.json`
-- Place in the `decks/` directory
-
-#### Deck Registration
-To add a custom deck to the application:
-
-1. **Create JSON file** following the schema above and place it in the `decks/` directory
-2. **Add to config.json** in the `decks/` directory:
-```json
-{
-  "version": "1.0",
-  "decks": {
-    "custom_deck": {
-      "label": "Custom Deck",
-      "url": "decks/custom_deck.json",
-      "description": "Optional description of the deck",
-      "enabled": true
-    }
-  }
-}
-```
-3. **Restart the application** or refresh the page to load the new configuration
-4. **Test validation** by loading the deck and checking for errors
-
-The application will automatically detect and load the updated `decks/config.json` file on startup.
-
-#### Best Practices
-- **Keep decks focused**: Group related vocabulary together
-- **Limit size**: Aim for 100-500 cards per deck for optimal performance
-- **Quality over quantity**: Ensure accurate translations and pinyin
-- **Test thoroughly**: Validate deck before distribution
-
-### Flexible Deck Configuration
-
-Starting with version 1.0, TM-Flash supports flexible deck configuration through a `config.json` file located in the `decks/` directory. This replaces the hardcoded `DECKS` constant in `constants.js`.
-
-#### Configuration File Structure
+### localStorage Schema (schema_version=3)
 
 ```json
 {
-  "version": "1.0",
+  "schema_version": 3,
+  "settings": {
+    "direction": "CH_TO_EN|EN_TO_CH",
+    "selected_deck": "deck_id",
+    "theme": "light",
+    "showProgress": boolean,
+    "soundEffects": boolean
+  },
   "decks": {
     "deck_id": {
-      "label": "Display Name",
-      "url": "decks/filename.json",
-      "description": "Optional description",
-      "enabled": true
+      "cards": {
+        "card_id": {
+          "CH_TO_EN|EN_TO_CH": {
+            "total_correct": number,
+            "total_incorrect": number,
+            "last_correct_at": timestamp_ms,
+            "last_incorrect_at": timestamp_ms,
+            "correct_streak_len": number,
+            "incorrect_streak_len": number,
+            "correct_streak_started_at": timestamp_ms,
+            "incorrect_streak_started_at": timestamp_ms
+          }
+        }
+      }
     }
   }
 }
 ```
 
-#### Configuration Fields
-
-- **version**: Configuration format version (currently "1.0")
-- **decks**: Object containing deck definitions
-  - **deck_id**: Unique identifier for the deck (used internally)
-  - **label**: Human-readable name displayed in the UI
-  - **url**: Path to the deck JSON file (relative to application root)
-  - **description**: Optional description of the deck's content
-  - **enabled**: Boolean flag to enable/disable decks (default: true)
-
-#### Dynamic Loading
-
-The application loads `decks/config.json` at startup:
-
-1. **ConfigLoader.load()** fetches and validates the configuration
-2. **Fallback Logic**: If config.json is missing or invalid, uses hardcoded defaults
-3. **Hot Reloading**: Configuration changes require page refresh to take effect
-4. **Validation**: Ensures all required fields are present and URLs are valid
-
-#### Backward Compatibility
-
-- **Automatic Fallback**: Missing config.json falls back to original hardcoded decks
-- **Proxy Access**: The `DECKS` constant remains available for existing code
-- **No Breaking Changes**: All existing APIs continue to work unchanged
-
-#### Benefits
-
-- **Easy Customization**: Add/remove decks without code changes
-- **Flexible URLs**: Support for external deck files or different directory structures
-- **Deck Management**: Enable/disable decks without deleting files
-- **Version Control**: Configuration can be versioned alongside deck files
+### In-Memory Structures
+- **Deck Cache**: Map-based storage for loaded decks
+- **Card Array**: Ordered collection for SRS selection
+- **Stats Map**: Fast lookup by card ID and direction
+- **Settings Object**: Runtime configuration state
 
 ---
 
+## SRS Algorithm Implementation
 
-## Offline Capabilities
+### Core Algorithm (srs.js)
 
-### Current Offline Support
+The spaced repetition system uses a priority-based card selection algorithm with configurable intervals and modifiers.
 
-TM-Flash has limited offline capabilities:
-
-#### What Works Offline
-- **Application Interface**: All UI elements and interactions
-- **Loaded Decks**: Decks cached in memory during the session
-- **Statistics**: All progress tracking and storage
-- **Search**: Real-time search within loaded decks
-
-#### What Requires Internet
-- **Initial Deck Loading**: First-time deck fetch from server
-- **Deck Switching**: Loading a new deck not in memory cache
-- **Application Updates**: New versions of the app files
-
-### Session Caching
-
-The application implements session-based caching:
+#### Interval Calculation
 
 ```javascript
-// In-memory deck cache
-const deckCache = new Map();
-
-// Cache strategy
-- Load deck once per session
-- Keep in memory until page refresh
-- No persistent caching across sessions
+const BASE_INTERVALS = [1, 3, 7, 14, 30, 90, 180]; // days
+const MODIFIERS = {
+  accuracy: { high: 1.2, medium: 1.0, low: 0.8 },
+  streak: { positive: 1.1, negative: 0.9 },
+  recency: { recent: 0.9, old: 1.1 }
+};
 ```
 
-### Future PWA Implementation
+#### Card Scoring Logic
 
-For full offline support, the application could be enhanced as a Progressive Web App:
-
-#### Service Worker Strategy
 ```javascript
-// Cache-first strategy for core assets
-const CACHE_NAME = 'tm-flash-v1';
-const urlsToCache = [
-  '/',
-  '/index.html',
-  '/styles.css',
-  '/app.js',
-  // ... other core files
-];
+function scoreCard(stats, now = Date.now()) {
+  const accuracy = stats.total_correct / (stats.total_correct + stats.total_incorrect);
+  const daysSinceLastReview = (now - stats.last_reviewed) / (1000 * 60 * 60 * 24);
 
-// Network strategy for deck files
-- Try network first
-- Fall back to cache if offline
-- Update cache when network available
-```
+  let score = BASE_SCORE;
+  score *= getAccuracyModifier(accuracy);
+  score *= getStreakModifier(stats.correct_streak_len, stats.incorrect_streak_len);
+  score *= getRecencyModifier(daysSinceLastReview);
 
-#### Benefits of PWA
-- **True Offline**: Complete functionality without internet
-- **Faster Loading**: Cached resources load instantly
-- **Installable**: Can be installed as a native app
-- **Background Updates**: Automatic content updates
-
-### Storage Limitations
-
-#### localStorage Constraints
-- **Size Limit**: Typically 5-10 MB per domain
-- **Performance**: Synchronous operations can block UI
-- **Security**: Accessible only to same-origin pages
-
-#### Data Management
-- **Efficient Storage**: Minimal data structure design
-- **Cleanup**: Remove unused or old data
-- **Compression**: Consider data compression for large decks
-
----
-
-## Performance Considerations
-
-### Target Performance Metrics
-
-- **First Load**: < 2 seconds for ≤ 1000 cards on mid-tier mobile
-- **Interaction Latency**: < 50ms for all user interactions
-- **Memory Usage**: Efficient data structures, minimal garbage collection
-
-### Optimization Strategies
-
-#### Data Loading
-```javascript
-// Lazy loading approach
-- Load only active deck
-- Validate during loading, not after
-- Cache parsed JSON in memory
-- Use Web Workers for large datasets (future)
-```
-
-#### DOM Manipulation
-```javascript
-// Efficient rendering
-- Minimize DOM updates
-- Use document fragments
-- Batch style changes
-- Avoid layout thrashing
-```
-
-#### SRS Algorithm
-```javascript
-// Optimized scoring
-- O(n) complexity for card selection
-- Pre-computed where possible
-- Minimal calculations per interaction
-- Efficient tie-breaking
-```
-
-### Memory Management
-
-#### Data Structures
-- **Arrays**: For ordered collections (cards list)
-- **Maps**: For fast lookup (card by ID)
-- **Objects**: For structured data (statistics)
-- **Primitives**: Prefer numbers/strings over objects
-
-#### Garbage Collection
-- **Minimize Object Creation**: Reuse objects where possible
-- **Clear References**: Remove unused data references
-- **Avoid Closures**: Be mindful of memory leaks in event handlers
-
-### Performance Monitoring
-
-#### Browser DevTools
-- **Performance Tab**: Analyze runtime performance
-- **Memory Tab**: Check for memory leaks
-- **Network Tab**: Monitor deck loading times
-- **Console**: Track any performance warnings
-
-#### Key Metrics
-- **Deck Loading Time**: Time from selection to ready
-- **Card Rendering Time**: Time to display a card
-- **SRS Calculation Time**: Time to select next card
-- **Storage Operation Time**: Time for save/load operations
-
----
-
-## Security & Privacy
-
-### Data Security
-
-#### Input Sanitization
-```javascript
-// Safe text rendering
-- Use textContent instead of innerHTML
-- Trim all user inputs
-- Validate data types before storage
-- Escape special characters when needed
-```
-
-#### File Access
-- **Same-Origin Policy**: Only access files from same domain
-- **No File System Access**: Cannot read arbitrary files
-- **Validated Paths**: Deck URLs are whitelisted
-- **No Executable Code**: JSON data only, no JavaScript
-
-### Privacy Protection
-
-#### Local Storage Only
-- **No Server Communication**: All data stays on device
-- **No Analytics**: No tracking or telemetry
-- **No Personal Data**: No email, name, or identifiers collected
-- **No Third-Party Scripts**: No external JavaScript libraries
-
-#### Data Persistence
-- **User Controlled**: Data persists only in user's browser
-- **Clearable**: Users can clear data via browser settings
-- **Exportable**: Data can be extracted via browser dev tools
-- **Portable**: Works across devices and browsers
-
-### Content Security Policy
-
-#### Recommended CSP
-```html
-<meta http-equiv="Content-Security-Policy" 
-      content="default-src 'self'; 
-              script-src 'self'; 
-              style-src 'self' 'unsafe-inline'; 
-              connect-src 'self';">
-```
-
-#### CSP Rationale
-- **'self'**: Only allow resources from same origin
-- **script-src 'self'**: No external JavaScript
-- **style-src 'unsafe-inline'**: Allow inline styles for simplicity
-- **connect-src 'self'**: Only allow deck file fetching
-
-### Security Best Practices
-
-#### Validation
-- **Input Validation**: Validate all user inputs
-- **Data Validation**: Validate deck JSON structure
-- **Type Checking**: Ensure data types match expectations
-- **Range Checking**: Verify numbers are in valid ranges
-
-#### Error Handling
-- **Graceful Degradation**: Handle errors without crashing
-- **No Information Leakage**: Avoid exposing internal details
-- **Safe Defaults**: Use secure default values
-- **Recovery**: Allow recovery from error states
-
----
-
-## Browser Compatibility Details
-
-### Supported Browsers
-
-#### Desktop Browsers
-- **Chrome**: Version 90+ (recommended)
-- **Firefox**: Version 88+
-- **Safari**: Version 14+
-- **Edge**: Version 90+
-
-#### Mobile Browsers
-- **iOS Safari**: Version 14+
-- **Chrome Mobile**: Version 90+
-- **Samsung Internet**: Version 14+
-- **Firefox Mobile**: Version 88+
-
-### Feature Requirements
-
-#### JavaScript Features
-- **ES6+**: Arrow functions, const/let, template literals
-- **Fetch API**: For deck file loading
-- **localStorage**: For data persistence
-- **Map/Set**: Modern data structures
-- **Promise**: Async operations
-
-#### CSS Features
-- **Flexbox**: Layout system
-- **Grid**: Advanced layouts (limited use)
-- **CSS Variables**: Custom properties
-- **Media Queries**: Responsive design
-- **Transforms**: Animations and transitions
-
-#### HTML Features
-- **Semantic Elements**: header, main, section, nav
-- **ARIA Attributes**: Accessibility
-- **Viewport Meta**: Mobile responsiveness
-- **Custom Data Attributes**: data-* properties
-
-### Compatibility Workarounds
-
-#### Polyfills (if needed)
-```javascript
-// Fetch API polyfill for older browsers
-if (!window.fetch) {
-  // Load fetch polyfill
-}
-
-// Promise polyfill
-if (!window.Promise) {
-  // Load promise polyfill
+  return Math.max(0, Math.min(MAX_SCORE, score));
 }
 ```
 
-#### Feature Detection
-```javascript
-// Check for required features
-if (!window.localStorage) {
-  // Show error message
-  Message.error('localStorage is required');
-}
+#### Selection Priority
 
-if (!window.fetch) {
-  // Fallback to XMLHttpRequest
-}
-```
+1. **New Cards**: Never reviewed cards get highest priority
+2. **Failed Cards**: Recently incorrect cards prioritized
+3. **Overdue Cards**: Cards past their optimal review interval
+4. **Low Accuracy**: Cards with poor performance history
+5. **Random Selection**: Tie-breaking for equal-priority cards
 
-### Known Limitations
+#### Edge Cases Handled
 
-#### Internet Explorer
-- **Not Supported**: ES6+ features not available
-- **Alternative**: Use modern browser or transpile code
-- **Recommendation**: Upgrade to Microsoft Edge
-
-#### Older Mobile Browsers
-- **Performance**: May be slower on older devices
-- **Memory**: Limited RAM may cause issues
-- **Features**: Some ES6+ features may be missing
-
-#### Enterprise Environments
-- **CSP Restrictions**: May block localStorage
-- **Proxy Settings**: May affect deck loading
-- **Security Policies**: May limit functionality
+- **First Review**: New cards assigned base interval
+- **Perfect Streaks**: Exponential interval growth
+- **Consistent Failure**: Reduced intervals for difficult cards
+- **Long Breaks**: Recency penalties for inactive periods
 
 ---
 
-## Development & Debugging
+## Potential Issues and Improvements
 
-### Development Setup
+### Security Concerns
+- **XSS Prevention**: Uses `textContent` instead of `innerHTML` for user data rendering
+- **Input Sanitization**: All inputs trimmed but no comprehensive validation
+- **Same-Origin Policy**: Deck files must be same-origin; no external deck support
+- **localStorage Limits**: 5-10MB typical limit could be exceeded with large datasets
+- **No CSP**: Missing Content Security Policy headers
 
-#### Local Server
-```bash
-# Python 3
-python -m http.server 8000
+### Performance Bottlenecks
+- **Deck Loading**: Large decks (>1000 cards) cause initial load delays
+- **SRS Calculation**: O(n) complexity for card selection on large decks
+- **DOM Manipulation**: Potential layout thrashing during card transitions
+- **Memory Usage**: In-memory deck cache grows with multiple loaded decks
+- **localStorage Sync**: Synchronous operations block UI during saves
 
-# Python 2
-python -m SimpleHTTPServer 8000
+### Potential Bugs
+- **Race Conditions**: Async deck loading without proper state management
+- **Memory Leaks**: Event listeners not cleaned up on deck switches
+- **State Inconsistency**: Settings changes may not propagate immediately
+- **Audio Loading**: Missing error handling for failed audio file loads
+- **Touch Events**: Potential conflicts between touch and mouse event handlers
 
-# Node.js (if available)
-npx serve . -p 8000
+### Browser Compatibility Issues
+- **ES6+ Features**: Arrow functions, const/let, Map/Set require modern browsers
+- **Fetch API**: Older browsers need polyfills
+- **CSS Grid/Flexbox**: Limited support in IE11 and older mobile browsers
+- **localStorage**: May be disabled in private browsing or restricted environments
 
-# PHP (if available)
-php -S localhost:8000
-```
+### Data Integrity Issues
+- **Schema Migration**: No migration path for schema version changes
+- **Validation Gaps**: Deck validation doesn't check for duplicate card_ids
+- **Stats Corruption**: No checksums or validation for stored statistics
+- **Concurrent Access**: No handling of multiple tabs/windows accessing same data
 
-#### File Watching
-```bash
-# Use file watcher for development
-# (No build process required, but can watch for changes)
-fswatch . | while read event; do
-  echo "File changed: $event"
-done
-```
+### Areas for Improvement
 
-### Debugging Tools
+#### Architecture Enhancements
+- **Service Worker**: Implement PWA features for offline deck caching
+- **Web Workers**: Move SRS calculations off main thread for large decks
+- **IndexedDB**: Replace localStorage with IndexedDB for larger datasets
+- **Module Bundling**: Consider ES modules for better tree-shaking and loading
 
-#### Browser Console
-```javascript
-// Debug logging
-console.log('Deck loaded:', deck);
-console.error('Validation error:', error);
-console.warn('Deprecated feature used');
+#### User Experience Improvements
+- **Progressive Loading**: Load decks incrementally to reduce initial load time
+- **Offline Indicators**: Show offline status and sync progress
+- **Error Recovery**: Better error messages and recovery options
+- **Accessibility**: Enhanced screen reader support and keyboard navigation
+- **Mobile Optimization**: Touch gesture improvements and mobile-specific UI
 
-// Performance timing
-console.time('deck-loading');
-// ... deck loading code
-console.timeEnd('deck-loading');
-```
+#### Performance Optimizations
+- **Virtual Scrolling**: For very large decks (>2000 cards)
+- **Lazy Loading**: Load audio files on demand
+- **Compression**: Compress deck JSON files
+- **Caching Strategy**: Implement HTTP caching headers for deck files
+- **Memory Management**: Clear unused deck data from memory
 
-#### Breakpoints
-- **Source Panel**: Set breakpoints in JavaScript files
-- **Conditional Breakpoints**: Break only when certain conditions met
-- **Event Listener Breakpoints**: Break on specific events
-- **DOM Breakpoints**: Break on DOM modifications
+#### Feature Additions
+- **Cloud Sync**: Implement Firebase/Firestore for cross-device synchronization
+- **Custom Decks**: Enhanced deck creation tools and validation
+- **Advanced Statistics**: More detailed learning analytics and progress tracking
+- **Gamification**: Achievement system and learning streaks
+- **Multi-language**: Support for additional language pairs
 
-#### Network Monitoring
-- **Deck Loading**: Monitor JSON file loading
-- **Performance**: Check load times and file sizes
-- **Errors**: Identify failed requests or timeouts
-- **Caching**: Verify browser caching behavior
+#### Code Quality Improvements
+- **TypeScript Migration**: Add type safety and better IDE support
+- **Testing Framework**: Implement unit and integration tests
+- **Error Monitoring**: Add client-side error tracking and reporting
+- **Documentation**: Expand API documentation and code comments
+- **Code Splitting**: Split large modules for better loading performance
 
-### Testing Strategies
-
-#### Manual Testing
-- **Functionality**: Test all features manually
-- **Cross-browser**: Test in multiple browsers
-- **Mobile**: Test on various mobile devices
-- **Accessibility**: Test with screen readers
-
-#### Unit Testing (Conceptual)
-```javascript
-// Example test structure (not implemented)
-function testSRSAlgorithm() {
-  const stats = { correct: 5, incorrect: 3, last_reviewed: Date.now() - 86400000 };
-  const score = SRS.scoreCard(stats);
-  console.assert(score > 0, 'Score should be positive');
-}
-```
-
-#### Integration Testing
-- **Deck Loading**: Test deck loading and validation
-- **Statistics**: Test statistics calculation and display
-- **Storage**: Test data persistence and retrieval
-- **UI**: Test user interactions and state management
-
-### Code Quality
-
-#### JavaScript Standards
-- **ESLint**: Use for code linting (if available)
-- **JSDoc**: Document public functions
-- **Consistent Style**: Follow established patterns
-- **Error Handling**: Proper try/catch blocks
-
-#### CSS Organization
-- **Modular CSS**: Group related styles
-- **Consistent Naming**: Use clear class names
-- **Responsive Design**: Mobile-first approach
-- **Performance**: Minimize reflows and repaints
-
-#### HTML Structure
-- **Semantic Markup**: Use appropriate HTML5 elements
-- **Accessibility**: Include ARIA labels and roles
-- **Validation**: Ensure valid HTML structure
-- **Performance**: Optimize for fast rendering
-
-### Common Debugging Scenarios
-
-#### Deck Loading Issues
-```javascript
-// Check deck loading
-DeckLoader.fetch('deck_a')
-  .then(deck => console.log('Deck loaded:', deck))
-  .catch(error => console.error('Load failed:', error));
-```
-
-#### Statistics Problems
-```javascript
-// Debug statistics
-const stats = Stats.getCardStats('deck_a', 'card_001');
-console.log('Card stats:', stats);
-console.log('Direction stats:', stats.directions[DIRECTION_KEYS.CH_TO_EN]);
-```
-
-#### Storage Issues
-```javascript
-// Check localStorage
-console.log('Storage data:', localStorage.getItem('tmFlash'));
-const parsed = JSON.parse(localStorage.getItem('tmFlash'));
-console.log('Parsed data:', parsed);
-```
-
-#### Performance Analysis
-```javascript
-// Profile SRS selection
-console.time('srs-selection');
-const nextCard = SRS.selectNextCard(cards, stats, direction);
-console.timeEnd('srs-selection');
-console.log('Selected card:', nextCard);
-```
+#### Security Enhancements
+- **CSP Implementation**: Add Content Security Policy headers
+- **Input Validation**: Comprehensive input sanitization and validation
+- **HTTPS Enforcement**: Require secure connections for deck loading
+- **Data Encryption**: Encrypt sensitive user data in storage
+- **Audit Logging**: Track user actions for security monitoring
 
 ---
 
-*This technical documentation is intended for developers, advanced users, and those who want to understand the internal workings of TM-Flash. For user-facing documentation, see USER-GUIDE.md.*
+## Maintenance Notes
+
+### Setup Instructions
+
+#### Prerequisites
+- Modern web browser (Chrome 90+, Firefox 88+, Safari 14+, Edge 90+)
+- Local web server for development (Python, Node.js, or PHP)
+- No additional dependencies required
+
+#### Development Setup
+1. Clone or download the TM-Flash project files
+2. Start a local HTTP server in the project root:
+   ```bash
+   # Python 3
+   python -m http.server 8000
+
+   # Python 2
+   python -m SimpleHTTPServer 8000
+
+   # Node.js
+   npx serve . -p 8000
+
+   # PHP
+   php -S localhost:8000
+   ```
+3. Open `http://localhost:8000` in your browser
+4. The application loads automatically with default deck configuration
+
+#### Dependencies
+- **None**: Pure vanilla JavaScript, HTML5, CSS3
+- **Browser APIs**: localStorage, Fetch API, ES6+ features
+- **Optional**: Chart.js for statistics visualization (included)
+
+### Development Workflow
+
+#### Code Organization
+- Follow the established module loading order in `index.html`
+- Maintain separation of concerns across modules
+- Use consistent naming conventions (camelCase for JS, kebab-case for CSS)
+- Add JSDoc comments for public functions
+
+#### Testing
+- Manual browser testing for all features
+- Cross-browser compatibility testing
+- Performance testing with browser dev tools
+- Accessibility testing with screen readers
+
+#### Debugging
+- Use browser console for detailed logging from SRS and Review modules
+- Inspect localStorage via `localStorage.getItem('tmFlash')`
+- Monitor network tab for deck loading behavior
+- Profile performance in browser dev tools
+
+### Deployment
+- **Static Hosting**: Deploy to any static web server (GitHub Pages, Netlify, etc.)
+- **No Build Process**: Files served directly without compilation
+- **Caching**: Implement appropriate HTTP caching headers for deck files
+- **HTTPS**: Recommended for security, especially with CSP
+
+### Version Control
+- All development work in `main` branch
+- Atomic commits following workboard ticket completion
+- Include ticket IDs in commit messages (e.g., "W-001: Project Skeleton")
+
+### Monitoring and Support
+- **Error Handling**: Graceful degradation with user-friendly error banners
+- **Performance Monitoring**: Use browser dev tools for load times and memory usage
+- **User Feedback**: Monitor console logs for debugging information
+- **Updates**: No automatic updates; users refresh browser for new versions
+
+### Future Maintenance Tasks
+- Monitor browser compatibility as new versions release
+- Update deck schemas as needed for new features
+- Optimize performance for larger decks
+- Enhance accessibility features
+- Consider PWA implementation for offline capabilities
+
+---
+
+*This technical documentation is intended for developers, advanced users, and those who want to understand the internal workings of TM-Flash. For user-facing documentation, see [USER-GUIDE.md](USER-GUIDE.md).*
