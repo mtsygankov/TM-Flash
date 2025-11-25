@@ -1,327 +1,153 @@
 # TM-Flash User Guide
 
 ## Table of Contents
-1. [Overview & Quick Start](#overview--quick-start)
-2. [Core Features](#core-features)
-3. [How to Use](#how-to-use)
-4. [Interface Elements](#interface-elements)
-5. [Keyboard Shortcuts & Gestures](#keyboard-shortcuts--gestures)
-6. [Deck Information](#deck-information)
-7. [Learning Tips](#learning-tips)
-8. [Troubleshooting](#troubleshooting)
+1. [Introduction](#introduction)
+2. [Installation and Setup](#installation-and-setup)
+3. [Getting Started](#getting-started)
+4. [Usage Guide](#usage-guide)
+5. [Features Overview](#features-overview)
+6. [Troubleshooting](#troubleshooting)
+7. [Frequently Asked Questions](#frequently-asked-questions)
+8. [Support](#support)
 
 ---
 
-## Overview & Quick Start
+## Introduction
 
-### What is TM-Flash?
+TM-Flash is a web-based Chinese language learning flashcard application that uses spaced repetition system (SRS) to help you efficiently memorize Chinese vocabulary. The app runs entirely in your browser and requires no installation or internet connection after initial setup.
 
-TM-Flash is a lightweight, web-based flashcard application designed specifically for learning Chinese vocabulary. It uses a sophisticated Spaced Repetition System (SRS) to help you learn efficiently by showing you cards at the optimal time for retention.
+### Key Features
+- **Spaced Repetition Algorithm**: Intelligently schedules card reviews based on your performance
+- **Multiple Decks**: Access to various Chinese vocabulary decks (Basic Words, Expressions, HSK content)
+- **Bidirectional Learning**: Study Chinese to English or English to Chinese
+- **Audio Support**: Pronunciation audio for many cards
+- **Statistics Tracking**: Detailed progress and performance analytics
+- **Search and Filtering**: Find specific cards quickly
+- **Dark/Light Theme**: Customizable interface
 
-### Getting Started in 30 Seconds
+### How Spaced Repetition Works
+Spaced repetition is a learning technique that shows you information at increasing intervals based on how well you remember it. Cards you know well are shown less frequently, while difficult cards are reviewed more often. This optimizes your study time and improves long-term retention.
 
-1. **Open the App**: Navigate to `http://localhost:8000` in your web browser
-2. **Select a Deck**: Choose from Deck A (beginner) to Deck D (advanced) using the dropdown in the header
-3. **Start Reviewing**: The app will show you your first card immediately
-4. **Flip & Answer**: Click the card or press Space to flip, then mark your answer as Correct or Incorrect
+For technical details about the SRS algorithm, see [TECHNICAL-NOTES.md](TECHNICAL-NOTES.md#spaced-repetition-algorithm-implementation).
 
-That's it! The app will automatically track your progress and show you the most important cards next.
+---
+
+## Installation and Setup
 
 ### System Requirements
+- Modern web browser (Chrome 90+, Firefox 88+, Safari 14+, Edge 90+)
+- No additional software required
+- Internet connection only needed for initial deck loading
 
-- **Modern Browser**: Chrome, Firefox, Safari, or Edge (latest versions)
-- **JavaScript Enabled**: Required for all functionality
-- **Device**: Works on desktop, tablet, and mobile phones
-- **Internet**: Initial deck loading requires connection (works offline after first load)
+### Quick Start
+1. **Download the TM-Flash files** to your computer
+2. **Open `index.html`** directly in your browser, or
+3. **Use a local web server** for better performance:
+   ```bash
+   # Python 3
+   python -m http.server 8000
 
----
+   # Python 2
+   python -m SimpleHTTPServer 8000
 
-## Core Features
+   # Node.js
+   npx serve . -p 8000
 
-### Multi-Deck System
+   # PHP
+   php -S localhost:8000
+   ```
+4. **Navigate to `http://localhost:8000`** in your browser
+5. **Select a deck** and start learning!
 
-TM-Flash includes four pre-loaded decks, each designed for different proficiency levels:
-
-- **Deck A**: Basic words and phrases (beginner)
-- **Deck B**: Elementary vocabulary (HSK 2-3 level)
-- **Deck C**: Intermediate words (HSK 3-4 level)
-- **Deck D**: Advanced vocabulary (HSK 4+ level)
-
-Each deck maintains its own statistics and progress, so you can work with multiple levels simultaneously.
-
-### Bidirectional Learning
-
-Study in both directions:
-- **Chinese → English (CH→EN)**: See Chinese characters and pinyin, recall English meaning
-- **English → Chinese (EN→CH)**: See English, recall Chinese characters and pinyin
-
-The direction toggle in the header lets you switch instantly, and each direction tracks separate statistics.
-
-### Spaced Repetition System (SRS)
-
-The intelligent SRS algorithm prioritizes cards based on:
-- **New cards**: Shown first to introduce new vocabulary
-- **Error rate**: Cards you struggle with appear more frequently
-- **Time since last review**: Cards due for review are prioritized
-- **Random tie-breaking**: Small randomization prevents predictability
-
-This ensures you spend time on the cards that need the most attention.
+### Available Decks
+- **Deck A**: Basic Words (TM-Level1) - Fundamental Chinese vocabulary
+- **Deck B**: Expressions - Common Chinese phrases and expressions
+- **Deck C**: HSK Content - Structured HSK vocabulary with levels and categories
+- **Deck D**: Advanced HSK6 - High-level Chinese vocabulary
 
 ---
 
-## How to Use
+## Getting Started
 
-### Review Mode
+### First Time Setup
+1. Open TM-Flash in your browser
+2. The app will automatically load available decks
+3. Click on a deck name to select it
+4. Choose your preferred learning direction (Chinese→English or English→Chinese)
+5. Start your first review session
 
-The Review mode is where you'll spend most of your time learning.
+### Interface Overview
+- **Deck Selector**: Choose which vocabulary deck to study
+- **Review Area**: Main study interface showing cards
+- **Progress Bar**: Visual indicator of session progress
+- **Statistics Panel**: Performance metrics and charts
+- **Settings Menu**: Hamburger menu (≡) for configuration options
 
-#### Card Display
+---
 
-Each card is displayed as a table with four rows:
-1. **Hanzi**: Chinese characters (one per cell)
-2. **Pinyin**: Pronunciation guide with tone marks
-3. **English Words**: Individual word translations
-4. **English Translation**: Complete sentence meaning
+## Usage Guide
 
-#### Direction-Based Display
+### Basic Review Process
+1. **Card Presentation**: A Chinese word/phrase appears
+2. **Reveal Answer**: Press `Space` or click "Show Answer" to flip the card
+3. **Rate Your Knowledge**:
+   - `←` (Left Arrow) or click "Incorrect" for cards you got wrong
+   - `→` (Right Arrow) or click "Correct" for cards you knew
 
-- **CH→EN Direction**: Initially shows only Hanzi and Pinyin rows
-- **EN→CH Direction**: Initially shows only English Words and Translation rows
-- **After Flipping**: All four rows become visible
+### Keyboard Shortcuts
+- `Space`: Flip card to reveal answer
+- `←` (Left Arrow): Mark as incorrect/difficult
+- `→` (Right Arrow): Mark as correct/easy
+- `H`: Open/close settings menu
+- `S`: Toggle between learning directions
+- `P`: Toggle progress display
 
-#### Answering Cards
+### Learning Directions
+- **Chinese → English (CH→EN)**: See Chinese characters, recall English meaning
+- **English → Chinese (EN→CH)**: See English definition, recall Chinese characters
 
-1. **Study the visible information** based on your chosen direction
-2. **Flip the card** to see the complete information
-3. **Mark your answer**:
-   - **Correct (Green)**: You knew the answer well
-   - **Incorrect (Red)**: You struggled or didn't know
+### Session Management
+- Reviews continue until you complete the scheduled cards for the day
+- New cards are introduced gradually
+- Difficult cards are reviewed more frequently
+- Easy cards appear less often
 
-The app automatically advances to the next card after you mark your answer.
+### Audio Playback
+- Click the speaker icon (🔊) to hear pronunciation
+- Audio is available for most cards in supported decks
+- Works offline once loaded
 
-### Statistics View
+---
 
-Track your learning progress with detailed statistics.
-
-#### Available Metrics
-
-- **Total Cards**: Number of cards in the current deck
-- **Reviewed Cards**: Cards you've practiced at least once
-- **New Cards**: Cards you haven't studied yet
-- **Deck Errors**: Number of invalid cards that were skipped during loading
-
-#### Visual Analytics
-
-- **Histogram**: Shows distribution of your accuracy across 5 buckets (0-20%, 21-40%, 41-60%, 61-80%, 81-100%)
-- **Top 10 Best**: Your best-performing cards by accuracy
-- **Top 10 Worst**: Cards that need more practice
-
-#### Direction-Specific Stats
-
-Statistics are tracked separately for each direction (CH⇆EN and EN⇆CH). Use the direction toggle in the stats view to switch between them.
-
-#### Resetting Stats
-
-You can reset statistics for the current deck and direction using the "Reset Stats" button. This is useful if you want to start fresh with a deck.
-
-### Search Function
-
-Quickly find specific cards in your current deck.
-
-#### Search Types
-
-- **Pinyin Search**: Find cards by pronunciation (tone-insensitive)
-- **English Search**: Find cards by English words or translation
-
-#### Using Search
-
-1. **Select Search Type**: Toggle between "Pinyin" and "in English"
-2. **Enter Query**: Type your search term in the input field
-3. **View Results**: Matching cards appear instantly as you type
-4. **Jump to Card**: Click any result to go directly to that card in Review mode
-
-#### Search Tips
-
-- Pinyin search is tone-insensitive: "yao" matches "yào", "yǎo", etc.
-- English search matches both individual words and full translations
-- Results update in real-time as you type
+## Features Overview
 
 ### Deck Management
+- Switch between different vocabulary decks
+- Each deck maintains separate statistics
+- Progress is preserved when switching decks
 
-Switch between decks seamlessly while maintaining separate progress.
+### Statistics and Progress Tracking
+- **Session Statistics**: Cards reviewed, accuracy rate, time spent
+- **Long-term Analytics**: Charts showing learning progress over time
+- **Per-Card History**: Individual card performance tracking
+- **Streak Information**: Current correct/incorrect streaks
 
-#### Switching Decks
+### Search and Filtering
+- **Real-time Search**: Type to find cards by Chinese characters, Pinyin, or English
+- **HSK Level Filtering**: Filter by HSK proficiency levels (Deck C)
+- **Category Filtering**: Filter by vocabulary categories (Deck C)
 
-1. **Click the deck selector** in the header (shows current deck name)
-2. **Choose a new deck** from the dropdown menu
-3. **Wait for loading**: The app loads and validates the new deck
-4. **Start studying**: Your first card from the new deck appears automatically
+### Settings and Customization
+- **Theme Toggle**: Switch between light and dark modes
+- **Direction Toggle**: Change learning direction mid-session
+- **Progress Display**: Show/hide progress indicators
+- **Sound Effects**: Enable/disable audio feedback
 
-#### Progress Preservation
-
-Each deck maintains completely independent statistics:
-- Separate correct/incorrect counts for each card
-- Individual last-reviewed timestamps
-- Direction-specific progress tracking
-
----
-
-## Interface Elements
-
-### Header Controls
-
-#### Deck Selector
-- **Location**: Top-left of header
-- **Function**: Switch between Deck A, B, C, and D
-- **Display**: Shows currently selected deck name
-
-#### Direction Toggle
-- **Location**: Top-center of header
-- **Labels**: "CH→EN" or "EN→CH"
-- **Function**: Switch study direction instantly
-- **Persistence**: Your choice is saved automatically
-
-### Navigation Tabs
-
-Three main views accessible via tabs in the header:
-- **Review**: Main study interface
-- **Search**: Find specific cards
-- **Stats**: View progress and analytics
-
-### Card Display Table
-
-#### Structure
-- **4 rows**: Hanzi, Pinyin, English Words, English Translation
-- **Aligned columns**: Each token gets its own column for perfect alignment
-- **Responsive**: Adapts to different screen sizes
-
-#### Visual States
-- **Unflipped**: Shows only relevant rows based on direction
-- **Flipped**: All rows visible with complete information
-- **Smooth transitions**: No layout jumps when flipping
-
-### Answer Buttons
-
-#### Primary Actions
-- **Correct (Green)**: Right arrow key, swipe right, or click button
-- **Incorrect (Red)**: Left arrow key, swipe left, or click button
-
----
-
-## Keyboard Shortcuts & Gestures
-
-### Keyboard Navigation
-
-| Action | Keyboard Shortcut | Description |
-|--------|------------------|-------------|
-| **Flip Card** | `Space` | Reveal the complete card information |
-| **Mark Correct** | `→` (Right Arrow) | Mark answer as correct and advance |
-| **Mark Incorrect** | `←` (Left Arrow) | Mark answer as incorrect and advance |
-| **Navigate Tabs** | `Tab` | Move between interactive elements |
-| **Activate Button** | `Enter` | Activate focused button or control |
-
-### Mobile Gestures
-
-| Action | Gesture | Description |
-|--------|---------|-------------|
-| **Flip Card** | `Tap` on card | Reveal complete information |
-| **Mark Correct** | `Swipe Right` | Mark as correct and advance |
-| **Mark Incorrect** | `Swipe Left` | Mark as incorrect and advance |
-
-### Accessibility Features
-
-- **Screen Reader Support**: All interactive elements have proper labels
-- **Keyboard Navigation**: Full keyboard accessibility without mouse
-- **Focus Indicators**: Clear visual feedback for keyboard navigation
-- **High Contrast**: Sufficient color contrast for visibility
-
----
-
-## Deck Information
-
-### Deck A: Basic Words (TM-Level1)
-- **Level**: Beginner (HSK 1-2)
-- **Focus**: Essential everyday vocabulary
-- **Examples**: 可以 (kěyǐ - can), 水果店 (shuǐguǒ diàn - fruit shop)
-- **Card Count**: ~200 cards
-- **Best for**: Absolute beginners starting Chinese
-
-### Deck B: Elementary Vocabulary
-- **Level**: Elementary (HSK 2-3)
-- **Focus**: Common conversational words
-- **Topics**: Daily activities, basic descriptions, simple verbs
-- **Card Count**: ~300 cards
-- **Best for**: Learners with basic Chinese knowledge
-
-### Deck C: Intermediate Words
-- **Level**: Intermediate (HSK 3-4)
-- **Focus**: More complex vocabulary and expressions
-- **Topics**: Work, study, social situations, abstract concepts
-- **Card Count**: ~400 cards
-- **Best for**: Intermediate learners expanding vocabulary
-
-### Deck D: Advanced Vocabulary
-- **Level**: Advanced (HSK 4+)
-- **Focus**: Sophisticated and specialized vocabulary
-- **Topics**: Business, academic, cultural, technical terms
-- **Card Count**: ~500 cards
-- **Best for**: Advanced learners nearing fluency
-
-### How SRS Prioritizes Cards
-
-The Spaced Repetition System uses a scoring algorithm that considers:
-
-1. **New Cards** (Weight: 5.0): Unstudied cards get highest priority
-2. **Error Rate** (Weight: 3.0): Cards you often get wrong appear more frequently
-3. **Days Since Review** (Weight: 0.25): Cards not reviewed recently get priority
-4. **Random Factor** (ε ∈ [0, 0.01)): Small randomness prevents predictability
-
-**Formula**: `Score = 5.0 × isNew + 3.0 × errorRate + 0.25 × daysSince + ε`
-
-The card with the highest score is shown next, ensuring optimal learning efficiency.
-
----
-
-## Learning Tips
-
-### Effective Study Habits
-
-#### Consistency Over Intensity
-- **Daily Practice**: 15-20 minutes daily is better than 2 hours weekly
-- **Regular Schedule**: Study at the same time each day for habit formation
-- **Small Sessions**: Break long study sessions into smaller chunks
-
-#### Active Recall
-- **Think Before Flipping**: Try to recall the answer before revealing it
-- **Be Honest**: Mark cards incorrect if you had any hesitation
-- **Review Mistakes**: Pay extra attention to cards you get wrong
-
-#### Direction Balance
-- **Practice Both Directions**: Alternate between CH→EN and EN→CH
-- **Different Skills**: Each direction develops different language abilities
-- **Weakness Focus**: Spend more time on your weaker direction
-
-### Using Statistics Effectively
-
-#### Monitor Progress
-- **Check Histogram**: Look for patterns in your accuracy distribution
-- **Review Worst Cards**: Focus extra practice on your bottom 10 cards
-- **Celebrate Improvement**: Watch your accuracy improve over time
-
-#### Identify Problem Areas
-- **Low Accuracy Buckets**: If many cards fall in 0-40% accuracy, review fundamentals
-- **Stagnant Progress**: If accuracy isn't improving, try changing study methods
-- **Deck Balance**: Ensure you're making progress across all active decks
-
-### Advanced Strategies
-
-#### Star System
-- **Mark Difficult Cards**: Use ⭐️ to flag challenging vocabulary
-
-#### Search for Review
-- **Pattern Recognition**: Search for similar characters or words
-- **Thematic Study**: Find all cards related to a specific topic
-- **Error Analysis**: Search for cards you frequently get wrong
+### Data Management
+- All progress stored locally in your browser
+- No account required
+- Data persists between sessions
+- Export/import capabilities through browser developer tools
 
 ---
 
@@ -329,124 +155,150 @@ The card with the highest score is shown next, ensuring optimal learning efficie
 
 ### Common Issues
 
-#### App Won't Load
-**Problem**: Blank page or error messages
+#### Deck Loading Failures
+**Problem**: Decks don't load or show error messages
 **Solutions**:
-- Check that you're using `http://localhost:8000`
-- Ensure JavaScript is enabled in your browser
-- Try refreshing the page (Ctrl+F5 or Cmd+Shift+R)
+- Ensure you're using a local web server (not opening index.html directly)
 - Check browser console for error messages
+- Verify deck files exist in the `decks/` folder
+- Try refreshing the page
 
-#### Deck Loading Errors
-**Problem**: "Failed to load deck" message
+#### Audio Not Playing
+**Problem**: Pronunciation audio doesn't work
 **Solutions**:
-- Click the "Retry" button in the error banner
-- Check your internet connection
-- Try selecting a different deck
-- Clear browser cache and reload
+- Check browser permissions for audio playback
+- Ensure audio files exist in deck subdirectories
+- Try different browsers (Chrome recommended)
+- Check volume settings
 
-#### Statistics Not Saving
-**Problem**: Progress resets after closing browser
+#### Data Corruption or Loss
+**Problem**: Statistics or progress data is lost
 **Solutions**:
-- Ensure browser allows localStorage/cookies
-- Check browser settings for local storage permissions
-- Try using a different browser
-- Avoid private/incognito browsing modes
+- Data is stored in browser localStorage
+- Clear browser cache only if necessary (will reset all progress)
+- Use browser developer tools to inspect localStorage
+- Export data before clearing cache
+
+#### Slow Performance
+**Problem**: App feels sluggish or unresponsive
+**Solutions**:
+- Use a modern browser (Chrome, Firefox, Safari, Edge)
+- Close other browser tabs
+- Clear browser cache
+- For large decks, consider using a faster computer
+
+#### Cards Not Appearing
+**Problem**: No cards show up for review
+**Solutions**:
+- Check if you've completed all scheduled reviews
+- Switch learning directions
+- Verify deck selection
+- Check browser console for errors
 
 #### Keyboard Shortcuts Not Working
-**Problem**: Keyboard commands don't respond
+**Problem**: Arrow keys and spacebar don't respond
 **Solutions**:
-- Click anywhere on the page to ensure it has focus
-- Check that caps lock is off
-- Try refreshing the page
-- Ensure no other application is capturing keyboard input
+- Ensure the review area has focus (click on it)
+- Try using mouse clicks instead
+- Check for browser extensions interfering
+- Refresh the page
 
 ### Browser Compatibility
+- **Recommended**: Chrome 90+, Firefox 88+, Safari 14+, Edge 90+
+- **Minimum**: Any modern browser with ES6 support
+- **Not Supported**: Internet Explorer, very old browser versions
 
-#### Supported Browsers
-- **Chrome**: Version 90+ (recommended)
-- **Firefox**: Version 88+
-- **Safari**: Version 14+
-- **Edge**: Version 90+
+### Performance Tips
+- Use Chrome for best performance
+- Keep only one TM-Flash tab open
+- Close other resource-intensive applications
+- For large decks (>1000 cards), expect longer initial load times
 
-#### Mobile Browsers
-- **iOS Safari**: Full support
-- **Chrome Mobile**: Full support
-- **Samsung Internet**: Full support
-- **Firefox Mobile**: Full support
+---
 
-#### Known Issues
-- **Internet Explorer**: Not supported
-- **Older Browser Versions**: May have rendering issues
-- **Some Mobile Keyboards**: May interfere with keyboard shortcuts
+## Frequently Asked Questions
 
-### Performance Issues
+### How does the SRS algorithm work?
+The spaced repetition system schedules card reviews based on your performance. Cards you know well are shown less frequently (every few days or weeks), while difficult cards are reviewed more often. This scientific approach optimizes your study time and improves long-term retention.
 
-#### Slow Loading
-**Causes**: Large decks, slow network connection
-**Solutions**:
-- Wait for initial deck loading (can take up to 2 seconds)
-- Check internet connection speed
-- Close other browser tabs to free memory
-- Try a different browser if issues persist
+For detailed algorithm information, see [TECHNICAL-NOTES.md](TECHNICAL-NOTES.md#spaced-repetition-algorithm-implementation).
 
-#### Laggy Interactions
-**Causes**: Low memory, old device, many background tabs
-**Solutions**:
-- Close unnecessary browser tabs
-- Restart browser if memory usage is high
-- Ensure device meets minimum requirements
-- Try using the app on a more powerful device
+### Where is my data stored?
+All progress data is stored locally in your browser's localStorage. No data is sent to external servers. Your learning statistics persist between sessions but are tied to your browser and computer.
 
-### Data Recovery
+### Can I use TM-Flash offline?
+Yes! Once you've loaded the decks initially, TM-Flash works completely offline. All data is stored locally in your browser.
 
-#### Lost Progress
-**If your statistics disappear**:
-- Check if you're using the same browser and device
-- Verify browser hasn't been cleared recently
-- Try selecting the same deck and direction
-- Statistics are stored locally and cannot be recovered if permanently deleted
+### How many cards should I review per day?
+The app automatically schedules cards based on the SRS algorithm. Typically, you'll review 20-50 cards per session, depending on your deck size and learning pace. New cards are introduced gradually.
 
-#### Backup Recommendations
-- **Screenshot Statistics**: Take screenshots of important progress milestones
-- **Browser Sync**: Enable browser sync if available
-- **Regular Use**: Consistent practice prevents data loss concerns
+### Can I reset my progress?
+Yes, but this requires clearing browser data:
+1. Open browser developer tools (F12)
+2. Go to Application/Storage > Local Storage
+3. Delete the "tmFlash" entry
+4. Refresh the page
+
+**Warning**: This will permanently delete all your progress data.
+
+### Why do some cards have audio and others don't?
+Audio pronunciation is available for cards where audio files were included with the deck. Not all decks have complete audio coverage. Audio files are stored in subdirectories like `decks/deck_a_audio/`.
+
+### Can I add my own decks?
+Currently, TM-Flash uses pre-configured decks. Custom deck creation would require modifying the source code. See [TECHNICAL-NOTES.md](TECHNICAL-NOTES.md#data-structures) for deck format specifications.
+
+### What's the difference between decks?
+- **Deck A**: Basic vocabulary for beginners
+- **Deck B**: Common expressions and phrases
+- **Deck C**: Structured HSK vocabulary with levels and categories
+- **Deck D**: Advanced HSK6 content
+
+### How do I change the learning direction?
+Use the settings menu (hamburger icon ≡) to toggle between Chinese→English and English→Chinese modes. You can change this mid-session.
+
+### Why do I see the same cards repeatedly?
+This is normal SRS behavior. Difficult cards are shown more frequently to reinforce learning. As you improve, these cards will appear less often.
+
+### Can I use TM-Flash on mobile devices?
+Yes, TM-Flash works on mobile browsers, but the desktop experience is optimized. Touch controls replace keyboard shortcuts on mobile devices.
+
+### How do I export my statistics?
+Use browser developer tools to access localStorage data:
+1. Press F12 to open developer tools
+2. Go to Application > Local Storage
+3. Find the "tmFlash" key
+4. Copy the JSON data
+
+### What's the difference between "Correct" and "Incorrect"?
+- **Correct**: You knew the answer (card schedules for later review)
+- **Incorrect**: You didn't know the answer (card schedules for sooner review)
+
+### Can I study multiple decks at once?
+No, you can only study one deck at a time. Switch between decks using the deck selector, but progress is tracked separately for each deck.
+
+---
+
+## Support
 
 ### Getting Help
+If you encounter issues not covered in this guide:
 
-#### Self-Service Resources
-- **This User Guide**: Comprehensive documentation for all features
-- **In-App Interface**: Most features are self-explanatory with clear labels
-- **Browser Developer Tools**: Check console for technical error messages
+1. **Check the troubleshooting section** above
+2. **Review TECHNICAL-NOTES.md** for advanced technical information
+3. **Check browser console** for error messages (press F12)
+4. **Try a different browser** (Chrome recommended)
 
-#### Technical Support
-If you encounter persistent issues:
-1. **Note the Error**: Write down any error messages
-2. **Describe the Problem**: Include what you were trying to do
-3. **Specify Environment**: Browser, device, and operating system
-4. **Check Updates**: Ensure your browser is up to date
+### Technical Support
+- **Browser Console**: Press F12 and check the Console tab for error messages
+- **localStorage Inspection**: Use developer tools to examine stored data
+- **Network Tab**: Monitor deck loading and resource requests
+
+### Contributing
+TM-Flash is an open-source project. For technical contributions or bug reports, refer to the project repository documentation.
+
+### Version Information
+This guide covers TM-Flash with localStorage schema version 3. Check the browser console for current version information.
 
 ---
 
-## Quick Reference Summary
-
-### Essential Actions
-- **Start**: Open app → Select deck → Begin reviewing
-- **Study**: View card → Think → Space to flip → Mark answer
-- **Navigate**: Use tabs to switch between Review, Search, and Stats
-- **Track**: Check Statistics regularly to monitor progress
-
-### Most Used Shortcuts
-- `Space`: Flip card
-- `→`: Correct
-- `←`: Incorrect
-- `Tab`: Navigate
-
-### Best Practices
-- Study daily for 15-20 minutes
-- Practice both directions (CH→EN and EN→CH)
-- Be honest when marking answers
-- Review your worst-performing cards regularly
----
-
-*This user guide covers all aspects of TM-Flash. For technical details about data storage, custom deck creation, or advanced configuration, see the separate TECHNICAL-NOTES.md file.*
+*For technical implementation details, architecture information, and development notes, see [TECHNICAL-NOTES.md](TECHNICAL-NOTES.md).*
