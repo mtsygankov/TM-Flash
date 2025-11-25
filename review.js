@@ -282,7 +282,7 @@ const Review = {
     }
 
     // Auto-play audio for Listening mode front
-    if (!flipped && mode === LEARNING_MODES.LISTENING.id) {
+    if (!flipped && mode === 'LM-listening') {
       this.playAudioForCard(App.currentCard);
     }
   },

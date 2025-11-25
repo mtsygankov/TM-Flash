@@ -78,7 +78,7 @@ const Start = {
     // Mode info
     const modeInfo = document.getElementById('start-mode-info');
     if (modeInfo) {
-      const mode = Object.values(LEARNING_MODES).find(m => m.id === App.currentMode);
+      const mode = LEARNING_MODES[App.currentMode];
       if (mode) {
         modeInfo.textContent = `Learning mode: ${mode.name} ${mode.description}`;
       }

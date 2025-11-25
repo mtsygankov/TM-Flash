@@ -31,7 +31,7 @@ const DIRECTION_DISPLAY = {
 
 // Learning Modes - replacing direction-based system
 const LEARNING_MODES = {
-  HANZI_FIRST: {
+  'LM-hanzi-first': {
     id: 'LM-hanzi-first',
     name: 'Hanzi First!',
     description: 'Recognize characters directly without pinyin crutch',
@@ -39,7 +39,7 @@ const LEARNING_MODES = {
     backFields: ['pinyin', 'def', 'audio'],
     icon: '👁️'
   },
-  LISTENING: {
+  'LM-listening': {
     id: 'LM-listening',
     name: 'Listening',
     description: 'Pure listening comprehension training',
@@ -47,7 +47,7 @@ const LEARNING_MODES = {
     backFields: ['hanzi', 'pinyin', 'def'],
     icon: '🎧'
   },
-  MEANING_TO_CHINESE: {
+  'LM-meaning-to-chinese': {
     id: 'LM-meaning-to-chinese',
     name: 'Meaning to Chinese',
     description: 'Forces active production of Chinese words/phrases from meaning',
@@ -55,7 +55,7 @@ const LEARNING_MODES = {
     backFields: ['hanzi', 'pinyin', 'audio'],
     icon: '💭'
   },
-  PRONUNCIATION: {
+  'LM-pronunciation': {
     id: 'LM-pronunciation',
     name: 'Pronunciation',
     description: 'Specifically trains accurate recall of tones and pronunciation',
@@ -65,7 +65,7 @@ const LEARNING_MODES = {
   }
 };
 
-const DEFAULT_MODE = LEARNING_MODES.HANZI_FIRST;
+const DEFAULT_MODE = LEARNING_MODES['LM-hanzi-first'];
 
 // Fallback deck configuration for backward compatibility
 const FALLBACK_DECKS = {

@@ -10,12 +10,12 @@ const Settings = {
   },
 
        applyMode(mode) {
-       // Check if mode is a valid learning mode id
-       const validMode = Object.values(LEARNING_MODES).find(m => m.id === mode);
-       if (!validMode) {
-         console.warn(`Invalid mode '${mode}', using default`);
-         mode = DEFAULT_MODE.id;
-       }
+        // Check if mode is a valid learning mode id
+        const validMode = LEARNING_MODES[mode];
+        if (!validMode) {
+          console.warn(`Invalid mode '${mode}', using default`);
+          mode = DEFAULT_MODE.id;
+        }
        App.currentMode = mode;
        App.flipped = false;
 
