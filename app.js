@@ -22,14 +22,14 @@ const App = {
 
     // Initialize storage
     Storage.loadState();
-    // Initialize settings FIRST (loads toggles)
+    DeckSelector.updateLoadingProgress(25, "Loading deck list...");
+
+    // Initialize deck selector
+    await DeckSelector.init();
+    // Initialize settings and load saved mode (now deck data is available)
     Settings.init();
     // Load saved mode
     Settings.loadMode();
-    DeckSelector.updateLoadingProgress(25, "Loading deck list...");
-
-    // Initialize deck selector (now toggles are loaded)
-    await DeckSelector.init();
     DeckSelector.updateLoadingProgress(50, "Initializing interface...");
 
     // Initialize navigation

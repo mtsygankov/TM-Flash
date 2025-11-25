@@ -15,6 +15,7 @@ const Review = {
   },
 
   renderCard(card) {
+    if (Nav.currentView !== 'review') return;
     Message.hide('card-container');
     if (!card) {
       const table = document.getElementById("card-table");
