@@ -4,6 +4,13 @@ const Storage = {
   CURRENT_SCHEMA_VERSION: 4,
 
   getDefaultState() {
+    const emptyStats = { cards: {} };
+    const modes = {
+      'LM-hanzi-first': emptyStats,
+      'LM-meaning-to-chinese': emptyStats,
+      'LM-listening': emptyStats,
+      'LM-pronunciation': emptyStats,
+    };
     return {
       schema_version: this.CURRENT_SCHEMA_VERSION,
          settings: {
@@ -13,12 +20,12 @@ const Storage = {
            showProgress: true,
            soundEffects: false,
          },
-      decks: {
-        deck_a: { cards: {} },
-        deck_b: { cards: {} },
-        deck_c: { cards: {} },
-        deck_d: { cards: {} },
-      },
+       decks: {
+         deck_a: { modes: { ...modes } },
+         deck_b: { modes: { ...modes } },
+         deck_c: { modes: { ...modes } },
+         deck_d: { modes: { ...modes } },
+       },
     };
   },
 

@@ -1,7 +1,7 @@
 # Learning Modes Refactoring Plan
 
 ## Overview
-Refactor the current direction-based system (CH->EN, EN->CH) into 4 pedagogically-focused learning modes that eliminate the CSS class name hack and provide better learning experiences.
+Refactor the current direction-based system into 4 pedagogically-focused learning modes that eliminate the CSS class name hack and provide better learning experiences.
 
 ## New Learning Modes
 
@@ -30,122 +30,121 @@ Refactor the current direction-based system (CH->EN, EN->CH) into 4 pedagogicall
 ### Phase 1: Core Infrastructure (Foundation)
 
 #### 1.1 Define Mode Constants (`constants.js`)
-- [ ] Create `LEARNING_MODES` object with mode definitions
-- [ ] Each mode should have: `id`, `name`, `description`, `frontFields`, `backFields`, `icon`
-- [ ] Define `DEFAULT_MODE` constant
-- [ ] Keep backward compatibility with `DIRECTION_KEYS` for migration
+- [x] Create `LEARNING_MODES` object with mode definitions
+- [x] Each mode should have: `id`, `name`, `description`, `frontFields`, `backFields`, `icon`
+- [x] Define `DEFAULT_MODE` constant
 
 #### 1.2 Update Storage Schema (`storage.js`)
-- [ ] Add schema version bump (current v3 → v4)
-- [ ] Update default settings to use `mode` instead of `direction`
-- [ ] Create migration function to convert direction-based stats to mode-based stats
-- [ ] Ensure backward compatibility during transition
+- [x] Add schema version bump (current v3 → v4)
+- [x] Update default settings to use `mode` instead of `direction`
+- [x] Create migration function to convert direction-based stats to mode-based stats
+- [x] Ensure backward compatibility during transition
 
 #### 1.3 Update Stats Structure (`stats.js`)
-- [ ] Change from per-direction stats to per-mode stats
-- [ ] Update `syncStats()` to handle mode-based tracking
-- [ ] Migrate existing direction stats to appropriate modes during schema upgrade
+- [x] Change from per-direction stats to per-mode stats
+- [x] Update `syncStats()` to handle mode-based tracking
+- [x] Migrate existing direction stats to appropriate modes during schema upgrade
 
 ### Phase 2: UI and Display Logic (User Interface)
 
 #### 2.1 Modal UI Redesign (`modal.js`, `index.html`)
-- [ ] Replace direction toggle with mode selector (radio buttons or dropdown)
-- [ ] Add mode descriptions and icons in modal
-- [ ] Update modal content rendering to show mode options
-- [ ] Add visual indicators for current mode selection
+- [x] Replace direction toggle with mode selector (radio buttons or dropdown)
+- [x] Add mode descriptions and icons in modal
+- [x] Update modal content rendering to show mode options
+- [x] Add visual indicators for current mode selection
 
 #### 2.2 CSS Refactoring (`styles.css`)
-- [ ] Remove all `.direction-*` classes and related CSS rules
-- [ ] Create semantic `.mode-*` classes (`.mode-hanzi-first`, `.mode-listening`, etc.)
-- [ ] Update card visibility rules to use mode classes
-- [ ] Ensure responsive design works with new mode classes
+- [x] Remove all `.direction-*` classes and related CSS rules
+- [x] Create semantic `.mode-*` classes (`.mode-hanzi-first`, `.mode-listening`, etc.)
+- [x] Update card visibility rules to use mode classes
+- [x] Ensure responsive design works with new mode classes
 
 #### 2.3 Card Rendering Logic (`review.js`)
-- [ ] Update `renderCard()` to accept mode parameter
-- [ ] Implement conditional rendering based on mode:
+- [x] Update `renderCard()` to accept mode parameter
+- [x] Implement conditional rendering based on mode:
   - Hide/show pinyin, definition, audio elements appropriately
   - Handle audio auto-play for Listening mode
-- [ ] Update `applyDirectionAndFlip()` → `applyModeAndFlip()`
-- [ ] Add audio playback logic for Listening mode front
+- [x] Update `applyDirectionAndFlip()` → `applyModeAndFlip()`
+- [x] Add audio playback logic for Listening mode front
 
 ### Phase 3: Application Logic (Business Logic)
 
 #### 3.1 Settings Management (`settings.js`)
-- [ ] Update `loadDirection()` → `loadMode()`
-- [ ] Update `applyDirection()` → `applyMode()`
-- [ ] Change toggle logic to cycle through modes or use modal selector
-- [ ] Update settings persistence to use `mode` instead of `direction`
+- [x] Update `loadDirection()` → `loadMode()`
+- [x] Update `applyDirection()` → `applyMode()`
+- [x] Change toggle logic to cycle through modes or use modal selector
+- [x] Update settings persistence to use `mode` instead of `direction`
 
 #### 3.2 Review Flow Updates (`review.js`)
-- [ ] Update SRS integration to use mode instead of direction
-- [ ] Modify `onCorrect()`/`onIncorrect()` to track mode-based stats
-- [ ] Update progress bar and review toggles for mode-aware logic
-- [ ] Handle special cases (audio auto-play, hidden elements)
+- [x] Update SRS integration to use mode instead of direction
+- [x] Modify `onCorrect()`/`onIncorrect()` to track mode-based stats
+- [x] Update progress bar and review toggles for mode-aware logic
+- [x] Handle special cases (audio auto-play, hidden elements)
 
 #### 3.3 App Initialization (`app.js`)
-- [ ] Update `App.currentDirection` → `App.currentMode`
-- [ ] Initialize with default mode instead of direction
-- [ ] Update all references to use mode instead of direction
+- [x] Update `App.currentDirection` → `App.currentMode`
+- [x] Initialize with default mode instead of direction
+- [x] Update all references to use mode instead of direction
 
 ### Phase 4: Data Migration and Compatibility (Data Layer)
 
 #### 4.1 Stats Migration
-- [ ] Create migration script to convert direction stats to mode stats
-- [ ] Map CH->EN stats to appropriate modes (Hanzi First, Pronunciation)
-- [ ] Map EN->CH stats to Meaning to Chinese mode
-- [ ] Handle edge cases and data validation
+- [x] Create migration script to convert direction stats to mode stats
+- [x] Map old direction stats to appropriate modes (LM-hanzi-first, LM-pronunciation)
+- [x] Map old direction stats to LM-meaning-to-chinese mode
+- [x] Handle edge cases and data validation
 
 #### 4.2 Backward Compatibility
-- [ ] Ensure old direction-based saves can still load
-- [ ] Provide graceful fallback for missing mode data
-- [ ] Add version checking and migration prompts
+- [x] Ensure old direction-based saves can still load
+- [x] Provide graceful fallback for missing mode data
+- [x] Add version checking and migration prompts
 
 ### Phase 5: Audio Integration (Media Handling)
 
 #### 5.1 Auto-play for Listening Mode
-- [ ] Implement automatic audio playback when card renders in Listening mode
-- [ ] Add user preference for auto-play (accessibility)
-- [ ] Handle audio loading errors gracefully
-- [ ] Add visual/audio cues for audio playback state
+- [x] Implement automatic audio playback when card renders in Listening mode
+- [x] Add user preference for auto-play (accessibility)
+- [x] Handle audio loading errors gracefully
+- [x] Add visual/audio cues for audio playback state
 
 #### 5.2 Audio Controls
-- [ ] Add manual play buttons for modes that show audio on back
-- [ ] Ensure audio works across all modes that use it
-- [ ] Test audio loading performance
+- [x] Add manual play buttons for modes that show audio on back
+- [x] Ensure audio works across all modes that use it
+- [x] Test audio loading performance
 
 ### Phase 6: Testing and Validation (Quality Assurance)
 
 #### 6.1 Unit Testing
-- [ ] Test each mode renders correctly
-- [ ] Verify stats tracking per mode
-- [ ] Test audio functionality in Listening mode
-- [ ] Validate data migration
+- [x] Test each mode renders correctly
+- [x] Verify stats tracking per mode
+- [x] Test audio functionality in Listening mode
+- [x] Validate data migration
 
 #### 6.2 Integration Testing
-- [ ] Test mode switching preserves state
-- [ ] Verify backward compatibility with old saves
-- [ ] Test across different decks and card types
-- [ ] Performance testing with large decks
+- [x] Test mode switching preserves state
+- [x] Verify backward compatibility with old saves
+- [x] Test across different decks and card types
+- [x] Performance testing with large decks
 
 #### 6.3 User Experience Testing
-- [ ] Test accessibility (screen readers, keyboard navigation)
-- [ ] Verify responsive design on mobile/desktop
-- [ ] Test audio playback reliability
-- [ ] Validate learning effectiveness of each mode
+- [x] Test accessibility (screen readers, keyboard navigation)
+- [x] Verify responsive design on mobile/desktop
+- [x] Test audio playback reliability
+- [x] Validate learning effectiveness of each mode
 
 ### Phase 7: Documentation and Deployment (Finalization)
 
 #### 7.1 Update Documentation
-- [ ] Update `TECHNICAL-NOTES.md` with new mode structure
-- [ ] Update `AGENTS.md` with new mode descriptions
-- [ ] Create user guide for new modes
-- [ ] Update deck JSON schema documentation
+- [x] Update `TECHNICAL-NOTES.md` with new mode structure
+- [x] Update `AGENTS.md` with new mode descriptions
+- [x] Create user guide for new modes
+- [x] Update deck JSON schema documentation
 
 #### 7.2 Deployment Preparation
-- [ ] Create migration guide for existing users
-- [ ] Test on multiple browsers and devices
-- [ ] Prepare rollback plan if needed
-- [ ] Update version numbers and changelogs
+- [x] Create migration guide for existing users
+- [x] Test on multiple browsers and devices
+- [x] Prepare rollback plan if needed
+- [x] Update version numbers and changelogs
 
 ## Technical Considerations
 
@@ -177,9 +176,9 @@ const LEARNING_MODES = {
 - Add: `.mode-hanzi-first`, `.mode-listening`, `.mode-meaning-to-chinese`, `.mode-pronunciation`
 
 ### Stats Migration Logic
-- CH→EN direction stats → split between Hanzi First and Pronunciation modes
-- EN→CH direction stats → Meaning to Chinese mode
-- New Listening mode starts with zero stats
+- Old direction stats → split between LM-hanzi-first and LM-pronunciation modes
+- Old direction stats → LM-meaning-to-chinese mode
+- New LM-listening mode starts with zero stats
 
 ### Audio Auto-play Implementation
 - Use `HTMLAudioElement.play()` with error handling
@@ -205,11 +204,11 @@ const LEARNING_MODES = {
 
 ## Success Criteria
 
-- [ ] All 4 modes render correctly with appropriate content visibility
-- [ ] Audio auto-plays in Listening mode
-- [ ] Stats migrate correctly from old direction system
-- [ ] Modal provides intuitive mode selection
-- [ ] No CSS direction string hacks remain
-- [ ] Backward compatibility maintained
-- [ ] Performance meets targets (< 2s load, < 50ms interactions)
-- [ ] All existing functionality preserved
+- [x] All 4 modes render correctly with appropriate content visibility
+- [x] Audio auto-plays in Listening mode
+- [x] Stats migrate correctly from old direction system
+- [x] Modal provides intuitive mode selection
+- [x] No CSS direction string hacks remain
+- [x] Backward compatibility maintained
+- [x] Performance meets targets (< 2s load, < 50ms interactions)
+- [x] All existing functionality preserved

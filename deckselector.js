@@ -211,9 +211,8 @@ const DeckSelector = {
 
           // Set app state
           App.currentCards = augmentedCards;
-         App.currentFilteredCards = augmentedCards; // Initialize filtered cards
-         App.currentStats = syncedStats;
-         App.currentDirection = Storage.getSettings().direction;
+          App.currentFilteredCards = augmentedCards; // Initialize filtered cards
+          App.currentStats = syncedStats;
           App.currentDeckId = deckId;
           App.flipped = false;
 
@@ -242,7 +241,7 @@ const DeckSelector = {
            App.currentCard = SRS.selectNextCard(
              Filters.getFilteredCards(),
              App.currentStats.cards,
-             App.currentDirection,
+             App.currentMode,
            );
           Review.updateReviewTogglesDisplay();
             if (App.currentCard) {
@@ -253,7 +252,7 @@ const DeckSelector = {
                if (!App.currentCards || App.currentCards.length === 0) {
                  message = 'No valid cards in this deck.';
                } else {
-                  const nextReviewInfo = SRS.getNextReviewInfo(Filters.getFilteredCards(), App.currentStats.cards, App.currentDirection);
+                  const nextReviewInfo = SRS.getNextReviewInfo(Filters.getFilteredCards(), App.currentStats.cards, App.currentMode);
                  if (nextReviewInfo) {
                    message = `No cards due for review with current filters. Next review: (${nextReviewInfo.cardsInWindow} card${nextReviewInfo.cardsInWindow > 1 ? 's' : ''} in ~${nextReviewInfo.timeString}).`;
                } else {

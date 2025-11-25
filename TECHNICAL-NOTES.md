@@ -64,12 +64,12 @@ Critical script loading order is maintained in `index.html`:
 
 ### Review System
 - **Card Presentation**: `review.js` handles flip mechanics, keyboard/touch interactions, and progress tracking
-- **Direction Support**: Bidirectional learning (Chinese→English, English→Chinese)
+- **Mode Support**: Four learning modes (LM-hanzi-first, LM-meaning-to-chinese, LM-listening, LM-pronunciation)
 - **Audio Integration**: Pronunciation playback for supported cards
 - **Progress Visualization**: Real-time progress bar and session statistics
 
 ### Statistics & Analytics
-- **Per-Card Tracking**: Separate statistics for each learning direction
+- **Per-Card Tracking**: Separate statistics for each learning mode
 - **Streak Analysis**: Correct/incorrect streak lengths and timestamps
 - **Visualization**: Chart.js integration for timeline and distribution charts
 - **Export Capability**: Data accessible via browser developer tools
@@ -82,7 +82,7 @@ Critical script loading order is maintained in `index.html`:
 ### Settings Management
 - **Modal Interface**: Hamburger menu consolidates all settings
 - **Theme Support**: Light/dark mode via CSS custom properties
-- **Direction Toggle**: Runtime switching between learning directions
+- **Mode Toggle**: Runtime switching between learning modes
 - **Progress Controls**: Show/hide progress indicators
 
 ---
@@ -122,7 +122,7 @@ Critical script loading order is maintained in `index.html`:
 {
   "schema_version": 3,
   "settings": {
-    "direction": "CH_TO_EN|EN_TO_CH",
+    "mode": "LM-hanzi-first|LM-meaning-to-chinese|LM-listening|LM-pronunciation",
     "selected_deck": "deck_id",
     "theme": "light",
     "showProgress": boolean,
@@ -132,7 +132,7 @@ Critical script loading order is maintained in `index.html`:
     "deck_id": {
       "cards": {
         "card_id": {
-          "CH_TO_EN|EN_TO_CH": {
+          "LM-hanzi-first|LM-meaning-to-chinese|LM-listening|LM-pronunciation": {
             "total_correct": number,
             "total_incorrect": number,
             "last_correct_at": timestamp_ms,
@@ -152,7 +152,7 @@ Critical script loading order is maintained in `index.html`:
 ### In-Memory Structures
 - **Deck Cache**: Map-based storage for loaded decks
 - **Card Array**: Ordered collection for SRS selection
-- **Stats Map**: Fast lookup by card ID and direction
+- **Stats Map**: Fast lookup by card ID and mode
 - **Settings Object**: Runtime configuration state
 
 ---

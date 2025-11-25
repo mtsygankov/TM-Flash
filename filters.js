@@ -82,13 +82,13 @@ const Filters = {
       App.currentCard = SRS.selectNextCard(
         filteredCards,
         App.currentStats.cards,
-        App.currentDirection
+        App.currentMode
       );
       if (App.currentCard) {
         Review.renderCard(App.currentCard);
       } else {
         Review.renderCard(null);
-        const nextReviewInfo = SRS.getNextReviewInfo(filteredCards, App.currentStats.cards, App.currentDirection);
+        const nextReviewInfo = SRS.getNextReviewInfo(filteredCards, App.currentStats.cards, App.currentMode);
         let message;
         if (nextReviewInfo) {
           message = `No cards due for review with current filters. Next review: (${nextReviewInfo.cardsInWindow} card${nextReviewInfo.cardsInWindow > 1 ? 's' : ''} in ~${nextReviewInfo.timeString}).`;

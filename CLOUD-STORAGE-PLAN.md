@@ -8,8 +8,8 @@ This plan outlines the implementation of persistent cloud storage for TM-Flash u
 
 ### Data Structure
 - **Key**: `tmFlash` with schema_version=3
-- **Settings**: direction, selected_deck, theme, showProgress, soundEffects
-- **Stats**: Per-deck, per-card, per-direction (CH_TO_EN/EN_TO_CH) statistics including:
+- **Settings**: mode, selected_deck, theme, showProgress, soundEffects
+- **Stats**: Per-deck, per-card, per-mode (LM-hanzi-first/LM-meaning-to-chinese/LM-listening/LM-pronunciation) statistics including:
   - total_correct/incorrect counts
   - last_correct/incorrect timestamps
   - correct/incorrect streak lengths and start times
@@ -24,7 +24,7 @@ The settings object contains user preferences and app state:
 {
   "schema_version": 3,
   "settings": {
-    "direction": "CH_TO_EN",
+    "mode": "LM-hanzi-first",
     "selected_deck": "deck_a",
     "theme": "light",
     "showProgress": true,
@@ -40,8 +40,8 @@ The settings object contains user preferences and app state:
 - Numeric value: ~1 byte (schema version)
 - **Total: ~248 bytes** (including JSON overhead and UTF-8 encoding)
 
-##### Stats Data Structure (Per Card, Per Direction)
-Each card maintains separate statistics for each learning direction:
+##### Stats Data Structure (Per Card, Per Mode)
+Each card maintains separate statistics for each learning mode:
 ```json
 {
   "total_correct": 5,
@@ -55,7 +55,7 @@ Each card maintains separate statistics for each learning direction:
 }
 ```
 
-**Byte Breakdown per Direction:**
+**Byte Breakdown per Mode:**
 - JSON structure overhead: ~80 bytes (braces, commas, colons, null values)
 - Field keys: ~148 bytes ("total_correct", "total_incorrect", "last_correct_at", etc.)
 - Numeric values: ~50 bytes (integers 0-999, timestamps ~13 digits each)
@@ -63,27 +63,27 @@ Each card maintains separate statistics for each learning direction:
 - **Total per direction: ~294 bytes** (minimal usage)
 
 **Scaling with Usage:**
-- Low usage (few reviews): ~294 bytes/direction
-- Medium usage (10-50 reviews): ~320 bytes/direction (larger numbers)
-- High usage (100+ reviews): ~350 bytes/direction (multi-digit counters)
-- **Average: ~320 bytes per direction**
+- Low usage (few reviews): ~294 bytes/mode
+- Medium usage (10-50 reviews): ~320 bytes/mode (larger numbers)
+- High usage (100+ reviews): ~350 bytes/mode (multi-digit counters)
+- **Average: ~320 bytes per mode**
 
 ##### Per-Card Overhead
 - Card ID key in cards object: ~15 bytes (e.g., "card_abc123")
-- Direction keys: ~20 bytes ("CH_TO_EN", "EN_TO_CH")
-- **Total per card: ~675 bytes** (320 × 2 directions + 35 overhead)
+- Mode keys: ~80 bytes ("LM-hanzi-first", "LM-meaning-to-chinese", "LM-listening", "LM-pronunciation")
+- **Total per card: ~1315 bytes** (320 × 4 modes + 35 overhead)
 
 ##### Deck-Level Scaling
-- 100 cards: ~67.5 KB
-- 500 cards: ~337.5 KB
-- 1000 cards: ~675 KB
-- 2000 cards: ~1.35 MB
+- 100 cards: ~135 KB
+- 500 cards: ~675 KB
+- 1000 cards: ~1350 KB
+- 2000 cards: ~2.7 MB
 
 ##### Total Application Storage
 - Settings: 248 bytes
-- Single deck (1000 cards): ~675 KB
-- All decks (4000 cards): ~2.7 MB
-- **Maximum realistic usage: ~5 MB** (including multiple decks with extensive review history)
+- Single deck (1000 cards): ~1350 KB
+- All decks (4000 cards): ~5.4 MB
+- **Maximum realistic usage: ~10 MB** (including multiple decks with extensive review history)
 
 #### JSON Overhead Considerations
 - **Key naming**: Long descriptive keys add ~40% overhead vs. minified keys
@@ -122,7 +122,7 @@ Each card maintains separate statistics for each learning direction:
 ```
  /users/{userId}/
    ├── settings (document)
-   │   ├── direction: string
+   │   ├── mode: string
    │   ├── selected_deck: string
    │   ├── theme: string
    │   ├── showProgress: boolean
@@ -131,7 +131,7 @@ Each card maintains separate statistics for each learning direction:
    │
    └── decks/{deckId}/
        └── cards/{cardId}/
-           ├── CH_TO_EN (document)
+           ├── LM-hanzi-first (document)
            │   ├── total_correct: number
            │   ├── total_incorrect: number
            │   ├── last_correct_at: timestamp
@@ -141,8 +141,14 @@ Each card maintains separate statistics for each learning direction:
            │   ├── correct_streak_started_at: timestamp
            │   └── incorrect_streak_started_at: timestamp
            │
-           └── EN_TO_CH (document)
-               ├── [same structure as CH_TO_EN]
+           ├── LM-meaning-to-chinese (document)
+           │   ├── [same structure as LM-hanzi-first]
+           │
+           ├── LM-listening (document)
+           │   ├── [same structure as LM-hanzi-first]
+           │
+           └── LM-pronunciation (document)
+               ├── [same structure as LM-hanzi-first]
 ```
 
 ### Authentication Strategy

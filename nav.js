@@ -102,7 +102,7 @@ const Nav = {
             App.currentCard = SRS.selectNextCard(
               filteredCards,
               App.currentStats.cards,
-              App.currentDirection,
+              App.currentMode,
             );
             App.flipped = false;
             Review.updateReviewTogglesDisplay();
@@ -119,7 +119,7 @@ const Nav = {
             App.currentCard = SRS.selectNextCard(
               filteredCards,
               App.currentStats.cards,
-              App.currentDirection,
+              App.currentMode,
             );
           }
           if (App.currentCard) {
@@ -134,7 +134,7 @@ const Nav = {
 
   showNoCardsMessage() {
     const filteredCards = Filters.getFilteredCards();
-    const nextReviewInfo = SRS.getNextReviewInfo(filteredCards, App.currentStats.cards, App.currentDirection);
+    const nextReviewInfo = SRS.getNextReviewInfo(filteredCards, App.currentStats.cards, App.currentMode);
     let message;
     if (nextReviewInfo) {
       message = `No cards due for review with current filters. Next review: (${nextReviewInfo.cardsInWindow} card${nextReviewInfo.cardsInWindow > 1 ? 's' : ''} in ~${nextReviewInfo.timeString}).`;

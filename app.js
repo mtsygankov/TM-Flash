@@ -30,6 +30,7 @@ const App = {
     Settings.init();
     // Load saved mode
     Settings.loadMode();
+    console.log("App.currentMode after load:", App.currentMode);
     DeckSelector.updateLoadingProgress(50, "Initializing interface...");
 
     // Initialize navigation

@@ -19,7 +19,7 @@ TM-Flash is a web-based Chinese language learning flashcard application that use
 ### Key Features
 - **Spaced Repetition Algorithm**: Intelligently schedules card reviews based on your performance
 - **Multiple Decks**: Access to various Chinese vocabulary decks (Basic Words, Expressions, HSK content)
-- **Bidirectional Learning**: Study Chinese to English or English to Chinese
+- **Multiple Learning Modes**: Study with different approaches including Hanzi first, meaning to Chinese, listening, and pronunciation
 - **Audio Support**: Pronunciation audio for many cards
 - **Statistics Tracking**: Detailed progress and performance analytics
 - **Search and Filtering**: Find specific cards quickly
@@ -73,7 +73,7 @@ For technical details about the SRS algorithm, see [TECHNICAL-NOTES.md](TECHNICA
 1. Open TM-Flash in your browser
 2. The app will automatically load available decks
 3. Click on a deck name to select it
-4. Choose your preferred learning direction (Chinese→English or English→Chinese)
+4. Choose your preferred learning mode (Hanzi First, Meaning to Chinese, Listening, Pronunciation)
 5. Start your first review session
 
 ### Interface Overview
@@ -99,12 +99,14 @@ For technical details about the SRS algorithm, see [TECHNICAL-NOTES.md](TECHNICA
 - `←` (Left Arrow): Mark as incorrect/difficult
 - `→` (Right Arrow): Mark as correct/easy
 - `H`: Open/close settings menu
-- `S`: Toggle between learning directions
+- `S`: Toggle between learning modes
 - `P`: Toggle progress display
 
-### Learning Directions
-- **Chinese → English (CH→EN)**: See Chinese characters, recall English meaning
-- **English → Chinese (EN→CH)**: See English definition, recall Chinese characters
+### Learning Modes
+- **Hanzi First (LM-hanzi-first)**: See Chinese characters, recall English meaning
+- **Meaning to Chinese (LM-meaning-to-chinese)**: See English definition, recall Chinese characters
+- **Listening (LM-listening)**: Audio-based learning mode
+- **Pronunciation (LM-pronunciation)**: Pronunciation practice mode
 
 ### Session Management
 - Reviews continue until you complete the scheduled cards for the day
@@ -139,7 +141,7 @@ For technical details about the SRS algorithm, see [TECHNICAL-NOTES.md](TECHNICA
 
 ### Settings and Customization
 - **Theme Toggle**: Switch between light and dark modes
-- **Direction Toggle**: Change learning direction mid-session
+- **Mode Toggle**: Change learning mode mid-session
 - **Progress Display**: Show/hide progress indicators
 - **Sound Effects**: Enable/disable audio feedback
 
@@ -191,7 +193,7 @@ For technical details about the SRS algorithm, see [TECHNICAL-NOTES.md](TECHNICA
 **Problem**: No cards show up for review
 **Solutions**:
 - Check if you've completed all scheduled reviews
-- Switch learning directions
+- Switch learning modes
 - Verify deck selection
 - Check browser console for errors
 
@@ -253,8 +255,8 @@ Currently, TM-Flash uses pre-configured decks. Custom deck creation would requir
 - **Deck C**: Structured HSK vocabulary with levels and categories
 - **Deck D**: Advanced HSK6 content
 
-### How do I change the learning direction?
-Use the settings menu (hamburger icon ≡) to toggle between Chinese→English and English→Chinese modes. You can change this mid-session.
+### How do I change the learning mode?
+Use the settings menu (hamburger icon ≡) to toggle between the available learning modes. You can change this mid-session.
 
 ### Why do I see the same cards repeatedly?
 This is normal SRS behavior. Difficult cards are shown more frequently to reinforce learning. As you improve, these cards will appear less often.

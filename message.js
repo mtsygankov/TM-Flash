@@ -22,7 +22,7 @@ const Message = {
         if (msgDiv) {
             msgDiv.style.display = 'none';
             msgDiv.classList.remove('active');
-            // Buttons will be shown by applyDirectionAndFlip when card is rendered
+            // Buttons will be shown by applyModeAndFlip when card is rendered
         }
     }
 };

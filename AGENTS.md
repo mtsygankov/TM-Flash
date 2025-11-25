@@ -82,9 +82,9 @@ tm-flash/
 
 ### Data Handling
 - **LocalStorage**: Use key `tmFlash` with schema_version=3; includes settings for modal controls: showProgress, soundEffects
-- **Modal Settings**: Hamburger menu modal consolidates deck selection, filters, direction toggle, and app settings
+- **Modal Settings**: Hamburger menu modal consolidates deck selection, filters, mode toggle, and app settings
 - **def_words format**: Array of strings for word-by-word translations, e.g., ["I", "love", "you"] instead of "I love you"
-- **Stats tracking**: Separate per-direction stats for each card to support bidirectional learning
+- **Stats tracking**: Separate per-mode stats for each card to support multi-mode learning
 - **JSON validation**: Validate deck structure and card data integrity
 - **Error recovery**: Graceful handling of corrupted data or network failures
 - **Security**: Sanitize all user inputs, validate file paths
@@ -110,7 +110,7 @@ tm-flash/
 }
 ```
 
-### Stats Data Structure (per card, per direction)
+### Stats Data Structure (per card, per mode)
 ```javascript
 {
   "total_correct": number,
@@ -174,7 +174,7 @@ The following guidelines from `.github/copilot-instructions.md` are incorporated
 
 ### Key Module Responsibilities
 - `constants.js`: Deck registry `DECKS` and app constants
-- `storage.js`/`stats.js`: localStorage schema management with per-card stats per direction
+- `storage.js`/`stats.js`: localStorage schema management with per-card stats per mode
 - `srs.js`: Spaced repetition algorithm with interval calculation and card selection
 - `deckloader.js`: HTTP fetching with timeout and error handling
 - `review.js`: Card rendering and user interaction handling
@@ -182,7 +182,7 @@ The following guidelines from `.github/copilot-instructions.md` are incorporated
 ### SRS Algorithm Details
 - **Interval calculation**: Base intervals table with modifiers for accuracy, streaks, and recency
 - **Card selection**: Priority scoring for new cards, failures, overdue cards, and low accuracy
-- **Stats tracking**: Separate per-direction stats (`CH->EN`, `EN->CH`) with timestamps and streaks
+- **Stats tracking**: Separate per-mode stats (`LM-hanzi-first`, `LM-meaning-to-chinese`, `LM-listening`, `LM-pronunciation`) with timestamps and streaks
 
 ### Development Best Practices
 - **Public API preservation**: Maintain function names used across modules
