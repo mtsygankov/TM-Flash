@@ -113,16 +113,18 @@ const Modal = {
         const modeSelector = document.getElementById('modal-mode-selector');
         if (!modeSelector) return;
 
-        const modeOptions = Object.values(LEARNING_MODES).map(mode => `
+        const modeOptions = Object.values(LEARNING_MODES).map(mode => {
+            return `
             <label class="mode-option">
                 <input type="radio" name="learning-mode" value="${mode.id}">
-                <span class="mode-icon">${mode.icon}</span>
+                <!--span class="mode-icon">${mode.icon}</span-->
                 <div class="mode-details">
                     <div class="mode-name">${mode.name}</div>
                     <div class="mode-description">${mode.description}</div>
                 </div>
             </label>
-        `).join('');
+        `;
+        }).join('');
 
         modeSelector.innerHTML = modeOptions;
 
@@ -176,12 +178,12 @@ const Modal = {
 
             menuContent = `
                 <div class="filter-menu-columns">
-                    ${hasTags ? `<div class="filter-column">
-                        <div class="filter-column-header">Tags</div>
+                    ${hasTags ? `<div class="filter-column inline-control">
+                        <div class="filter-column-header">Tags:</div>
                         <div class="filter-column-content">${tagOptions}</div>
                     </div>` : ''}
-                    ${hasHsk ? `<div class="filter-column">
-                        <div class="filter-column-header">HSK</div>
+                    ${hasHsk ? `<div class="filter-column inline-control">
+                        <div class="filter-column-header">HSK:</div>
                         <div class="filter-column-content">${hskOptions}</div>
                     </div>` : ''}
                 </div>
@@ -283,6 +285,9 @@ const Modal = {
 
         const columns = modalFiltersContent.querySelectorAll('.filter-column');
         if (columns.length !== 2) return;
+
+        // Skip equalization on very narrow screens to prevent overflow
+        if (window.innerWidth <= 400) return;
 
         // Skip equalization if using flex-wrap layout
         const content = columns[0].querySelector('.filter-column-content');
