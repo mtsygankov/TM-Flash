@@ -122,12 +122,11 @@ Critical script loading order is maintained in `index.html`:
 {
   "schema_version": 3,
   "settings": {
-    "mode": "LM-hanzi-first|LM-meaning-to-chinese|LM-listening|LM-pronunciation",
-    "selected_deck": "deck_id",
-    "theme": "light",
-    "showProgress": boolean,
-    "soundEffects": boolean
-  },
+   "mode": "LM-hanzi-first|LM-meaning-to-chinese|LM-listening|LM-pronunciation",
+   "selected_deck": "deck_id",
+   "theme": "light",
+   "showProgress": boolean
+ },
   "decks": {
     "deck_id": {
       "cards": {

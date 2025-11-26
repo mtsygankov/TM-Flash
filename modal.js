@@ -41,7 +41,7 @@ const Modal = {
         });
 
         // Settings checkboxes
-        const settingIds = ['setting-show-progress', 'setting-sound-effects'];
+        const settingIds = ['setting-show-progress'];
         settingIds.forEach(id => {
             const checkbox = document.getElementById(id);
             if (checkbox) {
@@ -255,11 +255,6 @@ const Modal = {
             showProgress.checked = settings.showProgress !== false; // Default to true
         }
 
-        const soundEffects = document.getElementById('setting-sound-effects');
-        if (soundEffects) {
-            soundEffects.checked = settings.soundEffects || false;
-        }
-
         this.applySettings();
     },
 
@@ -267,7 +262,6 @@ const Modal = {
         const settings = Storage.getSettings();
 
         settings.showProgress = document.getElementById('setting-show-progress')?.checked || false;
-        settings.soundEffects = document.getElementById('setting-sound-effects')?.checked || false;
 
         Storage.setSettings(settings);
         this.applySettings();
@@ -281,9 +275,6 @@ const Modal = {
         if (progressBar) {
             progressBar.style.display = settings.showProgress ? 'flex' : 'none';
         }
-
-        // Note: soundEffects would need additional implementation
-        // in the audio modules respectively
     },
 
     equalizeColumnWidths() {

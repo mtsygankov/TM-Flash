@@ -18,7 +18,6 @@ const Storage = {
            selected_deck: DEFAULT_SELECTED_DECK,
            theme: "light",
            showProgress: true,
-           soundEffects: false,
          },
        decks: {
          deck_a: { modes: { ...modes } },

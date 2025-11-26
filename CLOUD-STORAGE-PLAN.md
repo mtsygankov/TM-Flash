@@ -8,7 +8,7 @@ This plan outlines the implementation of persistent cloud storage for TM-Flash u
 
 ### Data Structure
 - **Key**: `tmFlash` with schema_version=3
-- **Settings**: mode, selected_deck, theme, showProgress, soundEffects
+- **Settings**: mode, selected_deck, theme, showProgress
 - **Stats**: Per-deck, per-card, per-mode (LM-hanzi-first/LM-meaning-to-chinese/LM-listening/LM-pronunciation) statistics including:
   - total_correct/incorrect counts
   - last_correct/incorrect timestamps
@@ -27,16 +27,15 @@ The settings object contains user preferences and app state:
     "mode": "LM-hanzi-first",
     "selected_deck": "deck_a",
     "theme": "light",
-    "showProgress": true,
-    "soundEffects": false
+    "showProgress": true
   }
 }
 ```
 
 **Byte Breakdown:**
 - Base JSON structure: ~150 bytes (braces, commas, colons)
-- String keys: ~65 bytes ("schema_version", "settings", "direction", "selected_deck", "theme", "showProgress", "soundEffects")
-- String values: ~32 bytes ("CH_TO_EN", "deck_a", "light", "true", "false")
+- String keys: ~65 bytes ("schema_version", "settings", "mode", "selected_deck", "theme", "showProgress")
+- String values: ~28 bytes ("LM-hanzi-first", "deck_a", "light", "true")
 - Numeric value: ~1 byte (schema version)
 - **Total: ~248 bytes** (including JSON overhead and UTF-8 encoding)
 
@@ -126,7 +125,6 @@ Each card maintains separate statistics for each learning mode:
    │   ├── selected_deck: string
    │   ├── theme: string
    │   ├── showProgress: boolean
-   │   ├── soundEffects: boolean
    │   └── last_sync: timestamp
    │
    └── decks/{deckId}/
