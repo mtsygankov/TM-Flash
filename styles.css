@@ -1370,8 +1370,8 @@ h2 {
     font-size: 0.8rem;
     font-weight: 600;
     color: #888;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    /* text-transform: uppercase; */
+    /* letter-spacing: 0.5px; */
 }
 
 .modal-section.inline-control {
@@ -1385,7 +1385,7 @@ h2 {
 }
 
 .modal-control {
-    padding: 0.4rem;
+    padding: 0.1rem;
     border: 1px solid #ccc;
     border-radius: 4px;
     background-color: #fff;
@@ -1424,28 +1424,23 @@ h2 {
     transition: all 0.2s;
     background-color: #fafafa;
     flex-wrap: nowrap;
-    /* Fix: Ensure container doesn't shrink below content */
     min-width: fit-content;
-    /* Fix: Allow container to grow if needed */
     width: 100%;
-    /* Fix: Force single line display */
     white-space: nowrap;
-    /* Fix: Prevent any line breaks */
     line-height: 1.2;
 }
 
-/* Fix: Override any conflicting styles for mode option */
 .mode-option > * {
     display: inline-block !important;
     vertical-align: middle !important;
     white-space: nowrap !important;
 }
 
-/* Fix: Specific override for mode details */
 .mode-option .mode-details {
     display: inline-block !important;
     vertical-align: middle !important;
     white-space: nowrap !important;
+    padding-left: 0.2rem;
 }
 
 .mode-option:hover {
@@ -1457,9 +1452,7 @@ h2 {
     margin: 0;
     width: 1rem;
     height: 1rem;
-    /* Fix: Ensure vertical alignment */
     vertical-align: middle;
-    /* Fix: Prevent shrinking */
     flex-shrink: 0;
 }
 
@@ -1467,27 +1460,19 @@ h2 {
     font-size: 1.3rem;
     min-width: 1.3rem;
     text-align: center;
-    /* Fix: Ensure consistent width */
     width: 1.3rem;
-    /* Fix: Prevent shrinking */
     flex-shrink: 0;
-    /* Fix: Force inline display */
     display: inline-block;
-    /* Fix: Prevent line breaks */
     line-height: 1;
-    /* Fix: Remove any margins */
     margin: 0;
     padding: 0;
-    /* Fix: Ensure vertical alignment */
     vertical-align: middle;
 }
 
 .mode-details {
     flex: 1;
     min-width: 0;
-    /* Fix: Allow text to wrap naturally but control it */
     white-space: normal;
-    /* Fix: Ensure minimum width for readability */
     min-width: 200px;
 }
 
@@ -1495,9 +1480,7 @@ h2 {
     font-weight: 600;
     color: #333;
     margin-bottom: 0.25rem;
-    /* Fix: Allow text to wrap if needed but prefer single line */
     white-space: nowrap;
-    /* Fix: Ensure text doesn't shrink below readable size */
     min-width: fit-content;
 }
 
@@ -1535,8 +1518,11 @@ h2 {
 }
 
 .setting-item span {
-    font-size: 0.85rem;
+    font-size: 1rem;
     user-select: none;
+    vertical-align: bottom;
+    font-weight: 600;
+    letter-spacing: -0.02rem;
 }
 
 /* Modal filter styles */
@@ -1622,11 +1608,14 @@ h2 {
     }
 
     .mode-name {
-        font-size: 0.7rem;
+        font-size: 0.9rem;
+        text-transform: uppercase;
     }
 
     .mode-description {
-        font-size: 0.5rem;
+        font-size: 0.7rem;
+        /* reduce kerning to save horizontal space: */
+        letter-spacing: -0.02em;
     }
 
     .modal-overlay {
