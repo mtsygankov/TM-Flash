@@ -196,12 +196,12 @@ const Modal = {
     },
 
     updateFiltersInModal() {
-        const filterControls = document.getElementById('modal-filter-controls');
+        const filterSection = document.getElementById('modal-filter-section');
 
-        if (filterControls) {
-            // Show/hide filter controls based on availability
+        if (filterSection) {
+            // Show/hide filter section based on availability
             const hasFilters = Filters.availableTags.size > 0 || Filters.availableHskLevels.size > 0;
-            filterControls.style.display = hasFilters ? 'block' : 'none';
+            filterSection.style.display = hasFilters ? 'block' : 'none';
 
             // Render filter menu directly
             this.renderFilterMenu();
