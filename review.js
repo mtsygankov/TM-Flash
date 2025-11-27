@@ -400,17 +400,25 @@ const Review = {
          if (!App.flipped) {
            this.toggleFlip();
          }
-      } else if (e.code === "ArrowRight") {
-        if (App.flipped) {
-          e.preventDefault();
-          this.onCorrect();
-        }
-      } else if (e.code === "ArrowLeft") {
-        if (App.flipped) {
-          e.preventDefault();
-          this.onIncorrect();
-        }
-      }
+       } else if (e.code === "ArrowRight") {
+         if (App.flipped) {
+           e.preventDefault();
+           this.onCorrect();
+         }
+       } else if (e.code === "ArrowLeft") {
+         if (App.flipped) {
+           e.preventDefault();
+           this.onIncorrect();
+         }
+       } else if (e.code === "ArrowUp") {
+         if (App.flipped) {
+           e.preventDefault();
+           const pinyinRow = document.querySelector('.row-pinyin');
+           if (pinyinRow) {
+             pinyinRow.style.display = pinyinRow.style.display === 'none' ? 'table-row' : 'none';
+           }
+         }
+       }
     });
 
     // Swipe and click
