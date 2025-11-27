@@ -52,14 +52,15 @@ const Review = {
       }).join("");
     };
 
-    // Render table with hanzi, pinyin, and def-words rows
+    // Render table with hanzi, pinyin (always included, conditionally hidden), and def-words rows
+    const pinyinRow = `
+            <tr class="row-pinyin" style="display: ${Settings.showPinyin ? 'table-row' : 'none'}">
+                ${generateColoredRow(pinyinTokens, false)}
+            </tr>`;
     table.innerHTML = `
             <tr class="row-hanzi">
                 ${generateColoredRow(hanziTokens, true)}
-            </tr>
-            <tr class="row-pinyin">
-                ${generateColoredRow(pinyinTokens, false)}
-            </tr>
+            </tr>${pinyinRow}
             <tr class="row-def-words">
                 ${enWords.map((word) => `<td><span class="word-text def-word">${this.escapeHtml(word)}</span></td>`).join("")}
             </tr>

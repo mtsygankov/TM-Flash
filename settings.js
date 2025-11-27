@@ -1,7 +1,13 @@
 // Settings module
 const Settings = {
   init() {
+    this.loadSettings();
     this.bindModeToggle();
+  },
+
+  loadSettings() {
+    const settings = Storage.getSettings();
+    this.showPinyin = settings.showPinyin;
   },
 
   loadMode() {

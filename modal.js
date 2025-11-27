@@ -41,7 +41,7 @@ const Modal = {
         });
 
         // Settings checkboxes
-        const settingIds = ['setting-show-progress'];
+        const settingIds = ['setting-show-pinyin', 'setting-show-progress'];
         settingIds.forEach(id => {
             const checkbox = document.getElementById(id);
             if (checkbox) {
@@ -252,6 +252,11 @@ const Modal = {
         const settings = Storage.getSettings();
 
         // Load existing settings
+        const showPinyin = document.getElementById('setting-show-pinyin');
+        if (showPinyin) {
+            showPinyin.checked = settings.showPinyin !== false; // Default to true
+        }
+
         const showProgress = document.getElementById('setting-show-progress');
         if (showProgress) {
             showProgress.checked = settings.showProgress !== false; // Default to true
@@ -262,11 +267,19 @@ const Modal = {
 
     saveSettings() {
         const settings = Storage.getSettings();
+        const oldShowPinyin = settings.showPinyin;
 
+        settings.showPinyin = document.getElementById('setting-show-pinyin')?.checked || false;
         settings.showProgress = document.getElementById('setting-show-progress')?.checked || false;
 
         Storage.setSettings(settings);
         this.applySettings();
+
+        // Update Settings module and re-render current card if showPinyin setting changed
+        Settings.loadSettings();
+        if (oldShowPinyin !== settings.showPinyin && App.currentCard) {
+            Review.renderCard(App.currentCard);
+        }
     },
 
     applySettings() {

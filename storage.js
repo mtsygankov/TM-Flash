@@ -1,7 +1,7 @@
 // Storage module
 const Storage = {
   STORAGE_KEY: "tmFlash",
-  CURRENT_SCHEMA_VERSION: 4,
+  CURRENT_SCHEMA_VERSION: 5,
 
   getDefaultState() {
     const emptyStats = { cards: {} };
@@ -13,12 +13,13 @@ const Storage = {
     };
     return {
       schema_version: this.CURRENT_SCHEMA_VERSION,
-         settings: {
-           mode: DEFAULT_MODE.id,
-           selected_deck: DEFAULT_SELECTED_DECK,
-           theme: "light",
-           showProgress: true,
-         },
+          settings: {
+            mode: DEFAULT_MODE.id,
+            selected_deck: DEFAULT_SELECTED_DECK,
+            theme: "light",
+            showProgress: true,
+            showPinyin: true,
+          },
        decks: {
          deck_a: { modes: { ...modes } },
          deck_b: { modes: { ...modes } },
