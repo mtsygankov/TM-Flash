@@ -54,7 +54,7 @@ const Review = {
 
     // Render table with hanzi, pinyin (always included, conditionally hidden), and def-words rows
     const pinyinRow = `
-            <tr class="row-pinyin" style="display: ${Settings.showPinyin ? 'table-row' : 'none'}">
+            <tr class="row-pinyin" style="visibility: ${Settings.showPinyin ? 'visible' : 'hidden'}; pointer-events: ${Settings.showPinyin ? 'auto' : 'none'}">
                 ${generateColoredRow(pinyinTokens, false)}
             </tr>`;
     table.innerHTML = `
@@ -415,7 +415,9 @@ const Review = {
            e.preventDefault();
            const pinyinRow = document.querySelector('.row-pinyin');
            if (pinyinRow) {
-             pinyinRow.style.display = pinyinRow.style.display === 'none' ? 'table-row' : 'none';
+             const isVisible = pinyinRow.style.visibility !== 'hidden';
+             pinyinRow.style.visibility = isVisible ? 'hidden' : 'visible';
+             pinyinRow.style.pointerEvents = isVisible ? 'none' : 'auto';
            }
          }
        }
