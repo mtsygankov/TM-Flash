@@ -48,5 +48,8 @@ const App = {
 
     DeckSelector.updateLoadingProgress(100, "Ready!");
     DeckSelector.hideLoadingProgress();
+
+    // Set default view to review since it's visible by default
+    Nav.currentView = 'review';
    },
 };

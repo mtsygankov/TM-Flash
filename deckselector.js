@@ -259,7 +259,7 @@ const DeckSelector = {
                  message = 'No cards due for review with current filters.';
                }
                }
-              Message.show('card-container', message);
+              Message.show('review', message);
             }
          }
 
@@ -344,9 +344,9 @@ const DeckSelector = {
   },
 
   showLoadingProgress() {
-    const container = document.getElementById("loading-progress-container");
-    if (container) {
-      container.style.display = "flex";
+    const section = document.querySelector('.app-loading-section');
+    if (section) {
+      section.style.display = 'flex';
     }
   },
 
@@ -363,9 +363,9 @@ const DeckSelector = {
   },
 
   hideLoadingProgress() {
-    const container = document.getElementById("loading-progress-container");
-    if (container) {
-      container.style.display = "none";
+    const section = document.querySelector('.app-loading-section');
+    if (section) {
+      section.style.display = 'none';
     }
   },
 };

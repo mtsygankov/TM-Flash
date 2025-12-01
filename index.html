@@ -43,27 +43,37 @@
     </header>
 
     <main>
-        <section id="view-review" class="view">
-            <div id="card-container">
-                <div id="loading-progress-container" class="loading-progress-container" style="display:none;">
-                    <div class="loading-progress-bar">
-                        <div class="loading-progress-fill"></div>
-                        <div class="loading-progress-text">Loading deck...</div>
-                    </div>
-                </div>
-                <div id="card-container-message" class="system-message" style="display:none;"></div>
-                <div id="card-table-wrapper">
-                    <table id="card-table"></table>
-                </div>
-                <div id="card-def">
-                    <span class="pos-prefix"></span>
-                    <span class="def-text"></span>
-                </div>
-                <div id="card-buttons">
-                    <button id="btn-incorrect" type="button">Incorrect</button>
-                    <button id="btn-correct" type="button">Correct</button>
+        <!-- App-level loading (shown during initialization) -->
+        <section class="app-loading-section" aria-label="Application loading" style="display:none;">
+            <div id="loading-progress-container" class="loading-progress-container">
+                <div class="loading-progress-bar">
+                    <div class="loading-progress-fill"></div>
+                    <div class="loading-progress-text">Loading deck...</div>
                 </div>
             </div>
+        </section>
+
+        <section id="view-review" class="view">
+            <!-- Deck-level messaging (no cards, filters, etc.) -->
+            <section class="deck-message-section" aria-label="Deck status messages" style="display:none;">
+                <div id="review-message" class="system-message"></div>
+            </section>
+            <!-- Card-level interaction (actual flashcards) -->
+            <section class="card-interaction-section" aria-label="Flashcard review">
+                <div id="card-container">
+                    <div id="card-table-wrapper">
+                        <table id="card-table"></table>
+                    </div>
+                    <div id="card-def">
+                        <span class="pos-prefix"></span>
+                        <span class="def-text"></span>
+                    </div>
+                    <div id="card-buttons">
+                        <button id="btn-incorrect" type="button">Incorrect</button>
+                        <button id="btn-correct" type="button">Correct</button>
+                    </div>
+                </div>
+            </section>
         </section>
 
         <section id="view-stats" class="view is-hidden">

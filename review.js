@@ -378,9 +378,7 @@ const Review = {
              message = 'No cards due for review with current filters.';
            }
 
-
-
-          Message.show('card-container', message);
+          Message.show('review', message);
        }
     },
 
@@ -401,8 +399,6 @@ const Review = {
       e.stopPropagation();
       this.onIncorrect();
     });
-
-
 
     // Keyboard
     document.addEventListener("keydown", (e) => {

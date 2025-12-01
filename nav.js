@@ -141,6 +141,6 @@ const Nav = {
     } else {
       message = 'No cards due for review with current filters.';
     }
-    Message.show('card-container', message);
+    Message.show('review', message);
   },
 };
