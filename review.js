@@ -1,5 +1,7 @@
 // Review module
 const Review = {
+  audioPlayedForCurrentCard: false,
+
   init() {
     this.bindEvents();
     // Recalculate scale on window resize
@@ -283,8 +285,9 @@ const Review = {
     }
 
     // Auto-play audio for Listening mode front
-    if (!flipped && mode === 'LM-listening') {
+    if (!flipped && mode === 'LM-listening' && !this.audioPlayedForCurrentCard) {
       this.playAudioForCard(App.currentCard);
+      this.audioPlayedForCurrentCard = true;
     }
 
     // Update pinyin visibility based on flip state and setting
@@ -317,6 +320,10 @@ const Review = {
 
   toggleFlip() {
     App.flipped = !App.flipped;
+    // Reset audio flag when flipping back to front for listening mode
+    if (!App.flipped && App.currentMode === 'LM-listening') {
+      this.audioPlayedForCurrentCard = false;
+    }
     this.applyModeAndFlip();
   },
 
@@ -352,6 +359,7 @@ const Review = {
 
   advanceToNextCard() {
     App.flipped = false;
+    this.audioPlayedForCurrentCard = false; // Reset audio flag for new card
       App.currentCard = SRS.selectNextCard(
         Filters.getFilteredCards(),
         App.currentStats.cards,
