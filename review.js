@@ -54,7 +54,7 @@ const Review = {
 
     // Render table with hanzi, pinyin (always included, conditionally hidden), and def-words rows
     const pinyinRow = `
-            <tr class="row-pinyin" style="visibility: ${Settings.showPinyin ? 'visible' : 'hidden'}; pointer-events: ${Settings.showPinyin ? 'auto' : 'none'}">
+            <tr class="row-pinyin" style="visibility: hidden; pointer-events: none">
                 ${generateColoredRow(pinyinTokens, false)}
             </tr>`;
     table.innerHTML = `
@@ -285,6 +285,14 @@ const Review = {
     // Auto-play audio for Listening mode front
     if (!flipped && mode === 'LM-listening') {
       this.playAudioForCard(App.currentCard);
+    }
+
+    // Update pinyin visibility based on flip state and setting
+    const pinyinRow = document.querySelector('.row-pinyin');
+    if (pinyinRow) {
+      const shouldShow = flipped && Settings.showPinyin;
+      pinyinRow.style.visibility = shouldShow ? 'visible' : 'hidden';
+      pinyinRow.style.pointerEvents = shouldShow ? 'auto' : 'none';
     }
   },
 
