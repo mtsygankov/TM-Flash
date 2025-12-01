@@ -55,6 +55,7 @@ const Modal = {
         if (overlay) {
             overlay.classList.remove('is-hidden');
             this.isOpen = true;
+            Review.audioPlayedForCurrentCard = false; // Reset audio flag when modal opens
             this.updateModalContent();
             // Focus management
             const firstFocusable = overlay.querySelector('select, button, input');
