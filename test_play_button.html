@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Audio Button Design Options</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            color: #666;
+            font-size: 1.3rem;
+            margin: 1.5rem 0 1rem 0;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 0.5rem;
+        }
+
+        .design-option {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .button-showcase {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .button-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .button-label {
+            font-weight: 600;
+            color: #666;
+            min-width: 120px;
+        }
+
+        /* Current Implementation */
+        .current-btn {
+            background-color: #4dabf730;
+            color: #007bff;
+            border: none;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50%;
+            font-size: 1.8rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            width: 2.5rem;
+            height: 2.5rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .current-btn:hover {
+            background-color: rgba(0, 123, 255, 0.1);
+            transform: scale(1.1);
+        }
+
+        /* Design Option 1: Modern Speaker Icon Button */
+        .option1-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 0.5rem;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            width: 2.5rem;
+            height: 2.5rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 4px rgba(0, 123, 255, 0.3);
+        }
+
+        .option1-btn:hover {
+            background-color: #0069d9;
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 123, 255, 0.4);
+        }
+
+        .option1-btn:active {
+            transform: scale(0.98);
+        }
+
+        /* Design Option 2: Outline Speaker Button */
+        .option2-btn {
+            background-color: transparent;
+            color: #007bff;
+            border: 2px solid #007bff;
+            padding: 0.4rem;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            width: 2.5rem;
+            height: 2.5rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .option2-btn:hover {
+            background-color: #007bff;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .option2-btn:active {
+            transform: scale(0.98);
+        }
+
+        /* Design Option 3: Gradient Speaker Button */
+        .option3-btn {
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            color: white;
+            border: none;
+            padding: 0.5rem;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            width: 2.5rem;
+            height: 2.5rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 6px rgba(0, 123, 255, 0.3);
+        }
+
+        .option3-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.4);
+        }
+
+        .option3-btn:active {
+            transform: scale(0.98);
+        }
+
+        /* Design Option 4: Minimalist Speaker Button */
+        .option4-btn {
+            background-color: #f8f9fa;
+            color: #007bff;
+            border: 1px solid #e0e0e0;
+            padding: 0.4rem;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            width: 2.5rem;
+            height: 2.5rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .option4-btn:hover {
+            background-color: #e9ecef;
+            border-color: #007bff;
+            transform: scale(1.05);
+        }
+
+        .option4-btn:active {
+            background-color: #dee2e6;
+            transform: scale(0.98);
+        }
+
+        .description {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            margin-top: 0.5rem;
+        }
+
+        .code-block {
+            background-color: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            padding: 0.5rem;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.8rem;
+            color: #333;
+            margin-top: 1rem;
+            overflow-x: auto;
+        }
+
+        .icon-info {
+            font-size: 0.8rem;
+            color: #888;
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1>Play Audio Button Design Options</h1>
+
+    <div class="design-option">
+        <h2>Current Implementation</h2>
+        <div class="button-showcase">
+            <div class="button-container">
+                <span class="button-label">Normal:</span>
+                <button class="current-btn" title="Play audio">🔊</button>
+            </div>
+            <div class="button-container">
+                <span class="button-label">Hover:</span>
+                <button class="current-btn" title="Play audio" style="background-color: rgba(0, 123, 255, 0.1); transform: scale(1.1);">🔊</button>
+            </div>
+        </div>
+        <p class="description">
+            Current implementation uses a simple speaker emoji with blue color and subtle hover effects.
+            The hover uses a yellow background which is inconsistent with button design language.
+        </p>
+    </div>
+
+    <div class="design-option">
+        <h2>Design Option 1: Modern Speaker Icon Button</h2>
+        <div class="button-showcase">
+            <div class="button-container">
+                <span class="button-label">Normal:</span>
+                <button class="option1-btn" title="Play audio">🔈</button>
+            </div>
+            <div class="button-container">
+                <span class="button-label">Hover:</span>
+                <button class="option1-btn" title="Play audio" style="background-color: #0069d9; transform: scale(1.05); box-shadow: 0 4px 8px rgba(0, 123, 255, 0.4);">🔈</button>
+            </div>
+        </div>
+        <p class="description">
+            A modern speaker icon (🔈) with solid blue background, subtle shadow, and smooth hover animations.
+            This design provides clear visual feedback and matches the app's color scheme.
+        </p>
+        <p class="icon-info">Icon: U+1F508 SPEAKER (🔈)</p>
+    </div>
+
+    <div class="design-option">
+        <h2>Design Option 2: Outline Speaker Button</h2>
+        <div class="button-showcase">
+            <div class="button-container">
+                <span class="button-label">Normal:</span>
+                <button class="option2-btn" title="Play audio">🔊</button>
+            </div>
+            <div class="button-container">
+                <span class="button-label">Hover:</span>
+                <button class="option2-btn" title="Play audio" style="background-color: #007bff; color: white; transform: scale(1.05);">🔊</button>
+            </div>
+        </div>
+        <p class="description">
+            An outline-style button with blue border that fills with color on hover.
+            This provides a clean, minimalist look that's consistent with modern UI design.
+        </p>
+        <p class="icon-info">Icon: U+1F50A SPEAKER WITH THREE SOUND WAVES (🔊)</p>
+    </div>
+
+    <div class="design-option">
+        <h2>Design Option 3: Gradient Speaker Button</h2>
+        <div class="button-showcase">
+            <div class="button-container">
+                <span class="button-label">Normal:</span>
+                <button class="option3-btn" title="Play audio">🔈</button>
+            </div>
+            <div class="button-container">
+                <span class="button-label">Hover:</span>
+                <button class="option3-btn" title="Play audio" style="transform: scale(1.05); box-shadow: 0 4px 10px rgba(0, 123, 255, 0.4);">🔈</button>
+            </div>
+        </div>
+        <p class="description">
+            A premium look with gradient background and enhanced shadow effects.
+            The gradient provides depth while maintaining the app's blue color scheme.
+        </p>
+        <p class="icon-info">Icon: U+1F508 SPEAKER (🔈)</p>
+    </div>
+
+    <div class="design-option">
+        <h2>Design Option 4: Minimalist Speaker Button</h2>
+        <div class="button-showcase">
+            <div class="button-container">
+                <span class="button-label">Normal:</span>
+                <button class="option4-btn" title="Play audio">🔈</button>
+            </div>
+            <div class="button-container">
+                <span class="button-label">Hover:</span>
+                <button class="option4-btn" title="Play audio" style="background-color: #e9ecef; border-color: #007bff; transform: scale(1.05);">🔈</button>
+            </div>
+        </div>
+        <p class="description">
+            A subtle, minimalist design with light gray background and blue border on hover.
+            This blends well with the app's clean aesthetic while providing clear interactivity.
+        </p>
+        <p class="icon-info">Icon: U+1F508 SPEAKER (🔈)</p>
+    </div>
+
+    <div class="design-option">
+        <h1>CSS Implementation Examples</h1>
+
+        <h2>Option 1 CSS:</h2>
+        <div class="code-block">
+.play-audio-btn {<br>
+    background-color: #007bff;<br>
+    color: white;<br>
+    border: none;<br>
+    padding: 0.5rem;<br>
+    border-radius: 50%;<br>
+    font-size: 1.2rem;<br>
+    cursor: pointer;<br>
+    transition: all 0.2s ease;<br>
+    width: 2.5rem;<br>
+    height: 2.5rem;<br>
+    display: inline-flex;<br>
+    align-items: center;<br>
+    justify-content: center;<br>
+    box-shadow: 0 2px 4px rgba(0, 123, 255, 0.3);<br>
+}<br><br>
+
+.play-audio-btn:hover {<br>
+    background-color: #0069d9;<br>
+    transform: scale(1.05);<br>
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.4);<br>
+}<br><br>
+
+.play-audio-btn:active {<br>
+    transform: scale(0.98);<br>
+}
+        </div>
+
+        <h2>Option 2 CSS:</h2>
+        <div class="code-block">
+.play-audio-btn {<br>
+    background-color: transparent;<br>
+    color: #007bff;<br>
+    border: 2px solid #007bff;<br>
+    padding: 0.4rem;<br>
+    border-radius: 50%;<br>
+    font-size: 1.2rem;<br>
+    cursor: pointer;<br>
+    transition: all 0.2s ease;<br>
+    width: 2.5rem;<br>
+    height: 2.5rem;<br>
+    display: inline-flex;<br>
+    align-items: center;<br>
+    justify-content: center;<br>
+}<br><br>
+
+.play-audio-btn:hover {<br>
+    background-color: #007bff;<br>
+    color: white;<br>
+    transform: scale(1.05);<br>
+}<br><br>
+
+.play-audio-btn:active {<br>
+    transform: scale(0.98);<br>
+}
+        </div>
+    </div>
+</body>
+</html>

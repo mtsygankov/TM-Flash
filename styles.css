@@ -532,11 +532,18 @@ h2 {
 
 /* Pronunciation: front hanzi only */
 #card-table:not(.flipped).mode-pronunciation .row-pinyin,
-#card-table:not(.flipped).mode-pronunciation .row-def-words {
+#card-table:not(.flipped).mode-pronunciation .row-def-words,
+#card-table:not(.flipped).mode-pronunciation .row-audio {
     visibility: hidden;
 }
 #card-def:not(.flipped).mode-pronunciation {
     visibility: hidden;
+}
+
+/* Ensure audio row is visible when flipped in all modes */
+#card-table.flipped .row-audio {
+    visibility: visible;
+    pointer-events: auto;
 }
 
 /* Tone color classes - unflipped: all black */
@@ -834,19 +841,72 @@ h2 {
 
 /* Play audio button styles */
 .play-audio-btn {
-    background-color: #4dabf730;
-    color: white;
-    border: none;
-    padding: 0.2rem 0.3rem;
-    border-radius: 1.5rem;
+    background-color: transparent;
+    color: #007bff;
+    border: 2px solid #007bff;
+    padding: 0.4rem;
+    border-radius: 50%;
     font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.2s;
-    margin-right: 0.5rem;
+    transition: all 0.2s ease;
+    width: 2rem;
+    height: 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .play-audio-btn:hover {
-    background-color: #4dabf7;
+    background-color: #007bff;
+    color: white;
+    transform: scale(1.05);
+}
+
+.play-audio-btn:active {
+    transform: scale(0.98);
+}
+
+/* Card table audio row styles */
+#card-table .row-audio {
+    height: 2.5rem;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+#card-table.flipped .row-audio {
+    visibility: visible;
+    pointer-events: auto;
+}
+
+#card-table .audio-cell {
+    text-align: center;
+    padding: 0.5rem 0;
+}
+
+#card-table .play-audio-btn {
+    font-size: 1.8rem;
+    background-color: transparent;
+    color: #007bff;
+    border: 2px solid #007bff;
+    padding: 0.4rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#card-table .play-audio-btn:hover {
+    background-color: #007bff;
+    color: white;
+    transform: scale(1.05);
+}
+
+#card-table .play-audio-btn:active {
+    transform: scale(0.98);
 }
 
 /* Stats view styles */

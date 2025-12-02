@@ -54,15 +54,24 @@ const Review = {
       }).join("");
     };
 
-    // Render table with hanzi, pinyin (always included, conditionally hidden), and def-words rows
+    // Render table with hanzi, pinyin (always included, conditionally hidden), audio play button, and def-words rows
     const pinyinRow = `
             <tr class="row-pinyin" style="visibility: hidden; pointer-events: none">
                 ${generateColoredRow(pinyinTokens, false)}
             </tr>`;
+
+    // Add audio play button row (only if card has audio)
+    const audioRow = card.audio ? `
+            <tr class="row-audio">
+                <td colspan="${wordTones.length}" class="audio-cell">
+                    <button class="play-audio-btn" title="Play audio">🔊</button>
+                </td>
+            </tr>` : '';
+
     table.innerHTML = `
             <tr class="row-hanzi">
                 ${generateColoredRow(hanziTokens, true)}
-            </tr>${pinyinRow}
+            </tr>${pinyinRow}${audioRow}
             <tr class="row-def-words">
                 ${enWords.map((word) => `<td><span class="word-text def-word">${this.escapeHtml(word)}</span></td>`).join("")}
             </tr>
@@ -164,13 +173,25 @@ const Review = {
       });
     });
 
+    // Add event listener for play audio button
+    const playAudioBtn = table.querySelector('.play-audio-btn');
+    if (playAudioBtn) {
+      playAudioBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        this.playAudioForCard(App.currentCard);
+      });
+    }
+
     // Add hover management for td padding (space between words)
     const tableCells = table.querySelectorAll('td');
     tableCells.forEach(td => {
       const tr = td.closest('tr');
-      td.addEventListener('mouseenter', () => {
-        tr.classList.add('space-hover');
-      });
+      // Skip audio row cells to prevent yellow background
+      if (!tr.classList.contains('row-audio')) {
+        td.addEventListener('mouseenter', () => {
+          tr.classList.add('space-hover');
+        });
+      }
     });
 
     // Add click handler for whole expression search on td elements
@@ -193,12 +214,15 @@ const Review = {
     // Add hover management for space highlighting (additional coverage)
     const tableRows = table.querySelectorAll('tr');
     tableRows.forEach(tr => {
-      tr.addEventListener('mouseenter', () => {
-        tr.classList.add('space-hover');
-      });
-      tr.addEventListener('mouseleave', () => {
-        tr.classList.remove('space-hover');
-      });
+      // Skip audio row to prevent yellow background
+      if (!tr.classList.contains('row-audio')) {
+        tr.addEventListener('mouseenter', () => {
+          tr.classList.add('space-hover');
+        });
+        tr.addEventListener('mouseleave', () => {
+          tr.classList.remove('space-hover');
+        });
+      }
     });
 
      this.applyModeAndFlip();
