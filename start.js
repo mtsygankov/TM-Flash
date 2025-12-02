@@ -111,6 +111,9 @@ const Start = {
   checkAndShow() {
     if (this.shouldShowStartScreen()) {
       Nav.show('start');
+    } else if (Nav.currentView === 'start') {
+      // Hide start screen when no longer should show
+      Nav.show('review');
     }
   }
 };
