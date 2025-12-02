@@ -114,7 +114,10 @@ const SRS = {
     });
 
     if (dueCards.length === 0) {
-      console.warn("❌ No due cards found");
+      // Only log warning if not during initialization to avoid redundant messages
+      if (!App.isInitializing) {
+        console.warn("❌ No due cards found");
+      }
       return null;
     }
 

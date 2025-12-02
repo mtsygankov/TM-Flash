@@ -9,6 +9,7 @@ const App = {
   currentDeckId: null,
   savedReviewCardId: null,
   savedReviewFlipped: false,
+  isInitializing: true,  // Flag to track initialization phase
 
   async init() {
     // Show loading progress from the start
@@ -51,5 +52,8 @@ const App = {
 
     // Set default view to review since it's visible by default
     Nav.currentView = 'review';
+
+    // Mark initialization as complete
+    App.isInitializing = false;
    },
 };
