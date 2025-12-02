@@ -39,28 +39,37 @@ The application implements a session-based caching strategy where decks are load
 ### Module Loading Strategy
 
 Critical script loading order is maintained in `index.html`:
-1. `constants.js` - Global constants and deck registry
-2. `storage.js` - localStorage management
-3. `stats.js` - Statistics calculations
-4. `srs.js` - Spaced repetition algorithm
-5. `deckloader.js` - Deck loading and validation
-6. `deckselector.js` - Deck selection UI
-7. `settings.js` - User settings
-8. `review.js` - Review interface
-9. `statsview.js` - Statistics visualization
-10. `search.js` - Search functionality
-11. `nav.js` - Navigation
-12. `app.js` - Main application coordinator
+1. `chart.js` - Chart.js library for statistics visualization
+2. `configloader.js` - Loads deck configuration from config.json
+3. `constants.js` - Global constants and deck registry
+4. `storage.js` - localStorage management
+5. `stats.js` - Statistics calculations
+6. `srs.js` - Spaced repetition algorithm
+7. `message.js` - User messaging system
+8. `normalizer.js` - Pinyin normalization utilities
+9. `validator.js` - Deck data validation
+10. `deckloader.js` - Deck loading and validation
+11. `deckselector.js` - Deck selection UI
+12. `settings.js` - User settings
+13. `review.js` - Review interface
+14. `statsview.js` - Statistics visualization
+15. `search.js` - Search functionality
+16. `filters.js` - Card filtering logic
+17. `modal.js` - Settings modal management
+18. `nav.js` - Navigation
+19. `start.js` - Start screen management
+20. `app.js` - Main application coordinator
 
 ---
 
 ## Core Functionalities
 
 ### Deck Management
-- **Dynamic Configuration**: `configloader.js` enables runtime deck configuration via `decks/config.json`
+- **Dynamic Configuration**: `configloader.js` enables runtime deck configuration via `decks/config.json` with enable/disable flags for deck management
 - **Validation**: `validator.js` ensures deck JSON integrity with token matching and format validation
 - **Loading**: `deckloader.js` implements HTTP fetching with timeout handling and error recovery
 - **Selection**: `deckselector.js` manages deck switching with stats synchronization
+- **Audio Support**: Pronunciation audio files stored in deck subdirectories with hashed filenames (e.g., `word_-45950099734855537.mp3`) for efficient caching
 
 ### Review System
 - **Card Presentation**: `review.js` handles flip mechanics, keyboard/touch interactions, and progress tracking
@@ -116,17 +125,18 @@ Critical script loading order is maintained in `index.html`:
 }
 ```
 
-### localStorage Schema (schema_version=3)
+### localStorage Schema (schema_version=4)
 
 ```json
 {
-  "schema_version": 3,
+  "schema_version": 4,
   "settings": {
    "mode": "LM-hanzi-first|LM-meaning-to-chinese|LM-listening|LM-pronunciation",
    "selected_deck": "deck_id",
    "theme": "light",
-   "showProgress": boolean
- },
+   "showProgress": boolean,
+   "showPinyin": boolean
+  },
   "decks": {
     "deck_id": {
       "cards": {
@@ -165,11 +175,11 @@ The spaced repetition system uses a priority-based card selection algorithm with
 #### Interval Calculation
 
 ```javascript
-const BASE_INTERVALS = [1, 3, 7, 14, 30, 90, 180]; // days
+const BASE_INTERVALS = [0.5, 4, 24, 72, 168, 336, 720, 1440]; // hours: 30min to 60 days
 const MODIFIERS = {
-  accuracy: { high: 1.2, medium: 1.0, low: 0.8 },
-  streak: { positive: 1.1, negative: 0.9 },
-  recency: { recent: 0.9, old: 1.1 }
+  accuracy: { high: 1.3, medium: 1.0, low: 0.4 },
+  streak: { positive: 1.1, negative: 0.5 },
+  recency: { recent: 0.3, old: 1.0 }
 };
 ```
 

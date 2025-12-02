@@ -75,9 +75,16 @@ TM-Flash is a lightweight, browser-based flashcard application using spaced repe
 5. **Intelligent Scheduling**: SRS optimizes review timing
 6. **Progress Tracking**: Detailed statistics and visualizations
 7. **Responsive Design**: Works on desktop and mobile
+8. **Configurable Settings**: Toggle options including "Show pinyin on open card" for customized learning experience
+9. **Dynamic Deck Management**: Runtime deck configuration with enable/disable capabilities
+10. **Extensive Audio Support**: Pronunciation playback with efficient hashed filename storage
 
 ## Success Metrics
 - **Retention**: Cards correctly recalled after spaced intervals
 - **Engagement**: Daily active usage streaks
 - **Coverage**: Percentage of deck reviewed
 - **Accuracy**: Correct/incorrect ratio per mode
+
+## Additional Documentation
+- [TECHNICAL-NOTES.md](TECHNICAL-NOTES.md) - Detailed technical specifications and implementation notes
+- [USER-GUIDE.md](USER-GUIDE.md) - Comprehensive user guidance and troubleshooting

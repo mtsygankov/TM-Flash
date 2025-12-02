@@ -105,6 +105,11 @@ TM-Flash/
 - **Schema versioning**: v4 current
 - **Graceful degradation**: Fallback on quota exceeded
 
+### Deck Configuration
+- **Dynamic Loading**: Runtime deck management via `decks/config.json` with enable/disable flags
+- **Fallback Support**: FALLBACK_DECKS when configuration unavailable
+- **Audio Storage**: Hashed filenames (e.g., word_-45950099734855537.mp3) for efficient caching in deck subdirectories
+
 ## Code Style Guidelines
 
 ### JavaScript
@@ -238,3 +243,7 @@ localStorage.getItem('tmFlash');
 - IndexedDB for larger datasets
 - Web Audio API for better audio handling
 - PWA manifest for installability
+
+## Additional Documentation
+- [TECHNICAL-NOTES.md](TECHNICAL-NOTES.md) - Detailed technical specifications and implementation notes
+- [USER-GUIDE.md](USER-GUIDE.md) - Comprehensive user guidance and troubleshooting

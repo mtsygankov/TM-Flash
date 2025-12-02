@@ -60,10 +60,12 @@ For technical details about the SRS algorithm, see [TECHNICAL-NOTES.md](TECHNICA
 5. **Select a deck** and start learning!
 
 ### Available Decks
-- **Deck A**: Basic Words (TM-Level1) - Fundamental Chinese vocabulary
-- **Deck B**: Expressions - Common Chinese phrases and expressions
-- **Deck C**: HSK Content - Structured HSK vocabulary with levels and categories
+- **Deck A**: Basic Words (TM-Level1) - Fundamental Chinese vocabulary with audio support
+- **Deck B**: Expressions - Common Chinese phrases and expressions with audio support
+- **Deck C**: HSK Content - Structured HSK vocabulary with levels, categories, and filtering options
 - **Deck D**: Advanced HSK6 - High-level Chinese vocabulary
+
+Decks are dynamically configured via `decks/config.json` and can be enabled/disabled without code changes. Audio files are stored in deck subdirectories with hashed filenames for efficient caching.
 
 ---
 
@@ -143,6 +145,7 @@ For technical details about the SRS algorithm, see [TECHNICAL-NOTES.md](TECHNICA
 - **Theme Toggle**: Switch between light and dark modes
 - **Mode Toggle**: Change learning mode mid-session
 - **Progress Display**: Show/hide progress indicators
+- **Show Pinyin on Open Card**: Toggle whether pinyin is displayed when the card is first shown (before flipping)
 - **Sound Effects**: Enable/disable audio feedback
 
 ### Data Management
@@ -299,7 +302,7 @@ If you encounter issues not covered in this guide:
 TM-Flash is an open-source project. For technical contributions or bug reports, refer to the project repository documentation.
 
 ### Version Information
-This guide covers TM-Flash with localStorage schema version 3. Check the browser console for current version information.
+This guide covers TM-Flash with localStorage schema version 4. Check the browser console for current version information.
 
 ---
 

@@ -54,8 +54,14 @@ Implemented [`configloader.js`](configloader.js) to load deck registry from [`de
 ## Known Limitations
 - localStorage quota (~5-10MB) limits maximum statistics storage
 - No automated testing framework
-- Audio files must be manually prepared and placed in deck folders
+- Audio files must be manually prepared and placed in deck folders with hashed filenames (e.g., word_-45950099734855537.mp3) for efficient caching
 - Cross-browser audio playback may have inconsistencies
+
+## Error Handling and Performance
+- **Graceful Degradation**: Fallback decks when config unavailable, user-friendly error banners for failed operations
+- **Loading Progress**: Session-based deck caching with progress indicators during initialization
+- **Memory Optimization**: Efficient data structures, garbage collection friendly, <2s load targets
+- **Recovery Mechanisms**: Try/catch blocks for async operations, validation of deck structure and card data integrity
 
 ## Environment Notes
 - **Development server**: Running on port 8000 (pre-launched)
@@ -80,3 +86,7 @@ Implemented [`configloader.js`](configloader.js) to load deck registry from [`de
 3. Test all four learning modes
 4. Verify stats persist after refresh
 5. Test deck switching and filters
+
+## Additional Documentation
+- [TECHNICAL-NOTES.md](TECHNICAL-NOTES.md) - Detailed technical specifications and implementation notes
+- [USER-GUIDE.md](USER-GUIDE.md) - Comprehensive user guidance and troubleshooting

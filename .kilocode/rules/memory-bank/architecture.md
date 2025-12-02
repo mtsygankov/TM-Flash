@@ -258,3 +258,16 @@ flowchart LR
 | `stats` | [`StatsView`](statsview.js) | Statistics dashboard |
 
 Navigation managed by [`Nav.show(viewId)`](nav.js:33) with state preservation for review view.
+
+## Error Recovery Mechanisms
+- **Graceful Degradation**: Fallback to FALLBACK_DECKS when config.json unavailable
+- **User-Friendly Messaging**: Error banners via [`Message.show()`](message.js) for failed operations
+- **Data Validation**: Comprehensive validation via [`Validator.validateDeck()`](validator.js) and [`Validator.validateCard()`](validator.js)
+- **Async Error Handling**: Try/catch blocks in all async operations with descriptive error logging
+
+## Performance Optimization Strategies
+- **Loading Progress Indicators**: Session-based deck caching with progress bars during initialization
+- **Efficient DOM Manipulation**: Minimal reflows, targeted updates using `textContent` over `innerHTML`
+- **Memory Management**: Garbage collection friendly data structures, <2s load targets for 1000 cards
+- **Audio Caching**: Hashed filenames for efficient browser caching and storage
+- **SRS Prioritization**: Smart card selection algorithm reducing unnecessary computations

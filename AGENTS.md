@@ -33,7 +33,7 @@
 - **DOM manipulation**: Use `textContent` instead of `innerHTML` for security; escape HTML when necessary
 - **Constants**: Define constants in `constants.js` or at module top level
 - **Imports**: No module imports/exports - all scripts loaded globally in specific order (see index.html)
-- **Script loading order**: Critical - maintain order in index.html: constants.js → storage.js → stats.js → srs.js → deckloader.js → deckselector.js → settings.js → review.js → statsview.js → search.js → nav.js → app.js
+- **Script loading order**: Critical - maintain order in index.html: chart.js → configloader.js → constants.js → storage.js → stats.js → srs.js → message.js → normalizer.js → validator.js → deckloader.js → deckselector.js → settings.js → review.js → statsview.js → search.js → filters.js → modal.js → nav.js → start.js → app.js
 - **Debugging**: Include console.log statements for debugging (following existing patterns in SRS and Review modules)
 
 ### HTML
@@ -81,7 +81,7 @@ tm-flash/
 ```
 
 ### Data Handling
-- **LocalStorage**: Use key `tmFlash` with schema_version=3; includes settings for modal controls: showProgress
+- **LocalStorage**: Use key `tmFlash` with schema_version=4; includes settings for modal controls: showProgress, showPinyin
 - **Modal Settings**: Hamburger menu modal consolidates deck selection, filters, mode toggle, and app settings
 - **def_words format**: Array of strings for word-by-word translations, e.g., ["I", "love", "you"] instead of "I love you"
 - **Stats tracking**: Separate per-mode stats for each card to support multi-mode learning
@@ -162,6 +162,12 @@ tm-flash/
 - **Branch**: All development work in `main` branch
 - **Commits**: Atomic commits following workboard ticket completion; do not commit unless explicitly asked by the user
 - **No remote**: Local development only, no remote repository required
+
+## Additional Documentation
+
+For detailed technical specifications and implementation notes, see [TECHNICAL-NOTES.md](TECHNICAL-NOTES.md).
+
+For comprehensive user guidance and troubleshooting, see [USER-GUIDE.md](USER-GUIDE.md).
 
 ## Copilot Instructions Integration
 
