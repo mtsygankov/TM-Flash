@@ -73,31 +73,8 @@ const Filters = {
       StatsView.render();
     }
 
-    // Check if start screen should be shown after filter change
-    Start.checkAndShow();
-
-    // If no card is currently selected or it's not in filtered set, select next
-    if (!App.currentCard || !filteredCards.find(card => card.card_id === App.currentCard.card_id)) {
-      App.flipped = false;
-      App.currentCard = SRS.selectNextCard(
-        filteredCards,
-        App.currentStats.cards,
-        App.currentMode
-      );
-      if (App.currentCard) {
-        Review.renderCard(App.currentCard);
-      } else {
-        Review.renderCard(null);
-        const nextReviewInfo = SRS.getNextReviewInfo(filteredCards, App.currentStats.cards, App.currentMode);
-        let message;
-        if (nextReviewInfo) {
-          message = `No cards due for review with current filters. Next review: (${nextReviewInfo.cardsInWindow} card${nextReviewInfo.cardsInWindow > 1 ? 's' : ''} in ~${nextReviewInfo.timeString}).`;
-        } else {
-          message = 'No cards due for review with current filters.';
-        }
-        Message.show('card-container', message);
-      }
-    }
+    // Always show start screen after filter change
+    Nav.show('start');
   },
 
   clearFilters() {

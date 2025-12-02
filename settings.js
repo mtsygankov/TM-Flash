@@ -26,42 +26,13 @@ const Settings = {
        App.flipped = false;
 
 
-       // Only select/render card if data is available and in review view (not during initialization)
-       if (App.currentCards && App.currentStats && Nav.currentView === 'review') {
-          // Select a new card for the new mode
-           App.currentCard = SRS.selectNextCard(
-             Filters.getFilteredCards(),
-             App.currentStats.cards,
-             App.currentMode
-           );
-
-           if (App.currentCard) {
-             Review.renderCard(App.currentCard);
-           } else {
-             Review.renderCard(null);
-               const nextReviewInfo = SRS.getNextReviewInfo(App.currentCards, App.currentStats.cards, App.currentMode);
-             let message;
-             if (nextReviewInfo) {
-                  message = `No cards due for review. Next review: (${nextReviewInfo.cardsInWindow} card${nextReviewInfo.cardsInWindow > 1 ? 's' : ''} in ~${nextReviewInfo.timeString}).`;
-             } else {
-               message = 'No cards due for review in this mode.';
-             }
-             Message.show('card-container', message);
-           }
-
-           // Update review toggles display after mode change
-           Review.updateReviewTogglesDisplay();
-       } else {
-         console.warn("❌ Conditional check failed - app data not available or not in review view");
-       }
-
        // Rerender stats if in stats view
        if (Nav.currentView === 'stats') {
          StatsView.render();
        }
 
-       // Check if start screen should be shown after mode change
-       Start.checkAndShow();
+       // Always show start screen after mode change
+       Nav.show('start');
    },
 
    toggleMode() {
