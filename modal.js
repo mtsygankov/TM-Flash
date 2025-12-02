@@ -137,6 +137,8 @@ const Modal = {
                 const settings = Storage.getSettings();
                 settings.mode = selectedMode;
                 Storage.setSettings(settings);
+                // Reset audio flag before mode change to prevent unwanted playback
+                Review.audioPlayedForCurrentCard = false;
                 // Apply the mode change
                 Settings.applyMode(selectedMode);
             });

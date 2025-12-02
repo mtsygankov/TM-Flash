@@ -285,7 +285,9 @@ const Review = {
     }
 
     // Auto-play audio for Listening mode front
-    if (!flipped && mode === 'LM-listening' && !this.audioPlayedForCurrentCard) {
+    // Only play audio if modal is not open and we're actually in review view
+    if (!flipped && mode === 'LM-listening' && !this.audioPlayedForCurrentCard &&
+        !Modal.isOpen && Nav.currentView === 'review') {
       this.playAudioForCard(App.currentCard);
       this.audioPlayedForCurrentCard = true;
     }
