@@ -66,7 +66,7 @@ const Filters = {
     App.currentFilteredCards = filteredCards;
 
     // Update review display
-    Review.updateReviewTogglesDisplay();
+    Review.updateReviewProgressBar();
 
     // Rerender stats if in stats view
     if (Nav.currentView === 'stats') {

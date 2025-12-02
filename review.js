@@ -10,9 +10,9 @@ const Review = {
         this.renderCard(App.currentCard);
       }
     });
-    // Periodic update of review toggles display
+    // Periodic update of review progress bar
     this.updateInterval = setInterval(() => {
-      this.updateReviewTogglesDisplay();
+      this.updateReviewProgressBar();
     }, 5 * 60 * 1000); // 5 minutes
   },
 
@@ -212,7 +212,7 @@ const Review = {
 
 
 
-  updateReviewTogglesDisplay() {
+  updateReviewProgressBar() {
     const dueCounts = SRS.getDueCountsByTime(
       Filters.getFilteredCards(),
       App.currentStats.cards,
@@ -367,7 +367,7 @@ const Review = {
         App.currentStats.cards,
         App.currentMode
       );
-        this.updateReviewTogglesDisplay();
+        this.updateReviewProgressBar();
         if (App.currentCard) {
           this.renderCard(App.currentCard);
           } else {

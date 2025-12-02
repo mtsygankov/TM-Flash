@@ -77,6 +77,8 @@ const Nav = {
     if (viewId === "review") {
       if (App.currentCard) {
         Review.renderCard(App.currentCard);
+        // Update progress bar when entering review view
+        Review.updateReviewProgressBar();
       } else {
         // Show message that no card is selected
         Review.renderCard(null);
