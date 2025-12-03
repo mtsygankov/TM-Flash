@@ -10,19 +10,19 @@ const Nav = {
       });
     });
 
-    // Global escape key listener for tab switching
+    // Global escape key listener for returning to start screen
     document.addEventListener("keydown", (e) => {
       // Ignore if user is typing in form elements
-      /*if ( document.activeElement.tagName === "INPUT" || 
-          document.activeElement.tagName === "TEXTAREA" || 
+      /*if ( document.activeElement.tagName === "INPUT" ||
+          document.activeElement.tagName === "TEXTAREA" ||
           document.activeElement.tagName === "SELECT") {
         return;
       }*/
-      // Switch to review tab if not already there
-      if (e.code === "Escape" && this.currentView !== "review") {
+      // Return to start screen if not already there
+      if (e.code === "Escape" && this.currentView !== "start") {
         e.preventDefault();  // Prevent any default escape behavior
-        this.show("review");
-        // Blur active form elements to allow review keyboard shortcuts
+        this.show("start");
+        // Blur active form elements to allow start screen interaction
         if (document.activeElement && (document.activeElement.tagName === "INPUT" || document.activeElement.tagName === "SELECT")) {
           document.activeElement.blur();
         }
@@ -82,7 +82,7 @@ const Nav = {
       } else {
         // Show message that no card is selected
         Review.renderCard(null);
-        Message.show('review', 'No card selected. Use the Start screen or answer cards to begin review.');
+        Message.show('review', 'No card selected. Use the Start screen to begin review.');
       }
     }
   },
