@@ -86,6 +86,7 @@ const Start = {
       App.currentMode
     );
     App.flipped = false;
+    App.sessionStarted = true;
 
     // Transition to review view
     Nav.show('review');

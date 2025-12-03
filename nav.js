@@ -10,7 +10,7 @@ const Nav = {
       });
     });
 
-    // Global escape key listener for returning to start screen
+    // Global escape key listener for returning to review
     document.addEventListener("keydown", (e) => {
       // Ignore if user is typing in form elements
       /*if ( document.activeElement.tagName === "INPUT" ||
@@ -18,11 +18,11 @@ const Nav = {
           document.activeElement.tagName === "SELECT") {
         return;
       }*/
-      // Return to start screen if not already there
-      if (e.code === "Escape" && this.currentView !== "start") {
+      // Return to review if not already there
+      if (e.code === "Escape" && this.currentView !== "review") {
         e.preventDefault();  // Prevent any default escape behavior
-        this.show("start");
-        // Blur active form elements to allow start screen interaction
+        this.show("review");
+        // Blur active form elements to allow review interaction
         if (document.activeElement && (document.activeElement.tagName === "INPUT" || document.activeElement.tagName === "SELECT")) {
           document.activeElement.blur();
         }
@@ -80,9 +80,22 @@ const Nav = {
         // Update progress bar when entering review view
         Review.updateReviewProgressBar();
       } else {
-        // Show message that no card is selected
-        Review.renderCard(null);
-        Message.show('review', 'No card selected. Use the Start screen to begin review.');
+        if (App.sessionStarted) {
+          // Session started but no cards left, show completion message
+          Review.renderCard(null);
+          const nextReviewInfo = SRS.getNextReviewInfo(Filters.getFilteredCards(), App.currentStats.cards, App.currentMode);
+          let message;
+          if (nextReviewInfo) {
+            message = `No cards due for review with current filters. Next review: (${nextReviewInfo.cardsInWindow} card${nextReviewInfo.cardsInWindow > 1 ? 's' : ''} in ~${nextReviewInfo.timeString}).`;
+          } else {
+            message = 'No cards due for review with current filters.';
+          }
+          Message.show('review', message);
+        } else {
+          // No active session, show start screen
+          Nav.show('start');
+          return;
+        }
       }
     }
   },

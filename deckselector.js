@@ -215,6 +215,9 @@ const DeckSelector = {
           App.currentStats = syncedStats;
           App.currentDeckId = deckId;
           App.flipped = false;
+          // End any active review session when deck changes
+          App.currentCard = null;
+          App.sessionStarted = false;
 
           // Load saved filters for this deck
           Filters.loadSavedFilters();

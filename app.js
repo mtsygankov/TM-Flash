@@ -6,6 +6,7 @@ const App = {
   currentCard: null,
   flipped: false,
    currentMode: DEFAULT_MODE.id,
+  sessionStarted: false,
   currentDeckId: null,
   savedReviewCardId: null,
   savedReviewFlipped: false,

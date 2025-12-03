@@ -65,6 +65,10 @@ const Filters = {
     // Update app state with filtered cards
     App.currentFilteredCards = filteredCards;
 
+    // End any active review session when filters change
+    App.currentCard = null;
+    App.sessionStarted = false;
+
     // Update review display
     Review.updateReviewProgressBar();
 
