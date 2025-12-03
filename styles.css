@@ -866,6 +866,12 @@ h2 {
     transform: scale(0.98);
 }
 
+#card-table .play-audio-btn.playing {
+    background-color: #28a745 !important;
+    color: white !important;
+    border-color: #28a745 !important;
+}
+
 /* Card table audio row styles */
 #card-table .row-audio {
     height: 2.5rem;

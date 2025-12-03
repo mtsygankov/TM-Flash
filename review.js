@@ -178,7 +178,7 @@ const Review = {
     if (playAudioBtn) {
       playAudioBtn.addEventListener('click', (e) => {
         e.stopPropagation();
-        this.playAudioForCard(App.currentCard);
+        this.playAudioForCard(App.currentCard, playAudioBtn);
       });
     }
 
@@ -325,22 +325,23 @@ const Review = {
     }
   },
 
-  playAudioForCard(card) {
+  playAudioForCard(card, button) {
     if (!card || !card.audio) return;
 
     const audioPath = App.currentDeck?.audio_path || '';
     const fullUrl = audioPath + '/' + card.audio;
 
+    // Check if audio file exists before playing
     fetch(fullUrl)
       .then(response => {
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
-        const audio = new Audio(fullUrl);
-        return audio.play();
+        // Use AudioPlayer to handle playback with overlap prevention
+        AudioPlayer.play(fullUrl, button);
       })
       .catch(error => {
-        console.error("Error playing audio:", error);
+        console.error("Error loading audio:", error);
       });
   },
 
