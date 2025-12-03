@@ -890,17 +890,19 @@ h2 {
 }
 
 #card-table .play-audio-btn {
-    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    font-size: 3rem;
     background-color: transparent;
     color: #007bff;
     border: 1px solid #6c757da0; /* Grey outline instead of blue */
-    padding: clamp(0.75rem, 2vw, 1.5rem) clamp(1.5rem, 4vw, 2.5rem);
+    padding: 0.5rem;
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.2s ease;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    width: 9rem;
+    height: auto;
 }
 
 #card-table .play-audio-btn:hover {
