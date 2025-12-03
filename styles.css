@@ -843,14 +843,14 @@ h2 {
 .play-audio-btn {
     background-color: transparent;
     color: #007bff;
-    border: 2px solid #6c757d; /* Grey outline instead of blue */
+    border: 1px solid #6c757da0; /* Grey outline instead of blue */
     padding: 0.6rem; /* Increased padding for larger size */
     border-radius: 50%;
-    font-size: 1.5rem; /* 50% bigger than 1rem */
+    font-size: 1rem; /* 50% bigger than 1rem */
     cursor: pointer;
     transition: all 0.2s ease;
-    width: 3rem; /* 50% bigger than 2rem */
-    height: 3rem; /* 50% bigger than 2rem */
+    width: 1.5rem; /* 50% bigger than 2rem */
+    height: 1.5rem; /* 50% bigger than 2rem */
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -890,16 +890,14 @@ h2 {
 }
 
 #card-table .play-audio-btn {
-    font-size: 2.7rem; /* 50% bigger than 1.8rem */
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
     background-color: transparent;
     color: #007bff;
     border: 1px solid #6c757da0; /* Grey outline instead of blue */
-    padding: 0.6rem; /* Increased padding for larger size */
-    border-radius: 50%;
+    padding: clamp(0.75rem, 2vw, 1.5rem) clamp(1.5rem, 4vw, 2.5rem);
+    border-radius: 8px;
     cursor: pointer;
     transition: all 0.2s ease;
-    width: 3.75rem; /* 50% bigger than 2.5rem */
-    height: 3.75rem; /* 50% bigger than 2.5rem */
     display: inline-flex;
     align-items: center;
     justify-content: center;
