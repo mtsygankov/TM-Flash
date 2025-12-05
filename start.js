@@ -88,8 +88,17 @@ const Start = {
     App.flipped = false;
     App.sessionStarted = true;
 
-    // Transition to review view
-    Nav.show('review');
+    // If in Listening mode, show the popup BEFORE transitioning to review view
+    if (App.currentMode === 'LM-listening' && App.currentCard) {
+      Review.showListeningPopup();
+      // Small delay to ensure popup is visible before view transition
+      setTimeout(() => {
+        Nav.show('review');
+      }, 100);
+    } else {
+      // Normal transition for other modes
+      Nav.show('review');
+    }
   },
 
 };

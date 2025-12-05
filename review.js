@@ -1,6 +1,11 @@
 // Review module
 const Review = {
-  audioPlayedForCurrentCard: false,
+   audioPlayedForCurrentCard: false,
+
+   // Listening popup state
+   listeningPopupVisible: false,
+   listeningCountdownInterval: null,
+   listeningTimeout: null,
 
   init() {
     this.bindEvents();
@@ -308,12 +313,22 @@ const Review = {
       buttons.style.display = flipped ? "flex" : "none";
     }
 
-    // Auto-play audio for Listening mode front
+    // Dismiss listening popup when card is flipped
+    if (flipped && this.listeningPopupVisible) {
+      this.dismissListeningPopup();
+    }
+
+    // Auto-play audio for Listening mode front (only if not using popup)
     // Only play audio if modal is not open and we're actually in review view
+    // AND only if we're not in the listening popup sequence
     if (!flipped && mode === 'LM-listening' && !this.audioPlayedForCurrentCard &&
         !Modal.isOpen && Nav.currentView === 'review') {
-      this.playAudioForCard(App.currentCard);
-      this.audioPlayedForCurrentCard = true;
+      // Don't play audio here if we're using the popup sequence
+      // Audio will be played by the popup countdown sequence instead
+      if (!this.listeningPopupVisible) {
+        this.playAudioForCard(App.currentCard);
+        this.audioPlayedForCurrentCard = true;
+      }
     }
 
     // Update pinyin visibility based on flip state and setting
@@ -384,6 +399,91 @@ const Review = {
     this.advanceToNextCard();
   },
 
+  // Listening popup methods
+  showListeningPopup() {
+    if (this.listeningPopupVisible) return;
+
+    const popup = document.getElementById('listening-popup');
+    const countdownEl = document.querySelector('.countdown-timer');
+    if (!popup || !countdownEl) return;
+
+    // Mark popup as visible BEFORE rendering the card to prevent immediate audio playback
+    this.listeningPopupVisible = true;
+    popup.style.display = 'flex';
+
+    // Render the card so it's visible behind the popup
+    if (App.currentCard) {
+      this.renderCard(App.currentCard);
+    }
+
+    let countdown = 3;
+    countdownEl.textContent = countdown;
+
+    // Clear any existing timers
+    this.clearListeningTimers();
+
+    // 3-2-1 countdown
+    this.listeningCountdownInterval = setInterval(() => {
+      countdown--;
+      if (countdown > 0) {
+        countdownEl.textContent = countdown;
+      } else {
+        clearInterval(this.listeningCountdownInterval);
+        this.startAudioPlayback();
+      }
+    }, 1000);
+  },
+
+  startAudioPlayback() {
+    const countdownEl = document.querySelector('.countdown-timer');
+    if (!countdownEl) return;
+
+    // Play audio
+    this.playAudioForCard(App.currentCard);
+
+    // Start 10-second listening countdown
+    let listeningTime = 10;
+    countdownEl.textContent = listeningTime;
+
+    this.listeningCountdownInterval = setInterval(() => {
+      listeningTime--;
+      countdownEl.textContent = listeningTime;
+
+      if (listeningTime <= 0) {
+        this.dismissListeningPopup();
+        this.toggleFlip(); // Auto-flip to show answer
+      }
+    }, 1000);
+  },
+
+  dismissListeningPopup() {
+    if (!this.listeningPopupVisible) return;
+
+    const popup = document.getElementById('listening-popup');
+    if (popup) {
+      popup.style.display = 'none';
+    }
+
+    this.listeningPopupVisible = false;
+    this.clearListeningTimers();
+
+    // Render the card now that popup is dismissed
+    if (App.currentCard) {
+      this.renderCard(App.currentCard);
+    }
+  },
+
+  clearListeningTimers() {
+    if (this.listeningCountdownInterval) {
+      clearInterval(this.listeningCountdownInterval);
+      this.listeningCountdownInterval = null;
+    }
+    if (this.listeningTimeout) {
+      clearTimeout(this.listeningTimeout);
+      this.listeningTimeout = null;
+    }
+  },
+
   advanceToNextCard() {
     App.flipped = false;
     this.audioPlayedForCurrentCard = false; // Reset audio flag for new card
@@ -394,7 +494,12 @@ const Review = {
       );
         this.updateReviewProgressBar();
         if (App.currentCard) {
-          this.renderCard(App.currentCard);
+          // Check if Listening mode - show popup instead of rendering immediately
+          if (App.currentMode === 'LM-listening') {
+            this.showListeningPopup();
+          } else {
+            this.renderCard(App.currentCard);
+          }
           } else {
           this.renderCard(null); // Clear the table
            const nextReviewInfo = SRS.getNextReviewInfo(Filters.getFilteredCards(), App.currentStats.cards, App.currentMode);
@@ -427,6 +532,30 @@ const Review = {
       this.onIncorrect();
     });
 
+    // Listening popup countdown click handler
+    const countdownTimer = document.querySelector('.countdown-timer');
+    if (countdownTimer) {
+      countdownTimer.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (this.listeningPopupVisible) {
+          this.dismissListeningPopup();
+          // Show the front of the card (don't flip)
+        }
+      });
+
+      // Keyboard navigation for countdown timer
+      countdownTimer.addEventListener('keydown', (e) => {
+        if (e.code === 'Enter' || e.code === 'Space') {
+          e.preventDefault();
+          e.stopPropagation();
+          if (this.listeningPopupVisible) {
+            this.dismissListeningPopup();
+            // Show the front of the card (don't flip)
+          }
+        }
+      });
+    }
+
     // Keyboard
     document.addEventListener("keydown", (e) => {
       if (
@@ -434,32 +563,37 @@ const Review = {
         document.activeElement.tagName === "SELECT"
       )
         return;
-       if (e.code === "Space") {
-         e.preventDefault();
-         if (!App.flipped) {
-           this.toggleFlip();
-         }
-       } else if (e.code === "ArrowRight") {
-         if (App.flipped) {
-           e.preventDefault();
-           this.onCorrect();
-         }
-       } else if (e.code === "ArrowLeft") {
-         if (App.flipped) {
-           e.preventDefault();
-           this.onIncorrect();
-         }
-       } else if (e.code === "ArrowUp") {
-         if (App.flipped) {
-           e.preventDefault();
-           const pinyinRow = document.querySelector('.row-pinyin');
-           if (pinyinRow) {
-             const isVisible = pinyinRow.style.visibility !== 'hidden';
-             pinyinRow.style.visibility = isVisible ? 'hidden' : 'visible';
-             pinyinRow.style.pointerEvents = isVisible ? 'none' : 'auto';
-           }
-         }
-       }
+
+      // Space key: dismiss popup or flip card
+      if (e.code === "Space") {
+        e.preventDefault();
+        if (this.listeningPopupVisible) {
+          this.dismissListeningPopup();
+          // Show the front of the card (don't flip)
+        } else if (!App.flipped) {
+          this.toggleFlip();
+        }
+      } else if (e.code === "ArrowRight") {
+        if (App.flipped) {
+          e.preventDefault();
+          this.onCorrect();
+        }
+      } else if (e.code === "ArrowLeft") {
+        if (App.flipped) {
+          e.preventDefault();
+          this.onIncorrect();
+        }
+      } else if (e.code === "ArrowUp") {
+        if (App.flipped) {
+          e.preventDefault();
+          const pinyinRow = document.querySelector('.row-pinyin');
+          if (pinyinRow) {
+            const isVisible = pinyinRow.style.visibility !== 'hidden';
+            pinyinRow.style.visibility = isVisible ? 'hidden' : 'visible';
+            pinyinRow.style.pointerEvents = isVisible ? 'none' : 'auto';
+          }
+        }
+      }
     });
 
     // Swipe and click
