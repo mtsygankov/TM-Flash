@@ -422,6 +422,15 @@ const Review = {
     // Clear any existing timers
     this.clearListeningTimers();
 
+    // Make entire popup clickable to dismiss and flip card
+    popup.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (this.listeningPopupVisible) {
+        this.dismissListeningPopup();
+        this.toggleFlip(); // Flip to show answer when user clicks anywhere on popup
+      }
+    });
+
     // 3-2-1 countdown
     this.listeningCountdownInterval = setInterval(() => {
       countdown--;
@@ -539,7 +548,7 @@ const Review = {
         e.stopPropagation();
         if (this.listeningPopupVisible) {
           this.dismissListeningPopup();
-          // Show the front of the card (don't flip)
+          this.toggleFlip(); // Flip to show answer when user aborts countdown
         }
       });
 
@@ -550,7 +559,7 @@ const Review = {
           e.stopPropagation();
           if (this.listeningPopupVisible) {
             this.dismissListeningPopup();
-            // Show the front of the card (don't flip)
+            this.toggleFlip(); // Flip to show answer when user aborts countdown
           }
         }
       });
@@ -569,7 +578,7 @@ const Review = {
         e.preventDefault();
         if (this.listeningPopupVisible) {
           this.dismissListeningPopup();
-          // Show the front of the card (don't flip)
+          this.toggleFlip(); // Flip to show answer when user aborts countdown
         } else if (!App.flipped) {
           this.toggleFlip();
         }
