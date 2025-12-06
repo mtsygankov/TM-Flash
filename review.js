@@ -318,18 +318,8 @@ const Review = {
       this.dismissListeningPopup();
     }
 
-    // Auto-play audio for Listening mode front (only if not using popup)
-    // Only play audio if modal is not open and we're actually in review view
-    // AND only if we're not in the listening popup sequence
-    if (!flipped && mode === 'LM-listening' && !this.audioPlayedForCurrentCard &&
-        !Modal.isOpen && Nav.currentView === 'review') {
-      // Don't play audio here if we're using the popup sequence
-      // Audio will be played by the popup countdown sequence instead
-      if (!this.listeningPopupVisible) {
-        this.playAudioForCard(App.currentCard);
-        this.audioPlayedForCurrentCard = true;
-      }
-    }
+    // Remove auto-play audio behavior - audio should only play when play button is clicked
+    // Keep the audioPlayedForCurrentCard flag for potential future use
 
     // Update pinyin visibility based on flip state and setting
     const pinyinRow = document.querySelector('.row-pinyin');
@@ -444,26 +434,26 @@ const Review = {
   },
 
   startAudioPlayback() {
-    const countdownEl = document.querySelector('.countdown-timer');
-    if (!countdownEl) return;
+   const countdownEl = document.querySelector('.countdown-timer');
+   if (!countdownEl) return;
 
-    // Play audio
-    this.playAudioForCard(App.currentCard);
+   // Play audio on the front side (during popup countdown) - this is the desired behavior for listening mode
+   this.playAudioForCard(App.currentCard);
 
-    // Start 10-second listening countdown
-    let listeningTime = 10;
-    countdownEl.textContent = listeningTime;
+   // Start 10-second listening countdown
+   let listeningTime = 10;
+   countdownEl.textContent = listeningTime;
 
-    this.listeningCountdownInterval = setInterval(() => {
-      listeningTime--;
-      countdownEl.textContent = listeningTime;
+   this.listeningCountdownInterval = setInterval(() => {
+     listeningTime--;
+     countdownEl.textContent = listeningTime;
 
-      if (listeningTime <= 0) {
-        this.dismissListeningPopup();
-        this.toggleFlip(); // Auto-flip to show answer
-      }
-    }, 1000);
-  },
+     if (listeningTime <= 0) {
+       this.dismissListeningPopup();
+       this.toggleFlip(); // Auto-flip to show answer
+     }
+   }, 1000);
+ },
 
   dismissListeningPopup() {
     if (!this.listeningPopupVisible) return;
