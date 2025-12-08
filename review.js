@@ -409,11 +409,7 @@ const Review = {
   showCountdownSector(show) {
     const countdownEl = document.querySelector('.old-film-countdown');
     if (countdownEl) {
-      if (show) {
-        countdownEl.classList.remove('hidden-sector');
-      } else {
-        countdownEl.classList.add('hidden-sector');
-      }
+      countdownEl.style.display = show ? 'flex' : 'none';
     }
   },
 
@@ -454,6 +450,12 @@ const Review = {
     this.showCountdownSector(true);
     this.showWaveform(false);
 
+    // Remove centering class
+    const popup = document.getElementById('listening-popup');
+    if (popup) {
+      popup.querySelector('.popup-content').classList.remove('audio-playing');
+    }
+
     let countdown = 3;
     this.updateCountdownDigit(countdown);
 
@@ -473,6 +475,12 @@ const Review = {
     this.updatePhaseText('playing audio');
     this.showCountdownSector(false);
     this.showWaveform(true);
+
+    // Center the waveform in the popup
+    const popup = document.getElementById('listening-popup');
+    if (popup) {
+      popup.querySelector('.popup-content').classList.add('audio-playing');
+    }
 
     // Play audio using AudioPlayer
     const audioPath = App.currentDeck?.audio_path || '';
@@ -512,6 +520,12 @@ const Review = {
     this.updatePhaseText('card opens in');
     this.showCountdownSector(true);
     this.showWaveform(false);
+
+    // Remove centering class
+    const popupEl = document.getElementById('listening-popup');
+    if (popupEl) {
+      popupEl.querySelector('.popup-content').classList.remove('audio-playing');
+    }
 
     let countdown = 10;
     this.updateCountdownDigit(countdown);
@@ -555,6 +569,8 @@ const Review = {
         popup.removeEventListener('click', this.popupDismissHandler);
         this.popupDismissHandler = null;
       }
+      // Remove centering class
+      popup.querySelector('.popup-content').classList.remove('audio-playing');
     }
 
     this.listeningPopupVisible = false;
