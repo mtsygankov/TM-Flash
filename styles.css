@@ -875,12 +875,12 @@ h2 {
 /* Card table audio row styles */
 #card-table .row-audio {
     height: 2.5rem;
-    visibility: hidden;
+    display: none;
     pointer-events: none;
 }
 
 #card-table.flipped .row-audio {
-    visibility: visible;
+    display: table-row;
     pointer-events: auto;
 }
 
