@@ -4,8 +4,10 @@ const Review = {
 
    // Listening popup state
    listeningPopupVisible: false,
+   listeningPhase: null, // 'countdown-to-audio', 'audio-playing', 'countdown-to-card'
    listeningCountdownInterval: null,
    listeningTimeout: null,
+   currentAudioElement: null, // Track current audio for timing
 
   init() {
     this.bindEvents();
@@ -389,16 +391,49 @@ const Review = {
     this.advanceToNextCard();
   },
 
+  // Listening popup helper methods
+  updatePhaseText(text) {
+    const phaseTextEl = document.querySelector('.phase-text');
+    if (phaseTextEl) {
+      phaseTextEl.textContent = text;
+    }
+  },
+
+  updateCountdownDigit(digit) {
+    const digitEl = document.querySelector('.countdown-digit');
+    if (digitEl) {
+      digitEl.textContent = digit;
+    }
+  },
+
+  showCountdownSector(show) {
+    const countdownEl = document.querySelector('.old-film-countdown');
+    if (countdownEl) {
+      if (show) {
+        countdownEl.classList.remove('hidden-sector');
+      } else {
+        countdownEl.classList.add('hidden-sector');
+      }
+    }
+  },
+
+  showWaveform(show) {
+    const waveformEl = document.querySelector('.waveform-container');
+    if (waveformEl) {
+      waveformEl.style.display = show ? 'flex' : 'none';
+    }
+  },
+
   // Listening popup methods
   showListeningPopup() {
     if (this.listeningPopupVisible) return;
 
     const popup = document.getElementById('listening-popup');
-    const countdownEl = document.querySelector('.countdown-timer');
-    if (!popup || !countdownEl) return;
+    if (!popup) return;
 
     // Mark popup as visible BEFORE rendering the card to prevent immediate audio playback
     this.listeningPopupVisible = true;
+    this.listeningPhase = 'countdown-to-audio';
     popup.style.display = 'flex';
 
     // Render the card so it's visible behind the popup
@@ -406,26 +441,26 @@ const Review = {
       this.renderCard(App.currentCard);
     }
 
-    let countdown = 3;
-    countdownEl.textContent = countdown;
-
     // Clear any existing timers
     this.clearListeningTimers();
 
-    // Make entire popup clickable to dismiss and flip card
-    popup.addEventListener('click', (e) => {
-      e.stopPropagation();
-      if (this.listeningPopupVisible) {
-        this.dismissListeningPopup();
-        this.toggleFlip(); // Flip to show answer when user clicks anywhere on popup
-      }
-    });
+    // Phase 1: Countdown to audio (3 seconds)
+    this.startCountdownToAudio();
+  },
 
-    // 3-2-1 countdown
+  startCountdownToAudio() {
+    this.listeningPhase = 'countdown-to-audio';
+    this.updatePhaseText('audio in');
+    this.showCountdownSector(true);
+    this.showWaveform(false);
+
+    let countdown = 3;
+    this.updateCountdownDigit(countdown);
+
     this.listeningCountdownInterval = setInterval(() => {
       countdown--;
       if (countdown > 0) {
-        countdownEl.textContent = countdown;
+        this.updateCountdownDigit(countdown);
       } else {
         clearInterval(this.listeningCountdownInterval);
         this.startAudioPlayback();
@@ -434,26 +469,80 @@ const Review = {
   },
 
   startAudioPlayback() {
-   const countdownEl = document.querySelector('.countdown-timer');
-   if (!countdownEl) return;
+    this.listeningPhase = 'audio-playing';
+    this.updatePhaseText('playing audio');
+    this.showCountdownSector(false);
+    this.showWaveform(true);
 
-   // Play audio on the front side (during popup countdown) - this is the desired behavior for listening mode
-   this.playAudioForCard(App.currentCard);
+    // Play audio using AudioPlayer
+    const audioPath = App.currentDeck?.audio_path || '';
+    const fullUrl = audioPath + '/' + App.currentCard.audio;
 
-   // Start 10-second listening countdown
-   let listeningTime = 10;
-   countdownEl.textContent = listeningTime;
+    // Check if audio file exists before playing
+    fetch(fullUrl)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        // Use AudioPlayer to handle playback
+        AudioPlayer.play(fullUrl);
+        // Track the audio element from AudioPlayer
+        this.currentAudioElement = AudioPlayer.currentAudio;
+        // Listen for audio end (AudioPlayer handles its own ended event, so we need to add another listener)
+        if (this.currentAudioElement) {
+          this.currentAudioElement.addEventListener('ended', () => {
+            this.handleAudioEnd();
+          });
+        }
+      })
+      .catch(error => {
+        console.error("Error loading audio:", error);
+        // If audio fails, proceed to countdown anyway
+        this.handleAudioEnd();
+      });
+  },
 
-   this.listeningCountdownInterval = setInterval(() => {
-     listeningTime--;
-     countdownEl.textContent = listeningTime;
+  handleAudioEnd() {
+    this.currentAudioElement = null;
+    this.startCountdownToCard();
+  },
 
-     if (listeningTime <= 0) {
-       this.dismissListeningPopup();
-       this.toggleFlip(); // Auto-flip to show answer
-     }
-   }, 1000);
- },
+  startCountdownToCard() {
+    this.listeningPhase = 'countdown-to-card';
+    this.updatePhaseText('card opens in');
+    this.showCountdownSector(true);
+    this.showWaveform(false);
+
+    let countdown = 10;
+    this.updateCountdownDigit(countdown);
+
+    // Make popup clickable to dismiss during this phase
+    const popup = document.getElementById('listening-popup');
+    if (popup) {
+      const dismissHandler = (e) => {
+        e.stopPropagation();
+        if (this.listeningPhase === 'countdown-to-card') {
+          this.dismissListeningPopup();
+          this.toggleFlip();
+        }
+      };
+
+      popup.addEventListener('click', dismissHandler);
+      // Store handler for cleanup
+      this.popupDismissHandler = dismissHandler;
+    }
+
+    this.listeningCountdownInterval = setInterval(() => {
+      countdown--;
+      this.updateCountdownDigit(countdown);
+
+      if (countdown <= 0) {
+        clearInterval(this.listeningCountdownInterval);
+        this.dismissListeningPopup();
+        this.toggleFlip(); // Auto-flip to show answer
+      }
+    }, 1000);
+  },
 
   dismissListeningPopup() {
     if (!this.listeningPopupVisible) return;
@@ -461,10 +550,22 @@ const Review = {
     const popup = document.getElementById('listening-popup');
     if (popup) {
       popup.style.display = 'none';
+      // Remove click handler if it exists
+      if (this.popupDismissHandler) {
+        popup.removeEventListener('click', this.popupDismissHandler);
+        this.popupDismissHandler = null;
+      }
     }
 
     this.listeningPopupVisible = false;
+    this.listeningPhase = null;
     this.clearListeningTimers();
+
+    // Stop any playing audio
+    if (this.currentAudioElement) {
+      this.currentAudioElement.pause();
+      this.currentAudioElement = null;
+    }
 
     // Render the card now that popup is dismissed
     if (App.currentCard) {
@@ -531,23 +632,23 @@ const Review = {
       this.onIncorrect();
     });
 
-    // Listening popup countdown click handler
-    const countdownTimer = document.querySelector('.countdown-timer');
-    if (countdownTimer) {
-      countdownTimer.addEventListener('click', (e) => {
+    // Listening popup countdown click handler (only for countdown-to-card phase)
+    const countdownDigit = document.querySelector('.countdown-digit');
+    if (countdownDigit) {
+      countdownDigit.addEventListener('click', (e) => {
         e.stopPropagation();
-        if (this.listeningPopupVisible) {
+        if (this.listeningPopupVisible && this.listeningPhase === 'countdown-to-card') {
           this.dismissListeningPopup();
           this.toggleFlip(); // Flip to show answer when user aborts countdown
         }
       });
 
-      // Keyboard navigation for countdown timer
-      countdownTimer.addEventListener('keydown', (e) => {
+      // Keyboard navigation for countdown digit
+      countdownDigit.addEventListener('keydown', (e) => {
         if (e.code === 'Enter' || e.code === 'Space') {
           e.preventDefault();
           e.stopPropagation();
-          if (this.listeningPopupVisible) {
+          if (this.listeningPopupVisible && this.listeningPhase === 'countdown-to-card') {
             this.dismissListeningPopup();
             this.toggleFlip(); // Flip to show answer when user aborts countdown
           }
@@ -566,10 +667,10 @@ const Review = {
       // Space key: dismiss popup or flip card
       if (e.code === "Space") {
         e.preventDefault();
-        if (this.listeningPopupVisible) {
+        if (this.listeningPopupVisible && this.listeningPhase === 'countdown-to-card') {
           this.dismissListeningPopup();
           this.toggleFlip(); // Flip to show answer when user aborts countdown
-        } else if (!App.flipped) {
+        } else if (!this.listeningPopupVisible && !App.flipped) {
           this.toggleFlip();
         }
       } else if (e.code === "ArrowRight") {

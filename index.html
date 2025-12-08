@@ -78,8 +78,17 @@
                 <!-- Listening Mode Popup -->
                 <div id="listening-popup" class="listening-popup" style="display: none;" aria-label="Listening mode preparation" role="dialog">
                     <div class="popup-content">
-                        <div class="listen-text">Listen!</div>
-                        <div class="waveform-container" aria-label="Audio waveform animation">
+                        <!-- Phase text that changes -->
+                        <div class="phase-text">audio in</div>
+
+                        <!-- Old Film Countdown container -->
+                        <div class="old-film-countdown">
+                            <div class="countdown-digit">3</div>
+                            <div class="countdown-sector"></div>
+                        </div>
+
+                        <!-- Soundwave (shown only during audio playback) -->
+                        <div class="waveform-container" aria-label="Audio waveform animation" style="display: none;">
                             <div class="waveform-bar"></div>
                             <div class="waveform-bar"></div>
                             <div class="waveform-bar"></div>
@@ -89,7 +98,6 @@
                             <div class="waveform-bar"></div>
                             <div class="waveform-bar"></div>
                         </div>
-                        <div class="countdown-timer" aria-label="Countdown timer - click or press space to skip" role="button" tabindex="0">3</div>
                     </div>
                 </div>
             </section>
