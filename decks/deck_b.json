@@ -5,7 +5,7 @@
     "version": "2",
     "description": "Common Chinese expressions for beginners (based on That's Mandarin Level 1 course vocabulary)",
     "updated": "2025-11-21T11:08:54.238632",
-    "audio_path": "decks/deck_b_audio/",
+    "audio_path": "decks/deck_b_audio",
     "cards": [
         {
             "card_id": "expr_4873373676193209515",

@@ -17,7 +17,7 @@
         "Expressions": "Common phrases, greetings, polite expressions, interjections, and conversational formulas. Examples: hello, thank you, sorry, goodbye, please, yes, no, okay, excuse me, how are you."
     },
     "updated": "2025-11-21T11:20:14.489439",
-    "audio_path": "decks/deck_c_audio/",
+    "audio_path": "decks/deck_c_audio",
     "cards": [
         {
             "card_id": "hsk13_851144c2",

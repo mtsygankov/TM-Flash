@@ -5,7 +5,7 @@
     "version": "2",
     "description": "Basic Chinese words for beginners (based on That's Mandarin Level 1 course vocabulary)",
     "updated": "2025-11-22T05:05:29.444901",
-    "audio_path": "decks/deck_a_audio/",
+    "audio_path": "decks/deck_a_audio",
     "cards": [
         {
             "card_id": "word_-1055276680526174479",
