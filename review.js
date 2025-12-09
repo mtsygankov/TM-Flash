@@ -709,6 +709,13 @@ const Review = {
             pinyinRow.style.pointerEvents = isVisible ? 'none' : 'auto';
           }
         }
+      } else if (e.code === "ArrowDown") {
+        if (App.flipped && App.currentCard && App.currentCard.audio) {
+          e.preventDefault();
+          // Find the play audio button to pass to playAudioForCard for visual feedback
+          const playAudioBtn = document.querySelector('.play-audio-btn');
+          this.playAudioForCard(App.currentCard, playAudioBtn);
+        }
       }
     });
 

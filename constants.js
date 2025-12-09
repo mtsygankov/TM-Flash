@@ -39,7 +39,7 @@ const LEARNING_MODES = {
   'LM-meaning-to-chinese': {
     id: 'LM-meaning-to-chinese',
     name: 'Meaning to Chinese',
-    description: 'Forces active production of Chinese words/phrases from meaning',
+    description: 'Active production of Chinese words/phrases from meaning',
     frontFields: ['def'],
     backFields: ['hanzi', 'pinyin', 'audio'],
     icon: '💭'
