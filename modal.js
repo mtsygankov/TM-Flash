@@ -41,7 +41,7 @@ const Modal = {
         });
 
         // Settings checkboxes
-        const settingIds = ['setting-show-pinyin', 'setting-show-progress'];
+        const settingIds = ['setting-show-pinyin', 'setting-show-progress', 'setting-play-audio-on-flip'];
         settingIds.forEach(id => {
             const checkbox = document.getElementById(id);
             if (checkbox) {
@@ -265,6 +265,11 @@ const Modal = {
             showProgress.checked = settings.showProgress !== false; // Default to true
         }
 
+        const playAudioOnFlip = document.getElementById('setting-play-audio-on-flip');
+        if (playAudioOnFlip) {
+            playAudioOnFlip.checked = settings.playAudioOnFlip || false; // Default to false
+        }
+
         this.applySettings();
     },
 
@@ -274,6 +279,7 @@ const Modal = {
 
         settings.showPinyin = document.getElementById('setting-show-pinyin')?.checked || false;
         settings.showProgress = document.getElementById('setting-show-progress')?.checked || false;
+        settings.playAudioOnFlip = document.getElementById('setting-play-audio-on-flip')?.checked || false;
 
         Storage.setSettings(settings);
         this.applySettings();

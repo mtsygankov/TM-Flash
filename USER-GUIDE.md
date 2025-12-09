@@ -146,6 +146,7 @@ Decks are dynamically configured via `decks/config.json` and can be enabled/disa
 - **Mode Toggle**: Change learning mode mid-session
 - **Progress Display**: Show/hide progress indicators
 - **Show Pinyin on Open Card**: Toggle whether pinyin is displayed when the card is first shown (before flipping)
+- **Play Audio After Card Flipping**: Automatically play pronunciation audio when a card is flipped (if audio is available)
 - **Sound Effects**: Enable/disable audio feedback
 
 ### Data Management
@@ -175,6 +176,14 @@ Decks are dynamically configured via `decks/config.json` and can be enabled/disa
 - Ensure audio files exist in deck subdirectories
 - Try different browsers (Chrome recommended)
 - Check volume settings
+- Verify the "Play audio after card flipping" setting is enabled if you want automatic playback
+
+#### Audio Plays Automatically When I Don't Want It
+**Problem**: Audio plays automatically when flipping cards
+**Solutions**:
+- Open settings modal (☰ menu)
+- Disable the "Play audio after card flipping" checkbox
+- Audio will only play when you manually click the speaker button
 
 #### Data Corruption or Loss
 **Problem**: Statistics or progress data is lost

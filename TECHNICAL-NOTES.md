@@ -77,6 +77,22 @@ Critical script loading order is maintained in `index.html`:
 - **Audio Integration**: Pronunciation playback for supported cards
 - **Progress Visualization**: Real-time progress bar and session statistics
 
+### Audio Playback System
+- **AudioPlayer Module**: Manages audio playback with overlap prevention and visual feedback
+- **Play Button**: Manual audio playback via speaker icon (🔊)
+- **Keyboard Shortcut**: Down arrow key plays audio when card is flipped
+- **Listening Mode**: Automatic audio playback with countdown
+- **Auto-Play on Flip**: Optional automatic playback when card is flipped (controlled by `playAudioOnFlip` setting)
+
+#### Auto-Play on Flip Feature
+**Implementation Details**:
+- **Setting**: `playAudioOnFlip` in storage schema (default: false)
+- **Trigger**: Card flip event in `Review.toggleFlip()`
+- **Conditions**: Only plays if card has audio and setting is enabled
+- **Visual Feedback**: Uses existing play button for visual state
+- **Conflict Handling**: AudioPlayer prevents overlapping playback
+- **Schema Version**: 6 (bumped from 5 for migration)
+
 ### Statistics & Analytics
 - **Per-Card Tracking**: Separate statistics for each learning mode
 - **Streak Analysis**: Correct/incorrect streak lengths and timestamps
@@ -93,6 +109,7 @@ Critical script loading order is maintained in `index.html`:
 - **Theme Support**: Light/dark mode via CSS custom properties
 - **Mode Toggle**: Runtime switching between learning modes
 - **Progress Controls**: Show/hide progress indicators
+- **Audio Controls**: Play audio automatically after card flipping (optional)
 
 ---
 
@@ -125,7 +142,7 @@ Critical script loading order is maintained in `index.html`:
 }
 ```
 
-### localStorage Schema (schema_version=4)
+### localStorage Schema (schema_version=6)
 
 ```json
 {
@@ -135,7 +152,8 @@ Critical script loading order is maintained in `index.html`:
    "selected_deck": "deck_id",
    "theme": "light",
    "showProgress": boolean,
-   "showPinyin": boolean
+   "showPinyin": boolean,
+   "playAudioOnFlip": boolean
   },
   "decks": {
     "deck_id": {

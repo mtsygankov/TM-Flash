@@ -359,6 +359,16 @@ const Review = {
       this.audioPlayedForCurrentCard = false;
     }
     this.applyModeAndFlip();
+
+    // Play audio after flipping if setting is enabled
+    if (App.flipped && App.currentCard && App.currentCard.audio) {
+      const settings = Storage.getSettings();
+      if (settings.playAudioOnFlip) {
+        // Find the play audio button for visual feedback
+        const playAudioBtn = document.querySelector('.play-audio-btn');
+        this.playAudioForCard(App.currentCard, playAudioBtn);
+      }
+    }
   },
 
 

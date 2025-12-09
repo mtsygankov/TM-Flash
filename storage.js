@@ -1,7 +1,7 @@
 // Storage module
 const Storage = {
   STORAGE_KEY: "tmFlash",
-  CURRENT_SCHEMA_VERSION: 5,
+  CURRENT_SCHEMA_VERSION: 6,
 
   getDefaultState() {
     const emptyStats = { cards: {} };
@@ -19,6 +19,7 @@ const Storage = {
             theme: "light",
             showProgress: true,
             showPinyin: true,
+            playAudioOnFlip: false,
           },
        decks: {
          deck_a: { modes: { ...modes } },
