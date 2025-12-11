@@ -76,6 +76,8 @@ const Nav = {
     // Handle review view - simplified, passive rendering only
     if (viewId === "review") {
       if (App.currentCard) {
+        // Hide any existing "no cards" message when we have a card to display
+        Message.hide('review');
         Review.renderCard(App.currentCard);
         // Update progress bar when entering review view
         Review.updateReviewProgressBar();
