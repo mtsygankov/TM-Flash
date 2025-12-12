@@ -8,6 +8,7 @@ const Review = {
    listeningCountdownInterval: null,
    listeningTimeout: null,
    currentAudioElement: null, // Track current audio for timing
+   popupClickHandler: null, // Current click handler for popup
 
   init() {
     this.bindEvents();
@@ -466,6 +467,12 @@ const Review = {
       popup.querySelector('.popup-content').classList.remove('audio-playing');
     }
 
+    // Remove any existing click handler
+    if (this.popupClickHandler) {
+      popup.removeEventListener('click', this.popupClickHandler);
+      this.popupClickHandler = null;
+    }
+
     let countdown = 3;
     this.updateCountdownDigit(countdown);
 
@@ -478,6 +485,20 @@ const Review = {
         this.startAudioPlayback();
       }
     }, 1000);
+
+    // Add click handler to skip countdown
+    if (popup) {
+      const skipHandler = (e) => {
+        e.stopPropagation();
+        if (this.listeningPhase === 'countdown-to-audio') {
+          clearInterval(this.listeningCountdownInterval);
+          this.listeningCountdownInterval = null;
+          this.startAudioPlayback();
+        }
+      };
+      popup.addEventListener('click', skipHandler);
+      this.popupClickHandler = skipHandler;
+    }
   },
 
   startAudioPlayback() {
@@ -537,6 +558,15 @@ const Review = {
       popupEl.querySelector('.popup-content').classList.remove('audio-playing');
     }
 
+    // Remove any existing click handler
+    if (this.popupClickHandler) {
+      const popup = document.getElementById('listening-popup');
+      if (popup) {
+        popup.removeEventListener('click', this.popupClickHandler);
+      }
+      this.popupClickHandler = null;
+    }
+
     let countdown = 10;
     this.updateCountdownDigit(countdown);
 
@@ -553,7 +583,7 @@ const Review = {
 
       popup.addEventListener('click', dismissHandler);
       // Store handler for cleanup
-      this.popupDismissHandler = dismissHandler;
+      this.popupClickHandler = dismissHandler;
     }
 
     this.listeningCountdownInterval = setInterval(() => {
@@ -575,9 +605,9 @@ const Review = {
     if (popup) {
       popup.style.display = 'none';
       // Remove click handler if it exists
-      if (this.popupDismissHandler) {
-        popup.removeEventListener('click', this.popupDismissHandler);
-        this.popupDismissHandler = null;
+      if (this.popupClickHandler) {
+        popup.removeEventListener('click', this.popupClickHandler);
+        this.popupClickHandler = null;
       }
       // Remove centering class
       popup.querySelector('.popup-content').classList.remove('audio-playing');
@@ -696,6 +726,10 @@ const Review = {
         if (this.listeningPopupVisible && this.listeningPhase === 'countdown-to-card') {
           this.dismissListeningPopup();
           this.toggleFlip(); // Flip to show answer when user aborts countdown
+        } else if (this.listeningPopupVisible && this.listeningPhase === 'countdown-to-audio') {
+          clearInterval(this.listeningCountdownInterval);
+          this.listeningCountdownInterval = null;
+          this.startAudioPlayback();
         } else if (!this.listeningPopupVisible && !App.flipped) {
           this.toggleFlip();
         }
